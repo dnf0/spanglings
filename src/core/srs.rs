@@ -10,26 +10,39 @@ pub struct SrsItem {
     pub last_reviewed: Option<DateTime<Utc>>,
 }
 
+impl SrsItem {
+    pub fn new(now: DateTime<Utc>) -> Self {
+        Self {
+            repetitions: 0,
+            interval_days: 0,
+            ease_factor: 2.5,
+            next_review_due: now,
+            last_reviewed: None,
+        }
+    }
+}
+
 impl Default for SrsItem {
     fn default() -> Self {
         Self {
             repetitions: 0,
             interval_days: 0,
             ease_factor: 2.5,
-            next_review_due: Utc::now(),
+            next_review_due: DateTime::UNIX_EPOCH,
             last_reviewed: None,
         }
     }
 }
 
 pub fn calculate_sm2_review(item: &SrsItem, quality: u8, now: DateTime<Utc>) -> SrsItem {
-    let q = quality.clamp(0, 5) as f32;
-    let mut new_ef = item.ease_factor + (0.1 - (5.0 - q) * (0.08 + (5.0 - q) * 0.02));
+    let q = quality.clamp(0, 5);
+    let q_f32 = q as f32;
+    let mut new_ef = item.ease_factor + (0.1 - (5.0 - q_f32) * (0.08 + (5.0 - q_f32) * 0.02));
     if new_ef < 1.3 {
         new_ef = 1.3;
     }
 
-    let (new_reps, new_interval) = if quality < 3 {
+    let (new_reps, new_interval) = if q < 3 {
         (0, 1)
     } else {
         match item.repetitions {

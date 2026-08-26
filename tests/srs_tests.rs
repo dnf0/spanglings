@@ -5,7 +5,7 @@ use tempfile::NamedTempFile;
 
 #[test]
 fn test_sm2_repetition_intervals() {
-    let mut item = SrsItem::default();
+    let mut item = SrsItem::new(Utc::now());
 
     // First successful review (quality 5) -> interval 1 day
     item = calculate_sm2_review(&item, 5, Utc::now());
@@ -29,6 +29,13 @@ fn test_sm2_repetition_intervals() {
 }
 
 #[test]
+fn test_srs_item_deterministic_default() {
+    let a = SrsItem::default();
+    let b = SrsItem::default();
+    assert_eq!(a, b);
+}
+
+#[test]
 fn test_state_save_and_load() {
     let tmp = NamedTempFile::new().unwrap();
     let path = tmp.path().to_path_buf();
@@ -38,7 +45,19 @@ fn test_state_save_and_load() {
     state.save_to_path(&path).unwrap();
 
     let loaded = AppState::load_from_path(&path).unwrap();
-    assert!(loaded.completed_exercises.contains("b1_sub_01"));
+    assert_eq!(loaded.completed_exercises, state.completed_exercises);
+    assert_eq!(loaded, state);
+}
+
+#[test]
+fn test_state_load_corrupt_file_fails() {
+    use std::io::Write;
+    let mut tmp = NamedTempFile::new().unwrap();
+    write!(tmp, "invalid json data").unwrap();
+    let path = tmp.path().to_path_buf();
+
+    let result = AppState::load_from_path(&path);
+    assert!(result.is_err());
 }
 
 #[test]

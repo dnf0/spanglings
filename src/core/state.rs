@@ -14,7 +14,7 @@ pub struct ExerciseStat {
     pub hints_used: u32,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct AppState {
     pub version: u32,
     pub completed_exercises: HashSet<String>,
@@ -44,9 +44,9 @@ impl AppState {
             .unwrap_or_else(|| PathBuf::from(".spanglings_state.json"))
     }
 
-    pub fn load() -> Self {
+    pub fn load() -> Result<Self> {
         let path = Self::default_path();
-        Self::load_from_path(&path).unwrap_or_default()
+        Self::load_from_path(&path)
     }
 
     pub fn load_from_path(path: &Path) -> Result<Self> {
