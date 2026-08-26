@@ -2,8 +2,8 @@
   "0": "Spanglings Implementation Plan",
   "1": "Spanglings Design Specification",
   "2": "App",
-  "3": "find_all_exercises",
-  "4": "Exercise",
+  "3": "Exercise",
+  "4": "embedded.rs",
   "5": "main",
   "6": "spanglings",
   "7": "AppState",
@@ -135,5 +135,8 @@
   "133": "Collocations 02: 'Zanjar el asunto' (Settle the matter)",
   "134": "Collocations 03: 'Albergar esperanzas' (Harbor hopes)",
   "135": "Collocations 04: 'Acatar la ley/resolución' (Abide by / Comply with)",
-  "136": "Collocations 05: 'Surtir efecto' (To take effect)"
+  "136": "Collocations 05: 'Surtir efecto' (To take effect)",
+  "137": "Discoverability, Portability & Zero-Setup CLI Implementation Plan",
+  "138": "Spanglings Product & Engineering Backlog",
+  "139": "Spanglings Init Subcommand Implementation Plan"
 }
