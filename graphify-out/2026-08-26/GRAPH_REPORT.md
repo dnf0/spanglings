@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-08-26)
 
 ## Corpus Check
-- 33 files · ~16,731 words
+- 36 files · ~17,267 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 221 nodes · 312 edges · 19 communities (17 shown, 2 thin omitted)
-- Extraction: 88% EXTRACTED · 12% INFERRED · 0% AMBIGUOUS · INFERRED: 39 edges (avg confidence: 0.85)
+- 229 nodes · 329 edges · 20 communities (18 shown, 2 thin omitted)
+- Extraction: 87% EXTRACTED · 13% INFERRED · 0% AMBIGUOUS · INFERRED: 43 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `db5805f8`
+- Built from commit: `b959aa08`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,7 +25,7 @@
 - AppState
 - validate_submission
 - Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan
-- progress.rs
+- evaluate_current_exercise
 - SrsItem
 - get_reference_card
 - run_drill
@@ -34,14 +34,14 @@
 ## God Nodes (most connected - your core abstractions)
 1. `AppState` - 20 edges
 2. `Exercise` - 16 edges
-3. `validate_submission()` - 15 edges
-4. `find_all_exercises()` - 13 edges
+3. `validate_submission()` - 16 edges
+4. `find_all_exercises()` - 14 edges
 5. `Spanglings Implementation Plan` - 12 edges
 6. `get_reference_card()` - 10 edges
 7. `SrsItem` - 9 edges
 8. `Level` - 8 edges
-9. `Spanglings Design Specification` - 8 edges
-10. `run_exercise()` - 7 edges
+9. `evaluate_current_exercise()` - 8 edges
+10. `Spanglings Design Specification` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `test_run_exercise_with_file_path()` --calls--> `run_exercise()`  [INFERRED]
@@ -58,7 +58,7 @@
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (19 total, 2 thin omitted)
+## Communities (20 total, 2 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -73,16 +73,16 @@ Cohesion: 0.23
 Nodes (7): AccentResult, check_accent_match(), String, strip_accents(), normalize(), String, test_smart_accent_matching()
 
 ### Community 3 - "find_all_exercises"
-Cohesion: 0.10
-Nodes (22): Option, Result, show_hint(), list_exercises(), Result, reset_exercise(), Result, run_exercise() (+14 more)
+Cohesion: 0.07
+Nodes (31): HashMap, Option, Result, show_hint(), list_exercises(), Result, render_progress_bar(), Result (+23 more)
 
 ### Community 4 - "Exercise"
-Cohesion: 0.10
-Nodes (18): Level, Display, Formatter, FromStr, DiagnosticRule, Exercise, ExerciseType, ParseExerciseTypeError (+10 more)
+Cohesion: 0.12
+Nodes (14): DiagnosticRule, Exercise, ExerciseType, ParseExerciseTypeError, Display, Err, Formatter, FromStr (+6 more)
 
 ### Community 7 - "AppState"
-Cohesion: 0.14
-Nodes (13): HashSet, AppState, ExerciseStat, DateTime, Default, Option, Path, PathBuf (+5 more)
+Cohesion: 0.15
+Nodes (12): HashSet, AppState, ExerciseStat, DateTime, Default, Option, Path, PathBuf (+4 more)
 
 ### Community 10 - "validate_submission"
 Cohesion: 0.11
@@ -92,9 +92,9 @@ Nodes (20): Result, run_review_session(), Diagnostic, Option, String, get_rule_t
 Cohesion: 0.25
 Nodes (7): Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan, Task 1: Scaffolding and Failing Tests, Task 2: Standard Error Codes, Task 3: Compiler-Style Diagnostics, Task 4: Accent Mode Integration and Module Exporting, Task 5: Core Validation Logic & Submission Evaluator, Task 6: Verification and Automated Quality Control
 
-### Community 13 - "progress.rs"
-Cohesion: 0.33
-Nodes (5): HashMap, render_progress_bar(), Result, String, show_progress()
+### Community 13 - "evaluate_current_exercise"
+Cohesion: 0.39
+Nodes (5): AccentMode, evaluate_current_exercise(), Result, start_watch_mode(), test_watcher_evaluate_current_exercise_runs_cleanly()
 
 ### Community 14 - "SrsItem"
 Cohesion: 0.18
@@ -120,16 +120,16 @@ Nodes (4): Cli, Commands, Option, String
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `validate_submission()` connect `validate_submission` to `check_accent_match`, `find_all_exercises`, `Exercise`, `AppState`?**
-  _High betweenness centrality (0.172) - this node is a cross-community bridge._
-- **Why does `AppState` connect `AppState` to `progress.rs`, `SrsItem`?**
-  _High betweenness centrality (0.155) - this node is a cross-community bridge._
-- **Why does `Exercise` connect `Exercise` to `validate_submission`, `find_all_exercises`?**
-  _High betweenness centrality (0.152) - this node is a cross-community bridge._
-- **Are the 10 inferred relationships involving `validate_submission()` (e.g. with `run_review_session()` and `run_exercise()`) actually correct?**
-  _`validate_submission()` has 10 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 7 inferred relationships involving `find_all_exercises()` (e.g. with `show_hint()` and `list_exercises()`) actually correct?**
-  _`find_all_exercises()` has 7 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `AppState` connect `AppState` to `find_all_exercises`, `evaluate_current_exercise`, `SrsItem`?**
+  _High betweenness centrality (0.151) - this node is a cross-community bridge._
+- **Why does `AccentMode` connect `evaluate_current_exercise` to `check_accent_match`, `validate_submission`, `AppState`?**
+  _High betweenness centrality (0.150) - this node is a cross-community bridge._
+- **Why does `validate_submission()` connect `validate_submission` to `check_accent_match`, `find_all_exercises`, `Exercise`, `evaluate_current_exercise`?**
+  _High betweenness centrality (0.124) - this node is a cross-community bridge._
+- **Are the 11 inferred relationships involving `validate_submission()` (e.g. with `run_review_session()` and `run_exercise()`) actually correct?**
+  _`validate_submission()` has 11 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 8 inferred relationships involving `find_all_exercises()` (e.g. with `show_hint()` and `list_exercises()`) actually correct?**
+  _`find_all_exercises()` has 8 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `DrillItem`, `Task 1: Scaffolding and Failing Tests` to the rest of the system?**
   _33 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**

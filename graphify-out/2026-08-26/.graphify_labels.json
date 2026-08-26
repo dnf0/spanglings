@@ -12,10 +12,11 @@
   "10": "validate_submission",
   "11": "engine/mod.rs",
   "12": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
-  "13": "progress.rs",
+  "13": "evaluate_current_exercise",
   "14": "SrsItem",
   "15": "get_reference_card",
   "16": "run_drill",
   "17": "Commands",
-  "18": "commands/mod.rs"
+  "18": "commands/mod.rs",
+  "19": "watcher/mod.rs"
 }

@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "src/main.rs": {
-    "mtime": 1787754645.2486217,
-    "seen": 1787754663.763689,
-    "ast_hash": "e3cda60f4d1e6cddf595999126255d8d",
+    "mtime": 1787755009.1426508,
+    "seen": 1787755040.105527,
+    "ast_hash": "009e6f6690022db925cd4adea6e6c767",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-spanglings-implementation.md": {
@@ -42,9 +42,9 @@
     "semantic_hash": ""
   },
   "src/lib.rs": {
-    "mtime": 1787754477.0308254,
-    "seen": 1787754663.763689,
-    "ast_hash": "507d3ea59059afbed0d1fa10f131c64c",
+    "mtime": 1787755004.5279205,
+    "seen": 1787755040.105526,
+    "ast_hash": "9499af2aef332437071f1ac78f294e0d",
     "semantic_hash": ""
   },
   "tests/exercise_parser_tests.rs": {
@@ -195,6 +195,24 @@
     "mtime": 1787754630.880737,
     "seen": 1787754663.76369,
     "ast_hash": "a512f3136cb0bc6807b5236199c1b377",
+    "semantic_hash": ""
+  },
+  "src/watcher/mod.rs": {
+    "mtime": 1787754983.489881,
+    "seen": 1787755040.105528,
+    "ast_hash": "032e41a95bd75a659046279f2f51af79",
+    "semantic_hash": ""
+  },
+  "src/watcher/runner.rs": {
+    "mtime": 1787755017.2152238,
+    "seen": 1787755040.105528,
+    "ast_hash": "3fba7c855f0ecde71eb2f6065a45f5ae",
+    "semantic_hash": ""
+  },
+  "tests/watcher_tests.rs": {
+    "mtime": 1787755014.001886,
+    "seen": 1787755040.105532,
+    "ast_hash": "4d111c94dab6e7cbf3e83af8c3edfe1a",
     "semantic_hash": ""
   }
 }
