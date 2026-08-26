@@ -1,0 +1,98 @@
+use crate::core::srs::SrsItem;
+use crate::engine::accents::AccentMode;
+use anyhow::{Context, Result};
+use chrono::{DateTime, Utc};
+use serde::{Deserialize, Serialize};
+use std::collections::{HashMap, HashSet};
+use std::fs;
+use std::path::{Path, PathBuf};
+
+#[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
+pub struct ExerciseStat {
+    pub attempts: u32,
+    pub completed_at: Option<DateTime<Utc>>,
+    pub hints_used: u32,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct AppState {
+    pub version: u32,
+    pub completed_exercises: HashSet<String>,
+    pub current_exercise: Option<String>,
+    pub accent_mode: AccentMode,
+    pub srs: HashMap<String, SrsItem>,
+    pub stats: HashMap<String, ExerciseStat>,
+}
+
+impl Default for AppState {
+    fn default() -> Self {
+        Self {
+            version: 1,
+            completed_exercises: HashSet::new(),
+            current_exercise: None,
+            accent_mode: AccentMode::Forgiving,
+            srs: HashMap::new(),
+            stats: HashMap::new(),
+        }
+    }
+}
+
+impl AppState {
+    pub fn default_path() -> PathBuf {
+        dirs::config_dir()
+            .map(|p| p.join("spanglings").join("state.json"))
+            .unwrap_or_else(|| PathBuf::from(".spanglings_state.json"))
+    }
+
+    pub fn load() -> Self {
+        let path = Self::default_path();
+        Self::load_from_path(&path).unwrap_or_default()
+    }
+
+    pub fn load_from_path(path: &Path) -> Result<Self> {
+        if !path.exists() {
+            Ok(Self::default())
+        } else {
+            let data = fs::read_to_string(path)
+                .with_context(|| format!("Failed to read state file at {:?}", path))?;
+            let state: Self = serde_json::from_str(&data)
+                .with_context(|| format!("Failed to deserialize state JSON at {:?}", path))?;
+            Ok(state)
+        }
+    }
+
+    pub fn save(&self) -> Result<()> {
+        let path = Self::default_path();
+        self.save_to_path(&path)
+    }
+
+    pub fn save_to_path(&self, path: &Path) -> Result<()> {
+        if let Some(parent) = path.parent() {
+            fs::create_dir_all(parent)?;
+        }
+        let json = serde_json::to_string_pretty(self)?;
+        fs::write(path, json)?;
+        Ok(())
+    }
+
+    pub fn mark_completed(&mut self, exercise_id: &str) {
+        self.completed_exercises.insert(exercise_id.to_string());
+        let stat = self
+            .stats
+            .entry(exercise_id.to_string())
+            .or_insert(ExerciseStat {
+                attempts: 0,
+                completed_at: None,
+                hints_used: 0,
+            });
+        stat.completed_at = Some(Utc::now());
+    }
+
+    pub fn is_due_for_review(&self, exercise_id: &str, now: DateTime<Utc>) -> bool {
+        if let Some(item) = self.srs.get(exercise_id) {
+            item.next_review_due <= now
+        } else {
+            false
+        }
+    }
+}
