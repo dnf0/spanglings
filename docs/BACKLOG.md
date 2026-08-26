@@ -22,18 +22,18 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
 
 ---
 
-## 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion
+## 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion (Completed)
 
-- [ ] **SPANG-010: Track 22 - Tech & Software Engineering Spanish (B2–C1)**
+- [x] **SPANG-010: Track 22 - Tech & Software Engineering Spanish (B2–C1)**
   - **Topics**: Git workflows (*desplegar*, *solicitud de extracción*), debugging (*depurar*, *subsanar*), backend infrastructure (*concurrencia*, *bloqueo mutuo*, *rendimiento*, *latencia*).
-- [ ] **SPANG-011: Track 23 - Formal Business & Diplomatic Correspondence (B2–C1)**
+- [x] **SPANG-011: Track 23 - Formal Business & Diplomatic Correspondence (B2–C1)**
   - **Topics**: Email formulas (*Quedo a su entera disposición*, *En lo que atañe a*), negotiation rhetoric (*saldar*, *acordar*, *desestimar*).
-- [ ] **SPANG-012: Track 24 - False Friends & High-Frequency Trap Drills**
-  - **Topics**: Cognate traps (*actualmente*, *eventualmente*, *pretender*, *realizar*, *soportar*, *constipado*, *embarazada*).
-- [ ] **SPANG-013: Track 25 - Register Elevation & Formal Stylistics (C1)**
-  - **Topics**: Elevating conversational verbs into literary/journalistic equivalents (*hacer* -> *acometer*, *poner* -> *disponer*, *dar lugar a*).
-- [ ] **SPANG-014: Track 26 - Regional Contrasts & Voseo (Latin America vs Peninsular)**
-  - **Topics**: Rioplatense *voseo* conjugations (*tenés*, *vení*), clitic order, and regional idioms.
+- [x] **SPANG-012: Track 24 - False Friends & High-Frequency Trap Drills**
+  - **Topics**: Cognate traps (*actualmente*, *eventualmente*, *pretender*, *realizar*, *soportar*, *sensato*).
+- [x] **SPANG-013: Track 25 - Register Elevation & Formal Stylistics (C1)**
+  - **Topics**: Elevating conversational verbs into literary/journalistic equivalents (*hacer* -> *acometer*, *provocar* -> *suscitar*, *dar lugar a*, *surtir efecto*, *albergar dudas*, *arrojar luz*).
+- [x] **SPANG-014: Track 26 - Regional Contrasts & Voseo (Latin America vs Peninsular)**
+  - **Topics**: Rioplatense *voseo* conjugations (*tenés*, *sabés*, *decime*, *sentate*), Pan-American *ustedes*, and dialectal vocabulary pairs (*manejar*, *computadora*).
 
 ---
 

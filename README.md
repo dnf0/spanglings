@@ -19,8 +19,8 @@ Duolingo is often too slow, repetitive, and child-oriented. **Spanglings** provi
 - 🔎 **Full-Text & Topic Search (`spanglings search <query>`)**: Instant matching across grammar topics, CEFR levels, exercise titles, prompts, and solutions.
 - 🤖 **Machine-Readable Output (`--json`)**: Streamlined JSON serialization for external scripts, status bars (Starship, tmux), and IDE integrations.
 - 🐚 **Shell Auto-Completions (`spanglings completions`)**: Native autocompletions for Bash, Zsh, Fish, PowerShell, and Elvish.
-- 📖 **In-Terminal Cheat Sheets (`spanglings explain <topic>`)**: Reference cards for *ser vs estar*, past aspectual shifts, subjunctive triggers (WEIRDO), *por vs para*, prepositional regimes, pronoun stacking, and accidental *se*.
-- 📚 **116 Handcrafted Exercises across 22 Tracks**: Complete coverage from baseline drills through advanced C1 collocations.
+- 📖 **In-Terminal Cheat Sheets (`spanglings explain <topic>`)**: Reference cards for *ser vs estar*, past aspectual shifts, subjunctive triggers (WEIRDO), *por vs para*, prepositional regimes, pronoun stacking, accidental *se*, tech Spanish, business correspondence, false friends, and *voseo*.
+- 📚 **141 Handcrafted Exercises across 27 Tracks**: Complete coverage from baseline drills through advanced C1 collocations and technical domains.
 
 ---
 
@@ -165,7 +165,7 @@ spanglings completions fish | source
 
 ---
 
-## Curriculum Tracks (116 Exercises)
+## Curriculum Tracks (141 Exercises across 27 Tracks)
 
 | Track | Topic | CEFR Level | Exercises |
 |---|---|---|---|
@@ -191,6 +191,11 @@ spanglings completions fish | source
 | `19_formal_inversion` | Absolute participle clauses (*habiendo considerado*, *dada la situación*) | C1 | 5 |
 | `20_passive_refleja` | Pasiva refleja agreement vs impersonal *se* with personal *a* | C1 | 5 |
 | `21_nuanced_collocations` | Formal register collocations (*entablar conversación*, *acatar la ley*, *surtir efecto*) | C1 | 5 |
+| `22_tech_software` | Software engineering, Git workflows, debugging, concurrency & architecture | B2 / C1 | 5 |
+| `23_business_diplomatic` | Executive correspondence formulas, contracts, debt settlement & negotiations | B2 / C1 | 5 |
+| `24_false_friends` | High-frequency cognate traps (*actualmente*, *eventualmente*, *pretender*, *sensato*) | B1 / B2 | 5 |
+| `25_register_elevation` | Elevating light verbs to literary C1 equivalents (*acometer*, *suscitar*, *albergar*) | C1 | 5 |
+| `26_regional_contrasts` | Rioplatense *voseo* (*tenés*, *decime*, *sentate*), Pan-American *ustedes* & lexical pairs | B1 / B2 | 5 |
 
 ---
 

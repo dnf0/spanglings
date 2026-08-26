@@ -52,6 +52,35 @@ fn test_get_accidental_se_reference_card() {
 }
 
 #[test]
+fn test_get_tech_reference_card() {
+    let card = get_reference_card("tech").expect("Tech card not found");
+    assert!(card.contains("SOFTWARE ENGINEERING"));
+    assert!(card.contains("desplegar"));
+    assert!(card.contains("bloqueo mutuo"));
+}
+
+#[test]
+fn test_get_business_reference_card() {
+    let card = get_reference_card("business").expect("Business card not found");
+    assert!(card.contains("BUSINESS & DIPLOMATIC"));
+    assert!(card.contains("Quedo a su entera disposición"));
+}
+
+#[test]
+fn test_get_false_friends_reference_card() {
+    let card = get_reference_card("false-friends").expect("False friends card not found");
+    assert!(card.contains("FALSE FRIENDS"));
+    assert!(card.contains("actualmente"));
+}
+
+#[test]
+fn test_get_voseo_reference_card() {
+    let card = get_reference_card("voseo").expect("Voseo card not found");
+    assert!(card.contains("VOSEO"));
+    assert!(card.contains("vos hablás"));
+}
+
+#[test]
 fn test_list_reference_topics() {
     let topics = list_reference_topics();
     assert!(topics.contains(&"subjunctive"));
@@ -61,6 +90,10 @@ fn test_list_reference_topics() {
     assert!(topics.contains(&"pronouns"));
     assert!(topics.contains(&"prepositions"));
     assert!(topics.contains(&"accidental-se"));
+    assert!(topics.contains(&"tech-software"));
+    assert!(topics.contains(&"business"));
+    assert!(topics.contains(&"false-friends"));
+    assert!(topics.contains(&"voseo"));
 }
 
 #[test]

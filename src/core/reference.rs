@@ -6,6 +6,10 @@ pub const TOPICS: &[&str] = &[
     "pronouns",
     "prepositions",
     "accidental-se",
+    "tech-software",
+    "business",
+    "false-friends",
+    "voseo",
 ];
 
 pub fn list_reference_topics() -> &'static [&'static str] {
@@ -21,6 +25,12 @@ pub fn get_reference_card(topic: &str) -> Option<&'static str> {
         "pronouns" | "clitics" | "stacking" | "direct-indirect" => Some(PRONOUN_STACKING_CARD),
         "prepositions" | "regimen" | "prep" => Some(PREPOSITIONS_CARD),
         "accidental-se" | "se-accidental" | "accidental" => Some(ACCIDENTAL_SE_CARD),
+        "tech-software" | "tech" | "software" | "dev" => Some(TECH_SOFTWARE_CARD),
+        "business" | "business-correspondence" | "biz" | "diplomatic" => {
+            Some(BUSINESS_CORRESPONDENCE_CARD)
+        }
+        "false-friends" | "falsos-amigos" | "cognates" | "traps" => Some(FALSE_FRIENDS_CARD),
+        "voseo" | "regional" | "rioplatense" => Some(VOSEO_CARD),
         _ => None,
     }
 }
@@ -78,45 +88,48 @@ pub const SER_ESTAR_CARD: &str = r#"
                          SER VS ESTAR REFERENCE CARD
 ================================================================================
 SER (Identity, Essence, Characteristics, Origin, Time):
-  - Identity & Profession:    Soy ingeniero. / Es Daniel.
-  - Origin & Material:        Soy de España. / La mesa es de madera.
-  - Inherent characteristics: Es alto, inteligente y generoso.
-  - Time, Date, Events:       Son las tres. / La fiesta es en mi casa.
+  - D - Description:          Soy alto y moreno.
+  - O - Occupation:           Es ingeniera de software.
+  - C - Characteristic:       El hielo es frío.
+  - T - Time / Date:          Son las tres y media. / Hoy es martes.
+  - O - Origin / Material:    Soy de España. / La mesa es de madera.
+  - R - Relationship:         Es mi hermano.
 
-ESTAR (States, Conditions, Locations, Progressive):
-  - Physical Location:        El libro está en la mesa. / Estoy en Londres.
-  - Temporary condition/mood: Está cansado. / Está rota la ventana.
-  - Present Continuous:       Estoy estudiando español.
+ESTAR (State, Condition, Location, Progressive):
+  - P - Position:             Está sentado.
+  - L - Location:             Madrid está en España.
+  - A - Action (Progressive): Estoy aprendiendo español.
+  - C - Condition:            El café está frío. / Estoy cansado.
+  - E - Emotion:              Está muy feliz hoy.
 
-ADJECTIVE MEANING SHIFTS:
-  - ser listo (smart)         vs estar listo (ready)
-  - ser rico (wealthy)        vs estar rico (delicious - food)
+MEANING SHIFTS WITH ADJECTIVES:
+  - ser listo (clever)        vs estar listo (ready)
+  - ser rico (wealthy)        vs estar rico (delicious)
+  - ser aburrido (boring)     vs estar aburrido (bored)
   - ser atento (courteous)    vs estar atento (paying attention)
-  - ser verde (green color)   vs estar verde (unripe / inexperienced)
 ================================================================================
 "#;
 
 pub const PAST_TENSES_CARD: &str = r#"
 ================================================================================
-                    PRETERITE VS IMPERFECT REFERENCE CARD
+                     PRETERITE VS IMPERFECT ASPECT
 ================================================================================
-PRETERITE (Completed, Bounded Actions):
-  - Specific completed event: Ayer compré un coche.
-  - Action with time limit:   Vivió en Madrid durante cinco años.
-  - Chain of events:          Llegó, abrió la puerta y salió.
-  - Interrupting action:      ...cuando sonó el teléfono.
+PRETERITE (Completed Action, Fixed Timeframe, Succession):
+  - Definite beginning/end:   Llegó a las 8:00.
+  - Sequence of events:       Se levantó, desayunó y salió.
+  - Specific duration:        Viví en Sevilla durante dos años.
 
-IMPERFECT (Ongoing, Habitual, Background Setting):
-  - Habitual past actions:    De niño, jugaba en la calle todos los días.
-  - Ongoing background:       Llovía y hacía frío.
-  - Age, Time, Weather:       Tenía 20 años. / Eran las seis.
-  - Mental/Emotional state:   Quería salir, pero no sabía adónde ir.
+IMPERFECT (Ongoing, Habitual, Background, Age, Time):
+  - Habitual / Repeated:      Siempre íbamos a la playa en verano.
+  - Background setting:       Hacía frío y llovía intensamente.
+  - Age / Mental states:      Tenía diez años cuando ocurrió. / Quería viajar.
 
-MEANING CHANGERS:
-  - conocer: conocí (met for 1st time)  vs conocía (knew / was familiar)
-  - saber:   supe (found out / learned) vs sabía (knew information)
-  - querer:  quise (attempted/tried)    vs quería (wanted/desired)
-  - poder:   pude (managed/succeeded)   vs podía (had the capability)
+VERB MEANING SHIFTS IN THE PAST:
+  - saber:    supe (found out)           vs sabía (knew / was aware)
+  - conocer:  conocí (met for 1st time)  vs conocía (already knew someone)
+  - querer:   quise (tried to)           vs quería (wanted to)
+  - no querer:no quise (refused to)      vs no quería (didn't want to)
+  - poder:    pude (managed to / did)    vs podía (had the ability to)
 ================================================================================
 "#;
 
@@ -170,5 +183,93 @@ EXAMPLES:
   - Se te quemó la comida.        (You burned the food.)
 
 COMMON VERBS: caer, olvidar, romper, perder, acabar, quemar, descomponer
+================================================================================
+"#;
+
+pub const TECH_SOFTWARE_CARD: &str = r#"
+================================================================================
+                 SOFTWARE ENGINEERING & TECH SPANISH
+================================================================================
+DEVELOPMENT & GIT:
+  - to deploy:                desplegar (a producción) [avoid *deployar]
+  - pull request:             solicitud de extracción
+  - branch / merge:           rama / fusionar (o integrar)
+  - commit / checkout:        confirmar cambios / cambiar de rama
+  - repository:               repositorio
+
+DEBUGGING & ARCHITECTURE:
+  - to debug:                 depurar el código [avoid *debuggear]
+  - to remediate/fix:         subsanar / corregir la vulnerabilidad [avoid *fixear]
+  - deadlock:                 bloqueo mutuo / interbloqueo
+  - race condition:           condición de carrera
+  - throughput / performance: rendimiento / desempeño
+  - latency / routing:        latencia de red / enrutamiento de peticiones
+  - batch processing:         procesamiento por lotes
+================================================================================
+"#;
+
+pub const BUSINESS_CORRESPONDENCE_CARD: &str = r#"
+================================================================================
+             FORMAL BUSINESS & DIPLOMATIC CORRESPONDENCE
+================================================================================
+FORMAL OPENINGS & CLOSINGS:
+  - "I remain at your full disposal":    Quedo a su entera disposición
+  - "Thanking you in advance":           Agradeciendo de antemano su atención
+  - "Without further ado for now":       Sin otro particular por el momento
+  - "I hereby attach":                   Procedo a adjuntar el documento
+
+NEGOTIATIONS & CONTRACTS:
+  - As regards / concerning:             En lo que atañe a / En lo que concierne a
+  - Settle an outstanding debt:          Saldar la deuda / Liquidar el saldo
+  - Formally dismiss a motion/proposal:  Desestimar la propuesta / el recurso
+  - Stipulated in clause:                Estipulado / Dispuesto en la cláusula
+================================================================================
+"#;
+
+pub const FALSE_FRIENDS_CARD: &str = r#"
+================================================================================
+                 HIGH-FREQUENCY FALSE FRIENDS (FALSOS AMIGOS)
+================================================================================
+1. actualmente != actually
+   - actualmente = currently / at present
+   - actually = en realidad / de hecho / en verdad
+
+2. eventualmente != eventually
+   - eventualmente = occasionally / by chance / sporadically
+   - eventually = finalmente / con el tiempo / al final
+
+3. pretender != to pretend
+   - pretender = to attempt / aim to / claim
+   - to pretend = fingir / simular / aparentar
+
+4. realizar != to realize
+   - realizar = to carry out / execute / make
+   - to realize = darse cuenta de
+
+5. soportar != to support
+   - soportar = to tolerate / endure / bear weight
+   - to support = apoyar / respaldar / sostener económicamente
+
+6. sensible != sensible
+   - sensible = sensitive / emotional
+   - sensible = sensato / prudente / juicioso
+================================================================================
+"#;
+
+pub const VOSEO_CARD: &str = r#"
+================================================================================
+                    RIOPLATENSE & PAN-AMERICAN VOSEO
+================================================================================
+PRESENT TENSE CONJUGATION (Stressed final vowel, no diphthong):
+  - -AR (hablar):     vos hablás   (tú hablas)
+  - -ER (comer):      vos comés    (tú comes)
+  - -IR (vivir):      vos vivís    (tú vives)
+  - IRREGULARS:       vos sos (ser), vos tenés (tener), vos querés (querer)
+
+AFFIRMATIVE IMPERATIVES (Drop '-r', stress final vowel):
+  - hablar -> ¡Hablá!      (tú: ¡Habla!)
+  - comer  -> ¡Comé!       (tú: ¡Come!)
+  - decir  -> ¡Decí!       (tú: ¡Di!)  -> ¡Decime! (¡Dime!)
+  - sentar -> ¡Sentate!    (tú: ¡Siéntate!)
 ================================================================================
 "#;
