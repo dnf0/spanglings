@@ -1,4 +1,4 @@
-use crate::core::srs::SrsItem;
+use crate::core::srs::{calculate_sm2_review, SrsItem};
 use crate::engine::accents::AccentMode;
 use anyhow::{Context, Result};
 use chrono::{DateTime, Utc};
@@ -75,6 +75,10 @@ impl AppState {
         Ok(())
     }
 
+    pub fn is_completed(&self, exercise_id: &str) -> bool {
+        self.completed_exercises.contains(exercise_id)
+    }
+
     pub fn mark_completed(&mut self, exercise_id: &str) {
         self.completed_exercises.insert(exercise_id.to_string());
         let stat = self
@@ -88,11 +92,28 @@ impl AppState {
         stat.completed_at = Some(Utc::now());
     }
 
+    pub fn unmark_completed(&mut self, exercise_id: &str) {
+        self.completed_exercises.remove(exercise_id);
+        if let Some(stat) = self.stats.get_mut(exercise_id) {
+            stat.completed_at = None;
+        }
+    }
+
     pub fn is_due_for_review(&self, exercise_id: &str, now: DateTime<Utc>) -> bool {
         if let Some(item) = self.srs.get(exercise_id) {
             item.next_review_due <= now
         } else {
             false
         }
+    }
+
+    pub fn update_srs(&mut self, exercise_id: &str, quality: u8, now: DateTime<Utc>) {
+        let current = self
+            .srs
+            .get(exercise_id)
+            .cloned()
+            .unwrap_or_else(|| SrsItem::new(now));
+        let updated = calculate_sm2_review(&current, quality, now);
+        self.srs.insert(exercise_id.to_string(), updated);
     }
 }

@@ -1,8 +1,11 @@
+use crate::core::exercise::Exercise;
 use serde::{Deserialize, Serialize};
 use std::fmt;
+use std::fs;
+use std::path::Path;
 use std::str::FromStr;
 
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash, Serialize, Deserialize)]
 pub enum Level {
     Baseline,
     B1,
@@ -38,4 +41,54 @@ impl FromStr for Level {
             other => Err(ParseLevelError(other.to_string())),
         }
     }
+}
+
+pub fn find_all_exercises<P: AsRef<Path>>(root: P) -> anyhow::Result<Vec<Exercise>> {
+    let mut exercises = Vec::new();
+    let root = root.as_ref();
+    if !root.exists() {
+        return Ok(exercises);
+    }
+    collect_md_files(root, &mut exercises)?;
+    exercises.sort_by(|a, b| a.path.cmp(&b.path));
+    Ok(exercises)
+}
+
+fn collect_md_files(dir: &Path, exercises: &mut Vec<Exercise>) -> anyhow::Result<()> {
+    if dir.is_dir() {
+        let mut entries: Vec<_> = fs::read_dir(dir)?.filter_map(|e| e.ok()).collect();
+        entries.sort_by_key(|e| e.path());
+        for entry in entries {
+            let path = entry.path();
+            if path.is_dir() {
+                collect_md_files(&path, exercises)?;
+            } else if path.extension().is_some_and(|ext| ext == "md") {
+                if let Ok(content) = fs::read_to_string(&path) {
+                    if let Ok(ex) = Exercise::from_markdown(&path, &content) {
+                        exercises.push(ex);
+                    }
+                }
+            }
+        }
+    }
+    Ok(())
+}
+
+pub fn find_exercise_by_query<'a>(exercises: &'a [Exercise], query: &str) -> Option<&'a Exercise> {
+    let q = query.trim().to_lowercase();
+    // 1. Exact ID match
+    if let Some(ex) = exercises.iter().find(|e| e.id.to_lowercase() == q) {
+        return Some(ex);
+    }
+    // 2. Path substring match
+    if let Some(ex) = exercises
+        .iter()
+        .find(|e| e.path.to_string_lossy().to_lowercase().contains(&q))
+    {
+        return Some(ex);
+    }
+    // 3. Topic or Title match
+    exercises
+        .iter()
+        .find(|e| e.topic.to_lowercase().contains(&q) || e.title.to_lowercase().contains(&q))
 }
