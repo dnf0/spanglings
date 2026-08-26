@@ -47,3 +47,33 @@ Tier 3: Add -as -> 'vengas'.
     assert_eq!(exercise.diagnostic_rules.len(), 1);
     assert_eq!(exercise.diagnostic_rules[0].code, "E0301");
 }
+
+#[test]
+fn test_parse_missing_id_error() {
+    let content = r#"
+# Test Exercise
+<!-- level: B1 | topic: subjunctive | type: cloze -->
+"#;
+    let result = Exercise::from_markdown("exercises/test.md", content);
+    assert!(result.is_err());
+}
+
+#[test]
+fn test_parse_invalid_level_error() {
+    let content = r#"
+# Test Exercise
+<!-- id: test_01 | level: XYZ | topic: subjunctive | type: cloze -->
+"#;
+    let result = Exercise::from_markdown("exercises/test.md", content);
+    assert!(result.is_err());
+}
+
+#[test]
+fn test_parse_invalid_type_error() {
+    let content = r#"
+# Test Exercise
+<!-- id: test_01 | level: B1 | topic: subjunctive | type: invalid_type -->
+"#;
+    let result = Exercise::from_markdown("exercises/test.md", content);
+    assert!(result.is_err());
+}

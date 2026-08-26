@@ -3,6 +3,7 @@ use serde::{Deserialize, Serialize};
 use std::fmt;
 use std::path::{Path, PathBuf};
 use std::str::FromStr;
+use std::sync::OnceLock;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
 pub enum ExerciseType {
@@ -12,8 +13,12 @@ pub enum ExerciseType {
     Translation,
 }
 
+#[derive(Debug, thiserror::Error, PartialEq, Eq)]
+#[error("invalid exercise type: {0}")]
+pub struct ParseExerciseTypeError(pub String);
+
 impl FromStr for ExerciseType {
-    type Err = anyhow::Error;
+    type Err = ParseExerciseTypeError;
 
     fn from_str(s: &str) -> Result<Self, Self::Err> {
         match s.trim().to_lowercase().as_str() {
@@ -21,7 +26,7 @@ impl FromStr for ExerciseType {
             "transformation" => Ok(ExerciseType::Transformation),
             "bugfix" | "bug_fix" => Ok(ExerciseType::BugFix),
             "translation" => Ok(ExerciseType::Translation),
-            _ => Err(anyhow::anyhow!("Invalid ExerciseType: {}", s)),
+            other => Err(ParseExerciseTypeError(other.to_string())),
         }
     }
 }
@@ -60,9 +65,13 @@ pub struct Exercise {
     pub hints: Vec<String>,
 }
 
+static COMMENT_RE: OnceLock<regex::Regex> = OnceLock::new();
+
 impl Exercise {
     pub fn from_markdown<P: AsRef<Path>>(path: P, content: &str) -> anyhow::Result<Self> {
-        let comment_re = regex::Regex::new(r"(?s)<!--([\s\S]*?)-->")?;
+        let comment_re =
+            COMMENT_RE.get_or_init(|| regex::Regex::new(r"(?s)<!--([\s\S]*?)-->").unwrap());
+
         let mut is_done = true;
         let mut metadata_str = None;
         let mut solution_str = None;
@@ -75,8 +84,6 @@ impl Exercise {
                 let comment_body = m.as_str().trim();
                 if comment_body == "I AM NOT DONE" {
                     is_done = false;
-                } else if comment_body.starts_with("id:") {
-                    metadata_str = Some(comment_body);
                 } else if let Some(stripped) = comment_body.strip_prefix("SOLUTION") {
                     solution_str = Some(stripped.trim());
                 } else if let Some(stripped) = comment_body.strip_prefix("ALTERNATIVES") {
@@ -85,6 +92,8 @@ impl Exercise {
                     diagnostic_rules_str = Some(stripped.trim());
                 } else if let Some(stripped) = comment_body.strip_prefix("HINTS") {
                     hints_str = Some(stripped.trim());
+                } else if comment_body.contains("id:") && comment_body.contains("level:") {
+                    metadata_str = Some(comment_body);
                 }
             }
         }
@@ -101,9 +110,7 @@ impl Exercise {
                     let val = v.trim();
                     match key {
                         "id" => id = Some(val.to_string()),
-                        "level" => {
-                            level = Some(val.parse::<Level>().map_err(|e| anyhow::anyhow!(e))?)
-                        }
+                        "level" => level = Some(val.parse::<Level>()?),
                         "topic" => topic = Some(val.to_string()),
                         "type" => exercise_type = Some(val.parse::<ExerciseType>()?),
                         _ => {}
