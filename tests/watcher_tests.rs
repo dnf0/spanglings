@@ -1,7 +1,6 @@
-use spanglings::core::exercise::Exercise;
 use spanglings::core::state::AppState;
 use spanglings::engine::accents::AccentMode;
-use spanglings::watcher::runner::evaluate_current_exercise;
+use spanglings::watcher::runner::{evaluate_current_exercise, evaluate_current_exercise_in};
 use std::fs;
 use tempfile::tempdir;
 
@@ -13,7 +12,7 @@ fn test_watcher_evaluate_current_exercise_runs_cleanly() {
 }
 
 #[test]
-fn test_watcher_detects_and_evaluates_uncompleted_exercise() {
+fn test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir() {
     let temp_dir = tempdir().unwrap();
     let exercises_path = temp_dir.path().join("exercises");
     fs::create_dir_all(&exercises_path).unwrap();
@@ -23,8 +22,11 @@ fn test_watcher_detects_and_evaluates_uncompleted_exercise() {
 # Test Watcher Exercise
 <!-- id: b1_watch_test | level: B1 | topic: subjunctive | type: cloze -->
 
+### Context
+English: "I want you to come."
+
 ### Exercise
-Quiero que tú vengas.
+Quiero que tú (venir) vengas a mi fiesta.
 
 <!-- SOLUTION
 vengas
@@ -32,11 +34,43 @@ vengas
 "#;
     fs::write(&ex_file, content).unwrap();
 
-    let exercise = Exercise::from_markdown(&ex_file, content).unwrap();
-    assert_eq!(exercise.id, "b1_watch_test");
+    let mut state = AppState::default();
+    assert!(!state.is_completed("b1_watch_test"));
+
+    let evaluated =
+        evaluate_current_exercise_in(&exercises_path, &mut state, AccentMode::Forgiving);
+    assert!(evaluated.is_ok());
+    assert!(evaluated.unwrap());
+    assert!(state.is_completed("b1_watch_test"));
+}
+
+#[test]
+fn test_watcher_detects_failing_submission() {
+    let temp_dir = tempdir().unwrap();
+    let exercises_path = temp_dir.path().join("exercises");
+    fs::create_dir_all(&exercises_path).unwrap();
+
+    let ex_file = exercises_path.join("ex01.md");
+    let content = r#"<!-- I AM NOT DONE -->
+# Test Watcher Exercise
+<!-- id: b1_watch_failing | level: B1 | topic: subjunctive | type: cloze -->
+
+### Context
+English: "I want you to come."
+
+### Exercise
+Quiero que tú (venir) viene a mi fiesta.
+
+<!-- SOLUTION
+vengas
+-->
+"#;
+    fs::write(&ex_file, content).unwrap();
 
     let mut state = AppState::default();
-    assert!(!state.is_completed(&exercise.id));
-    state.mark_completed(&exercise.id);
-    assert!(state.is_completed(&exercise.id));
+    let evaluated =
+        evaluate_current_exercise_in(&exercises_path, &mut state, AccentMode::Forgiving);
+    assert!(evaluated.is_ok());
+    assert!(!evaluated.unwrap());
+    assert!(!state.is_completed("b1_watch_failing"));
 }

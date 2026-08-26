@@ -8,6 +8,7 @@ use chrono::Utc;
 use colored::Colorize;
 use notify_debouncer_mini::{new_debouncer, notify::RecursiveMode};
 use std::fs;
+use std::io::{self, Write};
 use std::path::Path;
 use std::sync::mpsc::channel;
 use std::time::Duration;
@@ -48,7 +49,9 @@ pub fn start_watch_mode(strict_accents: bool) -> Result<()> {
     }
 
     // Run initial evaluation
-    let _ = evaluate_current_exercise(accent_mode);
+    if let Err(err) = evaluate_current_exercise(accent_mode) {
+        eprintln!("{} {:#}", "Evaluation error:".red().bold(), err);
+    }
 
     for res in rx {
         match res {
@@ -57,7 +60,9 @@ pub fn start_watch_mode(strict_accents: bool) -> Result<()> {
                     .iter()
                     .any(|e| e.path.extension().is_some_and(|ext| ext == "md"));
                 if has_md_change {
-                    let _ = evaluate_current_exercise(accent_mode);
+                    if let Err(err) = evaluate_current_exercise(accent_mode) {
+                        eprintln!("{} {:#}", "Evaluation error:".red().bold(), err);
+                    }
                 }
             }
             Err(err) => eprintln!("Watcher error: {:?}", err),
@@ -67,15 +72,30 @@ pub fn start_watch_mode(strict_accents: bool) -> Result<()> {
     Ok(())
 }
 
+fn clear_screen() {
+    print!("\x1B[2J\x1B[1;1H");
+    let _ = io::stdout().flush();
+}
+
 pub fn evaluate_current_exercise(mode: AccentMode) -> Result<bool> {
     let exercises_dir = Path::new("exercises");
-    let exercises = find_all_exercises(exercises_dir)?;
     let mut state = AppState::load().unwrap_or_default();
+    let result = evaluate_current_exercise_in(exercises_dir, &mut state, mode)?;
+    state.save()?;
+    Ok(result)
+}
+
+pub fn evaluate_current_exercise_in<P: AsRef<Path>>(
+    exercises_dir: P,
+    state: &mut AppState,
+    mode: AccentMode,
+) -> Result<bool> {
+    let exercises = find_all_exercises(exercises_dir)?;
 
     if exercises.is_empty() {
         println!(
             "{}",
-            "No exercises found in 'exercises/' directory. Waiting for exercise files...".yellow()
+            "No exercises found in directory. Waiting for exercise files...".yellow()
         );
         return Ok(false);
     }
@@ -88,7 +108,7 @@ pub fn evaluate_current_exercise(mode: AccentMode) -> Result<bool> {
     let ex = match active_exercise {
         Some(e) => e,
         None => {
-            print!("\x1B[2J\x1B[1;1H"); // Clear screen
+            clear_screen();
             println!(
                 "{}",
                 "==========================================================".green()
@@ -117,7 +137,7 @@ pub fn evaluate_current_exercise(mode: AccentMode) -> Result<bool> {
     let user_answer = extract_user_answer(&parsed_ex, &content);
 
     // Clear terminal screen for clean compiler-like experience
-    print!("\x1B[2J\x1B[1;1H");
+    clear_screen();
     println!(
         "{} {} [{}] - {}",
         "Testing:".blue().bold(),
@@ -146,7 +166,6 @@ pub fn evaluate_current_exercise(mode: AccentMode) -> Result<bool> {
 
             state.mark_completed(&parsed_ex.id);
             state.update_srs(&parsed_ex.id, 5, Utc::now());
-            state.save()?;
 
             if !parsed_ex.is_done {
                 println!(
