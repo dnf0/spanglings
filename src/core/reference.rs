@@ -10,6 +10,7 @@ pub const TOPICS: &[&str] = &[
     "business",
     "false-friends",
     "voseo",
+    "accents",
 ];
 
 pub fn list_reference_topics() -> &'static [&'static str] {
@@ -31,6 +32,7 @@ pub fn get_reference_card(topic: &str) -> Option<&'static str> {
         }
         "false-friends" | "falsos-amigos" | "cognates" | "traps" => Some(FALSE_FRIENDS_CARD),
         "voseo" | "regional" | "rioplatense" => Some(VOSEO_CARD),
+        "accents" | "accentuation" | "tildes" | "acentuacion" | "stress" => Some(ACCENTS_CARD),
         _ => None,
     }
 }
@@ -271,5 +273,53 @@ AFFIRMATIVE IMPERATIVES (Drop '-r', stress final vowel):
   - comer  -> ¡Comé!       (tú: ¡Come!)
   - decir  -> ¡Decí!       (tú: ¡Di!)  -> ¡Decime! (¡Dime!)
   - sentar -> ¡Sentate!    (tú: ¡Siéntate!)
+================================================================================
+"#;
+
+pub const ACCENTS_CARD: &str = r#"
+================================================================================
+              SPANISH ACCENTUATION & ORTHOGRAPHIC STRESS (TILDES)
+================================================================================
+GENERAL RULES BY STRESS POSITION:
+
+1. AGUDAS (Stressed on the LAST syllable):
+   - Accent mark ONLY if the word ends in: N, S, or a VOWEL (A, E, I, O, U)
+   - Examples WITH tilde:    can-CIÓN, ca-FÉ, a-diÓS, co-mer-É
+   - Examples WITHOUT tilde: can-tar, pa-pel, re-loj, pa-red, Ma-drid
+
+2. LLANAS / GRAVES (Stressed on the PENULTIMATE syllable):
+   - Accent mark ONLY if the word DOES NOT end in: N, S, or a VOWEL
+   - Examples WITH tilde:    ÁR-bol, FÁ-cil, LÁ-piz, CÁR-cel, LÍ-der
+   - Examples WITHOUT tilde: ca-sa, me-sa, car-tas, can-tan, li-bro
+
+3. ESDRÚJULAS (Stressed on the ANTEPENULTIMATE syllable):
+   - ALWAYS take an accent mark!
+   - Examples:               MÚ-si-ca, RÁ-pi-do, GRA-má-ti-ca, PÁ-gi-na
+
+4. SOBREESDRÚJULAS (Stressed BEFORE the antepenultimate syllable):
+   - ALWAYS take an accent mark!
+   - Examples:               CÓM-pra-me-lo, EX-PLÍ-ca-se-lo, DI-CIÉN-do-te-lo
+
+DIPHTHONGS & HIATUSES (Diptongos vs Hiatos):
+  - Strong vowels (abiertas): A, E, O
+  - Weak vowels (cerradas):   I, U
+  - Diptongo (Strong + Weak or Weak + Weak): 1 syllable (bai-le, puer-ta)
+  - Hiato (Broken Diphthong): When stress falls on the WEAK vowel, it ALWAYS takes a tilde!
+    Examples: pa-ÍS, dÍ-a, ba-ÚL, con-ti-nÚ-o, ca-fe-te-RÍ-a
+
+DIACRITICAL ACCENT (Acento Diacrítico - Distinguishing Homonyms):
+  - tú (you - pronoun)        vs tu (your - possessive)
+  - él (he - pronoun)         vs el (the - masculine article)
+  - mí (me - prep object)     vs mi (my - possessive)
+  - sí (yes / oneself)        vs si (if / musical note)
+  - té (tea - noun)           vs te (you - object pronoun)
+  - dé (give - verb dar)      vs de (of/from - preposition)
+  - sé (I know / be!)         vs se (reflexive pronoun)
+  - más (more - adverb)       vs mas (but - literary conjunction)
+  - aún (still / yet)         vs aun (even / including)
+
+INTERROGATIVE & EXCLAMATORY PRONOUNS:
+  - ¿Qué?, ¿Quién?, ¿Cómo?, ¿Dónde?, ¿Cuándo?, ¿Por qué?, ¿Cuánto?
+  (Always carry a tilde in questions and exclamations, direct or indirect!)
 ================================================================================
 "#;

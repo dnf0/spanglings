@@ -81,6 +81,16 @@ fn test_get_voseo_reference_card() {
 }
 
 #[test]
+fn test_get_accents_reference_card() {
+    let card = get_reference_card("accents").expect("Accents card not found");
+    assert!(card.contains("ACCENTUATION & ORTHOGRAPHIC STRESS"));
+    assert!(card.contains("AGUDAS"));
+    assert!(card.contains("LLANAS"));
+    assert!(card.contains("ESDRÚJULAS"));
+    assert!(card.contains("Diptongos vs Hiatos"));
+}
+
+#[test]
 fn test_list_reference_topics() {
     let topics = list_reference_topics();
     assert!(topics.contains(&"subjunctive"));
@@ -94,6 +104,7 @@ fn test_list_reference_topics() {
     assert!(topics.contains(&"business"));
     assert!(topics.contains(&"false-friends"));
     assert!(topics.contains(&"voseo"));
+    assert!(topics.contains(&"accents"));
 }
 
 #[test]
