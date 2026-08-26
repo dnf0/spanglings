@@ -53,6 +53,11 @@ pub enum Commands {
         /// Search keyword or query
         query: String,
     },
+    /// Generate shell auto-completions
+    Completions {
+        /// Shell to generate completions for (bash, zsh, fish, powershell, elvish)
+        shell: clap_complete::Shell,
+    },
     /// Launch the interactive terminal UI
     Tui,
     /// Reset an exercise to its initial prompt

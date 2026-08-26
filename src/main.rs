@@ -34,6 +34,9 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Search { query }) => {
             spanglings::cli::commands::search::run_search(&query, cli.json)?;
         }
+        Some(Commands::Completions { shell }) => {
+            spanglings::cli::commands::completions::run_completions(shell)?;
+        }
         Some(Commands::Tui) => {
             spanglings::tui::start_tui(cli.strict_accents)?;
         }
