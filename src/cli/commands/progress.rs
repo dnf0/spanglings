@@ -1,25 +1,120 @@
 use crate::core::curriculum::{find_all_exercises_or_embedded, Level};
+use crate::core::exercise::Exercise;
 use crate::core::state::AppState;
-use chrono::Utc;
+use chrono::{DateTime, Utc};
 use colored::Colorize;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
 use std::path::Path;
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct LevelProgress {
     pub total: usize,
     pub completed: usize,
     pub percent: f64,
 }
 
-#[derive(Serialize, Deserialize)]
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct TopicWeaknessStat {
+    pub topic: String,
+    pub total: usize,
+    pub completed: usize,
+    pub avg_ease_factor: f32,
+    pub lapses: usize,
+    pub due_reviews: usize,
+    pub recommendation: String,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ProgressSummary {
     pub total: usize,
     pub completed: usize,
     pub percent: f64,
     pub due_reviews: usize,
     pub levels: std::collections::BTreeMap<String, LevelProgress>,
+    pub weak_topics: Vec<TopicWeaknessStat>,
+    pub recommendations: Vec<String>,
+}
+
+pub fn compute_weakness_profile(
+    exercises: &[Exercise],
+    state: &AppState,
+    now: DateTime<Utc>,
+) -> Vec<TopicWeaknessStat> {
+    let mut topic_exercises: HashMap<String, Vec<&Exercise>> = HashMap::new();
+    for ex in exercises {
+        topic_exercises.entry(ex.topic.clone()).or_default().push(ex);
+    }
+
+    let mut profiles = Vec::new();
+    for (topic, ex_list) in topic_exercises {
+        let total = ex_list.len();
+        let completed = ex_list
+            .iter()
+            .filter(|e| state.is_completed(&e.id) || e.is_done)
+            .count();
+        let mut ease_sum = 0.0f32;
+        let mut srs_count = 0usize;
+        let mut lapses = 0usize;
+        let mut due_reviews = 0usize;
+
+        for ex in &ex_list {
+            if let Some(stat) = state.stats.get(&ex.id) {
+                if stat.attempts > 1 {
+                    lapses += (stat.attempts - 1) as usize;
+                }
+            }
+            if let Some(srs) = state.srs.get(&ex.id) {
+                ease_sum += srs.ease_factor;
+                srs_count += 1;
+                if srs.repetitions == 0 && srs.interval_days <= 1 {
+                    lapses += 1;
+                }
+                if srs.next_review_due <= now {
+                    due_reviews += 1;
+                }
+            }
+        }
+
+        let avg_ease_factor = if srs_count > 0 {
+            ease_sum / srs_count as f32
+        } else {
+            2.5
+        };
+
+        let is_weak = avg_ease_factor < 2.35 || lapses > 0 || due_reviews > 0;
+        if is_weak {
+            let recommendation = if avg_ease_factor < 2.1 || lapses >= 2 {
+                format!("spanglings explain {}", topic.replace('_', "-"))
+            } else {
+                format!("spanglings drill --topic {}", topic)
+            };
+
+            profiles.push(TopicWeaknessStat {
+                topic,
+                total,
+                completed,
+                avg_ease_factor,
+                lapses,
+                due_reviews,
+                recommendation,
+            });
+        }
+    }
+
+    profiles.sort_by(|a, b| {
+        let a_score = (2.5 - a.avg_ease_factor) * 10.0
+            + (a.lapses as f32 * 2.0)
+            + (a.due_reviews as f32 * 1.5);
+        let b_score = (2.5 - b.avg_ease_factor) * 10.0
+            + (b.lapses as f32 * 2.0)
+            + (b.due_reviews as f32 * 1.5);
+        b_score
+            .partial_cmp(&a_score)
+            .unwrap_or(std::cmp::Ordering::Equal)
+    });
+
+    profiles
 }
 
 pub fn get_progress_json() -> anyhow::Result<String> {
@@ -74,12 +169,21 @@ pub fn get_progress_json() -> anyhow::Result<String> {
         );
     }
 
+    let weak_topics = compute_weakness_profile(&exercises, &state, now);
+    let recommendations: Vec<String> = weak_topics
+        .iter()
+        .take(3)
+        .map(|w| w.recommendation.clone())
+        .collect();
+
     let summary = ProgressSummary {
         total,
         completed,
         percent,
         due_reviews,
         levels: levels_map,
+        weak_topics,
+        recommendations,
     };
 
     let json_str = serde_json::to_string_pretty(&summary)?;
@@ -191,6 +295,24 @@ pub fn show_progress(json: bool) -> anyhow::Result<()> {
         mastered_count.to_string().green()
     );
     println!("  • Avg Ease Factor: {:.2}", avg_ease);
+
+    let weak_topics = compute_weakness_profile(&exercises, &state, now);
+    println!("\n{}", "Targeted Weakness Profiler & Recommendations:".bold());
+    if weak_topics.is_empty() {
+        println!("  ✨ {}", "No critical weak areas detected! All reviewed topics in good standing.".green());
+    } else {
+        for w in weak_topics.iter().take(4) {
+            println!(
+                "  ⚠️  {:<22} (Avg Ease: {:.2}, Lapses: {}, Due: {}) -> {}",
+                w.topic.yellow().bold(),
+                w.avg_ease_factor,
+                w.lapses,
+                w.due_reviews,
+                w.recommendation.cyan()
+            );
+        }
+    }
+
     println!(
         "{}",
         "==========================================================".blue()
