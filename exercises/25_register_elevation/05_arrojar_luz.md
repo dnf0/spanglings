@@ -1,0 +1,30 @@
+<!-- I AM NOT DONE -->
+# Register Elevation 05: 'Arrojar Luz' (Shed Light)
+<!-- id: c1_reg_arrojar | level: C1 | topic: register_elevation | type: cloze -->
+
+> **Register Elevation**: The canonical formal expression for "to shed light / clarify an enigma" is **arrojar luz sobre** (or *esclarecer*).
+
+### Context
+English: "The newly discovered archival documents shed light on the diplomatic pact."
+
+### Exercise
+Los documentos de archivo recién descubiertos lograron (arrojar) ___ luz sobre el pacto diplomático.
+
+<!-- SOLUTION
+arrojar
+-->
+
+<!-- ALTERNATIVES
+echar
+verter
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "dar" | code: "E2505" | message: "The standard literary metaphor for shedding light is 'arrojar luz', not 'dar luz'."
+-->
+
+<!-- HINTS
+Tier 1: Elevated verb paired with 'luz' meaning 'to shed / cast light'.
+Tier 2: Infinitive starting with 'arr-'.
+Tier 3: Solution: 'arrojar'.
+-->
