@@ -34,6 +34,8 @@ thiserror = "2.0"
 anyhow = "1.0"
 regex = "1.10"
 dirs = "5.0"
+include_dir = "0.7"
+clap_complete = "4.5"
 
 [dev-dependencies]
 tempfile = "3.10"

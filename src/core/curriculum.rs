@@ -54,6 +54,17 @@ pub fn find_all_exercises<P: AsRef<Path>>(root: P) -> anyhow::Result<Vec<Exercis
     Ok(exercises)
 }
 
+pub fn find_all_exercises_or_embedded<P: AsRef<Path>>(root: P) -> anyhow::Result<Vec<Exercise>> {
+    let root = root.as_ref();
+    if root.exists() && root.is_dir() {
+        let disk_exercises = find_all_exercises(root)?;
+        if !disk_exercises.is_empty() {
+            return Ok(disk_exercises);
+        }
+    }
+    crate::core::embedded::get_embedded_exercises()
+}
+
 fn collect_md_files(dir: &Path, exercises: &mut Vec<Exercise>) -> anyhow::Result<()> {
     if dir.is_dir() {
         let mut entries: Vec<_> = fs::read_dir(dir)?.filter_map(|e| e.ok()).collect();
