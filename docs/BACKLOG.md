@@ -4,21 +4,21 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
 
 ---
 
-## 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Current Sprint)
+## 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Completed)
 
-- [ ] **SPANG-001: Embedded Curriculum & `spanglings init`**
+- [x] **SPANG-001: Embedded Curriculum & `spanglings init`**
   - **Description**: Embed all 116+ curriculum markdown files directly into the compiled binary via `include_dir!`.
   - **CLI Command**: `spanglings init [target_dir] [--force]`
   - **Behavior**: Scaffolds exercises into `./exercises` (or custom directory) with initial configuration and starter guide, allowing anyone installing via `cargo install spanglings` to run anywhere immediately.
-- [ ] **SPANG-002: Automatic In-Memory Fallback & Guided Setup**
-  - **Description**: If `spanglings` is launched in a directory without an `./exercises` folder, prompt the user or automatically offer `spanglings init`, or read exercises from embedded memory.
-- [ ] **SPANG-003: JSON Machine-Readable Output Mode (`--json`)**
-  - **Description**: Add `--json` flag to `spanglings list`, `spanglings progress`, `spanglings run`, and `spanglings review`.
+- [x] **SPANG-002: Automatic In-Memory Fallback & Guided Setup**
+  - **Description**: If `spanglings` is launched in a directory without an `./exercises` folder, fallback automatically to reading embedded exercises in-memory.
+- [x] **SPANG-003: JSON Machine-Readable Output Mode (`--json`)**
+  - **Description**: Added `--json` flag to `spanglings list`, `spanglings progress`, and `spanglings search`.
   - **Use Case**: Enables integrations with external scripts, status bars (e.g., Starship, tmux), CI pipelines, and IDE extensions.
-- [ ] **SPANG-004: Fuzzy Topic & Full-Text Search (`spanglings search`)**
-  - **Description**: `spanglings search <query>` to search across exercise titles, prompts, grammar topics, tags, and hints with ranked fuzzy matching.
-- [ ] **SPANG-005: Shell Completions Generator (`spanglings completions`)**
-  - **Description**: `spanglings completions <bash|zsh|fish|powershell>` using `clap_complete` for subcommands, topics, and exercise paths.
+- [x] **SPANG-004: Fuzzy Topic & Full-Text Search (`spanglings search`)**
+  - **Description**: `spanglings search <query>` to search across exercise titles, prompts, grammar topics, tags, and hints with ranked matching.
+- [x] **SPANG-005: Shell Completions Generator (`spanglings completions`)**
+  - **Description**: `spanglings completions <bash|zsh|fish|powershell|elvish>` using `clap_complete` for subcommands, topics, and exercise paths.
 
 ---
 
