@@ -34,15 +34,9 @@ fn test_all_curriculum_exercises_are_valid_and_solvable() {
     let mut md_paths = Vec::new();
     collect_md_paths(exercises_dir, &mut md_paths);
 
-    assert_eq!(
-        md_paths.len(),
-        116,
-        "Expected all 116 exercises to be discovered, found {}",
-        md_paths.len()
-    );
     assert!(
-        md_paths.len() >= 100,
-        "Expected at least 100 exercises, found {}",
+        md_paths.len() >= 116,
+        "Expected at least 116 exercises to be discovered, found {}",
         md_paths.len()
     );
 
@@ -51,8 +45,8 @@ fn test_all_curriculum_exercises_are_valid_and_solvable() {
         find_all_exercises(exercises_dir).expect("find_all_exercises should succeed");
     assert_eq!(
         discovered_exercises.len(),
-        116,
-        "find_all_exercises should return 116 exercises"
+        md_paths.len(),
+        "find_all_exercises should return all discovered exercises"
     );
 
     for path in &md_paths {

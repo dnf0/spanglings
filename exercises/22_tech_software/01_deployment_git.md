@@ -1,0 +1,29 @@
+<!-- I AM NOT DONE -->
+# Tech Spanish 01: Deployment & Releases
+<!-- id: b2_tech_deployment | level: B2 | topic: tech_software | type: cloze -->
+
+> **Grammar & Lexicon**: In software engineering, avoid Spanglish calques like *deployar*. Use the standard verb **desplegar** (to deploy) and **solicitud de extracción** (pull request).
+
+### Context
+English: "Before launching the new version, we have to deploy the microservices to the production environment."
+
+### Exercise
+Antes de lanzar la nueva versión, tenemos que (desplegar) ___ los microservicios en el entorno de producción.
+
+<!-- SOLUTION
+desplegar
+-->
+
+<!-- ALTERNATIVES
+desplegar a producción
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "deployar" | code: "E2201" | message: "Use the authentic Spanish verb 'desplegar' rather than the Spanglish calque 'deployar'."
+-->
+
+<!-- HINTS
+Tier 1: Translate 'to deploy' using proper Spanish technical terminology.
+Tier 2: The verb comes from 'des-' + 'plegar' (to unfold).
+Tier 3: Solution: 'desplegar'.
+-->
