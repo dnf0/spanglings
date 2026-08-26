@@ -39,6 +39,9 @@ impl Default for AppState {
 
 impl AppState {
     pub fn default_path() -> PathBuf {
+        if let Some(override_path) = std::env::var_os("SPANGLINGS_STATE_PATH") {
+            return PathBuf::from(override_path);
+        }
         dirs::config_dir()
             .map(|p| p.join("spanglings").join("state.json"))
             .unwrap_or_else(|| PathBuf::from(".spanglings_state.json"))

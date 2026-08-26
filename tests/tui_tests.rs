@@ -28,6 +28,9 @@ fn create_sample_exercises() -> Vec<Exercise> {
                 "Tier 2: Root is 'veng-'.".to_string(),
                 "Tier 3: Add '-as'.".to_string(),
             ],
+            raw_content:
+                "### Context\nEnglish: I want you to come\n### Exercise\nQuiero que tú vengas\n"
+                    .to_string(),
         },
         Exercise {
             path: PathBuf::from("exercises/02_por_para.md"),
@@ -45,6 +48,8 @@ fn create_sample_exercises() -> Vec<Exercise> {
                 message: "Expected 'para' for purpose.".to_string(),
             }],
             hints: vec!["Think about destination vs motive.".to_string()],
+            raw_content: "### Context\nEnglish: For you\n### Exercise\nEsto es para ti\n"
+                .to_string(),
         },
     ]
 }
@@ -167,4 +172,47 @@ fn test_app_draw_ui_renders_without_panicking() {
     let narrow_backend = TestBackend::new(80, 30);
     let mut narrow_terminal = Terminal::new(narrow_backend).unwrap();
     narrow_terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+}
+
+#[test]
+fn test_app_utf8_spanish_characters_editing_and_rendering() {
+    let exercises = create_sample_exercises();
+    let mut app = App::new(exercises, false);
+
+    // Type Spanish accented characters and ñ
+    app.insert_char('e');
+    app.insert_char('s');
+    app.insert_char('p');
+    app.insert_char('a');
+    app.insert_char('ñ');
+    app.insert_char('o');
+    app.insert_char('l');
+    assert_eq!(app.input_buffer, "español");
+    assert_eq!(app.cursor_position, 7);
+
+    // Navigate cursor inside UTF-8 multi-byte sequence
+    app.move_cursor_left(); // at 'l'
+    app.move_cursor_left(); // at 'o'
+    app.move_cursor_left(); // at 'ñ'
+    assert_eq!(app.cursor_position, 4);
+
+    // Delete 'a' before 'ñ'
+    app.delete_char_backwards();
+    assert_eq!(app.input_buffer, "espñol");
+    assert_eq!(app.cursor_position, 3);
+
+    // Delete 'ñ' with forward delete
+    app.delete_char_forwards();
+    assert_eq!(app.input_buffer, "espol");
+    assert_eq!(app.cursor_position, 3);
+
+    // Insert 'á' (2-byte character)
+    app.insert_char('á');
+    assert_eq!(app.input_buffer, "espáol");
+    assert_eq!(app.cursor_position, 4);
+
+    // Render with cursor at accented position
+    let backend = TestBackend::new(100, 30);
+    let mut terminal = Terminal::new(backend).unwrap();
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
 }

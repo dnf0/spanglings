@@ -73,13 +73,13 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                         app.cursor_position = 0;
                     }
                     (KeyCode::End, _) => {
-                        app.cursor_position = app.input_buffer.len();
+                        app.set_cursor_end();
                     }
                     (KeyCode::Backspace, _) => {
                         app.delete_char_backwards();
                     }
-                    (KeyCode::Delete, _) if app.cursor_position < app.input_buffer.len() => {
-                        app.input_buffer.remove(app.cursor_position);
+                    (KeyCode::Delete, _) => {
+                        app.delete_char_forwards();
                     }
                     (KeyCode::Char(c), KeyModifiers::NONE)
                     | (KeyCode::Char(c), KeyModifiers::SHIFT) => {

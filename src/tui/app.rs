@@ -63,14 +63,29 @@ impl App {
     }
 
     pub fn insert_char(&mut self, c: char) {
-        self.input_buffer.insert(self.cursor_position, c);
+        let byte_idx = self
+            .input_buffer
+            .char_indices()
+            .nth(self.cursor_position)
+            .map(|(idx, _)| idx)
+            .unwrap_or(self.input_buffer.len());
+        self.input_buffer.insert(byte_idx, c);
         self.cursor_position += 1;
     }
 
     pub fn delete_char_backwards(&mut self) {
         if self.cursor_position > 0 {
-            self.cursor_position -= 1;
-            self.input_buffer.remove(self.cursor_position);
+            let char_to_remove = self.cursor_position - 1;
+            if let Some((byte_idx, _)) = self.input_buffer.char_indices().nth(char_to_remove) {
+                self.input_buffer.remove(byte_idx);
+                self.cursor_position -= 1;
+            }
+        }
+    }
+
+    pub fn delete_char_forwards(&mut self) {
+        if let Some((byte_idx, _)) = self.input_buffer.char_indices().nth(self.cursor_position) {
+            self.input_buffer.remove(byte_idx);
         }
     }
 
@@ -81,9 +96,13 @@ impl App {
     }
 
     pub fn move_cursor_right(&mut self) {
-        if self.cursor_position < self.input_buffer.len() {
+        if self.cursor_position < self.input_buffer.chars().count() {
             self.cursor_position += 1;
         }
+    }
+
+    pub fn set_cursor_end(&mut self) {
+        self.cursor_position = self.input_buffer.chars().count();
     }
 
     pub fn submit_current_answer(&mut self) {

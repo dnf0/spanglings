@@ -185,13 +185,13 @@ fn draw_left_pane(frame: &mut Frame, app: &App, area: Rect) {
     ]));
     lines.push(Line::from(""));
 
-    // Attempt to read markdown description from file if available
-    if let Ok(content) = std::fs::read_to_string(&ex.path) {
+    // Extract markdown description from in-memory raw_content
+    if !ex.raw_content.is_empty() {
         let mut in_exercise_section = false;
         let mut context_lines = Vec::new();
         let mut exercise_lines = Vec::new();
 
-        for line in content.lines() {
+        for line in ex.raw_content.lines() {
             if line.starts_with("<!--") {
                 continue;
             }
@@ -267,15 +267,19 @@ fn draw_left_pane(frame: &mut Frame, app: &App, area: Rect) {
         .title(" Your Answer (Type & Press Enter) ")
         .border_style(Style::default().fg(Color::Yellow));
 
-    let (before_cursor, cursor_char, remaining) = if app.cursor_position <= app.input_buffer.len() {
-        let (b, a) = app.input_buffer.split_at(app.cursor_position);
-        let cursor_char = a.chars().next().unwrap_or(' ');
-        let remaining = if !a.is_empty() {
-            &a[cursor_char.len_utf8()..]
-        } else {
-            ""
-        };
-        (b, cursor_char, remaining)
+    let total_chars = app.input_buffer.chars().count();
+    let (before_cursor, cursor_char, remaining) = if app.cursor_position < total_chars {
+        let byte_idx = app
+            .input_buffer
+            .char_indices()
+            .nth(app.cursor_position)
+            .map(|(idx, _)| idx)
+            .unwrap_or(app.input_buffer.len());
+        let (b, rest) = app.input_buffer.split_at(byte_idx);
+        let mut chars = rest.chars();
+        let c = chars.next().unwrap_or(' ');
+        let rem = chars.as_str();
+        (b, c, rem)
     } else {
         (app.input_buffer.as_str(), ' ', "")
     };
@@ -418,7 +422,7 @@ fn draw_right_pane(frame: &mut Frame, app: &App, area: Rect) {
             }
 
             lines.push(Line::from(Span::styled(
-                "Press [Tab] or [N] to advance to the next exercise.",
+                "Press [Tab] or [Ctrl-N] to advance to the next exercise.",
                 Style::default().fg(Color::Cyan),
             )));
 
@@ -480,7 +484,7 @@ fn draw_right_pane(frame: &mut Frame, app: &App, area: Rect) {
 
             lines.push(Line::from(""));
             lines.push(Line::from(Span::styled(
-                "Press [H] for hints or [E] for grammar rules.",
+                "Press [Ctrl-H] / [F1] for hints or [Ctrl-E] / [F2] for grammar rules.",
                 Style::default().fg(Color::DarkGray),
             )));
 
@@ -506,10 +510,10 @@ fn draw_right_pane(frame: &mut Frame, app: &App, area: Rect) {
                 Line::from(""),
                 Line::from("• Type your answer in the prompt and press [Enter] to validate."),
                 Line::from("• Conjugate irregular stems and apply mood triggers carefully."),
-                Line::from("• Press [H] to view progressive 3-tiered hints."),
-                Line::from("• Press [E] to read the instant in-terminal grammar cheat sheet."),
-                Line::from("• Press [Tab] or [N] for Next, [P] for Previous exercise."),
-                Line::from("• Press [Esc] or [Q] to quit."),
+                Line::from("• Press [Ctrl-H] or [F1] to view progressive 3-tiered hints."),
+                Line::from("• Press [Ctrl-E] or [F2] to read the in-terminal grammar cheat sheet."),
+                Line::from("• Press [Tab] / [Ctrl-N] for Next, [BackTab] / [Ctrl-P] for Prev."),
+                Line::from("• Press [Esc] or [Ctrl-C] to quit."),
             ];
 
             let idle_para = Paragraph::new(lines)
@@ -536,7 +540,7 @@ fn draw_footer(frame: &mut Frame, _app: &App, area: Rect) {
         ),
         Span::styled(" Submit  ", Style::default().fg(Color::White)),
         Span::styled(
-            " [H] ",
+            " [Ctrl-H / F1] ",
             Style::default()
                 .fg(Color::Black)
                 .bg(Color::Yellow)
@@ -544,7 +548,7 @@ fn draw_footer(frame: &mut Frame, _app: &App, area: Rect) {
         ),
         Span::styled(" Hint  ", Style::default().fg(Color::White)),
         Span::styled(
-            " [E] ",
+            " [Ctrl-E / F2] ",
             Style::default()
                 .fg(Color::Black)
                 .bg(Color::Magenta)
@@ -552,7 +556,7 @@ fn draw_footer(frame: &mut Frame, _app: &App, area: Rect) {
         ),
         Span::styled(" Explain  ", Style::default().fg(Color::White)),
         Span::styled(
-            " [Tab / N] ",
+            " [Tab / Ctrl-N] ",
             Style::default()
                 .fg(Color::Black)
                 .bg(Color::Blue)
@@ -560,7 +564,7 @@ fn draw_footer(frame: &mut Frame, _app: &App, area: Rect) {
         ),
         Span::styled(" Next  ", Style::default().fg(Color::White)),
         Span::styled(
-            " [P] ",
+            " [BackTab / Ctrl-P] ",
             Style::default()
                 .fg(Color::Black)
                 .bg(Color::Blue)
@@ -568,7 +572,7 @@ fn draw_footer(frame: &mut Frame, _app: &App, area: Rect) {
         ),
         Span::styled(" Prev  ", Style::default().fg(Color::White)),
         Span::styled(
-            " [R] ",
+            " [Ctrl-R] ",
             Style::default()
                 .fg(Color::Black)
                 .bg(Color::DarkGray)
@@ -576,7 +580,7 @@ fn draw_footer(frame: &mut Frame, _app: &App, area: Rect) {
         ),
         Span::styled(" Reset  ", Style::default().fg(Color::White)),
         Span::styled(
-            " [Esc / Q] ",
+            " [Esc / Ctrl-C] ",
             Style::default()
                 .fg(Color::Black)
                 .bg(Color::Red)

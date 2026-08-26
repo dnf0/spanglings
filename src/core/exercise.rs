@@ -63,6 +63,7 @@ pub struct Exercise {
     pub alternatives: Vec<String>,
     pub diagnostic_rules: Vec<DiagnosticRule>,
     pub hints: Vec<String>,
+    pub raw_content: String,
 }
 
 static COMMENT_RE: OnceLock<regex::Regex> = OnceLock::new();
@@ -199,6 +200,7 @@ impl Exercise {
             alternatives,
             diagnostic_rules,
             hints,
+            raw_content: content.to_string(),
         })
     }
 }

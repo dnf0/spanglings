@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "src/main.rs": {
-    "mtime": 1787751392.1069427,
-    "seen": 1787751487.952158,
-    "ast_hash": "0d71bf4bf4eee4dc838eab1f3566f96e",
+    "mtime": 1787755009.1426508,
+    "seen": 1787755040.105527,
+    "ast_hash": "009e6f6690022db925cd4adea6e6c767",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-spanglings-implementation.md": {
@@ -24,9 +24,9 @@
     "semantic_hash": ""
   },
   "src/core/curriculum.rs": {
-    "mtime": 1787751760.2399733,
-    "seen": 1787751807.066751,
-    "ast_hash": "337cabe2022f657a811ef1531af049bf",
+    "mtime": 1787754622.0158687,
+    "seen": 1787754663.7636821,
+    "ast_hash": "679103fb2e9712a8b384184d6b7fcb87",
     "semantic_hash": ""
   },
   "src/core/exercise.rs": {
@@ -36,15 +36,15 @@
     "semantic_hash": ""
   },
   "src/core/mod.rs": {
-    "mtime": 1787751678.8736095,
-    "seen": 1787751807.066754,
-    "ast_hash": "03e380449d7784e82df4459d63c1bad3",
+    "mtime": 1787754107.0095334,
+    "seen": 1787754171.4005241,
+    "ast_hash": "f1524c9ca49314f1aca1474f8b11539f",
     "semantic_hash": ""
   },
   "src/lib.rs": {
-    "mtime": 1787752316.8684888,
-    "seen": 1787752349.023516,
-    "ast_hash": "59c31f9a98d914cf640607f6418c6945",
+    "mtime": 1787755004.5279205,
+    "seen": 1787755040.105526,
+    "ast_hash": "9499af2aef332437071f1ac78f294e0d",
     "semantic_hash": ""
   },
   "tests/exercise_parser_tests.rs": {
@@ -90,21 +90,129 @@
     "semantic_hash": ""
   },
   "src/engine/validator.rs": {
-    "mtime": 1787753206.1075783,
-    "seen": 1787753231.9595032,
-    "ast_hash": "593ed0385c63224bfcf3b989b8096b54",
+    "mtime": 1787753469.1417243,
+    "seen": 1787753499.57483,
+    "ast_hash": "239aa15c884f57704e6031e6dcbd5a61",
     "semantic_hash": ""
   },
   "tests/diagnostic_rule_tests.rs": {
-    "mtime": 1787753206.1082597,
-    "seen": 1787753231.959504,
-    "ast_hash": "93826b1348f9af56521ff6953b0562dd",
+    "mtime": 1787753482.2503872,
+    "seen": 1787753499.5748322,
+    "ast_hash": "f9ee23103e006fc4a29d01b5c09c4b56",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md": {
     "mtime": 1787753110.8268843,
     "seen": 1787753231.9595048,
     "ast_hash": "937b73122da251c68c4c59ca3b1d7fab",
+    "semantic_hash": ""
+  },
+  "src/core/srs.rs": {
+    "mtime": 1787754008.844936,
+    "seen": 1787754043.715335,
+    "ast_hash": "baa69d900c6197577562e7ca939b885f",
+    "semantic_hash": ""
+  },
+  "src/core/state.rs": {
+    "mtime": 1787754578.7962627,
+    "seen": 1787754663.7636852,
+    "ast_hash": "73b2e3195aa2f958956d850ca580274c",
+    "semantic_hash": ""
+  },
+  "tests/srs_tests.rs": {
+    "mtime": 1787754024.7397907,
+    "seen": 1787754043.715342,
+    "ast_hash": "aef06dfb491d38701d60ff25764ea752",
+    "semantic_hash": ""
+  },
+  "src/core/reference.rs": {
+    "mtime": 1787754302.848208,
+    "seen": 1787754325.13495,
+    "ast_hash": "7aca9819391e0339946e4a3954b43ad6",
+    "semantic_hash": ""
+  },
+  "tests/reference_tests.rs": {
+    "mtime": 1787754131.3113003,
+    "seen": 1787754171.400531,
+    "ast_hash": "18a62e4f8693237001c61cb48c36bc3d",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/drill.rs": {
+    "mtime": 1787754456.0384002,
+    "seen": 1787754663.7636778,
+    "ast_hash": "174ef596742d5259d7d46c308c55324a",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/explain.rs": {
+    "mtime": 1787754410.4070995,
+    "seen": 1787754663.763679,
+    "ast_hash": "6000bcfb5fe6c0c45beedf28889727f8",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/hint.rs": {
+    "mtime": 1787754645.2431335,
+    "seen": 1787754663.763679,
+    "ast_hash": "c14dd570887b075bfd48c98a740adca4",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/list.rs": {
+    "mtime": 1787754645.2434237,
+    "seen": 1787754663.76368,
+    "ast_hash": "c3d763e92dc0cdd972f500669b0586f4",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/mod.rs": {
+    "mtime": 1787754406.011463,
+    "seen": 1787754663.76368,
+    "ast_hash": "0db7e9c47f65c4941a70e0ce85bf4354",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/progress.rs": {
+    "mtime": 1787754555.5759718,
+    "seen": 1787754663.763681,
+    "ast_hash": "fe26e2891a65028dfe4187b738f08427",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/review.rs": {
+    "mtime": 1787754645.244305,
+    "seen": 1787754663.763681,
+    "ast_hash": "6a7f977e8592ceee8165700792a085c5",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/run.rs": {
+    "mtime": 1787754947.010451,
+    "seen": 1787754972.686225,
+    "ast_hash": "a562652843aeab4b6d251ad461c0b27a",
+    "semantic_hash": ""
+  },
+  "src/cli/mod.rs": {
+    "mtime": 1787754402.9509444,
+    "seen": 1787754663.7636821,
+    "ast_hash": "a3eab3e003d4aa74d1f2d6f1fef7734c",
+    "semantic_hash": ""
+  },
+  "tests/cli_tests.rs": {
+    "mtime": 1787754630.880737,
+    "seen": 1787754663.76369,
+    "ast_hash": "a512f3136cb0bc6807b5236199c1b377",
+    "semantic_hash": ""
+  },
+  "src/watcher/mod.rs": {
+    "mtime": 1787754983.489881,
+    "seen": 1787755040.105528,
+    "ast_hash": "032e41a95bd75a659046279f2f51af79",
+    "semantic_hash": ""
+  },
+  "src/watcher/runner.rs": {
+    "mtime": 1787755017.2152238,
+    "seen": 1787755040.105528,
+    "ast_hash": "3fba7c855f0ecde71eb2f6065a45f5ae",
+    "semantic_hash": ""
+  },
+  "tests/watcher_tests.rs": {
+    "mtime": 1787755014.001886,
+    "seen": 1787755040.105532,
+    "ast_hash": "4d111c94dab6e7cbf3e83af8c3edfe1a",
     "semantic_hash": ""
   }
 }

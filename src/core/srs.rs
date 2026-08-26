@@ -50,12 +50,14 @@ pub fn calculate_sm2_review(item: &SrsItem, quality: u8, now: DateTime<Utc>) -> 
             1 => (2, 6),
             n => {
                 let interval = ((item.interval_days as f32) * new_ef).round() as u32;
-                (n + 1, interval.max(1))
+                (n + 1, interval.clamp(1, 3650))
             }
         }
     };
 
-    let next_due = now + Duration::days(new_interval as i64);
+    let next_due = now
+        .checked_add_signed(Duration::days(new_interval as i64))
+        .unwrap_or(DateTime::<Utc>::MAX_UTC);
 
     SrsItem {
         repetitions: new_reps,
