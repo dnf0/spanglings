@@ -6,3 +6,4 @@ pub mod list;
 pub mod progress;
 pub mod review;
 pub mod run;
+pub mod search;

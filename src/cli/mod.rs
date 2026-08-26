@@ -48,6 +48,11 @@ pub enum Commands {
     List,
     /// Display learning progress and CEFR level mastery
     Progress,
+    /// Search exercises by topic, keyword, or grammar concept
+    Search {
+        /// Search keyword or query
+        query: String,
+    },
     /// Launch the interactive terminal UI
     Tui,
     /// Reset an exercise to its initial prompt

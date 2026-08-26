@@ -31,6 +31,9 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Progress) => {
             spanglings::cli::commands::progress::show_progress(cli.json)?;
         }
+        Some(Commands::Search { query }) => {
+            spanglings::cli::commands::search::run_search(&query, cli.json)?;
+        }
         Some(Commands::Tui) => {
             spanglings::tui::start_tui(cli.strict_accents)?;
         }
