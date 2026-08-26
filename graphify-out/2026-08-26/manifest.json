@@ -30,9 +30,9 @@
     "semantic_hash": ""
   },
   "src/core/exercise.rs": {
-    "mtime": 1787751760.2407887,
-    "seen": 1787751807.066753,
-    "ast_hash": "71dc357953e37c8dd4de0ddffa8ab1aa",
+    "mtime": 1787752073.540236,
+    "seen": 1787752349.023513,
+    "ast_hash": "7f1cf009f2d188c5fc499eb7a4c94911",
     "semantic_hash": ""
   },
   "src/core/mod.rs": {
@@ -42,15 +42,39 @@
     "semantic_hash": ""
   },
   "src/lib.rs": {
-    "mtime": 1787751680.6364992,
-    "seen": 1787751807.066755,
-    "ast_hash": "11eaf18b0de1a0d2ca86b0d839cf9e2f",
+    "mtime": 1787752316.8684888,
+    "seen": 1787752349.023516,
+    "ast_hash": "59c31f9a98d914cf640607f6418c6945",
     "semantic_hash": ""
   },
   "tests/exercise_parser_tests.rs": {
-    "mtime": 1787751902.048018,
-    "seen": 1787751940.621805,
-    "ast_hash": "fc9312700185eafd23235aacb21e4aad",
+    "mtime": 1787752079.9087605,
+    "seen": 1787752349.023517,
+    "ast_hash": "a024c7f2161644d85c45d41e4b912152",
+    "semantic_hash": ""
+  },
+  "src/engine/accents.rs": {
+    "mtime": 1787752316.8682628,
+    "seen": 1787752349.023514,
+    "ast_hash": "8f159ffb1ce72b969b5f7dc26d98cef0",
+    "semantic_hash": ""
+  },
+  "src/engine/mod.rs": {
+    "mtime": 1787752268.0666401,
+    "seen": 1787752349.023515,
+    "ast_hash": "f451a60c175095e0761e91e02e66e3c7",
+    "semantic_hash": ""
+  },
+  "src/engine/normalizer.rs": {
+    "mtime": 1787752303.407626,
+    "seen": 1787752349.023516,
+    "ast_hash": "216d8834099928e0edd75e622b303dc9",
+    "semantic_hash": ""
+  },
+  "tests/normalizer_tests.rs": {
+    "mtime": 1787752202.3425946,
+    "seen": 1787752349.0235178,
+    "ast_hash": "4b4cac499180c85a89f494e2b818d41a",
     "semantic_hash": ""
   }
 }

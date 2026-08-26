@@ -3,11 +3,13 @@ use spanglings::engine::normalizer::normalize;
 
 #[test]
 fn test_punctuation_and_whitespace_normalization() {
-    assert_eq!(normalize("  ¿Hola!  "), "Hola!");
-    assert_eq!(normalize("¡Qué tal!"), "Qué tal!");
+    assert_eq!(normalize("  ¿Hola!  "), "Hola");
+    assert_eq!(normalize("¡Qué tal!"), "Qué tal");
     assert_eq!(normalize("  hablo   mucho  "), "hablo mucho");
     assert_eq!(normalize("\"vengas\""), "vengas");
     assert_eq!(normalize("'vengas'"), "vengas");
+    assert_eq!(normalize("«vengas»"), "vengas");
+    assert_eq!(normalize("“vengas”"), "vengas");
 }
 
 #[test]
@@ -45,5 +47,49 @@ fn test_smart_accent_matching() {
     assert_eq!(
         check_accent_match("comió", "habló", false),
         AccentResult::Mismatch
+    );
+
+    // Test cases from specification/review feedback:
+    // ¿Cómo estás? vs como estas vs cómo estás -> Exact or Forgiven match.
+    // 1. ¿Cómo estás? vs como estas (strict = false -> ForgivenMatch)
+    match check_accent_match("como estas", "¿Cómo estás?", false) {
+        AccentResult::ForgivenMatch { expected, tip } => {
+            assert_eq!(expected, "Cómo estás");
+            assert!(tip.contains("Cómo estás"));
+        }
+        other => panic!(
+            "Expected ForgivenMatch for 'como estas' vs '¿Cómo estás?', got {:?}",
+            other
+        ),
+    }
+
+    // 2. ¿Cómo estás? vs cómo estás (strict = false -> ExactMatch, since they match exactly post-normalization except for capitalization)
+    assert_eq!(
+        check_accent_match("cómo estás", "¿Cómo estás?", false),
+        AccentResult::ExactMatch
+    );
+
+    // ¡Hola! vs Hola -> Match
+    assert_eq!(
+        check_accent_match("¡Hola!", "Hola", false),
+        AccentResult::ExactMatch
+    );
+    assert_eq!(
+        check_accent_match("Hola", "¡Hola!", false),
+        AccentResult::ExactMatch
+    );
+
+    // "vengas" vs 'vengas' vs «vengas» -> Match
+    assert_eq!(
+        check_accent_match("\"vengas\"", "'vengas'", false),
+        AccentResult::ExactMatch
+    );
+    assert_eq!(
+        check_accent_match("«vengas»", "'vengas'", false),
+        AccentResult::ExactMatch
+    );
+    assert_eq!(
+        check_accent_match("“vengas”", "«vengas»", false),
+        AccentResult::ExactMatch
     );
 }
