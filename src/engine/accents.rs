@@ -1,5 +1,13 @@
 use crate::engine::normalizer::normalize;
+use serde::{Deserialize, Serialize};
 use unicode_normalization::UnicodeNormalization;
+
+#[derive(Debug, Clone, Copy, PartialEq, Eq, Serialize, Deserialize, Default)]
+pub enum AccentMode {
+    #[default]
+    Forgiving,
+    Strict,
+}
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum AccentResult {

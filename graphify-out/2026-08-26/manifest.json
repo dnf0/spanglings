@@ -66,15 +66,15 @@
     "semantic_hash": ""
   },
   "src/engine/normalizer.rs": {
-    "mtime": 1787752303.407626,
-    "seen": 1787752349.023516,
-    "ast_hash": "216d8834099928e0edd75e622b303dc9",
+    "mtime": 1787752810.800735,
+    "seen": 1787752886.51773,
+    "ast_hash": "ed67f377597a726fbf721a6c8856e673",
     "semantic_hash": ""
   },
   "tests/normalizer_tests.rs": {
-    "mtime": 1787752202.3425946,
-    "seen": 1787752349.0235178,
-    "ast_hash": "4b4cac499180c85a89f494e2b818d41a",
+    "mtime": 1787752810.8018322,
+    "seen": 1787752886.5177321,
+    "ast_hash": "9ff4eb5914707ba434bb7fc8aa0f4fc1",
     "semantic_hash": ""
   }
 }

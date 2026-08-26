@@ -1,7 +1,7 @@
 # Graph Report - spanglings  (2026-08-26)
 
 ## Corpus Check
-- 13 files · ~9,038 words
+- 13 files · ~9,274 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d0fd541f`
+- Built from commit: `e9f23dc5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

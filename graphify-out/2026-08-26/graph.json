@@ -518,7 +518,7 @@
       "file_type": "code",
       "norm_label": "test_accent_stripping()",
       "source_file": "tests/normalizer_tests.rs",
-      "source_location": "L14"
+      "source_location": "L16"
     },
     {
       "id": "tests_normalizer_tests_test_punctuation_and_whitespace_normalization",
@@ -540,7 +540,7 @@
       "file_type": "code",
       "norm_label": "test_smart_accent_matching()",
       "source_file": "tests/normalizer_tests.rs",
-      "source_location": "L22"
+      "source_location": "L24"
     },
     {
       "id": "src_core_curriculum",
@@ -1921,7 +1921,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/normalizer_tests.rs",
-      "source_location": "L14",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -1932,7 +1932,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/normalizer_tests.rs",
-      "source_location": "L22",
+      "source_location": "L24",
       "weight": 1.0
     },
     {
@@ -2066,10 +2066,10 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/normalizer_tests.rs",
-      "source_location": "L30",
+      "source_location": "L32",
       "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d0fd541f2b2cfa1b3a3d77b92f39666347c99a85"
+  "built_at_commit": "e9f23dc58f04c50ddb55774b83c5e4566b04e9a5"
 }

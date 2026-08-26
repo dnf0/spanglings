@@ -9,6 +9,8 @@
   "7": "exercise_parser_tests.rs",
   "8": "mod.rs",
   "9": "lib.rs",
-  "10": "3. Linguistic & Diagnostic Engine",
-  "11": "engine/mod.rs"
+  "10": "validate_submission",
+  "11": "engine/mod.rs",
+  "12": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
+  "13": "Diagnostic"
 }

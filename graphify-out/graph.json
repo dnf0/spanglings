@@ -244,6 +244,54 @@
       "source_location": "L40"
     },
     {
+      "id": "docs_superpowers_specs_2026_08_26_spanglings_design_3_1_accent_punctuation_handling",
+      "label": "3.1 Accent & Punctuation Handling",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Spanglings Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.1 accent & punctuation handling",
+      "source_file": "docs/superpowers/specs/2026-08-26-spanglings-design.md",
+      "source_location": "L114"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_26_spanglings_design_3_2_compiler_style_diagnostic_output",
+      "label": "3.2 Compiler-Style Diagnostic Output",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Spanglings Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.2 compiler-style diagnostic output",
+      "source_file": "docs/superpowers/specs/2026-08-26-spanglings-design.md",
+      "source_location": "L130"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_26_spanglings_design_3_3_diagnostic_error_taxonomy",
+      "label": "3.3 Diagnostic Error Taxonomy",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Spanglings Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3.3 diagnostic error taxonomy",
+      "source_file": "docs/superpowers/specs/2026-08-26-spanglings-design.md",
+      "source_location": "L145"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_26_spanglings_design_3_linguistic_diagnostic_engine",
+      "label": "3. Linguistic & Diagnostic Engine",
+      "_origin": "ast",
+      "community": 1,
+      "community_name": "Spanglings Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. linguistic & diagnostic engine",
+      "source_file": "docs/superpowers/specs/2026-08-26-spanglings-design.md",
+      "source_location": "L112"
+    },
+    {
       "id": "docs_superpowers_specs_2026_08_26_spanglings_design_4_exercise_modalities_authoring_format",
       "label": "4. Exercise Modalities & Authoring Format",
       "_origin": "ast",
@@ -352,52 +400,191 @@
       "source_location": "L241"
     },
     {
-      "id": "docs_superpowers_specs_2026_08_26_spanglings_design_3_1_accent_punctuation_handling",
-      "label": "3.1 Accent & Punctuation Handling",
+      "id": "src_engine_accents_accentmode",
+      "label": "AccentMode",
       "_origin": "ast",
       "community": 10,
-      "community_name": "3. Linguistic & Diagnostic Engine",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3.1 accent & punctuation handling",
-      "source_file": "docs/superpowers/specs/2026-08-26-spanglings-design.md",
-      "source_location": "L114"
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "accentmode",
+      "source_file": "src/engine/accents.rs",
+      "source_location": "L6"
     },
     {
-      "id": "docs_superpowers_specs_2026_08_26_spanglings_design_3_2_compiler_style_diagnostic_output",
-      "label": "3.2 Compiler-Style Diagnostic Output",
+      "id": "src_engine_rules",
+      "label": "rules.rs",
       "_origin": "ast",
       "community": 10,
-      "community_name": "3. Linguistic & Diagnostic Engine",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3.2 compiler-style diagnostic output",
-      "source_file": "docs/superpowers/specs/2026-08-26-spanglings-design.md",
-      "source_location": "L130"
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "rules.rs",
+      "source_file": "src/engine/rules.rs",
+      "source_location": "L1"
     },
     {
-      "id": "docs_superpowers_specs_2026_08_26_spanglings_design_3_3_diagnostic_error_taxonomy",
-      "label": "3.3 Diagnostic Error Taxonomy",
+      "id": "src_engine_rules_get_rule_title",
+      "label": "get_rule_title()",
       "_origin": "ast",
       "community": 10,
-      "community_name": "3. Linguistic & Diagnostic Engine",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3.3 diagnostic error taxonomy",
-      "source_file": "docs/superpowers/specs/2026-08-26-spanglings-design.md",
-      "source_location": "L145"
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "get_rule_title()",
+      "source_file": "src/engine/rules.rs",
+      "source_location": "L18"
     },
     {
-      "id": "docs_superpowers_specs_2026_08_26_spanglings_design_3_linguistic_diagnostic_engine",
-      "label": "3. Linguistic & Diagnostic Engine",
+      "id": "src_engine_rules_rs_string",
+      "label": "String",
       "_origin": "ast",
       "community": 10,
-      "community_name": "3. Linguistic & Diagnostic Engine",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. linguistic & diagnostic engine",
-      "source_file": "docs/superpowers/specs/2026-08-26-spanglings-design.md",
-      "source_location": "L112"
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_engine_validator",
+      "label": "validator.rs",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "validator.rs",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_engine_validator_extract_user_answer",
+      "label": "extract_user_answer()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "extract_user_answer()",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L24"
+    },
+    {
+      "id": "src_engine_validator_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_engine_validator_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_engine_validator_validate_submission",
+      "label": "validate_submission()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "validate_submission()",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L91"
+    },
+    {
+      "id": "src_engine_validator_validationresult",
+      "label": "ValidationResult",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "validationresult",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_engine_validator_validationresult_is_success",
+      "label": ".is_success()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": ".is_success()",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L19"
+    },
+    {
+      "id": "tests_diagnostic_rule_tests",
+      "label": "diagnostic_rule_tests.rs",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "diagnostic_rule_tests.rs",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_diagnostic_rule_tests_test_extract_user_answer",
+      "label": "test_extract_user_answer()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_extract_user_answer()",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L113"
+    },
+    {
+      "id": "tests_diagnostic_rule_tests_test_validation_alternative_success",
+      "label": "test_validation_alternative_success()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_validation_alternative_success()",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L24"
+    },
+    {
+      "id": "tests_diagnostic_rule_tests_test_validation_general_fallback_diagnostic",
+      "label": "test_validation_general_fallback_diagnostic()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_validation_general_fallback_diagnostic()",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L88"
+    },
+    {
+      "id": "tests_diagnostic_rule_tests_test_validation_success",
+      "label": "test_validation_success()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_validation_success()",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L6"
+    },
+    {
+      "id": "tests_diagnostic_rule_tests_test_validation_targeted_diagnostic_error",
+      "label": "test_validation_targeted_diagnostic_error()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_validation_targeted_diagnostic_error()",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L46"
     },
     {
       "id": "src_engine_mod",
@@ -409,6 +596,157 @@
       "norm_label": "engine/mod.rs",
       "source_file": "src/engine/mod.rs",
       "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_grammar_diagnostics",
+      "label": "2026-08-26-grammar-diagnostics.md",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-08-26-grammar-diagnostics.md",
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_grammar_diagnostics_compiler_style_error_formatter_implementation_plan",
+      "label": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "grammar diagnostics & compiler-style error formatter implementation plan",
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_1_scaffolding_and_failing_tests",
+      "label": "Task 1: Scaffolding and Failing Tests",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 1: scaffolding and failing tests",
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_2_standard_error_codes",
+      "label": "Task 2: Standard Error Codes",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 2: standard error codes",
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L173"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_3_compiler_style_diagnostics",
+      "label": "Task 3: Compiler-Style Diagnostics",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 3: compiler-style diagnostics",
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L222"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_4_accent_mode_integration_and_module_exporting",
+      "label": "Task 4: Accent Mode Integration and Module Exporting",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 4: accent mode integration and module exporting",
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L282"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_5_core_validation_logic_submission_evaluator",
+      "label": "Task 5: Core Validation Logic & Submission Evaluator",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 5: core validation logic & submission evaluator",
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L315"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_6_verification_and_automated_quality_control",
+      "label": "Task 6: Verification and Automated Quality Control",
+      "_origin": "ast",
+      "community": 12,
+      "community_name": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 6: verification and automated quality control",
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L469"
+    },
+    {
+      "id": "src_engine_diagnostics",
+      "label": "diagnostics.rs",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Diagnostic",
+      "file_type": "code",
+      "norm_label": "diagnostics.rs",
+      "source_file": "src/engine/diagnostics.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_engine_diagnostics_diagnostic",
+      "label": "Diagnostic",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Diagnostic",
+      "file_type": "code",
+      "norm_label": "diagnostic",
+      "source_file": "src/engine/diagnostics.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_engine_diagnostics_diagnostic_format_terminal",
+      "label": ".format_terminal()",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Diagnostic",
+      "file_type": "code",
+      "norm_label": ".format_terminal()",
+      "source_file": "src/engine/diagnostics.rs",
+      "source_location": "L18"
+    },
+    {
+      "id": "src_engine_diagnostics_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Diagnostic",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_engine_diagnostics_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "Diagnostic",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "src_engine_accents",
@@ -430,7 +768,7 @@
       "file_type": "code",
       "norm_label": "accentresult",
       "source_file": "src/engine/accents.rs",
-      "source_location": "L5"
+      "source_location": "L13"
     },
     {
       "id": "src_engine_accents_check_accent_match",
@@ -441,7 +779,7 @@
       "file_type": "code",
       "norm_label": "check_accent_match()",
       "source_file": "src/engine/accents.rs",
-      "source_location": "L19"
+      "source_location": "L27"
     },
     {
       "id": "src_engine_accents_rs_string",
@@ -463,7 +801,7 @@
       "file_type": "code",
       "norm_label": "strip_accents()",
       "source_file": "src/engine/accents.rs",
-      "source_location": "L11"
+      "source_location": "L19"
     },
     {
       "id": "src_engine_normalizer",
@@ -1044,7 +1382,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/engine/accents.rs",
-      "source_location": "L28",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -1140,7 +1478,55 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/engine/accents.rs",
-      "source_location": "L7",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_diagnostics_diagnostic",
+      "target": "src_engine_diagnostics_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/engine/diagnostics.rs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_validationresult",
+      "target": "src_engine_validator_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_validationresult",
+      "target": "src_engine_diagnostics_diagnostic",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_validationresult",
+      "target": "src_engine_validator_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L14",
       "weight": 1.0
     },
     {
@@ -1204,6 +1590,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_engine_diagnostics_diagnostic",
+      "target": "src_engine_diagnostics_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/engine/diagnostics.rs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
       "source": "src_core_curriculum",
       "target": "src_core_curriculum_rs_fromstr",
       "relation": "imports_from",
@@ -1240,6 +1638,78 @@
       "weight": 1.0
     },
     {
+      "source": "src_engine_validator",
+      "target": "src_core_exercise_exercise",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator",
+      "target": "src_engine_accents",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator",
+      "target": "src_engine_diagnostics_diagnostic",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests",
+      "target": "src_core_exercise_exercise",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests",
+      "target": "src_engine_accents_accentmode",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests",
+      "target": "src_engine_validator",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
       "source": "tests_exercise_parser_tests",
       "target": "src_core_curriculum_level",
       "relation": "imports_from",
@@ -1253,7 +1723,7 @@
     },
     {
       "source": "tests_exercise_parser_tests",
-      "target": "src_core_exercise",
+      "target": "src_core_exercise_exercise",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -1309,6 +1779,42 @@
       "context": "parameter_type",
       "source_file": "src/core/exercise.rs",
       "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_extract_user_answer",
+      "target": "src_core_exercise_exercise",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_validate_submission",
+      "target": "src_core_exercise_exercise",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_validate_submission",
+      "target": "src_engine_accents_accentmode",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -1380,7 +1886,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/engine/accents.rs",
-      "source_location": "L19",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -1392,7 +1898,19 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/engine/accents.rs",
-      "source_location": "L11",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_diagnostics_diagnostic_format_terminal",
+      "target": "src_engine_diagnostics_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/engine/diagnostics.rs",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -1405,6 +1923,119 @@
       "context": "return_type",
       "source_file": "src/engine/normalizer.rs",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_rules_get_rule_title",
+      "target": "src_engine_rules_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/engine/rules.rs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_extract_user_answer",
+      "target": "src_engine_validator_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_validate_submission",
+      "target": "src_engine_validator_validationresult",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_grammar_diagnostics",
+      "target": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_grammar_diagnostics_compiler_style_error_formatter_implementation_plan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_grammar_diagnostics_compiler_style_error_formatter_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_1_scaffolding_and_failing_tests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_grammar_diagnostics_compiler_style_error_formatter_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_2_standard_error_codes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L173",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_grammar_diagnostics_compiler_style_error_formatter_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_3_compiler_style_diagnostics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L222",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_grammar_diagnostics_compiler_style_error_formatter_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_4_accent_mode_integration_and_module_exporting",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L282",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_grammar_diagnostics_compiler_style_error_formatter_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_5_core_validation_logic_submission_evaluator",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L315",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_grammar_diagnostics_compiler_style_error_formatter_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_grammar_diagnostics_task_6_verification_and_automated_quality_control",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md",
+      "source_location": "L469",
       "weight": 1.0
     },
     {
@@ -1816,18 +2447,18 @@
     },
     {
       "source": "src_engine_accents",
-      "target": "src_engine_accents_strip_accents",
+      "target": "src_engine_accents_accentresult",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/engine/accents.rs",
-      "source_location": "L11",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
       "source": "src_engine_accents",
-      "target": "src_engine_accents_check_accent_match",
+      "target": "src_engine_accents_strip_accents",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -1838,12 +2469,34 @@
     },
     {
       "source": "src_engine_accents",
-      "target": "src_engine_accents_accentresult",
+      "target": "src_engine_accents_check_accent_match",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/engine/accents.rs",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_accents",
+      "target": "src_engine_accents_accentmode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/engine/accents.rs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_diagnostics",
+      "target": "src_engine_diagnostics_diagnostic",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/engine/diagnostics.rs",
       "source_location": "L5",
       "weight": 1.0
     },
@@ -1859,6 +2512,50 @@
       "weight": 1.0
     },
     {
+      "source": "src_engine_rules",
+      "target": "src_engine_rules_get_rule_title",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/engine/rules.rs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator",
+      "target": "src_engine_validator_extract_user_answer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator",
+      "target": "src_engine_validator_validationresult",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator",
+      "target": "src_engine_validator_validate_submission",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
       "source": "src_main",
       "target": "src_main_main",
       "relation": "contains",
@@ -1867,6 +2564,61 @@
       "confidence_score": 1.0,
       "source_file": "src/main.rs",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests",
+      "target": "tests_diagnostic_rule_tests_test_extract_user_answer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests",
+      "target": "tests_diagnostic_rule_tests_test_validation_alternative_success",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests",
+      "target": "tests_diagnostic_rule_tests_test_validation_targeted_diagnostic_error",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests",
+      "target": "tests_diagnostic_rule_tests_test_validation_success",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests",
+      "target": "tests_diagnostic_rule_tests_test_validation_general_fallback_diagnostic",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -2046,6 +2798,28 @@
       "weight": 1.0
     },
     {
+      "source": "src_engine_diagnostics_diagnostic",
+      "target": "src_engine_diagnostics_diagnostic_format_terminal",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/engine/diagnostics.rs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_validationresult",
+      "target": "src_engine_validator_validationresult_is_success",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
       "source": "src_engine_accents_check_accent_match",
       "target": "src_engine_normalizer_normalize",
       "relation": "calls",
@@ -2054,7 +2828,103 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/engine/accents.rs",
-      "source_location": "L20",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_validate_submission",
+      "target": "src_engine_normalizer_normalize",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_validate_submission",
+      "target": "src_engine_rules_get_rule_title",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "src_engine_validator_validate_submission",
+      "target": "src_engine_accents_check_accent_match",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests_test_extract_user_answer",
+      "target": "src_engine_validator_extract_user_answer",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L148",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests_test_validation_alternative_success",
+      "target": "src_engine_validator_validate_submission",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests_test_validation_general_fallback_diagnostic",
+      "target": "src_engine_validator_validate_submission",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests_test_validation_success",
+      "target": "src_engine_validator_validate_submission",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_diagnostic_rule_tests_test_validation_targeted_diagnostic_error",
+      "target": "src_engine_validator_validate_submission",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/diagnostic_rule_tests.rs",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -2071,5 +2941,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "e9f23dc58f04c50ddb55774b83c5e4566b04e9a5"
+  "built_at_commit": "e5de2207dc0fff7a8598bd6621a90cb6b87b4c47"
 }
