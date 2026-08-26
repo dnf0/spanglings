@@ -46,6 +46,15 @@ fn test_cli_parsing_subcommands() {
         })
     );
 
+    let cli_blitz = Cli::parse_from(["spanglings", "blitz", "--seconds", "30", "--topic", "subjunctive"]);
+    assert_eq!(
+        cli_blitz.command,
+        Some(Commands::Blitz {
+            seconds: Some(30),
+            topic: Some("subjunctive".to_string()),
+        })
+    );
+
     let cli_list = Cli::parse_from(["spanglings", "list"]);
     assert_eq!(cli_list.command, Some(Commands::List));
 

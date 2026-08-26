@@ -22,6 +22,9 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Drill { topic }) => {
             spanglings::cli::commands::drill::run_drill(topic.as_deref())?;
         }
+        Some(Commands::Blitz { seconds, topic }) => {
+            spanglings::cli::commands::blitz::run_blitz(seconds, topic.as_deref())?;
+        }
         Some(Commands::Review) => {
             spanglings::cli::commands::review::run_review_session()?;
         }

@@ -42,6 +42,15 @@ pub enum Commands {
     Explain { topic: String },
     /// Launch quick-fire irregular stem conjugation drills
     Drill { topic: Option<String> },
+    /// Launch 60-second rapid-fire blitz speed drill
+    Blitz {
+        /// Time limit in seconds (default: 60)
+        #[arg(short, long)]
+        seconds: Option<u64>,
+        /// Filter blitz drills by topic
+        #[arg(short, long)]
+        topic: Option<String>,
+    },
     /// Launch an SM-2 spaced repetition review session
     Review,
     /// List all curriculum exercises and completion status
