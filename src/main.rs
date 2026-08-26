@@ -5,9 +5,7 @@ fn main() -> anyhow::Result<()> {
     let cli = Cli::parse();
     match cli.command {
         Some(Commands::Watch) => {
-            println!(
-                "Starting watch mode... (Use 'spanglings run <exercise>' or edit markdown files)"
-            );
+            spanglings::watcher::runner::start_watch_mode(cli.strict_accents)?;
         }
         Some(Commands::Run { exercise }) => {
             spanglings::cli::commands::run::run_exercise(&exercise, cli.strict_accents)?;
