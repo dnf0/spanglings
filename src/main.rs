@@ -28,11 +28,14 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Progress) => {
             spanglings::cli::commands::progress::show_progress()?;
         }
+        Some(Commands::Tui) => {
+            spanglings::tui::start_tui(cli.strict_accents)?;
+        }
         Some(Commands::Reset { exercise }) => {
             spanglings::cli::commands::run::reset_exercise(&exercise)?;
         }
         None => {
-            spanglings::cli::commands::progress::show_progress()?;
+            spanglings::tui::start_tui(cli.strict_accents)?;
         }
     }
     Ok(())

@@ -36,6 +36,8 @@ pub enum Commands {
     List,
     /// Display learning progress and CEFR level mastery
     Progress,
+    /// Launch the interactive terminal UI
+    Tui,
     /// Reset an exercise to its initial prompt
     Reset { exercise: String },
 }
