@@ -13,6 +13,7 @@ categories = ["command-line-utilities", "education"]
 include = [
     "src/**/*",
     "exercises/**/*",
+    "tests/**/*",
     "Cargo.toml",
     "README.md",
     "LICENSE",
