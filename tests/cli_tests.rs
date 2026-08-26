@@ -81,8 +81,10 @@ fn test_explain_command_executes_cleanly() {
 
 #[test]
 fn test_list_and_progress_execute_cleanly() {
-    assert!(list_exercises().is_ok());
-    assert!(show_progress().is_ok());
+    assert!(list_exercises(false).is_ok());
+    assert!(list_exercises(true).is_ok());
+    assert!(show_progress(false).is_ok());
+    assert!(show_progress(true).is_ok());
     assert!(show_hint(None).is_ok());
 }
 
