@@ -1,0 +1,56 @@
+{
+  "Cargo.toml": {
+    "mtime": 1787751387.699961,
+    "seen": 1787751487.9521549,
+    "ast_hash": "266ef5a727835abd0299fcee4d49cade",
+    "semantic_hash": ""
+  },
+  "src/main.rs": {
+    "mtime": 1787751392.1069427,
+    "seen": 1787751487.952158,
+    "ast_hash": "0d71bf4bf4eee4dc838eab1f3566f96e",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-26-spanglings-implementation.md": {
+    "mtime": 1787751306.374284,
+    "seen": 1787751487.952159,
+    "ast_hash": "fe9efacc6f067cb690df5fac7a5ee5a3",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-26-spanglings-design.md": {
+    "mtime": 1787751135.0576558,
+    "seen": 1787751487.95216,
+    "ast_hash": "5169bfcc9ebe1ac6ad7ee25d78a09d9b",
+    "semantic_hash": ""
+  },
+  "src/core/curriculum.rs": {
+    "mtime": 1787751760.2399733,
+    "seen": 1787751807.066751,
+    "ast_hash": "337cabe2022f657a811ef1531af049bf",
+    "semantic_hash": ""
+  },
+  "src/core/exercise.rs": {
+    "mtime": 1787751760.2407887,
+    "seen": 1787751807.066753,
+    "ast_hash": "71dc357953e37c8dd4de0ddffa8ab1aa",
+    "semantic_hash": ""
+  },
+  "src/core/mod.rs": {
+    "mtime": 1787751678.8736095,
+    "seen": 1787751807.066754,
+    "ast_hash": "03e380449d7784e82df4459d63c1bad3",
+    "semantic_hash": ""
+  },
+  "src/lib.rs": {
+    "mtime": 1787751680.6364992,
+    "seen": 1787751807.066755,
+    "ast_hash": "11eaf18b0de1a0d2ca86b0d839cf9e2f",
+    "semantic_hash": ""
+  },
+  "tests/exercise_parser_tests.rs": {
+    "mtime": 1787751902.048018,
+    "seen": 1787751940.621805,
+    "ast_hash": "fc9312700185eafd23235aacb21e4aad",
+    "semantic_hash": ""
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "Cargo.toml": {
+    "mtime": 1787751387.699961,
+    "seen": 1787751487.9521549,
+    "ast_hash": "266ef5a727835abd0299fcee4d49cade",
+    "semantic_hash": ""
+  },
+  "src/main.rs": {
+    "mtime": 1787751392.1069427,
+    "seen": 1787751487.952158,
+    "ast_hash": "0d71bf4bf4eee4dc838eab1f3566f96e",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-26-spanglings-implementation.md": {
+    "mtime": 1787751306.374284,
+    "seen": 1787751487.952159,
+    "ast_hash": "fe9efacc6f067cb690df5fac7a5ee5a3",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-26-spanglings-design.md": {
+    "mtime": 1787751135.0576558,
+    "seen": 1787751487.95216,
+    "ast_hash": "5169bfcc9ebe1ac6ad7ee25d78a09d9b",
+    "semantic_hash": ""
+  },
+  "src/core/curriculum.rs": {
+    "mtime": 1787751760.2399733,
+    "seen": 1787751807.066751,
+    "ast_hash": "337cabe2022f657a811ef1531af049bf",
+    "semantic_hash": ""
+  },
+  "src/core/exercise.rs": {
+    "mtime": 1787752073.540236,
+    "seen": 1787752349.023513,
+    "ast_hash": "7f1cf009f2d188c5fc499eb7a4c94911",
+    "semantic_hash": ""
+  },
+  "src/core/mod.rs": {
+    "mtime": 1787751678.8736095,
+    "seen": 1787751807.066754,
+    "ast_hash": "03e380449d7784e82df4459d63c1bad3",
+    "semantic_hash": ""
+  },
+  "src/lib.rs": {
+    "mtime": 1787752316.8684888,
+    "seen": 1787752349.023516,
+    "ast_hash": "59c31f9a98d914cf640607f6418c6945",
+    "semantic_hash": ""
+  },
+  "tests/exercise_parser_tests.rs": {
+    "mtime": 1787752079.9087605,
+    "seen": 1787752349.023517,
+    "ast_hash": "a024c7f2161644d85c45d41e4b912152",
+    "semantic_hash": ""
+  },
+  "src/engine/accents.rs": {
+    "mtime": 1787752316.8682628,
+    "seen": 1787752349.023514,
+    "ast_hash": "8f159ffb1ce72b969b5f7dc26d98cef0",
+    "semantic_hash": ""
+  },
+  "src/engine/mod.rs": {
+    "mtime": 1787752268.0666401,
+    "seen": 1787752349.023515,
+    "ast_hash": "f451a60c175095e0761e91e02e66e3c7",
+    "semantic_hash": ""
+  },
+  "src/engine/normalizer.rs": {
+    "mtime": 1787752303.407626,
+    "seen": 1787752349.023516,
+    "ast_hash": "216d8834099928e0edd75e622b303dc9",
+    "semantic_hash": ""
+  },
+  "tests/normalizer_tests.rs": {
+    "mtime": 1787752202.3425946,
+    "seen": 1787752349.0235178,
+    "ast_hash": "4b4cac499180c85a89f494e2b818d41a",
+    "semantic_hash": ""
+  }
+}
