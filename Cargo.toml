@@ -9,7 +9,7 @@ repository = "https://github.com/dnf0/spanglings"
 homepage = "https://github.com/dnf0/spanglings"
 readme = "README.md"
 keywords = ["spanish", "learning", "cli", "tui", "rustlings"]
-categories = ["command-line-utilities", "education"]
+categories = ["command-line-utilities", "internationalization"]
 include = [
     "src/**/*",
     "exercises/**/*",
