@@ -1,0 +1,29 @@
+<!-- I AM NOT DONE -->
+# Passive Refleja 01: Plural Inanimate Subject Agreement
+<!-- id: c1_pasiva_refleja_plural | level: C1 | topic: passive_refleja | type: cloze -->
+
+> **Grammar Rule**: In Pasiva Refleja ('se + verbo + sujeto paciente inanimado'), the verb MUST agree in number with the plural subject (e.g. 'Se venden pisos', never 'se vende pisos').
+
+### Context
+English: "Apartments are sold in this new building."
+
+### Exercise
+Se (vender) ___ pisos de lujo en este edificio recién construido.
+
+<!-- SOLUTION
+venden
+-->
+
+<!-- ALTERNATIVES
+venden pisos
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "vende" | code: "E0001" | message: "In pasiva refleja, 'pisos' is plural subject -> verb must be plural: 'Se venden pisos'."
+-->
+
+<!-- HINTS
+Tier 1: 3rd person plural present of 'vender'.
+Tier 2: 'venden'.
+Tier 3: The answer is 'venden'.
+-->

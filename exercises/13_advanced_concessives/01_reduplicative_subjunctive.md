@@ -1,0 +1,30 @@
+<!-- I AM NOT DONE -->
+# Advanced Concessives 01: Reduplicative Subjunctive Pattern
+<!-- id: c1_concessive_reduplicative | level: C1 | topic: advanced_concessives | type: cloze -->
+
+> **Grammar Rule**: The structure '[Verb in Subjunctive] + lo que + [Same Verb in Subjunctive]' means 'no matter what you [verb]' (e.g. digas lo que digas, hagas lo que hagas).
+
+### Context
+English: "Whatever you do, don't sign the document."
+
+### Exercise
+(Hacer) ___ lo que hagas, no firmes ese documento.
+
+<!-- SOLUTION
+Hagas
+-->
+
+<!-- ALTERNATIVES
+Hagas
+hagas
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "haz" | code: "E0301" | message: "Reduplicative concessive formula uses subjunctive in both parts: 'Hagas lo que hagas'."
+-->
+
+<!-- HINTS
+Tier 1: Subjunctive formula for 'whatever you do'.
+Tier 2: 2nd person singular present subjunctive of 'hacer'.
+Tier 3: The answer is 'Hagas'.
+-->

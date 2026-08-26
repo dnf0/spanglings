@@ -1,0 +1,29 @@
+<!-- I AM NOT DONE -->
+# Connector: No obstante
+<!-- id: c1_connector_no_obstante | level: C1 | topic: connectors | type: cloze -->
+
+> **Grammar Rule**: 'No obstante' (nevertheless / however) is an adversarial connector followed by the indicative.
+
+### Context
+English: "It was cold; nevertheless, we went swimming."
+
+### Exercise
+Hacía frío; no obstante, nosotros (ir) ___ a nadar.
+
+<!-- SOLUTION
+fuimos
+-->
+
+<!-- ALTERNATIVES
+
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "fuéramos" | code: "E0301" | message: "'No obstante' connects real past facts and requires the indicative, not subjunctive."
+-->
+
+<!-- HINTS
+Tier 1: Conjugate 'ir' in the preterite indicative.
+Tier 2: Use the 'nosotros' form.
+Tier 3: The correct form is 'fuimos'.
+-->
