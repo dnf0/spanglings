@@ -40,7 +40,7 @@ Tier 3: Add -as -> 'vengas'.
     assert_eq!(exercise.id, "b1_subjunctive_01");
     assert_eq!(exercise.level, Level::B1);
     assert_eq!(exercise.exercise_type, ExerciseType::Cloze);
-    assert_eq!(exercise.is_done, false);
+    assert!(!exercise.is_done);
     assert_eq!(exercise.solution, "vengas");
     assert_eq!(exercise.alternatives, vec!["vengas tú"]);
     assert_eq!(exercise.hints.len(), 3);
