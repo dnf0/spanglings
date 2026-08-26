@@ -13,20 +13,23 @@ pub fn run_exercise(exercise_query: &str, strict_accents: bool) -> anyhow::Resul
     let exercises = find_all_exercises(exercises_dir)?;
 
     let target_path = Path::new(exercise_query);
-    let exercise = if target_path.exists() && target_path.is_file() {
+    let (parsed_ex, content) = if target_path.exists() && target_path.is_file() {
         let content = fs::read_to_string(target_path)?;
-        Exercise::from_markdown(target_path, &content)?
+        let parsed = Exercise::from_markdown(target_path, &content)?;
+        (parsed, content)
     } else {
         match find_exercise_by_query(&exercises, exercise_query) {
-            Some(ex) => ex.clone(),
+            Some(ex) => {
+                let content = fs::read_to_string(&ex.path)?;
+                let parsed = Exercise::from_markdown(&ex.path, &content)?;
+                (parsed, content)
+            }
             None => {
                 anyhow::bail!("No exercise found matching query: '{}'", exercise_query);
             }
         }
     };
 
-    let content = fs::read_to_string(&exercise.path)?;
-    let parsed_ex = Exercise::from_markdown(&exercise.path, &content)?;
     let user_answer = extract_user_answer(&parsed_ex, &content);
 
     let accent_mode = if strict_accents {
