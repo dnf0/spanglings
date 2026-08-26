@@ -400,6 +400,17 @@
       "source_location": "L241"
     },
     {
+      "id": "appstate",
+      "label": "AppState",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "appstate",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_cli_commands_review",
       "label": "review.rs",
       "_origin": "ast",
@@ -442,6 +453,17 @@
       "norm_label": "accents.rs",
       "source_file": "src/engine/accents.rs",
       "source_location": "L1"
+    },
+    {
+      "id": "src_engine_accents_accentmode",
+      "label": "AccentMode",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "accentmode",
+      "source_file": "src/engine/accents.rs",
+      "source_location": "L6"
     },
     {
       "id": "src_engine_accents_accentresult",
@@ -642,17 +664,6 @@
       "source_location": "L92"
     },
     {
-      "id": "src_engine_validator_rs_option",
-      "label": "Option",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "validate_submission",
-      "file_type": "code",
-      "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_engine_validator_rs_string",
       "label": "String",
       "_origin": "ast",
@@ -675,26 +686,81 @@
       "source_location": "L103"
     },
     {
-      "id": "src_engine_validator_validationresult",
-      "label": "ValidationResult",
+      "id": "src_watcher_runner",
+      "label": "runner.rs",
       "_origin": "ast",
       "community": 10,
       "community_name": "validate_submission",
       "file_type": "code",
-      "norm_label": "validationresult",
-      "source_file": "src/engine/validator.rs",
-      "source_location": "L8"
+      "norm_label": "runner.rs",
+      "source_file": "src/watcher/runner.rs",
+      "source_location": "L1"
     },
     {
-      "id": "src_engine_validator_validationresult_is_success",
-      "label": ".is_success()",
+      "id": "src_watcher_runner_clear_screen",
+      "label": "clear_screen()",
       "_origin": "ast",
       "community": 10,
       "community_name": "validate_submission",
       "file_type": "code",
-      "norm_label": ".is_success()",
-      "source_file": "src/engine/validator.rs",
-      "source_location": "L19"
+      "norm_label": "clear_screen()",
+      "source_file": "src/watcher/runner.rs",
+      "source_location": "L75"
+    },
+    {
+      "id": "src_watcher_runner_evaluate_current_exercise",
+      "label": "evaluate_current_exercise()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "evaluate_current_exercise()",
+      "source_file": "src/watcher/runner.rs",
+      "source_location": "L80"
+    },
+    {
+      "id": "src_watcher_runner_evaluate_current_exercise_in",
+      "label": "evaluate_current_exercise_in()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "evaluate_current_exercise_in()",
+      "source_file": "src/watcher/runner.rs",
+      "source_location": "L88"
+    },
+    {
+      "id": "src_watcher_runner_rs_p",
+      "label": "P",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "p",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_watcher_runner_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_watcher_runner_start_watch_mode",
+      "label": "start_watch_mode()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "start_watch_mode()",
+      "source_file": "src/watcher/runner.rs",
+      "source_location": "L16"
     },
     {
       "id": "tests_diagnostic_rule_tests",
@@ -893,6 +959,50 @@
       "norm_label": "test_smart_accent_matching()",
       "source_file": "tests/normalizer_tests.rs",
       "source_location": "L24"
+    },
+    {
+      "id": "tests_watcher_tests",
+      "label": "watcher_tests.rs",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "watcher_tests.rs",
+      "source_file": "tests/watcher_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_watcher_tests_test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir",
+      "label": "test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir()",
+      "source_file": "tests/watcher_tests.rs",
+      "source_location": "L15"
+    },
+    {
+      "id": "tests_watcher_tests_test_watcher_detects_failing_submission",
+      "label": "test_watcher_detects_failing_submission()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_watcher_detects_failing_submission()",
+      "source_file": "tests/watcher_tests.rs",
+      "source_location": "L48"
+    },
+    {
+      "id": "tests_watcher_tests_test_watcher_evaluate_current_exercise_runs_cleanly",
+      "label": "test_watcher_evaluate_current_exercise_runs_cleanly()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_watcher_evaluate_current_exercise_runs_cleanly()",
+      "source_file": "tests/watcher_tests.rs",
+      "source_location": "L8"
     },
     {
       "id": "exercises_14_connectors_04_por_consiguiente",
@@ -2442,13 +2552,13 @@
       "source_location": "L2"
     },
     {
-      "id": "appstate",
-      "label": "AppState",
+      "id": "btreemap",
+      "label": "BTreeMap",
       "_origin": "ast",
       "community": 13,
-      "community_name": "evaluate_current_exercise_in",
+      "community_name": "progress.rs",
       "file_type": "code",
-      "norm_label": "appstate",
+      "norm_label": "btreemap",
       "source_file": "",
       "source_location": ""
     },
@@ -2457,42 +2567,9 @@
       "label": "HashMap",
       "_origin": "ast",
       "community": 13,
-      "community_name": "evaluate_current_exercise_in",
+      "community_name": "progress.rs",
       "file_type": "code",
       "norm_label": "hashmap",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_list",
-      "label": "list.rs",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "list.rs",
-      "source_file": "src/cli/commands/list.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_cli_commands_list_list_exercises",
-      "label": "list_exercises()",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "list_exercises()",
-      "source_file": "src/cli/commands/list.rs",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_cli_commands_list_rs_result",
-      "label": "Result",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "result",
       "source_file": "",
       "source_location": ""
     },
@@ -2501,29 +2578,62 @@
       "label": "progress.rs",
       "_origin": "ast",
       "community": 13,
-      "community_name": "evaluate_current_exercise_in",
+      "community_name": "progress.rs",
       "file_type": "code",
       "norm_label": "progress.rs",
       "source_file": "src/cli/commands/progress.rs",
       "source_location": "L1"
     },
     {
+      "id": "src_cli_commands_progress_get_progress_json",
+      "label": "get_progress_json()",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "get_progress_json()",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L25"
+    },
+    {
+      "id": "src_cli_commands_progress_levelprogress",
+      "label": "LevelProgress",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "levelprogress",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L10"
+    },
+    {
+      "id": "src_cli_commands_progress_progresssummary",
+      "label": "ProgressSummary",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "progresssummary",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L17"
+    },
+    {
       "id": "src_cli_commands_progress_render_progress_bar",
       "label": "render_progress_bar()",
       "_origin": "ast",
       "community": 13,
-      "community_name": "evaluate_current_exercise_in",
+      "community_name": "progress.rs",
       "file_type": "code",
       "norm_label": "render_progress_bar()",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L117"
+      "source_location": "L202"
     },
     {
       "id": "src_cli_commands_progress_rs_result",
       "label": "Result",
       "_origin": "ast",
       "community": 13,
-      "community_name": "evaluate_current_exercise_in",
+      "community_name": "progress.rs",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -2534,7 +2644,7 @@
       "label": "String",
       "_origin": "ast",
       "community": 13,
-      "community_name": "evaluate_current_exercise_in",
+      "community_name": "progress.rs",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "",
@@ -2545,143 +2655,44 @@
       "label": "show_progress()",
       "_origin": "ast",
       "community": 13,
-      "community_name": "evaluate_current_exercise_in",
+      "community_name": "progress.rs",
       "file_type": "code",
       "norm_label": "show_progress()",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L8"
+      "source_location": "L89"
     },
     {
-      "id": "src_engine_accents_accentmode",
-      "label": "AccentMode",
+      "id": "tests_json_output_tests",
+      "label": "json_output_tests.rs",
       "_origin": "ast",
       "community": 13,
-      "community_name": "evaluate_current_exercise_in",
+      "community_name": "progress.rs",
       "file_type": "code",
-      "norm_label": "accentmode",
-      "source_file": "src/engine/accents.rs",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_watcher_runner",
-      "label": "runner.rs",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "runner.rs",
-      "source_file": "src/watcher/runner.rs",
+      "norm_label": "json_output_tests.rs",
+      "source_file": "tests/json_output_tests.rs",
       "source_location": "L1"
     },
     {
-      "id": "src_watcher_runner_clear_screen",
-      "label": "clear_screen()",
+      "id": "tests_json_output_tests_test_list_exercises_json_serialization",
+      "label": "test_list_exercises_json_serialization()",
       "_origin": "ast",
       "community": 13,
-      "community_name": "evaluate_current_exercise_in",
+      "community_name": "progress.rs",
       "file_type": "code",
-      "norm_label": "clear_screen()",
-      "source_file": "src/watcher/runner.rs",
-      "source_location": "L75"
+      "norm_label": "test_list_exercises_json_serialization()",
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L5"
     },
     {
-      "id": "src_watcher_runner_evaluate_current_exercise",
-      "label": "evaluate_current_exercise()",
+      "id": "tests_json_output_tests_test_progress_json_serialization",
+      "label": "test_progress_json_serialization()",
       "_origin": "ast",
       "community": 13,
-      "community_name": "evaluate_current_exercise_in",
+      "community_name": "progress.rs",
       "file_type": "code",
-      "norm_label": "evaluate_current_exercise()",
-      "source_file": "src/watcher/runner.rs",
-      "source_location": "L80"
-    },
-    {
-      "id": "src_watcher_runner_evaluate_current_exercise_in",
-      "label": "evaluate_current_exercise_in()",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "evaluate_current_exercise_in()",
-      "source_file": "src/watcher/runner.rs",
-      "source_location": "L88"
-    },
-    {
-      "id": "src_watcher_runner_rs_p",
-      "label": "P",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "p",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_watcher_runner_rs_result",
-      "label": "Result",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_watcher_runner_start_watch_mode",
-      "label": "start_watch_mode()",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "start_watch_mode()",
-      "source_file": "src/watcher/runner.rs",
-      "source_location": "L16"
-    },
-    {
-      "id": "tests_watcher_tests",
-      "label": "watcher_tests.rs",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "watcher_tests.rs",
-      "source_file": "tests/watcher_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_watcher_tests_test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir",
-      "label": "test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir()",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir()",
-      "source_file": "tests/watcher_tests.rs",
-      "source_location": "L15"
-    },
-    {
-      "id": "tests_watcher_tests_test_watcher_detects_failing_submission",
-      "label": "test_watcher_detects_failing_submission()",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "test_watcher_detects_failing_submission()",
-      "source_file": "tests/watcher_tests.rs",
-      "source_location": "L48"
-    },
-    {
-      "id": "tests_watcher_tests_test_watcher_evaluate_current_exercise_runs_cleanly",
-      "label": "test_watcher_evaluate_current_exercise_runs_cleanly()",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "test_watcher_evaluate_current_exercise_runs_cleanly()",
-      "source_file": "tests/watcher_tests.rs",
-      "source_location": "L8"
+      "norm_label": "test_progress_json_serialization()",
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L18"
     },
     {
       "id": "exercises_20_passive_refleja_04_se_prohibe_fumar",
@@ -3276,7 +3287,7 @@
       "label": "README.md",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "readme.md",
@@ -3284,131 +3295,179 @@
       "source_location": "L1"
     },
     {
+      "id": "readme_1_install_via_cargo_recommended",
+      "label": "1. Install via Cargo (Recommended)",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Examples",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. install via cargo (recommended)",
+      "source_file": "README.md",
+      "source_location": "L29"
+    },
+    {
       "id": "readme_1_interactive_tui_mode",
       "label": "1. Interactive TUI Mode",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. interactive tui mode",
       "source_file": "README.md",
-      "source_location": "L69"
+      "source_location": "L88"
+    },
+    {
+      "id": "readme_2_build_from_source",
+      "label": "2. Build from Source",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Examples",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. build from source",
+      "source_file": "README.md",
+      "source_location": "L41"
     },
     {
       "id": "readme_2_headless_watcher_mode",
       "label": "2. Headless Watcher Mode",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. headless watcher mode",
       "source_file": "README.md",
-      "source_location": "L80"
+      "source_location": "L99"
     },
     {
-      "id": "readme_3_targeted_run_explanation",
-      "label": "3. Targeted Run & Explanation",
+      "id": "readme_3_search_explore",
+      "label": "3. Search & Explore",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "3. targeted run & explanation",
+      "norm_label": "3. search & explore",
       "source_file": "README.md",
-      "source_location": "L86"
+      "source_location": "L105"
     },
     {
-      "id": "readme_4_spaced_repetition_drills",
-      "label": "4. Spaced Repetition Drills",
+      "id": "readme_4_json_output_mode",
+      "label": "4. JSON Output Mode",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "4. spaced repetition drills",
+      "norm_label": "4. json output mode",
       "source_file": "README.md",
-      "source_location": "L100"
+      "source_location": "L117"
     },
     {
-      "id": "readme_build_run",
-      "label": "Build & Run",
+      "id": "readme_5_targeted_run_explanation",
+      "label": "5. Targeted Run & Explanation",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "build & run",
+      "norm_label": "5. targeted run & explanation",
       "source_file": "README.md",
-      "source_location": "L28"
+      "source_location": "L129"
+    },
+    {
+      "id": "readme_6_spaced_repetition_drills",
+      "label": "6. Spaced Repetition Drills",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Examples",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. spaced repetition drills",
+      "source_file": "README.md",
+      "source_location": "L144"
+    },
+    {
+      "id": "readme_7_shell_autocompletions",
+      "label": "7. Shell Autocompletions",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Examples",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. shell autocompletions",
+      "source_file": "README.md",
+      "source_location": "L154"
     },
     {
       "id": "readme_command_line_interface_cli",
       "label": "Command Line Interface (CLI)",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "command line interface (cli)",
       "source_file": "README.md",
-      "source_location": "L45"
+      "source_location": "L58"
     },
     {
       "id": "readme_curriculum_tracks_116_exercises",
       "label": "Curriculum Tracks (116 Exercises)",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "curriculum tracks (116 exercises)",
       "source_file": "README.md",
-      "source_location": "L112"
+      "source_location": "L168"
     },
     {
       "id": "readme_development_testing",
       "label": "Development & Testing",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "development & testing",
       "source_file": "README.md",
-      "source_location": "L141"
+      "source_location": "L197"
     },
     {
       "id": "readme_examples",
       "label": "Examples",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "examples",
       "source_file": "README.md",
-      "source_location": "L67"
+      "source_location": "L86"
     },
     {
       "id": "readme_installation_setup",
       "label": "Installation & Setup",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "installation & setup",
       "source_file": "README.md",
-      "source_location": "L23"
+      "source_location": "L27"
     },
     {
       "id": "readme_key_features",
       "label": "Key Features",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "key features",
@@ -3420,19 +3479,19 @@
       "label": "License",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "license",
       "source_file": "README.md",
-      "source_location": "L158"
+      "source_location": "L214"
     },
     {
       "id": "readme_overview",
       "label": "Overview",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "overview",
@@ -3440,28 +3499,709 @@
       "source_location": "L7"
     },
     {
-      "id": "readme_prerequisites",
-      "label": "Prerequisites",
-      "_origin": "ast",
-      "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "prerequisites",
-      "source_file": "README.md",
-      "source_location": "L25"
-    },
-    {
       "id": "readme_spanglings",
       "label": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
       "_origin": "ast",
       "community": 14,
-      "community_name": "Spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
+      "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "spanglings \ud83c\uddea\ud83c\uddf8 \ud83e\udd80",
       "source_file": "README.md",
       "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_hint",
+      "label": "hint.rs",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "hint.rs",
+      "source_file": "src/cli/commands/hint.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_hint_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_hint_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_hint_show_hint",
+      "label": "show_hint()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "show_hint()",
+      "source_file": "src/cli/commands/hint.rs",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_cli_commands_run",
+      "label": "run.rs",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "run.rs",
+      "source_file": "src/cli/commands/run.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_run_reset_exercise",
+      "label": "reset_exercise()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "reset_exercise()",
+      "source_file": "src/cli/commands/run.rs",
+      "source_location": "L87"
+    },
+    {
+      "id": "src_cli_commands_run_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_run_run_exercise",
+      "label": "run_exercise()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "run_exercise()",
+      "source_file": "src/cli/commands/run.rs",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_core_curriculum_find_exercise_by_query",
+      "label": "find_exercise_by_query()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "find_exercise_by_query()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L88"
+    },
+    {
+      "id": "src_core_curriculum_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_cli_tests",
+      "label": "cli_tests.rs",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "cli_tests.rs",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_cli_tests_test_cli_parsing_subcommands",
+      "label": "test_cli_parsing_subcommands()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "test_cli_parsing_subcommands()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L13"
+    },
+    {
+      "id": "tests_cli_tests_test_curriculum_discovery_and_query",
+      "label": "test_curriculum_discovery_and_query()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "test_curriculum_discovery_and_query()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L113"
+    },
+    {
+      "id": "tests_cli_tests_test_explain_command_executes_cleanly",
+      "label": "test_explain_command_executes_cleanly()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "test_explain_command_executes_cleanly()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L71"
+    },
+    {
+      "id": "tests_cli_tests_test_list_and_progress_execute_cleanly",
+      "label": "test_list_and_progress_execute_cleanly()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "test_list_and_progress_execute_cleanly()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L83"
+    },
+    {
+      "id": "tests_cli_tests_test_run_exercise_with_file_path",
+      "label": "test_run_exercise_with_file_path()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "run_exercise",
+      "file_type": "code",
+      "norm_label": "test_run_exercise_with_file_path()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L92"
+    },
+    {
+      "id": "src_cli_commands_list",
+      "label": "list.rs",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "list.rs",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_list_get_exercises_json",
+      "label": "get_exercises_json()",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "get_exercises_json()",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_cli_commands_list_list_exercises",
+      "label": "list_exercises()",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "list_exercises()",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_cli_commands_list_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_list_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum",
+      "label": "curriculum.rs",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "curriculum.rs",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_core_curriculum_collect_md_files",
+      "label": "collect_md_files()",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "collect_md_files()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L68"
+    },
+    {
+      "id": "src_core_curriculum_find_all_exercises",
+      "label": "find_all_exercises()",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "find_all_exercises()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L46"
+    },
+    {
+      "id": "src_core_curriculum_find_all_exercises_or_embedded",
+      "label": "find_all_exercises_or_embedded()",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "find_all_exercises_or_embedded()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L57"
+    },
+    {
+      "id": "src_core_curriculum_rs_p",
+      "label": "P",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "p",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_path",
+      "label": "Path",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_vec",
+      "label": "Vec",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "vec",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_completions",
+      "label": "completions.rs",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "generate_completions_string",
+      "file_type": "code",
+      "norm_label": "completions.rs",
+      "source_file": "src/cli/commands/completions.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_completions_generate_completions_string",
+      "label": "generate_completions_string()",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "generate_completions_string",
+      "file_type": "code",
+      "norm_label": "generate_completions_string()",
+      "source_file": "src/cli/commands/completions.rs",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_cli_commands_completions_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "generate_completions_string",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_completions_rs_shell",
+      "label": "Shell",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "generate_completions_string",
+      "file_type": "code",
+      "norm_label": "shell",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_completions_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "generate_completions_string",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_completions_run_completions",
+      "label": "run_completions()",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "generate_completions_string",
+      "file_type": "code",
+      "norm_label": "run_completions()",
+      "source_file": "src/cli/commands/completions.rs",
+      "source_location": "L13"
+    },
+    {
+      "id": "tests_completions_tests",
+      "label": "completions_tests.rs",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "generate_completions_string",
+      "file_type": "code",
+      "norm_label": "completions_tests.rs",
+      "source_file": "tests/completions_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_completions_tests_test_generate_bash_completions",
+      "label": "test_generate_bash_completions()",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "generate_completions_string",
+      "file_type": "code",
+      "norm_label": "test_generate_bash_completions()",
+      "source_file": "tests/completions_tests.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "tests_completions_tests_test_generate_fish_completions",
+      "label": "test_generate_fish_completions()",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "generate_completions_string",
+      "file_type": "code",
+      "norm_label": "test_generate_fish_completions()",
+      "source_file": "tests/completions_tests.rs",
+      "source_location": "L23"
+    },
+    {
+      "id": "tests_completions_tests_test_generate_zsh_completions",
+      "label": "test_generate_zsh_completions()",
+      "_origin": "ast",
+      "community": 142,
+      "community_name": "generate_completions_string",
+      "file_type": "code",
+      "norm_label": "test_generate_zsh_completions()",
+      "source_file": "tests/completions_tests.rs",
+      "source_location": "L15"
+    },
+    {
+      "id": "src_core_curriculum_level",
+      "label": "Level",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Level",
+      "file_type": "code",
+      "norm_label": "level",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_core_curriculum_level_fmt",
+      "label": ".fmt()",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Level",
+      "file_type": "code",
+      "norm_label": ".fmt()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_core_curriculum_rs_display",
+      "label": "Display",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Level",
+      "file_type": "code",
+      "norm_label": "display",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_formatter",
+      "label": "Formatter",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Level",
+      "file_type": "code",
+      "norm_label": "formatter",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_fromstr",
+      "label": "FromStr",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Level",
+      "file_type": "code",
+      "norm_label": "fromstr",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_exercise_parser_tests",
+      "label": "exercise_parser_tests.rs",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Level",
+      "file_type": "code",
+      "norm_label": "exercise_parser_tests.rs",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_invalid_level_error",
+      "label": "test_parse_invalid_level_error()",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Level",
+      "file_type": "code",
+      "norm_label": "test_parse_invalid_level_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L62"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_invalid_type_error",
+      "label": "test_parse_invalid_type_error()",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Level",
+      "file_type": "code",
+      "norm_label": "test_parse_invalid_type_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L72"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_missing_id_error",
+      "label": "test_parse_missing_id_error()",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Level",
+      "file_type": "code",
+      "norm_label": "test_parse_missing_id_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L52"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_valid_markdown_exercise",
+      "label": "test_parse_valid_markdown_exercise()",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "Level",
+      "file_type": "code",
+      "norm_label": "test_parse_valid_markdown_exercise()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_cli_commands_search",
+      "label": "search.rs",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "search_exercises",
+      "file_type": "code",
+      "norm_label": "search.rs",
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_search_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "search_exercises",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_search_rs_vec",
+      "label": "Vec",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "search_exercises",
+      "file_type": "code",
+      "norm_label": "vec",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_search_run_search",
+      "label": "run_search()",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "search_exercises",
+      "file_type": "code",
+      "norm_label": "run_search()",
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L23"
+    },
+    {
+      "id": "src_cli_commands_search_search_exercises",
+      "label": "search_exercises()",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "search_exercises",
+      "file_type": "code",
+      "norm_label": "search_exercises()",
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "tests_search_tests",
+      "label": "search_tests.rs",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "search_exercises",
+      "file_type": "code",
+      "norm_label": "search_tests.rs",
+      "source_file": "tests/search_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_search_tests_test_search_by_id",
+      "label": "test_search_by_id()",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "search_exercises",
+      "file_type": "code",
+      "norm_label": "test_search_by_id()",
+      "source_file": "tests/search_tests.rs",
+      "source_location": "L22"
+    },
+    {
+      "id": "tests_search_tests_test_search_by_level",
+      "label": "test_search_by_level()",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "search_exercises",
+      "file_type": "code",
+      "norm_label": "test_search_by_level()",
+      "source_file": "tests/search_tests.rs",
+      "source_location": "L15"
+    },
+    {
+      "id": "tests_search_tests_test_search_by_topic_and_keyword",
+      "label": "test_search_by_topic_and_keyword()",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "search_exercises",
+      "file_type": "code",
+      "norm_label": "test_search_by_topic_and_keyword()",
+      "source_file": "tests/search_tests.rs",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_core_curriculum_level_from_str",
+      "label": ".from_str()",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": ".from_str()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L35"
+    },
+    {
+      "id": "src_core_curriculum_parselevelerror",
+      "label": "ParseLevelError",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "parselevelerror",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_core_curriculum_rs_err",
+      "label": "Err",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "err",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_self",
+      "label": "Self",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "self",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "src_cli_commands_explain",
@@ -3736,7 +4476,7 @@
       "file_type": "code",
       "norm_label": "commands",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L22"
+      "source_location": "L26"
     },
     {
       "id": "src_cli_mod_rs_option",
@@ -3746,6 +4486,17 @@
       "community_name": "Commands",
       "file_type": "code",
       "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_mod_rs_shell",
+      "label": "Shell",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "Commands",
+      "file_type": "code",
+      "norm_label": "shell",
       "source_file": "",
       "source_location": ""
     },
@@ -3825,6 +4576,39 @@
       "norm_label": "rect",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "src_engine_validator_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_engine_validator_validationresult",
+      "label": "ValidationResult",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": "validationresult",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_engine_validator_validationresult_is_success",
+      "label": ".is_success()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".is_success()",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L19"
     },
     {
       "id": "src_tui_app",
@@ -4883,314 +5667,6 @@
       "source_location": "L2"
     },
     {
-      "id": "src_cli_commands_hint",
-      "label": "hint.rs",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "hint.rs",
-      "source_file": "src/cli/commands/hint.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_cli_commands_hint_rs_option",
-      "label": "Option",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_hint_rs_result",
-      "label": "Result",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_hint_show_hint",
-      "label": "show_hint()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "show_hint()",
-      "source_file": "src/cli/commands/hint.rs",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_cli_commands_run",
-      "label": "run.rs",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "run.rs",
-      "source_file": "src/cli/commands/run.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_cli_commands_run_reset_exercise",
-      "label": "reset_exercise()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "reset_exercise()",
-      "source_file": "src/cli/commands/run.rs",
-      "source_location": "L87"
-    },
-    {
-      "id": "src_cli_commands_run_rs_result",
-      "label": "Result",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_run_run_exercise",
-      "label": "run_exercise()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "run_exercise()",
-      "source_file": "src/cli/commands/run.rs",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_core_curriculum",
-      "label": "curriculum.rs",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "curriculum.rs",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_core_curriculum_collect_md_files",
-      "label": "collect_md_files()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "collect_md_files()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L68"
-    },
-    {
-      "id": "src_core_curriculum_find_all_exercises",
-      "label": "find_all_exercises()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "find_all_exercises()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L46"
-    },
-    {
-      "id": "src_core_curriculum_find_all_exercises_or_embedded",
-      "label": "find_all_exercises_or_embedded()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "find_all_exercises_or_embedded()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L57"
-    },
-    {
-      "id": "src_core_curriculum_find_exercise_by_query",
-      "label": "find_exercise_by_query()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "find_exercise_by_query()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L88"
-    },
-    {
-      "id": "src_core_curriculum_level",
-      "label": "Level",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "level",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_core_curriculum_level_fmt",
-      "label": ".fmt()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": ".fmt()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_core_curriculum_level_from_str",
-      "label": ".from_str()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": ".from_str()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L35"
-    },
-    {
-      "id": "src_core_curriculum_parselevelerror",
-      "label": "ParseLevelError",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "parselevelerror",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L30"
-    },
-    {
-      "id": "src_core_curriculum_rs_display",
-      "label": "Display",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "display",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_err",
-      "label": "Err",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "err",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_formatter",
-      "label": "Formatter",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "formatter",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_fromstr",
-      "label": "FromStr",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "fromstr",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_option",
-      "label": "Option",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_p",
-      "label": "P",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "p",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_path",
-      "label": "Path",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_result",
-      "label": "Result",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_self",
-      "label": "Self",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "self",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_string",
-      "label": "String",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_vec",
-      "label": "Vec",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "vec",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_core_exercise",
       "label": "exercise.rs",
       "_origin": "ast",
@@ -5387,127 +5863,6 @@
       "norm_label": "vec",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "tests_cli_tests",
-      "label": "cli_tests.rs",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "cli_tests.rs",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_cli_tests_test_cli_parsing_subcommands",
-      "label": "test_cli_parsing_subcommands()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "test_cli_parsing_subcommands()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L13"
-    },
-    {
-      "id": "tests_cli_tests_test_curriculum_discovery_and_query",
-      "label": "test_curriculum_discovery_and_query()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "test_curriculum_discovery_and_query()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L111"
-    },
-    {
-      "id": "tests_cli_tests_test_explain_command_executes_cleanly",
-      "label": "test_explain_command_executes_cleanly()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "test_explain_command_executes_cleanly()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L71"
-    },
-    {
-      "id": "tests_cli_tests_test_list_and_progress_execute_cleanly",
-      "label": "test_list_and_progress_execute_cleanly()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "test_list_and_progress_execute_cleanly()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L83"
-    },
-    {
-      "id": "tests_cli_tests_test_run_exercise_with_file_path",
-      "label": "test_run_exercise_with_file_path()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "test_run_exercise_with_file_path()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L90"
-    },
-    {
-      "id": "tests_exercise_parser_tests",
-      "label": "exercise_parser_tests.rs",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "exercise_parser_tests.rs",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_exercise_parser_tests_test_parse_invalid_level_error",
-      "label": "test_parse_invalid_level_error()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "test_parse_invalid_level_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L62"
-    },
-    {
-      "id": "tests_exercise_parser_tests_test_parse_invalid_type_error",
-      "label": "test_parse_invalid_type_error()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "test_parse_invalid_type_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L72"
-    },
-    {
-      "id": "tests_exercise_parser_tests_test_parse_missing_id_error",
-      "label": "test_parse_missing_id_error()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "test_parse_missing_id_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L52"
-    },
-    {
-      "id": "tests_exercise_parser_tests_test_parse_valid_markdown_exercise",
-      "label": "test_parse_valid_markdown_exercise()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "test_parse_valid_markdown_exercise()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L5"
     },
     {
       "id": "exercises_01_ser_vs_estar_05_passive_vs_resultant_state",
@@ -9612,6 +9967,18 @@
   ],
   "links": [
     {
+      "source": "src_cli_commands_search_run_search",
+      "target": "src_cli_commands_search_search_exercises",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
       "source": "src_core_curriculum_find_all_exercises",
       "target": "src_core_curriculum_collect_md_files",
       "relation": "calls",
@@ -10032,6 +10399,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_progress_progresssummary",
+      "target": "btreemap",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_mod_cli",
       "target": "src_cli_mod_rs_option",
       "relation": "references",
@@ -10052,7 +10431,19 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L40",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_mod_commands",
+      "target": "src_cli_mod_rs_shell",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -10064,7 +10455,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L50",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -10329,6 +10720,78 @@
       "context": "field",
       "source_file": "src/tui/app.rs",
       "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_list_get_exercises_json",
+      "target": "src_cli_commands_list_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_get_progress_json",
+      "target": "src_cli_commands_progress_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_progresssummary",
+      "target": "src_cli_commands_progress_levelprogress",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_progresssummary",
+      "target": "src_cli_commands_progress_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_search_search_exercises",
+      "target": "src_cli_commands_search_rs_vec",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_search_search_exercises",
+      "target": "src_core_exercise_exercise",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -10844,7 +11307,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -10917,6 +11380,18 @@
       "context": "import",
       "source_file": "src/cli/commands/run.rs",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_search",
+      "target": "src_core_exercise_exercise",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L2",
       "weight": 1.0
     },
     {
@@ -11493,6 +11968,30 @@
       "context": "import",
       "source_file": "tests/watcher_tests.rs",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_completions_generate_completions_string",
+      "target": "src_cli_commands_completions_rs_shell",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/completions.rs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_completions_run_completions",
+      "target": "src_cli_commands_completions_rs_shell",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/completions.rs",
+      "source_location": "L13",
       "weight": 1.0
     },
     {
@@ -12108,6 +12607,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_completions_generate_completions_string",
+      "target": "src_cli_commands_completions_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/completions.rs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_completions_run_completions",
+      "target": "src_cli_commands_completions_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/completions.rs",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_drill_run_drill",
       "target": "src_cli_commands_drill_rs_result",
       "relation": "references",
@@ -12156,7 +12679,7 @@
       "weight": 1.0
     },
     {
-      "source": "src_cli_commands_list_list_exercises",
+      "source": "src_cli_commands_list_get_exercises_json",
       "target": "src_cli_commands_list_rs_result",
       "relation": "references",
       "_origin": "ast",
@@ -12168,6 +12691,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_list_list_exercises",
+      "target": "src_cli_commands_list_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_get_progress_json",
+      "target": "src_cli_commands_progress_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_progress_render_progress_bar",
       "target": "src_cli_commands_progress_rs_string",
       "relation": "references",
@@ -12176,7 +12723,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L117",
+      "source_location": "L202",
       "weight": 1.0
     },
     {
@@ -12188,7 +12735,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L8",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -12225,6 +12772,30 @@
       "context": "return_type",
       "source_file": "src/cli/commands/run.rs",
       "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_search_run_search",
+      "target": "src_cli_commands_search_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_search_search_exercises",
+      "target": "src_cli_commands_search_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -17235,18 +17806,62 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L67",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
       "source": "readme_examples",
-      "target": "readme_4_spaced_repetition_drills",
+      "target": "readme_3_search_explore",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L100",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_examples",
+      "target": "readme_4_json_output_mode",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_examples",
+      "target": "readme_5_targeted_run_explanation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_examples",
+      "target": "readme_6_spaced_repetition_drills",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_examples",
+      "target": "readme_7_shell_autocompletions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L154",
       "weight": 1.0
     },
     {
@@ -17257,7 +17872,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L69",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -17268,40 +17883,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L80",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_examples",
-      "target": "readme_3_targeted_run_explanation",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L86",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
       "source": "readme_installation_setup",
-      "target": "readme_prerequisites",
+      "target": "readme_1_install_via_cargo_recommended",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L25",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
       "source": "readme_installation_setup",
-      "target": "readme_build_run",
+      "target": "readme_2_build_from_source",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L28",
+      "source_location": "L41",
       "weight": 1.0
     },
     {
@@ -17323,7 +17927,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L112",
+      "source_location": "L168",
       "weight": 1.0
     },
     {
@@ -17334,7 +17938,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L141",
+      "source_location": "L197",
       "weight": 1.0
     },
     {
@@ -17345,7 +17949,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L158",
+      "source_location": "L214",
       "weight": 1.0
     },
     {
@@ -17356,7 +17960,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L23",
+      "source_location": "L27",
       "weight": 1.0
     },
     {
@@ -17367,7 +17971,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L45",
+      "source_location": "L58",
       "weight": 1.0
     },
     {
@@ -17379,6 +17983,28 @@
       "confidence_score": 1.0,
       "source_file": "README.md",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_completions",
+      "target": "src_cli_commands_completions_run_completions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/completions.rs",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_completions",
+      "target": "src_cli_commands_completions_generate_completions_string",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/completions.rs",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -17444,7 +18070,40 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/list.rs",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_list",
+      "target": "src_cli_commands_list_get_exercises_json",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/list.rs",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress",
+      "target": "src_cli_commands_progress_levelprogress",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress",
+      "target": "src_cli_commands_progress_progresssummary",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L17",
       "weight": 1.0
     },
     {
@@ -17455,7 +18114,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L117",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress",
+      "target": "src_cli_commands_progress_get_progress_json",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -17466,7 +18136,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L8",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -17503,6 +18173,28 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_search",
+      "target": "src_cli_commands_search_run_search",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_search",
+      "target": "src_cli_commands_search_search_exercises",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_mod",
       "target": "src_cli_mod_cli",
       "relation": "contains",
@@ -17521,7 +18213,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/mod.rs",
-      "source_location": "L22",
+      "source_location": "L26",
       "weight": 1.0
     },
     {
@@ -18049,7 +18741,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L111",
+      "source_location": "L113",
       "weight": 1.0
     },
     {
@@ -18093,7 +18785,40 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L90",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_completions_tests",
+      "target": "tests_completions_tests_test_generate_zsh_completions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/completions_tests.rs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_completions_tests",
+      "target": "tests_completions_tests_test_generate_fish_completions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/completions_tests.rs",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_completions_tests",
+      "target": "tests_completions_tests_test_generate_bash_completions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/completions_tests.rs",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -18295,6 +19020,28 @@
       "weight": 1.0
     },
     {
+      "source": "tests_json_output_tests",
+      "target": "tests_json_output_tests_test_progress_json_serialization",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_json_output_tests",
+      "target": "tests_json_output_tests_test_list_exercises_json_serialization",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "tests_normalizer_tests",
       "target": "tests_normalizer_tests_test_accent_stripping",
       "relation": "contains",
@@ -18424,6 +19171,39 @@
       "confidence_score": 1.0,
       "source_file": "tests/reference_tests.rs",
       "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_search_tests",
+      "target": "tests_search_tests_test_search_by_level",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/search_tests.rs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_search_tests",
+      "target": "tests_search_tests_test_search_by_id",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/search_tests.rs",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_search_tests",
+      "target": "tests_search_tests_test_search_by_topic_and_keyword",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/search_tests.rs",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -19136,27 +19916,51 @@
       "weight": 1.0
     },
     {
-      "source": "src_cli_commands_list_list_exercises",
-      "target": "src_core_curriculum_find_all_exercises",
+      "source": "src_cli_commands_list_get_exercises_json",
+      "target": "src_core_curriculum_find_all_exercises_or_embedded",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/cli/commands/list.rs",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
-      "source": "src_cli_commands_progress_show_progress",
-      "target": "src_core_curriculum_find_all_exercises",
+      "source": "src_cli_commands_list_list_exercises",
+      "target": "src_core_curriculum_find_all_exercises_or_embedded",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_get_progress_json",
+      "target": "src_core_curriculum_find_all_exercises_or_embedded",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L10",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_show_progress",
+      "target": "src_core_curriculum_find_all_exercises_or_embedded",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -19253,6 +20057,18 @@
       "context": "call",
       "source_file": "src/cli/commands/run.rs",
       "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_search_search_exercises",
+      "target": "src_core_curriculum_find_all_exercises_or_embedded",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/cli/commands/search.rs",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -19420,7 +20236,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L130",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -19432,7 +20248,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L134",
+      "source_location": "L136",
       "weight": 1.0
     },
     {
@@ -19444,7 +20260,43 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L106",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_completions_tests_test_generate_bash_completions",
+      "target": "src_cli_commands_completions_generate_completions_string",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/completions_tests.rs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_completions_tests_test_generate_fish_completions",
+      "target": "src_cli_commands_completions_generate_completions_string",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/completions_tests.rs",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_completions_tests_test_generate_zsh_completions",
+      "target": "src_cli_commands_completions_generate_completions_string",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/completions_tests.rs",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -19616,6 +20468,30 @@
       "weight": 1.0
     },
     {
+      "source": "tests_json_output_tests_test_list_exercises_json_serialization",
+      "target": "src_cli_commands_list_get_exercises_json",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_json_output_tests_test_progress_json_serialization",
+      "target": "src_cli_commands_progress_get_progress_json",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
       "source": "tests_normalizer_tests_test_smart_accent_matching",
       "target": "src_engine_accents_check_accent_match",
       "relation": "calls",
@@ -19724,6 +20600,42 @@
       "weight": 1.0
     },
     {
+      "source": "tests_search_tests_test_search_by_id",
+      "target": "src_cli_commands_search_search_exercises",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/search_tests.rs",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_search_tests_test_search_by_level",
+      "target": "src_cli_commands_search_search_exercises",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/search_tests.rs",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_search_tests_test_search_by_topic_and_keyword",
+      "target": "src_cli_commands_search_search_exercises",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/search_tests.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "tests_srs_tests_test_sm2_repetition_intervals",
       "target": "src_core_srs_calculate_sm2_review",
       "relation": "calls",
@@ -19797,5 +20709,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a1662480eaca6a9bddf5afcbf08e575903a4d4d3"
+  "built_at_commit": "2d48cba5b1b090951f4b16d5f73a32817ff3dbbb"
 }

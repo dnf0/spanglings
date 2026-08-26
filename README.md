@@ -11,10 +11,14 @@ Duolingo is often too slow, repetitive, and child-oriented. **Spanglings** provi
 ### Key Features
 - 🚀 **Interactive Terminal UI (`ratatui`)**: Real-time dual-pane editor with live validation, syntax styling, progress tracking, and interactive drill modes.
 - ⚡ **Headless Watch Mode (`spanglings watch`)**: Modify exercise files in your favorite editor (VS Code, Neovim, Zed) while Spanglings continuously validates submissions via debounced filesystem events.
+- 📦 **Turnkey Zero-Setup Scaffolding (`spanglings init`)**: Embedded exercise catalog compiled directly into the binary—run `spanglings init` in any directory with zero git-cloning needed.
 - 🔍 **Rustc-Style Grammar Diagnostics**: Rich, colored compiler-style error diagnostics (`error[E0301]: Subjunctive Mood Required`) with source code context, dynamic line markers (`^^^^`), and grammatical explanations.
 - 💡 **Progressive 3-Tier Hint System**: Get hints on demand (Tier 1: conceptual clue, Tier 2: morphological/structural clue, Tier 3: solution reveal).
 - 🧠 **Forgiving Smart Accent Matching**: Designed for QWERTY keyboards. Accents and inverted punctuation (`¿`, `¡`) are forgiven by default with helpful tip notices, or enforced with `--strict-accents`.
 - 🔄 **SM-2 Spaced Repetition (SRS)**: Active recall review scheduler using the SuperMemo-2 algorithm (`spanglings review` / `spanglings drill`).
+- 🔎 **Full-Text & Topic Search (`spanglings search <query>`)**: Instant matching across grammar topics, CEFR levels, exercise titles, prompts, and solutions.
+- 🤖 **Machine-Readable Output (`--json`)**: Streamlined JSON serialization for external scripts, status bars (Starship, tmux), and IDE integrations.
+- 🐚 **Shell Auto-Completions (`spanglings completions`)**: Native autocompletions for Bash, Zsh, Fish, PowerShell, and Elvish.
 - 📖 **In-Terminal Cheat Sheets (`spanglings explain <topic>`)**: Reference cards for *ser vs estar*, past aspectual shifts, subjunctive triggers (WEIRDO), *por vs para*, prepositional regimes, pronoun stacking, and accidental *se*.
 - 📚 **116 Handcrafted Exercises across 22 Tracks**: Complete coverage from baseline drills through advanced C1 collocations.
 
@@ -22,12 +26,21 @@ Duolingo is often too slow, repetitive, and child-oriented. **Spanglings** provi
 
 ## Installation & Setup
 
-### Prerequisites
-- [Rust & Cargo](https://rustup.rs/) (edition 2021)
-
-### Build & Run
+### 1. Install via Cargo (Recommended)
 ```bash
-git clone https://github.com/your-username/spanglings.git
+# Install globally from crates.io
+cargo install spanglings
+
+# Initialize exercises in your current workspace
+spanglings init
+
+# Launch interactive TUI
+spanglings
+```
+
+### 2. Build from Source
+```bash
+git clone https://github.com/dnf0/spanglings.git
 cd spanglings
 
 # Build in release mode
@@ -48,18 +61,24 @@ cargo run -- --strict-accents
 Usage: spanglings [OPTIONS] [COMMAND]
 
 Commands:
-  watch     Watch exercise files and re-evaluate on file changes
-  run       Run and validate a specific exercise by path or ID
-  hint      Show progressive hints for an exercise (Tier 1 to 3)
-  list      List all curriculum exercises and completion statuses
-  progress  Display current learning progress across CEFR levels
-  drill     Start an active-recall flashcard drill session
-  review    Review exercises due for Spaced Repetition (SM-2)
-  explain   Display in-terminal grammar cheat sheet for a topic
-  help      Print this message or the help of the given subcommand(s)
+  watch        Watch exercise files and re-evaluate on file save
+  init         Initialize exercises in the current directory or target path
+  run          Run and validate a specific exercise by path or ID
+  hint         Show progressive hints for an exercise (Tier 1 to 3)
+  list         List all curriculum exercises and completion statuses
+  progress     Display learning progress across CEFR levels
+  search       Search exercises by topic, keyword, or grammar concept
+  drill        Start an active-recall flashcard drill session
+  review       Review exercises due for Spaced Repetition (SM-2)
+  explain      Display in-terminal grammar cheat sheet for a topic
+  completions  Generate shell auto-completions (bash, zsh, fish, powershell)
+  reset        Reset an exercise to its initial prompt
+  tui          Launch the interactive terminal UI
+  help         Print this message or the help of the given subcommand(s)
 
 Options:
-  -s, --strict-accents  Require exact accent marks and tildes
+      --strict-accents  Require exact accent marks and tildes
+      --json            Output results in JSON format
   -h, --help            Print help
   -V, --version         Print version
 ```
@@ -83,28 +102,65 @@ spanglings watch
 ```
 Open any `.md` file under `exercises/` in your editor, remove `<!-- I AM NOT DONE -->`, fill in the `___`, and save. Spanglings will automatically validate and report results.
 
-#### 3. Targeted Run & Explanation
+#### 3. Search & Explore
+```bash
+# Search for subjunctive exercises
+spanglings search subjunctive
+
+# Search for accidental 'se' exercises
+spanglings search "se me"
+
+# Search for C1 level exercises
+spanglings search C1
+```
+
+#### 4. JSON Output Mode
+```bash
+# Machine-readable exercise listing
+spanglings list --json
+
+# Machine-readable learning progress
+spanglings progress --json
+
+# Machine-readable search results
+spanglings search subjunctive --json
+```
+
+#### 5. Targeted Run & Explanation
 ```bash
 # Validate a single exercise
-spanglings run exercises/03_subjunctive_weirdo/01_wishes_quiero_que.md
+spanglings run exercises/03_subjunctive_weirdo/01_wishes_volition.md
 
-# Get hints
-spanglings hint b1_subj_weirdo_wishes --tier 2
+# Get progressive hints
+spanglings hint b1_subj_weirdo_wishes
 
 # Read a grammar cheat sheet
 spanglings explain subjunctive
 spanglings explain past_tenses
+spanglings explain por_para
 spanglings explain accidental_se
 ```
 
-#### 4. Spaced Repetition Drills
+#### 6. Spaced Repetition Drills
 ```bash
 # Review due exercises
 spanglings review
 
-# Drill a specific topic or level
-spanglings drill --topic ser_vs_estar
-spanglings drill --level B2 --count 10
+# Drill irregular stems
+spanglings drill
+spanglings drill --topic subjunctive
+```
+
+#### 7. Shell Autocompletions
+```bash
+# For Zsh (add to ~/.zshrc)
+eval "$(spanglings completions zsh)"
+
+# For Bash
+eval "$(spanglings completions bash)"
+
+# For Fish
+spanglings completions fish | source
 ```
 
 ---
@@ -157,4 +213,4 @@ cargo fmt --check
 
 ## License
 
-MIT OR Apache-2.0
+Apache-2.0

@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-08-26)
 
 ## Corpus Check
-- 164 files · ~40,166 words
+- 167 files · ~40,972 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 809 nodes · 883 edges · 139 communities (137 shown, 2 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 57 edges (avg confidence: 0.85)
+- 823 nodes · 897 edges · 140 communities (138 shown, 2 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 60 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3310118c`
+- Built from commit: `a1662480`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -149,6 +149,7 @@
 - Collocations 05: 'Surtir efecto' (To take effect)
 - Discoverability, Portability & Zero-Setup CLI Implementation Plan
 - Spanglings Product & Engineering Backlog
+- Spanglings Init Subcommand Implementation Plan
 
 ## God Nodes (most connected - your core abstractions)
 1. `App` - 31 edges
@@ -165,19 +166,19 @@
 ## Surprising Connections (you probably didn't know these)
 - `test_find_all_exercises_or_embedded_fallback()` --calls--> `find_all_exercises_or_embedded()`  [INFERRED]
   tests/embedded_tests.rs → src/core/curriculum.rs
+- `test_run_init_creates_exercise_workspace()` --calls--> `run_init()`  [INFERRED]
+  tests/init_tests.rs → src/cli/commands/init.rs
+- `test_run_init_force_flag()` --calls--> `run_init()`  [INFERRED]
+  tests/init_tests.rs → src/cli/commands/init.rs
 - `test_run_exercise_with_file_path()` --calls--> `run_exercise()`  [INFERRED]
   tests/cli_tests.rs → src/cli/commands/run.rs
 - `test_all_curriculum_exercises_are_valid_and_solvable()` --calls--> `find_all_exercises()`  [INFERRED]
   tests/exercise_validity_tests.rs → src/core/curriculum.rs
-- `test_get_embedded_exercises_loads_full_catalog()` --calls--> `get_embedded_exercises()`  [INFERRED]
-  tests/embedded_tests.rs → src/core/embedded.rs
-- `test_init_exercises_dir_writes_files()` --calls--> `init_exercises_dir()`  [INFERRED]
-  tests/embedded_tests.rs → src/core/embedded.rs
 
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (139 total, 2 thin omitted)
+## Communities (140 total, 2 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -196,8 +197,8 @@ Cohesion: 0.06
 Nodes (39): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), collect_md_files(), find_all_exercises() (+31 more)
 
 ### Community 4 - "embedded.rs"
-Cohesion: 0.25
-Nodes (12): Dir, collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir(), P, Path, Result (+4 more)
+Cohesion: 0.15
+Nodes (17): Dir, Option, Result, run_init(), collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir() (+9 more)
 
 ### Community 7 - "AppState"
 Cohesion: 0.08
@@ -707,8 +708,12 @@ Nodes (7): Discoverability, Portability & Zero-Setup CLI Implementation Plan, Ta
 Cohesion: 0.33
 Nodes (5): 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Current Sprint), 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion, 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements, 📊 Focus Area 4: Interactive TUI & IDE Integrations, Spanglings Product & Engineering Backlog
 
+### Community 139 - "Spanglings Init Subcommand Implementation Plan"
+Cohesion: 0.29
+Nodes (6): Spanglings Init Subcommand Implementation Plan, Task 1: Create Integration Tests, Task 2: Implement Init Subcommand Command Handler, Task 3: Update CLI Definition and Main Dispatcher, Task 4: Verification and Code Quality, Task 5: Commit changes
+
 ## Knowledge Gaps
-- **290 isolated node(s):** `spanglings`, `DrillItem`, `Key Features`, `Prerequisites`, `Build & Run` (+285 more)
+- **295 isolated node(s):** `spanglings`, `DrillItem`, `Key Features`, `Prerequisites`, `Build & Run` (+290 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -716,16 +721,16 @@ Nodes (5): 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Cur
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Exercise` connect `Exercise` to `validate_submission`, `App`, `embedded.rs`?**
-  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+  _High betweenness centrality (0.042) - this node is a cross-community bridge._
 - **Why does `App` connect `App` to `validate_submission`, `Exercise`?**
   _High betweenness centrality (0.027) - this node is a cross-community bridge._
 - **Why does `validate_submission()` connect `validate_submission` to `App`, `Exercise`, `evaluate_current_exercise_in`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **Are the 13 inferred relationships involving `validate_submission()` (e.g. with `run_review_session()` and `run_exercise()`) actually correct?**
   _`validate_submission()` has 13 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 10 inferred relationships involving `find_all_exercises()` (e.g. with `show_hint()` and `list_exercises()`) actually correct?**
   _`find_all_exercises()` has 10 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `DrillItem`, `Key Features` to the rest of the system?**
-  _290 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _295 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._

@@ -3188,6 +3188,90 @@
       "source_location": "L1"
     },
     {
+      "id": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand",
+      "label": "2026-08-26-spanglings-init-subcommand.md",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "Spanglings Init Subcommand Implementation Plan",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-08-26-spanglings-init-subcommand.md",
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_spanglings_init_subcommand_implementation_plan",
+      "label": "Spanglings Init Subcommand Implementation Plan",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "Spanglings Init Subcommand Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "spanglings init subcommand implementation plan",
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_task_1_create_integration_tests",
+      "label": "Task 1: Create Integration Tests",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "Spanglings Init Subcommand Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 1: create integration tests",
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_task_2_implement_init_subcommand_command_handler",
+      "label": "Task 2: Implement Init Subcommand Command Handler",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "Spanglings Init Subcommand Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 2: implement init subcommand command handler",
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L60"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_task_3_update_cli_definition_and_main_dispatcher",
+      "label": "Task 3: Update CLI Definition and Main Dispatcher",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "Spanglings Init Subcommand Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 3: update cli definition and main dispatcher",
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L104"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_task_4_verification_and_code_quality",
+      "label": "Task 4: Verification and Code Quality",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "Spanglings Init Subcommand Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 4: verification and code quality",
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L135"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_task_5_commit_changes",
+      "label": "Task 5: Commit changes",
+      "_origin": "ast",
+      "community": 139,
+      "community_name": "Spanglings Init Subcommand Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 5: commit changes",
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L154"
+    },
+    {
       "id": "readme",
       "label": "README.md",
       "_origin": "ast",
@@ -5917,6 +6001,50 @@
       "source_location": ""
     },
     {
+      "id": "src_cli_commands_init",
+      "label": "init.rs",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "init.rs",
+      "source_file": "src/cli/commands/init.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_init_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_init_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_init_run_init",
+      "label": "run_init()",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "run_init()",
+      "source_file": "src/cli/commands/init.rs",
+      "source_location": "L5"
+    },
+    {
       "id": "src_core_embedded",
       "label": "embedded.rs",
       "_origin": "ast",
@@ -5947,7 +6075,7 @@
       "file_type": "code",
       "norm_label": "extract_dir()",
       "source_file": "src/core/embedded.rs",
-      "source_location": "L47"
+      "source_location": "L56"
     },
     {
       "id": "src_core_embedded_get_embedded_exercises",
@@ -6058,6 +6186,39 @@
       "norm_label": "test_init_exercises_dir_writes_files()",
       "source_file": "tests/embedded_tests.rs",
       "source_location": "L19"
+    },
+    {
+      "id": "tests_init_tests",
+      "label": "init_tests.rs",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "init_tests.rs",
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_init_tests_test_run_init_creates_exercise_workspace",
+      "label": "test_run_init_creates_exercise_workspace()",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "test_run_init_creates_exercise_workspace()",
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "tests_init_tests_test_run_init_force_flag",
+      "label": "test_run_init_force_flag()",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "test_run_init_force_flag()",
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L16"
     },
     {
       "id": "exercises_03_subjunctive_weirdo_04_recommendations_influence",
@@ -9519,7 +9680,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/embedded.rs",
-      "source_location": "L43",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -9891,7 +10052,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L32",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -9903,7 +10064,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L42",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -11359,6 +11520,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_init_run_init",
+      "target": "src_cli_commands_init_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/init.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_core_curriculum_collect_md_files",
       "target": "src_core_curriculum_rs_path",
       "relation": "references",
@@ -11451,7 +11624,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/core/embedded.rs",
-      "source_location": "L47",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -11463,7 +11636,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/core/embedded.rs",
-      "source_location": "L47",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -11971,6 +12144,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_init_run_init",
+      "target": "src_cli_commands_init_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/init.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_list_list_exercises",
       "target": "src_cli_commands_list_rs_result",
       "relation": "references",
@@ -12135,7 +12320,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/embedded.rs",
-      "source_location": "L47",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -12926,6 +13111,72 @@
       "confidence_score": 1.0,
       "source_file": "docs/superpowers/plans/2026-08-26-spanglings-implementation.md",
       "source_location": "L823",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand",
+      "target": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_spanglings_init_subcommand_implementation_plan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_spanglings_init_subcommand_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_task_3_update_cli_definition_and_main_dispatcher",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L104",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_spanglings_init_subcommand_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_task_4_verification_and_code_quality",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_spanglings_init_subcommand_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_task_1_create_integration_tests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_spanglings_init_subcommand_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_task_5_commit_changes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L154",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_spanglings_init_subcommand_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_spanglings_init_subcommand_task_2_implement_init_subcommand_command_handler",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
+      "source_location": "L60",
       "weight": 1.0
     },
     {
@@ -17175,6 +17426,17 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_init",
+      "target": "src_cli_commands_init_run_init",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/init.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_list",
       "target": "src_cli_commands_list_list_exercises",
       "relation": "contains",
@@ -17358,7 +17620,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/core/embedded.rs",
-      "source_location": "L47",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -18008,6 +18270,28 @@
       "confidence_score": 1.0,
       "source_file": "tests/exercise_validity_tests.rs",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_init_tests",
+      "target": "tests_init_tests_test_run_init_force_flag",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_init_tests",
+      "target": "tests_init_tests_test_run_init_creates_exercise_workspace",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L5",
       "weight": 1.0
     },
     {
@@ -18840,6 +19124,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_init_run_init",
+      "target": "src_core_embedded_init_exercises_dir",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/cli/commands/init.rs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_list_list_exercises",
       "target": "src_core_curriculum_find_all_exercises",
       "relation": "calls",
@@ -19296,6 +19592,30 @@
       "weight": 1.0
     },
     {
+      "source": "tests_init_tests_test_run_init_creates_exercise_workspace",
+      "target": "src_cli_commands_init_run_init",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_init_tests_test_run_init_force_flag",
+      "target": "src_cli_commands_init_run_init",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
       "source": "tests_normalizer_tests_test_smart_accent_matching",
       "target": "src_engine_accents_check_accent_match",
       "relation": "calls",
@@ -19477,5 +19797,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "3310118c66e3cea1687c04c460d04977d831dee1"
+  "built_at_commit": "a1662480eaca6a9bddf5afcbf08e575903a4d4d3"
 }

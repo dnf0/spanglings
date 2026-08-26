@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "src/main.rs": {
-    "mtime": 1787761274.983667,
-    "seen": 1787761350.80846,
-    "ast_hash": "b58a63077647188ed44fe19b35263968",
+    "mtime": 1787782783.000675,
+    "seen": 1787782846.39966,
+    "ast_hash": "ce462f4c4ed2ea59a4b39155779d748b",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-spanglings-implementation.md": {
@@ -156,21 +156,21 @@
     "semantic_hash": ""
   },
   "src/cli/commands/list.rs": {
-    "mtime": 1787754645.2434237,
-    "seen": 1787754663.76368,
-    "ast_hash": "c3d763e92dc0cdd972f500669b0586f4",
+    "mtime": 1787761659.9842536,
+    "seen": 1787782846.399632,
+    "ast_hash": "1375cc80b550e1b7f48f22140f48b59a",
     "semantic_hash": ""
   },
   "src/cli/commands/mod.rs": {
-    "mtime": 1787761304.0692775,
-    "seen": 1787761350.80845,
-    "ast_hash": "2a7f4f5928c82068840d16b78dcac2da",
+    "mtime": 1787782769.2159796,
+    "seen": 1787782846.399633,
+    "ast_hash": "d3facb522eba0a8783d929eedeefcc0e",
     "semantic_hash": ""
   },
   "src/cli/commands/progress.rs": {
-    "mtime": 1787754555.5759718,
-    "seen": 1787754663.763681,
-    "ast_hash": "fe26e2891a65028dfe4187b738f08427",
+    "mtime": 1787761673.1927707,
+    "seen": 1787782846.399634,
+    "ast_hash": "2d78868378b08178389e586d810fe917",
     "semantic_hash": ""
   },
   "src/cli/commands/review.rs": {
@@ -186,15 +186,15 @@
     "semantic_hash": ""
   },
   "src/cli/mod.rs": {
-    "mtime": 1787761265.238384,
-    "seen": 1787761350.8084521,
-    "ast_hash": "6516341f920cde5fc4d81546e090b914",
+    "mtime": 1787782775.2995746,
+    "seen": 1787782846.3996391,
+    "ast_hash": "fa0966cb6b50394ad5eb82b5122fbb23",
     "semantic_hash": ""
   },
   "tests/cli_tests.rs": {
-    "mtime": 1787754630.880737,
-    "seen": 1787754663.76369,
-    "ast_hash": "a512f3136cb0bc6807b5236199c1b377",
+    "mtime": 1787761770.115858,
+    "seen": 1787782846.399669,
+    "ast_hash": "d25a4940efa9d042aa4b8df9933d39f7",
     "semantic_hash": ""
   },
   "src/watcher/mod.rs": {
@@ -252,9 +252,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787758104.8644485,
-    "seen": 1787758112.929871,
-    "ast_hash": "6abf24ed5f717fa6f59f2ff3027875b0",
+    "mtime": 1787782825.414141,
+    "seen": 1787782846.399689,
+    "ast_hash": "c2033db279f3909d6cc860fa50309882",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-interactive-tui.md": {
@@ -1017,6 +1017,36 @@
     "mtime": 1787761056.572698,
     "seen": 1787761350.808473,
     "ast_hash": "60936f07181a132b604bd4bf8809f8d5",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/completions.rs": {
+    "mtime": 1787782763.3195422,
+    "seen": 1787782846.399619,
+    "ast_hash": "429b5e972f82761b0968ee579bca389c",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/search.rs": {
+    "mtime": 1787782713.0105236,
+    "seen": 1787782846.399638,
+    "ast_hash": "571fc92e4a15f632d81ef2f1d9f73578",
+    "semantic_hash": ""
+  },
+  "tests/completions_tests.rs": {
+    "mtime": 1787782757.8728569,
+    "seen": 1787782846.3996701,
+    "ast_hash": "9ef535d29df2596d7463ce65af2c0d17",
+    "semantic_hash": ""
+  },
+  "tests/json_output_tests.rs": {
+    "mtime": 1787782615.0372615,
+    "seen": 1787782846.3996758,
+    "ast_hash": "b03f6b2704042997065dc0cefb8118da",
+    "semantic_hash": ""
+  },
+  "tests/search_tests.rs": {
+    "mtime": 1787782732.034892,
+    "seen": 1787782846.39968,
+    "ast_hash": "33eb876ae69e392deb44428ab57a7509",
     "semantic_hash": ""
   }
 }

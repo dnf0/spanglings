@@ -12,8 +12,8 @@
   "10": "validate_submission",
   "11": "engine/mod.rs",
   "12": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
-  "13": "evaluate_current_exercise_in",
-  "14": "Spanglings 🇪🇸 🦀",
+  "13": "progress.rs",
+  "14": "Examples",
   "15": "get_reference_card",
   "16": "run_drill",
   "17": "Commands",
@@ -138,5 +138,11 @@
   "136": "Collocations 05: 'Surtir efecto' (To take effect)",
   "137": "Discoverability, Portability & Zero-Setup CLI Implementation Plan",
   "138": "Spanglings Product & Engineering Backlog",
-  "139": "Spanglings Init Subcommand Implementation Plan"
+  "139": "Spanglings Init Subcommand Implementation Plan",
+  "140": "run_exercise",
+  "141": "find_all_exercises",
+  "142": "generate_completions_string",
+  "143": "Level",
+  "144": "search_exercises",
+  "145": ".from_str"
 }

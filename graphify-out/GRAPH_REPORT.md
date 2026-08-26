@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-08-26)
 
 ## Corpus Check
-- 167 files · ~40,972 words
+- 172 files · ~41,863 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 823 nodes · 897 edges · 140 communities (138 shown, 2 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 60 edges (avg confidence: 0.85)
+- 855 nodes · 945 edges · 146 communities (144 shown, 2 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 71 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a1662480`
+- Built from commit: `2d48cba5`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -25,8 +25,8 @@
 - AppState
 - validate_submission
 - Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan
-- evaluate_current_exercise_in
-- Spanglings 🇪🇸 🦀
+- progress.rs
+- Examples
 - get_reference_card
 - run_drill
 - Commands
@@ -150,35 +150,41 @@
 - Discoverability, Portability & Zero-Setup CLI Implementation Plan
 - Spanglings Product & Engineering Backlog
 - Spanglings Init Subcommand Implementation Plan
+- run_exercise
+- find_all_exercises
+- generate_completions_string
+- Level
+- search_exercises
+- .from_str
 
 ## God Nodes (most connected - your core abstractions)
 1. `App` - 31 edges
-2. `Exercise` - 26 edges
+2. `Exercise` - 28 edges
 3. `AppState` - 20 edges
 4. `validate_submission()` - 18 edges
-5. `find_all_exercises()` - 17 edges
-6. `evaluate_current_exercise_in()` - 12 edges
-7. `Spanglings Implementation Plan` - 12 edges
-8. `get_reference_card()` - 11 edges
-9. `create_sample_exercises()` - 10 edges
-10. `Level` - 9 edges
+5. `find_all_exercises()` - 15 edges
+6. `find_all_exercises_or_embedded()` - 12 edges
+7. `evaluate_current_exercise_in()` - 12 edges
+8. `Spanglings Implementation Plan` - 12 edges
+9. `get_reference_card()` - 11 edges
+10. `create_sample_exercises()` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `test_list_exercises_json_serialization()` --calls--> `get_exercises_json()`  [INFERRED]
+  tests/json_output_tests.rs → src/cli/commands/list.rs
 - `test_find_all_exercises_or_embedded_fallback()` --calls--> `find_all_exercises_or_embedded()`  [INFERRED]
   tests/embedded_tests.rs → src/core/curriculum.rs
-- `test_run_init_creates_exercise_workspace()` --calls--> `run_init()`  [INFERRED]
-  tests/init_tests.rs → src/cli/commands/init.rs
-- `test_run_init_force_flag()` --calls--> `run_init()`  [INFERRED]
-  tests/init_tests.rs → src/cli/commands/init.rs
-- `test_run_exercise_with_file_path()` --calls--> `run_exercise()`  [INFERRED]
-  tests/cli_tests.rs → src/cli/commands/run.rs
-- `test_all_curriculum_exercises_are_valid_and_solvable()` --calls--> `find_all_exercises()`  [INFERRED]
-  tests/exercise_validity_tests.rs → src/core/curriculum.rs
+- `test_generate_bash_completions()` --calls--> `generate_completions_string()`  [INFERRED]
+  tests/completions_tests.rs → src/cli/commands/completions.rs
+- `test_generate_fish_completions()` --calls--> `generate_completions_string()`  [INFERRED]
+  tests/completions_tests.rs → src/cli/commands/completions.rs
+- `test_generate_zsh_completions()` --calls--> `generate_completions_string()`  [INFERRED]
+  tests/completions_tests.rs → src/cli/commands/completions.rs
 
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (140 total, 2 thin omitted)
+## Communities (146 total, 2 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -190,11 +196,11 @@ Nodes (19): 1.1 Problem Statement, 1.2 The Solution: Spanglings, 1. Executive Su
 
 ### Community 2 - "App"
 Cohesion: 0.07
-Nodes (31): B, Drop, Frame, Rect, App, AppState, Option, Self (+23 more)
+Nodes (33): B, Drop, Frame, Rect, Option, ValidationResult, App, AppState (+25 more)
 
 ### Community 3 - "Exercise"
-Cohesion: 0.06
-Nodes (39): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), collect_md_files(), find_all_exercises() (+31 more)
+Cohesion: 0.17
+Nodes (14): DiagnosticRule, Exercise, ExerciseType, ParseExerciseTypeError, Display, Err, Formatter, FromStr (+6 more)
 
 ### Community 4 - "embedded.rs"
 Cohesion: 0.15
@@ -205,20 +211,20 @@ Cohesion: 0.08
 Nodes (20): HashSet, calculate_sm2_review(), DateTime, Default, Option, Self, Utc, SrsItem (+12 more)
 
 ### Community 10 - "validate_submission"
-Cohesion: 0.07
-Nodes (32): Result, run_review_session(), AccentResult, check_accent_match(), String, strip_accents(), Diagnostic, Option (+24 more)
+Cohesion: 0.06
+Nodes (41): AppState, Result, run_review_session(), AccentMode, AccentResult, check_accent_match(), String, strip_accents() (+33 more)
 
 ### Community 12 - "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan"
 Cohesion: 0.25
 Nodes (7): Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan, Task 1: Scaffolding and Failing Tests, Task 2: Standard Error Codes, Task 3: Compiler-Style Diagnostics, Task 4: Accent Mode Integration and Module Exporting, Task 5: Core Validation Logic & Submission Evaluator, Task 6: Verification and Automated Quality Control
 
-### Community 13 - "evaluate_current_exercise_in"
-Cohesion: 0.15
-Nodes (18): AppState, HashMap, list_exercises(), Result, render_progress_bar(), Result, String, show_progress() (+10 more)
+### Community 13 - "progress.rs"
+Cohesion: 0.21
+Nodes (11): BTreeMap, HashMap, get_progress_json(), LevelProgress, ProgressSummary, render_progress_bar(), Result, String (+3 more)
 
-### Community 14 - "Spanglings 🇪🇸 🦀"
-Cohesion: 0.12
-Nodes (15): 1. Interactive TUI Mode, 2. Headless Watcher Mode, 3. Targeted Run & Explanation, 4. Spaced Repetition Drills, Build & Run, Command Line Interface (CLI), Curriculum Tracks (116 Exercises), Development & Testing (+7 more)
+### Community 14 - "Examples"
+Cohesion: 0.11
+Nodes (18): 1. Install via Cargo (Recommended), 1. Interactive TUI Mode, 2. Build from Source, 2. Headless Watcher Mode, 3. Search & Explore, 4. JSON Output Mode, 5. Targeted Run & Explanation, 6. Spaced Repetition Drills (+10 more)
 
 ### Community 15 - "get_reference_card"
 Cohesion: 0.19
@@ -229,8 +235,8 @@ Cohesion: 0.40
 Nodes (4): DrillItem, Option, Result, run_drill()
 
 ### Community 17 - "Commands"
-Cohesion: 0.60
-Nodes (4): Cli, Commands, Option, String
+Cohesion: 0.47
+Nodes (5): Cli, Commands, Option, Shell, String
 
 ### Community 20 - "File Structure"
 Cohesion: 0.25
@@ -712,25 +718,49 @@ Nodes (5): 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Cur
 Cohesion: 0.29
 Nodes (6): Spanglings Init Subcommand Implementation Plan, Task 1: Create Integration Tests, Task 2: Implement Init Subcommand Command Handler, Task 3: Update CLI Definition and Main Dispatcher, Task 4: Verification and Code Quality, Task 5: Commit changes
 
+### Community 140 - "run_exercise"
+Cohesion: 0.15
+Nodes (10): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), find_exercise_by_query(), Option (+2 more)
+
+### Community 141 - "find_all_exercises"
+Cohesion: 0.28
+Nodes (11): get_exercises_json(), list_exercises(), Result, String, collect_md_files(), find_all_exercises(), find_all_exercises_or_embedded(), P (+3 more)
+
+### Community 142 - "generate_completions_string"
+Cohesion: 0.27
+Nodes (8): generate_completions_string(), Result, Shell, String, run_completions(), test_generate_bash_completions(), test_generate_fish_completions(), test_generate_zsh_completions()
+
+### Community 143 - "Level"
+Cohesion: 0.20
+Nodes (4): Level, Display, Formatter, FromStr
+
+### Community 144 - "search_exercises"
+Cohesion: 0.33
+Nodes (7): Result, Vec, run_search(), search_exercises(), test_search_by_id(), test_search_by_level(), test_search_by_topic_and_keyword()
+
+### Community 145 - ".from_str"
+Cohesion: 0.40
+Nodes (4): ParseLevelError, Err, Self, String
+
 ## Knowledge Gaps
-- **295 isolated node(s):** `spanglings`, `DrillItem`, `Key Features`, `Prerequisites`, `Build & Run` (+290 more)
+- **298 isolated node(s):** `spanglings`, `DrillItem`, `Key Features`, `1. Install via Cargo (Recommended)`, `2. Build from Source` (+293 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Exercise` connect `Exercise` to `validate_submission`, `App`, `embedded.rs`?**
-  _High betweenness centrality (0.042) - this node is a cross-community bridge._
-- **Why does `App` connect `App` to `validate_submission`, `Exercise`?**
+- **Why does `Exercise` connect `Exercise` to `App`, `embedded.rs`, `validate_submission`, `run_exercise`, `find_all_exercises`, `Level`, `search_exercises`?**
+  _High betweenness centrality (0.048) - this node is a cross-community bridge._
+- **Why does `App` connect `App` to `Exercise`?**
   _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **Why does `validate_submission()` connect `validate_submission` to `App`, `Exercise`, `evaluate_current_exercise_in`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
+- **Why does `validate_submission()` connect `validate_submission` to `App`, `Exercise`, `run_exercise`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
 - **Are the 13 inferred relationships involving `validate_submission()` (e.g. with `run_review_session()` and `run_exercise()`) actually correct?**
   _`validate_submission()` has 13 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 10 inferred relationships involving `find_all_exercises()` (e.g. with `show_hint()` and `list_exercises()`) actually correct?**
-  _`find_all_exercises()` has 10 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 8 inferred relationships involving `find_all_exercises()` (e.g. with `show_hint()` and `run_review_session()`) actually correct?**
+  _`find_all_exercises()` has 8 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `DrillItem`, `Key Features` to the rest of the system?**
-  _295 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _298 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
