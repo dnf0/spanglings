@@ -3,7 +3,20 @@ name = "spanglings"
 version = "0.1.0"
 edition = "2021"
 authors = ["Daniel Fisher"]
-description = "Developer-grade CLI and TUI for mastering B1-C1 Spanish"
+description = "Developer-grade CLI and interactive TUI for mastering B1-C1 Spanish"
+license = "Apache-2.0"
+repository = "https://github.com/dnf0/spanglings"
+homepage = "https://github.com/dnf0/spanglings"
+readme = "README.md"
+keywords = ["spanish", "learning", "cli", "tui", "rustlings"]
+categories = ["command-line-utilities", "education"]
+include = [
+    "src/**/*",
+    "exercises/**/*",
+    "Cargo.toml",
+    "README.md",
+    "LICENSE",
+]
 
 [dependencies]
 clap = { version = "4.5", features = ["derive", "cargo"] }
