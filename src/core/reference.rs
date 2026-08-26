@@ -1,13 +1,15 @@
-pub fn list_reference_topics() -> Vec<&'static str> {
-    vec![
-        "subjunctive",
-        "por-para",
-        "ser-estar",
-        "past",
-        "pronouns",
-        "prepositions",
-        "accidental-se",
-    ]
+pub const TOPICS: &[&str] = &[
+    "subjunctive",
+    "por-para",
+    "ser-estar",
+    "past",
+    "pronouns",
+    "prepositions",
+    "accidental-se",
+];
+
+pub fn list_reference_topics() -> &'static [&'static str] {
+    TOPICS
 }
 
 pub fn get_reference_card(topic: &str) -> Option<&'static str> {
@@ -126,8 +128,9 @@ ORDER RULE: [REFLEXIVE] -> [INDIRECT] -> [DIRECT]
   Indirect: me, te, le, nos, os, les
   Direct:   me, te, lo/la, nos, os, los/las
 
-THE "LE / LES -> SE" RULE:
-  When Indirect (le/les) is followed by Direct (lo/la/los/las), 'le' becomes 'SE':
+THE "LE / LES -> SE" RULE (Avoiding Cacophony):
+  When Indirect (le/les) is followed by Direct (lo/la/los/las), 'le' becomes 'SE'
+  to avoid the awkward consecutive 'l' sounds ("le lo"):
   * Le lo doy -> SE LO DOY.
 
 PLACEMENT RULES:
