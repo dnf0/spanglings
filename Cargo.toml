@@ -1,6 +1,6 @@
 [package]
 name = "spanglings"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
 authors = ["Daniel Fisher"]
 description = "Developer-grade CLI and interactive TUI for mastering B1-C1 Spanish"
