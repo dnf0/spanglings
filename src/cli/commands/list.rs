@@ -1,11 +1,21 @@
-use crate::core::curriculum::find_all_exercises;
+use crate::core::curriculum::find_all_exercises_or_embedded;
 use crate::core::state::AppState;
 use colored::Colorize;
 use std::path::Path;
 
-pub fn list_exercises() -> anyhow::Result<()> {
+pub fn get_exercises_json() -> anyhow::Result<String> {
+    let exercises = find_all_exercises_or_embedded("exercises")?;
+    let json_str = serde_json::to_string_pretty(&exercises)?;
+    Ok(json_str)
+}
+
+pub fn list_exercises(json: bool) -> anyhow::Result<()> {
+    if json {
+        println!("{}", get_exercises_json()?);
+        return Ok(());
+    }
     let exercises_dir = Path::new("exercises");
-    let exercises = find_all_exercises(exercises_dir)?;
+    let exercises = find_all_exercises_or_embedded(exercises_dir)?;
     let state = AppState::load().unwrap_or_default();
 
     println!(

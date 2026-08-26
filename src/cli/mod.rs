@@ -16,6 +16,10 @@ pub struct Cli {
     /// Strict accent mode (fails if missing accents instead of warning)
     #[arg(long, global = true)]
     pub strict_accents: bool,
+
+    /// Output results in JSON format
+    #[arg(long, global = true, help = "Output results in JSON format")]
+    pub json: bool,
 }
 
 #[derive(Subcommand, Debug, PartialEq, Eq)]

@@ -26,10 +26,10 @@ fn main() -> anyhow::Result<()> {
             spanglings::cli::commands::review::run_review_session()?;
         }
         Some(Commands::List) => {
-            spanglings::cli::commands::list::list_exercises()?;
+            spanglings::cli::commands::list::list_exercises(cli.json)?;
         }
         Some(Commands::Progress) => {
-            spanglings::cli::commands::progress::show_progress()?;
+            spanglings::cli::commands::progress::show_progress(cli.json)?;
         }
         Some(Commands::Tui) => {
             spanglings::tui::start_tui(cli.strict_accents)?;
