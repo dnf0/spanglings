@@ -37,14 +37,14 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
 
 ---
 
-## 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements
+## 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements (Completed)
 
-- [ ] **SPANG-020: Weakness Profiler & Targeted Smart Drills**
-  - **Description**: Analyze SRS failure rates by grammatical category and generate targeted diagnostic recommendations in `spanglings progress`.
-- [ ] **SPANG-021: Accentuation & Stress Reference Sheet (`spanglings explain accents`)**
+- [x] **SPANG-020: Weakness Profiler & Targeted Smart Drills**
+  - **Description**: Analyze SRS failure rates and ease factors by grammatical category/topic and generate targeted diagnostic recommendations in `spanglings progress` (and `--json`).
+- [x] **SPANG-021: Accentuation & Stress Reference Sheet (`spanglings explain accents`)**
   - **Description**: In-terminal cheat sheet detailing *Agudas*, *Llanas*, *Esdrújulas*, *Diptongos vs Hiatos*, and diacritical accents.
-- [ ] **SPANG-022: 60-Second Rapid-Fire Blitz Mode (`spanglings blitz`)**
-  - **Description**: Fast-paced terminal time-trial drill testing irregular roots and clitics under time constraints.
+- [x] **SPANG-022: 60-Second Rapid-Fire Blitz Mode (`spanglings blitz`)**
+  - **Description**: Fast-paced terminal time-trial drill testing irregular roots and clitics under time constraints with streaks, WPM, and accuracy scoring.
 
 ---
 

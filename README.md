@@ -136,19 +136,25 @@ spanglings hint b1_subj_weirdo_wishes
 
 # Read a grammar cheat sheet
 spanglings explain subjunctive
-spanglings explain past_tenses
-spanglings explain por_para
-spanglings explain accidental_se
+spanglings explain accents
+spanglings explain tech
+spanglings explain business
+spanglings explain false-friends
+spanglings explain voseo
 ```
 
-#### 6. Spaced Repetition Drills
+#### 6. Spaced Repetition & Rapid-Fire Drills
 ```bash
-# Review due exercises
+# Review due exercises with SM-2 spaced repetition
 spanglings review
 
-# Drill irregular stems
+# Quick-fire irregular stem conjugation drills
 spanglings drill
 spanglings drill --topic subjunctive
+
+# 60-Second Rapid-Fire Blitz Mode (speed drills with streaks & WPM)
+spanglings blitz
+spanglings blitz --seconds 30 --topic preterite
 ```
 
 #### 7. Shell Autocompletions
