@@ -22,6 +22,14 @@ pub struct Cli {
 pub enum Commands {
     /// Watch exercises directory and evaluate on file save
     Watch,
+    /// Initialize exercises in the current directory or target path
+    Init {
+        /// Directory path to extract exercises into (defaults to ./exercises)
+        path: Option<String>,
+        /// Overwrite existing files if directory is not empty
+        #[arg(short, long)]
+        force: bool,
+    },
     /// Run and validate a specific exercise
     Run { exercise: String },
     /// Show grammatical hints for the current or specified exercise

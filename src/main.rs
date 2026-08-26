@@ -7,6 +7,9 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Watch) => {
             spanglings::watcher::runner::start_watch_mode(cli.strict_accents)?;
         }
+        Some(Commands::Init { path, force }) => {
+            spanglings::cli::commands::init::run_init(path.as_deref(), force)?;
+        }
         Some(Commands::Run { exercise }) => {
             spanglings::cli::commands::run::run_exercise(&exercise, cli.strict_accents)?;
         }

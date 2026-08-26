@@ -34,7 +34,10 @@ pub fn init_exercises_dir<P: AsRef<Path>>(target_dir: P, force: bool) -> anyhow:
         anyhow::bail!("Target directory path cannot be empty.");
     }
     if target.exists() && !target.is_dir() {
-        anyhow::bail!("Target path '{}' exists but is not a directory.", target.display());
+        anyhow::bail!(
+            "Target path '{}' exists but is not a directory.",
+            target.display()
+        );
     }
     if target.exists() && !force {
         let entries = fs::read_dir(target)?.count();
