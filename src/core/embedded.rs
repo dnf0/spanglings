@@ -30,6 +30,12 @@ fn collect_from_embedded_dir(dir: &Dir, exercises: &mut Vec<Exercise>) -> anyhow
 
 pub fn init_exercises_dir<P: AsRef<Path>>(target_dir: P, force: bool) -> anyhow::Result<usize> {
     let target = target_dir.as_ref();
+    if target.as_os_str().is_empty() {
+        anyhow::bail!("Target directory path cannot be empty.");
+    }
+    if target.exists() && !target.is_dir() {
+        anyhow::bail!("Target path '{}' exists but is not a directory.", target.display());
+    }
     if target.exists() && !force {
         let entries = fs::read_dir(target)?.count();
         if entries > 0 {
