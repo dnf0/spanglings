@@ -146,5 +146,51 @@ vengas
 -->
 "#;
     let answer = extract_user_answer(&exercise, user_edited);
-    assert!(!answer.is_empty());
+    assert_eq!(answer, "vengas");
+}
+
+#[test]
+fn test_extract_user_answer_unmodified_returns_empty() {
+    let exercise_content = r#"<!-- I AM NOT DONE -->
+# Subjunctive 01
+<!-- id: b1_sub_01 | level: B1 | topic: subjunctive | type: cloze -->
+
+### Exercise
+Quiero que tú (venir) ___ a mi fiesta.
+
+<!-- SOLUTION
+vengas
+-->
+"#;
+    let exercise = Exercise::from_markdown("test.md", exercise_content).unwrap();
+    let answer = extract_user_answer(&exercise, exercise_content);
+    assert_eq!(answer, "");
+}
+
+#[test]
+fn test_dynamic_line_number_in_diagnostic() {
+    use std::io::Write;
+    let mut temp_file = tempfile::NamedTempFile::new().unwrap();
+    let content = r#"<!-- I AM NOT DONE -->
+# Subjunctive 01
+<!-- id: b1_sub_01 | level: B1 | topic: subjunctive | type: cloze -->
+
+### Exercise
+Quiero que tú (venir) ___ a mi fiesta.
+
+<!-- SOLUTION
+vengas
+-->
+"#;
+    write!(temp_file, "{}", content).unwrap();
+
+    let exercise = Exercise::from_markdown(temp_file.path(), content).unwrap();
+    let result = validate_submission(&exercise, "viene", AccentMode::Forgiving);
+
+    match result {
+        ValidationResult::Failed { diagnostic, .. } => {
+            assert_eq!(diagnostic.line_number, 6);
+        }
+        _ => panic!("Expected failed validation"),
+    }
 }

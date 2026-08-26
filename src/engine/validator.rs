@@ -66,6 +66,11 @@ pub fn extract_user_answer(exercise: &Exercise, file_content: &str) -> String {
             continue;
         }
 
+        if trimmed.contains("___") {
+            // Still contains blank placeholder, answer not filled
+            return "".to_string();
+        }
+
         let mut candidates = vec![exercise.solution.as_str()];
         for alt in &exercise.alternatives {
             candidates.push(alt.as_str());
@@ -76,16 +81,23 @@ pub fn extract_user_answer(exercise: &Exercise, file_content: &str) -> String {
             }
         }
 
-        if !trimmed.contains("___") && !trimmed.is_empty() {
+        if !trimmed.is_empty() {
             return trimmed.to_string();
         }
     }
 
-    if !exercise.solution.is_empty() {
-        exercise.solution.clone()
-    } else {
-        "".to_string()
+    "".to_string()
+}
+
+fn find_exercise_line_number(exercise: &Exercise) -> usize {
+    if let Ok(content) = std::fs::read_to_string(&exercise.path) {
+        for (idx, line) in content.lines().enumerate() {
+            if line.contains("___") {
+                return idx + 1;
+            }
+        }
     }
+    1
 }
 
 pub fn validate_submission(
@@ -93,6 +105,8 @@ pub fn validate_submission(
     user_input: &str,
     accent_mode: AccentMode,
 ) -> ValidationResult {
+    let line_number = find_exercise_line_number(exercise);
+
     // 1. Check primary solution
     match check_accent_match(
         user_input,
@@ -127,7 +141,7 @@ pub fn validate_submission(
                     code: rule.code.clone(),
                     title: get_rule_title(&rule.code),
                     file_path: exercise.path.to_string_lossy().to_string(),
-                    line_number: 1,
+                    line_number,
                     user_snippet: user_input.to_string(),
                     message: rule.message.clone(),
                     note: exercise.hints.get(2).cloned(),
@@ -145,7 +159,7 @@ pub fn validate_submission(
             code: "E0001".to_string(),
             title: get_rule_title("E0001"),
             file_path: exercise.path.to_string_lossy().to_string(),
-            line_number: 1,
+            line_number,
             user_snippet: user_input.to_string(),
             message: format!("Expected '{}'.", exercise.solution),
             note: exercise.hints.get(2).cloned(),
