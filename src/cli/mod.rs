@@ -91,6 +91,33 @@ pub enum Commands {
     },
     /// Launch the interactive terminal UI
     Tui,
+    /// Export study materials to Anki TSV, Markdown guide, or JSON
+    Export {
+        /// Export format: 'anki', 'markdown', or 'json'
+        #[arg(short, long, default_value = "anki")]
+        format: String,
+        /// Output file path (writes to stdout if omitted)
+        #[arg(short, long)]
+        out: Option<String>,
+        /// Filter by CEFR level (e.g. B1, B2, C1)
+        #[arg(short, long)]
+        level: Option<String>,
+        /// Filter by topic
+        #[arg(short, long)]
+        topic: Option<String>,
+        /// Export only exercises due for review in SRS
+        #[arg(long)]
+        only_due: bool,
+    },
+    /// Backup, restore, or merge learning state and review history
+    Sync {
+        /// Export portable learning state JSON to a file
+        #[arg(long)]
+        export: Option<String>,
+        /// Import and merge learning state JSON from a file
+        #[arg(long)]
+        import: Option<String>,
+    },
     /// Reset an exercise to its initial prompt
     Reset { exercise: String },
 }
