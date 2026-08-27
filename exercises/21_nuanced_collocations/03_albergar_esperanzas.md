@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Collocations 03: 'Albergar esperanzas' (Harbor hopes)
-<!-- id: c1_collocation_albergar | level: C1 | topic: nuanced_collocations | type: cloze -->
+<!-- id: c1_collocation_albergar | level: C1 | topic: nuanced_collocations | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["discourse_connectors"] | grammar_focus: "Nuanced lexical collocations and institutional collocations." -->
 
 > **Grammar Rule**: 'Albergar' collocates with abstract feelings/expectations: 'albergar esperanzas', 'albergar dudas'.
 

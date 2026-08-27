@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Rioplatense Production Voseo 04: Decommissioning Infrastructure
-<!-- id: c1_rioplatense_dar_de_baja | level: C1 | topic: rioplatense_production_voseo | type: cloze -->
+<!-- id: c1_rioplatense_dar_de_baja | level: C1 | topic: rioplatense_production_voseo | type: cloze | concepts: ["regional_voseo_rioplatense"] | prerequisites: ["irregular_present_stems"] | grammar_focus: "Rioplatense voseo conjugation in present indicative and imperative." | contrast_note: "Contrast standard tú conjugation with Rioplatense vos conjugation." -->
 
 > **Grammar & Lexicon**: Decommissioning, turning off, or deprecating a cluster node or legacy service is standardly expressed as **dar de baja**. In Rioplatense voseo imperative, *dar* becomes *dale* or *da*: *dá de baja*.
 

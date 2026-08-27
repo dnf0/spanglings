@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Enterprise SLA 02: Consequential Damages & Lost Profits
-<!-- id: c1_sla_lucro_cesante | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze -->
+<!-- id: c1_sla_lucro_cesante | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["executive_leadership_communication"] | grammar_focus: "Enterprise risk management, SLA negotiations, and compliance dialogue." -->
 
 > **Grammar & Lexicon**: In civil law jurisdictions throughout Latin America, liability limitations distinguish between direct damages (*daño emergente*) and lost profits / consequential damages (**lucro cesante**). SaaS contracts routinely exclude liability for *lucro cesante*.
 

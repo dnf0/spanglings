@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Healthcare & Symptoms 04: Emergency Room & Medical Discharge
-<!-- id: b2_health_acudir_urgencias | level: B2 | topic: healthcare_and_symptoms | type: cloze -->
+<!-- id: b2_health_acudir_urgencias | level: B2 | topic: healthcare_and_symptoms | type: cloze | concepts: ["accidental_se_structures"] | prerequisites: ["gustar_dative_structures", "por_vs_para_nuances"] | grammar_focus: "Medical consultations, describing symptoms, physical sensations, and treatments." -->
 
 > **Grammar & Lexicon**: Going to the emergency department is **acudir al servicio de urgencias** (or *ir a la guardia* in Argentina). When the hospital releases a patient after recovery, they **le dan el alta médica**.
 

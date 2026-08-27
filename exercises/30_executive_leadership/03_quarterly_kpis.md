@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Executive Leadership 03: Performance Indicators (KPIs)
-<!-- id: c1_exec_kpis | level: C1 | topic: executive_leadership | type: cloze -->
+<!-- id: c1_exec_kpis | level: C1 | topic: executive_leadership | type: cloze | concepts: ["executive_leadership_communication"] | prerequisites: ["register_elevation_formal", "tech_software_engineering"] | grammar_focus: "Executive leadership communication, board presentations, and strategic alignment." -->
 
 > **Grammar & Lexicon**: Key Performance Indicators (KPIs) should be formally translated as **indicadores clave de rendimiento** (or *indicadores clave de desempeño*).
 

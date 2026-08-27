@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Passive Refleja 03: Singular Subject Agreement
-<!-- id: c1_pasiva_refleja_singular | level: C1 | topic: passive_refleja | type: cloze -->
+<!-- id: c1_pasiva_refleja_singular | level: C1 | topic: passive_refleja | type: cloze | concepts: ["passive_refleja_vs_impersonal"] | prerequisites: ["clitic_pronoun_stacking"] | grammar_focus: "Passive reflejo agreement vs impersonal 'se' with human direct objects." | contrast_note: "Contrast inanimate subject agreement (passive reflejo) with impersonal invariable se." -->
 
 > **Grammar Rule**: With a singular patient subject, the verb is 3rd person singular.
 

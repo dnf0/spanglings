@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Idiomatic Expressions 02: 'Dar la lata' (To annoy/bother)
-<!-- id: b2_idiom_dar_la_lata | level: B2 | topic: idioms | type: cloze -->
+<!-- id: b2_idiom_dar_la_lata | level: B2 | topic: idioms | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["aspectual_meaning_shifts"] | grammar_focus: "High-frequency colloquial idioms and metaphorical expressions." -->
 
 > **Grammar Rule**: 'Dar la lata' is a colloquial Spanish idiom meaning to be annoying or pester someone.
 

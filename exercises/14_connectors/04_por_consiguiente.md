@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Connectors 04: 'Por consiguiente' (Consecutive Marker)
-<!-- id: c1_connector_por_consiguiente | level: C1 | topic: connectors | type: cloze -->
+<!-- id: c1_connector_por_consiguiente | level: C1 | topic: connectors | type: cloze | concepts: ["discourse_connectors"] | prerequisites: ["por_vs_para_nuances"] | grammar_focus: "Discourse markers and formal argumentative connectors." -->
 
 > **Grammar Rule**: 'Por consiguiente' is a formal consecutive connector meaning 'consequently / as a result'.
 

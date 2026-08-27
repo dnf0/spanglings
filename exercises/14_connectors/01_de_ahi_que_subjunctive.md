@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Connectors 01: 'De ahí que' + Subjunctive
-<!-- id: c1_connector_de_ahi_que | level: C1 | topic: connectors | type: cloze -->
+<!-- id: c1_connector_de_ahi_que | level: C1 | topic: connectors | type: cloze | concepts: ["discourse_connectors"] | prerequisites: ["por_vs_para_nuances"] | grammar_focus: "Discourse markers and formal argumentative connectors." -->
 
 > **Grammar Rule**: 'De ahí que' (hence / that is why) ALWAYS requires the subjunctive mood.
 

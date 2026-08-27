@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Cleft Sentences 04: Causal Focus with Preposition Repetition
-<!-- id: c1_cleft_es_por_eso | level: C1 | topic: cleft_sentences | type: cloze -->
+<!-- id: c1_cleft_es_por_eso | level: C1 | topic: cleft_sentences | type: cloze | concepts: ["cleft_sentences_focus"] | prerequisites: ["ser_vs_estar_essence_state", "discourse_connectors"] | grammar_focus: "Cleft sentences (oraciones escindidas) for informational focalization." -->
 
 > **Grammar Rule**: In high-register Spanish cleft sentences, the preposition is repeated in the relative clause: 'Es por eso por lo que...' rather than 'es por eso que...'.
 

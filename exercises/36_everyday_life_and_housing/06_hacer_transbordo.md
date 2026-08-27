@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Everyday Life & Housing 06: Public Transit & Train Transfers
-<!-- id: b1_housing_hacer_transbordo | level: B1 | topic: everyday_life_and_housing | type: cloze -->
+<!-- id: b1_housing_hacer_transbordo | level: B1 | topic: everyday_life_and_housing | type: cloze | concepts: ["lease_agreements_contracts"] | prerequisites: ["por_vs_para_nuances", "passive_refleja_vs_impersonal"] | grammar_focus: "Tenancy contracts, housing logistics, property maintenance, and rental agreements." -->
 
 > **Grammar & Lexicon**: Changing lines on a subway, train, or bus route is expressed as **hacer transbordo** (or *hacer trasbordo / combinación* in Latin America). Missing your stop is *pasarse de parada*.
 

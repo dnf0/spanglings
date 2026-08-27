@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Idiomatic Expressions 05: 'Consultar con la almohada' (Sleep on it)
-<!-- id: b2_idiom_almohada | level: B2 | topic: idioms | type: cloze -->
+<!-- id: b2_idiom_almohada | level: B2 | topic: idioms | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["aspectual_meaning_shifts"] | grammar_focus: "High-frequency colloquial idioms and metaphorical expressions." -->
 
 > **Grammar Rule**: 'Consultar con la almohada' means to sleep on a decision before finalizing it.
 

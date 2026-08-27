@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Mexican Tech & Startups 06: Series A & Equity Dilution
-<!-- id: c1_mextech_dilucion_serie_a | level: C1 | topic: mexican_tech_and_startups | type: cloze -->
+<!-- id: c1_mextech_dilucion_serie_a | level: C1 | topic: mexican_tech_and_startups | type: cloze | concepts: ["mexican_professional_pragmatics"] | prerequisites: ["register_elevation_formal"] | grammar_focus: "Mexican tech ecosystem conventions, workplace idioms, and courteous softeners." -->
 
 > **Grammar & Lexicon**: When negotiating venture capital agreements and term sheets (*hojas de términos*), "Series A investment round" is **ronda de inversión Serie A** and "equity dilution" is **dilución accionaria** or **dilución del capital social**. Avoid using *dilución de equity*.
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Connectors 02: 'Dado que' (Causal with Indicative)
-<!-- id: c1_connector_dado_que | level: C1 | topic: connectors | type: cloze -->
+<!-- id: c1_connector_dado_que | level: C1 | topic: connectors | type: cloze | concepts: ["discourse_connectors"] | prerequisites: ["por_vs_para_nuances"] | grammar_focus: "Discourse markers and formal argumentative connectors." -->
 
 > **Grammar Rule**: Causal conjunctions like 'dado que', 'puesto que', and 'ya que' introduce verified causes and take the INDICATIVE mood.
 

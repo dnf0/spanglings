@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Business Spanish 02: Formal Discourse Connectors
-<!-- id: b2_biz_connectors | level: B2 | topic: business_correspondence | type: cloze -->
+<!-- id: b2_biz_connectors | level: B2 | topic: business_correspondence | type: cloze | concepts: ["register_elevation_formal"] | prerequisites: ["discourse_connectors", "formal_inversion_hyperbaton"] | grammar_focus: "Formal business diplomacy, executive communication, and high-register negotiations." -->
 
 > **Grammar & Lexicon**: In formal negotiations, use elevated connectors like **en lo que atañe a** / **en lo que concierne a** (as regards / concerning) instead of conversational *sobre* or *en cuanto a*.
 

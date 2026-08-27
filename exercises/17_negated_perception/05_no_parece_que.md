@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Negated Perception 05: 'No parece que'
-<!-- id: c1_neg_perception_no_parece | level: C1 | topic: negated_perception | type: cloze -->
+<!-- id: c1_neg_perception_no_parece | level: C1 | topic: negated_perception | type: cloze | concepts: ["negated_perception_predicates"] | prerequisites: ["subjunctive_doubt_denial"] | grammar_focus: "Negated perception and mental activity predicates governing subjunctive." | contrast_note: "Contrast affirmative perception (indicative) with negated perception (subjunctive)." -->
 
 > **Grammar Rule**: 'No parece que' (It does not seem that) triggers subjunctive, in contrast to affirmative 'parece que' which takes indicative.
 

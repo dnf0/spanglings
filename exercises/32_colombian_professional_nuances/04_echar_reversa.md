@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Colombian Professional Nuances 04: Backtracking & Reversing Decisions
-<!-- id: c1_colombian_echar_reversa | level: C1 | topic: colombian_professional_nuances | type: cloze -->
+<!-- id: c1_colombian_echar_reversa | level: C1 | topic: colombian_professional_nuances | type: cloze | concepts: ["colombian_professional_nuances"] | prerequisites: ["register_elevation_formal"] | grammar_focus: "Colombian business etiquette, formal honorifics, usteo, and diplomatic requests." -->
 
 > **Grammar & Lexicon**: When an engineering or product team decides to back out of a deployment, revert a breaking change, or retract an agreement, Colombian professional Spanish frequently utilizes **echar reversa** (or *dar marcha atrás*).
 

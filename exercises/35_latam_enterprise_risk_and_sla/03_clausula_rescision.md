@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Enterprise SLA 03: Early Termination for Material Breach
-<!-- id: c1_sla_clausula_rescision | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze -->
+<!-- id: c1_sla_clausula_rescision | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["executive_leadership_communication"] | grammar_focus: "Enterprise risk management, SLA negotiations, and compliance dialogue." -->
 
 > **Grammar & Lexicon**: The legal right to terminate an enterprise contract due to severe service outage or SLA violation is codified under a **cláusula de rescisión por incumplimiento** (or *resolución contractual*).
 

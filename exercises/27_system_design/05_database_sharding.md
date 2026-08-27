@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # System Design 05: Database Sharding
-<!-- id: c1_sysdesign_sharding | level: C1 | topic: system_design | type: cloze -->
+<!-- id: c1_sysdesign_sharding | level: C1 | topic: system_design | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["false_friends_anglicisms", "discourse_connectors"] | grammar_focus: "Distributed systems design, cloud infrastructure, and technical architecture." -->
 
 > **Grammar & Lexicon**: Horizontal database partitioning (sharding) is known as **fragmentación horizontal** or **particionamiento horizontal**.
 

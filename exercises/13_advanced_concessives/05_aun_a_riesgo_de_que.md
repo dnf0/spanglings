@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Advanced Concessives 05: 'Aun a riesgo de que'
-<!-- id: c1_concessive_aun_a_riesgo | level: C1 | topic: advanced_concessives | type: cloze -->
+<!-- id: c1_concessive_aun_a_riesgo | level: C1 | topic: advanced_concessives | type: cloze | concepts: ["advanced_concessive_mood_alternation"] | prerequisites: ["subjunctive_adverbial_clauses", "hypothetical_conditionals_si_clauses"] | grammar_focus: "Advanced concessive clauses (por más que, aun a riesgo de) with mood alternation." | contrast_note: "Contrast factual concession (indicative) with hypothetical concession (subjunctive)." -->
 
 > **Grammar Rule**: 'Aun a riesgo de que' (even at the risk of) always takes the subjunctive mood.
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Pluperfect Subjunctive 05: -se Suffix Variant
-<!-- id: c1_pluperfect_subj_se_form | level: C1 | topic: pluperfect_subjunctive | type: cloze -->
+<!-- id: c1_pluperfect_subj_se_form | level: C1 | topic: pluperfect_subjunctive | type: cloze | concepts: ["pluperfect_subjunctive_counterfactuals"] | prerequisites: ["imperfect_subjunctive_formation", "haber_impersonal_vs_auxiliary"] | grammar_focus: "Pluperfect subjunctive for counterfactual past conditions and unrealized events." | contrast_note: "Contrast imperfect subjunctive with pluperfect subjunctive counterfactuals." -->
 
 > **Grammar Rule**: The -se subjunctive endings (hubiese, hubieses, etc.) are fully interchangeable with -ra forms and widely used in formal and literary Spanish.
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Pronoun Stacking 02: Infinitive Attachment & Written Accent
-<!-- id: b1_pronoun_infinitive_accent | level: B1 | topic: pronoun_stacking | type: cloze -->
+<!-- id: b1_pronoun_infinitive_accent | level: B1 | topic: pronoun_stacking | type: cloze | concepts: ["clitic_pronoun_stacking"] | prerequisites: ["direct_indirect_pronouns"] | grammar_focus: "Double object pronoun order (indirect before direct) and le -> se transformation." | contrast_note: "Contrast indirect le with spurious se before direct pronouns lo/la." -->
 
 > **Grammar Rule**: When attaching two clitic pronouns to an infinitive, add a written accent on the original stressed syllable of the verb (e.g. decir + se + lo = decírselo).
 

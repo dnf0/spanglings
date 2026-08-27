@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Nuanced Prepositions 06: Causal Origin & Channels: A raíz de & Por medio de
-<!-- id: c1_prep_a_raiz_de | level: C1 | topic: nuanced_prepositions_and_locutions | type: cloze -->
+<!-- id: c1_prep_a_raiz_de | level: C1 | topic: nuanced_prepositions_and_locutions | type: cloze | concepts: ["nuanced_prepositions_and_locutions"] | prerequisites: ["relative_pronouns_and_prepositions", "prepositional_regimes"] | grammar_focus: "High-register prepositional locutions and advanced verbal regimes." -->
 
 > **Grammar & Lexicon**: **A raíz de** introduces the originating event or spark from which subsequent consequences emerge (*a raíz de los recientes incidentes*). **Por medio de** specifies the intermediate mechanism or conduit (*por medio de un canal cifrado*).
 

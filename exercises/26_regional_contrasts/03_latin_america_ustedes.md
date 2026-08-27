@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Regional Contrasts 03: Pan-American 'Ustedes'
-<!-- id: b1_reg_ustedes | level: B1 | topic: regional_contrasts | type: cloze -->
+<!-- id: b1_reg_ustedes | level: B1 | topic: regional_contrasts | type: cloze | concepts: ["regional_voseo_rioplatense"] | prerequisites: ["irregular_present_stems"] | grammar_focus: "Regional dialectal variation and sociolinguistic contrasts across the Spanish-speaking world." -->
 
 > **Regional Variation**: Across all of Latin America (and the Canary Islands), the 2nd person plural pronoun *vosotros* is absent in spoken and informal registers; **ustedes** is used for both formal and informal plural 'you', taking 3rd-person plural verbs (*tienen*, *están*).
 

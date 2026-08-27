@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Nuanced Prepositions 03: Compound Locutions: A base de & A expensas de
-<!-- id: b2_prep_a_base_de_expensas | level: B2 | topic: nuanced_prepositions_and_locutions | type: cloze -->
+<!-- id: b2_prep_a_base_de_expensas | level: B2 | topic: nuanced_prepositions_and_locutions | type: cloze | concepts: ["nuanced_prepositions_and_locutions"] | prerequisites: ["relative_pronouns_and_prepositions", "prepositional_regimes"] | grammar_focus: "High-register prepositional locutions and advanced verbal regimes." -->
 
 > **Grammar & Lexicon**: **A base de** introduces an essential ingredient, continuous repeated method, or raw effort (*a base de perseverancia*). **A expensas de** means "at the expense/detriment of" (*a expensas de su propia salud*).
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Subjunctive Conjunctions 02: Purpose Clauses (Para que)
-<!-- id: b1_subj_conj_para_que | level: B1 | topic: subjunctive_conjunctions | type: cloze -->
+<!-- id: b1_subj_conj_para_que | level: B1 | topic: subjunctive_conjunctions | type: cloze | concepts: ["subjunctive_temporal_future"] | prerequisites: ["subjunctive_volition_influence"] | grammar_focus: "Subjunctive mood with temporal and adverbial conjunctions referring to future." | contrast_note: "Contrast habitual temporal clause (indicative) with future anticipated action (subjunctive)." -->
 
 > **Grammar Rule**: 'Para que' (so that / in order that) always triggers the subjunctive because purpose is intended, not an established fact.
 

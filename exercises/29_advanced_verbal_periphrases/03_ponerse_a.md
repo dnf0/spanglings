@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Verbal Periphrases 03: Ponerse a + Infinitive
-<!-- id: c1_periphrasis_ponerse_a | level: C1 | topic: verbal_periphrases | type: cloze -->
+<!-- id: c1_periphrasis_ponerse_a | level: C1 | topic: verbal_periphrases | type: cloze | concepts: ["advanced_verbal_periphrases"] | prerequisites: ["verbal_periphrases_aspect"] | grammar_focus: "Advanced modal and aspectual periphrases in formal Spanish." -->
 
 > **Grammar & Lexicon**: The inchoative periphrasis **ponerse a + infinitive** highlights the sudden or deliberate commencement of an action.
 

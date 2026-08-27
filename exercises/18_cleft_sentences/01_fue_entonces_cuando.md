@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Cleft Sentences 01: Temporal Focalization ('Fue entonces cuando')
-<!-- id: c1_cleft_fue_entonces | level: C1 | topic: cleft_sentences | type: cloze -->
+<!-- id: c1_cleft_fue_entonces | level: C1 | topic: cleft_sentences | type: cloze | concepts: ["cleft_sentences_focus"] | prerequisites: ["ser_vs_estar_essence_state", "discourse_connectors"] | grammar_focus: "Cleft sentences (oraciones escindidas) for informational focalization." -->
 
 > **Grammar Rule**: In Spanish temporal clefts, use 'ser + adverbio de tiempo + cuando' (e.g. 'Fue entonces cuando...', not 'fue entonces que...').
 

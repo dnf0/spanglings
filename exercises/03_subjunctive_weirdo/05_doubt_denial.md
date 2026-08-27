@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Subjunctive WEIRDO 05: Doubt and Denial
-<!-- id: b1_subj_weirdo_doubt | level: B1 | topic: subjunctive_weirdo | type: cloze -->
+<!-- id: b1_subj_weirdo_doubt | level: B1 | topic: subjunctive_weirdo | type: cloze | concepts: ["subjunctive_volition_influence"] | prerequisites: ["irregular_present_stems", "irregular_subjunctive_stems"] | grammar_focus: "Subjunctive mood selection in subordinate clauses of influence and volition." | contrast_note: "Contrast indicative certainty with subjunctive volition/doubt." -->
 
 > **Grammar Rule**: Expressions of doubt or denial (dudar que, no creer que, no pensar que, no es verdad que) trigger subjunctive because certainty is absent.
 

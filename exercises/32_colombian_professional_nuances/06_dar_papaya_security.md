@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Colombian Professional Nuances 06: Operational Security & Vulnerability
-<!-- id: c1_colombian_dar_papaya | level: C1 | topic: colombian_professional_nuances | type: cloze -->
+<!-- id: c1_colombian_dar_papaya | level: C1 | topic: colombian_professional_nuances | type: cloze | concepts: ["colombian_professional_nuances"] | prerequisites: ["register_elevation_formal"] | grammar_focus: "Colombian business etiquette, formal honorifics, usteo, and diplomatic requests." -->
 
 > **Grammar & Lexicon**: The famous Colombian cultural adage **dar papaya** (exposing oneself needlessly to danger, theft, or exploitation) is widely applied metaphorically in Latin American DevSecOps and cloud security for leaving unnecessary open ports or unencrypted secrets.
 

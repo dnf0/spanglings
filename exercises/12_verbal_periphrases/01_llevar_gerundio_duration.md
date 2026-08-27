@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Verbal Periphrases 01: 'Llevar + Gerundio' (Accumulated Duration)
-<!-- id: b2_periphrasis_llevar_gerundio | level: B2 | topic: verbal_periphrases | type: cloze -->
+<!-- id: b2_periphrasis_llevar_gerundio | level: B2 | topic: verbal_periphrases | type: cloze | concepts: ["verbal_periphrases_aspect"] | prerequisites: ["preterite_aspect_completion", "imperfect_aspect_habitual_background"] | grammar_focus: "Verbal periphrases of inception, duration, repetition, and culmination." -->
 
 > **Grammar Rule**: 'Llevar + [time duration] + [gerundio]' expresses an action that started in the past and continues into the present.
 

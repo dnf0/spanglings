@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Tech Spanish 03: Concurrency & Deadlocks
-<!-- id: c1_tech_concurrency | level: C1 | topic: tech_software | type: cloze -->
+<!-- id: c1_tech_concurrency | level: C1 | topic: tech_software | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["false_friends_anglicisms", "discourse_connectors"] | grammar_focus: "Technical software engineering terminology, code reviews, and architecture discussions." -->
 
 > **Grammar & Lexicon**: In systems programming, "deadlock" translates to **bloqueo mutuo** or **interbloqueo**, while "race condition" is **condición de carrera**.
 

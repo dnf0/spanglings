@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Passive Refleja 02: Impersonal Se with Personal 'A'
-<!-- id: c1_impersonal_personal_a | level: C1 | topic: passive_refleja | type: cloze -->
+<!-- id: c1_impersonal_personal_a | level: C1 | topic: passive_refleja | type: cloze | concepts: ["passive_refleja_vs_impersonal"] | prerequisites: ["clitic_pronoun_stacking"] | grammar_focus: "Passive reflejo agreement vs impersonal 'se' with human direct objects." | contrast_note: "Contrast inanimate subject agreement (passive reflejo) with impersonal invariable se." -->
 
 > **Grammar Rule**: When referring to human direct objects introduced by personal 'a', the construction is strictly IMPERSONAL and the verb is ALWAYS singular (e.g. 'Se busca a los culpables', never 'se buscan a los culpables').
 

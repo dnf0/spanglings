@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Register Elevation 04: 'Albergar' (Harbor) vs 'Tener'
-<!-- id: c1_reg_albergar | level: C1 | topic: register_elevation | type: cloze -->
+<!-- id: c1_reg_albergar | level: C1 | topic: register_elevation | type: cloze | concepts: ["register_elevation_formal"] | prerequisites: ["discourse_connectors", "formal_inversion_hyperbaton"] | grammar_focus: "Register elevation via nominalization and formal administrative prose." | contrast_note: "Contrast conversational phrasing with formal administrative nominalization." -->
 
 > **Register Elevation**: To elevate *tener dudas* or *tener esperanzas*, use **albergar dudas** / **albergar esperanzas** (to harbor/shelter within oneself).
 

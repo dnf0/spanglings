@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Pluperfect Subjunctive 02: Past Unfulfillable Wishes (Ojalá)
-<!-- id: b2_pluperfect_subj_ojala | level: B2 | topic: pluperfect_subjunctive | type: cloze -->
+<!-- id: b2_pluperfect_subj_ojala | level: B2 | topic: pluperfect_subjunctive | type: cloze | concepts: ["pluperfect_subjunctive_counterfactuals"] | prerequisites: ["imperfect_subjunctive_formation", "haber_impersonal_vs_auxiliary"] | grammar_focus: "Pluperfect subjunctive for counterfactual past conditions and unrealized events." | contrast_note: "Contrast imperfect subjunctive with pluperfect subjunctive counterfactuals." -->
 
 > **Grammar Rule**: 'Ojalá' + Pluperfect Subjunctive expresses regret about a past situation that can no longer be changed.
 

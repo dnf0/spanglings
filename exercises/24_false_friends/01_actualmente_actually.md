@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # False Friends 01: 'Actualmente' vs 'Actually'
-<!-- id: b1_false_actualmente | level: B1 | topic: false_friends | type: cloze -->
+<!-- id: b1_false_actualmente | level: B1 | topic: false_friends | type: cloze | concepts: ["false_friends_anglicisms"] | prerequisites: [] | grammar_focus: "False cognates (falsos amigos) and misleading literal calques from English." | contrast_note: "Contrast deceptively similar English terms with their true Spanish meanings." -->
 
 > **False Friend Trap**: **Actualmente** means *currently / at present* (not *actually*). To say *actually / in fact*, use **en realidad** or **de hecho**.
 

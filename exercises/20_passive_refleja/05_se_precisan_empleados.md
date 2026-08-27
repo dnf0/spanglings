@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Passive Refleja 05: Plural Non-Prepositional Human Noun
-<!-- id: c1_pasiva_refleja_human_noprep | level: C1 | topic: passive_refleja | type: cloze -->
+<!-- id: c1_pasiva_refleja_human_noprep | level: C1 | topic: passive_refleja | type: cloze | concepts: ["passive_refleja_vs_impersonal"] | prerequisites: ["clitic_pronoun_stacking"] | grammar_focus: "Passive reflejo agreement vs impersonal 'se' with human direct objects." | contrast_note: "Contrast inanimate subject agreement (passive reflejo) with impersonal invariable se." -->
 
 > **Grammar Rule**: Without personal 'a', plural human nouns in advertisements function as patient subjects requiring a plural verb ('Se precisan camareros').
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Regional Contrasts 01: Rioplatense Voseo in Present Tense
-<!-- id: b2_reg_voseo_present | level: B2 | topic: regional_contrasts | type: cloze -->
+<!-- id: b2_reg_voseo_present | level: B2 | topic: regional_contrasts | type: cloze | concepts: ["regional_voseo_rioplatense"] | prerequisites: ["irregular_present_stems"] | grammar_focus: "Regional dialectal variation and sociolinguistic contrasts across the Spanish-speaking world." -->
 
 > **Regional Variation & Voseo**: In Argentina, Uruguay, Paraguay, and parts of Central America, *vos* replaces *tú*. The present tense has an oxytone stressed vowel without diphthongization: *vos tenés* (tú tienes), *vos querés* (tú quieres), *vos hablás* (tú hablas).
 

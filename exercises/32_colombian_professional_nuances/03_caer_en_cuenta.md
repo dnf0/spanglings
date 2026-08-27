@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Colombian Professional Nuances 03: Coming to a Sudden Realization
-<!-- id: b2_colombian_caer_en_cuenta | level: B2 | topic: colombian_professional_nuances | type: cloze -->
+<!-- id: b2_colombian_caer_en_cuenta | level: B2 | topic: colombian_professional_nuances | type: cloze | concepts: ["colombian_professional_nuances"] | prerequisites: ["register_elevation_formal"] | grammar_focus: "Colombian business etiquette, formal honorifics, usteo, and diplomatic requests." -->
 
 > **Grammar & Lexicon**: Rather than *darse cuenta*, Colombian speakers very frequently use the expressive fixed phrase **caer en cuenta (de que)** when suddenly noticing an oversight, bug, or discrepancy during a technical review.
 

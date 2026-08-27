@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Business Spanish 03: Financial Settlements & Debts
-<!-- id: b2_biz_settlement | level: B2 | topic: business_correspondence | type: cloze -->
+<!-- id: b2_biz_settlement | level: B2 | topic: business_correspondence | type: cloze | concepts: ["register_elevation_formal"] | prerequisites: ["discourse_connectors", "formal_inversion_hyperbaton"] | grammar_focus: "Formal business diplomacy, executive communication, and high-register negotiations." -->
 
 > **Grammar & Lexicon**: In commercial and financial contracts, to settle or balance an outstanding account or debt is **saldar la deuda** (or *liquidar la cuenta*).
 

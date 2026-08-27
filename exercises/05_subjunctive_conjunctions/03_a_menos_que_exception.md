@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Subjunctive Conjunctions 03: Exception Clauses (A menos que)
-<!-- id: b1_subj_conj_a_menos_que | level: B1 | topic: subjunctive_conjunctions | type: cloze -->
+<!-- id: b1_subj_conj_a_menos_que | level: B1 | topic: subjunctive_conjunctions | type: cloze | concepts: ["subjunctive_temporal_future"] | prerequisites: ["subjunctive_volition_influence"] | grammar_focus: "Subjunctive mood with temporal and adverbial conjunctions referring to future." | contrast_note: "Contrast habitual temporal clause (indicative) with future anticipated action (subjunctive)." -->
 
 > **Grammar Rule**: 'A menos que' (unless) is an ESCAPA conjunction and always requires the subjunctive mood.
 

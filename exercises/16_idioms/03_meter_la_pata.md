@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Idiomatic Expressions 03: 'Meter la pata' (To put one's foot in one's mouth)
-<!-- id: b1_idiom_meter_la_pata | level: B1 | topic: idioms | type: cloze -->
+<!-- id: b1_idiom_meter_la_pata | level: B1 | topic: idioms | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["aspectual_meaning_shifts"] | grammar_focus: "High-frequency colloquial idioms and metaphorical expressions." -->
 
 > **Grammar Rule**: 'Meter la pata' means to blunder, make a mistake, or put one's foot in one's mouth.
 

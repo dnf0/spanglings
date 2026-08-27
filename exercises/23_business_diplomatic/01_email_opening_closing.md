@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Business Spanish 01: Formal Closings
-<!-- id: b2_biz_closing | level: B2 | topic: business_correspondence | type: cloze -->
+<!-- id: b2_biz_closing | level: B2 | topic: business_correspondence | type: cloze | concepts: ["register_elevation_formal"] | prerequisites: ["discourse_connectors", "formal_inversion_hyperbaton"] | grammar_focus: "Formal business diplomacy, executive communication, and high-register negotiations." -->
 
 > **Grammar & Lexicon**: In executive and formal Spanish correspondence, standard closings include **Quedo a su entera disposición** (I remain at your full disposal) or **Agradeciendo de antemano su atención** (Thanking you in advance).
 

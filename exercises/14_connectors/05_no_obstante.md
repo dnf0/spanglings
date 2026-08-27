@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Connectors 05: 'No obstante' (Adversative)
-<!-- id: c1_connector_no_obstante | level: C1 | topic: connectors | type: cloze -->
+<!-- id: c1_connector_no_obstante | level: C1 | topic: connectors | type: cloze | concepts: ["discourse_connectors"] | prerequisites: ["por_vs_para_nuances"] | grammar_focus: "Discourse markers and formal argumentative connectors." -->
 
 > **Grammar Rule**: 'No obstante' is a high-register adversative connector equivalent to 'sin embargo' (nevertheless / however).
 

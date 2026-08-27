@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Verbal Periphrases 04: 'Ponerse a + Inf' (Sudden Inception)
-<!-- id: b2_periphrasis_ponerse_a | level: B2 | topic: verbal_periphrases | type: cloze -->
+<!-- id: b2_periphrasis_ponerse_a | level: B2 | topic: verbal_periphrases | type: cloze | concepts: ["verbal_periphrases_aspect"] | prerequisites: ["preterite_aspect_completion", "imperfect_aspect_habitual_background"] | grammar_focus: "Verbal periphrases of inception, duration, repetition, and culmination." -->
 
 > **Grammar Rule**: 'Ponerse a + infinitivo' expresses the sudden or voluntary start of an action.
 

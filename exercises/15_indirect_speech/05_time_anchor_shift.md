@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Reported Speech 05: Temporal Deictic Shifts
-<!-- id: c1_indirect_deictic_shift | level: C1 | topic: indirect_speech | type: cloze -->
+<!-- id: c1_indirect_deictic_shift | level: C1 | topic: indirect_speech | type: cloze | concepts: ["indirect_speech_transformations"] | prerequisites: ["imperfect_subjunctive_formation", "aspectual_meaning_shifts"] | grammar_focus: "Tense shift and concordance in indirect reported speech." | contrast_note: "Contrast direct present tense with back-shifted indirect past tense." -->
 
 > **Grammar Rule**: Time expressions shift when reported in past: 'hoy' -> 'aquel día / ese día', 'mañana' -> 'al día siguiente'.
 

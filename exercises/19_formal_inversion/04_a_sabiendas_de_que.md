@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Formal Inversion 04: 'A sabiendas de que'
-<!-- id: c1_formal_a_sabiendas | level: C1 | topic: formal_inversion | type: cloze -->
+<!-- id: c1_formal_a_sabiendas | level: C1 | topic: formal_inversion | type: cloze | concepts: ["formal_inversion_hyperbaton"] | prerequisites: ["cleft_sentences_focus"] | grammar_focus: "Stylistic syntactic inversion, fronting, and rhetorical word order." -->
 
 > **Grammar Rule**: 'A sabiendas de que' is a formal idiomatic locution meaning 'fully aware / in the full knowledge that'.
 

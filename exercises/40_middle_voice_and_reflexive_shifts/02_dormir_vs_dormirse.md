@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Middle-Voice & Reflexive Shifts 02: Dormir vs Dormirse (State vs Inchoative Transition)
-<!-- id: b1_reflex_dormir_vs_dormirse | level: B1 | topic: middle_voice_and_reflexive_shifts | type: cloze -->
+<!-- id: b1_reflex_dormir_vs_dormirse | level: B1 | topic: middle_voice_and_reflexive_shifts | type: cloze | concepts: ["middle_voice_reflexive_shifts"] | prerequisites: ["passive_refleja_vs_impersonal", "accidental_se_structures"] | grammar_focus: "Middle voice, inchoative aspect, and telic reflexive shifts." | contrast_note: "Contrast non-reflexive base verb with reflexive aspectual/inchoative nuance." -->
 
 > **Grammar & Lexicon**: **Dormir** denotes the continuous state of sleep (*dormí ocho horas*). **Dormirse** is the inchoative transition: the exact moment of falling asleep (*me dormí a medianoche*, *se durmió en el autobús*).
 

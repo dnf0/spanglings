@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Mexican Tech & Startups 03: Customer Churn Rate
-<!-- id: b2_mextech_tasa_abandono | level: B2 | topic: mexican_tech_and_startups | type: cloze -->
+<!-- id: b2_mextech_tasa_abandono | level: B2 | topic: mexican_tech_and_startups | type: cloze | concepts: ["mexican_professional_pragmatics"] | prerequisites: ["register_elevation_formal"] | grammar_focus: "Mexican tech ecosystem conventions, workplace idioms, and courteous softeners." -->
 
 > **Grammar & Lexicon**: In product analytics and SaaS startups, "churn rate" is formally **tasa de abandono** or **tasa de cancelación** (of clients/users). Avoid unadapted Anglicisms like *churn* or *tasa de churn*.
 

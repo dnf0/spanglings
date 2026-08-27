@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Reported Speech 03: Future -> Conditional Simple Shift
-<!-- id: b2_indirect_fut_to_cond | level: B2 | topic: indirect_speech | type: cloze -->
+<!-- id: b2_indirect_fut_to_cond | level: B2 | topic: indirect_speech | type: cloze | concepts: ["indirect_speech_transformations"] | prerequisites: ["imperfect_subjunctive_formation", "aspectual_meaning_shifts"] | grammar_focus: "Tense shift and concordance in indirect reported speech." | contrast_note: "Contrast direct present tense with back-shifted indirect past tense." -->
 
 > **Grammar Rule**: In reported speech introduced by past verb, Future Simple shifts to Conditional Simple.
 

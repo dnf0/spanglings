@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Regional Contrasts 02: Voseo Affirmative Imperative
-<!-- id: b2_reg_voseo_imperative | level: B2 | topic: regional_contrasts | type: cloze -->
+<!-- id: b2_reg_voseo_imperative | level: B2 | topic: regional_contrasts | type: cloze | concepts: ["regional_voseo_rioplatense"] | prerequisites: ["irregular_present_stems"] | grammar_focus: "Regional dialectal variation and sociolinguistic contrasts across the Spanish-speaking world." -->
 
 > **Regional Variation & Voseo**: The affirmative imperative in *voseo* drops the final *-r* of the infinitive and adds an accent: *hablá* (habla), *comé* (come), *decí* (di). With clitic pronouns, the accent remains on the stem syllable: *decime* (dime).
 

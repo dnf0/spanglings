@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Tech Spanish 02: Remediating Vulnerabilities & Debugging
-<!-- id: b2_tech_debugging | level: B2 | topic: tech_software | type: cloze -->
+<!-- id: b2_tech_debugging | level: B2 | topic: tech_software | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["false_friends_anglicisms", "discourse_connectors"] | grammar_focus: "Technical software engineering terminology, code reviews, and architecture discussions." -->
 
 > **Grammar & Lexicon**: To remediate a flaw or fix a vulnerability in professional contexts, use **subsanar** or **corregir**. To debug code, use **depurar**. Avoid *fixear* or *debuggear*.
 

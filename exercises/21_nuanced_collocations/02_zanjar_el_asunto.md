@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Collocations 02: 'Zanjar el asunto' (Settle the matter)
-<!-- id: c1_collocation_zanjar | level: C1 | topic: nuanced_collocations | type: cloze -->
+<!-- id: c1_collocation_zanjar | level: C1 | topic: nuanced_collocations | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["discourse_connectors"] | grammar_focus: "Nuanced lexical collocations and institutional collocations." -->
 
 > **Grammar Rule**: 'Zanjar' specifically collocates with 'un asunto', 'un debate', or 'una disputa' (to definitively settle/resolve).
 

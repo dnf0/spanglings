@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Regional Contrasts 04: Lexical Dialectal Pairs
-<!-- id: b1_reg_lexical | level: B1 | topic: regional_contrasts | type: cloze -->
+<!-- id: b1_reg_lexical | level: B1 | topic: regional_contrasts | type: cloze | concepts: ["regional_voseo_rioplatense"] | prerequisites: ["irregular_present_stems"] | grammar_focus: "Regional dialectal variation and sociolinguistic contrasts across the Spanish-speaking world." -->
 
 > **Regional Variation**: Many high-frequency verbs and nouns differ systematically between Spain and Latin America: *conducir* (ES) vs **manejar** (LA) for driving; *ordenador* (ES) vs **computadora** (LA); *móvil* (ES) vs **celular** (LA).
 

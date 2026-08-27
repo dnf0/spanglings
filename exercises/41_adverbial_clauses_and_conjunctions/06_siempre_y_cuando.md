@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Adverbial Clauses 06: Strict Conditions: Siempre y cuando & A condición de que
-<!-- id: c1_adverb_siempre_y_cuando | level: C1 | topic: adverbial_clauses_and_conjunctions | type: cloze -->
+<!-- id: c1_adverb_siempre_y_cuando | level: C1 | topic: adverbial_clauses_and_conjunctions | type: cloze | concepts: ["adverbial_clauses_syntax"] | prerequisites: ["subjunctive_adverbial_clauses", "discourse_connectors"] | grammar_focus: "Complex adverbial conjunctions and modal subordination in formal discourse." | contrast_note: "Contrast indicative causal/consecutive connectors with subjunctive conditional/concessive connectors." -->
 
 > **Grammar & Lexicon**: **Siempre y cuando** and **a condición de que** establish a strict prerequisite or contractual condition ("provided that / on the condition that"), and **always take the subjunctive**.
 

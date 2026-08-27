@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Past Aspects 02: Habitual Action in the Past
-<!-- id: b1_past_aspect_habitual | level: B1 | topic: past_aspects | type: cloze -->
+<!-- id: b1_past_aspect_habitual | level: B1 | topic: past_aspects | type: cloze | concepts: ["aspectual_meaning_shifts"] | prerequisites: ["preterite_aspect_completion", "imperfect_aspect_habitual_background"] | grammar_focus: "Aspectual distinction: preterite (bounded completion) vs imperfect (habitual/background)." | contrast_note: "Contrast completed action in preterite with ongoing descriptive state in imperfect." -->
 
 > **Grammar Rule**: Use the imperfect for repeated habitual actions, continuous background descriptions, or routines in the past.
 

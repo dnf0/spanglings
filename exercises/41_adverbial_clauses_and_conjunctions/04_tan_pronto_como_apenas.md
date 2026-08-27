@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Adverbial Clauses 04: Immediate Succession: Tan pronto como & Apenas
-<!-- id: c1_adverb_tan_pronto_como | level: C1 | topic: adverbial_clauses_and_conjunctions | type: cloze -->
+<!-- id: c1_adverb_tan_pronto_como | level: C1 | topic: adverbial_clauses_and_conjunctions | type: cloze | concepts: ["adverbial_clauses_syntax"] | prerequisites: ["subjunctive_adverbial_clauses", "discourse_connectors"] | grammar_focus: "Complex adverbial conjunctions and modal subordination in formal discourse." | contrast_note: "Contrast indicative causal/consecutive connectors with subjunctive conditional/concessive connectors." -->
 
 > **Grammar & Lexicon**: **Tan pronto como**, **apenas**, and **en cuanto** express immediate succession. When pointing to a future prospective action, the dependent clause strictly demands the **subjunctive** (*tan pronto como dispongamos del reporte*).
 

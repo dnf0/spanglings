@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Dining & Social Conversation 04: Discourse Markers & Conversational Softeners
-<!-- id: b2_social_muletillas | level: B2 | topic: dining_and_social_conversation | type: cloze -->
+<!-- id: b2_social_muletillas | level: B2 | topic: dining_and_social_conversation | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["gustar_dative_structures"] | grammar_focus: "Dining, social etiquette, gastronomic dialogue, and conversational formulas." -->
 
 > **Grammar & Lexicon**: Fluent native conversation relies on discourse softeners and topic shifters: **la verdad es que** (honestly / the truth is), **por cierto** (by the way), **a ver** (let's see / well), and **o sea** (in other words / I mean).
 

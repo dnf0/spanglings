@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Subjunctive in Relative Clauses 02: Known/Definite Antecedent
-<!-- id: b1_subj_relative_definite | level: B1 | topic: subjunctive_relative | type: cloze -->
+<!-- id: b1_subj_relative_definite | level: B1 | topic: subjunctive_relative | type: cloze | concepts: ["subjunctive_relative_clauses"] | prerequisites: ["subjunctive_volition_influence"] | grammar_focus: "Subjunctive in relative clauses with indefinite or non-existent antecedent." | contrast_note: "Contrast known antecedent (indicative) with unverified antecedent (subjunctive)." -->
 
 > **Grammar Rule**: When the antecedent is known, specific, and confirmed to exist (definite article 'el/la'), use the indicative mood.
 

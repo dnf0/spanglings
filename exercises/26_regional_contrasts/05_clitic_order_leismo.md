@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Regional Contrasts 05: Reflexive Imperatives in Voseo
-<!-- id: b2_reg_voseo_reflexive | level: B2 | topic: regional_contrasts | type: cloze -->
+<!-- id: b2_reg_voseo_reflexive | level: B2 | topic: regional_contrasts | type: cloze | concepts: ["regional_voseo_rioplatense"] | prerequisites: ["irregular_present_stems"] | grammar_focus: "Regional dialectal variation and sociolinguistic contrasts across the Spanish-speaking world." -->
 
 > **Regional Variation & Voseo**: In reflexive commands under *voseo*, the ending is formed from the imperative stem plus *te*: *sentate* (siéntate), *parate* (párate), *ponete* (ponte). Notice that diphthongization is absent.
 

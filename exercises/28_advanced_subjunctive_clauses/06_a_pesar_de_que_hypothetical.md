@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Concessive Subjunctive 06: A pesar de que (Hypothetical)
-<!-- id: c1_subj_a_pesar_de_que | level: C1 | topic: concessive_subjunctive | type: cloze -->
+<!-- id: c1_subj_a_pesar_de_que | level: C1 | topic: concessive_subjunctive | type: cloze | concepts: ["advanced_subjunctive_nuances"] | prerequisites: ["advanced_concessive_mood_alternation"] | grammar_focus: "Subjunctive nuances with dubitative adverbs and reduplicative concessives." -->
 
 > **Grammar & Lexicon**: While **a pesar de que** takes the indicative for acknowledged facts (*a pesar de que llueve*), it mandates the **subjunctive** when referring to unverified or hypothetical circumstances.
 

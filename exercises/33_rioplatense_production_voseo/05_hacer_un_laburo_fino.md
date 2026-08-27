@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Rioplatense Production Voseo 05: Meticulous Architectural Work
-<!-- id: c1_rioplatense_laburo_fino | level: C1 | topic: rioplatense_production_voseo | type: cloze -->
+<!-- id: c1_rioplatense_laburo_fino | level: C1 | topic: rioplatense_production_voseo | type: cloze | concepts: ["regional_voseo_rioplatense"] | prerequisites: ["irregular_present_stems"] | grammar_focus: "Rioplatense voseo conjugation in present indicative and imperative." | contrast_note: "Contrast standard tú conjugation with Rioplatense vos conjugation." -->
 
 > **Grammar & Lexicon**: The Lunfardo-derived term **laburo** is standard everyday business vocabulary in Argentina for work/job. **Hacer un laburo fino** means to execute precise, meticulous engineering without taking clumsy shortcuts.
 

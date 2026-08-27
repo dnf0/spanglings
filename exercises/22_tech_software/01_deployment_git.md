@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Tech Spanish 01: Deployment & Releases
-<!-- id: b2_tech_deployment | level: B2 | topic: tech_software | type: cloze -->
+<!-- id: b2_tech_deployment | level: B2 | topic: tech_software | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["false_friends_anglicisms", "discourse_connectors"] | grammar_focus: "Technical software engineering terminology, code reviews, and architecture discussions." -->
 
 > **Grammar & Lexicon**: In software engineering, avoid Spanglish calques like *deployar*. Use the standard verb **desplegar** (to deploy) and **solicitud de extracción** (pull request).
 

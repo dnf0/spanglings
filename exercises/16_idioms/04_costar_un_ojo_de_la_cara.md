@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Idiomatic Expressions 04: 'Costar un ojo de la cara' (Cost an arm and a leg)
-<!-- id: b2_idiom_ojo_de_la_cara | level: B2 | topic: idioms | type: cloze -->
+<!-- id: b2_idiom_ojo_de_la_cara | level: B2 | topic: idioms | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["aspectual_meaning_shifts"] | grammar_focus: "High-frequency colloquial idioms and metaphorical expressions." -->
 
 > **Grammar Rule**: 'Costar un ojo de la cara' is the Spanish idiom for costing an exorbitant amount of money.
 

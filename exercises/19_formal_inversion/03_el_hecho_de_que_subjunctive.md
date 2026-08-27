@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Formal Inversion 03: 'El hecho de que' + Subjunctive
-<!-- id: c1_formal_el_hecho_de_que | level: C1 | topic: formal_inversion | type: cloze -->
+<!-- id: c1_formal_el_hecho_de_que | level: C1 | topic: formal_inversion | type: cloze | concepts: ["formal_inversion_hyperbaton"] | prerequisites: ["cleft_sentences_focus"] | grammar_focus: "Stylistic syntactic inversion, fronting, and rhetorical word order." -->
 
 > **Grammar Rule**: 'El hecho de que' takes the subjunctive when commenting on or interpreting an event as a topic of appraisal.
 

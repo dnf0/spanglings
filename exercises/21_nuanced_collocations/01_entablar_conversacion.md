@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Collocations 01: 'Entablar conversación'
-<!-- id: c1_collocation_entablar | level: C1 | topic: nuanced_collocations | type: cloze -->
+<!-- id: c1_collocation_entablar | level: C1 | topic: nuanced_collocations | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["discourse_connectors"] | grammar_focus: "Nuanced lexical collocations and institutional collocations." -->
 
 > **Grammar Rule**: 'Entablar' is the formal collocation for starting/striking up a conversation, dialogue, or friendship.
 

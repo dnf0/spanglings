@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Mexican Tech & Startups 01: Capital Raising & Fundraising
-<!-- id: b2_mextech_levantamiento_capital | level: B2 | topic: mexican_tech_and_startups | type: cloze -->
+<!-- id: b2_mextech_levantamiento_capital | level: B2 | topic: mexican_tech_and_startups | type: cloze | concepts: ["mexican_professional_pragmatics"] | prerequisites: ["register_elevation_formal"] | grammar_focus: "Mexican tech ecosystem conventions, workplace idioms, and courteous softeners." -->
 
 > **Grammar & Lexicon**: In the Mexican startup ecosystem and venture capital contexts, "fundraising" or "capital raise" is standardly referred to as **levantamiento de capital** (or the verb phrase **levantar capital**), avoiding raw Spanglish loanwords like *fundraising*.
 

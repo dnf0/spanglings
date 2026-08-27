@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Middle-Voice & Reflexive Shifts 05: Quedar vs Quedarse (Agreement/Fit vs Remaining)
-<!-- id: b2_reflex_quedar_vs_quedarse | level: B2 | topic: middle_voice_and_reflexive_shifts | type: cloze -->
+<!-- id: b2_reflex_quedar_vs_quedarse | level: B2 | topic: middle_voice_and_reflexive_shifts | type: cloze | concepts: ["middle_voice_reflexive_shifts"] | prerequisites: ["passive_refleja_vs_impersonal", "accidental_se_structures"] | grammar_focus: "Middle voice, inchoative aspect, and telic reflexive shifts." | contrast_note: "Contrast non-reflexive base verb with reflexive aspectual/inchoative nuance." -->
 
 > **Grammar & Lexicon**: **Quedar** expresses meeting agreements (*quedamos a las seis*), location (*el museo queda cerca*), or fit (*te queda bien*). **Quedarse** expresses remaining, staying behind, or retaining possession (*nos quedamos en casa*, *se quedó con el dinero*).
 

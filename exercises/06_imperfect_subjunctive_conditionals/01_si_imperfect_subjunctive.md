@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Conditionals 01: Hypothetical 'Si' Clauses (Type 2)
-<!-- id: b2_cond_si_imperfect_subj | level: B2 | topic: conditionals | type: cloze -->
+<!-- id: b2_cond_si_imperfect_subj | level: B2 | topic: conditionals | type: cloze | concepts: ["hypothetical_conditionals_si_clauses"] | prerequisites: ["imperfect_subjunctive_formation"] | grammar_focus: "Imperfect subjunctive in hypothetical and counterfactual 'si' clauses." | contrast_note: "Contrast real condition (present indicative) with hypothetical condition (imperfect subjunctive)." -->
 
 > **Grammar Rule**: Hypothetical present/future conditionals use: 'Si' + Imperfect Subjunctive (-ra/-se), + Conditional Simple.
 

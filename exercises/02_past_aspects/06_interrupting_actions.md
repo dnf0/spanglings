@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Past Aspects 06: Interrupting Action Contrast
-<!-- id: b1_past_interrupting | level: B1 | topic: past_aspects | type: cloze -->
+<!-- id: b1_past_interrupting | level: B1 | topic: past_aspects | type: cloze | concepts: ["aspectual_meaning_shifts"] | prerequisites: ["preterite_aspect_completion", "imperfect_aspect_habitual_background"] | grammar_focus: "Aspectual distinction: preterite (bounded completion) vs imperfect (habitual/background)." | contrast_note: "Contrast completed action in preterite with ongoing descriptive state in imperfect." -->
 
 > **Grammar Rule**: When two actions interact in the past, the ongoing background action is in the imperfect, while the sudden interrupting action is in the preterite.
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Concessive Subjunctive 05: Pase lo que pase
-<!-- id: c1_subj_pase_lo_que_pase | level: C1 | topic: concessive_subjunctive | type: cloze -->
+<!-- id: c1_subj_pase_lo_que_pase | level: C1 | topic: concessive_subjunctive | type: cloze | concepts: ["advanced_subjunctive_nuances"] | prerequisites: ["advanced_concessive_mood_alternation"] | grammar_focus: "Subjunctive nuances with dubitative adverbs and reduplicative concessives." -->
 
 > **Grammar & Lexicon**: The fixed expression **pase lo que pase** ("come what may", "no matter what happens") employs the present subjunctive of *pasar*.
 

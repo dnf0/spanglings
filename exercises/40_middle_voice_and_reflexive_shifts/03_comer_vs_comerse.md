@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Middle-Voice & Reflexive Shifts 03: Comer vs Comerse (Telicity & Total Consumption)
-<!-- id: b2_reflex_comer_vs_comerse | level: B2 | topic: middle_voice_and_reflexive_shifts | type: cloze -->
+<!-- id: b2_reflex_comer_vs_comerse | level: B2 | topic: middle_voice_and_reflexive_shifts | type: cloze | concepts: ["middle_voice_reflexive_shifts"] | prerequisites: ["passive_refleja_vs_impersonal", "accidental_se_structures"] | grammar_focus: "Middle voice, inchoative aspect, and telic reflexive shifts." | contrast_note: "Contrast non-reflexive base verb with reflexive aspectual/inchoative nuance." -->
 
 > **Grammar & Lexicon**: Non-reflexive **comer** is atelic/general (*como fruta todos los días*). The pronominal "dative of totality" **comerse** adds telicity, indicating the entire discrete portion was completely consumed with appetite (*se comió todo el pastel*).
 

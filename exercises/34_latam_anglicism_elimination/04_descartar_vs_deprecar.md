@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Anglicism Elimination 04: Deprecating vs Desaconsejar / Descontinuar
-<!-- id: c1_anglicism_descontinuar | level: C1 | topic: latam_anglicism_elimination | type: cloze -->
+<!-- id: c1_anglicism_descontinuar | level: C1 | topic: latam_anglicism_elimination | type: cloze | concepts: ["false_friends_anglicisms"] | prerequisites: [] | grammar_focus: "Elimination of unnecessary English calques and anglicisms in professional Latin American Spanish." | contrast_note: "Contrast direct anglicisms with idiomatic Spanish equivalents." -->
 
 > **Grammar & Lexicon**: In traditional Spanish, *deprecar* means "to plead / beg fervently for mercy". Translating "to deprecate an API" as *deprecar* is a classic false friend. In precise technical documentation, use **desaconsejar el uso de**, **marcar como obsoleto**, or **descontinuar**.
 

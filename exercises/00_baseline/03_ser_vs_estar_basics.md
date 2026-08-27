@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Baseline 03: Basic Origin vs Location
-<!-- id: b0_ser_estar_basics_01 | level: Baseline | topic: ser_vs_estar | type: cloze -->
+<!-- id: b0_ser_estar_basics_01 | level: Baseline | topic: ser_vs_estar | type: cloze | concepts: ["ser_vs_estar_essence_state"] | prerequisites: [] | grammar_focus: "Ser for identity/essence vs Estar for state/location." | contrast_note: "Contrast ser (inherent) with estar (contingent)." -->
 
 > **Grammar Rule**: Use 'ser' for origin, nationality, and permanent identity; use 'estar' for physical location and current states.
 

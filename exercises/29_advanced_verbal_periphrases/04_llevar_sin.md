@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Verbal Periphrases 04: Llevar sin + Infinitive
-<!-- id: c1_periphrasis_llevar_sin | level: C1 | topic: verbal_periphrases | type: cloze -->
+<!-- id: c1_periphrasis_llevar_sin | level: C1 | topic: verbal_periphrases | type: cloze | concepts: ["advanced_verbal_periphrases"] | prerequisites: ["verbal_periphrases_aspect"] | grammar_focus: "Advanced modal and aspectual periphrases in formal Spanish." -->
 
 > **Grammar & Lexicon**: The temporal periphrasis **llevar sin + infinitive** expresses ongoing duration during which an expected action has failed to occur.
 

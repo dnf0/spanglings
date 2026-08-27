@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Subjunctive in Relative Clauses 03: Negative Antecedent
-<!-- id: b1_subj_relative_negative | level: B1 | topic: subjunctive_relative | type: cloze -->
+<!-- id: b1_subj_relative_negative | level: B1 | topic: subjunctive_relative | type: cloze | concepts: ["subjunctive_relative_clauses"] | prerequisites: ["subjunctive_volition_influence"] | grammar_focus: "Subjunctive in relative clauses with indefinite or non-existent antecedent." | contrast_note: "Contrast known antecedent (indicative) with unverified antecedent (subjunctive)." -->
 
 > **Grammar Rule**: When the antecedent is non-existent or negated (nadie, nada, ningún), the relative clause must take the subjunctive.
 

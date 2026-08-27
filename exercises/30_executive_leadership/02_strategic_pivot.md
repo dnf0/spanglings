@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Executive Leadership 02: Strategic Pivots
-<!-- id: c1_exec_pivot | level: C1 | topic: executive_leadership | type: cloze -->
+<!-- id: c1_exec_pivot | level: C1 | topic: executive_leadership | type: cloze | concepts: ["executive_leadership_communication"] | prerequisites: ["register_elevation_formal", "tech_software_engineering"] | grammar_focus: "Executive leadership communication, board presentations, and strategic alignment." -->
 
 > **Grammar & Lexicon**: A corporate or technical "pivot" is formally expressed as **giro estratégico** or **reorientación estratégica**.
 

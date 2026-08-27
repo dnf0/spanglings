@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Prepositional Regimes 01: 'Darse cuenta de que'
-<!-- id: b2_prep_darse_cuenta | level: B2 | topic: prepositional_regimes | type: cloze -->
+<!-- id: b2_prep_darse_cuenta | level: B2 | topic: prepositional_regimes | type: cloze | concepts: ["prepositional_regimes"] | prerequisites: ["por_vs_para_foundations"] | grammar_focus: "Verbal prepositional regimes (régimen preposicional) with required prepositions." -->
 
 > **Grammar Rule**: 'Darse cuenta' requires the preposition 'de' before a noun or subordinate clause ('darse cuenta de que'). Omitting 'de' is dequeísmo/queísmo error.
 

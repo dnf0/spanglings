@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Collocations 05: 'Surtir efecto' (To take effect)
-<!-- id: c1_collocation_surtir_efecto | level: C1 | topic: nuanced_collocations | type: cloze -->
+<!-- id: c1_collocation_surtir_efecto | level: C1 | topic: nuanced_collocations | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["discourse_connectors"] | grammar_focus: "Nuanced lexical collocations and institutional collocations." -->
 
 > **Grammar Rule**: 'Surtir efecto' is the fixed idiomatic collocation meaning to produce the desired effect or result (e.g. medicine, measure).
 

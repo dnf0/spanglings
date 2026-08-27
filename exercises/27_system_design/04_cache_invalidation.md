@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # System Design 04: Cache Invalidation
-<!-- id: c1_sysdesign_cache_invalidation | level: C1 | topic: system_design | type: cloze -->
+<!-- id: c1_sysdesign_cache_invalidation | level: C1 | topic: system_design | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["false_friends_anglicisms", "discourse_connectors"] | grammar_focus: "Distributed systems design, cloud infrastructure, and technical architecture." -->
 
 > **Grammar & Lexicon**: "Cache invalidation" translates directly to **invalidación de caché**, maintaining orthographic accent marks on both nouns.
 

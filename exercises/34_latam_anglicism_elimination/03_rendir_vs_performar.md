@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Anglicism Elimination 03: Performance vs Rendimiento
-<!-- id: b2_anglicism_rendir | level: B2 | topic: latam_anglicism_elimination | type: cloze -->
+<!-- id: b2_anglicism_rendir | level: B2 | topic: latam_anglicism_elimination | type: cloze | concepts: ["false_friends_anglicisms"] | prerequisites: [] | grammar_focus: "Elimination of unnecessary English calques and anglicisms in professional Latin American Spanish." | contrast_note: "Contrast direct anglicisms with idiomatic Spanish equivalents." -->
 
 > **Grammar & Lexicon**: The non-existent verb *performar* and adjective *performático* are severe Spanglish corruptions. In high-stakes executive and engineering environments, use **rendir** / **desempeñarse** for actions, and **rendimiento** / **desempeño** for metrics.
 

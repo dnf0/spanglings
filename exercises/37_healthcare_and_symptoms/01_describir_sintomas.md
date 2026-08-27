@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Healthcare & Symptoms 01: Describing Physical Discomfort & Pain
-<!-- id: b1_health_describir_sintomas | level: B1 | topic: healthcare_and_symptoms | type: cloze -->
+<!-- id: b1_health_describir_sintomas | level: B1 | topic: healthcare_and_symptoms | type: cloze | concepts: ["accidental_se_structures"] | prerequisites: ["gustar_dative_structures", "por_vs_para_nuances"] | grammar_focus: "Medical consultations, describing symptoms, physical sensations, and treatments." -->
 
 > **Grammar & Lexicon**: In medical consultations in Spanish, patients describe sensations with specific nouns and verbs: **tener punzadas agudas** (stabbing/sharp pains), **sentir mareos / estar mareado** (feeling dizzy), and **tener náuseas** (feeling nauseous).
 

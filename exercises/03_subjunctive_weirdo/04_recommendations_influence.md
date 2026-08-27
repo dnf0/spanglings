@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Subjunctive WEIRDO 04: Recommendations & Influence
-<!-- id: b1_subj_weirdo_recommend | level: B1 | topic: subjunctive_weirdo | type: cloze -->
+<!-- id: b1_subj_weirdo_recommend | level: B1 | topic: subjunctive_weirdo | type: cloze | concepts: ["subjunctive_volition_influence"] | prerequisites: ["irregular_present_stems", "irregular_subjunctive_stems"] | grammar_focus: "Subjunctive mood selection in subordinate clauses of influence and volition." | contrast_note: "Contrast indicative certainty with subjunctive volition/doubt." -->
 
 > **Grammar Rule**: Verbs of influence, advice, and recommendation (aconsejar, recomendar, sugerir, prohibir) require subjunctive.
 

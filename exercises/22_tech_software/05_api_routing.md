@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Tech Spanish 05: Request Routing & Gateways
-<!-- id: c1_tech_routing | level: C1 | topic: tech_software | type: cloze -->
+<!-- id: c1_tech_routing | level: C1 | topic: tech_software | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["false_friends_anglicisms", "discourse_connectors"] | grammar_focus: "Technical software engineering terminology, code reviews, and architecture discussions." -->
 
 > **Grammar & Lexicon**: In API architecture and networking, "routing" is translated as **enrutamiento** (from the verb *enrutar*). "Gateway" translates to *pasarela de enlace*.
 

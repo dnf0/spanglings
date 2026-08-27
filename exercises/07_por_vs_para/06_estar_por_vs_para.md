@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Por vs Para 06: 'Estar por' vs 'Estar para'
-<!-- id: b1_por_para_estar_idiom | level: B1 | topic: por_vs_para | type: cloze -->
+<!-- id: b1_por_para_estar_idiom | level: B1 | topic: por_vs_para | type: cloze | concepts: ["por_vs_para_nuances"] | prerequisites: ["por_vs_para_foundations"] | grammar_focus: "Nuanced usage of por (cause, duration, medium) vs para (goal, recipient, deadline)." | contrast_note: "Contrast por (cause/motive) with para (aim/destination)." -->
 
 > **Grammar Rule**: 'Estar para + inf' means on the verge of / about to happen. 'Estar por + inf' means inclined to / in favor of doing something.
 

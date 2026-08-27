@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Subjunctive WEIRDO 06: 'Ojalá' (Hope/God Grant)
-<!-- id: b1_subj_weirdo_ojala | level: B1 | topic: subjunctive_weirdo | type: cloze -->
+<!-- id: b1_subj_weirdo_ojala | level: B1 | topic: subjunctive_weirdo | type: cloze | concepts: ["subjunctive_volition_influence"] | prerequisites: ["irregular_present_stems", "irregular_subjunctive_stems"] | grammar_focus: "Subjunctive mood selection in subordinate clauses of influence and volition." | contrast_note: "Contrast indicative certainty with subjunctive volition/doubt." -->
 
 > **Grammar Rule**: 'Ojalá' (derived from Arabic law sha' Allah) always requires the subjunctive mood.
 

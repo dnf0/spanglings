@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Concessive Subjunctive 03: Concessive Así
-<!-- id: c1_subj_asi | level: C1 | topic: concessive_subjunctive | type: cloze -->
+<!-- id: c1_subj_asi | level: C1 | topic: concessive_subjunctive | type: cloze | concepts: ["advanced_subjunctive_nuances"] | prerequisites: ["advanced_concessive_mood_alternation"] | grammar_focus: "Subjunctive nuances with dubitative adverbs and reduplicative concessives." -->
 
 > **Grammar & Lexicon**: When **así** introduces an emphatic concession meaning "even if" or "no matter if", it mandates the **subjunctive** (e.g., *¡Así nos cueste la vida!*).
 

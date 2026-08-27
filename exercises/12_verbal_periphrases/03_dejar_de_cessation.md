@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Verbal Periphrases 03: 'Dejar de + Inf' (Cessation)
-<!-- id: b2_periphrasis_dejar_de | level: B2 | topic: verbal_periphrases | type: cloze -->
+<!-- id: b2_periphrasis_dejar_de | level: B2 | topic: verbal_periphrases | type: cloze | concepts: ["verbal_periphrases_aspect"] | prerequisites: ["preterite_aspect_completion", "imperfect_aspect_habitual_background"] | grammar_focus: "Verbal periphrases of inception, duration, repetition, and culmination." -->
 
 > **Grammar Rule**: 'Dejar de + infinitivo' expresses the termination or cessation of a habit or action.
 

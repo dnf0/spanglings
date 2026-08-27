@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Anglicism Elimination 02: Customizing vs Personalizar
-<!-- id: b2_anglicism_personalizar | level: B2 | topic: latam_anglicism_elimination | type: cloze -->
+<!-- id: b2_anglicism_personalizar | level: B2 | topic: latam_anglicism_elimination | type: cloze | concepts: ["false_friends_anglicisms"] | prerequisites: [] | grammar_focus: "Elimination of unnecessary English calques and anglicisms in professional Latin American Spanish." | contrast_note: "Contrast direct anglicisms with idiomatic Spanish equivalents." -->
 
 > **Grammar & Lexicon**: The English loanword *customizar* is an unnecessary calque of "to customize". Standard technical Spanish across Latin America uses **personalizar**, **adaptar**, or **configurar a medida**.
 

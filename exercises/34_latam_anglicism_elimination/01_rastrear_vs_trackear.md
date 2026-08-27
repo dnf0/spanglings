@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Anglicism Elimination 01: Tracking vs Rastrear
-<!-- id: b2_anglicism_rastrear | level: B2 | topic: latam_anglicism_elimination | type: cloze -->
+<!-- id: b2_anglicism_rastrear | level: B2 | topic: latam_anglicism_elimination | type: cloze | concepts: ["false_friends_anglicisms"] | prerequisites: [] | grammar_focus: "Elimination of unnecessary English calques and anglicisms in professional Latin American Spanish." | contrast_note: "Contrast direct anglicisms with idiomatic Spanish equivalents." -->
 
 > **Grammar & Lexicon**: Avoid the barbarism *trackear/traquear*. In professional Latin American software development and analytics, the accurate and elegant Spanish equivalents are **rastrear**, **monitorear**, or **hacer seguimiento de**.
 

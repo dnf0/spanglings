@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Conditionals 04: Sequence of Tenses (Past Volition)
-<!-- id: b2_subj_sequence_past | level: B2 | topic: conditionals | type: cloze -->
+<!-- id: b2_subj_sequence_past | level: B2 | topic: conditionals | type: cloze | concepts: ["hypothetical_conditionals_si_clauses"] | prerequisites: ["imperfect_subjunctive_formation"] | grammar_focus: "Imperfect subjunctive in hypothetical and counterfactual 'si' clauses." | contrast_note: "Contrast real condition (present indicative) with hypothetical condition (imperfect subjunctive)." -->
 
 > **Grammar Rule**: When the main clause is in the past (preterite/imperfect), a subjunctive subordinate clause must be in the imperfect subjunctive.
 

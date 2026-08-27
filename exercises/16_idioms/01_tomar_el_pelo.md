@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Idiomatic Expressions 01: 'Tomar el pelo' (To pull someone's leg)
-<!-- id: b1_idiom_tomar_el_pelo | level: B1 | topic: idioms | type: cloze -->
+<!-- id: b1_idiom_tomar_el_pelo | level: B1 | topic: idioms | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["aspectual_meaning_shifts"] | grammar_focus: "High-frequency colloquial idioms and metaphorical expressions." -->
 
 > **Grammar Rule**: 'Tomar el pelo a alguien' is an idiom meaning to tease or pull someone's leg.
 

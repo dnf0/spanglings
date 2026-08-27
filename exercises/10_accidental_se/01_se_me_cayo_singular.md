@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Accidental Se 01: Singular Dropped Item
-<!-- id: b2_accidental_se_singular | level: B2 | topic: accidental_se | type: cloze -->
+<!-- id: b2_accidental_se_singular | level: B2 | topic: accidental_se | type: cloze | concepts: ["accidental_se_structures"] | prerequisites: ["gustar_dative_structures", "clitic_pronoun_stacking"] | grammar_focus: "Involuntary and accidental 'se' construction for unplanned events." | contrast_note: "Contrast deliberate direct reflexive with accidental de-agentified se." -->
 
 > **Grammar Rule**: Accidental 'se' structure: 'Se' + [Indirect Pronoun of person affected] + [Verb conjugated for the dropped item] + [Subject].
 
