@@ -1,0 +1,30 @@
+<!-- I AM NOT DONE -->
+# Register Elevation 02: 'Suscitar' (Arouse/Provoke) vs 'Causar'
+<!-- id: c1_reg_suscitar | level: C1 | topic: register_elevation | type: cloze -->
+
+> **Register Elevation**: Rather than *causar* or *provocar*, formal academic and journalistic Spanish uses **suscitar** (e.g. *suscitar interés*, *suscitar polémica*, *suscitar sospechas*).
+
+### Context
+English: "The publication of the report aroused intense controversy among economic analysts."
+
+### Exercise
+La publicación del informe logró (suscitar) ___ una intensa polémica entre los analistas económicos.
+
+<!-- SOLUTION
+suscitar
+-->
+
+<!-- ALTERNATIVES
+despertar
+provocar
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "causar" | code: "E2502" | message: "In elevated C1 prose, collocate 'polémica' and 'debate' with 'suscitar' rather than generic 'causar'."
+-->
+
+<!-- HINTS
+Tier 1: Formal verb meaning 'to arouse / spark / provoke debate or controversy'.
+Tier 2: Begins with 'sus-'.
+Tier 3: Solution: 'suscitar'.
+-->

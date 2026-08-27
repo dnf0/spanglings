@@ -20,11 +20,18 @@ Mainstream language learning tools (like Duolingo) are agonizingly slow, repetit
 
 ### 1.2 The Solution: Spanglings
 Inspired by [Rustlings](https://github.com/rust-lang/rustlings), **Spanglings** brings developer-grade learning to Spanish:
-- **Zero Fluff / High Density:** No cartoon animations or wait timers. Just pure language exercises, rules, and instant terminal feedback.
+- **Zero Fluff / High Density:** No cartoon animations or wait timers. Pure language exercises, rules, and instant terminal feedback.
 - **Sub-millisecond Feedback Loop:** Instant evaluation when you edit an exercise or submit an answer.
 - **Dual Execution Modes:**
   1. **Interactive TUI:** Full-screen terminal UI (`ratatui`) for rapid-fire drills, inline editing, and split-pane explanations.
   2. **File Watcher Mode:** Background watcher (`spanglings watch`) that checks your edits in your preferred editor (VS Code, Neovim, Emacs) upon file save.
+- **Multi-Modal Exercise Formats:**
+  - *Cloze / Fill-in-the-blank* (`___`): Quick conjugation, clitic, and preposition drills.
+  - *Sentence Transformation / Rewrite*: Converting indicative to subjunctive, active to passive *se*, or direct to indirect speech.
+  - *Spot & Fix the Bug ("Spanish Code Review")*: Identifying and correcting subtle grammatical flaws in full sentences.
+  - *Full Clause Translation*: Translating high-level idiomatic English into natural Spanish.
+- **Spaced Repetition System (SRS):** Built-in SM-2 scheduler (`spanglings review`) to guarantee long-term retention of difficult concepts.
+- **In-Terminal Grammar Reference Cards (`spanglings explain <topic>`):** Instant cheat sheets and syntax tables at your fingertips.
 - **Compiler-Grade Diagnostics:** Pinpoints exact linguistic errors (mood mismatch, wrong aspect, incorrect preposition, clitic ordering) with code snippets, carets, and explanations.
 - **Keyboard-Friendly & Smart Accents:** Seamlessly usable on standard QWERTY keyboards. Normalizes inverted punctuation (`¿`, `¡`) and provides a *Forgiving with Warnings* accent system by default.
 
@@ -40,15 +47,18 @@ Inspired by [Rustlings](https://github.com/rust-lang/rustlings), **Spanglings** 
 │       (ratatui + crossterm)       │          (notify + stdout)         │
 │  - Split-pane drill UI            │  - Watches exercises/ dir          │
 │  - In-terminal editor & prompt    │  - Evaluates on file save          │
-│  - Keyboard shortcuts (H/N/P/D)   │  - Prints rustc-style diagnostics  │
-│  - Rapid-fire drill mode          │  - Auto-advances to next exercise  │
+│  - Keyboard shortcuts (H/N/P/E/R) │  - Prints rustc-style diagnostics  │
+│  - SRS review & drill integration │  - Auto-advances to next exercise  │
 └─────────────────┬─────────────────┴──────────────────┬─────────────────┘
                   │                                    │
                   ▼                                    ▼
        ┌──────────────────────────────────────────────────────┐
        │                Core Engine & Runtime                 │
        │  - Exercise Loader (Filesystem & Embedded assets)    │
+       │  - Multi-Modal Exercise Evaluator (Cloze/Rewrite/Bug)│
        │  - Diagnostic & Linguistic Rule Evaluator            │
+       │  - SM-2 Spaced Repetition Engine                     │
+       │  - In-Terminal Reference Cards Engine                │
        │  - Accent & Normalization Engine                     │
        │  - Progress Tracker (~/.config/spanglings/state.json)│
        └──────────────────────────────────────────────────────┘
@@ -63,11 +73,13 @@ Inspired by [Rustlings](https://github.com/rust-lang/rustlings), **Spanglings** 
 | `spanglings run <name>` | Runs validation on a specific exercise (e.g. `spanglings run subjunctive_01`). |
 | `spanglings hint <name?>` | Displays progressive grammatical hints (Tiers 1, 2, or 3). |
 | `spanglings drill [topic]` | Launches rapid-fire irregular conjugation / vocab baseline drills. |
+| `spanglings review` | Launches a Spaced Repetition (SRS) review session for due exercises. |
+| `spanglings explain <topic>` | Prints an in-terminal grammar reference card (e.g. `subjunctive`, `por-para`, `ser-estar`). |
 | `spanglings list` | Displays all curriculum modules, exercises, and completion status. |
-| `spanglings progress` | Summarizes CEFR level mastery (A1-Baseline, B1, B2, C1). |
+| `spanglings progress` | Summarizes CEFR level mastery (A1-Baseline, B1, B2, C1) and retention metrics. |
 | `spanglings reset <name>` | Resets an exercise back to its initial prompt state. |
 
-### 2.2 Configuration & State Persistence
+### 2.2 Configuration & SRS State Persistence
 - Progress is stored in JSON format at `~/.config/spanglings/state.json` (with local fallback `.spanglings_state.json`).
 - Schema:
   ```json
@@ -76,6 +88,15 @@ Inspired by [Rustlings](https://github.com/rust-lang/rustlings), **Spanglings** 
     "completed_exercises": ["b1_ser_estar_01", "b1_subjunctive_01"],
     "current_exercise": "b1_subjunctive_02",
     "accent_mode": "forgiving",
+    "srs": {
+      "b1_subjunctive_01": {
+        "repetitions": 3,
+        "interval_days": 6,
+        "ease_factor": 2.5,
+        "next_review_due": "2026-09-01T14:30:00Z",
+        "last_quality": 5
+      }
+    },
     "exercise_stats": {
       "b1_subjunctive_01": {
         "attempts": 2,
@@ -140,18 +161,20 @@ error[E0301]: incorrect verb mood in subordinate clause
 | `E0901` | Prepositions | Incorrect prepositional regime (*darse cuenta de*, *pensar en*, *soñar con*). |
 | `E1001` | *Se* Construction | Incorrect agreement with accidental *se* (*se me olvidaron las llaves*). |
 | `E1101` | B2/C1 Advanced | Pluperfect Subjunctive in counterfactual 3rd conditional (*hubiera sabido*). |
+| `E1201` | B2/C1 Advanced | Incorrect periphrasis auxiliary or preposition (*llevar + gerundio*, *acabar de*). |
 | `E1301` | B2/C1 Advanced | Advanced concessive clause with subjunctive (*hagas lo que hagas*, *por mucho que*). |
+| `E1501` | B2/C1 Advanced | Sequence of tenses violation in indirect/reported speech. |
 
 ---
 
-## 4. Exercise File Format & Authoring
+## 4. Exercise Modalities & Authoring Format
 
-Each exercise is a standalone Markdown file with standardized frontmatter and comment markers:
+Each exercise is a standalone Markdown file with standardized metadata and comment markers:
 
 ```markdown
 <!-- I AM NOT DONE -->
 # Subjunctive 01: Verbs of Influence
-<!-- id: b1_subjunctive_01 | level: B1 | topic: subjunctive_weirdo -->
+<!-- id: b1_subjunctive_01 | level: B1 | topic: subjunctive_weirdo | type: cloze -->
 
 > **Grammar Rule**: When the subject of the main clause differs from the subordinate clause, 
 > verbs of influence/wishes (*querer, sugerir, exigir, aconsejar*) require the Present Subjunctive.
@@ -187,7 +210,7 @@ Tier 3: Drop the '-o' and add the '-er/-ir' subjunctive 2nd person ending: 'veng
 
 ---
 
-## 5. Curriculum Map & Tracks
+## 5. Curriculum Map & Tracks (100+ Total Exercises)
 
 ### Track 00: Baseline Reflex Drills (A1-Pre-B1 Irregular Stems & High-Yield Vocab)
 - `00_irregular_preterite_stems`: Fast drills on *anduv-, tuv-, sup-, quis-, pud-, pus-, conduj-, dij-, traj-*.
@@ -233,11 +256,13 @@ spanglings/
 │   ├── main.rs                  # CLI entrypoint & dispatcher
 │   ├── cli/
 │   │   ├── mod.rs               # Clap CLI args
-│   │   └── commands/            # Handlers for watch, run, hint, drill, list, progress, reset
+│   │   └── commands/            # Handlers for watch, run, hint, drill, review, explain, list, progress, reset
 │   ├── core/
 │   │   ├── mod.rs
 │   │   ├── exercise.rs          # Exercise struct & Markdown parser
 │   │   ├── curriculum.rs        # Tracks, topics, level categorization
+│   │   ├── srs.rs               # SM-2 Spaced repetition scheduler
+│   │   ├── reference.rs         # In-terminal grammar cheat sheets
 │   │   └── state.rs             # JSON persistence & progress tracking
 │   ├── engine/
 │   │   ├── mod.rs
@@ -251,8 +276,8 @@ spanglings/
 │   │   └── runner.rs            # Terminal evaluation loop on file save
 │   └── tui/
 │       ├── mod.rs               # Ratatui application state
-│       ├── ui.rs                # Split-pane terminal views
-│       └── events.rs            # Keyboard shortcuts (H=hint, N=next, P=prev, D=drill, Q=quit)
+│       ├── ui.rs                # Split-pane terminal views (Drill / Watch / Explain / SRS)
+│       └── events.rs            # Keyboard shortcuts (H=hint, N=next, P=prev, E=explain, R=review, Q=quit)
 ├── exercises/                   # Complete curriculum files (.md)
 │   ├── 00_baseline_drills/
 │   ├── 01_ser_vs_estar/
@@ -264,6 +289,7 @@ spanglings/
 └── tests/
     ├── exercise_validity_tests.rs  # Asserts 100% of exercises have valid passing solutions
     ├── diagnostic_rule_tests.rs    # Asserts diagnostic codes trigger on common errors
+    ├── srs_tests.rs                # SM-2 scheduling & review queue tests
     └── normalizer_tests.rs         # Asserts punctuation and accent normalization rules
 ```
 
@@ -271,7 +297,8 @@ spanglings/
 
 ## 7. Testing & Quality Assurance
 
-1. **Curriculum Integrity Suite:** CI automated tests load all exercise files and test their canonical solutions and alternative accepted forms, ensuring zero broken exercises.
+1. **Curriculum Integrity Suite:** CI automated tests load all 100+ exercise files and test their canonical solutions and alternative accepted forms, ensuring zero broken exercises.
 2. **Diagnostic Precision Suite:** Unit tests for every diagnostic error code (E0101 through E2101) to verify correct pinpointing and explanations.
 3. **Punctuation & Accent Invariance Tests:** Verifies that US/UK keyboard input without inverted punctuation or with missing accents gracefully passes in forgiving mode with the appropriate notice.
-4. **Watcher & TUI State Tests:** Verifies state transitions, progress saving, and persistence across sessions.
+4. **SRS Engine Tests:** Verifies SM-2 algorithm intervals, ease factor updates, and due review queue calculation.
+5. **Watcher & TUI State Tests:** Verifies state transitions, progress saving, and persistence across sessions.

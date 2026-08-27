@@ -1,0 +1,40 @@
+# Rust build artifacts
+/target
+**/*.rs.bk
+*.pdb
+
+# Local Spanglings state & databases
+.spanglings_state.json
+
+# Environment variables & secrets (DO NOT COMMIT)
+.env
+.env.*
+*.env
+*.pem
+*.key
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+
+# Coverage & Test artifacts
+coverage/
+tarpaulin-report.html
+*.profraw
+
+# Agent rules, caches, & AI tooling (DO NOT COMMIT)
+.agents/
+.agent-state/
+.superpowers/
+.roborev/
+.claude/
+.gemini/
+.cursor/
+graphify-out/
+.smellcheck-cache/
+

@@ -1,0 +1,113 @@
+use spanglings::core::reference::{get_reference_card, list_reference_topics};
+
+#[test]
+fn test_get_subjunctive_reference_card() {
+    let card = get_reference_card("subjunctive").expect("Subjunctive card not found");
+    assert!(card.contains("WEIRDO"));
+    assert!(card.contains("Wishes"));
+    assert!(card.contains("Present Subjunctive Endings"));
+}
+
+#[test]
+fn test_get_por_para_reference_card() {
+    let card = get_reference_card("por-para").expect("Por/Para card not found");
+    assert!(card.contains("Por"));
+    assert!(card.contains("Para"));
+    assert!(card.contains("Cause / Reason") || card.contains("Cause"));
+}
+
+#[test]
+fn test_get_ser_estar_reference_card() {
+    let card = get_reference_card("ser-estar").expect("Ser/Estar card not found");
+    assert!(card.contains("SER"));
+    assert!(card.contains("ESTAR"));
+}
+
+#[test]
+fn test_get_past_tenses_reference_card() {
+    let card = get_reference_card("past").expect("Past tenses card not found");
+    assert!(card.contains("PRETERITE"));
+    assert!(card.contains("IMPERFECT"));
+}
+
+#[test]
+fn test_get_pronouns_reference_card() {
+    let card = get_reference_card("pronouns").expect("Pronouns card not found");
+    assert!(card.contains("DOUBLE OBJECT PRONOUNS"));
+    assert!(card.contains("SE LO DOY"));
+}
+
+#[test]
+fn test_get_prepositions_reference_card() {
+    let card = get_reference_card("prepositions").expect("Prepositions card not found");
+    assert!(card.contains("VERBAL REGIMEN"));
+    assert!(card.contains("acostumbrarse a"));
+}
+
+#[test]
+fn test_get_accidental_se_reference_card() {
+    let card = get_reference_card("accidental-se").expect("Accidental se card not found");
+    assert!(card.contains("ACCIDENTAL"));
+    assert!(card.contains("Se me cayeron"));
+}
+
+#[test]
+fn test_get_tech_reference_card() {
+    let card = get_reference_card("tech").expect("Tech card not found");
+    assert!(card.contains("SOFTWARE ENGINEERING"));
+    assert!(card.contains("desplegar"));
+    assert!(card.contains("bloqueo mutuo"));
+}
+
+#[test]
+fn test_get_business_reference_card() {
+    let card = get_reference_card("business").expect("Business card not found");
+    assert!(card.contains("BUSINESS & DIPLOMATIC"));
+    assert!(card.contains("Quedo a su entera disposición"));
+}
+
+#[test]
+fn test_get_false_friends_reference_card() {
+    let card = get_reference_card("false-friends").expect("False friends card not found");
+    assert!(card.contains("FALSE FRIENDS"));
+    assert!(card.contains("actualmente"));
+}
+
+#[test]
+fn test_get_voseo_reference_card() {
+    let card = get_reference_card("voseo").expect("Voseo card not found");
+    assert!(card.contains("VOSEO"));
+    assert!(card.contains("vos hablás"));
+}
+
+#[test]
+fn test_get_accents_reference_card() {
+    let card = get_reference_card("accents").expect("Accents card not found");
+    assert!(card.contains("ACCENTUATION & ORTHOGRAPHIC STRESS"));
+    assert!(card.contains("AGUDAS"));
+    assert!(card.contains("LLANAS"));
+    assert!(card.contains("ESDRÚJULAS"));
+    assert!(card.contains("Diptongos vs Hiatos"));
+}
+
+#[test]
+fn test_list_reference_topics() {
+    let topics = list_reference_topics();
+    assert!(topics.contains(&"subjunctive"));
+    assert!(topics.contains(&"por-para"));
+    assert!(topics.contains(&"ser-estar"));
+    assert!(topics.contains(&"past"));
+    assert!(topics.contains(&"pronouns"));
+    assert!(topics.contains(&"prepositions"));
+    assert!(topics.contains(&"accidental-se"));
+    assert!(topics.contains(&"tech-software"));
+    assert!(topics.contains(&"business"));
+    assert!(topics.contains(&"false-friends"));
+    assert!(topics.contains(&"voseo"));
+    assert!(topics.contains(&"accents"));
+}
+
+#[test]
+fn test_unknown_topic_returns_none() {
+    assert!(get_reference_card("quantum_physics").is_none());
+}

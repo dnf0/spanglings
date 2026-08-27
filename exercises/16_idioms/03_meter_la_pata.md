@@ -1,0 +1,29 @@
+<!-- I AM NOT DONE -->
+# Idiomatic Expressions 03: 'Meter la pata' (To put one's foot in one's mouth)
+<!-- id: b1_idiom_meter_la_pata | level: B1 | topic: idioms | type: cloze -->
+
+> **Grammar Rule**: 'Meter la pata' means to blunder, make a mistake, or put one's foot in one's mouth.
+
+### Context
+English: "I made a huge blunder when mentioning the surprise party."
+
+### Exercise
+Metí la ___ al mencionar la fiesta sorpresa delante de Ana.
+
+<!-- SOLUTION
+pata
+-->
+
+<!-- ALTERNATIVES
+pata
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "mano" | code: "E0001" | message: "The idiom is 'meter la pata', not 'mano'."
+-->
+
+<!-- HINTS
+Tier 1: Animal leg/paw word used for blundering.
+Tier 2: 'pata'.
+Tier 3: The answer is 'pata'.
+-->
