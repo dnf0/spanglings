@@ -69,3 +69,52 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
   - **Description**: Installable Git hook prompting developer with 1 rapid active-recall conjugation/grammar flashcard before code commits.
 - [x] **SPANG-043: Custom Curriculum Pack Scaffolder & Validator (`spanglings pack`)**
   - **Description**: Tools to scaffold custom community/industry tracks (`spanglings pack create`) and validate exercise markdown solvability (`spanglings pack validate`).
+
+---
+
+## 🖥️ Focus Area 6: In-TUI Power Tools & Modal Modifiers
+
+- [ ] **SPANG-050: In-TUI Verb Conjugator Modal (`c` key)**
+  - **Description**: Press `c` inside the TUI to open a non-disruptive popup modal to search and conjugate any verb across all tenses without leaving the exercise workspace.
+- [ ] **SPANG-051: In-TUI Grammar Reference Card Browser Modal (`r` key)**
+  - **Description**: Press `r` inside the TUI to open an interactive modal with full-text search across all grammar cheat sheets (Subjunctive, Por vs Para, Clitics, Accents, etc.).
+- [ ] **SPANG-052: In-TUI Drill & 60-Second Blitz Launcher (`d` and `b` keys)**
+  - **Description**: Launch rapid-fire drill trials and the 60-second Blitz directly inside the TUI with instant live scoreboard and keyboard response.
+- [ ] **SPANG-053: In-TUI Keybinding Overlay & Quick Command Palette (`?` / `F1`)**
+  - **Description**: Comprehensive searchable help modal listing all hotkeys, navigation shortcuts, and workflow commands.
+
+---
+
+## 📚 Focus Area 7: Advanced C1 Technical, RFC & Professional Track Expansion
+
+- [ ] **SPANG-060: Track 27 - System Architecture RFCs, Post-Mortems & Incident Response (B2–C1)**
+  - **Topics**: Outage post-mortems (*caída del servicio*, *análisis de causa raíz*, *remediación*), architectural RFCs (*desacoplar componentes*, *tolerancia a fallos*, *rendimiento sostenido*).
+- [ ] **SPANG-061: Track 28 - Complex Subjunctive Triggers & Concessive Clauses (C1)**
+  - **Topics**: Concessive expressions (*por mucho que*, *comoquiera que*, *quiera o no*, *a condición de que*, *tan pronto como* + subjuntivo vs indicativo).
+- [ ] **SPANG-062: Track 29 - Advanced Verbal Periphrases & Nuanced Aspect (B2–C1)**
+  - **Topics**: Modal and aspectual periphrases (*llevar + gerundio*, *andar + gerundio*, *darle a uno por*, *quedar en*, *dejar de*, *acabar por*).
+- [ ] **SPANG-063: Track 30 - Executive Debate & Open Source Leadership Collocations (C1)**
+  - **Topics**: High-register idiomatic debate phrases (*hacer hincapié*, *poner en tela de juicio*, *dar el visto bueno*, *llevar la voz cantante*, *zanjar la disputa*).
+
+---
+
+## 📦 Focus Area 8: Portable Study Pack & Anki/Markdown Exporter
+
+- [ ] **SPANG-070: Anki Flashcards Deck Exporter (`spanglings export anki`)**
+  - **Description**: Export full SRS review decks, high-difficulty items, or custom tracks to Anki-compatible TSV/APKG format with tiered hints and diagnostic tags.
+- [ ] **SPANG-071: Markdown / Obsidian Study Guide Generator (`spanglings export markdown`)**
+  - **Description**: Generate formatted markdown study notes summarizing learned grammar patterns, frequent pitfalls, and personal review metrics.
+- [ ] **SPANG-072: Encrypted / Portable State Backup & Cross-Machine Sync (`spanglings sync`)**
+  - **Description**: Single-command encrypted export (`spanglings sync export`) and import (`spanglings sync import`) to easily sync exercise completion and SRS states across workstations.
+
+---
+
+## 🔌 Focus Area 9: Language Server Protocol (LSP) Engine (`spanglings lsp`)
+
+- [ ] **SPANG-080: `spanglings lsp` Standard JSON-RPC Server**
+  - **Description**: Native stdio LSP server powering real-time editor integration for VS Code, Neovim, Zed, and Helix.
+- [ ] **SPANG-081: Live In-Editor Diagnostics & Hover Grammar Tooltips**
+  - **Description**: Publishes live diagnostic squigglies on exercise markdown files as the developer types, with rich hover tooltips explaining grammar rules and conjugations.
+- [ ] **SPANG-082: Grammar Autocompletion & Code Action Quick Fixes**
+  - **Description**: Intelligent autocomplete for Spanish verb forms, accents, and triggers, plus one-click Quick Fixes (*"Fix accents"*, *"Mark exercise as completed"*).
+

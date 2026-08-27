@@ -292,3 +292,117 @@ fn test_app_draw_ui_in_search_mode() {
     let mut terminal = Terminal::new(backend).unwrap();
     terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
 }
+
+#[test]
+fn test_tui_conjugator_modal_navigation_and_lookup() {
+    let exercises = create_sample_exercises();
+    let mut app = App::new(exercises, false);
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Editing);
+
+    // Open conjugator modal
+    app.enter_conjugator();
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Conjugating);
+    assert_eq!(app.conjugator_query, "");
+
+    // Type "tener"
+    for c in "tener".chars() {
+        app.insert_conjugator_char(c);
+    }
+    assert_eq!(app.conjugator_query, "tener");
+    assert!(app.conjugator_table.is_some());
+    let table = app.conjugator_table.as_ref().unwrap();
+    assert_eq!(table.infinitive, "tener");
+    assert_eq!(table.present.yo, "tengo");
+    assert_eq!(table.preterite.yo, "tuve");
+    assert_eq!(table.present_subjunctive.yo, "tenga");
+
+    // Scroll
+    app.scroll_conjugator_down();
+    assert_eq!(app.conjugator_scroll, 1);
+    app.scroll_conjugator_up();
+    assert_eq!(app.conjugator_scroll, 0);
+
+    // Backspace
+    app.delete_conjugator_char_backwards();
+    assert_eq!(app.conjugator_query, "tene");
+
+    // Exit conjugator modal
+    app.exit_conjugator();
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Editing);
+}
+
+#[test]
+fn test_tui_reference_browser_modal() {
+    let exercises = create_sample_exercises();
+    let mut app = App::new(exercises, false);
+
+    app.enter_reference_browser();
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::BrowsingReference);
+    assert!(!app.ref_topics.is_empty());
+    assert_eq!(app.ref_filtered_topics.len(), app.ref_topics.len());
+
+    // Filter by "accents"
+    for c in "accents".chars() {
+        app.insert_ref_search_char(c);
+    }
+    assert_eq!(app.ref_query, "accents");
+    assert_eq!(app.ref_filtered_topics.len(), 1);
+    assert_eq!(app.ref_filtered_topics[0], "accents");
+
+    // Clear filter
+    for _ in 0..7 {
+        app.delete_ref_search_char_backwards();
+    }
+    assert_eq!(app.ref_query, "");
+    assert_eq!(app.ref_filtered_topics.len(), app.ref_topics.len());
+
+    // Navigation and scrolling
+    app.next_ref_topic();
+    assert_eq!(app.ref_selected_idx, 1);
+    app.prev_ref_topic();
+    assert_eq!(app.ref_selected_idx, 0);
+
+    app.scroll_ref_down();
+    assert_eq!(app.ref_scroll, 1);
+    app.scroll_ref_up();
+    assert_eq!(app.ref_scroll, 0);
+
+    // Exit reference browser
+    app.exit_reference_browser();
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Editing);
+}
+
+#[test]
+fn test_tui_help_modal() {
+    let exercises = create_sample_exercises();
+    let mut app = App::new(exercises, false);
+
+    app.enter_help();
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Help);
+
+    app.exit_help();
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Editing);
+}
+
+#[test]
+fn test_tui_draw_all_modals_without_panicking() {
+    let exercises = create_sample_exercises();
+    let mut app = App::new(exercises, false);
+    let backend = TestBackend::new(120, 40);
+    let mut terminal = Terminal::new(backend).unwrap();
+
+    // 1. Draw Conjugating modal with active table
+    app.enter_conjugator();
+    for c in "hacer".chars() {
+        app.insert_conjugator_char(c);
+    }
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+
+    // 2. Draw Reference Browser modal
+    app.enter_reference_browser();
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+
+    // 3. Draw Help modal
+    app.enter_help();
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+}

@@ -5,7 +5,7 @@ use ratatui::{
     layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
     text::{Line, Span},
-    widgets::{Block, BorderType, Borders, Paragraph, Wrap},
+    widgets::{Block, BorderType, Borders, Clear, Paragraph, Wrap},
     Frame,
 };
 
@@ -25,6 +25,22 @@ pub fn draw_ui(frame: &mut Frame, app: &App) {
     draw_header(frame, app, main_chunks[0]);
     draw_workspace(frame, app, main_chunks[1]);
     draw_footer(frame, app, main_chunks[2]);
+
+    match app.mode {
+        crate::tui::app::AppMode::Conjugating => {
+            let modal_area = centered_rect(84, 85, size);
+            draw_conjugator_modal(frame, app, modal_area);
+        }
+        crate::tui::app::AppMode::BrowsingReference => {
+            let modal_area = centered_rect(88, 88, size);
+            draw_reference_browser_modal(frame, app, modal_area);
+        }
+        crate::tui::app::AppMode::Help => {
+            let modal_area = centered_rect(74, 78, size);
+            draw_help_modal(frame, app, modal_area);
+        }
+        _ => {}
+    }
 }
 
 fn draw_header(frame: &mut Frame, app: &App, area: Rect) {
@@ -554,8 +570,8 @@ fn draw_footer(frame: &mut Frame, app: &App, area: Rect) {
         .border_type(BorderType::Rounded)
         .border_style(Style::default().fg(Color::DarkGray));
 
-    let shortcuts = if app.mode == crate::tui::app::AppMode::Searching {
-        Line::from(vec![
+    let shortcuts = match app.mode {
+        crate::tui::app::AppMode::Searching => Line::from(vec![
             Span::styled(
                 " [Type] ",
                 Style::default()
@@ -588,9 +604,78 @@ fn draw_footer(frame: &mut Frame, app: &App, area: Rect) {
                     .add_modifier(Modifier::BOLD),
             ),
             Span::styled(" Cancel Search ", Style::default().fg(Color::White)),
-        ])
-    } else {
-        Line::from(vec![
+        ]),
+        crate::tui::app::AppMode::Conjugating => Line::from(vec![
+            Span::styled(
+                " [Type] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Verb  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Up/Down] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Blue)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Scroll Table  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Esc / c] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Red)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Close Conjugator ", Style::default().fg(Color::White)),
+        ]),
+        crate::tui::app::AppMode::BrowsingReference => Line::from(vec![
+            Span::styled(
+                " [Type] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Filter  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Up/Down] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Blue)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Select Topic  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [PgUp/PgDn] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Magenta)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Scroll Card  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Esc / r] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Red)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Close Reference ", Style::default().fg(Color::White)),
+        ]),
+        crate::tui::app::AppMode::Help => Line::from(vec![
+            Span::styled(
+                " [Esc / ? / F1] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Magenta)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Close Help Overlay ", Style::default().fg(Color::White)),
+        ]),
+        crate::tui::app::AppMode::Editing => Line::from(vec![
             Span::styled(
                 " [/] ",
                 Style::default()
@@ -598,68 +683,672 @@ fn draw_footer(frame: &mut Frame, app: &App, area: Rect) {
                     .bg(Color::Yellow)
                     .add_modifier(Modifier::BOLD),
             ),
-            Span::styled(" Search  ", Style::default().fg(Color::White)),
+            Span::styled(" Search ", Style::default().fg(Color::White)),
             Span::styled(
-                " [Enter] ",
-                Style::default()
-                    .fg(Color::Black)
-                    .bg(Color::Cyan)
-                    .add_modifier(Modifier::BOLD),
-            ),
-            Span::styled(" Submit  ", Style::default().fg(Color::White)),
-            Span::styled(
-                " [Ctrl-H / F1] ",
+                " [c] ",
                 Style::default()
                     .fg(Color::Black)
                     .bg(Color::Yellow)
                     .add_modifier(Modifier::BOLD),
             ),
-            Span::styled(" Hint  ", Style::default().fg(Color::White)),
+            Span::styled(" Conjugate ", Style::default().fg(Color::White)),
             Span::styled(
-                " [Ctrl-E / F2] ",
+                " [r] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Ref ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [?] ",
                 Style::default()
                     .fg(Color::Black)
                     .bg(Color::Magenta)
                     .add_modifier(Modifier::BOLD),
             ),
-            Span::styled(" Explain  ", Style::default().fg(Color::White)),
+            Span::styled(" Help ", Style::default().fg(Color::White)),
             Span::styled(
-                " [Tab / Ctrl-N] ",
+                " [Ctrl-H] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Hint ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Tab] ",
                 Style::default()
                     .fg(Color::Black)
                     .bg(Color::Blue)
                     .add_modifier(Modifier::BOLD),
             ),
-            Span::styled(" Next  ", Style::default().fg(Color::White)),
+            Span::styled(" Next ", Style::default().fg(Color::White)),
             Span::styled(
-                " [BackTab / Ctrl-P] ",
+                " [Enter] ",
                 Style::default()
                     .fg(Color::Black)
-                    .bg(Color::Blue)
+                    .bg(Color::Green)
                     .add_modifier(Modifier::BOLD),
             ),
-            Span::styled(" Prev  ", Style::default().fg(Color::White)),
+            Span::styled(" Submit ", Style::default().fg(Color::White)),
             Span::styled(
-                " [Ctrl-R] ",
-                Style::default()
-                    .fg(Color::Black)
-                    .bg(Color::DarkGray)
-                    .add_modifier(Modifier::BOLD),
-            ),
-            Span::styled(" Reset  ", Style::default().fg(Color::White)),
-            Span::styled(
-                " [Esc / Ctrl-C] ",
+                " [Esc] ",
                 Style::default()
                     .fg(Color::Black)
                     .bg(Color::Red)
                     .add_modifier(Modifier::BOLD),
             ),
             Span::styled(" Quit ", Style::default().fg(Color::White)),
-        ])
+        ]),
     };
 
     let footer_para = Paragraph::new(shortcuts)
         .block(footer_block)
         .alignment(Alignment::Center);
     frame.render_widget(footer_para, area);
+}
+
+fn centered_rect(percent_x: u16, percent_y: u16, r: Rect) -> Rect {
+    let popup_layout = Layout::default()
+        .direction(Direction::Vertical)
+        .constraints([
+            Constraint::Percentage((100 - percent_y) / 2),
+            Constraint::Percentage(percent_y),
+            Constraint::Percentage((100 - percent_y) / 2),
+        ])
+        .split(r);
+
+    Layout::default()
+        .direction(Direction::Horizontal)
+        .constraints([
+            Constraint::Percentage((100 - percent_x) / 2),
+            Constraint::Percentage(percent_x),
+            Constraint::Percentage((100 - percent_x) / 2),
+        ])
+        .split(popup_layout[1])[1]
+}
+
+fn draw_conjugator_modal(frame: &mut Frame, app: &App, area: Rect) {
+    frame.render_widget(Clear, area);
+
+    let modal_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(" 📖 Live Spanish Verb Conjugator (Esc or [c] to close) ")
+        .border_style(Style::default().fg(Color::Yellow));
+    frame.render_widget(modal_block.clone(), area);
+
+    let inner_area = modal_block.inner(area);
+    let chunks = Layout::default()
+        .direction(Direction::Vertical)
+        .constraints([
+            Constraint::Length(3), // Search input
+            Constraint::Min(5),    // Table details
+        ])
+        .split(inner_area);
+
+    let search_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(" Infinitive Verb (e.g. tener, hablar, ser, hacer) ")
+        .border_style(Style::default().fg(Color::Cyan));
+
+    let cursor_display = if app.conjugator_cursor < app.conjugator_query.chars().count() {
+        let byte_idx = app
+            .conjugator_query
+            .char_indices()
+            .nth(app.conjugator_cursor)
+            .map(|(i, _)| i)
+            .unwrap_or(app.conjugator_query.len());
+        let (b, rest) = app.conjugator_query.split_at(byte_idx);
+        let mut chars = rest.chars();
+        let c = chars.next().unwrap_or(' ');
+        let rem = chars.as_str();
+        vec![
+            Span::styled(
+                b,
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                c.to_string(),
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                rem,
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
+            ),
+        ]
+    } else {
+        vec![
+            Span::styled(
+                &app.conjugator_query,
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" ", Style::default().fg(Color::Black).bg(Color::Cyan)),
+        ]
+    };
+
+    let search_para = Paragraph::new(Line::from(cursor_display)).block(search_block);
+    frame.render_widget(search_para, chunks[0]);
+
+    if let Some(ref table) = app.conjugator_table {
+        let table_block = Block::default()
+            .borders(Borders::ALL)
+            .border_type(BorderType::Rounded)
+            .title(format!(
+                " Conjugations for: {} ({}) ",
+                table.infinitive.to_uppercase(),
+                table.english
+            ))
+            .border_style(Style::default().fg(Color::Green));
+
+        let mut lines = Vec::new();
+        lines.push(Line::from(vec![
+            Span::styled("Type: ", Style::default().fg(Color::DarkGray)),
+            Span::styled(
+                if table.is_irregular {
+                    "Irregular Stem"
+                } else {
+                    "Regular Verb"
+                },
+                Style::default()
+                    .fg(if table.is_irregular {
+                        Color::LightRed
+                    } else {
+                        Color::Green
+                    })
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled("   Gerund: ", Style::default().fg(Color::DarkGray)),
+            Span::styled(&table.gerund, Style::default().fg(Color::Yellow)),
+            Span::styled("   Participle: ", Style::default().fg(Color::DarkGray)),
+            Span::styled(&table.participle, Style::default().fg(Color::Yellow)),
+        ]));
+        lines.push(Line::from(""));
+
+        let fmt_t = |name: &str, forms: &crate::core::conjugator::PronounForms| -> Vec<Line> {
+            vec![
+                Line::from(Span::styled(
+                    format!("── {} ──", name),
+                    Style::default()
+                        .fg(Color::Cyan)
+                        .add_modifier(Modifier::BOLD),
+                )),
+                Line::from(vec![
+                    Span::styled("yo: ", Style::default().fg(Color::DarkGray)),
+                    Span::styled(
+                        format!("{:<14}", forms.yo),
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled("tú: ", Style::default().fg(Color::DarkGray)),
+                    Span::styled(
+                        format!("{:<14}", forms.tu),
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled("él/ella: ", Style::default().fg(Color::DarkGray)),
+                    Span::styled(
+                        format!("{:<14}", forms.el_ella_usted),
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+                Line::from(vec![
+                    Span::styled("nosotros: ", Style::default().fg(Color::DarkGray)),
+                    Span::styled(
+                        format!("{:<14}", forms.nosotros),
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled("vosotros: ", Style::default().fg(Color::DarkGray)),
+                    Span::styled(
+                        format!("{:<14}", forms.vosotros),
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled("ellos/ellas: ", Style::default().fg(Color::DarkGray)),
+                    Span::styled(
+                        format!("{:<14}", forms.ellos_ellas_ustedes),
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+                Line::from(""),
+            ]
+        };
+
+        lines.extend(fmt_t("Present Indicative", &table.present));
+        lines.extend(fmt_t("Preterite (Indefinido)", &table.preterite));
+        lines.extend(fmt_t("Imperfect (Copretérito)", &table.imperfect));
+        lines.extend(fmt_t("Future (Futuro Simple)", &table.future));
+        lines.extend(fmt_t("Conditional (Pospretérito)", &table.conditional));
+        lines.extend(fmt_t("Present Subjunctive", &table.present_subjunctive));
+        lines.extend(fmt_t(
+            "Imperfect Subjunctive (-ra)",
+            &table.imperfect_subjunctive_ra,
+        ));
+        lines.extend(fmt_t(
+            "Imperfect Subjunctive (-se)",
+            &table.imperfect_subjunctive_se,
+        ));
+
+        lines.push(Line::from(Span::styled(
+            "── Imperatives ──",
+            Style::default()
+                .fg(Color::Cyan)
+                .add_modifier(Modifier::BOLD),
+        )));
+        lines.push(Line::from(vec![
+            Span::styled(
+                "Affirmative (tú/usted/nosotros/vosotros/ustedes): ",
+                Style::default().fg(Color::DarkGray),
+            ),
+            Span::styled(
+                format!(
+                    "{}, {}, {}, {}, {}",
+                    table.imperative_affirmative.tu,
+                    table.imperative_affirmative.usted,
+                    table.imperative_affirmative.nosotros,
+                    table.imperative_affirmative.vosotros,
+                    table.imperative_affirmative.ustedes
+                ),
+                Style::default()
+                    .fg(Color::Green)
+                    .add_modifier(Modifier::BOLD),
+            ),
+        ]));
+        lines.push(Line::from(vec![
+            Span::styled(
+                "Negative (tú/usted/nosotros/vosotros/ustedes):    ",
+                Style::default().fg(Color::DarkGray),
+            ),
+            Span::styled(
+                format!(
+                    "{}, {}, {}, {}, {}",
+                    table.imperative_negative.tu,
+                    table.imperative_negative.usted,
+                    table.imperative_negative.nosotros,
+                    table.imperative_negative.vosotros,
+                    table.imperative_negative.ustedes
+                ),
+                Style::default()
+                    .fg(Color::LightRed)
+                    .add_modifier(Modifier::BOLD),
+            ),
+        ]));
+
+        let table_para = Paragraph::new(lines)
+            .block(table_block)
+            .scroll((app.conjugator_scroll as u16, 0))
+            .wrap(Wrap { trim: false });
+        frame.render_widget(table_para, chunks[1]);
+    } else {
+        let empty_block = Block::default()
+            .borders(Borders::ALL)
+            .border_type(BorderType::Rounded)
+            .title(" Conjugation Matrix ")
+            .border_style(Style::default().fg(Color::DarkGray));
+
+        let msg = if app.conjugator_query.trim().is_empty() {
+            "Type an infinitive (e.g. 'tener', 'hablar', 'ser', 'hacer', 'ir', 'escribir') in the search box above."
+        } else {
+            "No direct conjugation found. Type a valid Spanish verb ending in -ar, -er, or -ir."
+        };
+
+        let empty_para = Paragraph::new(msg)
+            .block(empty_block)
+            .alignment(Alignment::Center);
+        frame.render_widget(empty_para, chunks[1]);
+    }
+}
+
+fn draw_reference_browser_modal(frame: &mut Frame, app: &App, area: Rect) {
+    frame.render_widget(Clear, area);
+
+    let modal_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(" 📚 Grammar Reference Browser (Esc or [r] to close) ")
+        .border_style(Style::default().fg(Color::Cyan));
+    frame.render_widget(modal_block.clone(), area);
+
+    let inner_area = modal_block.inner(area);
+    let chunks = Layout::default()
+        .direction(Direction::Vertical)
+        .constraints([
+            Constraint::Length(3), // Filter
+            Constraint::Min(5),    // Topics + Card Split
+        ])
+        .split(inner_area);
+
+    let filter_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(" Filter Topics (e.g. subjunctive, por-para, accents) ")
+        .border_style(Style::default().fg(Color::Yellow));
+
+    let cursor_display = if app.ref_cursor < app.ref_query.chars().count() {
+        let byte_idx = app
+            .ref_query
+            .char_indices()
+            .nth(app.ref_cursor)
+            .map(|(i, _)| i)
+            .unwrap_or(app.ref_query.len());
+        let (b, rest) = app.ref_query.split_at(byte_idx);
+        let mut chars = rest.chars();
+        let c = chars.next().unwrap_or(' ');
+        let rem = chars.as_str();
+        vec![
+            Span::styled(
+                b,
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                c.to_string(),
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                rem,
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
+            ),
+        ]
+    } else {
+        vec![
+            Span::styled(
+                &app.ref_query,
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" ", Style::default().fg(Color::Black).bg(Color::Yellow)),
+        ]
+    };
+
+    let filter_para = Paragraph::new(Line::from(cursor_display)).block(filter_block);
+    frame.render_widget(filter_para, chunks[0]);
+
+    let browser_chunks = Layout::default()
+        .direction(Direction::Horizontal)
+        .constraints([Constraint::Length(26), Constraint::Min(30)])
+        .split(chunks[1]);
+
+    let topics_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(format!(" Topics ({}) ", app.ref_filtered_topics.len()))
+        .border_style(Style::default().fg(Color::DarkGray));
+
+    let topic_lines: Vec<Line> = if app.ref_filtered_topics.is_empty() {
+        vec![Line::from(Span::styled(
+            "No topics match query",
+            Style::default().fg(Color::DarkGray),
+        ))]
+    } else {
+        app.ref_filtered_topics
+            .iter()
+            .enumerate()
+            .map(|(idx, topic)| {
+                if idx == app.ref_selected_idx {
+                    Line::from(vec![
+                        Span::styled(
+                            " ▶ ",
+                            Style::default()
+                                .fg(Color::Black)
+                                .bg(Color::Cyan)
+                                .add_modifier(Modifier::BOLD),
+                        ),
+                        Span::styled(
+                            format!("{:<18}", topic),
+                            Style::default()
+                                .fg(Color::Black)
+                                .bg(Color::Cyan)
+                                .add_modifier(Modifier::BOLD),
+                        ),
+                    ])
+                } else {
+                    Line::from(vec![
+                        Span::styled("   ", Style::default().fg(Color::DarkGray)),
+                        Span::styled(*topic, Style::default().fg(Color::White)),
+                    ])
+                }
+            })
+            .collect()
+    };
+
+    let topics_para = Paragraph::new(topic_lines).block(topics_block);
+    frame.render_widget(topics_para, browser_chunks[0]);
+
+    let selected_topic = app
+        .ref_filtered_topics
+        .get(app.ref_selected_idx)
+        .copied()
+        .unwrap_or("subjunctive");
+    let card_content =
+        get_reference_card(selected_topic).unwrap_or("No reference content found for this topic.");
+
+    let card_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(format!(" Cheat Sheet: {} ", selected_topic))
+        .border_style(Style::default().fg(Color::Cyan));
+
+    let card_lines: Vec<Line> = card_content
+        .lines()
+        .map(|l| Line::from(Span::styled(l, Style::default().fg(Color::LightCyan))))
+        .collect();
+
+    let card_para = Paragraph::new(card_lines)
+        .block(card_block)
+        .scroll((app.ref_scroll as u16, 0))
+        .wrap(Wrap { trim: false });
+    frame.render_widget(card_para, browser_chunks[1]);
+}
+
+fn draw_help_modal(frame: &mut Frame, _app: &App, area: Rect) {
+    frame.render_widget(Clear, area);
+
+    let modal_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(" 💡 Keyboard Shortcuts & Power Tools (Esc, ?, or F1 to close) ")
+        .border_style(Style::default().fg(Color::Magenta));
+
+    let help_text = vec![
+        Line::from(Span::styled(
+            "Navigation & Exercise Control",
+            Style::default()
+                .fg(Color::Yellow)
+                .add_modifier(Modifier::BOLD | Modifier::UNDERLINED),
+        )),
+        Line::from(vec![
+            Span::styled(
+                "  [Tab] / [Ctrl-N]      ",
+                Style::default()
+                    .fg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Advance to the next exercise",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(vec![
+            Span::styled(
+                "  [BackTab] / [Ctrl-P]  ",
+                Style::default()
+                    .fg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Return to the previous exercise",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(vec![
+            Span::styled(
+                "  [Ctrl-R]              ",
+                Style::default()
+                    .fg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Reset current exercise state",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(""),
+        Line::from(Span::styled(
+            "In-TUI Modals & Power Tools",
+            Style::default()
+                .fg(Color::Yellow)
+                .add_modifier(Modifier::BOLD | Modifier::UNDERLINED),
+        )),
+        Line::from(vec![
+            Span::styled(
+                "  [c]                   ",
+                Style::default()
+                    .fg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Open interactive live Verb Conjugator popup",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(vec![
+            Span::styled(
+                "  [r]                   ",
+                Style::default()
+                    .fg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Open full Grammar Reference Browser & Cheat Sheets",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(vec![
+            Span::styled(
+                "  [/]                   ",
+                Style::default()
+                    .fg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Filter and search exercises by ID, topic, or level",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(vec![
+            Span::styled(
+                "  [?] / [F1]            ",
+                Style::default()
+                    .fg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Toggle this keyboard shortcut help overlay",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(""),
+        Line::from(Span::styled(
+            "Hints & Diagnostics",
+            Style::default()
+                .fg(Color::Yellow)
+                .add_modifier(Modifier::BOLD | Modifier::UNDERLINED),
+        )),
+        Line::from(vec![
+            Span::styled(
+                "  [Ctrl-H]              ",
+                Style::default()
+                    .fg(Color::Green)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Toggle 3-tiered progressive hints in workspace",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(vec![
+            Span::styled(
+                "  [Ctrl-E] / [F2]       ",
+                Style::default()
+                    .fg(Color::Green)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Toggle topic grammar reference card in workspace",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(vec![
+            Span::styled(
+                "  [Enter]               ",
+                Style::default()
+                    .fg(Color::Green)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Submit and evaluate answer with rustc-style diagnostics",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(""),
+        Line::from(Span::styled(
+            "General",
+            Style::default()
+                .fg(Color::Yellow)
+                .add_modifier(Modifier::BOLD | Modifier::UNDERLINED),
+        )),
+        Line::from(vec![
+            Span::styled(
+                "  [Esc]                 ",
+                Style::default().fg(Color::Red).add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Dismiss active modal / Exit application",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(vec![
+            Span::styled(
+                "  [Ctrl-C] / [Ctrl-Q]   ",
+                Style::default().fg(Color::Red).add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Force quit Spanglings TUI",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+    ];
+
+    let help_para = Paragraph::new(help_text)
+        .block(modal_block)
+        .wrap(Wrap { trim: false });
+    frame.render_widget(help_para, area);
 }
