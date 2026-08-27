@@ -26,6 +26,18 @@ pub fn draw_ui(frame: &mut Frame, app: &App) {
     draw_workspace(frame, app, main_chunks[1]);
     draw_footer(frame, app, main_chunks[2]);
 
+    if app.show_tour_welcome {
+        let modal_area = centered_rect(65, 40, size);
+        draw_tour_welcome_modal(frame, modal_area);
+        return;
+    }
+
+    if app.show_tour_modal {
+        let modal_area = centered_rect(75, 75, size);
+        draw_tour_station_modal(frame, app, modal_area);
+        return;
+    }
+
     match app.mode {
         crate::tui::app::AppMode::Conjugating => {
             let modal_area = centered_rect(84, 85, size);
@@ -738,6 +750,14 @@ fn draw_footer(frame: &mut Frame, app: &App, area: Rect) {
                     .add_modifier(Modifier::BOLD),
             ),
             Span::styled(" Ref ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [T] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Green)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Tour ", Style::default().fg(Color::White)),
             Span::styled(
                 " [?] ",
                 Style::default()
@@ -1737,5 +1757,281 @@ fn draw_placement_test_modal(frame: &mut Frame, app: &App, area: Rect) {
 
             frame.render_widget(action_text, chunks[2]);
         }
+    }
+}
+
+fn draw_tour_welcome_modal(frame: &mut Frame, area: Rect) {
+    frame.render_widget(Clear, area);
+
+    let modal_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(" Welcome to Spanglings! ")
+        .border_style(Style::default().fg(Color::Cyan));
+    frame.render_widget(modal_block.clone(), area);
+
+    let inner_area = modal_block.inner(area);
+    let chunks = Layout::default()
+        .direction(Direction::Vertical)
+        .constraints([
+            Constraint::Length(3), // Greeting headline
+            Constraint::Min(4),    // Description
+            Constraint::Length(3), // Question & prompt action
+        ])
+        .split(inner_area);
+
+    let headline = Paragraph::new(Line::from(vec![Span::styled(
+        " 🇪🇸 ¡Bienvenido a Spanglings! ",
+        Style::default()
+            .fg(Color::Yellow)
+            .add_modifier(Modifier::BOLD),
+    )]))
+    .alignment(Alignment::Center);
+    frame.render_widget(headline, chunks[0]);
+
+    let body_text = vec![
+        Line::from(Span::styled(
+            "Spanglings is an active-recall, developer-grade learning environment for Spanish (B1-C1).",
+            Style::default().fg(Color::White),
+        )),
+        Line::from(""),
+        Line::from(Span::styled(
+            "Master grammar rules through compiler-style diagnostics, spaced repetition (SRS), and hands-on drills.",
+            Style::default().fg(Color::LightCyan),
+        )),
+    ];
+    let body_para = Paragraph::new(body_text)
+        .alignment(Alignment::Center)
+        .wrap(Wrap { trim: true });
+    frame.render_widget(body_para, chunks[1]);
+
+    let prompt_line = Paragraph::new(Line::from(vec![
+        Span::styled(
+            "Would you like to take the quick interactive tour? ",
+            Style::default()
+                .fg(Color::White)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(
+            " [Y]es ",
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Green)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(" / ", Style::default().fg(Color::DarkGray)),
+        Span::styled(
+            " [N]o ",
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Red)
+                .add_modifier(Modifier::BOLD),
+        ),
+    ]))
+    .alignment(Alignment::Center);
+    frame.render_widget(prompt_line, chunks[2]);
+}
+
+fn draw_tour_station_modal(frame: &mut Frame, app: &App, area: Rect) {
+    frame.render_widget(Clear, area);
+
+    let stations = crate::cli::commands::tour::get_tour_stations();
+    let total = stations.len();
+    let station_idx = app.tour_current_station.min(total.saturating_sub(1));
+    let station = stations.get(station_idx);
+
+    let title = format!(
+        " ✦ Interactive Onboarding Tour ({}/{}) ",
+        station_idx + 1,
+        total
+    );
+
+    let modal_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(title)
+        .border_style(Style::default().fg(Color::Cyan));
+    frame.render_widget(modal_block.clone(), area);
+
+    let inner_area = modal_block.inner(area);
+    let chunks = Layout::default()
+        .direction(Direction::Vertical)
+        .constraints([
+            Constraint::Length(3), // Header & Subtitle
+            Constraint::Min(6),    // Description, Bullets, Examples / Challenge
+            Constraint::Length(3), // Navigation footer
+        ])
+        .split(inner_area);
+
+    if let Some(st) = station {
+        // Station Header & Subtitle
+        let header_lines = vec![
+            Line::from(vec![
+                Span::styled(
+                    format!(" [Station {}/{}] ", station_idx + 1, total),
+                    Style::default()
+                        .fg(Color::Yellow)
+                        .add_modifier(Modifier::BOLD),
+                ),
+                Span::styled(
+                    &st.title,
+                    Style::default()
+                        .fg(Color::White)
+                        .add_modifier(Modifier::BOLD),
+                ),
+            ]),
+            Line::from(vec![
+                Span::styled("   ", Style::default()),
+                Span::styled(
+                    &st.subtitle,
+                    Style::default()
+                        .fg(Color::DarkGray)
+                        .add_modifier(Modifier::ITALIC),
+                ),
+            ]),
+        ];
+        let header_para = Paragraph::new(header_lines);
+        frame.render_widget(header_para, chunks[0]);
+
+        // Main content
+        let mut content_lines = Vec::new();
+        content_lines.push(Line::from(Span::styled(
+            &st.description,
+            Style::default().fg(Color::White),
+        )));
+        content_lines.push(Line::from(""));
+
+        for point in &st.bullet_points {
+            content_lines.push(Line::from(vec![
+                Span::styled(
+                    "  • ",
+                    Style::default()
+                        .fg(Color::Cyan)
+                        .add_modifier(Modifier::BOLD),
+                ),
+                Span::styled(point, Style::default().fg(Color::LightCyan)),
+            ]));
+        }
+
+        if let Some(cmd) = &st.simulated_command {
+            content_lines.push(Line::from(""));
+            content_lines.push(Line::from(vec![
+                Span::styled(
+                    "  Example Command: ",
+                    Style::default()
+                        .fg(Color::Yellow)
+                        .add_modifier(Modifier::BOLD),
+                ),
+                Span::styled(format!("$ {}", cmd), Style::default().fg(Color::Green)),
+            ]));
+        }
+
+        if let Some(out) = &st.simulated_output {
+            content_lines.push(Line::from(Span::styled(
+                "  Output:",
+                Style::default()
+                    .fg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            )));
+            for line in out.lines() {
+                content_lines.push(Line::from(Span::styled(
+                    format!("    {}", line),
+                    Style::default().fg(Color::DarkGray),
+                )));
+            }
+        }
+
+        if let Some(challenge) = &st.challenge {
+            content_lines.push(Line::from(""));
+            content_lines.push(Line::from(vec![
+                Span::styled(
+                    "  Challenge: ",
+                    Style::default()
+                        .fg(Color::Magenta)
+                        .add_modifier(Modifier::BOLD),
+                ),
+                Span::styled(
+                    &challenge.prompt,
+                    Style::default()
+                        .fg(Color::White)
+                        .add_modifier(Modifier::BOLD),
+                ),
+            ]));
+            if let Some(tip) = &challenge.tip {
+                content_lines.push(Line::from(vec![
+                    Span::styled("  Tip: ", Style::default().fg(Color::DarkGray)),
+                    Span::styled(
+                        tip,
+                        Style::default()
+                            .fg(Color::DarkGray)
+                            .add_modifier(Modifier::ITALIC),
+                    ),
+                ]));
+            }
+            content_lines.push(Line::from(vec![
+                Span::styled("  Expected Answer: ", Style::default().fg(Color::Green)),
+                Span::styled(
+                    &challenge.expected_input,
+                    Style::default()
+                        .fg(Color::Green)
+                        .add_modifier(Modifier::BOLD),
+                ),
+                Span::styled(
+                    format!(" — {}", challenge.explanation),
+                    Style::default().fg(Color::Gray),
+                ),
+            ]));
+        }
+
+        let content_block = Block::default()
+            .borders(Borders::ALL)
+            .border_type(BorderType::Rounded)
+            .border_style(Style::default().fg(Color::DarkGray));
+        let content_para = Paragraph::new(content_lines)
+            .block(content_block)
+            .wrap(Wrap { trim: false });
+        frame.render_widget(content_para, chunks[1]);
+
+        // Navigation Footer
+        let is_last = station_idx + 1 >= total;
+        let next_label = if is_last { "Finish Tour" } else { "Next" };
+        let footer_spans = vec![
+            Span::styled(
+                " [← / p] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Blue)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Previous  |  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [→ / n / Enter] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Green)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                format!(" {}  |  ", next_label),
+                Style::default().fg(Color::White),
+            ),
+            Span::styled(
+                " [Esc / q] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Red)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Close ", Style::default().fg(Color::White)),
+        ];
+
+        let footer_block = Block::default()
+            .borders(Borders::ALL)
+            .border_type(BorderType::Rounded)
+            .border_style(Style::default().fg(Color::DarkGray));
+        let footer_para = Paragraph::new(Line::from(footer_spans))
+            .block(footer_block)
+            .alignment(Alignment::Center);
+        frame.render_widget(footer_para, chunks[2]);
     }
 }
