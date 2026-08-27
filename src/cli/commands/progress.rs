@@ -1,7 +1,7 @@
 use crate::core::curriculum::{find_all_exercises_or_embedded, Level};
 use crate::core::exercise::Exercise;
 use crate::core::state::AppState;
-use chrono::{DateTime, Utc};
+use chrono::{DateTime, Datelike, Duration, NaiveDate, Utc};
 use colored::Colorize;
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
@@ -26,6 +26,14 @@ pub struct TopicWeaknessStat {
 }
 
 #[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct ActivitySummary {
+    pub current_streak: u32,
+    pub longest_streak: u32,
+    pub total_active_days: u32,
+    pub daily_counts: HashMap<String, u32>,
+}
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
 pub struct ProgressSummary {
     pub total: usize,
     pub completed: usize,
@@ -34,6 +42,136 @@ pub struct ProgressSummary {
     pub levels: std::collections::BTreeMap<String, LevelProgress>,
     pub weak_topics: Vec<TopicWeaknessStat>,
     pub recommendations: Vec<String>,
+    pub activity: ActivitySummary,
+}
+
+pub fn compute_activity_summary(state: &AppState, now: DateTime<Utc>) -> ActivitySummary {
+    let mut counts = state.activity_history.clone();
+
+    for stat in state.stats.values() {
+        if let Some(comp_at) = stat.completed_at {
+            let day = comp_at.format("%Y-%m-%d").to_string();
+            counts.entry(day).or_insert(1);
+        }
+    }
+
+    let today = now.date_naive();
+    let total_active_days = counts.values().filter(|&&c| c > 0).count() as u32;
+
+    let mut current_streak = 0;
+    let mut check_day = today;
+    let today_count = counts
+        .get(&today.format("%Y-%m-%d").to_string())
+        .copied()
+        .unwrap_or(0);
+    if today_count == 0 {
+        if let Some(yesterday) = today.pred_opt() {
+            let y_count = counts
+                .get(&yesterday.format("%Y-%m-%d").to_string())
+                .copied()
+                .unwrap_or(0);
+            if y_count > 0 {
+                check_day = yesterday;
+            }
+        }
+    }
+
+    while let Some(count) = counts.get(&check_day.format("%Y-%m-%d").to_string()) {
+        if *count > 0 {
+            current_streak += 1;
+            if let Some(prev) = check_day.pred_opt() {
+                check_day = prev;
+            } else {
+                break;
+            }
+        } else {
+            break;
+        }
+    }
+
+    let mut sorted_days: Vec<NaiveDate> = counts
+        .iter()
+        .filter(|(_, &c)| c > 0)
+        .filter_map(|(d, _)| NaiveDate::parse_from_str(d, "%Y-%m-%d").ok())
+        .collect();
+    sorted_days.sort();
+    sorted_days.dedup();
+
+    let mut longest_streak = 0;
+    let mut temp_streak = 0;
+    let mut prev_day: Option<NaiveDate> = None;
+
+    for day in sorted_days {
+        if let Some(prev) = prev_day {
+            if day == prev + Duration::days(1) {
+                temp_streak += 1;
+            } else {
+                temp_streak = 1;
+            }
+        } else {
+            temp_streak = 1;
+        }
+        if temp_streak > longest_streak {
+            longest_streak = temp_streak;
+        }
+        prev_day = Some(day);
+    }
+
+    if current_streak > longest_streak {
+        longest_streak = current_streak;
+    }
+
+    ActivitySummary {
+        current_streak,
+        longest_streak,
+        total_active_days,
+        daily_counts: counts,
+    }
+}
+
+pub fn render_activity_heatmap(
+    daily_counts: &HashMap<String, u32>,
+    now: DateTime<Utc>,
+    weeks: usize,
+) -> Vec<String> {
+    let today = now.date_naive();
+    let today_weekday = today.weekday().num_days_from_monday();
+    let end_date = today + Duration::days((6 - today_weekday) as i64);
+    let total_days = weeks * 7;
+    let start_date = end_date - Duration::days((total_days - 1) as i64);
+
+    let days_labels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    let mut rows: Vec<String> = Vec::new();
+
+    for row_idx in 0..7 {
+        let label = if row_idx % 2 == 0 {
+            days_labels[row_idx]
+        } else {
+            "   "
+        };
+        let mut row_str = format!("  {} ", label);
+        for col_idx in 0..weeks {
+            let cell_date = start_date + Duration::days((col_idx * 7 + row_idx) as i64);
+            if cell_date > today {
+                row_str.push_str("  ");
+                continue;
+            }
+            let key = cell_date.format("%Y-%m-%d").to_string();
+            let count = daily_counts.get(&key).copied().unwrap_or(0);
+            let cell = match count {
+                0 => "·".dimmed().to_string(),
+                1..=2 => "░".green().to_string(),
+                3..=5 => "▒".green().bold().to_string(),
+                6..=9 => "▓".bright_green().to_string(),
+                _ => "█".bright_green().bold().to_string(),
+            };
+            row_str.push_str(&cell);
+            row_str.push(' ');
+        }
+        rows.push(row_str);
+    }
+
+    rows
 }
 
 pub fn compute_weakness_profile(
@@ -179,6 +317,8 @@ pub fn get_progress_json() -> anyhow::Result<String> {
         .map(|w| w.recommendation.clone())
         .collect();
 
+    let activity = compute_activity_summary(&state, now);
+
     let summary = ProgressSummary {
         total,
         completed,
@@ -187,6 +327,7 @@ pub fn get_progress_json() -> anyhow::Result<String> {
         levels: levels_map,
         weak_topics,
         recommendations,
+        activity,
     };
 
     let json_str = serde_json::to_string_pretty(&summary)?;
@@ -298,6 +439,27 @@ pub fn show_progress(json: bool) -> anyhow::Result<()> {
         mastered_count.to_string().green()
     );
     println!("  • Avg Ease Factor: {:.2}", avg_ease);
+
+    let activity = compute_activity_summary(&state, now);
+    println!("\n{}", "Learning Activity Calendar (Last 12 Weeks):".bold());
+    println!(
+        "  Streak: {} days (Best: {}) | Total Active Days: {}",
+        activity.current_streak.to_string().yellow().bold(),
+        activity.longest_streak.to_string().green().bold(),
+        activity.total_active_days.to_string().cyan()
+    );
+    let heatmap_rows = render_activity_heatmap(&activity.daily_counts, now, 12);
+    for row in heatmap_rows {
+        println!("{}", row);
+    }
+    println!(
+        "  Legend: {} 0  {} 1-2  {} 3-5  {} 6-9  {} 10+",
+        "·".dimmed(),
+        "░".green(),
+        "▒".green().bold(),
+        "▓".bright_green(),
+        "█".bright_green().bold()
+    );
 
     let weak_topics = compute_weakness_profile(&exercises, &state, now);
     println!(
