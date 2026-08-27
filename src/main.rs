@@ -50,6 +50,13 @@ fn main() -> anyhow::Result<()> {
                 std::process::exit(1);
             }
         }
+        Some(Commands::Conjugate { verb, tense }) => {
+            spanglings::cli::commands::conjugate::run_conjugate(
+                &verb,
+                tense.as_deref(),
+                cli.json,
+            )?;
+        }
         Some(Commands::Tui) => {
             spanglings::tui::start_tui(cli.strict_accents)?;
         }

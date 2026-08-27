@@ -72,6 +72,13 @@ pub enum Commands {
         /// Specific exercise path or ID to check (checks all if omitted)
         exercise: Option<String>,
     },
+    /// Look up full conjugation tables and tenses for any Spanish verb
+    Conjugate {
+        /// Verb infinitive to conjugate (e.g. 'haber', 'ser', 'poner', 'hablar')
+        verb: String,
+        /// Optional tense filter (e.g. 'subjuntivo', 'imperativo', 'preterito')
+        tense: Option<String>,
+    },
     /// Launch the interactive terminal UI
     Tui,
     /// Reset an exercise to its initial prompt
