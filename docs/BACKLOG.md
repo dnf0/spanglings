@@ -237,3 +237,34 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
 - [x] **SPANG-154: Architectural Decision Record ADR-0003**
   - **Description**: Documented architecture and rationale in `docs/adr/0003-language-completeness-and-expanded-ontology.md`.
 
+---
+
+## 🏆 Focus Area 17: Full-Spectrum C1–C2 Linguistic Completeness (Completed)
+
+- [x] **SPANG-160: Linguistic Knowledge Graph Expansion to 81 Concepts (`src/core/graph.rs`)**
+  - **Description**: Expanded default ontology from 66 to 81 concepts covering verbs of becoming/transformation, epistemic adverbs with mood selection constraints, possessive and ethic datives, corrective and concessive polarities, participial absolute constructions, and scalar concession / intensive connectors.
+- [x] **SPANG-161: Six New Grammar Reference Cheat Sheets (`src/core/reference.rs`, `docs/grammar-reference.md`)**
+  - **Topics**: `verbs-of-becoming`, `epistemic-adverbs`, `possessive-datives`, `corrective-polarity`, `participial-absolutes`, `scalar-concession` (24 reference cards total).
+- [x] **SPANG-162: Curriculum Expansion: Tracks 54 to 59 (36 New Exercises, 339 Total across 60 Tracks)**
+  - **Description**: Authored 36 handcrafted exercises with 3-tier progressive hints and targeted diagnostic rules across:
+    - Track 54: `54_verbs_of_becoming_and_transformation` (B2–C1)
+    - Track 55: `55_epistemic_adverbs_and_mood_selection` (B1–C1)
+    - Track 56: `56_datives_of_possession_and_ethic_datives` (B1–C1)
+    - Track 57: `57_corrective_and_concessive_polarities` (B2–C1)
+    - Track 58: `58_participial_absolute_constructions` (C1–C2)
+    - Track 59: `59_scalar_concession_and_intensive_connectors` (C1–C2)
+- [x] **SPANG-163: Targeted Diagnostic Compiler Rules (E0054–E0059)**
+  - **Description**: Added targeted diagnostic error codes in `src/engine/rules.rs` and `src/engine/validator.rs`.
+- [x] **SPANG-164: Architectural Decision Record ADR-0004**
+  - **Description**: Documented architecture and rationale in `docs/adr/0004-full-spectrum-c1-c2-linguistic-completeness.md`.
+
+---
+
+## 🔮 Future Horizons & Stretch Ideas (Optional / Community)
+
+- [ ] **Homebrew Formula / Tap (`brew install spanglings`)**:
+  - Package binary for macOS/Linux users who don't have the Rust toolchain installed.
+- [ ] **WebAssembly In-Browser Playground (`wasm-pack`)**:
+  - Run the Spanglings validator and interactive exercises directly on the documentation website via WebAssembly.
+- [ ] **Audio & Pronunciation Synthesis (Optional CLI flag `--audio`)**:
+  - Optional integration with native text-to-speech engines (`say` on macOS, `espeak-ng` on Linux) to speak prompts and correct solutions aloud during watch mode and TUI exercises.
