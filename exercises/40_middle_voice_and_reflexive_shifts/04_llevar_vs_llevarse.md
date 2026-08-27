@@ -1,0 +1,32 @@
+<!-- I AM NOT DONE -->
+# Middle-Voice & Reflexive Shifts 04: Llevar vs Llevarse (Transport vs Social Affinity / Appropriating)
+<!-- id: b2_reflex_llevar_vs_llevarse | level: B2 | topic: middle_voice_and_reflexive_shifts | type: cloze -->
+
+> **Grammar & Lexicon**: **Llevar** means to carry or transport an object (*llevo las llaves*). **Llevarse bien/mal con** denotes interpersonal harmony (*me llevo bien con mis colegas*), and **llevarse algo** denotes winning or taking possession of something (*se llevó el premio*).
+
+### Context
+English: "Besides getting along great with all team members, she took home the annual innovation award."
+
+### Exercise
+Además de (llevarse de maravilla con todos los integrantes, se llevó el premio / llevarse muy bien con) ___ anual a la innovación.
+
+<!-- SOLUTION
+llevarse de maravilla con todos los integrantes, se llevó el premio
+-->
+
+<!-- ALTERNATIVES
+llevarse de maravilla con todos los integrantes, se llevo el premio
+llevarse muy bien con todos los integrantes, se llevó el premio
+llevarse muy bien con todos los integrantes, se llevo el premio
+llevarse excelente con todos los integrantes, se llevó el premio
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "llevar de maravilla con todos los integrantes, llevó el premio" | code: "E4004" | message: "Both 'getting along with someone' and 'winning/taking a prize' require pronominal 'llevarse'."
+-->
+
+<!-- HINTS
+Tier 1: Combine 'llevarse de maravilla con todos los integrantes, se llevó el premio'.
+Tier 2: 'llevarse' + 'de' + 'maravilla' + 'con' + 'todos' + 'los' + 'integrantes,' + 'se' + 'llevó' + 'el' + 'premio'.
+Tier 3: Solution: 'llevarse de maravilla con todos los integrantes, se llevó el premio'.
+-->

@@ -146,3 +146,19 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
   - **Topics**: *rastrear* vs *trackear*, *personalizar* vs *customizar*, *rendir* vs *performar*, *desaconsejar/descontinuar* vs *deprecar*, *redirigir* vs *forwardear*, *restablecer* vs *resetear*.
 - [x] **SPANG-104: Track 35 - Latin American Enterprise SLA & Risk Governance (C1)**
   - **Topics**: *acuerdos de confidencialidad*, *lucro cesante y daño emergente*, *cláusulas de rescisión por incumplimiento*, *planes de mitigación de riesgos*, *mantener indemne*, *penalizaciones económicas y créditos de servicio*.
+---
+
+## 🗣️ Focus Area 12: Standard Spanish, Everyday Life & General Conversational Expansion (Completed)
+
+- [x] **SPANG-110: Track 36 - Everyday Life, Housing & Practical Bureaucracy (B1)**
+  - **Topics**: Lease agreements & deposits (*contrato de arrendamiento*, *fianza*), setting up utilities (*dar de alta el suministro*), bank transfers & fees (*transferencia bancaria*, *comisión*), refunds (*solicitar un reembolso*), post office (*recoger un paquete*), transit transfers (*hacer transbordo*).
+- [x] **SPANG-111: Track 37 - Healthcare, Medical Encounters & Symptoms (B1–B2)**
+  - **Topics**: Physical symptoms & discomfort (*punzadas agudas*, *mareos*), prescriptions & dosages (*recetar antibióticos*, *dosis cada ocho horas*), OTC drugs & leaflets (*medicamento de venta libre*, *prospecto*), emergency room & discharge (*urgencias*, *alta médica*), specialist checkups (*cita previa*, *revisión anual*), allergies (*alérgico a frutos secos*, *intolerancia a la lactosa*).
+- [x] **SPANG-112: Track 38 - Dining, Socializing, Small Talk & Nightlife (B1–B2)**
+  - **Topics**: Split checks (*pedir la cuenta por separado*), meeting up & plans (*quedar a las ocho*, *cancelar a última hora*), compliments & reassurances (*lo bien que le quedaba*, *no te preocupes*), discourse softeners (*por cierto*, *la verdad es que*), banter (*armar un plan*, *pasarla muy bien*), friendly goodbyes (*estamos en contacto*, *avísame en cuanto llegues*).
+- [x] **SPANG-113: Track 39 - Nuanced Prepositions & Spatial/Temporal Locutions (B1–C1)**
+  - **Topics**: *Hacia* vs *Hasta* (direction vs endpoint), *Tras*, *Según* & *Bajo* (formal sequence & condition), compound locutions (*a base de*, *a expensas de*), elapsed past vs future spans (*al cabo de* vs *dentro de*), spatial extension (*a lo largo de*, *alrededor de*), origin & channels (*a raíz de*, *por medio de*).
+- [x] **SPANG-114: Track 40 - Middle-Voice Shifts & Reflexive Nuances (B1–C1)**
+  - **Topics**: *Ir* vs *Irse* (destination vs departure), *Dormir* vs *Dormirse* (state vs falling asleep), *Comer* vs *Comerse* (atelic vs total consumption), *Llevar* vs *Llevarse* (transport vs getting along / taking away), *Quedar* vs *Quedarse* (meeting/fit vs staying), *Volver* vs *Volverse* (return vs permanent character transformation).
+- [x] **SPANG-115: Track 41 - Advanced Temporal, Manner & Concessive Adverbial Clauses (B2–C1)**
+  - **Topics**: *A medida que* / *Conforme* (proportional change), *De modo que* (purpose vs consequence), *En tanto que* / *Mientras* (duration condition), *Tan pronto como* / *Apenas* (immediate succession), *Salvo que* / *A menos que* (exceptive subjunctive), *Siempre y cuando* / *A condición de que* (contractual condition).
