@@ -142,7 +142,7 @@ Display in-terminal grammar cheat sheet.
 spanglings explain <TOPIC>
 ```
 
-**Topics:** `ser-estar`, `past-tenses`, `subjunctive`, `por-para`, `pronouns`, `accidental-se`, `accents`, `tech`, `business`, `false-friends`, `voseo`, `prepositions`.
+**Topics:** `ser-estar`, `past-tenses`, `subjunctive`, `por-para`, `pronouns`, `accidental-se`, `accents`, `tech`, `business`, `false-friends`, `voseo`, `prepositions`, `epistemic-conjecture`, `clitic-doubling`, `personal-a`, `gerund-rules`, `adversatives`, `legal-subjunctive`.
 
 ---
 

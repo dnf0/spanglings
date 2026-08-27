@@ -103,9 +103,9 @@ error[E0301]: Subjunctive Mood Required
 ```
 
 ### Anatomy of a Diagnostic
-- **Error Code**: Structured error classification (e.g., `E0101` Ser vs Estar, `E0201` Aspectual Preterite Shift, `E0301` Subjunctive Trigger).
+- **Error Code**: Structured error classification (e.g., `E0101` Ser vs Estar, `E0201` Aspectual Preterite Shift, `E0301` Subjunctive Trigger, `E0048`–`E0053` Advanced Traps).
 - **Source Context**: Precise line numbers and dynamic `^^^^` caret highlighting.
-- **Linguistic Concept**: Linked concept in the 53-node DAG ontology and foundational prerequisites.
+- **Linguistic Concept**: Linked concept in the 66-node DAG ontology and foundational prerequisites.
 - **Contrast Note**: Actionable comparison clarifying frequent misconceptions.
 
 ---
@@ -135,7 +135,7 @@ The interactive TUI features several non-disruptive popups accessible via global
 Look up full conjugation matrices across all indicative and subjunctive tenses without leaving the exercise workspace.
 
 ### 2. In-TUI Grammar Reference Sheet Browser (`F4` / `Ctrl+B`)
-Full-text searchable access to all 12 grammar reference cards (Subjunctive, Por vs Para, Clitics, Accents, Prepositional Regimes, False Friends, Voseo, etc.).
+Full-text searchable access to all 18 grammar reference cards (Subjunctive, Por vs Para, Clitics, Accents, Prepositional Regimes, Epistemic Conjecture, Clitic Doubling, Personal A, Gerunds, Adversatives, Legal Subjunctive, False Friends, Voseo, etc.).
 
 ### 3. Diagnostic Placement & Level Fast-Track (`F5` / `[p]`)
 Interactive 15-question diagnostic test modal evaluating CEFR proficiency and automatically fast-tracking mastered tiers with `[F]`.

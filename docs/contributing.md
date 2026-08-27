@@ -39,7 +39,7 @@ cargo fmt --check
 src/
 ├── core/             # Core domain models, state persistence, SRS, DAG ontology
 │   ├── exercise.rs   # Exercise markdown parser and metadata extractor
-│   ├── graph.rs      # Linguistic Knowledge Graph (53-concept DAG)
+│   ├── graph.rs      # Linguistic Knowledge Graph (66-concept DAG)
 │   ├── placement.rs  # Calibrated CEFR placement battery & evaluation
 │   ├── reference.rs  # Grammar reference cards & cheat sheets
 │   └── state.rs      # User progress persistence, SM-2 cards, concept mastery
