@@ -121,6 +121,16 @@ impl Diagnostic {
             ));
         }
 
+        if self.code != "E0001" {
+            lines.push(format!(
+                "{} {} {}: For a deep conceptual breakdown, run '{}' or press [e] in TUI",
+                line_padding,
+                "=".blue().bold(),
+                "tip".bold(),
+                format!("spanglings explain {}", self.code).yellow()
+            ));
+        }
+
         lines.join("\n")
     }
 }
