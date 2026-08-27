@@ -194,3 +194,115 @@ vengas
         _ => panic!("Expected failed validation"),
     }
 }
+
+#[test]
+fn test_concept_aware_diagnostic_compiler_fields() {
+    let content = r#"# Flight Delays & Gate Changes
+<!-- id: b1_sub_temp_01 | level: B1 | topic: subjunctive_temporal | type: cloze | concepts: ["subjunctive_temporal_future", "temporal_connectors"] | prerequisites: ["present_subjunctive_formation"] | grammar_focus: "Temporal conjunctions referring to future events require the subjunctive mood." | contrast_note: "Contrast with habitual past actions which use the indicative." -->
+
+### Context
+English: "As soon as we land, I will call you."
+
+### Exercise
+En cuanto nosotros (aterrizar) ___ , te llamaré.
+
+<!-- SOLUTION
+aterricemos
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "aterrizamos" | code: "E0501" | message: "Expected Present Subjunctive ('aterricemos') for prospective event, found Indicative ('aterrizamos')."
+-->
+
+<!-- HINTS
+Tier 1: 'En cuanto' triggers subjunctive when referring to future actions.
+Tier 2: Root for aterrizar in subjunctive: 'aterric-'.
+Tier 3: Conjugate for nosotros: 'aterricemos'.
+-->
+"#;
+
+    let exercise = Exercise::from_markdown("exercises/42_travel/01_delays.md", content).unwrap();
+    let result = validate_submission(&exercise, "aterrizamos", AccentMode::Forgiving);
+
+    match result {
+        ValidationResult::Failed { diagnostic, .. } => {
+            assert_eq!(diagnostic.code, "E0501");
+            assert_eq!(
+                diagnostic.linked_concept,
+                Some("subjunctive_temporal_future, temporal_connectors".to_string())
+            );
+            assert_eq!(
+                diagnostic.prerequisite,
+                Some("present_subjunctive_formation".to_string())
+            );
+            assert_eq!(
+                diagnostic.grammar_focus,
+                Some(
+                    "Temporal conjunctions referring to future events require the subjunctive mood."
+                        .to_string()
+                )
+            );
+            assert_eq!(
+                diagnostic.contrast_note,
+                Some("Contrast with habitual past actions which use the indicative.".to_string())
+            );
+
+            let formatted = diagnostic.format_terminal();
+            assert!(formatted.contains("error[E0501]"));
+            assert!(formatted.contains("Grammar Focus: Temporal conjunctions referring to future events require the subjunctive mood."));
+            assert!(formatted
+                .contains("Linked Concept: subjunctive_temporal_future, temporal_connectors"));
+            assert!(formatted.contains("Prerequisite: present_subjunctive_formation"));
+            assert!(formatted.contains(
+                "Contrast: Contrast with habitual past actions which use the indicative."
+            ));
+        }
+        _ => panic!("Expected failed validation with concept-aware diagnostic"),
+    }
+}
+
+#[test]
+fn test_fallback_diagnostic_populates_concept_links() {
+    let content = r#"# Accidental Se Leaks
+<!-- id: b1_acc_01 | level: B1 | topic: accidental_se | type: cloze | concepts: ["accidental_involuntary_se"] | prerequisites: ["indirect_object_pronouns"] | grammar_focus: "Accidental se with unexpected events." | contrast_note: "Contrast with direct reflexive." -->
+
+### Exercise
+Se nos (romper) ___ una tubería empotrada.
+
+<!-- SOLUTION
+rompió
+-->
+"#;
+
+    let exercise = Exercise::from_markdown("exercises/45_repairs/01_leak.md", content).unwrap();
+    let result = validate_submission(&exercise, "rompemos", AccentMode::Forgiving);
+
+    match result {
+        ValidationResult::Failed { diagnostic, .. } => {
+            assert_eq!(diagnostic.code, "E0001");
+            assert_eq!(
+                diagnostic.linked_concept,
+                Some("accidental_involuntary_se".to_string())
+            );
+            assert_eq!(
+                diagnostic.prerequisite,
+                Some("indirect_object_pronouns".to_string())
+            );
+            assert_eq!(
+                diagnostic.grammar_focus,
+                Some("Accidental se with unexpected events.".to_string())
+            );
+            assert_eq!(
+                diagnostic.contrast_note,
+                Some("Contrast with direct reflexive.".to_string())
+            );
+
+            let formatted = diagnostic.format_terminal();
+            assert!(formatted.contains("Linked Concept: accidental_involuntary_se"));
+            assert!(formatted.contains("Prerequisite: indirect_object_pronouns"));
+            assert!(formatted.contains("Grammar Focus: Accidental se with unexpected events."));
+            assert!(formatted.contains("Contrast: Contrast with direct reflexive."));
+        }
+        _ => panic!("Expected fallback diagnostic with populated concept metadata"),
+    }
+}

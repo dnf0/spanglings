@@ -12,6 +12,14 @@ pub struct Diagnostic {
     pub note: Option<String>,
     pub help: Option<String>,
     pub hint: Option<String>,
+    #[serde(default)]
+    pub linked_concept: Option<String>,
+    #[serde(default)]
+    pub prerequisite: Option<String>,
+    #[serde(default)]
+    pub grammar_focus: Option<String>,
+    #[serde(default)]
+    pub contrast_note: Option<String>,
 }
 
 impl Diagnostic {
@@ -74,6 +82,42 @@ impl Diagnostic {
                 "=".blue().bold(),
                 "hint".bold(),
                 hint
+            ));
+        }
+        if let Some(ref focus) = self.grammar_focus {
+            lines.push(format!(
+                "{} {} {}: Grammar Focus: {}",
+                line_padding,
+                "=".blue().bold(),
+                "note".bold(),
+                focus
+            ));
+        }
+        if let Some(ref concept) = self.linked_concept {
+            lines.push(format!(
+                "{} {} {}: Linked Concept: {}",
+                line_padding,
+                "=".blue().bold(),
+                "note".bold(),
+                concept
+            ));
+        }
+        if let Some(ref prereq) = self.prerequisite {
+            lines.push(format!(
+                "{} {} {}: Prerequisite: {}",
+                line_padding,
+                "=".blue().bold(),
+                "note".bold(),
+                prereq
+            ));
+        }
+        if let Some(ref contrast) = self.contrast_note {
+            lines.push(format!(
+                "{} {} {}: Contrast: {}",
+                line_padding,
+                "=".blue().bold(),
+                "note".bold(),
+                contrast
             ));
         }
 

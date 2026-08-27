@@ -57,17 +57,18 @@ pub fn run_exercise(exercise_query: &str, strict_accents: bool) -> anyhow::Resul
             let mut state = AppState::load().unwrap_or_default();
             state.mark_completed(&parsed_ex.id);
             state.update_srs(&parsed_ex.id, 5, Utc::now());
-            state.save()?;
-
-            if !parsed_ex.is_done {
-                println!(
-                    "\n{}",
-                    "💡 Tip: Remove '<!-- I AM NOT DONE -->' from the exercise file when you're ready to advance."
-                        .dimmed()
-                );
+            for concept in &parsed_ex.concept_tags {
+                state.update_concept_mastery(concept, 5, Utc::now());
             }
+            state.save()?;
         }
         ValidationResult::Failed { diagnostic, .. } => {
+            let mut state = AppState::load().unwrap_or_default();
+            for concept in &parsed_ex.concept_tags {
+                state.update_concept_mastery(concept, 1, Utc::now());
+            }
+            let _ = state.save();
+
             println!("{}", diagnostic.format_terminal());
             println!(
                 "\n{} For hints, run: {}",

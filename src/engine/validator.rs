@@ -5,6 +5,7 @@ use crate::engine::normalizer::normalize;
 use crate::engine::rules::get_rule_title;
 
 #[derive(Debug, Clone, PartialEq, Eq)]
+#[allow(clippy::large_enum_variant)]
 pub enum ValidationResult {
     Passed {
         notice: Option<String>,
@@ -131,6 +132,19 @@ pub fn validate_submission(
         }
     }
 
+    let linked_concept = if exercise.concept_tags.is_empty() {
+        None
+    } else {
+        Some(exercise.concept_tags.join(", "))
+    };
+    let prerequisite = if exercise.prerequisites.is_empty() {
+        None
+    } else {
+        Some(exercise.prerequisites.join(", "))
+    };
+    let grammar_focus = exercise.grammar_focus.clone();
+    let contrast_note = exercise.contrast_note.clone();
+
     // 3. Match against targeted diagnostic rules
     let norm_user = normalize(user_input);
     for rule in &exercise.diagnostic_rules {
@@ -150,6 +164,10 @@ pub fn validate_submission(
                     note: exercise.hints.get(2).cloned(),
                     help: exercise.hints.first().cloned(),
                     hint: exercise.hints.get(1).cloned(),
+                    linked_concept: linked_concept.clone(),
+                    prerequisite: prerequisite.clone(),
+                    grammar_focus: grammar_focus.clone(),
+                    contrast_note: contrast_note.clone(),
                 },
                 user_input: user_input.to_string(),
             };
@@ -168,6 +186,10 @@ pub fn validate_submission(
             note: exercise.hints.get(2).cloned(),
             help: exercise.hints.first().cloned(),
             hint: exercise.hints.get(1).cloned(),
+            linked_concept,
+            prerequisite,
+            grammar_focus,
+            contrast_note,
         },
         user_input: user_input.to_string(),
     }
