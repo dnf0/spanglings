@@ -84,6 +84,11 @@ pub enum Commands {
         #[command(subcommand)]
         action: HookAction,
     },
+    /// Manage, scaffold, and validate custom curriculum exercise packs
+    Pack {
+        #[command(subcommand)]
+        action: PackAction,
+    },
     /// Launch the interactive terminal UI
     Tui,
     /// Reset an exercise to its initial prompt
@@ -103,5 +108,19 @@ pub enum HookAction {
         /// Hook type (e.g. pre-commit, pre-push)
         #[arg(short = 't', long, default_value = "pre-commit")]
         hook_type: String,
+    },
+}
+
+#[derive(Subcommand, Debug, PartialEq, Eq)]
+pub enum PackAction {
+    /// Scaffold a new custom curriculum track with starter markdown exercises
+    Create {
+        /// Name of the new curriculum track
+        name: String,
+    },
+    /// Validate all exercises in a directory for schema correctness and solvability
+    Validate {
+        /// Directory path containing markdown exercises
+        path: String,
     },
 }

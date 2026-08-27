@@ -8,6 +8,7 @@ pub mod hint;
 pub mod hook;
 pub mod init;
 pub mod list;
+pub mod pack;
 pub mod progress;
 pub mod review;
 pub mod run;
