@@ -1,12 +1,34 @@
-# Onboarding & Learner's Guide
+# Spanglings Onboarding & Learner's Guide 🇪🇸 🦀
 
-Welcome to **Spanglings**! This guide takes you on a comprehensive tour of the platform's architecture, learning loops, compiler diagnostics, and power tools.
+Welcome to **Spanglings**! Whether you are completely new to Spanish or an experienced developer looking to sharpen your grammar mechanics, aspectual precision, and professional C1 syntax, this guide will get you fully up to speed in minutes.
 
 ---
 
-## 🧭 The 6-Station Guided Tour
+## 1. What is Spanglings?
 
-Spanglings includes an interactive guided tour designed to introduce core workflows in under 2 minutes:
+Spanglings is an interactive, test-driven learning platform inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](https://github.com/dnf0/raylings). Rather than swiping through multiple-choice flashcards or memorizing isolated phrases, you learn Spanish by actively diagnosing, writing, and compiling syntactic transformations directly in your code editor and terminal.
+
+### 🌟 Core Pedagogical Principles
+
+```
+  +-----------------------+      +-----------------------+      +-----------------------+
+  |    Active Debugging   |      |  Sub-20ms Validation  |      |   Compiler Feedback   |
+  |  Every exercise starts| ---> |  In-memory evaluator  | ---> |  Rustc-style colored  |
+  |  with an active prompt|      |  checks answers on    |      |  diagnostics with     |
+  |  and structural cues  |      |  save instantaneously |      |  E-codes & contrasts  |
+  +-----------------------+      +-----------------------+      +-----------------------+
+```
+
+1. **Active Problem Solving with Zero Busywork**: Exercises evaluate purely on syntactic correctness. No magic comment deletion (`<!-- I AM NOT DONE -->`) required.
+2. **Rustc-Style Grammar Compiler**: Grammatical mistakes trigger rich compiler diagnostics (`error[E0301]: Subjunctive Mood Required`), pointing out source tokens, underlying rules, prerequisite links, and contrast notes.
+3. **81-Concept Linguistic Knowledge Graph (DAG)**: The curriculum maps every exercise to an ontological graph, dynamically evaluating your **learning frontier** and identifying conceptual weaknesses.
+4. **SM-2 Spaced Repetition**: Combines active recall with SuperMemo-2 spaced intervals to prevent forgetting and reinforce tricky grammatical patterns.
+
+---
+
+## 2. The 6-Station Interactive Guided Tour
+
+Spanglings includes a built-in terminal tour designed to walk you through the system in under two minutes:
 
 ```bash
 spanglings tour
@@ -25,10 +47,9 @@ and spaced repetition.
   • Zero comment-deletion mechanics: Fix the prompt and save!
 ```
 
-### The 6 Interactive Stations
-
-1. **Philosophy & Core Loop**: The developer-first mental model, instantaneous validation, and zero comment-deletion friction.
-2. **Exercise Anatomy & Accent Handling**: Understanding inline `___` blanks, UTF-8 Spanish punctuation, and forgiving accent matching.
+### The 6 Interactive Stations:
+1. **Philosophy & Core Loop**: The developer-first mental model, instantaneous evaluation, and zero-friction editing.
+2. **Exercise Anatomy & Accent Handling**: Understanding inline `___` cloze blanks, UTF-8 Spanish punctuation, and forgiving accent matching.
 3. **Rustc-Style Grammar Diagnostics**: Reading compiler-grade errors, dynamic carets, linguistic concept links, and contrast notes.
 4. **Progressive Hints & Cheat Sheets**: Accessing 3-tier progressive hints (`[h]` / `F1`) and on-demand grammar cheat sheets (`[e]` / `F2`).
 5. **Power Tools & Placement Fast-Track**: Using the in-TUI Verb Conjugator (`F3`), Reference Sheet Browser (`F4`), and Calibrated CEFR Placement Test (`F5` / `[p]`).
@@ -36,109 +57,176 @@ and spaced repetition.
 
 ---
 
-## 📝 Exercise Anatomy & Cloze Mechanics
+## 3. The Three Ways to Learn
 
-Every exercise in Spanglings is a structured Markdown file located in `exercises/<track_name>/<exercise_id>.md`:
+### Mode 1: Interactive Terminal UI (`spanglings` / `spanglings tui`)
+A standalone, full-screen terminal application built with `ratatui`:
+- Split-pane layout: Exercise instructions on the left, interactive editor on the right.
+- Hotkey-driven modals for instant cheat sheets (`F2`), verb tables (`F3`), and curriculum search (`F4` or `/`).
+- Ideal for distraction-free learning without configuring any external editors.
+
+### Mode 2: Headless Watcher + IDE (`spanglings watch`)
+Run Spanglings as a background daemon alongside your favorite editor (VS Code, Cursor, Neovim, Helix, Zed):
+- Automatically triggers on file save in `< 20ms`.
+- Interactive hotkeys directly in your watcher terminal (`n` next, `p` previous, `r` rerun, `h` hint, `q` quit).
+- Real-time Language Server Protocol (`spanglings lsp`) provides hover tooltips, red squigglies, and autocomplete directly in your editor buffer.
+
+### Mode 3: Spaced Repetition & Placement Testing (`spanglings test` & `review`)
+- **Placement Assessment (`spanglings test`)**: Test your CEFR level from A1 through C1 and fast-track past concepts you already know.
+- **SRS Review (`spanglings review`)**: Daily active-recall drills scheduled by the SM-2 algorithm.
+- **Speed Blitz (`spanglings blitz`)**: 60-second rapid-fire conjugation challenges to build automatic muscle memory.
+
+---
+
+## 4. Solving Your First Exercise: A Step-by-Step Walkthrough
+
+Every exercise is a clean Markdown file in `exercises/<track>/<id>.md`:
 
 ```markdown
-# Adverbial Conjunctions of Time (En cuanto / Tan pronto como)
+<!-- exercises/03_subjunctive_weirdo/01_wishes_volition.md -->
+# Wishes and Volition (Querer / Desear que)
 - Level: B1
-- Topic: Subjunctive Conjunctions
-- Concepts: subjunctive_temporal_conjunctions, present_subjunctive_regular
-- Prerequisites: present_indicative_regular
+- Topic: Subjunctive Triggers (WEIRDO)
+- Concepts: subjunctive_wishes_desires, present_subjunctive_regular
+- Prerequisites: present_indicative_irregular
+- Grammar Focus: "Main clause volition verb + que + subject change requires present subjunctive."
 
 ## Prompt
-Fill in the correct form of the verb in parentheses.
-Context: Future action dependent on a temporal conjunction.
+Fill in the correct present subjunctive form of the verb in parentheses.
+Context: Expressing a desire for someone else's action.
 
-Te llamaré tan pronto como yo ___ (llegar) a la oficina.
+Mis padres quieren que yo ___ (estudiar) ingeniería informática en la universidad.
 
 ## Hints
-<!-- Tier 1: Conjunctions of anticipated future time require subjunctive. -->
-<!-- Tier 2: First-person singular present subjunctive of llegar (g -> gu). -->
-<!-- Tier 3: llegue -->
+<!-- Tier 1: Conjunctions of volition and desire require the subjunctive mood when subjects differ. -->
+<!-- Tier 2: The -ar present subjunctive endings are -e, -es, -e, -emos, -éis, -en. -->
+<!-- Tier 3: estudie -->
 ```
 
-### How to Solve an Exercise
-1. Read the **Context** and **Prompt**.
-2. Replace `___ (llegar)` with your conjugated Spanish answer: `llegue`.
-3. Save the file. Spanglings will evaluate your submission immediately.
-
----
-
-## 🧠 Smart Forgiving Accent Matching
-
-Spanish requires written accent marks (*tildes*) for stress differentiation and grammatical distinctions (e.g., *hablo* vs *habló*, *si* vs *sí*, *esta* vs *está*).
-
-### Flexible Default Mode
-By default, Spanglings is forgiving to accommodate standard QWERTY keyboards:
-- Entering `llego` when `llegó` is expected will pass with a helpful pedagogical note:
-  > `[Notice]: Good job! Remember to include the written accent: llegó`
-- Inverted punctuation (`¿`, `¡`) is optional by default.
-
-### Strict Accent Enforcement
-When preparing for formal examinations or practicing exact orthography, pass the `--strict-accents` flag:
-
+### Step 1: Open and Inspect
+Start the watcher:
 ```bash
-spanglings watch --strict-accents
-spanglings --strict-accents
+spanglings watch
 ```
 
----
-
-## 🔍 Rustc-Style Compiler Diagnostics
-
-When an exercise fails or contains a common grammatical trap, Spanglings generates colored, rustc-style diagnostics:
+### Step 2: Triggering Diagnostic Output
+If you provide an incorrect indicative form (e.g. `estudio`), Spanglings will emit a rich diagnostic:
 
 ```
 error[E0301]: Subjunctive Mood Required
-  --> exercises/03_subjunctive_weirdo/01_wishes_volition.md:8:23
+  --> exercises/03_subjunctive_weirdo/01_wishes_volition.md:14:15
    |
- 8 | Mis padres quieren que yo estudio informática.
-   |                           ^^^^^^^ expected subjunctive 'estudie', found present indicative 'estudio'
-   |
-   = note: Verbs of volition (querer, desear, esperar) require the subjunctive in subordinate clauses when subjects differ.
-   = concept: subjunctive_wishes_desires (prerequisite: present_indicative_irregular)
-   = contrast: 'Quiero estudiar' (same subject -> infinitive) vs 'Quiero que estudies' (different subjects -> subjunctive)
+14 | Mis padres quieren que yo estudio ingeniería informática en la universidad.
+   |                           ^^^^^^^ expected subjunctive form 'estudie', found indicative 'estudio'
+   = note: Main clause expresses volition ('quieren que...'), triggering mood shift
+   = note: Linked Concept: subjunctive_wishes_desires (Prerequisite: present_indicative_irregular)
+   = note: Contrast: Indicative asserts a factual statement; Subjunctive expresses desired outcome
+   = tip: For a deep conceptual breakdown, run 'spanglings explain E0301' or press [e] in TUI
 ```
 
-### Anatomy of a Diagnostic
-- **Error Code**: Structured error classification (e.g., `E0101` Ser vs Estar, `E0201` Aspectual Preterite Shift, `E0301` Subjunctive Trigger, `E0048`–`E0053` Advanced Traps).
-- **Source Context**: Precise line numbers and dynamic `^^^^` caret highlighting.
-- **Linguistic Concept**: Linked concept in the 66-node DAG ontology and foundational prerequisites.
-- **Contrast Note**: Actionable comparison clarifying frequent misconceptions.
+### Step 3: Progressive Hints & Explanations
+Need a hint? Press `h` in the watcher or run `spanglings hint`. Tier 1 gives a conceptual nudge; Tier 2 gives structural guidance; Tier 3 reveals the solution.
+
+To read the complete grammar card:
+```bash
+spanglings explain E0301
+# or
+spanglings explain subjunctive
+```
+
+### Step 4: Advancing
+Replace `___ (estudiar)` with `estudie` and save. Spanglings verifies the answer instantly! Press `n` or `Enter` to advance to the next exercise.
 
 ---
 
-## 💡 3-Tier Progressive Hint System
+## 5. Diagnostic Error Codes Directory
 
-Never get stuck on an exercise. Spanglings provides progressive hints on demand:
+Spanglings includes a comprehensive compiler catalog with 59 specialized diagnostic error codes:
+
+| Error Code | Title | Linguistic Category |
+| :--- | :--- | :--- |
+| `E0001` | General Syntax Error | Orthography & General |
+| `E0002` | Missing Accent Mark | Orthography & Stress Rules |
+| `E0003` | Incorrect Verb Stem | Stem-Changing Morphology |
+| `E0004` | Incorrect Verb Ending | Verb Conjugation Parity |
+| `E0005` | Ser vs Estar Distinction Required | Permanent vs State Identity |
+| `E0006` | Gender Agreement Mismatch | Noun-Adjective Agreement |
+| `E0007` | Number Agreement Mismatch | Singular / Plural Concord |
+| `E0011` | Preterite vs Imperfect Aspect Mismatch | Aspectual Past Completion vs Duration |
+| `E0012` | Direct Object Pronoun Mismatch | Transitive Accusative Clitic |
+| `E0013` | Indirect Object Pronoun Mismatch | Dative Clitic Placement |
+| `E0014` | Double Object Clitic Ordering Error | *Se lo* Clitic Replacement |
+| `E0015` | Accidental *Se* Construction Required | Involuntary Agentless Dative |
+| `E0030` | Relative Pronoun Error (*que/quien/el cual*) | Relative Clause Binding |
+| `E0031` | Conditional Tense Required | Hypothetical / Polite Formulations |
+| `E0032` | Imperfect Subjunctive Required | Hypothetical / Past Subjunctive |
+| `E0033` | Hypothetical *Si* Clause Mismatch | Mixed Conditional Sequence of Tenses |
+| `E0034` | Passive *Se* Construction Required | Impersonal & Passive Formulations |
+| `E0035` | Verbal Periphrasis Error (*llevar + gerundio*) | Aspectual Auxiliary Periphrases |
+| `E0036` | False Cognate Trap Detected | False Friends & Semantic Traps |
+| `E0037` | Technical / Engineering Vocabulary Mismatch | Software & Tech Collocations |
+| `E0038` | Formal Business Register Required | Professional Correspondence |
+| `E0048` | Epistemic Conjecture Marker Required | Future / Conditional of Probability |
+| `E0049` | Redundant Clitic Doubling Required | Obligatory Topicalized Dative Clitic |
+| `E0050` | Personal *A* Accusative Marker Missing | Animate Specific Direct Object |
+| `E0051` | Gerund Restriction Violation | Adjectival / Temporal Gerund Ban |
+| `E0052` | Adversative Marker Mismatch (*pero vs sino*) | Corrective Polarity & Exception |
+| `E0053` | Archaic / Legal Subjunctive Required | Formulaic -ere Morphology |
+| `E0054` | Verb of Becoming Inappropriate (*ponerse/hacerse/volverse*) | Involuntary vs Effortful Becoming |
+| `E0055` | Epistemic Adverb Subjunctive Required (*quizás/tal vez*) | Adverbial Doubt & Epistemic Stance |
+| `E0056` | Possessive Dative Construction Required | Inalienable Possession Dative |
+| `E0057` | Corrective Polarity Mismatch (*sino que*) | Finite Verb Clause Correction |
+| `E0058` | Absolute Participial Clause Error | Non-finite Temporal Clause |
+| `E0059` | Scalar Concession Subjunctive Required (*por mucho que*) | Scalar Intensity Concessions |
+
+---
+
+## 6. Active Recall & Concept Mastery (SM-2)
+
+Spanglings tracks your linguistic memory retention using the SuperMemo-2 spaced repetition algorithm:
+
+- **Concept Mastery Scoring**: Every concept starts at baseline `0.0` and reaches mastery at `5.0`.
+- **Lapse Penalties & Spaced Recovery**: Incorrect answers trigger an immediate lapse penalty (`-1.5` ease factor), prioritizing that exercise for upcoming review.
+- **Dynamic Frontier Resolution**: Spanglings analyzes prerequisite relationships across the 81-concept DAG and recommends the highest-yield topics for your current level.
 
 ```bash
-# Reveal progressive hints via CLI
-spanglings hint exercises/03_subjunctive_weirdo/01_wishes_volition.md
+# Check mastery scores and weak areas
+spanglings progress
+
+# Run targeted drill on weakest concepts
+spanglings drill
 ```
-
-- **Tier 1 (Conceptual Clue)**: Explains the underlying grammatical rule without hinting at the verb root.
-- **Tier 2 (Morphological Clue)**: Identifies stem shifts, orthographic changes (e.g., *c → qu*, *z → c*, *g → gu*), or pronoun placement rules.
-- **Tier 3 (Solution Reveal)**: Full solution with grammatical breakdown.
-
-In watch mode, press `h` to reveal hints sequentially. In the interactive TUI, press `Ctrl+H` or `F1`.
 
 ---
 
-## 🛠️ Power Modals & In-Terminal Reference Tools
+## 7. Power User Tools & FAQ
 
-The interactive TUI features several non-disruptive popups accessible via global hotkeys:
+### QWERTY Smart Accent Mode
+By default, Spanglings tolerates missing accents on QWERTY keyboards while providing a helpful tip notice:
+```
+✓ Correct! (Note: 'estudie' is accepted, but formal spelling uses 'estudié')
+```
+To strictly enforce acute accents (`á`, `é`, `í`, `ó`, `ú`) and tildes (`ñ`):
+```bash
+spanglings --strict-accents watch
+```
 
-### 1. In-TUI Verb Conjugator (`F3` / `Ctrl+K`)
-Look up full conjugation matrices across all indicative and subjunctive tenses without leaving the exercise workspace.
+### Git Practice Hooks
+Stay sharp by answering a quick Spanish practice challenge before every commit or push:
+```bash
+# Install pre-commit practice hook
+spanglings hook pre-commit
 
-### 2. In-TUI Grammar Reference Sheet Browser (`F4` / `Ctrl+B`)
-Full-text searchable access to all 18 grammar reference cards (Subjunctive, Por vs Para, Clitics, Accents, Prepositional Regimes, Epistemic Conjecture, Clitic Doubling, Personal A, Gerunds, Adversatives, Legal Subjunctive, False Friends, Voseo, etc.).
+# Remove hook
+spanglings hook --remove
+```
 
-### 3. Diagnostic Placement & Level Fast-Track (`F5` / `[p]`)
-Interactive 15-question diagnostic test modal evaluating CEFR proficiency and automatically fast-tracking mastered tiers with `[F]`.
+### Anki & Obsidian Export
+Export your entire curriculum progress and flashcard database for offline review:
+```bash
+# Export to Anki TSV format
+spanglings export --format anki --output spanish_anki.tsv
 
-### 4. Interactive Guided Tour (`F6` / `[T]`)
-Launch the 6-station onboarding tour at any time directly within the TUI.
+# Export Markdown study guide for Obsidian
+spanglings export --format markdown --output spanish_notes.md
+```

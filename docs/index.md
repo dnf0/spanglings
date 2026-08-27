@@ -1,81 +1,173 @@
 # Spanglings 🇪🇸 🦀
 
-**Spanglings builds the syntax compiler; real-world usage supplies the data.**
+[![CI](https://github.com/dnf0/spanglings/actions/workflows/ci.yml/badge.svg)](https://github.com/dnf0/spanglings/actions)
+[![License: MIT OR Apache-2.0](https://img.shields.io/badge/License-MIT%20OR%20Apache--2.0-blue.svg)](https://github.com/dnf0/spanglings/blob/main/LICENSE-MIT)
+[![Rust: 1.75+](https://img.shields.io/badge/rust-1.75+-orange.svg)](https://www.rust-lang.org/)
+[![Curriculum: 60 Tracks • 339 Exercises](https://img.shields.io/badge/Curriculum-60%20Tracks%20%E2%80%A2%20339%20Exercises-emerald.svg)](syllabus.md)
+[![CEFR: A1 to C1](https://img.shields.io/badge/CEFR-A1%20%E2%86%92%20C1%20Mastery-gold.svg)](syllabus.md)
 
-*A developer-grade CLI & interactive TUI for mastering Spanish grammar, verb mechanics, and nuanced syntactic architecture.*
+> **Spanglings builds the syntax compiler; real-world usage supplies the data.**  
+> A developer-grade CLI & interactive TUI for mastering Spanish grammar, verb mechanics, and nuanced syntactic architecture.
 
-Inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](https://github.com/dnf0/raylings), **Spanglings** provides a terminal-native, hands-on learning environment for engineers, developers, and power users who want to master real Spanish syntax, aspectual contrasts, and professional collocations without childish gamification.
+<p align="center">
+  <img src="assets/spanglings-demo.svg" alt="Spanglings Terminal Watcher Demo" width="850">
+</p>
 
----
-
-## Why Spanglings?
-
-Language learning apps are often too slow, repetitive, and child-oriented. They fail to teach the structural mental models engineers use every day. **Spanglings** approaches Spanish like a compiled language:
-
-- 🌐 **Linguistic Knowledge Graph (DAG Ontology)**: 81-concept ontological graph mapping prerequisite relationships, morphological shifts, and situational domains with learning frontier resolution.
-- 🚀 **Interactive Terminal UI (`ratatui`)**: Real-time dual-pane editor with live validation, syntax styling, progress tracking, and interactive drill modes.
-- ⚡ **Modern Headless Watch Mode (`spanglings watch`)**: Modify exercise files in your favorite editor (VS Code, Neovim, Zed) while Spanglings continuously validates submissions with non-blocking keystrokes (`[n]`, `[p]`, `[r]`, `[q]`) and zero comment-deletion busywork.
-- 🔍 **Rustc-Style Grammar Diagnostics**: Rich, colored compiler-style error diagnostics (`error[E0301]: Subjunctive Mood Required`) with source code context, dynamic line markers (`^^^^`), grammatical explanations, linked concepts, and contrast notes.
-- 💡 **Progressive 3-Tier Hint System**: Get hints on demand (Tier 1: conceptual clue, Tier 2: morphological/structural clue, Tier 3: solution reveal).
-- 🧠 **Forgiving Smart Accent Matching**: Designed for QWERTY keyboards. Accents and inverted punctuation (`¿`, `¡`) are forgiven by default with helpful tip notices, or strictly enforced with `--strict-accents`.
-- 🔄 **SM-2 Spaced Repetition (SRS)**: Active recall review scheduler using the SuperMemo-2 algorithm (`spanglings review` / `spanglings drill`).
-- 🎯 **Diagnostic Placement & CEFR Assessment (`spanglings test`)**: Calibrated multi-tier diagnostic test battery assessing CEFR proficiency with automatic level fast-tracking.
-- 🔌 **Native Language Server Protocol (LSP) Engine (`spanglings lsp`)**: Real-time stdio JSON-RPC server with live diagnostics, rich hover popups, and autocompletions for VS Code, Neovim, Helix, and Zed.
-- 📦 **Anki & Markdown Study Pack Exporter (`spanglings export`)**: Export full decks to Anki TSV format, generate Markdown study guides for Obsidian, or export JSON progress metrics.
-- 📚 **339 Handcrafted Exercises across 60 Tracks**: Complete coverage from baseline irregular drills through Latin American engineering, everyday conversational mastery, practical logistics, formal C1 collocations, and nuanced linguistic edge cases.
+Inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](https://github.com/dnf0/raylings), **Spanglings** provides a terminal-native, hands-on learning environment for engineers, developers, and power users who want to master authentic Spanish syntax, aspectual contrasts (*pretérito vs imperfecto*), subjunctive triggers, accidental *se*, and professional collocations without childish gamification.
 
 ---
 
-## Quick Example
+## Pedagogical Philosophy: The Syntax Compiler Model
 
-```markdown
-<!-- exercises/03_subjunctive_weirdo/01_wishes_volition.md -->
-# Wishes and Volition (Querer / Desear que)
-- Level: B1
-- Topic: Subjunctive Triggers (WEIRDO)
-- Concepts: subjunctive_wishes_desires, present_subjunctive_regular
-- Prerequisites: present_indicative_irregular
+Learning a language through passive flashcards or multiple-choice apps is frustrating for technical minds because it hides the underlying structural mental model. **Spanglings** treats Spanish grammar like a compiled language with strict morphological transformations, scope rules, and pragmatic contracts:
 
-## Prompt
-Fill in the correct present subjunctive form of the verb in parentheses.
-Context: Expressing a desire for someone else's action.
+1. ⚡ **Active Debugging & Iteration**: Every exercise starts in an incomplete state with clear instructions. Modify the file in your favorite editor; Spanglings validates your submission on save in < 20ms with zero comment-deletion busywork.
+2. 🔍 **Rustc-Style Grammar Diagnostics**: When you encounter a grammatical pitfall, Spanglings generates colored, compiler-grade error diagnostics (`error[E0301]: Subjunctive Mood Required`), pinpointing the exact offending token, grammatical rationale, linked concept, and contrast notes.
+3. 🌐 **81-Concept Ontological Knowledge Graph (DAG)**: All 339 exercises are anchored to a Directed Acyclic Graph. The engine dynamically computes your **learning frontier**, prerequisite dependencies, and concept decay rates over time.
+4. 🧠 **SM-2 Spaced Repetition & Weakness Profiling**: Integrates SuperMemo-2 active recall scheduling. The scheduler prioritizes exercises based on ease factors, error frequency, and linguistic topic lapses.
+5. 🔀 **Dual-Interface Synergy**: Seamlessly alternate between a full-screen terminal app (`spanglings` / `ratatui` TUI) and a headless watcher + native IDE Language Server Protocol engine (`spanglings lsp`) in VS Code, Cursor, Neovim, Helix, or Zed.
 
-Mis padres quieren que yo ___ (estudiar) ingeniería informática en la universidad.
+---
+
+## Architecture
+
+```
+                                  +-----------------------+
+                                  |     User Terminal     |
+                                  | (VS Code / Neovim/Zed)|
+                                  +-----------+-----------+
+                                              |
+                                              v
+                                  +-----------------------+
+                                  |    Spanglings CLI     |
+                                  +-----------+-----------+
+                                              |
+                     +------------------------+------------------------+
+                     |                                                 |
+                     v                                                 v
+         +-----------------------+                         +-----------------------+
+         |  File Watcher Engine  |                         | Ratatui Terminal TUI  |
+         | (notify / hotkeys)    |                         |  (Dual-Pane Editor)   |
+         +-----------+-----------+                         +-----------------------+
+                     |                                                 |
+                     +------------------------+------------------------+
+                                              |
+                                              v
+                                  +-----------------------+
+                                  |  Diagnostic Compiler  |
+                                  | (Rustc-Style E-Codes) |
+                                  +-----------+-----------+
+                                              |
+                     +------------------------+------------------------+
+                     |                                                 |
+                     v                                                 v
+         +-----------------------+                         +-----------------------+
+         | 81-Concept DAG Graph  |                         |  SM-2 Spaced Recall   |
+         |  (Learning Frontiers) |                         |   & Weakness Profiler |
+         +-----------+-----------+                         +-----------------------+
+                     |                                                 |
+                     +------------------------+------------------------+
+                                              |
+                                              v
+                                  +-----------------------+
+                                  |  Curriculum Catalog   |
+                                  | 60 Tracks / 339 Exs.  |
+                                  | (Embedded in Binary)  |
+                                  +-----------------------+
 ```
 
-Save the file and watch Spanglings validate your answer in milliseconds. When correct, press `n` or `Enter` to advance to the next challenge!
+---
+
+## Quickstart
+
+=== "Cargo (Recommended)"
+    ```bash
+    # Install globally
+    cargo install spanglings
+
+    # Initialize exercise catalog in current directory
+    spanglings init
+
+    # Start interactive TUI
+    spanglings
+    ```
+
+=== "Pre-Built Binaries"
+    Download pre-compiled binaries for Linux, macOS (Apple Silicon & Intel), and Windows from the [GitHub Releases](https://github.com/dnf0/spanglings/releases) page.
+
+=== "Build from Source"
+    ```bash
+    git clone https://github.com/dnf0/spanglings.git
+    cd spanglings
+    cargo build --release
+    ./target/release/spanglings init
+    ./target/release/spanglings
+    ```
+
+---
+
+## Interactive Learning Modes
+
+### 1. 🚀 Interactive Terminal UI (`spanglings` / `spanglings tui`)
+Full-screen, distraction-free terminal learning environment with dual-pane code viewing, instant syntax validation, live status counters, and integrated pop-up modals:
+```bash
+spanglings
+```
+
+### 2. ⚡ Modern Headless Watcher (`spanglings watch`)
+Work directly in your favorite editor (VS Code, Cursor, Neovim, Helix, Zed). Spanglings continuously validates files on save with interactive non-blocking terminal keystrokes:
+```bash
+spanglings watch
+```
+> **Interactive Hotkeys**: `n` / `Enter` (Next), `p` (Previous), `r` (Rerun), `h` (Hint), `c` (Conjugate), `q` (Quit).
+
+### 3. 🎯 Diagnostic CEFR Placement Assessment (`spanglings test`)
+Evaluate your Spanish baseline across CEFR tiers (A1 to C1) with a calibrated multi-tier test battery and automatic fast-tracking:
+```bash
+spanglings test
+spanglings test --level b1 --fast-track
+```
+
+### 4. 📖 In-Terminal Grammar Explainers (`spanglings explain`)
+Query conceptual cheat sheets directly by topic name, concept identifier, or compiler error code:
+```bash
+spanglings explain subjunctive
+spanglings explain E0301
+spanglings explain por-para
+```
 
 ---
 
 ## Editor Integration (LSP) 🔌
 
-Spanglings includes a built-in Language Server Protocol engine (`spanglings lsp`). Configure your favorite editor for live in-editor diagnostics, hover grammar cards, and verb conjugation tables:
+Configure your editor to run `spanglings lsp` for live diagnostics, red squigglies, code completions, and rich mouseover hover cheat sheets:
 
-=== "VS Code"
+=== "VS Code / Cursor"
     ```json
+    // .vscode/settings.json
     {
-      "languageserver": {
-        "spanglings": {
-          "command": "spanglings",
-          "args": ["lsp"],
-          "filetypes": ["markdown"]
-        }
-      }
+      "spanglings.serverPath": "spanglings",
+      "spanglings.enableHover": true,
+      "spanglings.enableDiagnostics": true
     }
     ```
 
-=== "Neovim (nvim-lspconfig)"
+=== "Neovim"
     ```lua
-    vim.api.nvim_create_autocmd("FileType", {
-      pattern = "markdown",
-      callback = function()
-        vim.lsp.start({
-          name = "spanglings-lsp",
+    -- init.lua / nvim-lspconfig
+    local lspconfig = require("lspconfig")
+    local configs = require("lspconfig.configs")
+
+    if not configs.spanglings then
+      configs.spanglings = {
+        default_config = {
           cmd = { "spanglings", "lsp" },
-          root_dir = vim.fs.dirname(vim.fs.find({'Cargo.toml', '.git'}, { upward = true })[1]),
-        })
-      end,
-    })
+          filetypes = { "markdown" },
+          root_dir = lspconfig.util.root_pattern(".git", "spanglings.toml"),
+        },
+      }
+    end
+    lspconfig.spanglings.setup({})
     ```
 
 === "Helix"
@@ -94,8 +186,9 @@ Spanglings includes a built-in Language Server Protocol engine (`spanglings lsp`
 
 ## 🌐 The *lings Ecosystem
 
-If you enjoy hands-on, terminal-driven mastery, check out our other interactive platforms:
+If you enjoy hands-on, terminal-driven mastery, check out our companion platforms:
 
 - ☸️ [**Kubelings**](https://github.com/dnf0/kubelings) – Hands-on interactive CLI learning environment for Kubernetes.
 - 🏗️ [**Terralings**](https://github.com/dnf0/terralings) – Master Terraform and OpenTofu through interactive infrastructure-as-code exercises.
 - ⚡ [**Raylings**](https://github.com/dnf0/raylings) – Learn distributed AI, Ray Core actors, and scalable clusters through hands-on Python exercises.
+- 🦀 [**Rustlings**](https://github.com/rust-lang/rustlings) – Small exercises to get you used to reading and writing Rust code.

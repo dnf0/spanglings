@@ -1,104 +1,111 @@
-# Getting Started
+# Getting Started 🚀
 
-> 📖 **Looking for a deep-dive walkthrough?** See the [**Complete Onboarding & Learner's Guide**](onboarding-guide.md) for an illustrated tour covering installation, the 6-station CLI tour, solving your first exercise, and TUI power tools.
+Welcome to **Spanglings**! This guide walks you through installation, initializing your exercise workspace, taking the placement test, and setting up your favorite code editor.
+
+> 📖 **Looking for an in-depth tour?** Check out the [**Complete Onboarding & Learner's Guide**](onboarding-guide.md) for a visual step-by-step tutorial covering compiler diagnostics, diagnostic error codes, and mental models.
 
 ---
 
 ## Installation
 
-### 1. Install via Cargo (Recommended)
+=== "Cargo (Recommended)"
+    ```bash
+    # Install globally from crates.io
+    cargo install spanglings
+    ```
 
-Spanglings is written in Rust and can be installed via Cargo:
+=== "Pre-Built Binaries"
+    Download the latest binary for your operating system from the [GitHub Releases](https://github.com/dnf0/spanglings/releases) page:
+    - **macOS Apple Silicon (M1/M2/M3/M4)**: `spanglings-aarch64-apple-darwin.tar.gz`
+    - **macOS Intel**: `spanglings-x86_64-apple-darwin.tar.gz`
+    - **Linux (x86_64)**: `spanglings-x86_64-unknown-linux-gnu.tar.gz`
+    - **Windows**: `spanglings-x86_64-pc-windows-msvc.zip`
 
-```bash
-# Install globally from crates.io
-cargo install spanglings
-```
-
-### 2. Build from Source
-
-```bash
-# Clone the repository
-git clone https://github.com/dnf0/spanglings.git
-cd spanglings
-
-# Build in release mode
-cargo build --release
-
-# Run binary directly or link into PATH
-./target/release/spanglings --version
-```
+=== "Build from Source"
+    ```bash
+    git clone https://github.com/dnf0/spanglings.git
+    cd spanglings
+    cargo build --release
+    ./target/release/spanglings --version
+    ```
 
 ---
 
 ## Quickstart in 3 Steps
 
-### Step 1: Take the Onboarding Tour
+### Step 1: Initialize Your Workspace
 
-Take the interactive 6-station walkthrough to learn the philosophy, accent handling, compiler diagnostics, and editor shortcuts:
-
-```bash
-spanglings tour
-```
-
-### Step 2: Initialize Your Workspace
-
-Scaffold all 303 curriculum exercises into your current directory or target path with zero git-cloning needed:
+Scaffold all **339 curriculum exercises across 60 tracks** directly into your current folder with zero git-cloning required:
 
 ```bash
 spanglings init
 ```
 
-### Step 3: Launch Watch Mode or TUI
+### Step 2: Take the Placement Assessment (Optional)
 
-Choose your preferred learning workflow:
+If you already have previous Spanish exposure, take the calibrated CEFR diagnostic test to fast-track past foundational concepts you have already mastered:
+
+```bash
+# Run full placement diagnostic with automatic level fast-tracking
+spanglings test --fast-track
+```
+
+### Step 3: Choose Your Learning Mode
 
 === "Headless Watch Mode (Recommended for IDEs)"
     ```bash
     spanglings watch
     ```
-    Open the indicated exercise file (e.g., `exercises/00_baseline/01_irregular_preterite.md`) in VS Code, Neovim, or Zed. When you edit and save, Spanglings re-evaluates in milliseconds. Press `n` or `Enter` to advance.
+    Open the indicated exercise file (e.g. `exercises/00_baseline/01_irregular_preterite.md`) in VS Code, Cursor, Neovim, Helix, or Zed. When you edit and save, Spanglings re-evaluates in &lt; 20ms. Press `n` or `Enter` to advance.
 
 === "Interactive Dual-Pane TUI"
     ```bash
     spanglings
     ```
-    Full interactive terminal user interface with live syntax highlighting, progress heatmaps, and in-TUI verb conjugator and reference cheat sheets.
+    Full interactive terminal user interface with live syntax highlighting, progress heatmaps, and in-TUI verb conjugator (`F3`) and reference cheat sheets (`F2` / `F4`).
 
 ---
 
-## Calibrated Placement Diagnostic (`spanglings test`)
+## Shell Autocompletions
 
-Already know some Spanish? Skip baseline drilling by taking the 15-question calibrated CEFR diagnostic placement test:
+Generate native autocompletions for your shell:
 
-```bash
-# Run full diagnostic placement test
-spanglings test
+=== "Zsh"
+    ```bash
+    spanglings completions zsh > ~/.zfunc/_spanglings
+    # Ensure ~/.zfunc is in your $fpath in ~/.zshrc
+    ```
 
-# Run and automatically fast-track mastered levels
-spanglings test --fast-track
-```
+=== "Bash"
+    ```bash
+    spanglings completions bash > ~/.local/share/bash-completion/completions/spanglings
+    ```
 
-Passing tiers will automatically mark foundational exercises as completed and seed your SM-2 spaced repetition deck with optimal ease factors.
+=== "Fish"
+    ```bash
+    spanglings completions fish > ~/.config/fish/completions/spanglings.fish
+    ```
+
+=== "PowerShell"
+    ```powershell
+    spanglings completions powershell | Out-String | Invoke-Expression
+    ```
 
 ---
 
 ## Core Keyboard Shortcuts
 
-### Watch Mode Shortcuts
-While `spanglings watch` is running in your terminal:
-
+### Watch Mode Shortcuts (`spanglings watch`)
 | Key | Action | Description |
 | :--- | :--- | :--- |
 | `n` / `Enter` | **Next** | Advance to the next incomplete or subsequent exercise. |
 | `p` | **Previous** | Go back to review or modify the previous exercise. |
 | `h` | **Hint** | Reveal the next progressive hint tier for current exercise. |
 | `r` | **Rerun** | Force immediate re-evaluation of current file. |
+| `c` | **Conjugate** | Prompt for instant verb conjugation table. |
 | `q` | **Quit** | Gracefully exit watch mode. |
 
-### Interactive TUI Shortcuts
-While `spanglings` TUI is active:
-
+### Interactive TUI Shortcuts (`spanglings`)
 | Key | Action | Description |
 | :--- | :--- | :--- |
 | `Tab` / `Ctrl+N` / `Down` | **Next Exercise** | Navigate down the exercise list. |
