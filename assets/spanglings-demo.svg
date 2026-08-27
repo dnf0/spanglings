@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" width="100%" height="100%">
+  <defs>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;display=swap");
+      
+      .terminal-window {
+        fill: #0d1117;
+        stroke: #30363d;
+        stroke-width: 1.5;
+        rx: 10;
+        ry: 10;
+      }
+      .terminal-header {
+        fill: #161b22;
+        rx: 10;
+        ry: 10;
+      }
+      .header-title {
+        fill: #8b949e;
+        font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 13px;
+        font-weight: 500;
+        text-anchor: middle;
+      }
+      .circle-red { fill: #ff5f56; }
+      .circle-yellow { fill: #ffbd2e; }
+      .circle-green { fill: #27c93f; }
+      
+      .term-text {
+        font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-size: 13px;
+        line-height: 1.5;
+      }
+      
+      .c-dim { fill: #6e7681; }
+      .c-white { fill: #f0f6fc; }
+      .c-red { fill: #ff7b72; font-weight: 600; }
+      .c-green { fill: #7ee787; }
+      .c-yellow { fill: #f2cc60; }
+      .c-blue { fill: #79c0ff; font-weight: 600; }
+      .c-cyan { fill: #56d4dd; }
+      .c-magenta { fill: #d2a8ff; }
+      .c-gold { fill: #e3b341; font-weight: 600; }
+    </style>
+  </defs>
+
+  <!-- Terminal Window Background -->
+  <rect width="920" height="540" class="terminal-window" />
+
+  <!-- Window Titlebar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 910 0 C 915.523 0 920 4.477 920 10 L 920 38 L 0 38 Z" class="terminal-header" />
+  <line x1="0" y1="38" x2="920" y2="38" stroke="#30363d" stroke-width="1" />
+
+  <!-- Window Buttons -->
+  <circle cx="24" cy="19" r="6" class="circle-red" />
+  <circle cx="44" cy="19" r="6" class="circle-yellow" />
+  <circle cx="64" cy="19" r="6" class="circle-green" />
+
+  <!-- Window Title -->
+  <text x="460" y="24" class="header-title">spanglings watch — exercises/03_subjunctive_weirdo/weirdo01.md</text>
+
+  <!-- Terminal Output Lines -->
+  <g class="term-text" transform="translate(28, 70)">
+    <!-- Prompt -->
+    <text y="0">
+      <tspan class="c-green">danielfisher@dev</tspan><tspan class="c-dim">:</tspan><tspan class="c-blue">~/spanglings</tspan><tspan class="c-white">$ spanglings watch</tspan>
+    </text>
+
+    <!-- Watcher Banner -->
+    <text y="26">
+      <tspan class="c-gold">⚡ Spanglings Watcher v0.2.0</tspan><tspan class="c-dim"> — Continuous Syntax &amp; Diagnostic Engine</tspan>
+    </text>
+    <text y="48">
+      <tspan class="c-dim">Watching: exercises/03_subjunctive_weirdo/weirdo01.md (Track 03/60 • B1 Subjunctive)</tspan>
+    </text>
+
+    <!-- Diagnostic Error Header -->
+    <text y="86">
+      <tspan class="c-red">error[E0301]</tspan><tspan class="c-white">: </tspan><tspan class="c-white" font-weight="700">Subjunctive Mood Required</tspan>
+    </text>
+    <text y="108">
+      <tspan class="c-blue">  --&gt;</tspan><tspan class="c-white"> exercises/03_subjunctive_weirdo/weirdo01.md:14:15</tspan>
+    </text>
+
+    <!-- Code Frame & Underline -->
+    <text y="130">
+      <tspan class="c-blue">   |</tspan>
+    </text>
+    <text y="152">
+      <tspan class="c-blue">14 |</tspan><tspan class="c-white"> Quiero que tú </tspan><tspan class="c-red">vienes</tspan><tspan class="c-white"> a la reunión de arquitectura.</tspan>
+    </text>
+    <text y="174">
+      <tspan class="c-blue">   |</tspan><tspan class="c-white">               </tspan><tspan class="c-red">^^^^^^</tspan><tspan class="c-red"> expected subjunctive form &#39;vengas&#39;, found indicative &#39;vienes&#39;</tspan>
+    </text>
+
+    <!-- Notes & Explanations -->
+    <text y="196">
+      <tspan class="c-blue">   =</tspan><tspan class="c-white"> </tspan><tspan class="c-white" font-weight="600">note</tspan><tspan class="c-white">: Main clause expresses volition (&#39;Quiero que...&#39;), triggering mood shift</tspan>
+    </text>
+    <text y="218">
+      <tspan class="c-blue">   =</tspan><tspan class="c-white"> </tspan><tspan class="c-white" font-weight="600">note</tspan><tspan class="c-white">: Linked Concept: </tspan><tspan class="c-magenta">subjunctive_volition_influence</tspan><tspan class="c-dim"> (Prerequisite: present_indicative_irregular)</tspan>
+    </text>
+    <text y="240">
+      <tspan class="c-blue">   =</tspan><tspan class="c-white"> </tspan><tspan class="c-white" font-weight="600">note</tspan><tspan class="c-white">: Contrast: Indicative &#39;vienes&#39; asserts fact; Subjunctive &#39;vengas&#39; expresses desire</tspan>
+    </text>
+    <text y="262">
+      <tspan class="c-blue">   =</tspan><tspan class="c-white"> </tspan><tspan class="c-yellow" font-weight="600">tip</tspan><tspan class="c-white">: For a deep conceptual breakdown, run </tspan><tspan class="c-yellow">&#39;spanglings explain E0301&#39;</tspan><tspan class="c-white"> or press [e] in TUI</tspan>
+    </text>
+
+    <!-- Horizontal Divider -->
+    <line x1="0" y1="285" x2="864" y2="285" stroke="#30363d" stroke-width="1" />
+
+    <!-- Progress Meter -->
+    <text y="315">
+      <tspan class="c-cyan" font-weight="600">Curriculum Progress:</tspan><tspan class="c-green"> [====================&gt;--------------------]</tspan><tspan class="c-white"> 170/339 exercises (50.1%)</tspan>
+    </text>
+    <text y="337">
+      <tspan class="c-dim">CEFR Evaluated Level: </tspan><tspan class="c-gold" font-weight="700">B1 (Threshold Independent)</tspan><tspan class="c-dim"> | Active Vocabulary: </tspan><tspan class="c-white">2,077 words</tspan><tspan class="c-dim"> | Concepts Mastered: </tspan><tspan class="c-white">48/81</tspan>
+    </text>
+
+    <!-- Watcher Navigation Bar -->
+    <text y="375">
+      <tspan class="c-white" font-weight="600">Controls:</tspan><tspan class="c-dim"> [</tspan><tspan class="c-yellow">n</tspan><tspan class="c-dim">/</tspan><tspan class="c-yellow">Enter</tspan><tspan class="c-dim">] Next  [</tspan><tspan class="c-yellow">p</tspan><tspan class="c-dim">] Prev  [</tspan><tspan class="c-yellow">r</tspan><tspan class="c-dim">] Rerun  [</tspan><tspan class="c-yellow">h</tspan><tspan class="c-dim">] Hint (Tier 1/3)  [</tspan><tspan class="c-yellow">c</tspan><tspan class="c-dim">] Conjugate  [</tspan><tspan class="c-yellow">q</tspan><tspan class="c-dim">] Quit</tspan>
+    </text>
+  </g>
+</svg>

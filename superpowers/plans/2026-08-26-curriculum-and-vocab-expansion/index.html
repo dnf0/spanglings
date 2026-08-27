@@ -1,0 +1,765 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Spanglings builds the syntax compiler; real-world usage supplies the data. Developer-grade CLI & interactive TUI for mastering Spanish (B1–C1).">
+      
+      
+        <meta name="author" content="Spanglings Contributors">
+      
+      
+        <link rel="canonical" href="https://dnf0.github.io/spanglings/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Curriculum & Advanced Vocabulary Expansion Implementation Plan - Spanglings</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#curriculum-advanced-vocabulary-expansion-implementation-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Spanglings" class="md-header__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Spanglings
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Curriculum &amp; Advanced Vocabulary Expansion Implementation Plan
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Spanglings" class="md-nav__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Spanglings
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../onboarding-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curriculum Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cli-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI & TUI Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../grammar-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grammar Cheat Sheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#task-1-track-22-tech-software-engineering-spanish-b2-c1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Track 22 - Tech &amp; Software Engineering Spanish (B2-C1)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-2-track-23-formal-business-diplomatic-correspondence-b2-c1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Track 23 - Formal Business &amp; Diplomatic Correspondence (B2-C1)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-3-track-24-false-friends-high-frequency-trap-drills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Track 24 - False Friends &amp; High-Frequency Trap Drills
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-4-track-25-register-elevation-track-26-regional-contrasts-voseo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: Track 25 (Register Elevation) &amp; Track 26 (Regional Contrasts &amp; Voseo)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-5-new-in-terminal-reference-cheat-sheets-documentation-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: New In-Terminal Reference Cheat Sheets &amp; Documentation Update
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="curriculum-advanced-vocabulary-expansion-implementation-plan">Curriculum &amp; Advanced Vocabulary Expansion Implementation Plan</h1>
+<blockquote>
+<p><strong>For agentic workers:</strong> REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (<code>- [ ]</code>) syntax for tracking.</p>
+</blockquote>
+<p><strong>Goal:</strong> Expand Spanglings curriculum with 5 new tracks (25 new exercises) covering Tech &amp; Software Engineering Spanish, Formal Business &amp; Diplomatic Correspondence, False Friends &amp; Cognate Traps, Register Elevation (C1), and Regional Variations (<em>Voseo</em>), plus new in-terminal reference explanation cards.</p>
+<p><strong>Architecture:</strong> Create new Markdown exercise files in <code>exercises/22_tech_software/</code> through <code>exercises/26_regional_contrasts/</code>. Add reference cards in <code>src/engine/reference.rs</code>. Verify all new exercises validate with the golden validator (<code>test_all_curriculum_exercises_are_valid_and_solvable</code>).</p>
+<p><strong>Tech Stack:</strong> Rust 2021, Markdown parser, Golden curriculum test validator.</p>
+<hr />
+<h3 id="task-1-track-22-tech-software-engineering-spanish-b2-c1">Task 1: Track 22 - Tech &amp; Software Engineering Spanish (B2-C1)</h3>
+<p><strong>Files:</strong>
+- Create: <code>exercises/22_tech_software/01_deployment_git.md</code>
+- Create: <code>exercises/22_tech_software/02_debugging_fixes.md</code>
+- Create: <code>exercises/22_tech_software/03_concurrency_deadlocks.md</code>
+- Create: <code>exercises/22_tech_software/04_performance_latency.md</code>
+- Create: <code>exercises/22_tech_software/05_api_routing.md</code>
+- Test: <code>tests/exercise_validity_tests.rs</code></p>
+<ul>
+<li>[ ] <strong>Step 1: Create 5 Tech &amp; Software Engineering Exercises</strong>
+Cover:</li>
+<li><code>01_deployment_git.md</code>: <em>desplegar a producción</em> / <em>solicitud de extracción</em></li>
+<li><code>02_debugging_fixes.md</code>: <em>depurar el código</em> / <em>subsanar la vulnerabilidad</em></li>
+<li><code>03_concurrency_deadlocks.md</code>: <em>bloqueo mutuo (deadlock)</em> / <em>concurrencia</em></li>
+<li><code>04_performance_latency.md</code>: <em>rendimiento</em> / <em>latencia de red</em></li>
+<li>
+<p><code>05_api_routing.md</code>: <em>enrutamiento de peticiones</em> / <em>procesamiento por lotes</em></p>
+</li>
+<li>
+<p>[ ] <strong>Step 2: Run golden validity test</strong>
+Run: <code>cargo test --test exercise_validity_tests</code>
+Expected: PASS.</p>
+</li>
+<li>
+<p>[ ] <strong>Step 3: Commit</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>git<span class="w"> </span>add<span class="w"> </span>exercises/22_tech_software/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(curriculum): add Track 22 - Tech and Software Engineering Spanish"</span>
+</span></code></pre></div></p>
+</li>
+</ul>
+<hr />
+<h3 id="task-2-track-23-formal-business-diplomatic-correspondence-b2-c1">Task 2: Track 23 - Formal Business &amp; Diplomatic Correspondence (B2-C1)</h3>
+<p><strong>Files:</strong>
+- Create: <code>exercises/23_business_diplomatic/01_email_opening_closing.md</code>
+- Create: <code>exercises/23_business_diplomatic/02_negotiation_terms.md</code>
+- Create: <code>exercises/23_business_diplomatic/03_debt_settlement.md</code>
+- Create: <code>exercises/23_business_diplomatic/04_dismissing_proposals.md</code>
+- Create: <code>exercises/23_business_diplomatic/05_contract_stipulations.md</code>
+- Test: <code>tests/exercise_validity_tests.rs</code></p>
+<ul>
+<li>[ ] <strong>Step 1: Create 5 Formal Business &amp; Diplomatic Exercises</strong>
+Cover:</li>
+<li><code>01_email_opening_closing.md</code>: <em>Quedo a su entera disposición</em></li>
+<li><code>02_negotiation_terms.md</code>: <em>En lo que atañe a lo convenido</em> / <em>acordar los términos</em></li>
+<li><code>03_debt_settlement.md</code>: <em>saldar la deuda pendiente</em></li>
+<li><code>04_dismissing_proposals.md</code>: <em>desestimar la propuesta</em> / <em>desestimar el recurso</em></li>
+<li>
+<p><code>05_contract_stipulations.md</code>: <em>estipular en las cláusulas</em> / <em>llevar a cabo</em></p>
+</li>
+<li>
+<p>[ ] <strong>Step 2: Run golden validity test</strong>
+Run: <code>cargo test --test exercise_validity_tests</code>
+Expected: PASS.</p>
+</li>
+<li>
+<p>[ ] <strong>Step 3: Commit</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>add<span class="w"> </span>exercises/23_business_diplomatic/
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(curriculum): add Track 23 - Formal Business and Diplomatic Correspondence"</span>
+</span></code></pre></div></p>
+</li>
+</ul>
+<hr />
+<h3 id="task-3-track-24-false-friends-high-frequency-trap-drills">Task 3: Track 24 - False Friends &amp; High-Frequency Trap Drills</h3>
+<p><strong>Files:</strong>
+- Create: <code>exercises/24_false_friends/01_actualmente_actually.md</code>
+- Create: <code>exercises/24_false_friends/02_eventualmente_eventually.md</code>
+- Create: <code>exercises/24_false_friends/03_pretender_realizar.md</code>
+- Create: <code>exercises/24_false_friends/04_soportar_apoyar.md</code>
+- Create: <code>exercises/24_false_friends/05_sensible_embarazada.md</code>
+- Test: <code>tests/exercise_validity_tests.rs</code></p>
+<ul>
+<li>[ ] <strong>Step 1: Create 5 False Friends &amp; Trap Exercises</strong>
+Cover:</li>
+<li><code>01_actualmente_actually.md</code>: <em>actualmente</em> (currently) vs <em>en realidad / de hecho</em> (actually)</li>
+<li><code>02_eventualmente_eventually.md</code>: <em>eventualmente</em> (occasionally/by chance) vs <em>con el tiempo / finalmente</em> (eventually)</li>
+<li><code>03_pretender_realizar.md</code>: <em>pretender</em> (to attempt/claim) vs <em>fingir</em> (to pretend) &amp; <em>realizar</em> (to make) vs <em>darse cuenta de</em> (to realize)</li>
+<li><code>04_soportar_apoyar.md</code>: <em>soportar</em> (to tolerate) vs <em>apoyar / respaldar</em> (to support)</li>
+<li>
+<p><code>05_sensible_embarazada.md</code>: <em>sensible</em> (sensitive) vs <em>sensato</em> (sensible) &amp; <em>constipado</em> (having a cold)</p>
+</li>
+<li>
+<p>[ ] <strong>Step 2: Run golden validity test</strong>
+Run: <code>cargo test --test exercise_validity_tests</code>
+Expected: PASS.</p>
+</li>
+<li>
+<p>[ ] <strong>Step 3: Commit</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>add<span class="w"> </span>exercises/24_false_friends/
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(curriculum): add Track 24 - High Frequency False Friends and Traps"</span>
+</span></code></pre></div></p>
+</li>
+</ul>
+<hr />
+<h3 id="task-4-track-25-register-elevation-track-26-regional-contrasts-voseo">Task 4: Track 25 (Register Elevation) &amp; Track 26 (Regional Contrasts &amp; Voseo)</h3>
+<p><strong>Files:</strong>
+- Create: <code>exercises/25_register_elevation/01_acometer_proyectos.md</code>
+- Create: <code>exercises/25_register_elevation/02_suscitar_controversia.md</code>
+- Create: <code>exercises/25_register_elevation/03_surtir_efecto.md</code>
+- Create: <code>exercises/25_register_elevation/04_albergar_dudas.md</code>
+- Create: <code>exercises/25_register_elevation/05_arrojar_luz.md</code>
+- Create: <code>exercises/26_regional_contrasts/01_voseo_present.md</code>
+- Create: <code>exercises/26_regional_contrasts/02_voseo_imperative.md</code>
+- Create: <code>exercises/26_regional_contrasts/03_latin_america_ustedes.md</code>
+- Create: <code>exercises/26_regional_contrasts/04_lexical_variants_driving_talking.md</code>
+- Create: <code>exercises/26_regional_contrasts/05_clitic_order_leismo.md</code>
+- Test: <code>tests/exercise_validity_tests.rs</code></p>
+<ul>
+<li>[ ] <strong>Step 1: Create Track 25 and Track 26 Exercises</strong></li>
+<li>
+<p>[ ] <strong>Step 2: Run golden validity test</strong>
+Run: <code>cargo test --test exercise_validity_tests</code>
+Expected: PASS (all 141 exercises valid and solvable).</p>
+</li>
+<li>
+<p>[ ] <strong>Step 3: Commit</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>git<span class="w"> </span>add<span class="w"> </span>exercises/25_register_elevation/<span class="w"> </span>exercises/26_regional_contrasts/
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(curriculum): add Track 25 Register Elevation and Track 26 Regional Contrasts"</span>
+</span></code></pre></div></p>
+</li>
+</ul>
+<hr />
+<h3 id="task-5-new-in-terminal-reference-cheat-sheets-documentation-update">Task 5: New In-Terminal Reference Cheat Sheets &amp; Documentation Update</h3>
+<p><strong>Files:</strong>
+- Modify: <code>src/engine/reference.rs</code>
+- Modify: <code>tests/reference_tests.rs</code>
+- Modify: <code>README.md</code>
+- Modify: <code>docs/BACKLOG.md</code></p>
+<ul>
+<li>[ ] <strong>Step 1: Add new reference cards in <code>src/engine/reference.rs</code></strong>
+Add:</li>
+<li><code>tech_software</code></li>
+<li><code>business_correspondence</code></li>
+<li><code>false_friends</code></li>
+<li>
+<p><code>voseo</code></p>
+</li>
+<li>
+<p>[ ] <strong>Step 2: Update <code>tests/reference_tests.rs</code> and verify</strong>
+Run: <code>cargo test --all-targets</code>
+Expected: PASS.</p>
+</li>
+<li>
+<p>[ ] <strong>Step 3: Update <code>README.md</code> and <code>docs/BACKLOG.md</code></strong></p>
+</li>
+<li>[ ] <strong>Step 4: Commit</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>add<span class="w"> </span>src/engine/reference.rs<span class="w"> </span>tests/reference_tests.rs<span class="w"> </span>README.md<span class="w"> </span>docs/BACKLOG.md
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(engine): add tech, business, and false-friends reference cards and docs"</span>
+</span></code></pre></div></li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

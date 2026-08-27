@@ -1,0 +1,2020 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Spanglings builds the syntax compiler; real-world usage supplies the data. Developer-grade CLI & interactive TUI for mastering Spanish (B1–C1).">
+      
+      
+        <meta name="author" content="Spanglings Contributors">
+      
+      
+        <link rel="canonical" href="https://dnf0.github.io/spanglings/grammar-reference/">
+      
+      
+        <link rel="prev" href="../cli-reference/">
+      
+      
+        <link rel="next" href="../contributing/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Grammar Cheat Sheets - Spanglings</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#grammar-reference-cards-cheat-sheets" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Spanglings" class="md-header__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Spanglings
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Grammar Cheat Sheets
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Spanglings" class="md-nav__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Spanglings
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onboarding-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curriculum Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI & TUI Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grammar Cheat Sheets
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grammar Cheat Sheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ser-vs-estar-adjective-semantic-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Ser vs Estar &amp; Adjective Semantic Shifts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Ser vs Estar &amp; Adjective Semantic Shifts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-distinction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Distinction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjectives-that-shift-meaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adjectives that Shift Meaning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-past-aspectual-shifts-preterito-vs-imperfecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Past Aspectual Shifts (Pretérito vs Imperfecto)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-subjunctive-triggers-weirdo-escapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Subjunctive Triggers (WEIRDO &amp; ESCAPA)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Subjunctive Triggers (WEIRDO &amp; ESCAPA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-weirdo-trigger-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The WEIRDO Trigger Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adverbial-clauses-of-time-condition-escapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adverbial Clauses of Time &amp; Condition (ESCAPA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-por-vs-para-motive-vs-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Por vs Para (Motive vs Purpose)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Por vs Para (Motive vs Purpose)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rules-for-por-cause-exchange-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules for Por (Cause, Exchange &amp; Path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules-for-para-destination-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules for Para (Destination &amp; Purpose)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-clitic-pronoun-stacking-accentuation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Clitic Pronoun Stacking &amp; Accentuation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Clitic Pronoun Stacking &amp; Accentuation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rule-1-indirect-object-precedes-direct-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 1: Indirect Object Precedes Direct Object
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-2-the-leles-rightarrow-se-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 2: The Le/Les $\rightarrow$ Se Conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-3-clitic-attachment-written-accents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 3: Clitic Attachment &amp; Written Accents
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-prepositional-regimes-regimenes-preposicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Prepositional Regimes (Regímenes Preposicionales)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-accidental-involuntary-se" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Accidental &amp; Involuntary Se
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-false-friends-high-frequency-traps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. False Friends &amp; High-Frequency Traps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-epistemic-future-conditional-of-conjecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Epistemic Future &amp; Conditional of Conjecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-clitic-doubling-left-dislocation-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Clitic Doubling &amp; Left-Dislocation Syntax
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Clitic Doubling &amp; Left-Dislocation Syntax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mandatory-dative-doubling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mandatory Dative Doubling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-dislocation-fronted-direct-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Left-Dislocation (Fronted Direct Objects)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-personal-a-animacy-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Personal A &amp; Animacy Shifts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Personal A &amp; Animacy Shifts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-shifts-with-personal-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic Shifts with Personal A
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-gerund-restrictions-anglicism-elimination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Gerund Restrictions &amp; Anglicism Elimination
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-adversatives-pero-vs-sino-vs-sino-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Adversatives: Pero vs Sino vs Sino Que
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-optatives-independent-subjunctives-legal-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Optatives, Independent Subjunctives &amp; Legal Formulas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-verbs-of-becoming-transformation-verbos-de-cambio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Verbs of Becoming &amp; Transformation (Verbos de Cambio)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-epistemic-adverbs-mandatory-mood-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Epistemic Adverbs &amp; Mandatory Mood Selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-datives-of-possession-affective-ethic-datives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Datives of Possession &amp; Affective Ethic Datives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-corrective-negation-rejected-causes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Corrective Negation &amp; Rejected Causes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-participial-absolute-constructions-construcciones-absolutas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Participial Absolute Constructions (Construcciones Absolutas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-scalar-concession-intensive-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Scalar Concession &amp; Intensive Connectors
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-ser-vs-estar-adjective-semantic-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Ser vs Estar &amp; Adjective Semantic Shifts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Ser vs Estar &amp; Adjective Semantic Shifts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-distinction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Distinction
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adjectives-that-shift-meaning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adjectives that Shift Meaning
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-past-aspectual-shifts-preterito-vs-imperfecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Past Aspectual Shifts (Pretérito vs Imperfecto)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-subjunctive-triggers-weirdo-escapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Subjunctive Triggers (WEIRDO &amp; ESCAPA)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Subjunctive Triggers (WEIRDO &amp; ESCAPA)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-weirdo-trigger-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The WEIRDO Trigger Framework
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adverbial-clauses-of-time-condition-escapa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adverbial Clauses of Time &amp; Condition (ESCAPA)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-por-vs-para-motive-vs-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Por vs Para (Motive vs Purpose)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Por vs Para (Motive vs Purpose)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rules-for-por-cause-exchange-path" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules for Por (Cause, Exchange &amp; Path)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rules-for-para-destination-purpose" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rules for Para (Destination &amp; Purpose)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-clitic-pronoun-stacking-accentuation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Clitic Pronoun Stacking &amp; Accentuation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Clitic Pronoun Stacking &amp; Accentuation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rule-1-indirect-object-precedes-direct-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 1: Indirect Object Precedes Direct Object
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-2-the-leles-rightarrow-se-conversion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 2: The Le/Les $\rightarrow$ Se Conversion
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rule-3-clitic-attachment-written-accents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rule 3: Clitic Attachment &amp; Written Accents
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-prepositional-regimes-regimenes-preposicionales" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Prepositional Regimes (Regímenes Preposicionales)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-accidental-involuntary-se" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Accidental &amp; Involuntary Se
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-false-friends-high-frequency-traps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. False Friends &amp; High-Frequency Traps
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-epistemic-future-conditional-of-conjecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Epistemic Future &amp; Conditional of Conjecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-clitic-doubling-left-dislocation-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Clitic Doubling &amp; Left-Dislocation Syntax
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Clitic Doubling &amp; Left-Dislocation Syntax">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mandatory-dative-doubling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mandatory Dative Doubling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#left-dislocation-fronted-direct-objects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Left-Dislocation (Fronted Direct Objects)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-personal-a-animacy-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Personal A &amp; Animacy Shifts
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Personal A &amp; Animacy Shifts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#core-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Core Rules
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#semantic-shifts-with-personal-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Semantic Shifts with Personal A
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-gerund-restrictions-anglicism-elimination" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Gerund Restrictions &amp; Anglicism Elimination
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-adversatives-pero-vs-sino-vs-sino-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Adversatives: Pero vs Sino vs Sino Que
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-optatives-independent-subjunctives-legal-formulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Optatives, Independent Subjunctives &amp; Legal Formulas
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-verbs-of-becoming-transformation-verbos-de-cambio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Verbs of Becoming &amp; Transformation (Verbos de Cambio)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-epistemic-adverbs-mandatory-mood-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. Epistemic Adverbs &amp; Mandatory Mood Selection
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-datives-of-possession-affective-ethic-datives" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Datives of Possession &amp; Affective Ethic Datives
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-corrective-negation-rejected-causes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Corrective Negation &amp; Rejected Causes
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-participial-absolute-constructions-construcciones-absolutas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Participial Absolute Constructions (Construcciones Absolutas)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-scalar-concession-intensive-connectors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Scalar Concession &amp; Intensive Connectors
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="grammar-reference-cards-cheat-sheets">Grammar Reference Cards &amp; Cheat Sheets</h1>
+<p>Spanglings embeds a full reference library accessible in-terminal via <code>spanglings explain &lt;topic&gt;</code> or through the interactive TUI Reference Sheet Browser (<code>F4</code> / <code>Ctrl+B</code>).</p>
+<hr />
+<h2 id="1-ser-vs-estar-adjective-semantic-shifts">1. Ser vs Estar &amp; Adjective Semantic Shifts</h2>
+<h3 id="core-distinction">Core Distinction</h3>
+<ul>
+<li><strong>Ser</strong> (<em>Essential Identity / Inherent Properties / Origin / Time</em>): Defines what a subject <strong>is</strong>.</li>
+<li><strong>Estar</strong> (<em>State / Condition / Location / Progressive Aspect</em>): Defines how a subject <strong>stands / feels / is situated</strong>.</li>
+</ul>
+<h3 id="adjectives-that-shift-meaning">Adjectives that Shift Meaning</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Adjective</th>
+<th style="text-align: left;">With <em>Ser</em> (Inherent Trait)</th>
+<th style="text-align: left;">With <em>Estar</em> (Temporary State)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>listo</strong></td>
+<td style="text-align: left;">Clever, smart (<em>Es muy listo</em>)</td>
+<td style="text-align: left;">Ready, prepared (<em>Está listo</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>rico</strong></td>
+<td style="text-align: left;">Wealthy, affluent (<em>Es rico</em>)</td>
+<td style="text-align: left;">Delicious, tasty (<em>La sopa está rica</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>atento</strong></td>
+<td style="text-align: left;">Courteous, considerate (<em>Es atento</em>)</td>
+<td style="text-align: left;">Paying attention (<em>Está atento</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>verde</strong></td>
+<td style="text-align: left;">Green-colored (<em>Es verde</em>)</td>
+<td style="text-align: left;">Unripe, immature (<em>El plátano está verde</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>aburrido</strong></td>
+<td style="text-align: left;">Boring person/thing (<em>La clase es aburrida</em>)</td>
+<td style="text-align: left;">Bored (<em>Estoy aburrido</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>grave</strong></td>
+<td style="text-align: left;">Serious, solemn (<em>Voz grave</em>)</td>
+<td style="text-align: left;">Critically ill (<em>El paciente está grave</em>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-past-aspectual-shifts-preterito-vs-imperfecto">2. Past Aspectual Shifts (<em>Pretérito vs Imperfecto</em>)</h2>
+<p>Certain Spanish verbs alter their inherent lexical meaning depending on whether they are conjugated in the <strong>Pretérito Indefinido</strong> (perfective/punctual) or the <strong>Pretérito Imperfecto</strong> (imperfective/state).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Verb</th>
+<th style="text-align: left;">Pretérito Indefinido (Punctual / Culmination)</th>
+<th style="text-align: left;">Pretérito Imperfecto (Continuous / Mental State)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>conocer</strong></td>
+<td style="text-align: left;">Met for the first time (<em>La conocí ayer</em>)</td>
+<td style="text-align: left;">Knew / was acquainted with (<em>La conocía desde niño</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>saber</strong></td>
+<td style="text-align: left;">Found out / learned (<em>Ayer supe la verdad</em>)</td>
+<td style="text-align: left;">Knew (information) (<em>Yo ya lo sabía</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>querer</strong></td>
+<td style="text-align: left;">Tried / attempted to (<em>Quiso entrar</em>)</td>
+<td style="text-align: left;">Wanted / felt like (<em>Quería descansar</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>no querer</strong></td>
+<td style="text-align: left;">Refused to (<em>No quiso firmar</em>)</td>
+<td style="text-align: left;">Did not want to (<em>No quería molestar</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>poder</strong></td>
+<td style="text-align: left;">Managed to / succeeded in (<em>Pude arreglarlo</em>)</td>
+<td style="text-align: left;">Was capable of / had the ability (<em>Podía hacerlo</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>no poder</strong></td>
+<td style="text-align: left;">Failed after trying (<em>No pude abrir la puerta</em>)</td>
+<td style="text-align: left;">Was unable to (<em>No podía asistir</em>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-subjunctive-triggers-weirdo-escapa">3. Subjunctive Triggers (<em>WEIRDO</em> &amp; <em>ESCAPA</em>)</h2>
+<h3 id="the-weirdo-trigger-framework">The WEIRDO Trigger Framework</h3>
+<p>Subjunctive is required in subordinate noun clauses when the main clause expresses:
+- <strong>W</strong> - <em>Wishes &amp; Volition</em>: <em>Querer que</em>, <em>Desear que</em>, <em>Exigir que</em>, <em>Preferir que</em>.
+- <strong>E</strong> - <em>Emotion &amp; Evaluation</em>: <em>Alegrarse de que</em>, <em>Temer que</em>, <em>Sentir que</em>, <em>Es bueno que</em>.
+- <strong>I</strong> - <em>Impersonal Expressions</em>: <em>Es necesario que</em>, <em>Es fundamental que</em>, <em>Conviene que</em>.
+- <strong>R</strong> - <em>Requests &amp; Directives</em>: <em>Pedir que</em>, <em>Mandar que</em>, <em>Recomendar que</em>, <em>Sugerir que</em>.
+- <strong>D</strong> - <em>Doubt &amp; Denial</em>: <em>Dudar que</em>, <em>No creer que</em>, <em>Negar que</em>, <em>No pensar que</em>.
+- <strong>O</strong> - <em>Ojalá</em>: <em>¡Ojalá (que) tengamos éxito!</em></p>
+<h3 id="adverbial-clauses-of-time-condition-escapa">Adverbial Clauses of Time &amp; Condition (<em>ESCAPA</em>)</h3>
+<p>Always trigger the subjunctive:
+- <strong>E</strong> - <em>En caso de que</em> (in case that)
+- <strong>S</strong> - <em>Sin que</em> (without)
+- <strong>C</strong> - <em>Con tal de que</em> (provided that)
+- <strong>A</strong> - <em>Antes de que</em> (before)
+- <strong>P</strong> - <em>Para que</em> / <em>A fin de que</em> (so that / in order that)
+- <strong>A</strong> - <em>A menos que</em> / <em>A no ser que</em> (unless)</p>
+<hr />
+<h2 id="4-por-vs-para-motive-vs-purpose">4. Por vs Para (Motive vs Purpose)</h2>
+<h3 id="rules-for-por-cause-exchange-path">Rules for <em>Por</em> (Cause, Exchange &amp; Path)</h3>
+<ol>
+<li><strong>Cause / Motive / Reason</strong>: <em>Lo hice por ti</em> (Because of you).</li>
+<li><strong>Exchange / Cost</strong>: <em>Pagué 20 euros por el libro</em>.</li>
+<li><strong>Transit / Trajectory</strong>: <em>Paseamos por el parque</em>.</li>
+<li><strong>Duration / Approximate Time</strong>: <em>Trabajó por dos horas</em>.</li>
+<li><strong>Means of Transportation / Communication</strong>: <em>Te envié el código por correo</em>.</li>
+<li><strong>Passive Voice Agent</strong>: <em>El bug fue corregido por el equipo</em>.</li>
+<li><strong>Multiplication / Percentages</strong>: <em>Tres por cinco; el diez por ciento</em>.</li>
+</ol>
+<h3 id="rules-for-para-destination-purpose">Rules for <em>Para</em> (Destination &amp; Purpose)</h3>
+<ol>
+<li><strong>Purpose / Goal (+ Infinitive)</strong>: <em>Estudio para aprender</em>.</li>
+<li><strong>Recipient</strong>: <em>Este pull request es para ti</em>.</li>
+<li><strong>Deadline / Target Date</strong>: <em>La entrega es para el viernes</em>.</li>
+<li><strong>Physical Destination</strong>: <em>Salgo para Madrid</em>.</li>
+<li><strong>Opinion / Personal Assessment</strong>: <em>Para mí, la arquitectura es sólida</em>.</li>
+<li><strong>Standard of Comparison</strong>: <em>Para ser junior, programa muy bien</em>.</li>
+</ol>
+<hr />
+<h2 id="5-clitic-pronoun-stacking-accentuation">5. Clitic Pronoun Stacking &amp; Accentuation</h2>
+<h3 id="rule-1-indirect-object-precedes-direct-object">Rule 1: Indirect Object Precedes Direct Object</h3>
+<p>When both pronouns appear together, the sequence is always:
+$$\text{Indirect Object (me, te, le, nos, os, les)} + \text{Direct Object (lo, la, los, las)}$$</p>
+<h3 id="rule-2-the-leles-rightarrow-se-conversion">Rule 2: The <em>Le/Les</em> $\rightarrow$ <em>Se</em> Conversion</h3>
+<p>When a third-person indirect pronoun (<em>le/les</em>) is followed by a third-person direct pronoun (<em>lo/la/los/las</em>), the indirect pronoun obligatorily converts to <strong>se</strong>:
+- <em>Le doy el libro</em> $\rightarrow$ <em>*Le lo doy</em> (Incorrect) $\rightarrow$ <strong>Se lo doy</strong> (Correct).</p>
+<h3 id="rule-3-clitic-attachment-written-accents">Rule 3: Clitic Attachment &amp; Written Accents</h3>
+<p>When attaching two pronouns to an infinitive, gerund, or affirmative imperative, add an accent mark to maintain natural syllable stress:
+- <em>Decir + le + lo</em> $\rightarrow$ <strong>Decírselo</strong>
+- <em>Entregando + me + lo</em> $\rightarrow$ <strong>Entregándomelo</strong>
+- <em>Da + me + lo</em> $\rightarrow$ <strong>Dámelo</strong></p>
+<hr />
+<h2 id="6-prepositional-regimes-regimenes-preposicionales">6. Prepositional Regimes (<em>Regímenes Preposicionales</em>)</h2>
+<p>Certain verbs obligatorily govern specific bound prepositions:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Verb + Preposition</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>acordarse de</strong></td>
+<td style="text-align: left;">To remember</td>
+<td style="text-align: left;"><em>Me acordé de tu sugerencia.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>soñar con</strong></td>
+<td style="text-align: left;">To dream about</td>
+<td style="text-align: left;"><em>Sueña con fundar su propia startup.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>pensar en</strong></td>
+<td style="text-align: left;">To think about</td>
+<td style="text-align: left;"><em>Pienso en optimizar la consulta SQL.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>insistir en</strong></td>
+<td style="text-align: left;">To insist upon</td>
+<td style="text-align: left;"><em>Insistió en realizar una prueba de carga.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>fijarse en</strong></td>
+<td style="text-align: left;">To pay attention to</td>
+<td style="text-align: left;"><em>Fíjate en los logs de error.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>negarse a</strong></td>
+<td style="text-align: left;">To refuse to</td>
+<td style="text-align: left;"><em>Se negó a desplegar en viernes.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>consistir en</strong></td>
+<td style="text-align: left;">To consist of</td>
+<td style="text-align: left;"><em>El plan consiste en migrar a Kubernetes.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-accidental-involuntary-se">7. Accidental &amp; Involuntary <em>Se</em></h2>
+<p>Expresses unintentional actions, accidents, or memory slips without direct blame:</p>
+<p>$$\textbf{Se} + \text{Indirect Object (Victim)} + \text{Verb (Agrees with Object)} + \text{Subject (Object)}$$</p>
+<ul>
+<li><em>Se me cayó la base de datos</em> (The database crashed on me / I dropped the database).</li>
+<li><em>Se nos olvidaron las credenciales</em> (We forgot the credentials).</li>
+<li><em>Se le rompieron las pruebas</em> (The tests broke on him/her).</li>
+</ul>
+<hr />
+<h2 id="8-false-friends-high-frequency-traps">8. False Friends &amp; High-Frequency Traps</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Spanish False Friend</th>
+<th style="text-align: left;">Real Meaning</th>
+<th style="text-align: left;">True Translation for English Word</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>actualmente</strong></td>
+<td style="text-align: left;">Currently / Nowadays</td>
+<td style="text-align: left;">Actually $\rightarrow$ <em>en realidad, de hecho</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>eventualmente</strong></td>
+<td style="text-align: left;">Occasionally / Uncertainly</td>
+<td style="text-align: left;">Eventually $\rightarrow$ <em>con el tiempo, tarde o temprano</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>pretender</strong></td>
+<td style="text-align: left;">To aim / intend / attempt</td>
+<td style="text-align: left;">To pretend $\rightarrow$ <em>fingir</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>realizar</strong></td>
+<td style="text-align: left;">To execute / carry out / achieve</td>
+<td style="text-align: left;">To realize $\rightarrow$ <em>darse cuenta de</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>soportar</strong></td>
+<td style="text-align: left;">To tolerate / endure / put up with</td>
+<td style="text-align: left;">To support (code/infrastructure) $\rightarrow$ <em>admitir, ser compatible con, respaldar</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>sensato</strong></td>
+<td style="text-align: left;">Wise / level-headed / reasonable</td>
+<td style="text-align: left;">Sensitive $\rightarrow$ <em>sensible</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-epistemic-future-conditional-of-conjecture">9. Epistemic Future &amp; Conditional of Conjecture</h2>
+<p>Expresses speculation, deduction, or probability without modal verbs (<em>must be</em>, <em>probably is</em>):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tense</th>
+<th style="text-align: left;">Time Frame of Speculation</th>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">English Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Futuro Simple</strong></td>
+<td style="text-align: left;">Present</td>
+<td style="text-align: left;"><em>¿Qué hora es? -&gt; Serán las cuatro.</em></td>
+<td style="text-align: left;">"It must be / is probably 4:00."</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Futuro Simple</strong></td>
+<td style="text-align: left;">Present State</td>
+<td style="text-align: left;"><em>¿Dónde está? -&gt; Estará en su despacho.</em></td>
+<td style="text-align: left;">"He is probably in his office."</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Condicional Simple</strong></td>
+<td style="text-align: left;">Past (Imperfective)</td>
+<td style="text-align: left;"><em>Ayer no vino; estaría enfermo.</em></td>
+<td style="text-align: left;">"He didn't come; he was probably sick."</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Condicional Simple</strong></td>
+<td style="text-align: left;">Past Age/Quantity</td>
+<td style="text-align: left;"><em>Cuando empezó, tendría 20 años.</em></td>
+<td style="text-align: left;">"When he started, he was probably 20."</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Futuro Perfecto</strong></td>
+<td style="text-align: left;">Prior Action (Present)</td>
+<td style="text-align: left;"><em>Ya habrá terminado el despliegue.</em></td>
+<td style="text-align: left;">"The deployment has probably finished by now."</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Condicional Compuesto</strong></td>
+<td style="text-align: left;">Prior Action (Past)</td>
+<td style="text-align: left;"><em>A las tres ya se habría marchado.</em></td>
+<td style="text-align: left;">"By 3:00 he had probably already left."</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="10-clitic-doubling-left-dislocation-syntax">10. Clitic Doubling &amp; Left-Dislocation Syntax</h2>
+<p>Spanish syntax requires pronoun resumption in specific syntactic configurations:</p>
+<h3 id="mandatory-dative-doubling">Mandatory Dative Doubling</h3>
+<ol>
+<li><strong>Prepositional Tonic Pronouns</strong>: Whenever <em>a mí, a ti, a él/ella/usted, a nosotros/as</em> is present, the clitic is mandatory:</li>
+<li>✅ <em>A mí me gusta la arquitectura.</em> (❌ <em>*A mí gusta...</em>)</li>
+<li><strong>Topicalized / Fronted Indirect Objects</strong>: When the recipient precedes the verb:</li>
+<li>✅ <em>A los inversores les presentamos el balance.</em> (❌ <em>*A los inversores presentamos...</em>)</li>
+<li><strong>Psychological Verbs</strong>: <em>Gustar, costar, encantar, molestar, parecer</em>:</li>
+<li>✅ <em>A los desarrolladores les cuesta migrar el código.</em></li>
+</ol>
+<h3 id="left-dislocation-fronted-direct-objects">Left-Dislocation (Fronted Direct Objects)</h3>
+<p>When a specific direct object is placed before the verb for topical focus, it <strong>must</strong> be resumed by an accusative clitic (<em>lo, la, los, las</em>):
+- ✅ <em>El informe técnico lo redacté anoche.</em> (❌ <em>*El informe técnico redacté...</em>)
+- ✅ <em>A los usuarios afectados los notificamos por correo.</em> (❌ <em>*A los usuarios afectados notificamos...</em>)</p>
+<hr />
+<h2 id="11-personal-a-animacy-shifts">11. Personal <em>A</em> &amp; Animacy Shifts</h2>
+<h3 id="core-rules">Core Rules</h3>
+<ul>
+<li><strong>Specific / Known Humans</strong>: Mandatory <em>a</em> (<em>Busco a la directora</em>).</li>
+<li><strong>Indefinite / Non-Specific Humans</strong>: Omit <em>a</em> (<em>Busco secretaria / Necesitamos contratar programador</em>).</li>
+<li><strong>Domestic Pets / Personification</strong>: Mandatory <em>a</em> / <em>al</em> (<em>Pasear al perro</em>, <em>Defender a la patria</em>).</li>
+<li><strong>Indefinite Pronouns</strong>: Mandatory <em>a</em> (<em>No vi a nadie</em>, <em>Llamaron a alguien</em>).</li>
+</ul>
+<h3 id="semantic-shifts-with-personal-a">Semantic Shifts with Personal <em>A</em></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Verb</th>
+<th style="text-align: left;">Without <em>A</em></th>
+<th style="text-align: left;">With Personal <em>A</em></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>tener</strong></td>
+<td style="text-align: left;">Possession (<em>Tengo dos servidores</em>)</td>
+<td style="text-align: left;">Human in a State (<em>Tengo a mi colega enfermo</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>perder</strong></td>
+<td style="text-align: left;">Misplace object / Miss transit (<em>Perder el tren</em>)</td>
+<td style="text-align: left;">Bereavement / Team loss (<em>Perder a su mejor líder</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>conocer</strong></td>
+<td style="text-align: left;">Recognize / Know place (<em>Conozco el sistema</em>)</td>
+<td style="text-align: left;">Acquaintance with person (<em>Conozco a la fundadora</em>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="12-gerund-restrictions-anglicism-elimination">12. Gerund Restrictions &amp; Anglicism Elimination</h2>
+<p>Spanish strictly limits gerund syntax compared to English:</p>
+<ol>
+<li><strong>Rejection of the Gerund of Posteriority</strong>:</li>
+<li>❌ <em>*El servidor falló provocando la caída del servicio.</em></li>
+<li>✅ <em>El servidor falló y provocó la caída del servicio.</em></li>
+<li><strong>Rejection of Adjectival Gerunds</strong>:</li>
+<li>❌ <em>*Una directiva regulando la inteligencia artificial.</em></li>
+<li>✅ <em>Una directiva que regula la inteligencia artificial.</em></li>
+<li><strong>Legitimate Uses</strong>:</li>
+<li><strong>Simultaneous Action / Manner</strong>: <em>Depuraba el código escuchando música.</em></li>
+<li><strong>Lexicalized Exceptions</strong>: <em>Agua hirviendo</em>, <em>clavo ardiendo</em>.</li>
+</ol>
+<hr />
+<h2 id="13-adversatives-pero-vs-sino-vs-sino-que">13. Adversatives: <em>Pero</em> vs <em>Sino</em> vs <em>Sino Que</em></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Conjunction</th>
+<th style="text-align: left;">Context</th>
+<th style="text-align: left;">Syntax Pattern</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Pero</strong></td>
+<td style="text-align: left;">Additive qualification after affirmative or negative clause</td>
+<td style="text-align: left;">$[X] \text{ pero } [Y]$</td>
+<td style="text-align: left;"><em>El sistema es complejo, pero es muy rápido.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sino</strong></td>
+<td style="text-align: left;">Exclusive substitution of word/phrase after negative clause</td>
+<td style="text-align: left;">$\text{No } [X] \text{ sino } [Y]$</td>
+<td style="text-align: left;"><em>No usamos Java, sino Rust.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sino que</strong></td>
+<td style="text-align: left;">Exclusive substitution introducing a conjugated verb clause</td>
+<td style="text-align: left;">$\text{No } [X] \text{ sino que } [V_{\text{conj}}...]$</td>
+<td style="text-align: left;"><em>No solo arregló el bug, sino que optimizó el algoritmo.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="14-optatives-independent-subjunctives-legal-formulas">14. Optatives, Independent Subjunctives &amp; Legal Formulas</h2>
+<ol>
+<li><strong>Counterfactual Longing (<em>¡Quién + Imperfecto de Subjuntivo!</em>)</strong>:</li>
+<li><em>¡Quién pudiera programar sin errores!</em> ("If only one could code without bugs!")</li>
+<li><strong>Independent Wishes (<em>¡Que + Presente de Subjuntivo!</em>)</strong>:</li>
+<li><em>¡Que tengas un excelente despliegue!</em> ("May you have an excellent deployment!")</li>
+<li><strong>Reduplicative Concessive Formulas</strong>:</li>
+<li><em>Cueste lo que cueste</em>, <em>pase lo que pase</em>, <em>caiga quien caiga</em>.</li>
+<li><strong>Legal / Contractual Future Subjunctive (<em>-are, -iere</em>)</strong>:</li>
+<li><em>Si alguna de las partes incumpliere lo pactado...</em> ("Should either party breach...")</li>
+<li><strong>Literary / Journalistic Past in <em>-ra</em></strong>:</li>
+<li><em>El acuerdo que firmara el presidente...</em> (= <em>había firmado</em>).</li>
+</ol>
+<hr />
+<h2 id="15-verbs-of-becoming-transformation-verbos-de-cambio">15. Verbs of Becoming &amp; Transformation (<em>Verbos de Cambio</em>)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Verb</th>
+<th style="text-align: left;">Nature of Change</th>
+<th style="text-align: left;">Volition / Catalyst</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ponerse</strong></td>
+<td style="text-align: left;">Temporary emotional / physical reaction</td>
+<td style="text-align: left;">Involuntary, rapid</td>
+<td style="text-align: left;"><em>Se puso furioso cuando cayó el servidor.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>quedarse</strong></td>
+<td style="text-align: left;">Resulting state, shock, loss, aftermath</td>
+<td style="text-align: left;">External shock / event</td>
+<td style="text-align: left;"><em>Nos quedamos atónitos ante los resultados.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>hacerse</strong></td>
+<td style="text-align: left;">Career evolution, ideology, wealth</td>
+<td style="text-align: left;">Voluntary effort, time</td>
+<td style="text-align: left;"><em>Se hizo especialista en ciberseguridad.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>volverse</strong></td>
+<td style="text-align: left;">Lasting character / psychological transformation</td>
+<td style="text-align: left;">Involuntary, fundamental</td>
+<td style="text-align: left;"><em>Se volvió sumamente desconfiado.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>convertirse en</strong></td>
+<td style="text-align: left;">Radical category metamorphosis</td>
+<td style="text-align: left;">Complete transformation</td>
+<td style="text-align: left;"><em>Se convirtió en el referente del sector.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>llegar a ser</strong></td>
+<td style="text-align: left;">Culmination of long journey / goal</td>
+<td style="text-align: left;">Prolonged dedication</td>
+<td style="text-align: left;"><em>Llegó a ser directora de ingeniería.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="16-epistemic-adverbs-mandatory-mood-selection">16. Epistemic Adverbs &amp; Mandatory Mood Selection</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Epistemic Adverb</th>
+<th style="text-align: left;">Mood Requirement</th>
+<th style="text-align: left;">Position</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>A lo mejor</strong></td>
+<td style="text-align: left;"><strong>INDICATIVE ONLY</strong></td>
+<td style="text-align: left;">Pre-verbal / Post-verbal</td>
+<td style="text-align: left;"><em>A lo mejor tiene una copia de respaldo.</em> (Never <em>tenga</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Igual</strong> (colloquial)</td>
+<td style="text-align: left;"><strong>INDICATIVE ONLY</strong></td>
+<td style="text-align: left;">Pre-verbal</td>
+<td style="text-align: left;"><em>Igual están ocupados con el despliegue.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Quizás / Tal vez</strong></td>
+<td style="text-align: left;"><strong>Subjunctive</strong> (high doubt)</td>
+<td style="text-align: left;">Pre-verbal</td>
+<td style="text-align: left;"><em>Quizás sea conveniente optimizar la consulta.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Quizás / Tal vez</strong></td>
+<td style="text-align: left;"><strong>Indicative</strong> (strong conviction)</td>
+<td style="text-align: left;">Pre-verbal</td>
+<td style="text-align: left;"><em>Tal vez los ingenieros tienen la clave.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Quizás / Tal vez / Acaso</strong></td>
+<td style="text-align: left;"><strong>INDICATIVE ONLY</strong></td>
+<td style="text-align: left;">Post-verbal</td>
+<td style="text-align: left;"><em>Resolverá la incidencia hoy, quizás.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>¿Acaso...?</strong></td>
+<td style="text-align: left;"><strong>Indicative</strong> (rhetorical question)</td>
+<td style="text-align: left;">Direct question</td>
+<td style="text-align: left;"><em>¿Acaso pensáis que es sencillo?</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="17-datives-of-possession-affective-ethic-datives">17. Datives of Possession &amp; Affective Ethic Datives</h2>
+<ol>
+<li><strong>Inalienable Possession (Body Parts &amp; Personal Belongings)</strong>:</li>
+<li>✅ <em>Me lavo las manos con cuidado.</em> (❌ <em>*Lavo mis manos...</em>)</li>
+<li>✅ <em>A Carlos se le rompió la pantalla.</em> (❌ <em>*Se rompió su pantalla...</em>)</li>
+<li><strong>Ethic / Affective Dative (<em>Dativo Ético/Afectivo</em>)</strong>:</li>
+<li>Expresses personal emotional stake, care, or grievance:</li>
+<li><em>¡No me llores!</em> ("Don't cry on me!")</li>
+<li><em>Este desarrollador no me toma ninguna pausa.</em></li>
+<li><strong>Sympathetic Dative of Collective Misfortune (<em>Se nos</em>)</strong>:</li>
+<li><em>Se nos cayó el clúster de Kubernetes.</em> ("The Kubernetes cluster went down on us.")</li>
+<li><strong>Deliberative / Telic Consumption Dative</strong>:</li>
+<li><em>Bébete toda la infusión.</em> (Total exhaustive consumption).</li>
+</ol>
+<hr />
+<h2 id="18-corrective-negation-rejected-causes">18. Corrective Negation &amp; Rejected Causes</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Construction</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Mood Selection</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>No es que... sino que...</strong></td>
+<td style="text-align: left;">"It's not that [A], but rather [B]"</td>
+<td style="text-align: left;">$[A] \rightarrow$ <strong>Subjunctive</strong>, $[B] \rightarrow$ <strong>Indicative</strong></td>
+<td style="text-align: left;"><em>No es que rechace la propuesta, sino que exige garantías.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>No porque... sino porque...</strong></td>
+<td style="text-align: left;">"Not because [rejected cause], but because [true cause]"</td>
+<td style="text-align: left;">$[A] \rightarrow$ <strong>Subjunctive</strong>, $[B] \rightarrow$ <strong>Indicative</strong></td>
+<td style="text-align: left;"><em>No porque sea complejo debemos posponerlo.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>De ahí que...</strong></td>
+<td style="text-align: left;">"Hence why... / That's why..."</td>
+<td style="text-align: left;">Always <strong>SUBJUNCTIVE</strong></td>
+<td style="text-align: left;"><em>Hubo fallos, de ahí que parchearan la versión.</em></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="19-participial-absolute-constructions-construcciones-absolutas">19. Participial Absolute Constructions (<em>Construcciones Absolutas</em>)</h2>
+<p>Preposed participle clauses acting as temporal/causal modifiers with obligatory gender/number agreement:</p>
+<ul>
+<li><strong>Feminine Singular</strong>: <em>Concluida la auditoría, aprobamos el presupuesto.</em></li>
+<li><strong>Feminine Plural</strong>: <em>Aprobadas las políticas, iniciamos la capacitación.</em></li>
+<li><strong>Masculine Singular</strong>: <em>Firmado el contrato, comenzamos el desarrollo.</em></li>
+<li><strong>Masculine Plural</strong>: <em>Resueltos los incidentes, cerramos la guardia.</em></li>
+<li><strong>Fixed Discourse Formulas</strong>: <em>Dicho esto, pasemos al siguiente punto.</em> / <em>Vista la situación, actuaremos.</em></li>
+</ul>
+<hr />
+<h2 id="20-scalar-concession-intensive-connectors">20. Scalar Concession &amp; Intensive Connectors</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Connector</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Mood Requirement</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Por mucho que</strong></td>
+<td style="text-align: left;">"No matter how much..."</td>
+<td style="text-align: left;"><strong>Subjunctive</strong></td>
+<td style="text-align: left;"><em>Por mucho que intenten convencernos, mantendremos la postura.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Por más que</strong></td>
+<td style="text-align: left;">"No matter how much..."</td>
+<td style="text-align: left;"><strong>Subjunctive</strong></td>
+<td style="text-align: left;"><em>Por más que investigaran, no hallaron vulnerabilidades.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Por muy + [adj] + que</strong></td>
+<td style="text-align: left;">"No matter how [adj]..."</td>
+<td style="text-align: left;"><strong>Subjunctive</strong></td>
+<td style="text-align: left;"><em>Por muy difícil que sea la migración, la completaremos.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Aun a riesgo de que</strong></td>
+<td style="text-align: left;">"Even at the risk of..."</td>
+<td style="text-align: left;"><strong>Subjunctive</strong></td>
+<td style="text-align: left;"><em>Aun a riesgo de que haya latencia, aplicaremos el parche.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Aun a sabiendas de que</strong></td>
+<td style="text-align: left;">"Even knowing that..."</td>
+<td style="text-align: left;"><strong>Indicative</strong></td>
+<td style="text-align: left;"><em>Aceptó el cargo aun a sabiendas de que era un reto.</em></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Así y todo / Con todo y con eso</strong></td>
+<td style="text-align: left;">"Even so / Still"</td>
+<td style="text-align: left;">Independent clause</td>
+<td style="text-align: left;"><em>Hubo retrasos; así y todo, entregamos a tiempo.</em></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

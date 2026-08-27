@@ -1,0 +1,1173 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Spanglings builds the syntax compiler; real-world usage supplies the data. Developer-grade CLI & interactive TUI for mastering Spanish (B1–C1).">
+      
+      
+        <meta name="author" content="Spanglings Contributors">
+      
+      
+        <link rel="canonical" href="https://dnf0.github.io/spanglings/superpowers/specs/2026-08-26-spanglings-design/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Spanglings Design Specification - Spanglings</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spanglings-design-specification" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Spanglings" class="md-header__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Spanglings
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Spanglings Design Specification
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Spanglings" class="md-nav__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Spanglings
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../onboarding-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curriculum Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cli-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI & TUI Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../grammar-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grammar Cheat Sheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-executive-summary-philosophy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Executive Summary &amp; Philosophy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Executive Summary &amp; Philosophy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11-problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12-the-solution-spanglings" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 The Solution: Spanglings
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-architecture-system-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Architecture &amp; System Design
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Architecture &amp; System Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21-cli-interface-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 CLI Interface &amp; Commands
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-configuration-srs-state-persistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Configuration &amp; SRS State Persistence
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-linguistic-diagnostic-engine" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Linguistic &amp; Diagnostic Engine
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Linguistic &amp; Diagnostic Engine">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-accent-punctuation-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Accent &amp; Punctuation Handling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-compiler-style-diagnostic-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Compiler-Style Diagnostic Output
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-diagnostic-error-taxonomy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Diagnostic Error Taxonomy
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-exercise-modalities-authoring-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Exercise Modalities &amp; Authoring Format
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-curriculum-map-tracks-100-total-exercises" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Curriculum Map &amp; Tracks (100+ Total Exercises)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Curriculum Map &amp; Tracks (100+ Total Exercises)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#track-00-baseline-reflex-drills-a1-pre-b1-irregular-stems-high-yield-vocab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track 00: Baseline Reflex Drills (A1-Pre-B1 Irregular Stems &amp; High-Yield Vocab)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-01-b1-core-mastery-subjunctive-launchpad" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track 01: B1 (Core Mastery &amp; Subjunctive Launchpad)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-02-b2-advanced-fluency-complex-structures" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track 02: B2 (Advanced Fluency &amp; Complex Structures)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#track-03-c1-stylistic-nuance-precision-native-collocations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Track 03: C1 (Stylistic Nuance, Precision &amp; Native Collocations)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-rust-project-layout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Rust Project Layout
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-testing-quality-assurance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Testing &amp; Quality Assurance
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="spanglings-design-specification">Spanglings Design Specification</h1>
+<p><strong>Date:</strong> 2026-08-26<br />
+<strong>Status:</strong> Approved<br />
+<strong>Author:</strong> Pair Programming (Antigravity &amp; User)</p>
+<hr />
+<h2 id="1-executive-summary-philosophy">1. Executive Summary &amp; Philosophy</h2>
+<h3 id="11-problem-statement">1.1 Problem Statement</h3>
+<p>Mainstream language learning tools (like Duolingo) are agonizingly slow, repetitive, infantile, and cluttered with gamification traps (animations, ads, gems, hearts). For intermediate-to-advanced learners (B1, B2, C1), these platforms fail to deliver high-density deliberate practice on complex syntactic and grammatical structures where learners actually plateau:
+- Subjunctive triggers, nuances, and sequence of tenses
+- Preterite vs. imperfect aspectual differences
+- Object pronoun stacking with reflexives and accent shifts
+- <em>Por</em> vs. <em>para</em> distinctions
+- Prepositional verb regimes (<em>soñar con</em>, <em>acordarse de</em>)
+- Involuntary/accidental <em>se</em> constructions
+- Advanced connectors and subjunctive idioms (<em>hagas lo que hagas</em>, <em>de ahí que</em>)</p>
+<h3 id="12-the-solution-spanglings">1.2 The Solution: Spanglings</h3>
+<p>Inspired by <a href="https://github.com/rust-lang/rustlings">Rustlings</a>, <strong>Spanglings</strong> brings developer-grade learning to Spanish:
+- <strong>Zero Fluff / High Density:</strong> No cartoon animations or wait timers. Pure language exercises, rules, and instant terminal feedback.
+- <strong>Sub-millisecond Feedback Loop:</strong> Instant evaluation when you edit an exercise or submit an answer.
+- <strong>Dual Execution Modes:</strong>
+  1. <strong>Interactive TUI:</strong> Full-screen terminal UI (<code>ratatui</code>) for rapid-fire drills, inline editing, and split-pane explanations.
+  2. <strong>File Watcher Mode:</strong> Background watcher (<code>spanglings watch</code>) that checks your edits in your preferred editor (VS Code, Neovim, Emacs) upon file save.
+- <strong>Multi-Modal Exercise Formats:</strong>
+  - <em>Cloze / Fill-in-the-blank</em> (<code>___</code>): Quick conjugation, clitic, and preposition drills.
+  - <em>Sentence Transformation / Rewrite</em>: Converting indicative to subjunctive, active to passive <em>se</em>, or direct to indirect speech.
+  - <em>Spot &amp; Fix the Bug ("Spanish Code Review")</em>: Identifying and correcting subtle grammatical flaws in full sentences.
+  - <em>Full Clause Translation</em>: Translating high-level idiomatic English into natural Spanish.
+- <strong>Spaced Repetition System (SRS):</strong> Built-in SM-2 scheduler (<code>spanglings review</code>) to guarantee long-term retention of difficult concepts.
+- <strong>In-Terminal Grammar Reference Cards (<code>spanglings explain &lt;topic&gt;</code>):</strong> Instant cheat sheets and syntax tables at your fingertips.
+- <strong>Compiler-Grade Diagnostics:</strong> Pinpoints exact linguistic errors (mood mismatch, wrong aspect, incorrect preposition, clitic ordering) with code snippets, carets, and explanations.
+- <strong>Keyboard-Friendly &amp; Smart Accents:</strong> Seamlessly usable on standard QWERTY keyboards. Normalizes inverted punctuation (<code>¿</code>, <code>¡</code>) and provides a <em>Forgiving with Warnings</em> accent system by default.</p>
+<hr />
+<h2 id="2-architecture-system-design">2. Architecture &amp; System Design</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>┌────────────────────────────────────────────────────────────────────────┐
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>│                         spanglings CLI (Rust)                          │
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>├───────────────────────────────────┬────────────────────────────────────┤
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>│      Mode A: Interactive TUI      │        Mode B: File Watcher        │
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│       (ratatui + crossterm)       │          (notify + stdout)         │
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│  - Split-pane drill UI            │  - Watches exercises/ dir          │
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│  - In-terminal editor &amp; prompt    │  - Evaluates on file save          │
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│  - Keyboard shortcuts (H/N/P/E/R) │  - Prints rustc-style diagnostics  │
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│  - SRS review &amp; drill integration │  - Auto-advances to next exercise  │
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>└─────────────────┬─────────────────┴──────────────────┬─────────────────┘
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                  │                                    │
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>                  ▼                                    ▼
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>       ┌──────────────────────────────────────────────────────┐
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>       │                Core Engine &amp; Runtime                 │
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>       │  - Exercise Loader (Filesystem &amp; Embedded assets)    │
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>       │  - Multi-Modal Exercise Evaluator (Cloze/Rewrite/Bug)│
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>       │  - Diagnostic &amp; Linguistic Rule Evaluator            │
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>       │  - SM-2 Spaced Repetition Engine                     │
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>       │  - In-Terminal Reference Cards Engine                │
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>       │  - Accent &amp; Normalization Engine                     │
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>       │  - Progress Tracker (~/.config/spanglings/state.json)│
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>       └──────────────────────────────────────────────────────┘
+</span></code></pre></div>
+<h3 id="21-cli-interface-commands">2.1 CLI Interface &amp; Commands</h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>spanglings</code></td>
+<td>Launches the interactive TUI starting at the next incomplete exercise.</td>
+</tr>
+<tr>
+<td><code>spanglings watch</code></td>
+<td>Starts the headless file-watcher mode, monitoring <code>exercises/</code>.</td>
+</tr>
+<tr>
+<td><code>spanglings run &lt;name&gt;</code></td>
+<td>Runs validation on a specific exercise (e.g. <code>spanglings run subjunctive_01</code>).</td>
+</tr>
+<tr>
+<td><code>spanglings hint &lt;name?&gt;</code></td>
+<td>Displays progressive grammatical hints (Tiers 1, 2, or 3).</td>
+</tr>
+<tr>
+<td><code>spanglings drill [topic]</code></td>
+<td>Launches rapid-fire irregular conjugation / vocab baseline drills.</td>
+</tr>
+<tr>
+<td><code>spanglings review</code></td>
+<td>Launches a Spaced Repetition (SRS) review session for due exercises.</td>
+</tr>
+<tr>
+<td><code>spanglings explain &lt;topic&gt;</code></td>
+<td>Prints an in-terminal grammar reference card (e.g. <code>subjunctive</code>, <code>por-para</code>, <code>ser-estar</code>).</td>
+</tr>
+<tr>
+<td><code>spanglings list</code></td>
+<td>Displays all curriculum modules, exercises, and completion status.</td>
+</tr>
+<tr>
+<td><code>spanglings progress</code></td>
+<td>Summarizes CEFR level mastery (A1-Baseline, B1, B2, C1) and retention metrics.</td>
+</tr>
+<tr>
+<td><code>spanglings reset &lt;name&gt;</code></td>
+<td>Resets an exercise back to its initial prompt state.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="22-configuration-srs-state-persistence">2.2 Configuration &amp; SRS State Persistence</h3>
+<ul>
+<li>Progress is stored in JSON format at <code>~/.config/spanglings/state.json</code> (with local fallback <code>.spanglings_state.json</code>).</li>
+<li>Schema:
+  <div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"completed_exercises"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"b1_ser_estar_01"</span><span class="p">,</span><span class="w"> </span><span class="s2">"b1_subjunctive_01"</span><span class="p">],</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">"current_exercise"</span><span class="p">:</span><span class="w"> </span><span class="s2">"b1_subjunctive_02"</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">"accent_mode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"forgiving"</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">"srs"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">"b1_subjunctive_01"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="nt">"repetitions"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="nt">"interval_days"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="nt">"ease_factor"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.5</span><span class="p">,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="nt">"next_review_due"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-09-01T14:30:00Z"</span><span class="p">,</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">"last_quality"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span><span class="nt">"exercise_stats"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nt">"b1_subjunctive_01"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">      </span><span class="nt">"attempts"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">      </span><span class="nt">"completed_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2026-08-26T14:30:00Z"</span><span class="p">,</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">      </span><span class="nt">"hints_used"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">  </span><span class="p">}</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="p">}</span>
+</span></code></pre></div></li>
+</ul>
+<hr />
+<h2 id="3-linguistic-diagnostic-engine">3. Linguistic &amp; Diagnostic Engine</h2>
+<h3 id="31-accent-punctuation-handling">3.1 Accent &amp; Punctuation Handling</h3>
+<p>To eliminate friction for developers using US/UK QWERTY keyboards while still teaching correct orthography:</p>
+<ol>
+<li><strong>Punctuation Normalization:</strong></li>
+<li>Leading inverted punctuation (<code>¿</code>, <code>¡</code>) and trailing punctuation (<code>.</code>, <code>?</code>, <code>!</code>, <code>,</code>) are optional.</li>
+<li>
+<p>Example: <code>¿Cómo estás?</code> matches <code>como estas</code>, <code>cómo estás</code>, or <code>¿Cómo estás?</code>.</p>
+</li>
+<li>
+<p><strong>Smart Accent Modes:</strong></p>
+</li>
+<li><strong><code>forgiving</code> (Default):</strong> The engine strips diacritics for core grammatical correctness. If the word/conjugation is correct but missing an accent (e.g., <code>gustaria</code> instead of <code>gustaría</code>), the exercise <strong>PASSES</strong>, but the terminal outputs a helpful warning notice:
+     <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>💡 Notice: Passed! Accent Tip: 'gustaría' carries an accent on the 'í' (hiatus: weak + strong vowel).
+</span></code></pre></div></li>
+<li><strong><code>strict</code> (Optional CLI flag <code>--accent-mode=strict</code>):</strong> Requires exact diacritics (<code>á, é, í, ó, ú, ü, ñ</code>) to pass.</li>
+<li><strong>Ambiguity Detection:</strong> If an accent distinguishes two different words/tenses (e.g. <code>hablo</code> [I speak, present] vs <code>habló</code> [he/she spoke, preterite]), the diagnostic highlights the tense ambiguity if the sentence context requires the other.</li>
+</ol>
+<h3 id="32-compiler-style-diagnostic-output">3.2 Compiler-Style Diagnostic Output</h3>
+<p>When an answer fails, <code>spanglings</code> emits a structured diagnostic with code locations, error codes, notes, and rule hints:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>error[E0301]: incorrect verb mood in subordinate clause
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  --&gt; exercises/03_subjunctive_weirdo/subjunctive_01.md:14:15
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>   |
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>14 | Quiero que tú viene a mi fiesta esta noche.
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>   |               ^^^^^ expected Present Subjunctive ('vengas'), found Present Indicative ('viene')
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>   |
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>   = note: The main clause verb 'querer' expresses a wish/influence with a change of subject ('yo' -&gt; 'tú').
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>   = help: In Spanish, verbs of wishing/influence require the subordinate clause verb in the Subjunctive mood.
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>   = hint: Form the Present Subjunctive of 'venir': yo vengo -&gt; drop -o -&gt; stem 'veng-' + '-as' = 'vengas'.
+</span></code></pre></div>
+<h3 id="33-diagnostic-error-taxonomy">3.3 Diagnostic Error Taxonomy</h3>
+<table>
+<thead>
+<tr>
+<th>Error Code</th>
+<th>Category</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>E0101</code></td>
+<td><em>Ser</em> vs <em>Estar</em></td>
+<td>Used <em>ser</em> instead of <em>estar</em> for temporary state or condition.</td>
+</tr>
+<tr>
+<td><code>E0102</code></td>
+<td><em>Ser</em> vs <em>Estar</em></td>
+<td>Misinterpreted adjective meaning shift (<em>listo, atento, rico, verde</em>).</td>
+</tr>
+<tr>
+<td><code>E0201</code></td>
+<td>Past Aspect</td>
+<td>Used Imperfect for completed, bounded event (expected Preterite).</td>
+</tr>
+<tr>
+<td><code>E0202</code></td>
+<td>Past Aspect</td>
+<td>Used Preterite for habitual background action or state of mind (expected Imperfect).</td>
+</tr>
+<tr>
+<td><code>E0203</code></td>
+<td>Past Aspect</td>
+<td>Meaning-changing preterite (<em>supe</em> vs <em>sabía</em>, <em>quise</em> vs <em>quería</em>, <em>pude</em> vs <em>podía</em>).</td>
+</tr>
+<tr>
+<td><code>E0301</code></td>
+<td>Subjunctive</td>
+<td>Used Indicative when WEIRDO trigger requires Subjunctive.</td>
+</tr>
+<tr>
+<td><code>E0401</code></td>
+<td>Subjunctive</td>
+<td>Used Indicative for non-existent or indefinite antecedent in relative clause.</td>
+</tr>
+<tr>
+<td><code>E0501</code></td>
+<td>Subjunctive</td>
+<td>Failed Subjunctive trigger with temporal/concessive conjunction (<em>en cuanto, a menos que</em>).</td>
+</tr>
+<tr>
+<td><code>E0601</code></td>
+<td>Conditionals</td>
+<td>Used Present or Conditional in <em>si</em> clause (expected Imperfect Subjunctive <em>tuviera</em>).</td>
+</tr>
+<tr>
+<td><code>E0701</code></td>
+<td><em>Por</em> vs <em>Para</em></td>
+<td>Used <em>por</em> instead of <em>para</em> (purpose/goal/deadline vs cause/motive/exchange).</td>
+</tr>
+<tr>
+<td><code>E0801</code></td>
+<td>Clitics</td>
+<td>Incorrect pronoun stacking order (expected Reflexive/Indirect + Direct: <em>se lo</em>).</td>
+</tr>
+<tr>
+<td><code>E0802</code></td>
+<td>Clitics / Accent</td>
+<td>Missing written accent on verb with attached enclitics (<em>explicándomelo</em>, <em>dímelo</em>).</td>
+</tr>
+<tr>
+<td><code>E0901</code></td>
+<td>Prepositions</td>
+<td>Incorrect prepositional regime (<em>darse cuenta de</em>, <em>pensar en</em>, <em>soñar con</em>).</td>
+</tr>
+<tr>
+<td><code>E1001</code></td>
+<td><em>Se</em> Construction</td>
+<td>Incorrect agreement with accidental <em>se</em> (<em>se me olvidaron las llaves</em>).</td>
+</tr>
+<tr>
+<td><code>E1101</code></td>
+<td>B2/C1 Advanced</td>
+<td>Pluperfect Subjunctive in counterfactual 3rd conditional (<em>hubiera sabido</em>).</td>
+</tr>
+<tr>
+<td><code>E1201</code></td>
+<td>B2/C1 Advanced</td>
+<td>Incorrect periphrasis auxiliary or preposition (<em>llevar + gerundio</em>, <em>acabar de</em>).</td>
+</tr>
+<tr>
+<td><code>E1301</code></td>
+<td>B2/C1 Advanced</td>
+<td>Advanced concessive clause with subjunctive (<em>hagas lo que hagas</em>, <em>por mucho que</em>).</td>
+</tr>
+<tr>
+<td><code>E1501</code></td>
+<td>B2/C1 Advanced</td>
+<td>Sequence of tenses violation in indirect/reported speech.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-exercise-modalities-authoring-format">4. Exercise Modalities &amp; Authoring Format</h2>
+<p>Each exercise is a standalone Markdown file with standardized metadata and comment markers:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;!-- I AM NOT DONE --&gt;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="gh"># Subjunctive 01: Verbs of Influence</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>&lt;!-- id: b1_subjunctive_01 | level: B1 | topic: subjunctive_weirdo | type: cloze --&gt;
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="k">&gt; </span><span class="ge">**Grammar Rule**: When the subject of the main clause differs from the subordinate clause, </span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">&gt; </span><span class="ge">verbs of influence/wishes (*querer, sugerir, exigir, aconsejar*) require the Present Subjunctive.</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="gu">### Context</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>English: "I want you to come to my party tonight."
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="gu">### Exercise</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>Replace <span class="sb">`___`</span> with the correct conjugated form of the verb in parentheses.
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>Quiero que tú (venir) ___ a mi fiesta esta noche.
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>&lt;!-- SOLUTION
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>vengas
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>--&gt;
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>&lt;!-- ALTERNATIVES
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>vengas tú
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>--&gt;
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>&lt;!-- DIAGNOSTIC_RULES
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>pattern: "viene" | code: "E0301" | message: "Expected Present Subjunctive ('vengas'), but found Indicative ('viene')."
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>pattern: "vienes" | code: "E0301" | message: "Expected Present Subjunctive ('vengas'), but found Indicative ('vienes')."
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>pattern: "ven" | code: "E0301" | message: "Expected Subjunctive ('vengas'), but found Imperative ('ven')."
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>--&gt;
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>&lt;!-- HINTS
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>Tier 1: Look at the main verb 'quiero que'. Does the subject change?
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>Tier 2: The verb 'venir' is irregular in the present subjunctive: start with 'yo vengo'.
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>Tier 3: Drop the '-o' and add the '-er/-ir' subjunctive 2nd person ending: 'vengas'.
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>--&gt;
+</span></code></pre></div>
+<hr />
+<h2 id="5-curriculum-map-tracks-100-total-exercises">5. Curriculum Map &amp; Tracks (100+ Total Exercises)</h2>
+<h3 id="track-00-baseline-reflex-drills-a1-pre-b1-irregular-stems-high-yield-vocab">Track 00: Baseline Reflex Drills (A1-Pre-B1 Irregular Stems &amp; High-Yield Vocab)</h3>
+<ul>
+<li><code>00_irregular_preterite_stems</code>: Fast drills on <em>anduv-, tuv-, sup-, quis-, pud-, pus-, conduj-, dij-, traj-</em>.</li>
+<li><code>00_irregular_future_conditional</code>: Fast drills on <em>habr-, sabr-, podr-, pondr-, saldr-, tendr-, valdr-, dir-, har-</em>.</li>
+<li><code>00_irregular_subjunctive_roots</code>: Fast drills on <em>quepa, haya, sepa, valga, nazca, luzca, conozca</em>.</li>
+<li><code>00_false_cognates_and_precision</code>: Precision vocabulary drills (<em>soportar</em> vs <em>apoyar</em>, <em>realizar</em> vs <em>darse cuenta</em>, <em>atender</em> vs <em>asistir</em>, <em>discutir</em> vs <em>argumentar</em>).</li>
+</ul>
+<h3 id="track-01-b1-core-mastery-subjunctive-launchpad">Track 01: B1 (Core Mastery &amp; Subjunctive Launchpad)</h3>
+<ul>
+<li><code>01_ser_vs_estar_nuances</code>: Meaning shifts with adjectives (<em>listo, atento, rico, orgulloso, verde, seguro, comprometido</em>).</li>
+<li><code>02_preterite_vs_imperfect_aspects</code>: Aspectual contrasts (<em>supe/sabía</em>, <em>quise/no quise/quería</em>, <em>pude/podía</em>, <em>conocí/conocía</em>).</li>
+<li><code>03_subjunctive_present_weirdo</code>: Wishes, emotions, impersonal expressions, recommendations, doubts, ojalá.</li>
+<li><code>04_subjunctive_relative_clauses</code>: Indefinite / non-existent antecedents (<em>Busco a alguien que sepa...</em> vs <em>Conozco a alguien que sabe...</em>).</li>
+<li><code>05_subjunctive_conjunctions</code>: Temporal &amp; purpose clauses (<em>en cuanto</em>, <em>tan pronto como</em>, <em>para que</em>, <em>antes de que</em>, <em>con tal de que</em>).</li>
+<li><code>06_imperfect_subjunctive_conditionals</code>: Second conditionals (<em>Si tuviera dinero, viajaría</em>), courteous requests (<em>quisiera</em>).</li>
+<li><code>07_por_vs_para_advanced</code>: Causes, motives, deadlines, destinations, recipients, and idiomatic locutions.</li>
+<li><code>08_pronoun_stacking_and_accents</code>: Double clitics (<em>se lo dije</em>) + reflexive combinations and enclitic accentuation (<em>explicándomelo</em>).</li>
+<li><code>09_prepositional_regimes</code>: Verbs bound to specific prepositions (<em>darse cuenta de</em>, <em>pensar en</em>, <em>insistir en</em>, <em>tardar en</em>, <em>soñar con</em>).</li>
+<li><code>10_accidental_se_and_passives</code>: Involuntary occurrences (<em>se me cayó</em>, <em>se nos olvidó</em>) and passive/impersonal <em>se</em>.</li>
+</ul>
+<h3 id="track-02-b2-advanced-fluency-complex-structures">Track 02: B2 (Advanced Fluency &amp; Complex Structures)</h3>
+<ul>
+<li><code>11_pluperfect_subjunctive_3rd_conditionals</code>: Counterfactuals (<em>Si me hubieras dicho, te habría acompañado</em>).</li>
+<li><code>12_aspectual_and_modal_periphrases</code>: Nuanced verbal phrases (<em>llevar + gerundio</em>, <em>acabar de / por</em>, <em>dejar de</em>, <em>volver a</em>, <em>darle por</em>, <em>ponerse a</em>, <em>estar a punto de</em>).</li>
+<li><code>13_advanced_concessives</code>: Reduplicative idioms &amp; concessions (<em>hagas lo que hagas</em>, <em>por más que insistas</em>, <em>a pesar de que</em> + subj vs ind).</li>
+<li><code>14_causal_consecutive_connectors</code>: High-register connectors (<em>de ahí que + subj</em>, <em>dado que</em>, <em>en vista de que</em>, <em>por lo tanto</em>).</li>
+<li><code>15_indirect_speech_and_tense_sequencing</code>: Reported speech harmonization across tenses (<em>me pidió que fuera</em>).</li>
+<li><code>16_idiomatic_expressions_in_context</code>: High-frequency authentic locutions (<em>tomar el pelo</em>, <em>dar la lata</em>, <em>meter la pata</em>, <em>hacer la vista gorda</em>).</li>
+</ul>
+<h3 id="track-03-c1-stylistic-nuance-precision-native-collocations">Track 03: C1 (Stylistic Nuance, Precision &amp; Native Collocations)</h3>
+<ul>
+<li><code>17_verbs_of_perception_and_opinion_negated</code>: Mood shifts under negation (<em>no digo que sea...</em>, <em>no es que no quiera...</em>).</li>
+<li><code>18_emphatic_structures_and_clefting</code>: Cleft sentences &amp; focalization (<em>Fue entonces cuando...</em>, <em>Lo que pasa es que...</em>).</li>
+<li><code>19_stylistic_inversion_and_nominalization</code>: High-register writing (<em>Habiendo considerado...</em>, <em>El hecho de que + subj</em>).</li>
+<li><code>20_advanced_passive_refleja_nuances</code>: Impersonal <em>se</em> with animate direct objects (<em>Se busca a los culpables</em>) and <em>quedar por + inf</em>.</li>
+<li><code>21_nuanced_collocations_and_registers</code>: Cultured lexicon, subtle synonyms, and register switching.</li>
+</ul>
+<hr />
+<h2 id="6-rust-project-layout">6. Rust Project Layout</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>spanglings/
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>├── Cargo.toml
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>├── src/
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>│   ├── main.rs                  # CLI entrypoint &amp; dispatcher
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>│   ├── cli/
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>│   │   ├── mod.rs               # Clap CLI args
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>│   │   └── commands/            # Handlers for watch, run, hint, drill, review, explain, list, progress, reset
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>│   ├── core/
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>│   │   ├── mod.rs
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>│   │   ├── exercise.rs          # Exercise struct &amp; Markdown parser
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>│   │   ├── curriculum.rs        # Tracks, topics, level categorization
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>│   │   ├── srs.rs               # SM-2 Spaced repetition scheduler
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>│   │   ├── reference.rs         # In-terminal grammar cheat sheets
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>│   │   └── state.rs             # JSON persistence &amp; progress tracking
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>│   ├── engine/
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>│   │   ├── mod.rs
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>│   │   ├── validator.rs         # Multi-step evaluation pipeline
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>│   │   ├── normalizer.rs        # Punctuation &amp; unicode normalization
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>│   │   ├── accents.rs           # Smart accent checking &amp; warning generator
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>│   │   ├── diagnostics.rs       # Error code mapping &amp; ANSI compiler formatter
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>│   │   └── rules.rs             # Grammar rule patterns
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>│   ├── watcher/
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>│   │   ├── mod.rs               # notify-based file watcher with debouncing
+</span><span id="__span-5-24"><a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>│   │   └── runner.rs            # Terminal evaluation loop on file save
+</span><span id="__span-5-25"><a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>│   └── tui/
+</span><span id="__span-5-26"><a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>│       ├── mod.rs               # Ratatui application state
+</span><span id="__span-5-27"><a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>│       ├── ui.rs                # Split-pane terminal views (Drill / Watch / Explain / SRS)
+</span><span id="__span-5-28"><a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>│       └── events.rs            # Keyboard shortcuts (H=hint, N=next, P=prev, E=explain, R=review, Q=quit)
+</span><span id="__span-5-29"><a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>├── exercises/                   # Complete curriculum files (.md)
+</span><span id="__span-5-30"><a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>│   ├── 00_baseline_drills/
+</span><span id="__span-5-31"><a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>│   ├── 01_ser_vs_estar/
+</span><span id="__span-5-32"><a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>│   ├── 02_past_aspects/
+</span><span id="__span-5-33"><a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>│   ├── 03_subjunctive_weirdo/
+</span><span id="__span-5-34"><a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>│   ├── 04_subjunctive_relative/
+</span><span id="__span-5-35"><a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>│   ├── 05_subjunctive_conjunctions/
+</span><span id="__span-5-36"><a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>│   ├── ... (06 to 21)
+</span><span id="__span-5-37"><a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>└── tests/
+</span><span id="__span-5-38"><a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>    ├── exercise_validity_tests.rs  # Asserts 100% of exercises have valid passing solutions
+</span><span id="__span-5-39"><a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>    ├── diagnostic_rule_tests.rs    # Asserts diagnostic codes trigger on common errors
+</span><span id="__span-5-40"><a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>    ├── srs_tests.rs                # SM-2 scheduling &amp; review queue tests
+</span><span id="__span-5-41"><a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a>    └── normalizer_tests.rs         # Asserts punctuation and accent normalization rules
+</span></code></pre></div>
+<hr />
+<h2 id="7-testing-quality-assurance">7. Testing &amp; Quality Assurance</h2>
+<ol>
+<li><strong>Curriculum Integrity Suite:</strong> CI automated tests load all 100+ exercise files and test their canonical solutions and alternative accepted forms, ensuring zero broken exercises.</li>
+<li><strong>Diagnostic Precision Suite:</strong> Unit tests for every diagnostic error code (E0101 through E2101) to verify correct pinpointing and explanations.</li>
+<li><strong>Punctuation &amp; Accent Invariance Tests:</strong> Verifies that US/UK keyboard input without inverted punctuation or with missing accents gracefully passes in forgiving mode with the appropriate notice.</li>
+<li><strong>SRS Engine Tests:</strong> Verifies SM-2 algorithm intervals, ease factor updates, and due review queue calculation.</li>
+<li><strong>Watcher &amp; TUI State Tests:</strong> Verifies state transitions, progress saving, and persistence across sessions.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1012 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Spanglings builds the syntax compiler; real-world usage supplies the data. Developer-grade CLI & interactive TUI for mastering Spanish (B1–C1).">
+      
+      
+        <meta name="author" content="Spanglings Contributors">
+      
+      
+        <link rel="canonical" href="https://dnf0.github.io/spanglings/BACKLOG/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Spanglings Product & Engineering Backlog - Spanglings</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spanglings-product-engineering-backlog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Spanglings" class="md-header__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Spanglings
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Spanglings Product &amp; Engineering Backlog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Spanglings" class="md-nav__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Spanglings
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onboarding-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curriculum Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI & TUI Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grammar-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grammar Cheat Sheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-1-discoverability-portability-zero-setup-cli-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Focus Area 1: Discoverability, Portability &amp; Zero-Setup CLI (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-2-curriculum-advanced-vocabulary-expansion-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Focus Area 2: Curriculum &amp; Advanced Vocabulary Expansion (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-3-smart-diagnostics-pedagogical-enhancements-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧠 Focus Area 3: Smart Diagnostics &amp; Pedagogical Enhancements (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-4-interactive-tui-ide-integrations-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 Focus Area 4: Interactive TUI &amp; IDE Integrations (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-5-terminal-conjugation-engine-developer-workflow-hooks-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ Focus Area 5: Terminal Conjugation Engine &amp; Developer Workflow Hooks (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-6-in-tui-power-tools-modal-modifiers-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🖥️ Focus Area 6: In-TUI Power Tools &amp; Modal Modifiers (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-7-advanced-c1-technical-rfc-professional-track-expansion-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📚 Focus Area 7: Advanced C1 Technical, RFC &amp; Professional Track Expansion (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-8-portable-study-pack-ankimarkdown-exporter-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📦 Focus Area 8: Portable Study Pack &amp; Anki/Markdown Exporter (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-9-language-server-protocol-lsp-engine-spanglings-lsp-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔌 Focus Area 9: Language Server Protocol (LSP) Engine (spanglings lsp) (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-10-vs-code-cursor-ide-extension-spanglings-vscode-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💻 Focus Area 10: VS Code &amp; Cursor IDE Extension (spanglings-vscode) (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-11-latin-american-spanish-high-impact-curriculum-expansion-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌎 Focus Area 11: Latin American Spanish High-Impact Curriculum Expansion (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-12-standard-spanish-everyday-life-general-conversational-expansion-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗣️ Focus Area 12: Standard Spanish, Everyday Life &amp; General Conversational Expansion (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-13-diagnostic-placement-testing-level-fast-tracking-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎯 Focus Area 13: Diagnostic Placement Testing &amp; Level Fast-Tracking (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-14-linguistic-knowledge-graph-practical-everyday-expansion-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 Focus Area 14: Linguistic Knowledge Graph &amp; Practical Everyday Expansion (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-15-interactive-onboarding-guided-tour-spanglings-tour-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧭 Focus Area 15: Interactive Onboarding Guided Tour (spanglings tour) (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-16-linguistic-completeness-advanced-grammatical-subtleties-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💎 Focus Area 16: Linguistic Completeness &amp; Advanced Grammatical Subtleties (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#focus-area-17-full-spectrum-c1c2-linguistic-completeness-completed" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🏆 Focus Area 17: Full-Spectrum C1–C2 Linguistic Completeness (Completed)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#future-horizons-stretch-ideas-optional-community" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔮 Future Horizons &amp; Stretch Ideas (Optional / Community)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="spanglings-product-engineering-backlog">Spanglings Product &amp; Engineering Backlog</h1>
+<p>This backlog documents upcoming enhancements, planned curriculum tracks, diagnostic features, and developer ergonomics improvements for Spanglings.</p>
+<hr />
+<h2 id="focus-area-1-discoverability-portability-zero-setup-cli-completed">🎯 Focus Area 1: Discoverability, Portability &amp; Zero-Setup CLI (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-001: Embedded Curriculum &amp; <code>spanglings init</code></strong></li>
+<li><strong>Description</strong>: Embed all 116+ curriculum markdown files directly into the compiled binary via <code>include_dir!</code>.</li>
+<li><strong>CLI Command</strong>: <code>spanglings init [target_dir] [--force]</code></li>
+<li><strong>Behavior</strong>: Scaffolds exercises into <code>./exercises</code> (or custom directory) with initial configuration and starter guide, allowing anyone installing via <code>cargo install spanglings</code> to run anywhere immediately.</li>
+<li>[x] <strong>SPANG-002: Automatic In-Memory Fallback &amp; Guided Setup</strong></li>
+<li><strong>Description</strong>: If <code>spanglings</code> is launched in a directory without an <code>./exercises</code> folder, fallback automatically to reading embedded exercises in-memory.</li>
+<li>[x] <strong>SPANG-003: JSON Machine-Readable Output Mode (<code>--json</code>)</strong></li>
+<li><strong>Description</strong>: Added <code>--json</code> flag to <code>spanglings list</code>, <code>spanglings progress</code>, and <code>spanglings search</code>.</li>
+<li><strong>Use Case</strong>: Enables integrations with external scripts, status bars (e.g., Starship, tmux), CI pipelines, and IDE extensions.</li>
+<li>[x] <strong>SPANG-004: Fuzzy Topic &amp; Full-Text Search (<code>spanglings search</code>)</strong></li>
+<li><strong>Description</strong>: <code>spanglings search &lt;query&gt;</code> to search across exercise titles, prompts, grammar topics, tags, and hints with ranked matching.</li>
+<li>[x] <strong>SPANG-005: Shell Completions Generator (<code>spanglings completions</code>)</strong></li>
+<li><strong>Description</strong>: <code>spanglings completions &lt;bash|zsh|fish|powershell|elvish&gt;</code> using <code>clap_complete</code> for subcommands, topics, and exercise paths.</li>
+</ul>
+<hr />
+<h2 id="focus-area-2-curriculum-advanced-vocabulary-expansion-completed">📚 Focus Area 2: Curriculum &amp; Advanced Vocabulary Expansion (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-010: Track 22 - Tech &amp; Software Engineering Spanish (B2–C1)</strong></li>
+<li><strong>Topics</strong>: Git workflows (<em>desplegar</em>, <em>solicitud de extracción</em>), debugging (<em>depurar</em>, <em>subsanar</em>), backend infrastructure (<em>concurrencia</em>, <em>bloqueo mutuo</em>, <em>rendimiento</em>, <em>latencia</em>).</li>
+<li>[x] <strong>SPANG-011: Track 23 - Formal Business &amp; Diplomatic Correspondence (B2–C1)</strong></li>
+<li><strong>Topics</strong>: Email formulas (<em>Quedo a su entera disposición</em>, <em>En lo que atañe a</em>), negotiation rhetoric (<em>saldar</em>, <em>acordar</em>, <em>desestimar</em>).</li>
+<li>[x] <strong>SPANG-012: Track 24 - False Friends &amp; High-Frequency Trap Drills</strong></li>
+<li><strong>Topics</strong>: Cognate traps (<em>actualmente</em>, <em>eventualmente</em>, <em>pretender</em>, <em>realizar</em>, <em>soportar</em>, <em>sensato</em>).</li>
+<li>[x] <strong>SPANG-013: Track 25 - Register Elevation &amp; Formal Stylistics (C1)</strong></li>
+<li><strong>Topics</strong>: Elevating conversational verbs into literary/journalistic equivalents (<em>hacer</em> -&gt; <em>acometer</em>, <em>provocar</em> -&gt; <em>suscitar</em>, <em>dar lugar a</em>, <em>surtir efecto</em>, <em>albergar dudas</em>, <em>arrojar luz</em>).</li>
+<li>[x] <strong>SPANG-014: Track 26 - Regional Contrasts &amp; Voseo (Latin America vs Peninsular)</strong></li>
+<li><strong>Topics</strong>: Rioplatense <em>voseo</em> conjugations (<em>tenés</em>, <em>sabés</em>, <em>decime</em>, <em>sentate</em>), Pan-American <em>ustedes</em>, and dialectal vocabulary pairs (<em>manejar</em>, <em>computadora</em>).</li>
+</ul>
+<hr />
+<h2 id="focus-area-3-smart-diagnostics-pedagogical-enhancements-completed">🧠 Focus Area 3: Smart Diagnostics &amp; Pedagogical Enhancements (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-020: Weakness Profiler &amp; Targeted Smart Drills</strong></li>
+<li><strong>Description</strong>: Analyze SRS failure rates and ease factors by grammatical category/topic and generate targeted diagnostic recommendations in <code>spanglings progress</code> (and <code>--json</code>).</li>
+<li>[x] <strong>SPANG-021: Accentuation &amp; Stress Reference Sheet (<code>spanglings explain accents</code>)</strong></li>
+<li><strong>Description</strong>: In-terminal cheat sheet detailing <em>Agudas</em>, <em>Llanas</em>, <em>Esdrújulas</em>, <em>Diptongos vs Hiatos</em>, and diacritical accents.</li>
+<li>[x] <strong>SPANG-022: 60-Second Rapid-Fire Blitz Mode (<code>spanglings blitz</code>)</strong></li>
+<li><strong>Description</strong>: Fast-paced terminal time-trial drill testing irregular roots and clitics under time constraints with streaks, WPM, and accuracy scoring.</li>
+</ul>
+<hr />
+<h2 id="focus-area-4-interactive-tui-ide-integrations-completed">📊 Focus Area 4: Interactive TUI &amp; IDE Integrations (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-030: ANSI Activity Heatmap in TUI &amp; Progress CLI</strong></li>
+<li><strong>Description</strong>: GitHub-style calendar heatmap displaying exercise completions and daily reviews over 12 weeks with active streak tracking.</li>
+<li>[x] <strong>SPANG-031: Live Fuzzy Search in Interactive TUI</strong></li>
+<li><strong>Description</strong>: Press <code>/</code> in TUI to filter exercises instantly by topic, keyword, or level with interactive search bar and live keyboard navigation.</li>
+<li>[x] <strong>SPANG-032: Editor Diagnostic Checker &amp; JSON Streamer (<code>spanglings check</code>)</strong></li>
+<li><strong>Description</strong>: Real-time compiler-style and JSON diagnostic streamer (<code>spanglings check &lt;file&gt; [--json]</code>) for seamless integration with VS Code, Zed, Neovim, and CI pipelines.</li>
+</ul>
+<hr />
+<h2 id="focus-area-5-terminal-conjugation-engine-developer-workflow-hooks-completed">⚡ Focus Area 5: Terminal Conjugation Engine &amp; Developer Workflow Hooks (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-040: Automated Release Pipeline &amp; Crates.io Publishing</strong></li>
+<li><strong>Description</strong>: Multi-platform release pipeline publishing signed binary bundles and automated <code>cargo publish</code> execution on tag pushes with <code>CARGO_REGISTRY_TOKEN</code>.</li>
+<li>[x] <strong>SPANG-041: High-Precision Verb Conjugator (<code>spanglings conjugate &lt;verb&gt; [tense]</code>)</strong></li>
+<li><strong>Description</strong>: Terminal lookup engine rendering complete color-coded conjugation grids (Present, Preterite, Imperfect, Subjunctive, Imperative, Participle, Gerund) with irregular stem highlights.</li>
+<li>[x] <strong>SPANG-042: Git Pre-Commit / Pre-Push Spanish Practice Hook (<code>spanglings hook</code>)</strong></li>
+<li><strong>Description</strong>: Installable Git hook prompting developer with 1 rapid active-recall conjugation/grammar flashcard before code commits.</li>
+<li>[x] <strong>SPANG-043: Custom Curriculum Pack Scaffolder &amp; Validator (<code>spanglings pack</code>)</strong></li>
+<li><strong>Description</strong>: Tools to scaffold custom community/industry tracks (<code>spanglings pack create</code>) and validate exercise markdown solvability (<code>spanglings pack validate</code>).</li>
+</ul>
+<hr />
+<h2 id="focus-area-6-in-tui-power-tools-modal-modifiers-completed">🖥️ Focus Area 6: In-TUI Power Tools &amp; Modal Modifiers (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-050: In-TUI Verb Conjugator Modal (<code>F3</code> / <code>Ctrl+K</code>)</strong></li>
+<li><strong>Description</strong>: Open a non-disruptive popup modal to search and conjugate any verb across all tenses without leaving the exercise workspace.</li>
+<li>[x] <strong>SPANG-051: In-TUI Grammar Reference Card Browser Modal (<code>F4</code> / <code>Ctrl+B</code>)</strong></li>
+<li><strong>Description</strong>: Open an interactive modal with full-text search across all grammar cheat sheets (Subjunctive, Por vs Para, Clitics, Accents, etc.).</li>
+<li>[x] <strong>SPANG-052: In-TUI Drill &amp; 60-Second Blitz Launcher (<code>spanglings blitz</code> / <code>spanglings drill</code>)</strong></li>
+<li><strong>Description</strong>: Rapid-fire drill trials and 60-second Blitz with live scoreboard and keyboard response.</li>
+<li>[x] <strong>SPANG-053: In-TUI Keybinding Overlay &amp; Help Modal (<code>?</code> / <code>F1</code>)</strong></li>
+<li><strong>Description</strong>: Searchable help modal listing all hotkeys, navigation shortcuts, and workflow commands.</li>
+</ul>
+<hr />
+<h2 id="focus-area-7-advanced-c1-technical-rfc-professional-track-expansion-completed">📚 Focus Area 7: Advanced C1 Technical, RFC &amp; Professional Track Expansion (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-060: Track 27 - System Architecture RFCs, Post-Mortems &amp; Incident Response (B2–C1)</strong></li>
+<li><strong>Topics</strong>: Outage post-mortems (<em>caída del servicio</em>, <em>análisis de causa raíz</em>, <em>remediación</em>), architectural RFCs (<em>desacoplar componentes</em>, <em>tolerancia a fallos</em>, <em>rendimiento sostenido</em>).</li>
+<li>[x] <strong>SPANG-061: Track 28 - Complex Subjunctive Triggers &amp; Concessive Clauses (C1)</strong></li>
+<li><strong>Topics</strong>: Concessive expressions (<em>por mucho que</em>, <em>aun a riesgo de que</em>, <em>así sea</em>, <em>pase lo que pase</em>, <em>a pesar de que</em> + subjuntivo vs indicativo).</li>
+<li>[x] <strong>SPANG-062: Track 29 - Advanced Verbal Periphrases &amp; Nuanced Aspect (B2–C1)</strong></li>
+<li><strong>Topics</strong>: Modal and aspectual periphrases (<em>dar por sentado</em>, <em>echar a perder</em>, <em>ponerse a</em>, <em>llevar sin</em>, <em>venir a decir</em>, <em>quedar en</em>).</li>
+<li>[x] <strong>SPANG-063: Track 30 - Executive Debate &amp; Open Source Leadership Collocations (C1)</strong></li>
+<li><strong>Topics</strong>: High-register idiomatic leadership phrases (<em>hacer hincapié</em>, <em>reorientación estratégica</em>, <em>indicadores clave de rendimiento</em>, <em>reasignación de plantilla</em>, <em>exposición regulatoria</em>, <em>aprobar por unanimidad</em>).</li>
+</ul>
+<hr />
+<h2 id="focus-area-8-portable-study-pack-ankimarkdown-exporter-completed">📦 Focus Area 8: Portable Study Pack &amp; Anki/Markdown Exporter (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-070: Anki Flashcards Deck Exporter (<code>spanglings export --format anki</code>)</strong></li>
+<li><strong>Description</strong>: Export full SRS review decks, high-difficulty items, or custom tracks to Anki-compatible TSV format with tiered hints and diagnostic tags.</li>
+<li>[x] <strong>SPANG-071: Markdown / Obsidian Study Guide Generator (<code>spanglings export --format markdown</code>)</strong></li>
+<li><strong>Description</strong>: Generate formatted markdown study notes summarizing learned grammar patterns, frequent pitfalls, and personal review metrics.</li>
+<li>[x] <strong>SPANG-072: Portable State Backup &amp; Cross-Machine Sync (<code>spanglings sync</code>)</strong></li>
+<li><strong>Description</strong>: Single-command portable JSON backup export (<code>spanglings sync --export &lt;file&gt;</code>) and merge import (<code>spanglings sync --import &lt;file&gt;</code>) to easily sync exercise completion and SRS states across workstations.</li>
+</ul>
+<hr />
+<h2 id="focus-area-9-language-server-protocol-lsp-engine-spanglings-lsp-completed">🔌 Focus Area 9: Language Server Protocol (LSP) Engine (<code>spanglings lsp</code>) (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-080: <code>spanglings lsp</code> Standard JSON-RPC Server</strong></li>
+<li><strong>Description</strong>: Native stdio LSP server powering real-time editor integration for VS Code, Neovim, Zed, and Helix.</li>
+<li>[x] <strong>SPANG-081: Live In-Editor Diagnostics &amp; Hover Grammar Tooltips</strong></li>
+<li><strong>Description</strong>: Publishes live diagnostic squigglies on exercise markdown files as the developer types, with rich hover tooltips explaining grammar rules and conjugations.</li>
+<li>[x] <strong>SPANG-082: Grammar Autocompletion &amp; Code Action Quick Fixes</strong></li>
+<li><strong>Description</strong>: Intelligent autocomplete for Spanish technical vocabulary and conjugations, plus one-click Quick Fixes (<em>"Mark exercise as done (remove <!-- I AM NOT DONE -->)"</em>).</li>
+</ul>
+<hr />
+<h2 id="focus-area-10-vs-code-cursor-ide-extension-spanglings-vscode-completed">💻 Focus Area 10: VS Code &amp; Cursor IDE Extension (<code>spanglings-vscode</code>) (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-090: Extension Manifest &amp; Bundling Pipeline (<code>editors/vscode</code>)</strong></li>
+<li><strong>Description</strong>: Package manifest, TypeScript configuration, and esbuild pipeline for <code>spanglings-vscode</code>.</li>
+<li>[x] <strong>SPANG-091: Native LSP Client Lifecycle &amp; Auto-Connecting Server</strong></li>
+<li><strong>Description</strong>: Uses <code>vscode-languageclient</code> to manage the <code>spanglings lsp</code> subprocess over stdio with concurrency guards and shell injection protection.</li>
+<li>[x] <strong>SPANG-092: Activity Bar Sidebar Curriculum Explorer Tree View</strong></li>
+<li><strong>Description</strong>: Visual curriculum tree grouping tracks, displaying completion checkmarks (<code>✅</code> / <code>⬜</code>), CEFR badges, and opening exercise files on click.</li>
+<li>[x] <strong>SPANG-093: Streak &amp; Due Review Status Bar Widget</strong></li>
+<li><strong>Description</strong>: Real-time status bar widget showing active learning streaks 🔥 and due spaced repetition reviews with interactive markdown tooltips.</li>
+<li>[x] <strong>SPANG-094: Command Palette Spanish Tools</strong></li>
+<li><strong>Description</strong>: Integrated commands for verb conjugation lookups (<code>Spanglings: Look Up Verb Conjugator</code>), grammar cheat sheets (<code>Spanglings: Browse Grammar Cheat Sheets</code>), and opening the next due exercise.</li>
+</ul>
+<hr />
+<h2 id="focus-area-11-latin-american-spanish-high-impact-curriculum-expansion-completed">🌎 Focus Area 11: Latin American Spanish High-Impact Curriculum Expansion (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-100: Track 31 - Mexican Tech, Startup &amp; Venture Capital Spanish (B2–C1)</strong></li>
+<li><strong>Topics</strong>: <em>levantamiento de capital</em>, <em>ronda semilla</em>, <em>valuación pre-capital</em>, <em>tasa de abandono (churn)</em>, <em>ajuste producto-mercado</em>, <em>tasa de quema</em>, <em>dilución accionaria</em>.</li>
+<li>[x] <strong>SPANG-101: Track 32 - Colombian &amp; Andean Professional Nuances (B2–C1)</strong></li>
+<li><strong>Topics</strong>: <em>hacer una vuelta</em>, <em>estar pendiente de</em>, <em>caer en cuenta de que</em>, <em>echar reversa a</em>, <em>poner la lupa sobre</em>, <em>dar papaya</em>.</li>
+<li>[x] <strong>SPANG-102: Track 33 - Rioplatense Production Voseo &amp; Engineering (B2–C1)</strong></li>
+<li><strong>Topics</strong>: <em>sacar a producción</em>, <em>bancarse la carga</em>, <em>ponete las pilas</em>, <em>dar de baja la instancia</em>, <em>hacer un laburo fino</em>, <em>no te quedés atrás</em>.</li>
+<li>[x] <strong>SPANG-103: Track 34 - LatAm Technical Anglicism Elimination (B2–C1)</strong></li>
+<li><strong>Topics</strong>: <em>rastrear</em> vs <em>trackear</em>, <em>personalizar</em> vs <em>customizar</em>, <em>rendir</em> vs <em>performar</em>, <em>desaconsejar/descontinuar</em> vs <em>deprecar</em>, <em>redirigir</em> vs <em>forwardear</em>, <em>restablecer</em> vs <em>resetear</em>.</li>
+<li>[x] <strong>SPANG-104: Track 35 - Latin American Enterprise SLA &amp; Risk Governance (C1)</strong></li>
+<li><strong>Topics</strong>: <em>acuerdos de confidencialidad</em>, <em>lucro cesante y daño emergente</em>, <em>cláusulas de rescisión por incumplimiento</em>, <em>planes de mitigación de riesgos</em>, <em>mantener indemne</em>, <em>penalizaciones económicas y créditos de servicio</em>.</li>
+</ul>
+<hr />
+<h2 id="focus-area-12-standard-spanish-everyday-life-general-conversational-expansion-completed">🗣️ Focus Area 12: Standard Spanish, Everyday Life &amp; General Conversational Expansion (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-110: Track 36 - Everyday Life, Housing &amp; Practical Bureaucracy (B1)</strong></li>
+<li><strong>Topics</strong>: Lease agreements &amp; deposits (<em>contrato de arrendamiento</em>, <em>fianza</em>), setting up utilities (<em>dar de alta el suministro</em>), bank transfers &amp; fees (<em>transferencia bancaria</em>, <em>comisión</em>), refunds (<em>solicitar un reembolso</em>), post office (<em>recoger un paquete</em>), transit transfers (<em>hacer transbordo</em>).</li>
+<li>[x] <strong>SPANG-111: Track 37 - Healthcare, Medical Encounters &amp; Symptoms (B1–B2)</strong></li>
+<li><strong>Topics</strong>: Physical symptoms &amp; discomfort (<em>punzadas agudas</em>, <em>mareos</em>), prescriptions &amp; dosages (<em>recetar antibióticos</em>, <em>dosis cada ocho horas</em>), OTC drugs &amp; leaflets (<em>medicamento de venta libre</em>, <em>prospecto</em>), emergency room &amp; discharge (<em>urgencias</em>, <em>alta médica</em>), specialist checkups (<em>cita previa</em>, <em>revisión anual</em>), allergies (<em>alérgico a frutos secos</em>, <em>intolerancia a la lactosa</em>).</li>
+<li>[x] <strong>SPANG-112: Track 38 - Dining, Socializing, Small Talk &amp; Nightlife (B1–B2)</strong></li>
+<li><strong>Topics</strong>: Split checks (<em>pedir la cuenta por separado</em>), meeting up &amp; plans (<em>quedar a las ocho</em>, <em>cancelar a última hora</em>), compliments &amp; reassurances (<em>lo bien que le quedaba</em>, <em>no te preocupes</em>), discourse softeners (<em>por cierto</em>, <em>la verdad es que</em>), banter (<em>armar un plan</em>, <em>pasarla muy bien</em>), friendly goodbyes (<em>estamos en contacto</em>, <em>avísame en cuanto llegues</em>).</li>
+<li>[x] <strong>SPANG-113: Track 39 - Nuanced Prepositions &amp; Spatial/Temporal Locutions (B1–C1)</strong></li>
+<li><strong>Topics</strong>: <em>Hacia</em> vs <em>Hasta</em> (direction vs endpoint), <em>Tras</em>, <em>Según</em> &amp; <em>Bajo</em> (formal sequence &amp; condition), compound locutions (<em>a base de</em>, <em>a expensas de</em>), elapsed past vs future spans (<em>al cabo de</em> vs <em>dentro de</em>), spatial extension (<em>a lo largo de</em>, <em>alrededor de</em>), origin &amp; channels (<em>a raíz de</em>, <em>por medio de</em>).</li>
+<li>[x] <strong>SPANG-114: Track 40 - Middle-Voice Shifts &amp; Reflexive Nuances (B1–C1)</strong></li>
+<li><strong>Topics</strong>: <em>Ir</em> vs <em>Irse</em> (destination vs departure), <em>Dormir</em> vs <em>Dormirse</em> (state vs falling asleep), <em>Comer</em> vs <em>Comerse</em> (atelic vs total consumption), <em>Llevar</em> vs <em>Llevarse</em> (transport vs getting along / taking away), <em>Quedar</em> vs <em>Quedarse</em> (meeting/fit vs staying), <em>Volver</em> vs <em>Volverse</em> (return vs permanent character transformation).</li>
+<li>[x] <strong>SPANG-115: Track 41 - Advanced Temporal, Manner &amp; Concessive Adverbial Clauses (B2–C1)</strong></li>
+<li><strong>Topics</strong>: <em>A medida que</em> / <em>Conforme</em> (proportional change), <em>De modo que</em> (purpose vs consequence), <em>En tanto que</em> / <em>Mientras</em> (duration condition), <em>Tan pronto como</em> / <em>Apenas</em> (immediate succession), <em>Salvo que</em> / <em>A menos que</em> (exceptive subjunctive), <em>Siempre y cuando</em> / <em>A practical condition</em>.</li>
+</ul>
+<hr />
+<h2 id="focus-area-13-diagnostic-placement-testing-level-fast-tracking-completed">🎯 Focus Area 13: Diagnostic Placement Testing &amp; Level Fast-Tracking (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-120: Calibrated CEFR Placement Battery &amp; Evaluation Engine (<code>src/core/placement.rs</code>)</strong></li>
+<li><strong>Description</strong>: 15-question calibrated diagnostic battery spanning Baseline (A1–A2), B1, B2, and C1 evaluating verb inflection, clitic positioning, subjunctive triggers, discourse connectors, and advanced nuance with tiered scoring algorithms.</li>
+<li>[x] <strong>SPANG-121: CLI Adaptive Diagnostic Test Subcommand (<code>spanglings test</code>)</strong></li>
+<li><strong>Description</strong>: Terminal test runner (<code>spanglings test [--level &lt;LEVEL&gt;] [--fast-track] [--json]</code>) assessing CEFR proficiency, generating diagnostic breakdown scorecards, and saving <code>EvaluatedLevel</code> in user state.</li>
+<li>[x] <strong>SPANG-122: Automatic Fast-Track &amp; SM-2 SRS Seeding (<code>AppState::fast_track_level</code>)</strong></li>
+<li><strong>Description</strong>: Automatically marks all exercises in mastered CEFR tiers as completed and initializes spaced repetition cards with optimal ease factors, skipping tedious baseline drilling for intermediate/advanced learners.</li>
+<li>[x] <strong>SPANG-123: Interactive TUI Diagnostic Assessment Modal (<code>AppMode::PlacementTest</code>)</strong></li>
+<li><strong>Description</strong>: Full-featured in-TUI diagnostic test overlay accessible via <code>[t]</code> or <code>[F5]</code>, featuring question-by-question cloze inputs, live answer validation, CEFR breakdown tables, and one-key <code>[F]</code> fast-track action.</li>
+<li>[x] <strong>SPANG-124: Verified CEFR Level Badge in Dashboard &amp; LSP Status</strong></li>
+<li><strong>Description</strong>: Displays verified CEFR placement badges and diagnostic accuracy in <code>spanglings progress</code>, JSON metrics, and VS Code / LSP status bar.</li>
+</ul>
+<hr />
+<h2 id="focus-area-14-linguistic-knowledge-graph-practical-everyday-expansion-completed">🌐 Focus Area 14: Linguistic Knowledge Graph &amp; Practical Everyday Expansion (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-130: Directed Acyclic Graph (DAG) Linguistic Knowledge Graph (<code>src/core/graph.rs</code>)</strong></li>
+<li><strong>Description</strong>: In-memory static ontology DAG modeling 53 prerequisite relationships and conceptual primitives across grammar rules, aspectual shifts, and situational domains with cycle detection and learning frontier resolution.</li>
+<li>[x] <strong>SPANG-131: Concept-Aware Exercise Model &amp; Markdown Parser (<code>src/core/exercise.rs</code>)</strong></li>
+<li><strong>Description</strong>: Extended <code>Exercise</code> struct with <code>concept_tags</code>, <code>prerequisites</code>, <code>grammar_focus</code>, and <code>contrast_note</code> metadata with support for YAML frontmatter and single-line syntax.</li>
+<li>[x] <strong>SPANG-132: Concept-Level SRS Mastery &amp; Weakness Profiler (<code>src/core/state.rs</code>, <code>src/cli/commands/progress.rs</code>)</strong></li>
+<li><strong>Description</strong>: Aggregates SRS review performance into <code>ConceptMastery</code> scores, pinpoints foundational gaps across tracks, and recommends personalized learning frontiers in CLI and JSON output.</li>
+<li>[x] <strong>SPANG-133: Concept-Aware Compiler Diagnostics &amp; Modern Watcher Experience (<code>src/engine/diagnostics.rs</code>, <code>src/watcher/runner.rs</code>)</strong></li>
+<li><strong>Description</strong>: Concept-aware diagnostic error reporting cross-linking failed exercises to prerequisite foundation tracks with actionable remediation notes and contrast guidance. Modernized watcher with non-blocking raw keystrokes (<code>[n]</code>, <code>[p]</code>, <code>[r]</code>, <code>[q]</code>) eliminating all legacy comment busywork.</li>
+<li>[x] <strong>SPANG-134: Curriculum Expansion: Tracks 42 to 47 (36 New Exercises, 267 Total)</strong></li>
+<li><strong>Description</strong>: Handcrafted situational synthesis tracks for Travel Logistics, Banking/Taxes, Consumer Complaints, Home Maintenance, News/Media, and Conversational Nuance.</li>
+<li>[x] <strong>SPANG-135: Retroactive Conceptual Tagging of Tracks 00–41 (231 Exercises)</strong></li>
+<li><strong>Description</strong>: Tag all 231 existing exercises with concepts, prerequisites, and grammar focus notes, completely eliminating legacy <code>&lt;!-- I AM NOT DONE --&gt;</code> markers.</li>
+<li>[x] <strong>SPANG-136: Concept CLI Filtering (<code>spanglings list --concept</code>, <code>spanglings drill --concept</code>)</strong></li>
+<li><strong>Description</strong>: Filter exercises and targeted conjugation drills by linguistic concept ID.</li>
+</ul>
+<hr />
+<h2 id="focus-area-15-interactive-onboarding-guided-tour-spanglings-tour-completed">🧭 Focus Area 15: Interactive Onboarding Guided Tour (<code>spanglings tour</code>) (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-140: First-Run Interactive Guided Onboarding Tour (<code>spanglings tour</code>)</strong></li>
+<li><strong>Description</strong>: Dedicated <code>spanglings tour</code> subcommand and first-run wizard in TUI introducing the developer workflow step-by-step:<ol>
+<li>Navigation and split-pane interface (<code>Tab</code>, <code>Down</code>, <code>/</code> fuzzy search).</li>
+<li>Cloze input mechanics, UTF-8 accent support, and instant evaluation (<code>Enter</code>).</li>
+<li>Progressive 3-tier hints (<code>Ctrl+H</code> / <code>F1</code>) and reference cheat sheets (<code>Ctrl+E</code> / <code>F2</code>).</li>
+<li>Verb conjugator modal (<code>Ctrl+K</code> / <code>F3</code>) and cheat sheet browser (<code>Ctrl+B</code> / <code>F4</code>).</li>
+<li>Headless watch mode workflow (<code>spanglings watch</code>) with external editors (VS Code / Neovim / Zed).</li>
+<li>Taking diagnostic placement test (<code>spanglings test</code> / <code>[t]</code>) to fast-track known levels.</li>
+</ol>
+</li>
+<li><strong>Completed Components</strong>:<ul>
+<li>[x] <strong>State Persistence</strong>: Added <code>AppState::tour_completed</code> flag with backward compatibility and <code>mark_tour_completed()</code>.</li>
+<li>[x] <strong>Station Engine</strong>: Implemented 6 interactive guided stations with inline active-recall micro-challenges in <code>src/cli/commands/tour.rs</code>.</li>
+<li>[x] <strong>CLI Subcommand</strong>: Added <code>spanglings tour [--skip-challenges]</code> CLI command with CI batch mode fallback.</li>
+<li>[x] <strong>Interactive TUI Integration</strong>: First-run welcome modal dialog, in-TUI station modals, footer <code>[T]</code> hint, Help menu integration, and keyboard routing in <code>src/tui/events.rs</code>.</li>
+<li>[x] <strong>Test Battery</strong>: Full integration test coverage in <code>tests/tour_tests.rs</code>, <code>tests/cli_tests.rs</code>, and <code>tests/tui_tests.rs</code>.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="focus-area-16-linguistic-completeness-advanced-grammatical-subtleties-completed">💎 Focus Area 16: Linguistic Completeness &amp; Advanced Grammatical Subtleties (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-150: Linguistic Knowledge Graph Expansion to 66 Concepts (<code>src/core/graph.rs</code>)</strong></li>
+<li><strong>Description</strong>: Expanded default linguistic ontology from 53 to 66 concepts covering epistemic conjecture, mandatory dative clitic doubling, fronted accusative left-dislocation, personal <em>a</em> animacy/semantic shifts, gerund restrictions/anglicism elimination, adversative coordinate systems (<em>pero</em> vs <em>sino</em> vs <em>sino que</em>), and optative/legal future subjunctives.</li>
+<li>[x] <strong>SPANG-151: Six New Grammar Reference Cheat Sheets (<code>src/core/reference.rs</code>, <code>docs/grammar-reference.md</code>)</strong></li>
+<li><strong>Topics</strong>: <code>epistemic-conjecture</code>, <code>clitic-doubling</code>, <code>personal-a</code>, <code>gerund-rules</code>, <code>adversatives</code>, <code>legal-subjunctive</code> accessible via <code>spanglings explain &lt;topic&gt;</code> and the TUI cheat sheet browser.</li>
+<li>[x] <strong>SPANG-152: Curriculum Expansion: Tracks 48 to 53 (36 New Exercises, 303 Total)</strong></li>
+<li><strong>Description</strong>: Authored 36 handcrafted exercises with 3-tier progressive hints and targeted diagnostic rules across:<ul>
+<li>Track 48: <code>48_epistemic_conjecture_and_probability</code> (B2–C1)</li>
+<li>Track 49: <code>49_clitic_doubling_and_left_dislocation</code> (B1–B2)</li>
+<li>Track 50: <code>50_personal_a_and_animacy_shifts</code> (B1–B2)</li>
+<li>Track 51: <code>51_gerund_restrictions_and_anglicisms</code> (B2–C1)</li>
+<li>Track 52: <code>52_adversative_pero_sino_sino_que</code> (B1–B2)</li>
+<li>Track 53: <code>53_independent_subjunctives_and_legal_tenses</code> (C1)</li>
+</ul>
+</li>
+<li>[x] <strong>SPANG-153: Targeted Diagnostic Compiler Rules (E0048–E0053)</strong></li>
+<li><strong>Description</strong>: Added targeted diagnostic error codes and explanatory feedback in <code>src/engine/rules.rs</code> and <code>src/engine/validator.rs</code> for common native speaker traps.</li>
+<li>[x] <strong>SPANG-154: Architectural Decision Record ADR-0003</strong></li>
+<li><strong>Description</strong>: Documented architecture and rationale in <code>docs/adr/0003-language-completeness-and-expanded-ontology.md</code>.</li>
+</ul>
+<hr />
+<h2 id="focus-area-17-full-spectrum-c1c2-linguistic-completeness-completed">🏆 Focus Area 17: Full-Spectrum C1–C2 Linguistic Completeness (Completed)</h2>
+<ul>
+<li>[x] <strong>SPANG-160: Linguistic Knowledge Graph Expansion to 81 Concepts (<code>src/core/graph.rs</code>)</strong></li>
+<li><strong>Description</strong>: Expanded default ontology from 66 to 81 concepts covering verbs of becoming/transformation, epistemic adverbs with mood selection constraints, possessive and ethic datives, corrective and concessive polarities, participial absolute constructions, and scalar concession / intensive connectors.</li>
+<li>[x] <strong>SPANG-161: Six New Grammar Reference Cheat Sheets (<code>src/core/reference.rs</code>, <code>docs/grammar-reference.md</code>)</strong></li>
+<li><strong>Topics</strong>: <code>verbs-of-becoming</code>, <code>epistemic-adverbs</code>, <code>possessive-datives</code>, <code>corrective-polarity</code>, <code>participial-absolutes</code>, <code>scalar-concession</code> (24 reference cards total).</li>
+<li>[x] <strong>SPANG-162: Curriculum Expansion: Tracks 54 to 59 (36 New Exercises, 339 Total across 60 Tracks)</strong></li>
+<li><strong>Description</strong>: Authored 36 handcrafted exercises with 3-tier progressive hints and targeted diagnostic rules across:<ul>
+<li>Track 54: <code>54_verbs_of_becoming_and_transformation</code> (B2–C1)</li>
+<li>Track 55: <code>55_epistemic_adverbs_and_mood_selection</code> (B1–C1)</li>
+<li>Track 56: <code>56_datives_of_possession_and_ethic_datives</code> (B1–C1)</li>
+<li>Track 57: <code>57_corrective_and_concessive_polarities</code> (B2–C1)</li>
+<li>Track 58: <code>58_participial_absolute_constructions</code> (C1–C2)</li>
+<li>Track 59: <code>59_scalar_concession_and_intensive_connectors</code> (C1–C2)</li>
+</ul>
+</li>
+<li>[x] <strong>SPANG-163: Targeted Diagnostic Compiler Rules (E0054–E0059)</strong></li>
+<li><strong>Description</strong>: Added targeted diagnostic error codes in <code>src/engine/rules.rs</code> and <code>src/engine/validator.rs</code>.</li>
+<li>[x] <strong>SPANG-164: Architectural Decision Record ADR-0004</strong></li>
+<li><strong>Description</strong>: Documented architecture and rationale in <code>docs/adr/0004-full-spectrum-c1-c2-linguistic-completeness.md</code>.</li>
+</ul>
+<hr />
+<h2 id="future-horizons-stretch-ideas-optional-community">🔮 Future Horizons &amp; Stretch Ideas (Optional / Community)</h2>
+<ul>
+<li>[ ] <strong>Homebrew Formula / Tap (<code>brew install spanglings</code>)</strong>:</li>
+<li>Package binary for macOS/Linux users who don't have the Rust toolchain installed.</li>
+<li>[ ] <strong>WebAssembly In-Browser Playground (<code>wasm-pack</code>)</strong>:</li>
+<li>Run the Spanglings validator and interactive exercises directly on the documentation website via WebAssembly.</li>
+<li>[ ] <strong>Audio &amp; Pronunciation Synthesis (Optional CLI flag <code>--audio</code>)</strong>:</li>
+<li>Optional integration with native text-to-speech engines (<code>say</code> on macOS, <code>espeak-ng</code> on Linux) to speak prompts and correct solutions aloud during watch mode and TUI exercises.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
