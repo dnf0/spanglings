@@ -1,6 +1,8 @@
 # Spanglings 🇪🇸 🦀
 
-**A developer-grade CLI & interactive TUI for learning intermediate-to-advanced Spanish (B1, B2, C1 + baseline irregular drills).**
+**Spanglings builds the syntax compiler; real-world usage supplies the data.**
+
+*A developer-grade CLI & interactive TUI for mastering Spanish grammar, verb mechanics, and nuanced syntactic architecture.*
 
 Inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](https://github.com/ray-project/raylings), **Spanglings** provides a terminal-native, hands-on learning environment for engineers, developers, and power users who want to master real Spanish syntax, aspectual contrasts, and professional collocations without childish gamification.
 
@@ -10,7 +12,7 @@ Inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](h
 
 Language learning apps are often too slow, repetitive, and child-oriented. They fail to teach the structural mental models engineers use every day. **Spanglings** approaches Spanish like a compiled language:
 
-- 🌐 **Linguistic Knowledge Graph (DAG Ontology)**: 66-concept ontological graph mapping prerequisite relationships, morphological shifts, and situational domains with learning frontier resolution.
+- 🌐 **Linguistic Knowledge Graph (DAG Ontology)**: 81-concept ontological graph mapping prerequisite relationships, morphological shifts, and situational domains with learning frontier resolution.
 - 🚀 **Interactive Terminal UI (`ratatui`)**: Real-time dual-pane editor with live validation, syntax styling, progress tracking, and interactive drill modes.
 - ⚡ **Modern Headless Watch Mode (`spanglings watch`)**: Modify exercise files in your favorite editor (VS Code, Neovim, Zed) while Spanglings continuously validates submissions with non-blocking keystrokes (`[n]`, `[p]`, `[r]`, `[q]`) and zero comment-deletion busywork.
 - 🔍 **Rustc-Style Grammar Diagnostics**: Rich, colored compiler-style error diagnostics (`error[E0301]: Subjunctive Mood Required`) with source code context, dynamic line markers (`^^^^`), grammatical explanations, linked concepts, and contrast notes.
@@ -20,7 +22,7 @@ Language learning apps are often too slow, repetitive, and child-oriented. They 
 - 🎯 **Diagnostic Placement & CEFR Assessment (`spanglings test`)**: Calibrated multi-tier diagnostic test battery assessing CEFR proficiency with automatic level fast-tracking.
 - 🔌 **Native Language Server Protocol (LSP) Engine (`spanglings lsp`)**: Real-time stdio JSON-RPC server with live diagnostics, rich hover popups, and autocompletions for VS Code, Neovim, Helix, and Zed.
 - 📦 **Anki & Markdown Study Pack Exporter (`spanglings export`)**: Export full decks to Anki TSV format, generate Markdown study guides for Obsidian, or export JSON progress metrics.
-- 📚 **303 Handcrafted Exercises across 54 Tracks**: Complete coverage from baseline irregular drills through Latin American engineering, everyday conversational mastery, practical logistics, formal C1 collocations, and nuanced linguistic edge cases.
+- 📚 **339 Handcrafted Exercises across 60 Tracks**: Complete coverage from baseline irregular drills through Latin American engineering, everyday conversational mastery, practical logistics, formal C1 collocations, and nuanced linguistic edge cases.
 
 ---
 
