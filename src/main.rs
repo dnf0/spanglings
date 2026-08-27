@@ -19,8 +19,8 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Explain { topic }) => {
             spanglings::cli::commands::explain::show_explanation(&topic)?;
         }
-        Some(Commands::Drill { topic }) => {
-            spanglings::cli::commands::drill::run_drill(topic.as_deref())?;
+        Some(Commands::Drill { topic, concept }) => {
+            spanglings::cli::commands::drill::run_drill(topic.as_deref(), concept.as_deref())?;
         }
         Some(Commands::Blitz { seconds, topic }) => {
             spanglings::cli::commands::blitz::run_blitz(seconds, topic.as_deref())?;
@@ -28,8 +28,8 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Review) => {
             spanglings::cli::commands::review::run_review_session()?;
         }
-        Some(Commands::List) => {
-            spanglings::cli::commands::list::list_exercises(cli.json)?;
+        Some(Commands::List { concept }) => {
+            spanglings::cli::commands::list::list_exercises(cli.json, concept.as_deref())?;
         }
         Some(Commands::Progress) => {
             spanglings::cli::commands::progress::show_progress(cli.json)?;

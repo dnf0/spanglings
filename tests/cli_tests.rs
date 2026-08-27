@@ -42,7 +42,22 @@ fn test_cli_parsing_subcommands() {
     assert_eq!(
         cli_drill.command,
         Some(Commands::Drill {
-            topic: Some("preterite".to_string())
+            topic: Some("preterite".to_string()),
+            concept: None,
+        })
+    );
+
+    let cli_drill_concept = Cli::parse_from([
+        "spanglings",
+        "drill",
+        "--concept",
+        "subjunctive_wishes_desires",
+    ]);
+    assert_eq!(
+        cli_drill_concept.command,
+        Some(Commands::Drill {
+            topic: None,
+            concept: Some("subjunctive_wishes_desires".to_string()),
         })
     );
 
@@ -71,7 +86,20 @@ fn test_cli_parsing_subcommands() {
     );
 
     let cli_list = Cli::parse_from(["spanglings", "list"]);
-    assert_eq!(cli_list.command, Some(Commands::List));
+    assert_eq!(cli_list.command, Some(Commands::List { concept: None }));
+
+    let cli_list_concept = Cli::parse_from([
+        "spanglings",
+        "list",
+        "--concept",
+        "subjunctive_wishes_desires",
+    ]);
+    assert_eq!(
+        cli_list_concept.command,
+        Some(Commands::List {
+            concept: Some("subjunctive_wishes_desires".to_string()),
+        })
+    );
 
     let cli_progress = Cli::parse_from(["spanglings", "progress"]);
     assert_eq!(cli_progress.command, Some(Commands::Progress));
@@ -105,8 +133,9 @@ fn test_explain_command_executes_cleanly() {
 
 #[test]
 fn test_list_and_progress_execute_cleanly() {
-    assert!(list_exercises(false).is_ok());
-    assert!(list_exercises(true).is_ok());
+    assert!(list_exercises(false, None).is_ok());
+    assert!(list_exercises(true, None).is_ok());
+    assert!(list_exercises(false, Some("subjunctive_volition_influence")).is_ok());
     assert!(show_progress(false).is_ok());
     assert!(show_progress(true).is_ok());
     assert!(show_hint(None).is_ok());
@@ -115,8 +144,7 @@ fn test_list_and_progress_execute_cleanly() {
 #[test]
 fn test_run_exercise_with_file_path() {
     let file = NamedTempFile::new().unwrap();
-    let content = r#"<!-- I AM NOT DONE -->
-# Subjunctive 01
+    let content = r#"# Subjunctive 01
 <!-- id: b1_subj_test | level: B1 | topic: subjunctive | type: cloze -->
 
 ### Exercise
@@ -140,8 +168,7 @@ fn test_curriculum_discovery_and_query() {
     fs::create_dir_all(&track_dir).unwrap();
 
     let file_path = track_dir.join("ex01.md");
-    let content = r#"<!-- I AM NOT DONE -->
-# Test Exercise Title
+    let content = r#"# Test Exercise Title
 <!-- id: b1_test_ex | level: B1 | topic: subjunctive | type: cloze -->
 
 ### Exercise

@@ -41,7 +41,13 @@ pub enum Commands {
     /// Display an in-terminal grammar reference card
     Explain { topic: String },
     /// Launch quick-fire irregular stem conjugation drills
-    Drill { topic: Option<String> },
+    Drill {
+        /// Topic or concept to drill (e.g. preterite, subjunctive)
+        topic: Option<String>,
+        /// Filter drill items by specific linguistic concept
+        #[arg(short, long)]
+        concept: Option<String>,
+    },
     /// Launch 60-second rapid-fire blitz speed drill
     Blitz {
         /// Time limit in seconds (default: 60)
@@ -54,7 +60,11 @@ pub enum Commands {
     /// Launch an SM-2 spaced repetition review session
     Review,
     /// List all curriculum exercises and completion status
-    List,
+    List {
+        /// Filter exercises by linguistic concept (e.g. subjunctive_wishes_desires, ser_vs_estar_identity)
+        #[arg(short, long)]
+        concept: Option<String>,
+    },
     /// Display learning progress and CEFR level mastery
     Progress,
     /// Take an adaptive diagnostic placement test to assess CEFR level or test out of levels

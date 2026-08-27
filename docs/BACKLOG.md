@@ -180,20 +180,22 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
 
 ---
 
-## 🌐 Focus Area 14: Linguistic Knowledge Graph & Practical Everyday Expansion (In Progress)
+## 🌐 Focus Area 14: Linguistic Knowledge Graph & Practical Everyday Expansion (Completed)
 
-- [ ] **SPANG-130: Directed Acyclic Graph (DAG) Linguistic Knowledge Graph (`src/core/graph.rs`)**
-  - **Description**: In-memory static ontology DAG modeling prerequisite relationships and conceptual primitives across grammar rules, aspectual shifts, and situational domains.
-- [ ] **SPANG-131: Concept-Aware Exercise Model & Markdown Parser (`src/core/exercise.rs`)**
-  - **Description**: Extended `Exercise` struct with `concept_tags`, `prerequisites`, and `grammar_focus` metadata.
-- [ ] **SPANG-132: Concept-Level SRS Mastery & Weakness Profiler (`src/core/state.rs`, `src/cli/commands/progress.rs`)**
-  - **Description**: Aggregates SRS review performance into `ConceptMastery` scores and pinpoints foundational gaps across tracks.
-- [ ] **SPANG-133: Concept-Aware Compiler Diagnostics (`src/core/diagnostic.rs`)**
-  - **Description**: Cross-links failed exercises to prerequisite foundation tracks with actionable remediation notes and drill suggestions.
-- [ ] **SPANG-134: Curriculum Expansion: Tracks 42 to 47 (36 New Exercises)**
-  - **Description**: Handcrafted situational synthesis tracks for Travel Logistics, Banking/Taxes, Consumer Complaints, Home Maintenance, News/Media, and Conversational Markers.
-- [ ] **SPANG-135: Retroactive Conceptual Tagging of Tracks 00–41 (231 Exercises)**
-  - **Description**: Tag all 231 existing exercises with concepts, prerequisites, and grammar focus notes.
+- [x] **SPANG-130: Directed Acyclic Graph (DAG) Linguistic Knowledge Graph (`src/core/graph.rs`)**
+  - **Description**: In-memory static ontology DAG modeling 53 prerequisite relationships and conceptual primitives across grammar rules, aspectual shifts, and situational domains with cycle detection and learning frontier resolution.
+- [x] **SPANG-131: Concept-Aware Exercise Model & Markdown Parser (`src/core/exercise.rs`)**
+  - **Description**: Extended `Exercise` struct with `concept_tags`, `prerequisites`, `grammar_focus`, and `contrast_note` metadata with support for YAML frontmatter and single-line syntax.
+- [x] **SPANG-132: Concept-Level SRS Mastery & Weakness Profiler (`src/core/state.rs`, `src/cli/commands/progress.rs`)**
+  - **Description**: Aggregates SRS review performance into `ConceptMastery` scores, pinpoints foundational gaps across tracks, and recommends personalized learning frontiers in CLI and JSON output.
+- [x] **SPANG-133: Concept-Aware Compiler Diagnostics & Modern Watcher Experience (`src/engine/diagnostics.rs`, `src/watcher/runner.rs`)**
+  - **Description**: Concept-aware diagnostic error reporting cross-linking failed exercises to prerequisite foundation tracks with actionable remediation notes and contrast guidance. Modernized watcher with non-blocking raw keystrokes (`[n]`, `[p]`, `[r]`, `[q]`) eliminating all legacy comment busywork.
+- [x] **SPANG-134: Curriculum Expansion: Tracks 42 to 47 (36 New Exercises, 267 Total)**
+  - **Description**: Handcrafted situational synthesis tracks for Travel Logistics, Banking/Taxes, Consumer Complaints, Home Maintenance, News/Media, and Conversational Nuance.
+- [x] **SPANG-135: Retroactive Conceptual Tagging of Tracks 00–41 (231 Exercises)**
+  - **Description**: Tag all 231 existing exercises with concepts, prerequisites, and grammar focus notes, completely eliminating legacy `<!-- I AM NOT DONE -->` markers.
+- [x] **SPANG-136: Concept CLI Filtering (`spanglings list --concept`, `spanglings drill --concept`)**
+  - **Description**: Filter exercises and targeted conjugation drills by linguistic concept ID.
 
 ---
 

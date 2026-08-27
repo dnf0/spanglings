@@ -3,15 +3,22 @@ use spanglings::cli::commands::progress::get_progress_json;
 
 #[test]
 fn test_list_exercises_json_serialization() {
-    let json_str = get_exercises_json().expect("Failed to serialize exercises to JSON");
+    let json_str = get_exercises_json(None).expect("Failed to serialize exercises to JSON");
     let parsed: serde_json::Value = serde_json::from_str(&json_str).unwrap();
     assert!(parsed.is_array());
-    assert!(parsed.as_array().unwrap().len() >= 116);
+    assert!(parsed.as_array().unwrap().len() == 267);
     let first = &parsed[0];
     assert!(first.get("id").is_some());
     assert!(first.get("title").is_some());
     assert!(first.get("level").is_some());
     assert!(first.get("topic").is_some());
+
+    // Concept filtered json
+    let filtered_json = get_exercises_json(Some("subjunctive_volition_influence"))
+        .expect("Failed to filter exercises by concept");
+    let filtered_parsed: serde_json::Value = serde_json::from_str(&filtered_json).unwrap();
+    assert!(filtered_parsed.is_array());
+    assert!(!filtered_parsed.as_array().unwrap().is_empty());
 }
 
 #[test]

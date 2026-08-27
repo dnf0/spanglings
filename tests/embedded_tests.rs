@@ -5,9 +5,10 @@ use tempfile::tempdir;
 #[test]
 fn test_get_embedded_exercises_loads_full_catalog() {
     let exercises = get_embedded_exercises().expect("Failed to load embedded exercises");
-    assert!(
-        exercises.len() >= 116,
-        "Expected at least 116 embedded exercises, found {}",
+    assert_eq!(
+        exercises.len(),
+        267,
+        "Expected exactly 267 embedded exercises, found {}",
         exercises.len()
     );
     assert!(exercises.iter().any(|e| e.level == Level::B1));
@@ -20,10 +21,11 @@ fn test_init_exercises_dir_writes_files() {
     let temp = tempdir().unwrap();
     let target = temp.path().join("exercises");
     let count = init_exercises_dir(&target, false).expect("Failed to init exercises");
-    assert!(count >= 116);
+    assert_eq!(count, 267);
     assert!(target.join("00_baseline").exists());
     assert!(target.join("03_subjunctive_weirdo").exists());
     assert!(target.join("21_nuanced_collocations").exists());
+    assert!(target.join("47_conversational_markers_and_nuance").exists());
 }
 
 #[test]
@@ -31,5 +33,5 @@ fn test_find_all_exercises_or_embedded_fallback() {
     let temp = tempdir().unwrap();
     let non_existent = temp.path().join("empty_dir/exercises");
     let exercises = find_all_exercises_or_embedded(&non_existent).expect("Fallback failed");
-    assert!(exercises.len() >= 116);
+    assert_eq!(exercises.len(), 267);
 }

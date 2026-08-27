@@ -3,39 +3,76 @@ use crate::core::state::AppState;
 use colored::Colorize;
 use std::path::Path;
 
-pub fn get_exercises_json() -> anyhow::Result<String> {
-    let exercises = find_all_exercises_or_embedded("exercises")?;
+pub fn get_exercises_json(concept: Option<&str>) -> anyhow::Result<String> {
+    let mut exercises = find_all_exercises_or_embedded("exercises")?;
+    if let Some(target) = concept {
+        let t = target.to_lowercase();
+        exercises.retain(|e| {
+            e.concept_tags
+                .iter()
+                .any(|c| c.to_lowercase().contains(&t))
+                || e.prerequisites
+                    .iter()
+                    .any(|p| p.to_lowercase().contains(&t))
+        });
+    }
     let json_str = serde_json::to_string_pretty(&exercises)?;
     Ok(json_str)
 }
 
-pub fn list_exercises(json: bool) -> anyhow::Result<()> {
+pub fn list_exercises(json: bool, concept: Option<&str>) -> anyhow::Result<()> {
     if json {
-        println!("{}", get_exercises_json()?);
+        println!("{}", get_exercises_json(concept)?);
         return Ok(());
     }
     let exercises_dir = Path::new("exercises");
-    let exercises = find_all_exercises_or_embedded(exercises_dir)?;
+    let mut exercises = find_all_exercises_or_embedded(exercises_dir)?;
+    if let Some(target) = concept {
+        let t = target.to_lowercase();
+        exercises.retain(|e| {
+            e.concept_tags
+                .iter()
+                .any(|c| c.to_lowercase().contains(&t))
+                || e.prerequisites
+                    .iter()
+                    .any(|p| p.to_lowercase().contains(&t))
+        });
+    }
     let state = AppState::load().unwrap_or_default();
 
     println!(
         "{}",
         "==========================================================".blue()
     );
-    println!(
-        "{}",
-        "               SPANGLINGS CURRICULUM                     ".bold()
-    );
+    if let Some(c) = concept {
+        println!(
+            "{} {}",
+            "       SPANGLINGS CURRICULUM — CONCEPT:".bold(),
+            c.cyan().bold()
+        );
+    } else {
+        println!(
+            "{}",
+            "               SPANGLINGS CURRICULUM                     ".bold()
+        );
+    }
     println!(
         "{}",
         "==========================================================".blue()
     );
 
     if exercises.is_empty() {
-        println!(
-            "{}",
-            "No exercises found in 'exercises/' directory.".yellow()
-        );
+        if let Some(c) = concept {
+            println!(
+                "{}",
+                format!("No exercises found matching concept '{}'.", c).yellow()
+            );
+        } else {
+            println!(
+                "{}",
+                "No exercises found in 'exercises/' directory.".yellow()
+            );
+        }
         return Ok(());
     }
 

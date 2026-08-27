@@ -9,14 +9,15 @@
 Duolingo is often too slow, repetitive, and child-oriented. **Spanglings** provides a developer-first, terminal-native environment for mastering the nuances of Spanish syntax, subjunctive triggers, aspectual contrasts (*pretérito vs imperfecto*), clitic pronoun stacking, accidental *se*, and formal C1 collocations.
 
 ### Key Features
+- 🌐 **Linguistic Knowledge Graph (DAG Ontology)**: 53-concept ontological graph mapping prerequisite relationships, morphological shifts, and situational domains with learning frontier resolution.
 - 🚀 **Interactive Terminal UI (`ratatui`)**: Real-time dual-pane editor with live validation, syntax styling, progress tracking, and interactive drill modes.
-- ⚡ **Headless Watch Mode (`spanglings watch`)**: Modify exercise files in your favorite editor (VS Code, Neovim, Zed) while Spanglings continuously validates submissions via debounced filesystem events.
+- ⚡ **Modern Headless Watch Mode (`spanglings watch`)**: Modify exercise files in your favorite editor (VS Code, Neovim, Zed) while Spanglings continuously validates submissions. Features interactive non-blocking terminal keystrokes (`[n]` next, `[p]` previous, `[r]` reset, `[q]` quit) with zero comment-deletion busywork.
 - 📦 **Turnkey Zero-Setup Scaffolding (`spanglings init`)**: Embedded exercise catalog compiled directly into the binary—run `spanglings init` in any directory with zero git-cloning needed.
-- 🔍 **Rustc-Style Grammar Diagnostics**: Rich, colored compiler-style error diagnostics (`error[E0301]: Subjunctive Mood Required`) with source code context, dynamic line markers (`^^^^`), and grammatical explanations.
+- 🔍 **Rustc-Style Grammar Diagnostics**: Rich, colored compiler-style error diagnostics (`error[E0301]: Subjunctive Mood Required`) with source code context, dynamic line markers (`^^^^`), grammatical explanations, linked concepts, and contrast notes.
 - 💡 **Progressive 3-Tier Hint System**: Get hints on demand (Tier 1: conceptual clue, Tier 2: morphological/structural clue, Tier 3: solution reveal).
 - 🧠 **Forgiving Smart Accent Matching**: Designed for QWERTY keyboards. Accents and inverted punctuation (`¿`, `¡`) are forgiven by default with helpful tip notices, or enforced with `--strict-accents`.
 - 🔄 **SM-2 Spaced Repetition (SRS)**: Active recall review scheduler using the SuperMemo-2 algorithm (`spanglings review` / `spanglings drill`).
-- 🔎 **Full-Text & Topic Search (`spanglings search <query>`)**: Instant matching across grammar topics, CEFR levels, exercise titles, prompts, and solutions.
+- 🔎 **Full-Text, Concept & Topic Search (`spanglings search`, `spanglings list --concept`)**: Instant matching across grammar topics, CEFR levels, exercise titles, prompts, solutions, and 53 linguistic ontology concepts.
 - 🤖 **Machine-Readable Output (`--json`)**: Streamlined JSON serialization for external scripts, status bars (Starship, tmux), and IDE integrations.
 - 🐚 **Shell Auto-Completions (`spanglings completions`)**: Native autocompletions for Bash, Zsh, Fish, PowerShell, and Elvish.
 - 📖 **In-Terminal Cheat Sheets (`spanglings explain <topic>`)**: Reference cards for *ser vs estar*, past aspectual shifts, subjunctive triggers (WEIRDO), *por vs para*, prepositional regimes, pronoun stacking, accidental *se*, tech Spanish, business correspondence, false friends, and *voseo*.
@@ -24,7 +25,7 @@ Duolingo is often too slow, repetitive, and child-oriented. **Spanglings** provi
 - 🔌 **Native Language Server Protocol (LSP) Engine (`spanglings lsp`)**: Real-time stdio JSON-RPC server with live diagnostics, rich hover popups (conjugations and grammar sheets), and autocompletion for VS Code, Neovim, Helix, and Zed.
 - 📦 **Anki & Markdown Study Pack Exporter (`spanglings export`)**: Export full decks to Anki TSV format, generate Markdown study guides for Obsidian, or export JSON progress metrics.
 - 🔄 **Portable State Sync (`spanglings sync`)**: Export and merge learning history, streaks, and SRS mastery across workstations.
-- 📚 **231 Handcrafted Exercises across 42 Tracks**: Complete coverage from baseline irregular drills through Latin American engineering, everyday conversational mastery, and formal C1 collocations.
+- 📚 **267 Handcrafted Exercises across 48 Tracks**: Complete coverage from baseline irregular drills through Latin American engineering, everyday conversational mastery, practical logistics, and formal C1 collocations.
 
 ---
 
@@ -69,12 +70,12 @@ Commands:
   init         Initialize exercises in the current directory or target path
   run          Run and validate a specific exercise by path or ID
   hint         Show progressive hints for an exercise (Tier 1 to 3)
-  list         List all curriculum exercises and completion statuses
-  progress     Display learning progress across CEFR levels
+  list         List all curriculum exercises and completion statuses (supports --concept)
+  progress     Display learning progress across CEFR levels and concept mastery
   search       Search exercises by topic, keyword, or grammar concept
   check        Check exercise file for errors or stream JSON editor diagnostics
   test         Run calibrated CEFR placement diagnostic test & level fast-track
-  drill        Start an active-recall flashcard drill session
+  drill        Start an active-recall flashcard drill session (supports --concept)
   blitz        Start 60-second rapid-fire conjugation speed drill
   review       Review exercises due for Spaced Repetition (SM-2)
   explain      Display in-terminal grammar cheat sheet for a topic
@@ -153,7 +154,7 @@ spanglings sync --import backup.json
 
 #### 5. Headless Watcher Mode & Editor Integration
 ```bash
-# Continuous file watcher
+# Continuous file watcher with interactive [n]ext / [p]rev / [r]eset controls
 spanglings watch
 
 # Single exercise or curriculum diagnostic check (supports editor problem matchers & JSON)
@@ -161,10 +162,13 @@ spanglings check exercises/03_subjunctive_weirdo/01_wishes_volition.md
 spanglings check --json
 ```
 
-#### 6. Search & Explore
+#### 6. Search & Concept Filtering
 ```bash
 # Search for subjunctive exercises
 spanglings search subjunctive
+
+# Filter curriculum by linguistic concept
+spanglings list --concept subjunctive_wishes_desires
 
 # Search for accidental 'se' exercises
 spanglings search "se me"
@@ -193,6 +197,7 @@ spanglings review
 # Quick-fire irregular stem conjugation drills
 spanglings drill
 spanglings drill --topic subjunctive
+spanglings drill --concept subjunctive_wishes_desires
 
 # 60-Second Rapid-Fire Blitz Mode (speed drills with streaks & WPM)
 spanglings blitz
@@ -224,7 +229,7 @@ spanglings hook uninstall
 
 ---
 
-## Curriculum Tracks (231 Exercises across 42 Tracks)
+## Curriculum Tracks (267 Exercises across 48 Tracks)
 
 | Track | Topic | CEFR Level | Exercises |
 |---|---|---|---|
@@ -270,6 +275,12 @@ spanglings hook uninstall
 | `39_nuanced_prepositions_and_locutions` | *Hacia* vs *Hasta*, *Tras*, *Según*, *Bajo*, *a base de*, *a expensas de*, *al cabo de* vs *dentro de*, *a lo largo de*, *a raíz de* | B1 / C1 | 6 |
 | `40_middle_voice_and_reflexive_shifts` | Meaning shifts: *ir/irse*, *dormir/dormirse*, *comer/comerse*, *llevar/llevarse*, *quedar/quedarse*, *volver/volverse* | B1 / C1 | 6 |
 | `41_adverbial_clauses_and_conjunctions` | *A medida que*, *Conforme*, *De modo que*, *En tanto que*, *Tan pronto como*, *A menos que*, *Siempre y cuando* | B2 / C1 | 6 |
+| `42_travel_logistics_and_borders` | Flight delays, missed layovers, lost baggage claims, border declarations, transit permits | B1 / C1 | 6 |
+| `43_banking_taxes_and_finances` | VAT withholding, tax returns (*declaración de la renta*), tax certificates, fee appeals, IBAN transfers | B2 / C1 | 6 |
+| `44_consumer_complaints_and_rights` | Official complaint forms (*hoja de reclamaciones*), defective product warranty, billing disputes, chargebacks | B2 / C1 | 6 |
+| `45_home_maintenance_and_repairs` | Pipe leaks (*fugas*), short circuits (*cortocircuito*), structural dampness, landlord repair obligations, quote requests | B1 / B2 | 6 |
+| `46_news_media_and_civic_debate` | Public policy debates, investigative reporting (*arrojar luz*), parliamentary scrutiny, consensus building | C1 | 6 |
+| `47_conversational_markers_and_nuance` | Pragmatic fillers (*a ver*, *o sea*), emphatic assertions (*faltaría más*), ironic concessions, polite hedging (*por si acaso*) | B2 / C1 | 6 |
 
 ---
 
