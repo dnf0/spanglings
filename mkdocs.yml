@@ -1,5 +1,5 @@
 site_name: Spanglings
-site_description: A developer-grade CLI & interactive TUI for learning intermediate-to-advanced Spanish (B1–C1).
+site_description: Spanglings builds the syntax compiler; real-world usage supplies the data. Developer-grade CLI & interactive TUI for mastering Spanish (B1–C1).
 site_url: https://dnf0.github.io/spanglings/
 site_author: Spanglings Contributors
 repo_name: dnf0/spanglings
