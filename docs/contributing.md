@@ -1,6 +1,6 @@
-# Contributing to Spanglings
+# Contributing to Spanglings 🤝
 
-We welcome contributions to Spanglings! Whether you're adding new Spanish curriculum tracks, refining diagnostics, improving the interactive TUI, or optimizing the LSP engine, here is everything you need to know.
+We welcome contributions to Spanglings! Whether you are authoring new Spanish curriculum tracks, extending linguistic ontology concepts in the DAG, improving compiler diagnostics, refining the Ratatui TUI, or optimizing the LSP engine, here is everything you need to know.
 
 ---
 
@@ -21,7 +21,7 @@ cd spanglings
 # Build in debug mode
 cargo build
 
-# Run complete test suite (26+ test files)
+# Run complete test suite (all unit, integration, and reference tests)
 cargo test
 
 # Run linter checks
@@ -38,18 +38,25 @@ cargo fmt --check
 ```
 src/
 ├── core/             # Core domain models, state persistence, SRS, DAG ontology
+│   ├── curriculum.rs # Curriculum manifest loader and track organizer
 │   ├── exercise.rs   # Exercise markdown parser and metadata extractor
-│   ├── graph.rs      # Linguistic Knowledge Graph (66-concept DAG)
+│   ├── graph.rs      # Linguistic Knowledge Graph (81-concept DAG)
 │   ├── placement.rs  # Calibrated CEFR placement battery & evaluation
-│   ├── reference.rs  # Grammar reference cards & cheat sheets
-│   └── state.rs      # User progress persistence, SM-2 cards, concept mastery
+│   ├── reference.rs  # 24 Grammar reference cards & error-code resolvers
+│   ├── srs.rs        # SuperMemo-2 (SM-2) spaced repetition algorithms
+│   ├── state.rs      # User progress persistence, SM-2 cards, concept mastery
+│   └── verbs.rs      # Spanish verb conjugation tables and irregular forms
 ├── engine/           # Evaluation, normalizer, and diagnostic compiler
+│   ├── accent_checker.rs # Smart accent and diacritic comparison
 │   ├── diagnostics.rs# Rustc-style terminal compiler diagnostics
 │   ├── normalizer.rs # Smart accent matching and whitespace stripping
+│   ├── parser.rs     # Cloze extraction and Markdown syntax parser
+│   ├── rules.rs      # 59 Compiler diagnostic error codes (E0001–E0059)
 │   └── validator.rs  # Submission evaluation against expected solutions
 ├── tui/              # Interactive Ratatui Terminal UI
 │   ├── app.rs        # State machine, key handlers, and modal managers
 │   ├── events.rs     # Crossterm terminal event pump
+│   ├── tour.rs       # 6-station interactive onboarding tour state
 │   └── ui.rs         # Responsive layout renderers for all modals and panes
 ├── watcher/          # Headless file watcher and runner engine
 ├── lsp/              # Language Server Protocol stdio implementation
@@ -97,8 +104,8 @@ Ayer ___ (conocer) a la nueva ingeniera de sistemas en el standup.
 
 We enforce [Conventional Commits](https://www.conventionalcommits.org/):
 
-- `feat(scope): ...` for new features
-- `fix(scope): ...` for bug fixes
+- `feat(scope): ...` for new features or curriculum tracks
+- `fix(scope): ...` for bug fixes or diagnostic corrections
 - `docs(scope): ...` for documentation updates
-- `test(scope): ...` for test additions
-- `refactor(scope): ...` for architectural improvements
+- `test(scope): ...` for new test cases or regression coverage
+- `refactor(scope): ...` for architectural refactoring
