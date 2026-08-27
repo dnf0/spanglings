@@ -227,4 +227,3 @@ fn test_error_code_and_concept_lookup() {
     assert!(get_reference_card("subjunctive_volition_influence").is_some());
     assert!(get_reference_card("por_vs_para_purpose_cause").is_some());
 }
-
