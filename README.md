@@ -209,7 +209,7 @@ spanglings hook uninstall
 
 ---
 
-## Curriculum Tracks (195 Exercises across 36 Tracks)
+## Curriculum Tracks (231 Exercises across 42 Tracks)
 
 | Track | Topic | CEFR Level | Exercises |
 |---|---|---|---|
@@ -249,6 +249,12 @@ spanglings hook uninstall
 | `33_rioplatense_production_voseo` | Production deploys (*sacar a producción*), load endurance (*bancarse la carga*), on-call (*ponete las pilas*), *voseo* subjunctives | B2 / C1 | 6 |
 | `34_latam_anglicism_elimination` | Replacing Spanglish calques (*rastrear* vs *trackear*, *personalizar* vs *customizar*, *rendir* vs *performar*, *descontinuar* vs *deprecar*) | B2 / C1 | 6 |
 | `35_latam_enterprise_risk_and_sla` | Non-disclosure agreements (*acuerdos de confidencialidad*), lost profits (*lucro cesante*), breach termination, indemnification | C1 | 6 |
+| `36_everyday_life_and_housing` | Leases (*contrato de arrendamiento*, *fianza*), utilities setup (*dar de alta*), bank fees, refunds, package pickups, transit | B1 | 6 |
+| `37_healthcare_and_symptoms` | Describing symptoms (*punzadas agudas*, *mareos*), prescriptions (*recetar*), OTC drugs & leaflets (*prospecto*), ER discharge, allergies | B1 / B2 | 6 |
+| `38_dining_and_social_conversation` | Split checks (*cuenta por separado*), plans (*quedar a las ocho*), compliments, conversational softeners (*por cierto*), banter, goodbyes | B1 / B2 | 6 |
+| `39_nuanced_prepositions_and_locutions` | *Hacia* vs *Hasta*, *Tras*, *Según*, *Bajo*, *a base de*, *a expensas de*, *al cabo de* vs *dentro de*, *a lo largo de*, *a raíz de* | B1 / C1 | 6 |
+| `40_middle_voice_and_reflexive_shifts` | Meaning shifts: *ir/irse*, *dormir/dormirse*, *comer/comerse*, *llevar/llevarse*, *quedar/quedarse*, *volver/volverse* | B1 / C1 | 6 |
+| `41_adverbial_clauses_and_conjunctions` | *A medida que*, *Conforme*, *De modo que*, *En tanto que*, *Tan pronto como*, *A menos que*, *Siempre y cuando* | B2 / C1 | 6 |
 
 ---
 
