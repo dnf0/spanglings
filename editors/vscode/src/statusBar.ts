@@ -1,8 +1,8 @@
 import * as vscode from 'vscode';
-import { exec } from 'child_process';
+import { execFile } from 'child_process';
 import { promisify } from 'util';
 
-const execAsync = promisify(exec);
+const execFileAsync = promisify(execFile);
 
 export interface LevelProgress {
   total: number;
@@ -30,6 +30,7 @@ export interface ProgressData {
 
 export class SpanglingsStatusBar implements vscode.Disposable {
   private statusBarItem: vscode.StatusBarItem;
+  private isUpdating = false;
 
   constructor() {
     this.statusBarItem = vscode.window.createStatusBarItem(
@@ -43,12 +44,17 @@ export class SpanglingsStatusBar implements vscode.Disposable {
   }
 
   public async update(): Promise<void> {
+    if (this.isUpdating) {
+      return;
+    }
+    this.isUpdating = true;
+
     const config = vscode.workspace.getConfiguration('spanglings');
     const executablePath = config.get<string>('executablePath', 'spanglings');
     const cwd = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
 
     try {
-      const { stdout } = await execAsync(`${executablePath} progress --json`, {
+      const { stdout } = await execFileAsync(executablePath, ['progress', '--json'], {
         cwd
       });
 
@@ -79,10 +85,13 @@ export class SpanglingsStatusBar implements vscode.Disposable {
       }
       tooltip.appendMarkdown(`\n---\n*Click to open next exercise*`);
       this.statusBarItem.tooltip = tooltip;
-    } catch {
+    } catch (err) {
+      console.error('Error updating Spanglings status bar:', err);
       // Graceful fallback if spanglings binary is not found or fails
       this.statusBarItem.text = '$(mortar-board) Spanglings';
       this.statusBarItem.tooltip = 'Spanglings: Click to open next exercise';
+    } finally {
+      this.isUpdating = false;
     }
   }
 
