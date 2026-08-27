@@ -45,6 +45,7 @@ impl ConceptMastery {
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(default)]
 pub struct AppState {
     pub version: u32,
     pub completed_exercises: HashSet<String>,
@@ -52,12 +53,10 @@ pub struct AppState {
     pub accent_mode: AccentMode,
     pub srs: HashMap<String, SrsItem>,
     pub stats: HashMap<String, ExerciseStat>,
-    #[serde(default)]
     pub activity_history: HashMap<String, u32>,
-    #[serde(default)]
     pub evaluated_level: Option<EvaluatedLevel>,
-    #[serde(default)]
     pub concept_mastery: HashMap<String, ConceptMastery>,
+    pub tour_completed: bool,
 }
 
 impl Default for AppState {
@@ -72,6 +71,7 @@ impl Default for AppState {
             activity_history: HashMap::new(),
             evaluated_level: None,
             concept_mastery: HashMap::new(),
+            tour_completed: false,
         }
     }
 }
@@ -142,6 +142,10 @@ impl AppState {
         stat.completed_at = Some(now);
         let today = now.format("%Y-%m-%d").to_string();
         self.record_activity(&today);
+    }
+
+    pub fn mark_tour_completed(&mut self) {
+        self.tour_completed = true;
     }
 
     pub fn unmark_completed(&mut self, exercise_id: &str) {
