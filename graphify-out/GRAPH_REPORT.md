@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-08-27)
 
 ## Corpus Check
-- 289 files · ~78,780 words
+- 331 files · ~93,470 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1560 nodes · 1802 edges · 264 communities (259 shown, 5 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 123 edges (avg confidence: 0.85)
+- 1761 nodes · 2025 edges · 299 communities (295 shown, 4 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 137 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `48d82e66`
+- Built from commit: `2cfba8b6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -18,7 +18,7 @@
 - Spanglings Implementation Plan
 - Spanglings Design Specification
 - App
-- Exercise
+- exercise.rs
 - embedded.rs
 - main
 - spanglings
@@ -183,7 +183,7 @@
 - Regional Contrasts 04: Lexical Dialectal Pairs
 - Regional Contrasts 05: Reflexive Imperatives in Voseo
 - conjugate_verb
-- accents.rs
+- Level
 - tui_tests.rs
 - evaluate_current_exercise_in
 - ADR-0002: Language Server Protocol (LSP) Engine & In-TUI Modal Architecture
@@ -217,15 +217,15 @@
 - Executive Leadership 04: Headcount Reallocation
 - Executive Leadership 05: Regulatory Exposure
 - Executive Leadership 06: Board Resolutions
-- get_rule_title
+- Exercise
 - start_lsp_server
 - compilerOptions
-- export_sync_tests.rs
-- Level
+- Standard Spanish & General Conversational Curriculum Expansion Implementation Plan
+- .current_exercise_mut
 - app.rs
 - draw_ui
-- find_all_exercises
-- find_exercise_by_query
+- curriculum.rs
+- Diagnostic Placement Test & Level Fast-Track Implementation Plan
 - VS Code Extension & Latin American Spanish Curriculum Expansion Implementation Plan
 - properties
 - package.json
@@ -271,36 +271,71 @@
 - LatAm Enterprise SLA 06: Service Availability Credits & Penalties
 - dependencies
 - repository
-- .new
+- Everyday Life & Housing 01: Lease Agreements & Security Deposits
+- Everyday Life & Housing 02: Setting Up Household Utilities
+- Everyday Life & Housing 03: Banking Transactions & Wire Fees
+- Everyday Life & Housing 04: Customer Service & Return Refunds
+- Everyday Life & Housing 05: Parcel Delivery & Post Office Pickups
+- Everyday Life & Housing 06: Public Transit & Train Transfers
+- Healthcare & Symptoms 01: Describing Physical Discomfort & Pain
+- Healthcare & Symptoms 02: Doctor Consultations & Prescriptions
+- Healthcare & Symptoms 03: Pharmacy, OTC Medications & Side Effects
+- Healthcare & Symptoms 04: Emergency Room & Medical Discharge
+- Healthcare & Symptoms 05: Specialist Referrals & Annual Checkups
+- Healthcare & Symptoms 06: Allergies, Sensitivities & Dietary Warnings
+- Dining & Social Conversation 01: Restaurant Ordering & Split Bills
+- Dining & Social Conversation 02: Making Plans & Meeting Up
+- Dining & Social Conversation 03: Social Compliments & Reassurances
+- Dining & Social Conversation 04: Discourse Markers & Conversational Softeners
+- Dining & Social Conversation 05: Recounting Anecdotes & Having Fun
+- Dining & Social Conversation 06: Friendly Goodbyes & Follow-ups
+- Nuanced Prepositions 01: Hacia vs Hasta (Direction vs Endpoint)
+- Nuanced Prepositions 02: Tras, Según & Bajo (Formal Sequencing & Conditions)
+- Nuanced Prepositions 03: Compound Locutions: A base de & A expensas de
+- Nuanced Prepositions 04: Temporal Spans: Al cabo de vs Dentro de
+- Nuanced Prepositions 05: Spatial & Temporal Extension: A lo largo de
+- Nuanced Prepositions 06: Causal Origin & Channels: A raíz de & Por medio de
+- Middle-Voice & Reflexive Shifts 01: Ir vs Irse (Motion vs Departure)
+- Middle-Voice & Reflexive Shifts 02: Dormir vs Dormirse (State vs Inchoative Transition)
+- Middle-Voice & Reflexive Shifts 03: Comer vs Comerse (Telicity & Total Consumption)
+- Middle-Voice & Reflexive Shifts 04: Llevar vs Llevarse (Transport vs Social Affinity / Appropriating)
+- Middle-Voice & Reflexive Shifts 05: Quedar vs Quedarse (Agreement/Fit vs Remaining)
+- Middle-Voice & Reflexive Shifts 06: Volver vs Volverse (Returning vs Radical Transformation)
+- Adverbial Clauses 01: Proportional Progression: A medida que & Conforme
+- Adverbial Clauses 02: Manner & Consecutive Result: Según & De modo que
+- Adverbial Clauses 03: Temporal Duration & Condition: En tanto que & Mientras
+- Adverbial Clauses 04: Immediate Succession: Tan pronto como & Apenas
+- Adverbial Clauses 05: Exceptive Conditions: Salvo que, A menos que & A no ser que
+- Adverbial Clauses 06: Strict Conditions: Siempre y cuando & A condición de que
 
 ## God Nodes (most connected - your core abstractions)
-1. `App` - 60 edges
-2. `Exercise` - 39 edges
-3. `AppState` - 34 edges
+1. `App` - 69 edges
+2. `Exercise` - 41 edges
+3. `AppState` - 36 edges
 4. `validate_submission()` - 21 edges
 5. `get_reference_card()` - 18 edges
-6. `conjugate_verb()` - 17 edges
-7. `create_sample_exercises()` - 17 edges
-8. `find_all_exercises()` - 16 edges
-9. `draw_ui()` - 15 edges
-10. `compilerOptions` - 14 edges
+6. `create_sample_exercises()` - 18 edges
+7. `conjugate_verb()` - 17 edges
+8. `Level` - 17 edges
+9. `find_all_exercises()` - 16 edges
+10. `draw_ui()` - 16 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `test_list_exercises_json_serialization()` --calls--> `get_exercises_json()`  [INFERRED]
   tests/json_output_tests.rs → src/cli/commands/list.rs
 - `test_find_all_exercises_or_embedded_fallback()` --calls--> `find_all_exercises_or_embedded()`  [INFERRED]
   tests/embedded_tests.rs → src/core/curriculum.rs
+- `test_state_fast_track_level()` --calls--> `get_embedded_exercises()`  [INFERRED]
+  tests/srs_tests.rs → src/core/embedded.rs
 - `test_get_all_blitz_items()` --calls--> `get_blitz_items()`  [INFERRED]
   tests/blitz_tests.rs → src/cli/commands/blitz.rs
 - `test_get_blitz_items_topic_filter()` --calls--> `get_blitz_items()`  [INFERRED]
   tests/blitz_tests.rs → src/cli/commands/blitz.rs
-- `test_evaluate_exercise_for_check_failed_with_diagnostic()` --calls--> `evaluate_exercise_for_check()`  [INFERRED]
-  tests/check_tests.rs → src/cli/commands/check.rs
 
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (264 total, 5 thin omitted)
+## Communities (299 total, 4 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -311,24 +346,24 @@ Cohesion: 0.10
 Nodes (19): 1.1 Problem Statement, 1.2 The Solution: Spanglings, 1. Executive Summary & Philosophy, 2.1 CLI Interface & Commands, 2.2 Configuration & SRS State Persistence, 2. Architecture & System Design, 3.1 Accent & Punctuation Handling, 3.2 Compiler-Style Diagnostic Output (+11 more)
 
 ### Community 2 - "App"
-Cohesion: 0.07
-Nodes (3): App, Option, String
+Cohesion: 0.06
+Nodes (4): App, Self, String, Vec
 
-### Community 3 - "Exercise"
-Cohesion: 0.17
-Nodes (14): DiagnosticRule, Exercise, ExerciseType, ParseExerciseTypeError, Display, Err, Formatter, FromStr (+6 more)
+### Community 3 - "exercise.rs"
+Cohesion: 0.13
+Nodes (11): DiagnosticRule, ExerciseType, ParseExerciseTypeError, Display, Err, Formatter, FromStr, P (+3 more)
 
 ### Community 4 - "embedded.rs"
 Cohesion: 0.15
 Nodes (17): Dir, Option, Result, run_init(), collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir() (+9 more)
 
 ### Community 7 - "AppState"
-Cohesion: 0.07
-Nodes (31): HashSet, export_state_json(), import_state_json(), PortableStateBackup, DateTime, Option, Result, String (+23 more)
+Cohesion: 0.06
+Nodes (33): HashSet, export_state_json(), import_state_json(), PortableStateBackup, DateTime, Option, Result, String (+25 more)
 
 ### Community 10 - "validate_submission"
-Cohesion: 0.13
-Nodes (19): Result, run_review_session(), extract_user_answer(), find_exercise_line_number(), Diagnostic, Option, String, validate_submission() (+11 more)
+Cohesion: 0.11
+Nodes (21): Result, run_review_session(), get_rule_title(), String, extract_user_answer(), find_exercise_line_number(), Diagnostic, Option (+13 more)
 
 ### Community 12 - "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan"
 Cohesion: 0.25
@@ -336,7 +371,7 @@ Nodes (7): Grammar Diagnostics & Compiler-Style Error Formatter Implementation P
 
 ### Community 13 - "progress.rs"
 Cohesion: 0.15
-Nodes (23): BTreeMap, ActivitySummary, compute_activity_summary(), compute_weakness_profile(), get_progress_json(), LevelProgress, ProgressSummary, render_activity_heatmap() (+15 more)
+Nodes (24): BTreeMap, ActivitySummary, compute_activity_summary(), compute_weakness_profile(), get_progress_json(), LevelProgress, ProgressSummary, render_activity_heatmap() (+16 more)
 
 ### Community 14 - "Examples"
 Cohesion: 0.10
@@ -827,8 +862,8 @@ Cohesion: 0.25
 Nodes (7): Discoverability, Portability & Zero-Setup CLI Implementation Plan, Task 1: Embedded Exercises Catalog & In-Memory Fallback, Task 2: `spanglings init` Subcommand, Task 3: Machine-Readable JSON Output (`--json`), Task 4: Fuzzy Topic & Full-Text Search (`spanglings search`), Task 5: Shell Completions Generator (`spanglings completions`), Task 6: Full Verification & Documentation Update
 
 ### Community 138 - "Spanglings Product & Engineering Backlog"
-Cohesion: 0.15
-Nodes (12): 💻 Focus Area 10: VS Code & Cursor IDE Extension (`spanglings-vscode`) (Completed), 🌎 Focus Area 11: Latin American Spanish High-Impact Curriculum Expansion (Completed), 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Completed), 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion (Completed), 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements (Completed), 📊 Focus Area 4: Interactive TUI & IDE Integrations (Completed), ⚡ Focus Area 5: Terminal Conjugation Engine & Developer Workflow Hooks (Completed), 🖥️ Focus Area 6: In-TUI Power Tools & Modal Modifiers (Completed) (+4 more)
+Cohesion: 0.14
+Nodes (13): 💻 Focus Area 10: VS Code & Cursor IDE Extension (`spanglings-vscode`) (Completed), 🌎 Focus Area 11: Latin American Spanish High-Impact Curriculum Expansion (Completed), 🗣️ Focus Area 12: Standard Spanish, Everyday Life & General Conversational Expansion (Completed), 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Completed), 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion (Completed), 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements (Completed), 📊 Focus Area 4: Interactive TUI & IDE Integrations (Completed), ⚡ Focus Area 5: Terminal Conjugation Engine & Developer Workflow Hooks (Completed) (+5 more)
 
 ### Community 139 - "Spanglings Init Subcommand Implementation Plan"
 Cohesion: 0.29
@@ -966,13 +1001,13 @@ Nodes (3): Context, Exercise, Regional Contrasts 05: Reflexive Imperatives in Vo
 Cohesion: 0.14
 Nodes (19): print_conjugation_summary(), Option, Result, run_conjugate(), conjugate_verb(), get_irregular_verb(), ImperativeForms, PronounForms (+11 more)
 
-### Community 173 - "accents.rs"
-Cohesion: 0.23
-Nodes (7): AccentResult, check_accent_match(), String, strip_accents(), normalize(), String, test_smart_accent_matching()
+### Community 173 - "Level"
+Cohesion: 0.08
+Nodes (37): R, Option, Result, String, run_test(), run_test_with_io(), Level, ParseLevelError (+29 more)
 
 ### Community 174 - "tui_tests.rs"
-Cohesion: 0.22
-Nodes (16): create_sample_exercises(), Vec, test_app_draw_ui_in_search_mode(), test_app_draw_ui_renders_without_panicking(), test_app_initialization_and_navigation(), test_app_input_editing(), test_app_reset(), test_app_search_cancel_restores_state() (+8 more)
+Cohesion: 0.21
+Nodes (17): create_sample_exercises(), Vec, test_app_draw_ui_in_search_mode(), test_app_draw_ui_renders_without_panicking(), test_app_initialization_and_navigation(), test_app_input_editing(), test_app_reset(), test_app_search_cancel_restores_state() (+9 more)
 
 ### Community 175 - "evaluate_current_exercise_in"
 Cohesion: 0.33
@@ -1102,33 +1137,33 @@ Nodes (3): Context, Executive Leadership 05: Regulatory Exposure, Exercise
 Cohesion: 0.50
 Nodes (3): Context, Executive Leadership 06: Board Resolutions, Exercise
 
+### Community 209 - "Exercise"
+Cohesion: 0.25
+Nodes (16): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+8 more)
+
 ### Community 211 - "compilerOptions"
 Cohesion: 0.11
 Nodes (17): compilerOptions, lib, module, moduleResolution, noFallthroughCasesInSwitch, noImplicitReturns, noUnusedLocals, noUnusedParameters (+9 more)
 
-### Community 212 - "export_sync_tests.rs"
-Cohesion: 0.29
-Nodes (13): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+5 more)
-
-### Community 213 - "Level"
-Cohesion: 0.13
-Nodes (8): Level, ParseLevelError, Display, Err, Formatter, FromStr, Self, String
+### Community 212 - "Standard Spanish & General Conversational Curriculum Expansion Implementation Plan"
+Cohesion: 0.22
+Nodes (8): Standard Spanish & General Conversational Curriculum Expansion Implementation Plan, Task 1: Track 36 – Everyday Life, Housing & Practical Bureaucracy (`exercises/36_everyday_life_and_housing/`), Task 2: Track 37 – Healthcare, Medical Encounters & Symptoms (`exercises/37_healthcare_and_symptoms/`), Task 3: Track 38 – Dining, Socializing, Small Talk & Nightlife (`exercises/38_dining_and_social_conversation/`), Task 4: Track 39 – Nuanced Prepositions & Spatial/Temporal Locutions (`exercises/39_nuanced_prepositions_and_locutions/`), Task 5: Track 40 – Middle-Voice Shifts & Reflexive Nuances (`exercises/40_middle_voice_and_reflexive_shifts/`), Task 6: Track 41 – Advanced Temporal, Manner & Concessive Adverbial Clauses (`exercises/41_adverbial_clauses_and_conjunctions/`), Task 7: Full Verification, Documentation & Knowledge Graph Update
 
 ### Community 214 - "app.rs"
 Cohesion: 0.21
 Nodes (9): B, Drop, AppMode, Result, run_tui_app(), RawModeGuard, Result, start_tui() (+1 more)
 
 ### Community 215 - "draw_ui"
-Cohesion: 0.47
-Nodes (12): Frame, Rect, centered_rect(), draw_conjugator_modal(), draw_footer(), draw_header(), draw_help_modal(), draw_left_pane() (+4 more)
+Cohesion: 0.45
+Nodes (13): Frame, Rect, centered_rect(), draw_conjugator_modal(), draw_footer(), draw_header(), draw_help_modal(), draw_left_pane() (+5 more)
 
-### Community 216 - "find_all_exercises"
-Cohesion: 0.30
-Nodes (10): Option, Result, show_hint(), collect_md_files(), find_all_exercises(), find_all_exercises_or_embedded(), P, Path (+2 more)
+### Community 216 - "curriculum.rs"
+Cohesion: 0.13
+Nodes (19): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), collect_md_files(), find_all_exercises() (+11 more)
 
-### Community 217 - "find_exercise_by_query"
-Cohesion: 0.21
-Nodes (7): reset_exercise(), Result, run_exercise(), find_exercise_by_query(), Option, test_curriculum_discovery_and_query(), test_run_exercise_with_file_path()
+### Community 217 - "Diagnostic Placement Test & Level Fast-Track Implementation Plan"
+Cohesion: 0.29
+Nodes (6): Diagnostic Placement Test & Level Fast-Track Implementation Plan, Task 1: Diagnostic Placement Engine (`src/core/placement.rs` & `tests/placement_tests.rs`), Task 2: State Model & Fast-Track Logic (`src/core/state.rs` & `tests/srs_tests.rs`), Task 3: CLI Command `spanglings test` (`src/cli/commands/test.rs` & `src/cli/mod.rs`), Task 4: TUI Interactive Diagnostic Modal (`src/tui/`), Task 5: Progress Badges & VS Code Status Bar Update
 
 ### Community 218 - "VS Code Extension & Latin American Spanish Curriculum Expansion Implementation Plan"
 Cohesion: 0.18
@@ -1310,25 +1345,169 @@ Nodes (3): dependencies, vscode-languageclient, vscode-languageclient
 Cohesion: 0.67
 Nodes (3): repository, type, url
 
+### Community 263 - "Everyday Life & Housing 01: Lease Agreements & Security Deposits"
+Cohesion: 0.50
+Nodes (3): Context, Everyday Life & Housing 01: Lease Agreements & Security Deposits, Exercise
+
+### Community 264 - "Everyday Life & Housing 02: Setting Up Household Utilities"
+Cohesion: 0.50
+Nodes (3): Context, Everyday Life & Housing 02: Setting Up Household Utilities, Exercise
+
+### Community 265 - "Everyday Life & Housing 03: Banking Transactions & Wire Fees"
+Cohesion: 0.50
+Nodes (3): Context, Everyday Life & Housing 03: Banking Transactions & Wire Fees, Exercise
+
+### Community 266 - "Everyday Life & Housing 04: Customer Service & Return Refunds"
+Cohesion: 0.50
+Nodes (3): Context, Everyday Life & Housing 04: Customer Service & Return Refunds, Exercise
+
+### Community 267 - "Everyday Life & Housing 05: Parcel Delivery & Post Office Pickups"
+Cohesion: 0.50
+Nodes (3): Context, Everyday Life & Housing 05: Parcel Delivery & Post Office Pickups, Exercise
+
+### Community 268 - "Everyday Life & Housing 06: Public Transit & Train Transfers"
+Cohesion: 0.50
+Nodes (3): Context, Everyday Life & Housing 06: Public Transit & Train Transfers, Exercise
+
+### Community 269 - "Healthcare & Symptoms 01: Describing Physical Discomfort & Pain"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Healthcare & Symptoms 01: Describing Physical Discomfort & Pain
+
+### Community 270 - "Healthcare & Symptoms 02: Doctor Consultations & Prescriptions"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Healthcare & Symptoms 02: Doctor Consultations & Prescriptions
+
+### Community 271 - "Healthcare & Symptoms 03: Pharmacy, OTC Medications & Side Effects"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Healthcare & Symptoms 03: Pharmacy, OTC Medications & Side Effects
+
+### Community 272 - "Healthcare & Symptoms 04: Emergency Room & Medical Discharge"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Healthcare & Symptoms 04: Emergency Room & Medical Discharge
+
+### Community 273 - "Healthcare & Symptoms 05: Specialist Referrals & Annual Checkups"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Healthcare & Symptoms 05: Specialist Referrals & Annual Checkups
+
+### Community 274 - "Healthcare & Symptoms 06: Allergies, Sensitivities & Dietary Warnings"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Healthcare & Symptoms 06: Allergies, Sensitivities & Dietary Warnings
+
+### Community 275 - "Dining & Social Conversation 01: Restaurant Ordering & Split Bills"
+Cohesion: 0.50
+Nodes (3): Context, Dining & Social Conversation 01: Restaurant Ordering & Split Bills, Exercise
+
+### Community 276 - "Dining & Social Conversation 02: Making Plans & Meeting Up"
+Cohesion: 0.50
+Nodes (3): Context, Dining & Social Conversation 02: Making Plans & Meeting Up, Exercise
+
+### Community 277 - "Dining & Social Conversation 03: Social Compliments & Reassurances"
+Cohesion: 0.50
+Nodes (3): Context, Dining & Social Conversation 03: Social Compliments & Reassurances, Exercise
+
+### Community 278 - "Dining & Social Conversation 04: Discourse Markers & Conversational Softeners"
+Cohesion: 0.50
+Nodes (3): Context, Dining & Social Conversation 04: Discourse Markers & Conversational Softeners, Exercise
+
+### Community 279 - "Dining & Social Conversation 05: Recounting Anecdotes & Having Fun"
+Cohesion: 0.50
+Nodes (3): Context, Dining & Social Conversation 05: Recounting Anecdotes & Having Fun, Exercise
+
+### Community 280 - "Dining & Social Conversation 06: Friendly Goodbyes & Follow-ups"
+Cohesion: 0.50
+Nodes (3): Context, Dining & Social Conversation 06: Friendly Goodbyes & Follow-ups, Exercise
+
+### Community 281 - "Nuanced Prepositions 01: Hacia vs Hasta (Direction vs Endpoint)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Nuanced Prepositions 01: Hacia vs Hasta (Direction vs Endpoint)
+
+### Community 282 - "Nuanced Prepositions 02: Tras, Según & Bajo (Formal Sequencing & Conditions)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Nuanced Prepositions 02: Tras, Según & Bajo (Formal Sequencing & Conditions)
+
+### Community 283 - "Nuanced Prepositions 03: Compound Locutions: A base de & A expensas de"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Nuanced Prepositions 03: Compound Locutions: A base de & A expensas de
+
+### Community 284 - "Nuanced Prepositions 04: Temporal Spans: Al cabo de vs Dentro de"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Nuanced Prepositions 04: Temporal Spans: Al cabo de vs Dentro de
+
+### Community 285 - "Nuanced Prepositions 05: Spatial & Temporal Extension: A lo largo de"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Nuanced Prepositions 05: Spatial & Temporal Extension: A lo largo de
+
+### Community 286 - "Nuanced Prepositions 06: Causal Origin & Channels: A raíz de & Por medio de"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Nuanced Prepositions 06: Causal Origin & Channels: A raíz de & Por medio de
+
+### Community 287 - "Middle-Voice & Reflexive Shifts 01: Ir vs Irse (Motion vs Departure)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Middle-Voice & Reflexive Shifts 01: Ir vs Irse (Motion vs Departure)
+
+### Community 288 - "Middle-Voice & Reflexive Shifts 02: Dormir vs Dormirse (State vs Inchoative Transition)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Middle-Voice & Reflexive Shifts 02: Dormir vs Dormirse (State vs Inchoative Transition)
+
+### Community 289 - "Middle-Voice & Reflexive Shifts 03: Comer vs Comerse (Telicity & Total Consumption)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Middle-Voice & Reflexive Shifts 03: Comer vs Comerse (Telicity & Total Consumption)
+
+### Community 290 - "Middle-Voice & Reflexive Shifts 04: Llevar vs Llevarse (Transport vs Social Affinity / Appropriating)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Middle-Voice & Reflexive Shifts 04: Llevar vs Llevarse (Transport vs Social Affinity / Appropriating)
+
+### Community 291 - "Middle-Voice & Reflexive Shifts 05: Quedar vs Quedarse (Agreement/Fit vs Remaining)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Middle-Voice & Reflexive Shifts 05: Quedar vs Quedarse (Agreement/Fit vs Remaining)
+
+### Community 292 - "Middle-Voice & Reflexive Shifts 06: Volver vs Volverse (Returning vs Radical Transformation)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Middle-Voice & Reflexive Shifts 06: Volver vs Volverse (Returning vs Radical Transformation)
+
+### Community 293 - "Adverbial Clauses 01: Proportional Progression: A medida que & Conforme"
+Cohesion: 0.50
+Nodes (3): Adverbial Clauses 01: Proportional Progression: A medida que & Conforme, Context, Exercise
+
+### Community 294 - "Adverbial Clauses 02: Manner & Consecutive Result: Según & De modo que"
+Cohesion: 0.50
+Nodes (3): Adverbial Clauses 02: Manner & Consecutive Result: Según & De modo que, Context, Exercise
+
+### Community 295 - "Adverbial Clauses 03: Temporal Duration & Condition: En tanto que & Mientras"
+Cohesion: 0.50
+Nodes (3): Adverbial Clauses 03: Temporal Duration & Condition: En tanto que & Mientras, Context, Exercise
+
+### Community 296 - "Adverbial Clauses 04: Immediate Succession: Tan pronto como & Apenas"
+Cohesion: 0.50
+Nodes (3): Adverbial Clauses 04: Immediate Succession: Tan pronto como & Apenas, Context, Exercise
+
+### Community 297 - "Adverbial Clauses 05: Exceptive Conditions: Salvo que, A menos que & A no ser que"
+Cohesion: 0.50
+Nodes (3): Adverbial Clauses 05: Exceptive Conditions: Salvo que, A menos que & A no ser que, Context, Exercise
+
+### Community 298 - "Adverbial Clauses 06: Strict Conditions: Siempre y cuando & A condición de que"
+Cohesion: 0.50
+Nodes (3): Adverbial Clauses 06: Strict Conditions: Siempre y cuando & A condición de que, Context, Exercise
+
 ## Knowledge Gaps
-- **563 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+558 more)
+- **648 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+643 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Exercise` connect `Exercise` to `App`, `embedded.rs`, `.new`, `validate_submission`, `progress.rs`, `tui_tests.rs`, `check.rs`, `export_sync_tests.rs`, `Level`, `app.rs`, `find_all_exercises`, `find_exercise_by_query`, `search_exercises`?**
-  _High betweenness centrality (0.047) - this node is a cross-community bridge._
-- **Why does `App` connect `App` to `Exercise`, `.new`, `validate_submission`, `conjugate_verb`, `app.rs`, `draw_ui`?**
+- **Why does `Exercise` connect `Exercise` to `App`, `exercise.rs`, `embedded.rs`, `AppState`, `validate_submission`, `progress.rs`, `Level`, `check.rs`, `tui_tests.rs`, `.current_exercise_mut`, `app.rs`, `curriculum.rs`, `search_exercises`?**
+  _High betweenness centrality (0.039) - this node is a cross-community bridge._
+- **Why does `App` connect `App` to `validate_submission`, `conjugate_verb`, `Level`, `Exercise`, `.current_exercise_mut`, `app.rs`, `draw_ui`?**
   _High betweenness centrality (0.032) - this node is a cross-community bridge._
-- **Why does `AppState` connect `AppState` to `export_sync_tests.rs`, `progress.rs`, `evaluate_current_exercise_in`?**
-  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+- **Why does `AppState` connect `AppState` to `Exercise`, `progress.rs`, `evaluate_current_exercise_in`?**
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Are the 16 inferred relationships involving `validate_submission()` (e.g. with `evaluate_exercise_for_check()` and `run_pack_validate()`) actually correct?**
   _`validate_submission()` has 16 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 16 inferred relationships involving `get_reference_card()` (e.g. with `show_explanation()` and `compute_hover()`) actually correct?**
   _`get_reference_card()` has 16 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `esbuild`, `minify` to the rest of the system?**
-  _563 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _648 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._

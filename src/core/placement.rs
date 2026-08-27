@@ -217,7 +217,10 @@ pub fn get_placement_battery(level_filter: Option<Level>) -> Vec<PlacementQuesti
     ];
 
     if let Some(lvl) = level_filter {
-        all_questions.into_iter().filter(|q| q.level == lvl).collect()
+        all_questions
+            .into_iter()
+            .filter(|q| q.level == lvl)
+            .collect()
     } else {
         all_questions
     }
