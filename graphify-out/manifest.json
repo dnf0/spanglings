@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "src/main.rs": {
-    "mtime": 1787815303.1347718,
-    "seen": 1787817456.262469,
-    "ast_hash": "959ab0e44ca37d18bef1df2f22f980b1",
+    "mtime": 1787820436.4241889,
+    "seen": 1787824122.245225,
+    "ast_hash": "8e3a3745f567266d66234d7ae705a454",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-spanglings-implementation.md": {
@@ -42,9 +42,9 @@
     "semantic_hash": ""
   },
   "src/lib.rs": {
-    "mtime": 1787813831.0083365,
-    "seen": 1787814389.4931479,
-    "ast_hash": "448298611b44997e2ffb66fdca30bc3b",
+    "mtime": 1787820436.4230804,
+    "seen": 1787824122.2452228,
+    "ast_hash": "d0316a2f651d26fcf27a1c58ee530468",
     "semantic_hash": ""
   },
   "tests/exercise_parser_tests.rs": {
@@ -162,9 +162,9 @@
     "semantic_hash": ""
   },
   "src/cli/commands/mod.rs": {
-    "mtime": 1787815303.1332767,
-    "seen": 1787817456.2624588,
-    "ast_hash": "eaadbad1e64be4cf430540deb7af906f",
+    "mtime": 1787820436.422482,
+    "seen": 1787824122.245213,
+    "ast_hash": "390ea527f0c2251f8660d8c5cf7a6739",
     "semantic_hash": ""
   },
   "src/cli/commands/progress.rs": {
@@ -186,9 +186,9 @@
     "semantic_hash": ""
   },
   "src/cli/mod.rs": {
-    "mtime": 1787815303.1339297,
-    "seen": 1787817456.262461,
-    "ast_hash": "e1620095eaf10c441fb1bc0bf616f9a2",
+    "mtime": 1787820436.4228616,
+    "seen": 1787824122.245216,
+    "ast_hash": "05c77136f717c337e0d519bbfeacc853",
     "semantic_hash": ""
   },
   "tests/cli_tests.rs": {
@@ -216,15 +216,15 @@
     "semantic_hash": ""
   },
   "src/tui/app.rs": {
-    "mtime": 1787814569.214708,
-    "seen": 1787815144.03247,
-    "ast_hash": "3bc58a77f9f3252b1e39b8e9dc50fb66",
+    "mtime": 1787820436.4244308,
+    "seen": 1787824122.245226,
+    "ast_hash": "0de772d7a742e24f78e77ee961707ec5",
     "semantic_hash": ""
   },
   "src/tui/events.rs": {
-    "mtime": 1787814569.2183335,
-    "seen": 1787815144.032471,
-    "ast_hash": "7cfc29a64545e4f397257e36808394f7",
+    "mtime": 1787820436.4246628,
+    "seen": 1787824122.245226,
+    "ast_hash": "636fbaca5addb4a35a40402c61964283",
     "semantic_hash": ""
   },
   "src/tui/mod.rs": {
@@ -234,9 +234,9 @@
     "semantic_hash": ""
   },
   "src/tui/ui.rs": {
-    "mtime": 1787814569.218798,
-    "seen": 1787815144.0324721,
-    "ast_hash": "63dcf410fadde6ebcc6a68842357e34e",
+    "mtime": 1787820436.424894,
+    "seen": 1787824122.245227,
+    "ast_hash": "e3c5cc0cf159c280145df34ea4bca94f",
     "semantic_hash": ""
   },
   "tests/exercise_validity_tests.rs": {
@@ -246,15 +246,15 @@
     "semantic_hash": ""
   },
   "tests/tui_tests.rs": {
-    "mtime": 1787814569.228211,
-    "seen": 1787815144.0324821,
-    "ast_hash": "12158189766489a43f2cab0aa7969355",
+    "mtime": 1787820436.42544,
+    "seen": 1787824122.2452369,
+    "ast_hash": "c57a8838797ae77f3558ce3e436f8b05",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787815303.1319034,
-    "seen": 1787817456.262484,
-    "ast_hash": "b48f6e3fde0d13d44d71b81453fbe366",
+    "mtime": 1787824114.663316,
+    "seen": 1787824122.24524,
+    "ast_hash": "fec36f5ce9770af0daee6c8f2ae220db",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-interactive-tui.md": {
@@ -990,9 +990,9 @@
     "semantic_hash": ""
   },
   "docs/BACKLOG.md": {
-    "mtime": 1787815303.1322389,
-    "seen": 1787817456.262484,
-    "ast_hash": "52dd0e55ae22c8e8b9bf6eb73cc76ace",
+    "mtime": 1787824114.6623943,
+    "seen": 1787824122.2452412,
+    "ast_hash": "3b6e6d072d55a70e8d91cf3db639ff2b",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-discoverability-and-portability.md": {
@@ -1299,6 +1299,456 @@
     "mtime": 1787815303.132502,
     "seen": 1787817456.2624881,
     "ast_hash": "72ec0051a5b81abecabaf423345f3848",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/export.rs": {
+    "mtime": 1787820436.4222746,
+    "seen": 1787824122.245211,
+    "ast_hash": "d9c0f8047609a3142d941db82252c2d9",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/sync.rs": {
+    "mtime": 1787820436.4226222,
+    "seen": 1787824122.245216,
+    "ast_hash": "822cdb53624c4dbac804261523dac8e5",
+    "semantic_hash": ""
+  },
+  "src/lsp/diagnostics.rs": {
+    "mtime": 1787820436.4233325,
+    "seen": 1787824122.2452228,
+    "ast_hash": "a4f208e2966c75baf0b9bd8038950331",
+    "semantic_hash": ""
+  },
+  "src/lsp/hover.rs": {
+    "mtime": 1787820436.4234893,
+    "seen": 1787824122.245224,
+    "ast_hash": "dbe7c1caa20e58d35352a3f7fc80148c",
+    "semantic_hash": ""
+  },
+  "src/lsp/mod.rs": {
+    "mtime": 1787820436.423661,
+    "seen": 1787824122.245224,
+    "ast_hash": "bb7bf2149ea73682f1ec49d77f29d260",
+    "semantic_hash": ""
+  },
+  "src/lsp/protocol.rs": {
+    "mtime": 1787820436.4237995,
+    "seen": 1787824122.245225,
+    "ast_hash": "2ae864efa36d081042c8bb08252098e9",
+    "semantic_hash": ""
+  },
+  "src/lsp/server.rs": {
+    "mtime": 1787820436.4239945,
+    "seen": 1787824122.245225,
+    "ast_hash": "7d0012951e689ca12fe8f88edfb08df0",
+    "semantic_hash": ""
+  },
+  "tests/export_sync_tests.rs": {
+    "mtime": 1787820436.425046,
+    "seen": 1787824122.245232,
+    "ast_hash": "f6138a4e5e9382f026c811fe839f68f5",
+    "semantic_hash": ""
+  },
+  "tests/lsp_tests.rs": {
+    "mtime": 1787820436.4252176,
+    "seen": 1787824122.245235,
+    "ast_hash": "7af3b3b6a081e9f75d4424381e7e0ebc",
+    "semantic_hash": ""
+  },
+  "docs/adr/0002-lsp-and-in-tui-modal-architecture.md": {
+    "mtime": 1787820436.4180925,
+    "seen": 1787824122.2452412,
+    "ast_hash": "5cc58e8450028f740055b0b8790f4cb5",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-27-tui-modals-curriculum-exporter-lsp.md": {
+    "mtime": 1787820436.418294,
+    "seen": 1787824122.245246,
+    "ast_hash": "dd6c5260e76fcab2b0a0e97e6e5d44ca",
+    "semantic_hash": ""
+  },
+  "exercises/27_system_design/01_distributed_failover.md": {
+    "mtime": 1787820436.4185078,
+    "seen": 1787824122.24531,
+    "ast_hash": "14892ed9d89b719267d2c0cbda977af4",
+    "semantic_hash": ""
+  },
+  "exercises/27_system_design/02_distributed_transactions.md": {
+    "mtime": 1787820436.4186661,
+    "seen": 1787824122.24531,
+    "ast_hash": "081576ecda687d4079719245a17f86ec",
+    "semantic_hash": ""
+  },
+  "exercises/27_system_design/03_circuit_breaker.md": {
+    "mtime": 1787820436.4188082,
+    "seen": 1787824122.24531,
+    "ast_hash": "58aabb92560eac8f72671c23a8360a57",
+    "semantic_hash": ""
+  },
+  "exercises/27_system_design/04_cache_invalidation.md": {
+    "mtime": 1787820436.4189594,
+    "seen": 1787824122.245311,
+    "ast_hash": "c1725cd0b1cb64b49908cc80475c26e3",
+    "semantic_hash": ""
+  },
+  "exercises/27_system_design/05_database_sharding.md": {
+    "mtime": 1787820436.4191043,
+    "seen": 1787824122.245311,
+    "ast_hash": "9b0f2e33149bd4c6f66594c4f597e929",
+    "semantic_hash": ""
+  },
+  "exercises/27_system_design/06_latency_slas.md": {
+    "mtime": 1787820436.4192512,
+    "seen": 1787824122.245312,
+    "ast_hash": "6c263bd9af34463c9f8ac09713dc1ab9",
+    "semantic_hash": ""
+  },
+  "exercises/28_advanced_subjunctive_clauses/01_por_mucho_que.md": {
+    "mtime": 1787820436.419442,
+    "seen": 1787824122.245312,
+    "ast_hash": "5efd1602bb7927e4fc3938f12fd8f022",
+    "semantic_hash": ""
+  },
+  "exercises/28_advanced_subjunctive_clauses/02_aun_a_riesgo_de_que.md": {
+    "mtime": 1787820436.4195912,
+    "seen": 1787824122.245313,
+    "ast_hash": "0f066dddf0593d240a1cc83cd784233d",
+    "semantic_hash": ""
+  },
+  "exercises/28_advanced_subjunctive_clauses/03_asi_subjunctive.md": {
+    "mtime": 1787820436.4197402,
+    "seen": 1787824122.245313,
+    "ast_hash": "df82dc94c73362f917f798e220c0bb48",
+    "semantic_hash": ""
+  },
+  "exercises/28_advanced_subjunctive_clauses/04_reduplicative_subjunctive.md": {
+    "mtime": 1787820436.4198887,
+    "seen": 1787824122.245313,
+    "ast_hash": "5d2704bbcbd368c1aedc21c8d00c5567",
+    "semantic_hash": ""
+  },
+  "exercises/28_advanced_subjunctive_clauses/05_pase_lo_que_pase.md": {
+    "mtime": 1787820436.4200516,
+    "seen": 1787824122.2453141,
+    "ast_hash": "7253760e9cdd154ee3fad4d8ff44e754",
+    "semantic_hash": ""
+  },
+  "exercises/28_advanced_subjunctive_clauses/06_a_pesar_de_que_hypothetical.md": {
+    "mtime": 1787820436.4202042,
+    "seen": 1787824122.2453141,
+    "ast_hash": "112c914fda661d2735092e4c97696ff3",
+    "semantic_hash": ""
+  },
+  "exercises/29_advanced_verbal_periphrases/01_dar_por_sentado.md": {
+    "mtime": 1787820436.4204035,
+    "seen": 1787824122.245315,
+    "ast_hash": "321f928c3124d56e3390ff25b755c2d9",
+    "semantic_hash": ""
+  },
+  "exercises/29_advanced_verbal_periphrases/02_echar_a_perder.md": {
+    "mtime": 1787820436.42055,
+    "seen": 1787824122.245315,
+    "ast_hash": "03de6eaacb138d4f96c50ea80b04a44a",
+    "semantic_hash": ""
+  },
+  "exercises/29_advanced_verbal_periphrases/03_ponerse_a.md": {
+    "mtime": 1787820436.4206946,
+    "seen": 1787824122.245316,
+    "ast_hash": "ea8ce89cab4c3a7dcedc23948373e60e",
+    "semantic_hash": ""
+  },
+  "exercises/29_advanced_verbal_periphrases/04_llevar_sin.md": {
+    "mtime": 1787820436.4208343,
+    "seen": 1787824122.245316,
+    "ast_hash": "c590a6233e66a7fca1340d1a4bcf623f",
+    "semantic_hash": ""
+  },
+  "exercises/29_advanced_verbal_periphrases/05_venir_a_decir.md": {
+    "mtime": 1787820436.4209778,
+    "seen": 1787824122.245316,
+    "ast_hash": "af8240934e8b7ce18ed21802d2c93baf",
+    "semantic_hash": ""
+  },
+  "exercises/29_advanced_verbal_periphrases/06_quedar_en.md": {
+    "mtime": 1787820436.4211154,
+    "seen": 1787824122.2453172,
+    "ast_hash": "b7e7486fe00905f397f684b7ebe72bd3",
+    "semantic_hash": ""
+  },
+  "exercises/30_executive_leadership/01_stakeholder_diplomacy.md": {
+    "mtime": 1787820436.4213183,
+    "seen": 1787824122.2453172,
+    "ast_hash": "0402f1ff6f7cbae4300bb3e4480c0bd6",
+    "semantic_hash": ""
+  },
+  "exercises/30_executive_leadership/02_strategic_pivot.md": {
+    "mtime": 1787820436.4214754,
+    "seen": 1787824122.245318,
+    "ast_hash": "c1764b89967d4d216a0c66ff9d38ac89",
+    "semantic_hash": ""
+  },
+  "exercises/30_executive_leadership/03_quarterly_kpis.md": {
+    "mtime": 1787820436.4216282,
+    "seen": 1787824122.245318,
+    "ast_hash": "e535605d9d084d7fa89f074d1d103bfc",
+    "semantic_hash": ""
+  },
+  "exercises/30_executive_leadership/04_headcount_reallocation.md": {
+    "mtime": 1787820436.4217725,
+    "seen": 1787824122.245319,
+    "ast_hash": "6c5a5e50b766483ae13a4f6c5d96e536",
+    "semantic_hash": ""
+  },
+  "exercises/30_executive_leadership/05_regulatory_exposure.md": {
+    "mtime": 1787820436.421915,
+    "seen": 1787824122.245319,
+    "ast_hash": "3e44906971de6b455002cee791743c90",
+    "semantic_hash": ""
+  },
+  "exercises/30_executive_leadership/06_board_resolutions.md": {
+    "mtime": 1787820436.4220586,
+    "seen": 1787824122.245319,
+    "ast_hash": "3913c8aeb26181699d9047c096236912",
+    "semantic_hash": ""
+  },
+  "editors/vscode/esbuild.config.js": {
+    "mtime": 1787822177.770785,
+    "seen": 1787824122.2452,
+    "ast_hash": "bccb83799a159ae87f99b259df656f54",
+    "semantic_hash": ""
+  },
+  "editors/vscode/package.json": {
+    "mtime": 1787822169.1108928,
+    "seen": 1787824122.2452009,
+    "ast_hash": "35a902d1b8d734920a144654f22060f3",
+    "semantic_hash": ""
+  },
+  "editors/vscode/src/commands.ts": {
+    "mtime": 1787823249.2927246,
+    "seen": 1787824122.245203,
+    "ast_hash": "511c66c5c97de5c1c216df30af7e14f4",
+    "semantic_hash": ""
+  },
+  "editors/vscode/src/exerciseTree.ts": {
+    "mtime": 1787823237.3126206,
+    "seen": 1787824122.245203,
+    "ast_hash": "27494f8bc01c5e902401f67cb2a7bce9",
+    "semantic_hash": ""
+  },
+  "editors/vscode/src/extension.ts": {
+    "mtime": 1787823254.1525578,
+    "seen": 1787824122.245204,
+    "ast_hash": "614bfed32dbfa44be643cb5391f81920",
+    "semantic_hash": ""
+  },
+  "editors/vscode/src/lspClient.ts": {
+    "mtime": 1787822842.4187877,
+    "seen": 1787824122.245204,
+    "ast_hash": "b9d5332efc32ac52c44bad3fb228e3f3",
+    "semantic_hash": ""
+  },
+  "editors/vscode/src/statusBar.ts": {
+    "mtime": 1787822824.5728276,
+    "seen": 1787824122.245204,
+    "ast_hash": "8f05cde8d817d0d8f59491fe8603813b",
+    "semantic_hash": ""
+  },
+  "editors/vscode/tsconfig.json": {
+    "mtime": 1787822172.4201505,
+    "seen": 1787824122.245205,
+    "ast_hash": "3065feafb89504586050ffeddec2f4c0",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-27-vscode-extension-and-latam-curriculum.md": {
+    "mtime": 1787821649.0084674,
+    "seen": 1787824122.245247,
+    "ast_hash": "2cc45ea9dd5a8db2fd40e7045a9a885e",
+    "semantic_hash": ""
+  },
+  "editors/vscode/README.md": {
+    "mtime": 1787822183.4920588,
+    "seen": 1787824122.245248,
+    "ast_hash": "8a6f70cd29fa45b9262323f7e4412608",
+    "semantic_hash": ""
+  },
+  "exercises/31_mexican_tech_and_startups/01_levantamiento_capital.md": {
+    "mtime": 1787823811.9321084,
+    "seen": 1787824122.2453198,
+    "ast_hash": "7c349d4105a50da095f2333257f60339",
+    "semantic_hash": ""
+  },
+  "exercises/31_mexican_tech_and_startups/02_ronda_semilla_valuacion.md": {
+    "mtime": 1787823811.941364,
+    "seen": 1787824122.2453198,
+    "ast_hash": "ec826b4bfff3968ff1d712d84175f1df",
+    "semantic_hash": ""
+  },
+  "exercises/31_mexican_tech_and_startups/03_tasa_de_abandono.md": {
+    "mtime": 1787823811.94721,
+    "seen": 1787824122.245321,
+    "ast_hash": "c31c3d49d68592a81f6aea3e82d81758",
+    "semantic_hash": ""
+  },
+  "exercises/31_mexican_tech_and_startups/04_ajuste_producto_mercado.md": {
+    "mtime": 1787823820.2499204,
+    "seen": 1787824122.245321,
+    "ast_hash": "644136de2ea3e697be0b6f22d55e859a",
+    "semantic_hash": ""
+  },
+  "exercises/31_mexican_tech_and_startups/05_tasa_de_quema.md": {
+    "mtime": 1787823820.2572699,
+    "seen": 1787824122.245321,
+    "ast_hash": "6e0eee7d1612f0f82f171d49f5f2a77c",
+    "semantic_hash": ""
+  },
+  "exercises/31_mexican_tech_and_startups/06_ronda_de_inversion_serie_a.md": {
+    "mtime": 1787823820.2675354,
+    "seen": 1787824122.245322,
+    "ast_hash": "97f2272e7baf5b05702d16de568aefa5",
+    "semantic_hash": ""
+  },
+  "exercises/32_colombian_professional_nuances/01_hacer_una_vuelta.md": {
+    "mtime": 1787823981.094506,
+    "seen": 1787824122.245322,
+    "ast_hash": "c69e0b6a8917be3351be26c2eed14eb5",
+    "semantic_hash": ""
+  },
+  "exercises/32_colombian_professional_nuances/02_estar_pendiente.md": {
+    "mtime": 1787823981.0948706,
+    "seen": 1787824122.245322,
+    "ast_hash": "04585a8afd085f4c51e5a66b01055c76",
+    "semantic_hash": ""
+  },
+  "exercises/32_colombian_professional_nuances/03_caer_en_cuenta.md": {
+    "mtime": 1787823981.095203,
+    "seen": 1787824122.245323,
+    "ast_hash": "8b76eb12dcd6f3efccad1d9eacab0e4a",
+    "semantic_hash": ""
+  },
+  "exercises/32_colombian_professional_nuances/04_echar_reversa.md": {
+    "mtime": 1787823981.0955055,
+    "seen": 1787824122.245323,
+    "ast_hash": "3cf95fc8de9ead383f3df6662c663fa3",
+    "semantic_hash": ""
+  },
+  "exercises/32_colombian_professional_nuances/05_poner_la_lupa.md": {
+    "mtime": 1787823981.0958805,
+    "seen": 1787824122.245323,
+    "ast_hash": "2064a4498e5571b848e8ec4ba64a64ad",
+    "semantic_hash": ""
+  },
+  "exercises/32_colombian_professional_nuances/06_dar_papaya_security.md": {
+    "mtime": 1787823981.0965552,
+    "seen": 1787824122.2453241,
+    "ast_hash": "3a6507f545577390bab561bc7a314d38",
+    "semantic_hash": ""
+  },
+  "exercises/33_rioplatense_production_voseo/01_sacar_a_produccion.md": {
+    "mtime": 1787824012.4118862,
+    "seen": 1787824122.2453241,
+    "ast_hash": "1ad8695c8b60725c75afcd057ed28b9e",
+    "semantic_hash": ""
+  },
+  "exercises/33_rioplatense_production_voseo/02_bancarse_la_carga.md": {
+    "mtime": 1787824012.4121242,
+    "seen": 1787824122.245325,
+    "ast_hash": "4baf331fbedb6a15d6cce6928069e443",
+    "semantic_hash": ""
+  },
+  "exercises/33_rioplatense_production_voseo/03_ponerse_las_pilas_oncall.md": {
+    "mtime": 1787824012.4123409,
+    "seen": 1787824122.245325,
+    "ast_hash": "2f772a48f8f1ebb3976cdf1ca3625cb6",
+    "semantic_hash": ""
+  },
+  "exercises/33_rioplatense_production_voseo/04_dar_de_baja_servidor.md": {
+    "mtime": 1787824012.4125714,
+    "seen": 1787824122.245325,
+    "ast_hash": "2d732ebea5e7e49ac580f4b5bf218cdf",
+    "semantic_hash": ""
+  },
+  "exercises/33_rioplatense_production_voseo/05_hacer_un_laburo_fino.md": {
+    "mtime": 1787824012.4127862,
+    "seen": 1787824122.245326,
+    "ast_hash": "02b9433439384d6ce06db537fccad6dd",
+    "semantic_hash": ""
+  },
+  "exercises/33_rioplatense_production_voseo/06_no_te_quedes_atras.md": {
+    "mtime": 1787824012.412982,
+    "seen": 1787824122.245326,
+    "ast_hash": "95c24f4c8d1ae0b89c8818cd69537ac7",
+    "semantic_hash": ""
+  },
+  "exercises/34_latam_anglicism_elimination/01_rastrear_vs_trackear.md": {
+    "mtime": 1787824041.7079642,
+    "seen": 1787824122.245326,
+    "ast_hash": "fb12c2b90040a6db8314a45ead3a2a19",
+    "semantic_hash": ""
+  },
+  "exercises/34_latam_anglicism_elimination/02_personalizar_vs_customizar.md": {
+    "mtime": 1787824041.708178,
+    "seen": 1787824122.245327,
+    "ast_hash": "f79a643b4a35192859b9b85410ea254f",
+    "semantic_hash": ""
+  },
+  "exercises/34_latam_anglicism_elimination/03_rendir_vs_performar.md": {
+    "mtime": 1787824041.708361,
+    "seen": 1787824122.245327,
+    "ast_hash": "4ecb0840f7f91eb8fb9e8a0909e66808",
+    "semantic_hash": ""
+  },
+  "exercises/34_latam_anglicism_elimination/04_descartar_vs_deprecar.md": {
+    "mtime": 1787824041.7085361,
+    "seen": 1787824122.245327,
+    "ast_hash": "0c66ef675374a5b8c43b434d7abea1dc",
+    "semantic_hash": ""
+  },
+  "exercises/34_latam_anglicism_elimination/05_redireccionar_vs_forwardear.md": {
+    "mtime": 1787824041.7087812,
+    "seen": 1787824122.245328,
+    "ast_hash": "a1ae1d65b0187be7f5e5ac2ac90eb3c9",
+    "semantic_hash": ""
+  },
+  "exercises/34_latam_anglicism_elimination/06_restablecer_vs_resetear.md": {
+    "mtime": 1787824041.7094042,
+    "seen": 1787824122.245328,
+    "ast_hash": "8a9685d449d613207874ae60e2a65349",
+    "semantic_hash": ""
+  },
+  "exercises/35_latam_enterprise_risk_and_sla/01_acuerdo_confidencialidad.md": {
+    "mtime": 1787824072.633318,
+    "seen": 1787824122.245328,
+    "ast_hash": "61725f61abec89834bc7cbb6ad1037b4",
+    "semantic_hash": ""
+  },
+  "exercises/35_latam_enterprise_risk_and_sla/02_lucro_cesante.md": {
+    "mtime": 1787824072.6335626,
+    "seen": 1787824122.245329,
+    "ast_hash": "72ab61c0b2da4c5664b3891b79858148",
+    "semantic_hash": ""
+  },
+  "exercises/35_latam_enterprise_risk_and_sla/03_clausula_rescision.md": {
+    "mtime": 1787824072.6337805,
+    "seen": 1787824122.245329,
+    "ast_hash": "ec8bcb1cc9d0985b202e63dee042466c",
+    "semantic_hash": ""
+  },
+  "exercises/35_latam_enterprise_risk_and_sla/04_mitigacion_riesgos.md": {
+    "mtime": 1787824072.6339824,
+    "seen": 1787824122.245329,
+    "ast_hash": "65824b92e8a6f31110c7589ebe4b242a",
+    "semantic_hash": ""
+  },
+  "exercises/35_latam_enterprise_risk_and_sla/05_indemnidad_legal.md": {
+    "mtime": 1787824072.6343286,
+    "seen": 1787824122.2453299,
+    "ast_hash": "25c8c5219ed686a42420f80a2f98c01a",
+    "semantic_hash": ""
+  },
+  "exercises/35_latam_enterprise_risk_and_sla/06_penalizaciones_sla.md": {
+    "mtime": 1787824072.634678,
+    "seen": 1787824122.2453299,
+    "ast_hash": "82a145537ca2a1c2bafd1c801a5ab40f",
     "semantic_hash": ""
   }
 }
