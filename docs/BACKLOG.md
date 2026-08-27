@@ -199,9 +199,9 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
 
 ---
 
-## 🧭 Focus Area 15: Interactive Onboarding Guided Tour (`spanglings tour`) (Planned)
+## 🧭 Focus Area 15: Interactive Onboarding Guided Tour (`spanglings tour`) (Completed)
 
-- [ ] **SPANG-140: First-Run Interactive Guided Onboarding Tour**
+- [x] **SPANG-140: First-Run Interactive Guided Onboarding Tour (`spanglings tour`)**
   - **Description**: Dedicated `spanglings tour` subcommand and first-run wizard in TUI introducing the developer workflow step-by-step:
     1. Navigation and split-pane interface (`Tab`, `Down`, `/` fuzzy search).
     2. Cloze input mechanics, UTF-8 accent support, and instant evaluation (`Enter`).
@@ -209,3 +209,9 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
     4. Verb conjugator modal (`Ctrl+K` / `F3`) and cheat sheet browser (`Ctrl+B` / `F4`).
     5. Headless watch mode workflow (`spanglings watch`) with external editors (VS Code / Neovim / Zed).
     6. Taking diagnostic placement test (`spanglings test` / `[t]`) to fast-track known levels.
+  - **Completed Components**:
+    - [x] **State Persistence**: Added `AppState::tour_completed` flag with backward compatibility and `mark_tour_completed()`.
+    - [x] **Station Engine**: Implemented 6 interactive guided stations with inline active-recall micro-challenges in `src/cli/commands/tour.rs`.
+    - [x] **CLI Subcommand**: Added `spanglings tour [--skip-challenges]` CLI command with CI batch mode fallback.
+    - [x] **Interactive TUI Integration**: First-run welcome modal dialog, in-TUI station modals, footer `[T]` hint, Help menu integration, and keyboard routing in `src/tui/events.rs`.
+    - [x] **Test Battery**: Full integration test coverage in `tests/tour_tests.rs`, `tests/cli_tests.rs`, and `tests/tui_tests.rs`.
