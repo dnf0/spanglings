@@ -51,18 +51,33 @@ fn draw_header(frame: &mut Frame, app: &App, area: Rect) {
     .alignment(Alignment::Center);
     frame.render_widget(title_text, header_chunks[0]);
 
-    let (topic_title, level_str) = match app.current_exercise() {
-        Some(ex) => (
-            format!(" {} - {}", ex.id, ex.title),
-            format!("[{}]", ex.level),
-        ),
-        None => (" No Exercises Found".to_string(), "[-]".to_string()),
+    let (topic_title, level_str) = if app.mode == crate::tui::app::AppMode::Searching {
+        (
+            format!(
+                " 🔍 Filter: \"{}\" ({} matches)",
+                app.search_query,
+                app.filtered_indices.len()
+            ),
+            "[SEARCH]".to_string(),
+        )
+    } else {
+        match app.current_exercise() {
+            Some(ex) => (
+                format!(" {} - {}", ex.id, ex.title),
+                format!("[{}]", ex.level),
+            ),
+            None => (" No Exercises Found".to_string(), "[-]".to_string()),
+        }
     };
 
     let info_block = Block::default()
         .borders(Borders::ALL)
         .border_type(BorderType::Rounded)
-        .border_style(Style::default().fg(Color::DarkGray));
+        .border_style(if app.mode == crate::tui::app::AppMode::Searching {
+            Style::default().fg(Color::Yellow)
+        } else {
+            Style::default().fg(Color::DarkGray)
+        });
     let info_text = Paragraph::new(Line::from(vec![
         Span::styled(
             format!(" {} ", level_str),
@@ -80,7 +95,19 @@ fn draw_header(frame: &mut Frame, app: &App, area: Rect) {
     .block(info_block);
     frame.render_widget(info_text, header_chunks[1]);
 
-    let (counter_str, status_span) = if app.exercises.is_empty() {
+    let total_len =
+        if app.mode == crate::tui::app::AppMode::Searching || !app.search_query.is_empty() {
+            app.filtered_indices.len()
+        } else {
+            app.exercises.len()
+        };
+    let current_idx_display = if total_len == 0 {
+        0
+    } else {
+        app.current_index + 1
+    };
+
+    let (counter_str, status_span) = if total_len == 0 {
         (
             " 0 / 0 ".to_string(),
             Span::styled(" EMPTY ", Style::default().fg(Color::DarkGray)),
@@ -104,10 +131,7 @@ fn draw_header(frame: &mut Frame, app: &App, area: Rect) {
                     .add_modifier(Modifier::BOLD),
             )
         };
-        (
-            format!(" {} / {} ", app.current_index + 1, app.exercises.len()),
-            status,
-        )
+        (format!(" {} / {} ", current_idx_display, total_len), status)
     };
 
     let status_block = Block::default()
@@ -524,70 +548,115 @@ fn draw_right_pane(frame: &mut Frame, app: &App, area: Rect) {
     }
 }
 
-fn draw_footer(frame: &mut Frame, _app: &App, area: Rect) {
+fn draw_footer(frame: &mut Frame, app: &App, area: Rect) {
     let footer_block = Block::default()
         .borders(Borders::ALL)
         .border_type(BorderType::Rounded)
         .border_style(Style::default().fg(Color::DarkGray));
 
-    let shortcuts = Line::from(vec![
-        Span::styled(
-            " [Enter] ",
-            Style::default()
-                .fg(Color::Black)
-                .bg(Color::Cyan)
-                .add_modifier(Modifier::BOLD),
-        ),
-        Span::styled(" Submit  ", Style::default().fg(Color::White)),
-        Span::styled(
-            " [Ctrl-H / F1] ",
-            Style::default()
-                .fg(Color::Black)
-                .bg(Color::Yellow)
-                .add_modifier(Modifier::BOLD),
-        ),
-        Span::styled(" Hint  ", Style::default().fg(Color::White)),
-        Span::styled(
-            " [Ctrl-E / F2] ",
-            Style::default()
-                .fg(Color::Black)
-                .bg(Color::Magenta)
-                .add_modifier(Modifier::BOLD),
-        ),
-        Span::styled(" Explain  ", Style::default().fg(Color::White)),
-        Span::styled(
-            " [Tab / Ctrl-N] ",
-            Style::default()
-                .fg(Color::Black)
-                .bg(Color::Blue)
-                .add_modifier(Modifier::BOLD),
-        ),
-        Span::styled(" Next  ", Style::default().fg(Color::White)),
-        Span::styled(
-            " [BackTab / Ctrl-P] ",
-            Style::default()
-                .fg(Color::Black)
-                .bg(Color::Blue)
-                .add_modifier(Modifier::BOLD),
-        ),
-        Span::styled(" Prev  ", Style::default().fg(Color::White)),
-        Span::styled(
-            " [Ctrl-R] ",
-            Style::default()
-                .fg(Color::Black)
-                .bg(Color::DarkGray)
-                .add_modifier(Modifier::BOLD),
-        ),
-        Span::styled(" Reset  ", Style::default().fg(Color::White)),
-        Span::styled(
-            " [Esc / Ctrl-C] ",
-            Style::default()
-                .fg(Color::Black)
-                .bg(Color::Red)
-                .add_modifier(Modifier::BOLD),
-        ),
-        Span::styled(" Quit ", Style::default().fg(Color::White)),
-    ]);
+    let shortcuts = if app.mode == crate::tui::app::AppMode::Searching {
+        Line::from(vec![
+            Span::styled(
+                " [Type] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Query  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Enter] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Green)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Select  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Up/Down] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Blue)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Navigate  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Esc] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Red)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Cancel Search ", Style::default().fg(Color::White)),
+        ])
+    } else {
+        Line::from(vec![
+            Span::styled(
+                " [/] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Search  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Enter] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Submit  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Ctrl-H / F1] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Hint  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Ctrl-E / F2] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Magenta)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Explain  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Tab / Ctrl-N] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Blue)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Next  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [BackTab / Ctrl-P] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Blue)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Prev  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Ctrl-R] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::DarkGray)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Reset  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Esc / Ctrl-C] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Red)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Quit ", Style::default().fg(Color::White)),
+        ])
+    };
 
     let footer_para = Paragraph::new(shortcuts)
         .block(footer_block)

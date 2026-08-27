@@ -22,6 +22,8 @@ pub struct AppState {
     pub accent_mode: AccentMode,
     pub srs: HashMap<String, SrsItem>,
     pub stats: HashMap<String, ExerciseStat>,
+    #[serde(default)]
+    pub activity_history: HashMap<String, u32>,
 }
 
 impl Default for AppState {
@@ -33,6 +35,7 @@ impl Default for AppState {
             accent_mode: AccentMode::Forgiving,
             srs: HashMap::new(),
             stats: HashMap::new(),
+            activity_history: HashMap::new(),
         }
     }
 }
@@ -82,6 +85,13 @@ impl AppState {
         self.completed_exercises.contains(exercise_id)
     }
 
+    pub fn record_activity(&mut self, date_str: &str) {
+        *self
+            .activity_history
+            .entry(date_str.to_string())
+            .or_insert(0) += 1;
+    }
+
     pub fn mark_completed(&mut self, exercise_id: &str) {
         self.completed_exercises.insert(exercise_id.to_string());
         let stat = self
@@ -92,7 +102,10 @@ impl AppState {
                 completed_at: None,
                 hints_used: 0,
             });
-        stat.completed_at = Some(Utc::now());
+        let now = Utc::now();
+        stat.completed_at = Some(now);
+        let today = now.format("%Y-%m-%d").to_string();
+        self.record_activity(&today);
     }
 
     pub fn unmark_completed(&mut self, exercise_id: &str) {
@@ -118,5 +131,7 @@ impl AppState {
             .unwrap_or_else(|| SrsItem::new(now));
         let updated = calculate_sm2_review(&current, quality, now);
         self.srs.insert(exercise_id.to_string(), updated);
+        let today = now.format("%Y-%m-%d").to_string();
+        self.record_activity(&today);
     }
 }

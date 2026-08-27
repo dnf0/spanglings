@@ -68,7 +68,9 @@ Commands:
   list         List all curriculum exercises and completion statuses
   progress     Display learning progress across CEFR levels
   search       Search exercises by topic, keyword, or grammar concept
+  check        Check exercise file for errors or stream JSON editor diagnostics
   drill        Start an active-recall flashcard drill session
+  blitz        Start 60-second rapid-fire conjugation speed drill
   review       Review exercises due for Spaced Repetition (SM-2)
   explain      Display in-terminal grammar cheat sheet for a topic
   completions  Generate shell auto-completions (bash, zsh, fish, powershell)
@@ -89,16 +91,23 @@ Options:
 ```bash
 spanglings
 ```
-- `Enter` / `Ctrl+S`: Submit answer
-- `Ctrl+H`: Cycle progressive hints (Tier 1 → 2 → 3)
-- `Ctrl+E`: Toggle grammar reference cheat sheet
-- `Ctrl+N` / `Ctrl+P`: Next / Previous exercise
+- `/`: Live fuzzy search and filter exercises
+- `Enter`: Submit answer (or select search result)
+- `Ctrl+H` / `F1`: Cycle progressive hints (Tier 1 → 2 → 3)
+- `Ctrl+E` / `F2`: Toggle grammar reference cheat sheet
+- `Tab` / `Ctrl+N` / `Down`: Next exercise
+- `BackTab` / `Ctrl+P` / `Up`: Previous exercise
 - `Ctrl+R`: Reset current exercise
-- `Esc` / `Ctrl+C`: Quit
+- `Esc` / `Ctrl+C`: Cancel search / Quit
 
-#### 2. Headless Watcher Mode
+#### 2. Headless Watcher Mode & Editor Integration
 ```bash
+# Continuous file watcher
 spanglings watch
+
+# Single exercise or curriculum diagnostic check (supports editor problem matchers & JSON)
+spanglings check exercises/03_subjunctive_weirdo/01_wishes_volition.md
+spanglings check --json
 ```
 Open any `.md` file under `exercises/` in your editor, remove `<!-- I AM NOT DONE -->`, fill in the `___`, and save. Spanglings will automatically validate and report results.
 
@@ -114,13 +123,16 @@ spanglings search "se me"
 spanglings search C1
 ```
 
-#### 4. JSON Output Mode
+#### 4. JSON Output & Activity Heatmap
 ```bash
+# Terminal progress with 12-week ANSI contribution heatmap and weakness diagnostics
+spanglings progress
+
+# Machine-readable learning progress with SM-2 intervals & activity history
+spanglings progress --json
+
 # Machine-readable exercise listing
 spanglings list --json
-
-# Machine-readable learning progress
-spanglings progress --json
 
 # Machine-readable search results
 spanglings search subjunctive --json

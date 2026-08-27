@@ -1,4 +1,4 @@
-use crate::tui::app::App;
+use crate::tui::app::{App, AppMode};
 use crate::tui::ui::draw_ui;
 use anyhow::Result;
 use crossterm::event::{self, Event, KeyCode, KeyEventKind, KeyModifiers};
@@ -20,6 +20,31 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                     continue;
                 }
 
+                if app.mode == AppMode::Searching {
+                    match (key.code, key.modifiers) {
+                        (KeyCode::Esc, _) => {
+                            app.exit_search(false);
+                        }
+                        (KeyCode::Enter, _) => {
+                            app.exit_search(true);
+                        }
+                        (KeyCode::Down, _) | (KeyCode::Tab, _) => {
+                            app.next_exercise();
+                        }
+                        (KeyCode::Up, _) | (KeyCode::BackTab, _) => {
+                            app.prev_exercise();
+                        }
+                        (KeyCode::Backspace, _) => {
+                            app.delete_search_char_backwards();
+                        }
+                        (KeyCode::Char(c), _) => {
+                            app.insert_search_char(c);
+                        }
+                        _ => {}
+                    }
+                    continue;
+                }
+
                 match (key.code, key.modifiers) {
                     // Quit actions
                     (KeyCode::Esc, _) => {
@@ -28,6 +53,11 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                     (KeyCode::Char('c'), KeyModifiers::CONTROL)
                     | (KeyCode::Char('q'), KeyModifiers::CONTROL) => {
                         app.should_quit = true;
+                    }
+
+                    // Activate search
+                    (KeyCode::Char('/'), KeyModifiers::NONE) => {
+                        app.enter_search();
                     }
 
                     // Navigation actions
@@ -90,6 +120,5 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
             }
         }
     }
-
     Ok(())
 }
