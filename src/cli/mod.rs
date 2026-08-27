@@ -118,6 +118,8 @@ pub enum Commands {
         #[arg(long)]
         import: Option<String>,
     },
+    /// Start Language Server Protocol (LSP) stdio server for editor integrations (VS Code, Neovim, Helix)
+    Lsp,
     /// Reset an exercise to its initial prompt
     Reset { exercise: String },
 }

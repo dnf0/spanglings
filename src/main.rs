@@ -93,6 +93,9 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Sync { export, import }) => {
             spanglings::cli::commands::sync::run_sync(export.as_deref(), import.as_deref())?;
         }
+        Some(Commands::Lsp) => {
+            spanglings::lsp::start_lsp_server(cli.strict_accents)?;
+        }
         Some(Commands::Reset { exercise }) => {
             spanglings::cli::commands::run::reset_exercise(&exercise)?;
         }
