@@ -142,9 +142,9 @@ pub enum Commands {
     /// Reset an exercise to its initial prompt
     Reset { exercise: String },
     /// Launch the interactive onboarding guided tour
-    #[command(about = "Launch the interactive onboarding guided tour")]
     Tour {
-        #[arg(long, help = "Skip interactive challenge prompts and print overview")]
+        /// Skip interactive challenge prompts and print overview
+        #[arg(long)]
         skip_challenges: bool,
     },
 }
