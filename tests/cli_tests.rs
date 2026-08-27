@@ -120,6 +120,24 @@ fn test_cli_parsing_subcommands() {
 }
 
 #[test]
+fn test_cli_tour_command_parsing() {
+    let cli_tour = Cli::parse_from(["spanglings", "tour"]);
+    assert_eq!(
+        cli_tour.command,
+        Some(Commands::Tour {
+            skip_challenges: false
+        })
+    );
+    let cli_tour_skip = Cli::parse_from(["spanglings", "tour", "--skip-challenges"]);
+    assert_eq!(
+        cli_tour_skip.command,
+        Some(Commands::Tour {
+            skip_challenges: true
+        })
+    );
+}
+
+#[test]
 fn test_explain_command_executes_cleanly() {
     assert!(show_explanation("subjunctive").is_ok());
     assert!(show_explanation("por-para").is_ok());

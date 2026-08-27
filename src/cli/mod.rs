@@ -141,6 +141,12 @@ pub enum Commands {
     Lsp,
     /// Reset an exercise to its initial prompt
     Reset { exercise: String },
+    /// Launch the interactive onboarding guided tour
+    #[command(about = "Launch the interactive onboarding guided tour")]
+    Tour {
+        #[arg(long, help = "Skip interactive challenge prompts and print overview")]
+        skip_challenges: bool,
+    },
 }
 
 #[derive(Subcommand, Debug, PartialEq, Eq)]

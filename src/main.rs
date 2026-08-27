@@ -107,6 +107,9 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Reset { exercise }) => {
             spanglings::cli::commands::run::reset_exercise(&exercise)?;
         }
+        Some(Commands::Tour { skip_challenges }) => {
+            spanglings::cli::commands::tour::run_tour(skip_challenges)?;
+        }
         None => {
             spanglings::tui::start_tui(cli.strict_accents)?;
         }
