@@ -48,11 +48,11 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
 
 ---
 
-## 📊 Focus Area 4: Interactive TUI & IDE Integrations
+## 📊 Focus Area 4: Interactive TUI & IDE Integrations (Completed)
 
-- [ ] **SPANG-030: ANSI Activity Heatmap in TUI & Progress CLI**
-  - **Description**: GitHub-style calendar heatmap displaying exercise completions and daily reviews over 30/90 days.
-- [ ] **SPANG-031: Live Fuzzy Search in Interactive TUI**
-  - **Description**: Press `/` in TUI to filter exercises instantly by topic, keyword, or level.
-- [ ] **SPANG-032: Language Server / VS Code & Zed Plugin Support**
-  - **Description**: Language server protocol (LSP) or diagnostic JSON streamer for real-time exercise feedback directly in VS Code / Zed editors.
+- [x] **SPANG-030: ANSI Activity Heatmap in TUI & Progress CLI**
+  - **Description**: GitHub-style calendar heatmap displaying exercise completions and daily reviews over 12 weeks with active streak tracking.
+- [x] **SPANG-031: Live Fuzzy Search in Interactive TUI**
+  - **Description**: Press `/` in TUI to filter exercises instantly by topic, keyword, or level with interactive search bar and live keyboard navigation.
+- [x] **SPANG-032: Editor Diagnostic Checker & JSON Streamer (`spanglings check`)**
+  - **Description**: Real-time compiler-style and JSON diagnostic streamer (`spanglings check <file> [--json]`) for seamless integration with VS Code, Zed, Neovim, and CI pipelines.
