@@ -8,7 +8,11 @@ use std::collections::HashMap;
 #[test]
 fn test_placement_battery_generation_and_filtering() {
     let full_battery = get_placement_battery(None);
-    assert_eq!(full_battery.len(), 15, "Expected 15 calibrated placement questions in full battery");
+    assert_eq!(
+        full_battery.len(),
+        15,
+        "Expected 15 calibrated placement questions in full battery"
+    );
     assert!(full_battery.iter().any(|q| q.level == Level::Baseline));
     assert!(full_battery.iter().any(|q| q.level == Level::B1));
     assert!(full_battery.iter().any(|q| q.level == Level::B2));
@@ -40,9 +44,9 @@ fn test_placement_evaluation_accuracy_and_scoring() {
 fn test_placement_cefr_level_calculation() {
     let mut scores = HashMap::new();
     scores.insert(Level::Baseline, (3, 3)); // 100%
-    scores.insert(Level::B1, (4, 4));       // 100%
-    scores.insert(Level::B2, (3, 4));       // 75%
-    scores.insert(Level::C1, (1, 4));       // 25%
+    scores.insert(Level::B1, (4, 4)); // 100%
+    scores.insert(Level::B2, (3, 4)); // 75%
+    scores.insert(Level::C1, (1, 4)); // 25%
 
     let (level, score) = calculate_cefr_level(&scores);
     assert_eq!(level, Level::B2);

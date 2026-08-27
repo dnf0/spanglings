@@ -1453,7 +1453,10 @@ fn draw_placement_test_modal(frame: &mut Frame, app: &App, area: Rect) {
                         .add_modifier(Modifier::BOLD),
                 ),
                 Span::styled(
-                    format!("   |   Progress: {:.0}% ({}/{})", pct, app.placement_current_idx, total),
+                    format!(
+                        "   |   Progress: {:.0}% ({}/{})",
+                        pct, app.placement_current_idx, total
+                    ),
                     Style::default().fg(Color::Cyan),
                 ),
             ]))
@@ -1467,7 +1470,9 @@ fn draw_placement_test_modal(frame: &mut Frame, app: &App, area: Rect) {
                 .border_style(Style::default().fg(Color::White));
             let ctx_para = Paragraph::new(Line::from(Span::styled(
                 format!(" {}", q.context_en),
-                Style::default().fg(Color::White).add_modifier(Modifier::ITALIC),
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::ITALIC),
             )))
             .block(ctx_block);
             frame.render_widget(ctx_para, chunks[1]);
@@ -1547,12 +1552,18 @@ fn draw_placement_test_modal(frame: &mut Frame, app: &App, area: Rect) {
                         .fg(Color::Green)
                         .add_modifier(Modifier::BOLD),
                 ),
-                Span::styled("Submit & Next Question   ", Style::default().fg(Color::DarkGray)),
+                Span::styled(
+                    "Submit & Next Question   ",
+                    Style::default().fg(Color::DarkGray),
+                ),
                 Span::styled(
                     " [Esc] ",
                     Style::default().fg(Color::Red).add_modifier(Modifier::BOLD),
                 ),
-                Span::styled("Cancel Placement Test", Style::default().fg(Color::DarkGray)),
+                Span::styled(
+                    "Cancel Placement Test",
+                    Style::default().fg(Color::DarkGray),
+                ),
             ]))
             .alignment(Alignment::Center);
             frame.render_widget(footer_text, chunks[4]);
@@ -1596,7 +1607,10 @@ fn draw_placement_test_modal(frame: &mut Frame, app: &App, area: Rect) {
                 Line::from(vec![
                     Span::styled(" Diagnostic Accuracy: ", Style::default().fg(Color::White)),
                     Span::styled(
-                        format!("{:.1}% ({} of {} correct)", res.percentage, res.total_correct, res.total_questions),
+                        format!(
+                            "{:.1}% ({} of {} correct)",
+                            res.percentage, res.total_correct, res.total_questions
+                        ),
                         Style::default()
                             .fg(Color::Yellow)
                             .add_modifier(Modifier::BOLD),
@@ -1629,14 +1643,27 @@ fn draw_placement_test_modal(frame: &mut Frame, app: &App, area: Rect) {
                         0.0
                     };
                     let (status_str, status_style) = if pct >= 75.0 {
-                        ("PASS (Mastered)", Style::default().fg(Color::Green).add_modifier(Modifier::BOLD))
+                        (
+                            "PASS (Mastered)",
+                            Style::default()
+                                .fg(Color::Green)
+                                .add_modifier(Modifier::BOLD),
+                        )
                     } else {
                         ("IN PROGRESS", Style::default().fg(Color::Yellow))
                     };
 
                     breakdown_lines.push(Line::from(vec![
-                        Span::styled(format!("  • {:<10} ", format!("{:?}", lvl)), Style::default().fg(Color::White).add_modifier(Modifier::BOLD)),
-                        Span::styled(format!("{:>2}/{} ({:>5.1}%)  ", correct, total, pct), Style::default().fg(Color::Cyan)),
+                        Span::styled(
+                            format!("  • {:<10} ", format!("{:?}", lvl)),
+                            Style::default()
+                                .fg(Color::White)
+                                .add_modifier(Modifier::BOLD),
+                        ),
+                        Span::styled(
+                            format!("{:>2}/{} ({:>5.1}%)  ", correct, total, pct),
+                            Style::default().fg(Color::Cyan),
+                        ),
                         Span::styled(format!("[{}]", status_str), status_style),
                     ]));
                 }
@@ -1656,24 +1683,53 @@ fn draw_placement_test_modal(frame: &mut Frame, app: &App, area: Rect) {
 
             let action_text = if app.placement_fast_tracked {
                 Paragraph::new(Line::from(vec![
-                    Span::styled(" ✨ Level exercises fast-tracked! ", Style::default().fg(Color::Green).add_modifier(Modifier::BOLD)),
-                    Span::styled(" [Enter/Esc] Close Modal ", Style::default().fg(Color::White)),
+                    Span::styled(
+                        " ✨ Level exercises fast-tracked! ",
+                        Style::default()
+                            .fg(Color::Green)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        " [Enter/Esc] Close Modal ",
+                        Style::default().fg(Color::White),
+                    ),
                 ]))
                 .block(action_block)
                 .alignment(Alignment::Center)
             } else if !res.passed_levels.is_empty() {
                 Paragraph::new(Line::from(vec![
-                    Span::styled(" [F] ", Style::default().fg(Color::Yellow).add_modifier(Modifier::BOLD)),
-                    Span::styled("Fast-Track & Auto-Complete Mastered Levels   ", Style::default().fg(Color::White)),
-                    Span::styled(" [Enter/Esc] ", Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD)),
+                    Span::styled(
+                        " [F] ",
+                        Style::default()
+                            .fg(Color::Yellow)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        "Fast-Track & Auto-Complete Mastered Levels   ",
+                        Style::default().fg(Color::White),
+                    ),
+                    Span::styled(
+                        " [Enter/Esc] ",
+                        Style::default()
+                            .fg(Color::Cyan)
+                            .add_modifier(Modifier::BOLD),
+                    ),
                     Span::styled("Close Modal", Style::default().fg(Color::DarkGray)),
                 ]))
                 .block(action_block)
                 .alignment(Alignment::Center)
             } else {
                 Paragraph::new(Line::from(vec![
-                    Span::styled(" [Enter/Esc] ", Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD)),
-                    Span::styled("Close Modal & Begin Recommended Tracks", Style::default().fg(Color::White)),
+                    Span::styled(
+                        " [Enter/Esc] ",
+                        Style::default()
+                            .fg(Color::Cyan)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        "Close Modal & Begin Recommended Tracks",
+                        Style::default().fg(Color::White),
+                    ),
                 ]))
                 .block(action_block)
                 .alignment(Alignment::Center)
