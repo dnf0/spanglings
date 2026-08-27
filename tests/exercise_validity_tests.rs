@@ -36,8 +36,8 @@ fn test_all_curriculum_exercises_are_valid_and_solvable() {
 
     assert_eq!(
         md_paths.len(),
-        267,
-        "Expected exactly 267 exercises across all 48 tracks, found {}",
+        303,
+        "Expected exactly 303 exercises across all 54 tracks, found {}",
         md_paths.len()
     );
 
@@ -46,8 +46,8 @@ fn test_all_curriculum_exercises_are_valid_and_solvable() {
         find_all_exercises(exercises_dir).expect("find_all_exercises should succeed");
     assert_eq!(
         discovered_exercises.len(),
-        267,
-        "find_all_exercises should return all 267 discovered exercises"
+        303,
+        "find_all_exercises should return all 303 discovered exercises"
     );
 
     let graph = spanglings::core::graph::get_default_linguistic_graph();
