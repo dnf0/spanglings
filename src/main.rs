@@ -34,6 +34,14 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Progress) => {
             spanglings::cli::commands::progress::show_progress(cli.json)?;
         }
+        Some(Commands::Test { level, fast_track }) => {
+            spanglings::cli::commands::test::run_test(
+                level,
+                fast_track,
+                cli.json,
+                cli.strict_accents,
+            )?;
+        }
         Some(Commands::Search { query }) => {
             spanglings::cli::commands::search::run_search(&query, cli.json)?;
         }

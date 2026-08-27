@@ -1,8 +1,13 @@
 use crate::core::conjugator::{conjugate_verb, VerbTable};
 use crate::core::exercise::Exercise;
+use crate::core::placement::{
+    evaluate_placement_test, get_placement_battery, PlacementQuestion, PlacementResult,
+};
 use crate::core::reference::list_reference_topics;
+use crate::core::state::{AppState, EvaluatedLevel};
 use crate::engine::accents::AccentMode;
 use crate::engine::validator::{validate_submission, ValidationResult};
+use chrono::Utc;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum AppMode {
@@ -10,6 +15,7 @@ pub enum AppMode {
     Searching,
     Conjugating,
     BrowsingReference,
+    PlacementTest,
     Help,
 }
 
@@ -44,6 +50,16 @@ pub struct App {
     pub ref_filtered_topics: Vec<&'static str>,
     pub ref_selected_idx: usize,
     pub ref_scroll: usize,
+
+    // Placement test modal state
+    pub placement_battery: Vec<PlacementQuestion>,
+    pub placement_answers: Vec<String>,
+    pub placement_current_idx: usize,
+    pub placement_input: String,
+    pub placement_cursor: usize,
+    pub placement_result: Option<PlacementResult>,
+    pub placement_finished: bool,
+    pub placement_fast_tracked: bool,
 }
 
 impl App {
@@ -77,6 +93,14 @@ impl App {
             ref_filtered_topics,
             ref_selected_idx: 0,
             ref_scroll: 0,
+            placement_battery: Vec::new(),
+            placement_answers: Vec::new(),
+            placement_current_idx: 0,
+            placement_input: String::new(),
+            placement_cursor: 0,
+            placement_result: None,
+            placement_finished: false,
+            placement_fast_tracked: false,
         }
     }
 
@@ -439,5 +463,105 @@ impl App {
 
     pub fn exit_help(&mut self) {
         self.mode = AppMode::Editing;
+    }
+
+    // --- Placement Test Modal Methods ---
+
+    pub fn enter_placement_test(&mut self) {
+        self.mode = AppMode::PlacementTest;
+        self.placement_battery = get_placement_battery(None);
+        self.placement_answers = Vec::new();
+        self.placement_current_idx = 0;
+        self.placement_input.clear();
+        self.placement_cursor = 0;
+        self.placement_finished = false;
+        self.placement_result = None;
+        self.placement_fast_tracked = false;
+    }
+
+    pub fn exit_placement_test(&mut self) {
+        self.mode = AppMode::Editing;
+    }
+
+    pub fn submit_placement_answer(&mut self) {
+        if self.placement_finished {
+            return;
+        }
+
+        self.placement_answers
+            .push(self.placement_input.trim().to_string());
+        self.placement_input.clear();
+        self.placement_cursor = 0;
+        self.placement_current_idx += 1;
+
+        if self.placement_current_idx >= self.placement_battery.len() {
+            let accent_mode = if self.strict_accents {
+                AccentMode::Strict
+            } else {
+                AccentMode::Forgiving
+            };
+            let res = evaluate_placement_test(
+                &self.placement_battery,
+                &self.placement_answers,
+                accent_mode,
+            );
+
+            // Update state
+            if let Ok(mut state) = AppState::load() {
+                state.evaluated_level = Some(EvaluatedLevel {
+                    level: res.assessed_level,
+                    score_percent: res.percentage,
+                    evaluated_at: Utc::now(),
+                });
+                let _ = state.save();
+            }
+
+            self.placement_result = Some(res);
+            self.placement_finished = true;
+        }
+    }
+
+    pub fn fast_track_placement_levels(&mut self) -> usize {
+        if let Some(res) = &self.placement_result {
+            if let Ok(mut state) = AppState::load() {
+                let mut total_marked = 0;
+                for &lvl in &res.passed_levels {
+                    total_marked += state.fast_track_level(lvl, &self.exercises);
+                }
+                let _ = state.save();
+                self.placement_fast_tracked = true;
+                self.status_message = Some(format!(
+                    "✨ Fast-tracked {} exercises across passed levels!",
+                    total_marked
+                ));
+                return total_marked;
+            }
+        }
+        0
+    }
+
+    pub fn insert_placement_char(&mut self, c: char) {
+        if self.placement_finished {
+            return;
+        }
+        let byte_idx = self
+            .placement_input
+            .char_indices()
+            .nth(self.placement_cursor)
+            .map(|(i, _)| i)
+            .unwrap_or(self.placement_input.len());
+        self.placement_input.insert(byte_idx, c);
+        self.placement_cursor += 1;
+    }
+
+    pub fn delete_placement_char_backwards(&mut self) {
+        if self.placement_finished || self.placement_cursor == 0 {
+            return;
+        }
+        let char_to_remove = self.placement_cursor - 1;
+        if let Some((byte_idx, _)) = self.placement_input.char_indices().nth(char_to_remove) {
+            self.placement_input.remove(byte_idx);
+            self.placement_cursor -= 1;
+        }
     }
 }

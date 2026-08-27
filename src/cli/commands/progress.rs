@@ -39,6 +39,7 @@ pub struct ProgressSummary {
     pub completed: usize,
     pub percent: f64,
     pub due_reviews: usize,
+    pub evaluated_level: Option<crate::core::state::EvaluatedLevel>,
     pub levels: std::collections::BTreeMap<String, LevelProgress>,
     pub weak_topics: Vec<TopicWeaknessStat>,
     pub recommendations: Vec<String>,
@@ -320,6 +321,7 @@ pub fn get_progress_json() -> anyhow::Result<String> {
         completed,
         percent,
         due_reviews,
+        evaluated_level: state.evaluated_level.clone(),
         levels: levels_map,
         weak_topics,
         recommendations,
@@ -352,6 +354,20 @@ pub fn show_progress(json: bool) -> anyhow::Result<()> {
         "{}",
         "==========================================================".blue()
     );
+
+    if let Some(eval) = &state.evaluated_level {
+        println!(
+            "\n🎯 Diagnostic Placement Level: {} (Assessed {:.1}%, {})",
+            format!("[{:?}]", eval.level).bold().green(),
+            eval.score_percent,
+            eval.evaluated_at.format("%Y-%m-%d").to_string().dimmed()
+        );
+    } else {
+        println!(
+            "\n💡 Tip: Run '{}' to evaluate your CEFR level and fast-track mastered content!",
+            "spanglings test".cyan().bold()
+        );
+    }
 
     let total = exercises.len();
     let completed = exercises

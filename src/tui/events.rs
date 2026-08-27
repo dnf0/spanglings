@@ -127,6 +127,38 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                     continue;
                 }
 
+                // --- Placement Test Modal Event Handling ---
+                if app.mode == AppMode::PlacementTest {
+                    match (key.code, key.modifiers) {
+                        (KeyCode::Esc, _) => {
+                            app.exit_placement_test();
+                        }
+                        (KeyCode::Enter, _) => {
+                            if app.placement_finished {
+                                app.exit_placement_test();
+                            } else {
+                                app.submit_placement_answer();
+                            }
+                        }
+                        (KeyCode::Char('f'), KeyModifiers::NONE) | (KeyCode::Char('F'), _) => {
+                            if app.placement_finished {
+                                app.fast_track_placement_levels();
+                            } else {
+                                app.insert_placement_char('f');
+                            }
+                        }
+                        (KeyCode::Backspace, _) => {
+                            app.delete_placement_char_backwards();
+                        }
+                        (KeyCode::Char(c), KeyModifiers::NONE)
+                        | (KeyCode::Char(c), KeyModifiers::SHIFT) => {
+                            app.insert_placement_char(c);
+                        }
+                        _ => {}
+                    }
+                    continue;
+                }
+
                 // --- Editing Mode Event Handling ---
                 match (key.code, key.modifiers) {
                     // Quit actions
@@ -152,6 +184,11 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                     | (KeyCode::Char('b'), KeyModifiers::CONTROL)
                     | (KeyCode::Char('r'), KeyModifiers::ALT) => {
                         app.enter_reference_browser();
+                    }
+                    (KeyCode::F(5), _)
+                    | (KeyCode::Char('t'), KeyModifiers::ALT)
+                    | (KeyCode::Char('t'), KeyModifiers::CONTROL) => {
+                        app.enter_placement_test();
                     }
                     (KeyCode::F(1), _) | (KeyCode::Char('h'), KeyModifiers::ALT) => {
                         app.enter_help();

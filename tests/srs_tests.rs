@@ -68,3 +68,20 @@ fn test_state_mark_completed() {
     assert!(state.stats.contains_key("b1_sub_01"));
     assert!(state.stats.get("b1_sub_01").unwrap().completed_at.is_some());
 }
+
+#[test]
+fn test_state_fast_track_level() {
+    use spanglings::core::curriculum::Level;
+    use spanglings::core::embedded::get_embedded_exercises;
+
+    let mut state = AppState::default();
+    let exercises = get_embedded_exercises().unwrap();
+    let count = state.fast_track_level(Level::Baseline, &exercises);
+    assert_eq!(count, 5);
+    assert_eq!(state.completed_exercises.len(), 5);
+    assert_eq!(state.srs.len(), 5);
+    for item in state.srs.values() {
+        assert_eq!(item.interval_days, 14);
+        assert_eq!(item.repetitions, 2);
+    }
+}

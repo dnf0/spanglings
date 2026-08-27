@@ -57,6 +57,15 @@ pub enum Commands {
     List,
     /// Display learning progress and CEFR level mastery
     Progress,
+    /// Take an adaptive diagnostic placement test to assess CEFR level or test out of levels
+    Test {
+        /// Filter by specific level to test out of (e.g. B1, B2, C1)
+        #[arg(short, long)]
+        level: Option<String>,
+        /// Automatically fast-track and skip passed levels without interactive confirmation
+        #[arg(short, long)]
+        fast_track: bool,
+    },
     /// Search exercises by topic, keyword, or grammar concept
     Search {
         /// Search keyword or query

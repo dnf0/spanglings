@@ -1,3 +1,5 @@
+use crate::core::curriculum::Level;
+use crate::core::exercise::Exercise;
 use crate::core::srs::{calculate_sm2_review, SrsItem};
 use crate::engine::accents::AccentMode;
 use anyhow::{Context, Result};
@@ -6,6 +8,13 @@ use serde::{Deserialize, Serialize};
 use std::collections::{HashMap, HashSet};
 use std::fs;
 use std::path::{Path, PathBuf};
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct EvaluatedLevel {
+    pub level: Level,
+    pub score_percent: f64,
+    pub evaluated_at: DateTime<Utc>,
+}
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 pub struct ExerciseStat {
@@ -24,6 +33,8 @@ pub struct AppState {
     pub stats: HashMap<String, ExerciseStat>,
     #[serde(default)]
     pub activity_history: HashMap<String, u32>,
+    #[serde(default)]
+    pub evaluated_level: Option<EvaluatedLevel>,
 }
 
 impl Default for AppState {
@@ -36,6 +47,7 @@ impl Default for AppState {
             srs: HashMap::new(),
             stats: HashMap::new(),
             activity_history: HashMap::new(),
+            evaluated_level: None,
         }
     }
 }
@@ -133,5 +145,34 @@ impl AppState {
         self.srs.insert(exercise_id.to_string(), updated);
         let today = now.format("%Y-%m-%d").to_string();
         self.record_activity(&today);
+    }
+
+    pub fn fast_track_level(&mut self, level: Level, exercises: &[Exercise]) -> usize {
+        let now = Utc::now();
+        let mut count = 0;
+        for ex in exercises {
+            if ex.level == level {
+                self.completed_exercises.insert(ex.id.clone());
+                let stat = self.stats.entry(ex.id.clone()).or_insert(ExerciseStat {
+                    attempts: 1,
+                    completed_at: Some(now),
+                    hints_used: 0,
+                });
+                stat.completed_at = Some(now);
+
+                let srs_item = SrsItem {
+                    interval_days: 14,
+                    ease_factor: 2.6,
+                    repetitions: 2,
+                    last_reviewed: Some(now),
+                    next_review_due: now + chrono::Duration::days(14),
+                };
+                self.srs.insert(ex.id.clone(), srs_item);
+                count += 1;
+            }
+        }
+        let today = now.format("%Y-%m-%d").to_string();
+        self.record_activity(&today);
+        count
     }
 }

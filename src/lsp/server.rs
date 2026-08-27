@@ -224,6 +224,25 @@ impl LspServer {
                 };
                 serde_json::to_string(&resp).ok()
             }
+            "spanglings/status" | "workspace/status" => {
+                let state = crate::core::state::AppState::load().unwrap_or_default();
+                let status_payload = serde_json::json!({
+                    "evaluated_level": state.evaluated_level.as_ref().map(|e| format!("{:?}", e.level)),
+                    "evaluated_score": state.evaluated_level.as_ref().map(|e| e.score_percent),
+                    "completed_count": state.completed_exercises.len(),
+                    "badge_text": match &state.evaluated_level {
+                        Some(eval) => format!("🇪🇸 Spanglings: [{:?}] ({} done)", eval.level, state.completed_exercises.len()),
+                        None => format!("🇪🇸 Spanglings ({} done)", state.completed_exercises.len()),
+                    }
+                });
+                let resp = JsonRpcResponse {
+                    jsonrpc: "2.0".to_string(),
+                    id: req.id,
+                    result: Some(status_payload),
+                    error: None,
+                };
+                serde_json::to_string(&resp).ok()
+            }
             _ => None,
         }
     }

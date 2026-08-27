@@ -405,4 +405,55 @@ fn test_tui_draw_all_modals_without_panicking() {
     // 3. Draw Help modal
     app.enter_help();
     terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+
+    // 4. Draw Placement modal in testing state
+    app.enter_placement_test();
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+
+    // 5. Submit all answers and draw Placement modal in results state
+    while !app.placement_finished {
+        for c in "hablo".chars() {
+            app.insert_placement_char(c);
+        }
+        app.submit_placement_answer();
+    }
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+}
+
+#[test]
+fn test_tui_placement_test_flow() {
+    let exercises = create_sample_exercises();
+    let mut app = App::new(exercises, false);
+
+    app.enter_placement_test();
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::PlacementTest);
+    assert!(!app.placement_battery.is_empty());
+    assert_eq!(app.placement_current_idx, 0);
+
+    // Text editing
+    app.insert_placement_char('h');
+    app.insert_placement_char('o');
+    app.insert_placement_char('l');
+    app.insert_placement_char('a');
+    assert_eq!(app.placement_input, "hola");
+    assert_eq!(app.placement_cursor, 4);
+
+    app.delete_placement_char_backwards();
+    assert_eq!(app.placement_input, "hol");
+    assert_eq!(app.placement_cursor, 3);
+
+    // Answer questions to completion
+    while !app.placement_finished {
+        app.submit_placement_answer();
+    }
+
+    assert!(app.placement_result.is_some());
+    assert!(app.placement_finished);
+
+    // Fast track
+    let marked = app.fast_track_placement_levels();
+    assert_eq!(marked, 0); // None passed since answers were empty
+
+    app.exit_placement_test();
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Editing);
 }
