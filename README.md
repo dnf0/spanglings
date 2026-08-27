@@ -1,7 +1,7 @@
 # Spanglings 🇪🇸 🦀
 
 > **Spanglings builds the syntax compiler; real-world usage supplies the data.**
-> A developer-grade CLI & interactive TUI for mastering Spanish grammar, verb mechanics, and nuanced syntactic architecture, inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](https://github.com/ray-project/raylings).
+> A developer-grade CLI & interactive TUI for mastering Spanish grammar, verb mechanics, and nuanced syntactic architecture, inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](https://github.com/dnf0/raylings).
 
 ---
 
