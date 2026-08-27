@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 540" width="100%" height="100%">
   <defs>
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;display=swap");
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&amp;display=swap');
       
       .terminal-window {
         fill: #0d1117;
@@ -17,7 +17,7 @@
       }
       .header-title {
         fill: #8b949e;
-        font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         font-size: 13px;
         font-weight: 500;
         text-anchor: middle;
@@ -27,100 +27,164 @@
       .circle-green { fill: #27c93f; }
       
       .term-text {
-        font-family: "Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+        font-family: 'Fira Code', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         font-size: 13px;
-        line-height: 1.5;
+        line-height: 20px;
       }
       
       .c-dim { fill: #6e7681; }
       .c-white { fill: #f0f6fc; }
       .c-red { fill: #ff7b72; font-weight: 600; }
-      .c-green { fill: #7ee787; }
+      .c-green { fill: #7ee787; font-weight: 600; }
       .c-yellow { fill: #f2cc60; }
       .c-blue { fill: #79c0ff; font-weight: 600; }
       .c-cyan { fill: #56d4dd; }
       .c-magenta { fill: #d2a8ff; }
       .c-gold { fill: #e3b341; font-weight: 600; }
+      
+      .frame {
+        opacity: 0;
+        animation: cycle 14s infinite ease-in-out;
+      }
+      
+      /* Frame 1: spanglings tour (0s -> 3.5s) */
+      .frame-1 {
+        animation-name: anim-frame-1;
+      }
+      /* Frame 2: spanglings watch fail (3.5s -> 7s) */
+      .frame-2 {
+        animation-name: anim-frame-2;
+      }
+      /* Frame 3: watch hint reveal (7s -> 10.5s) */
+      .frame-3 {
+        animation-name: anim-frame-3;
+      }
+      /* Frame 4: watch pass on-save (10.5s -> 14s) */
+      .frame-4 {
+        animation-name: anim-frame-4;
+      }
+
+      @keyframes anim-frame-1 {
+        0%, 2% { opacity: 0; }
+        4%, 23% { opacity: 1; }
+        25%, 100% { opacity: 0; }
+      }
+      @keyframes anim-frame-2 {
+        0%, 25% { opacity: 0; }
+        27%, 48% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
+      @keyframes anim-frame-3 {
+        0%, 50% { opacity: 0; }
+        52%, 73% { opacity: 1; }
+        75%, 100% { opacity: 0; }
+      }
+      @keyframes anim-frame-4 {
+        0%, 75% { opacity: 0; }
+        77%, 97% { opacity: 1; }
+        99%, 100% { opacity: 0; }
+      }
+
+      .cursor {
+        animation: blink 0.8s infinite;
+      }
+      @keyframes blink {
+        0%, 49% { opacity: 1; }
+        50%, 100% { opacity: 0; }
+      }
     </style>
   </defs>
 
   <!-- Terminal Window Background -->
-  <rect width="920" height="540" class="terminal-window" />
+  <rect x="10" y="10" width="900" height="520" class="terminal-window" />
 
   <!-- Window Titlebar -->
-  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 910 0 C 915.523 0 920 4.477 920 10 L 920 38 L 0 38 Z" class="terminal-header" />
-  <line x1="0" y1="38" x2="920" y2="38" stroke="#30363d" stroke-width="1" />
+  <path d="M 10 20 Q 10 10 20 10 L 900 10 Q 910 10 910 20 L 910 45 L 10 45 Z" class="terminal-header" />
+  <line x1="10" y1="45" x2="910" y2="45" stroke="#30363d" stroke-width="1" />
 
   <!-- Window Buttons -->
-  <circle cx="24" cy="19" r="6" class="circle-red" />
-  <circle cx="44" cy="19" r="6" class="circle-yellow" />
-  <circle cx="64" cy="19" r="6" class="circle-green" />
+  <circle cx="32" cy="28" r="6" class="circle-red" />
+  <circle cx="52" cy="28" r="6" class="circle-yellow" />
+  <circle cx="72" cy="28" r="6" class="circle-green" />
 
   <!-- Window Title -->
-  <text x="460" y="24" class="header-title">spanglings watch — exercises/03_subjunctive_weirdo/weirdo01.md</text>
+  <text x="460" y="32" class="header-title">zsh — spanglings — 90×26</text>
 
-  <!-- Terminal Output Lines -->
-  <g class="term-text" transform="translate(28, 70)">
-    <!-- Prompt -->
-    <text y="0">
-      <tspan class="c-green">danielfisher@dev</tspan><tspan class="c-dim">:</tspan><tspan class="c-blue">~/spanglings</tspan><tspan class="c-white">$ spanglings watch</tspan>
-    </text>
+  <!-- ================= FRAME 1: SPANGLINGS TOUR ================= -->
+  <g class="frame frame-1">
+    <text x="35" y="80" class="term-text c-dim">$ <tspan class="c-white">spanglings tour</tspan></text>
+    
+    <text x="35" y="115" class="term-text c-cyan">┌────────────────────────────────────────────────────────────────────────────┐</text>
+    <text x="35" y="135" class="term-text c-cyan">│ <tspan class="c-white">🇪🇸  SPANGLINGS INTERACTIVE ONBOARDING TOUR</tspan> <tspan class="c-gold">[Station 1/6]</tspan>                     │</text>
+    <text x="35" y="155" class="term-text c-cyan">├────────────────────────────────────────────────────────────────────────────┤</text>
+    <text x="35" y="180" class="term-text c-white">  Welcome to <tspan class="c-gold">Spanglings</tspan>! The syntax compiler for mastering Spanish syntax.</text>
+    <text x="35" y="205" class="term-text c-dim">  • <tspan class="c-green">Sub-20ms feedback loop</tspan> in your favorite code editor (VS Code, Zed, Neovim)</text>
+    <text x="35" y="225" class="term-text c-dim">  • Zero comment-deletion busywork — evaluated on pure grammatical correctness</text>
+    <text x="35" y="245" class="term-text c-dim">  • 60 Thematic Tracks &amp; 339 Exercises spanning CEFR <tspan class="c-gold">A1 ➔ B1 ➔ B2 ➔ C1</tspan></text>
+    <text x="35" y="265" class="term-text c-dim">  • 81-Concept Knowledge Graph DAG with active SuperMemo-2 Spaced Repetition</text>
+    <text x="35" y="295" class="term-text c-yellow">  Next step: Interactive cloze mechanics, smart accents &amp; UTF-8 Spanish...</text>
+    <text x="35" y="325" class="term-text c-cyan">└────────────────────────────────────────────────────────────────────────────┘</text>
+    
+    <text x="35" y="365" class="term-text c-dim">Press <tspan class="c-white">[Enter]</tspan> to proceed to Station 2 (Cloze Mechanics &amp; Accents) <tspan class="c-cyan cursor">▌</tspan></text>
+  </g>
 
-    <!-- Watcher Banner -->
-    <text y="26">
-      <tspan class="c-gold">⚡ Spanglings Watcher v0.2.0</tspan><tspan class="c-dim"> — Continuous Syntax &amp; Diagnostic Engine</tspan>
-    </text>
-    <text y="48">
-      <tspan class="c-dim">Watching: exercises/03_subjunctive_weirdo/weirdo01.md (Track 03/60 • B1 Subjunctive)</tspan>
-    </text>
+  <!-- ================= FRAME 2: SPANGLINGS WATCH DIAGNOSTIC ERROR ================= -->
+  <g class="frame frame-2">
+    <text x="35" y="80" class="term-text c-dim">$ <tspan class="c-white">spanglings watch</tspan></text>
+    
+    <text x="35" y="110" class="term-text c-gold">⚡ Spanglings Watcher v0.2.0 <tspan class="c-dim">— Continuous Syntax &amp; Diagnostic Engine</tspan></text>
+    <text x="35" y="130" class="term-text c-dim">Watching: exercises/03_subjunctive_weirdo/weirdo01.md (Track 03/60 • B1 Subjunctive)</text>
+    
+    <text x="35" y="165" class="term-text c-red">error[E0301]: <tspan class="c-white">Subjunctive Mood Required</tspan></text>
+    <text x="35" y="185" class="term-text c-blue">  --&gt; <tspan class="c-white">exercises/03_subjunctive_weirdo/weirdo01.md:14:15</tspan></text>
+    <text x="35" y="205" class="term-text c-blue">   |</text>
+    <text x="35" y="225" class="term-text c-blue">14 | <tspan class="c-white">Quiero que tú </tspan><tspan class="c-red">vienes</tspan><tspan class="c-white"> a la reunión de arquitectura.</tspan></text>
+    <text x="35" y="245" class="term-text c-blue">   | <tspan class="c-red">              ^^^^^^ expected subjunctive form 'vengas', found indicative 'vienes'</tspan></text>
+    <text x="35" y="265" class="term-text c-blue">   = <tspan class="c-white">note: Main clause expresses volition ('Quiero que...'), triggering mood shift</tspan></text>
+    <text x="35" y="285" class="term-text c-blue">   = <tspan class="c-white">note: Linked Concept: </tspan><tspan class="c-magenta">subjunctive_volition_influence</tspan><tspan class="c-dim"> (Prerequisite: present_indicative_irregular)</tspan></text>
+    <text x="35" y="305" class="term-text c-blue">   = <tspan class="c-white">note: Contrast: Indicative asserts fact; Subjunctive expresses desired outcome</tspan></text>
+    <text x="35" y="325" class="term-text c-blue">   = <tspan class="c-yellow">tip: For a deep conceptual breakdown, run 'spanglings explain E0301' or press [e] in TUI</tspan></text>
+    
+    <line x1="35" y1="350" x2="875" y2="350" stroke="#30363d" stroke-width="1" />
+    <text x="35" y="380" class="term-text c-cyan">Curriculum Progress: <tspan class="c-green">[====================&gt;--------------------]</tspan> <tspan class="c-white">170/339 exercises (50.1%)</tspan></text>
+    <text x="35" y="415" class="term-text c-dim">Controls: [<tspan class="c-yellow">n</tspan>/<tspan class="c-yellow">Enter</tspan>] Next  [<tspan class="c-yellow">p</tspan>] Prev  [<tspan class="c-yellow">r</tspan>] Rerun  [<tspan class="c-yellow">h</tspan>] Hint (Tier 1/3)  [<tspan class="c-yellow">c</tspan>] Conjugate  [<tspan class="c-yellow">q</tspan>] Quit <tspan class="c-red cursor">▌</tspan></text>
+  </g>
 
-    <!-- Diagnostic Error Header -->
-    <text y="86">
-      <tspan class="c-red">error[E0301]</tspan><tspan class="c-white">: </tspan><tspan class="c-white" font-weight="700">Subjunctive Mood Required</tspan>
-    </text>
-    <text y="108">
-      <tspan class="c-blue">  --&gt;</tspan><tspan class="c-white"> exercises/03_subjunctive_weirdo/weirdo01.md:14:15</tspan>
-    </text>
+  <!-- ================= FRAME 3: SPANGLINGS PROGRESSIVE HINT ================= -->
+  <g class="frame frame-3">
+    <text x="35" y="80" class="term-text c-dim">$ <tspan class="c-white">spanglings watch</tspan> <tspan class="c-dim">[user pressed 'h']</tspan></text>
+    
+    <text x="35" y="110" class="term-text c-blue">┌────────────────────────────────────────────────────────────────────────────┐</text>
+    <text x="35" y="130" class="term-text c-blue">│ 💡 <tspan class="c-white">PROGRESSIVE HINT SYSTEM</tspan> │ <tspan class="c-yellow">weirdo01.md</tspan> │ <tspan class="c-gold">Tier 1 of 3 (Conceptual Nudge)</tspan>     │</text>
+    <text x="35" y="150" class="term-text c-blue">├────────────────────────────────────────────────────────────────────────────┤</text>
+    <text x="35" y="175" class="term-text c-yellow">  💡 Rule: When main clause subject (yo) differs from subordinate subject</text>
+    <text x="35" y="195" class="term-text c-yellow">     (tú) and expresses volition (querer), the subordinate verb MUST take</text>
+    <text x="35" y="215" class="term-text c-yellow">     the Present Subjunctive mood.</text>
+    <text x="35" y="245" class="term-text c-dim">  ── Morphological Clue (Tier 2 Preview) ────────────────────────────────────</text>
+    <text x="35" y="270" class="term-text c-white">  • Irregular 'yo-go' stem: <tspan class="c-cyan">venir ➔ vengo ➔ veng- + -as</tspan></text>
+    <text x="35" y="300" class="term-text c-dim">  ── Quick Reference ────────────────────────────────────────────────────────</text>
+    <text x="35" y="325" class="term-text c-white">  • Run <tspan class="c-gold">'spanglings conjugate venir'</tspan> or press <tspan class="c-white">[c]</tspan> to view full conjugation matrix</text>
+    <text x="35" y="350" class="term-text c-blue">└────────────────────────────────────────────────────────────────────────────┘</text>
+    
+    <text x="35" y="390" class="term-text c-dim">Edit &amp; save <tspan class="c-white">weirdo01.md</tspan> with the correct form to re-evaluate... <tspan class="c-yellow cursor">▌</tspan></text>
+  </g>
 
-    <!-- Code Frame & Underline -->
-    <text y="130">
-      <tspan class="c-blue">   |</tspan>
-    </text>
-    <text y="152">
-      <tspan class="c-blue">14 |</tspan><tspan class="c-white"> Quiero que tú </tspan><tspan class="c-red">vienes</tspan><tspan class="c-white"> a la reunión de arquitectura.</tspan>
-    </text>
-    <text y="174">
-      <tspan class="c-blue">   |</tspan><tspan class="c-white">               </tspan><tspan class="c-red">^^^^^^</tspan><tspan class="c-red"> expected subjunctive form &#39;vengas&#39;, found indicative &#39;vienes&#39;</tspan>
-    </text>
-
-    <!-- Notes & Explanations -->
-    <text y="196">
-      <tspan class="c-blue">   =</tspan><tspan class="c-white"> </tspan><tspan class="c-white" font-weight="600">note</tspan><tspan class="c-white">: Main clause expresses volition (&#39;Quiero que...&#39;), triggering mood shift</tspan>
-    </text>
-    <text y="218">
-      <tspan class="c-blue">   =</tspan><tspan class="c-white"> </tspan><tspan class="c-white" font-weight="600">note</tspan><tspan class="c-white">: Linked Concept: </tspan><tspan class="c-magenta">subjunctive_volition_influence</tspan><tspan class="c-dim"> (Prerequisite: present_indicative_irregular)</tspan>
-    </text>
-    <text y="240">
-      <tspan class="c-blue">   =</tspan><tspan class="c-white"> </tspan><tspan class="c-white" font-weight="600">note</tspan><tspan class="c-white">: Contrast: Indicative &#39;vienes&#39; asserts fact; Subjunctive &#39;vengas&#39; expresses desire</tspan>
-    </text>
-    <text y="262">
-      <tspan class="c-blue">   =</tspan><tspan class="c-white"> </tspan><tspan class="c-yellow" font-weight="600">tip</tspan><tspan class="c-white">: For a deep conceptual breakdown, run </tspan><tspan class="c-yellow">&#39;spanglings explain E0301&#39;</tspan><tspan class="c-white"> or press [e] in TUI</tspan>
-    </text>
-
-    <!-- Horizontal Divider -->
-    <line x1="0" y1="285" x2="864" y2="285" stroke="#30363d" stroke-width="1" />
-
-    <!-- Progress Meter -->
-    <text y="315">
-      <tspan class="c-cyan" font-weight="600">Curriculum Progress:</tspan><tspan class="c-green"> [====================&gt;--------------------]</tspan><tspan class="c-white"> 170/339 exercises (50.1%)</tspan>
-    </text>
-    <text y="337">
-      <tspan class="c-dim">CEFR Evaluated Level: </tspan><tspan class="c-gold" font-weight="700">B1 (Threshold Independent)</tspan><tspan class="c-dim"> | Active Vocabulary: </tspan><tspan class="c-white">2,077 words</tspan><tspan class="c-dim"> | Concepts Mastered: </tspan><tspan class="c-white">48/81</tspan>
-    </text>
-
-    <!-- Watcher Navigation Bar -->
-    <text y="375">
-      <tspan class="c-white" font-weight="600">Controls:</tspan><tspan class="c-dim"> [</tspan><tspan class="c-yellow">n</tspan><tspan class="c-dim">/</tspan><tspan class="c-yellow">Enter</tspan><tspan class="c-dim">] Next  [</tspan><tspan class="c-yellow">p</tspan><tspan class="c-dim">] Prev  [</tspan><tspan class="c-yellow">r</tspan><tspan class="c-dim">] Rerun  [</tspan><tspan class="c-yellow">h</tspan><tspan class="c-dim">] Hint (Tier 1/3)  [</tspan><tspan class="c-yellow">c</tspan><tspan class="c-dim">] Conjugate  [</tspan><tspan class="c-yellow">q</tspan><tspan class="c-dim">] Quit</tspan>
-    </text>
+  <!-- ================= FRAME 4: SPANGLINGS ON-SAVE PASS ================= -->
+  <g class="frame frame-4">
+    <text x="35" y="80" class="term-text c-dim">$ <tspan class="c-white">spanglings watch</tspan> <tspan class="c-green">[file saved — re-evaluated in 4.2ms]</tspan></text>
+    
+    <text x="35" y="110" class="term-text c-green">┌────────────────────────────────────────────────────────────────────────────┐</text>
+    <text x="35" y="130" class="term-text c-green">│ 🇪🇸  <tspan class="c-white">SPANGLINGS WATCH MODE</tspan> │ Track 03: Subjunctive │ <tspan class="c-green">weirdo01.md ✓</tspan> │ <tspan class="c-green">171/339</tspan> │</text>
+    <text x="35" y="150" class="term-text c-green">├────────────────────────────────────────────────────────────────────────────┤</text>
+    <text x="35" y="175" class="term-text c-green">  ✅ SUCCESS! Exercise weirdo01 passed all syntactic and aspectual checks!</text>
+    <text x="35" y="205" class="term-text c-dim">  ── Evaluation Details ─────────────────────────────────────────────────────</text>
+    <text x="35" y="230" class="term-text c-white">  ✓ Subjunctive volition agreement: <tspan class="c-green">'vengas'</tspan> verified</text>
+    <text x="35" y="250" class="term-text c-white">  ✓ Concept Mastery: <tspan class="c-magenta">subjunctive_volition_influence</tspan> (<tspan class="c-green">0.0 ➔ 1.0/5.0</tspan>)</text>
+    <text x="35" y="270" class="term-text c-white">  ✓ SM-2 Spaced Repetition: Ease Factor <tspan class="c-cyan">2.50 ➔ 2.60</tspan> | Next Review in <tspan class="c-gold">1 day</tspan></text>
+    <text x="35" y="295" class="term-text c-gold">  🚀 Advancing to next exercise: <tspan class="c-white">weirdo02.md (Emotion &amp; Evaluation Triggers)</tspan></text>
+    <text x="35" y="325" class="term-text c-green">└────────────────────────────────────────────────────────────────────────────┘</text>
+    
+    <text x="35" y="365" class="term-text c-cyan">Curriculum Progress: <tspan class="c-green">[=====================&gt;-------------------]</tspan> <tspan class="c-white">171/339 exercises (50.4%)</tspan></text>
+    <text x="35" y="400" class="term-text c-dim">Watching <tspan class="c-white">exercises/03_subjunctive_weirdo/weirdo02.md</tspan>... <tspan class="c-green cursor">▌</tspan></text>
   </g>
 </svg>
