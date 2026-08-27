@@ -94,12 +94,6 @@ pub fn reset_exercise(exercise_query: &str) -> anyhow::Result<()> {
         None => anyhow::bail!("No exercise found matching query: '{}'", exercise_query),
     };
 
-    let content = fs::read_to_string(&exercise.path)?;
-    if !content.contains("<!-- I AM NOT DONE -->") {
-        let updated = format!("<!-- I AM NOT DONE -->\n{}", content);
-        fs::write(&exercise.path, updated)?;
-    }
-
     let mut state = AppState::load().unwrap_or_default();
     state.unmark_completed(&exercise.id);
     state.save()?;

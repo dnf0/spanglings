@@ -4,8 +4,7 @@ use spanglings::engine::validator::{extract_user_answer, validate_submission, Va
 
 #[test]
 fn test_validation_success() {
-    let content = r#"<!-- I AM NOT DONE -->
-# Subjunctive 01
+    let content = r#"# Subjunctive 01
 <!-- id: b1_sub_01 | level: B1 | topic: subjunctive | type: cloze -->
 
 Quiero que tú (venir) ___ a mi fiesta.
@@ -22,8 +21,7 @@ vengas
 
 #[test]
 fn test_validation_alternative_success() {
-    let content = r#"<!-- I AM NOT DONE -->
-# Subjunctive 01
+    let content = r#"# Subjunctive 01
 <!-- id: b1_sub_01 | level: B1 | topic: subjunctive | type: cloze -->
 
 Quiero que tú (venir) ___ a mi fiesta.
@@ -44,8 +42,7 @@ vengas tú
 
 #[test]
 fn test_validation_targeted_diagnostic_error() {
-    let content = r#"<!-- I AM NOT DONE -->
-# Subjunctive 01
+    let content = r#"# Subjunctive 01
 <!-- id: b1_sub_01 | level: B1 | topic: subjunctive | type: cloze -->
 
 Quiero que tú (venir) ___ a mi fiesta.
@@ -86,8 +83,7 @@ Tier 3: Add '-as' to form 'vengas'.
 
 #[test]
 fn test_validation_general_fallback_diagnostic() {
-    let content = r#"<!-- I AM NOT DONE -->
-# Subjunctive 01
+    let content = r#"# Subjunctive 01
 <!-- id: b1_sub_01 | level: B1 | topic: subjunctive | type: cloze -->
 
 Quiero que tú (venir) ___ a mi fiesta.
@@ -111,8 +107,7 @@ vengas
 
 #[test]
 fn test_extract_user_answer() {
-    let exercise_content = r#"<!-- I AM NOT DONE -->
-# Subjunctive 01
+    let exercise_content = r#"# Subjunctive 01
 <!-- id: b1_sub_01 | level: B1 | topic: subjunctive | type: cloze -->
 
 > **Grammar Rule**: Subjunctive required.
@@ -129,8 +124,7 @@ vengas
 "#;
     let exercise = Exercise::from_markdown("test.md", exercise_content).unwrap();
 
-    let user_edited = r#"<!-- I AM NOT DONE -->
-# Subjunctive 01
+    let user_edited = r#"# Subjunctive 01
 <!-- id: b1_sub_01 | level: B1 | topic: subjunctive | type: cloze -->
 
 > **Grammar Rule**: Subjunctive required.
@@ -151,8 +145,7 @@ vengas
 
 #[test]
 fn test_extract_user_answer_unmodified_returns_empty() {
-    let exercise_content = r#"<!-- I AM NOT DONE -->
-# Subjunctive 01
+    let exercise_content = r#"# Subjunctive 01
 <!-- id: b1_sub_01 | level: B1 | topic: subjunctive | type: cloze -->
 
 ### Exercise
@@ -171,8 +164,7 @@ vengas
 fn test_dynamic_line_number_in_diagnostic() {
     use std::io::Write;
     let mut temp_file = tempfile::NamedTempFile::new().unwrap();
-    let content = r#"<!-- I AM NOT DONE -->
-# Subjunctive 01
+    let content = r#"# Subjunctive 01
 <!-- id: b1_sub_01 | level: B1 | topic: subjunctive | type: cloze -->
 
 ### Exercise
@@ -189,7 +181,7 @@ vengas
 
     match result {
         ValidationResult::Failed { diagnostic, .. } => {
-            assert_eq!(diagnostic.line_number, 6);
+            assert_eq!(diagnostic.line_number, 5);
         }
         _ => panic!("Expected failed validation"),
     }

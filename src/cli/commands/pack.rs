@@ -30,8 +30,7 @@ pub fn run_pack_create(name: &str) -> anyhow::Result<()> {
         let file_path = base_dir.join(&file_name);
         let id_tag = format!("{}_{:02}", slug, i);
         let content = format!(
-            r#"<!-- I AM NOT DONE -->
-# {track_title}: Exercise {num:02}
+            r#"# {track_title}: Exercise {num:02}
 <!-- id: {id} | level: B2 | topic: {slug} | type: cloze -->
 
 > **Grammar Rule**: Custom curriculum exercise for {track_title}.

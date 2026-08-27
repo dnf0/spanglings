@@ -3,8 +3,7 @@ use spanglings::core::exercise::{Exercise, ExerciseType};
 
 #[test]
 fn test_parse_valid_markdown_exercise() {
-    let content = r#"<!-- I AM NOT DONE -->
-# Subjunctive 01: Verbs of Influence
+    let content = r#"# Subjunctive 01: Verbs of Influence
 <!-- id: b1_subjunctive_01 | level: B1 | topic: subjunctive_weirdo | type: cloze -->
 
 > **Grammar Rule**: Verbs of wishing/influence require subjunctive with subject change.
@@ -40,7 +39,7 @@ Tier 3: Add -as -> 'vengas'.
     assert_eq!(exercise.id, "b1_subjunctive_01");
     assert_eq!(exercise.level, Level::B1);
     assert_eq!(exercise.exercise_type, ExerciseType::Cloze);
-    assert!(!exercise.is_done);
+    assert!(exercise.is_done);
     assert_eq!(exercise.solution, "vengas");
     assert_eq!(exercise.alternatives, vec!["vengas tú"]);
     assert_eq!(exercise.hints.len(), 3);
@@ -118,8 +117,7 @@ En cuanto <!-- ANSWER -->, saldremos.
 
 #[test]
 fn test_parse_exercise_with_concept_tags_and_comma_separated() {
-    let content = r#"<!-- I AM NOT DONE -->
-# Header Title
+    let content = r#"# Header Title
 <!-- id: test_concepts_02 | level: B2 | topic: banking | type: transformation | concept_tags: concept_a, concept_b | prerequisites: prereq_1, prereq_2 | grammar_focus: Unquoted grammar focus | contrast_note: Unquoted contrast note -->
 
 ### Context
@@ -131,5 +129,5 @@ Test context
     assert_eq!(ex.grammar_focus.as_deref(), Some("Unquoted grammar focus"));
     assert_eq!(ex.contrast_note.as_deref(), Some("Unquoted contrast note"));
     assert_eq!(ex.title, "Header Title");
-    assert!(!ex.is_done);
+    assert!(ex.is_done);
 }
