@@ -132,7 +132,7 @@
   <g class="frame frame-2">
     <text x="35" y="80" class="term-text c-dim">$ <tspan class="c-white">spanglings watch</tspan></text>
     
-    <text x="35" y="110" class="term-text c-gold">⚡ Spanglings Watcher v0.2.0 <tspan class="c-dim">— Continuous Syntax &amp; Diagnostic Engine</tspan></text>
+    <text x="35" y="110" class="term-text c-gold">⚡ Spanglings Watcher v0.3.0 <tspan class="c-dim">— Continuous Syntax &amp; Diagnostic Engine</tspan></text>
     <text x="35" y="130" class="term-text c-dim">Watching: exercises/03_subjunctive_weirdo/weirdo01.md (Track 03/60 • B1 Subjunctive)</text>
     
     <text x="35" y="165" class="term-text c-red">error[E0301]: <tspan class="c-white">Subjunctive Mood Required</tspan></text>

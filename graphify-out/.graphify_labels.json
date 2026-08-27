@@ -13,7 +13,7 @@
   "11": "engine/mod.rs",
   "12": "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan",
   "13": "progress.rs",
-  "14": "Examples",
+  "14": "Spanglings 🇪🇸 🦀",
   "15": "get_reference_card",
   "16": "run_drill",
   "17": "Commands",
@@ -174,7 +174,7 @@
   "172": "conjugate_verb",
   "173": "Level",
   "174": "tui_tests.rs",
-  "175": "evaluate_current_exercise_in",
+  "175": "export.rs",
   "176": "ADR-0002: Language Server Protocol (LSP) Engine & In-TUI Modal Architecture",
   "177": "Interactive TUI Heatmap, Fuzzy Search & Editor Diagnostics Implementation Plan",
   "178": "hook.rs",
@@ -339,7 +339,7 @@
   "337": "Conversational Markers 06: Digressive Markers: Por cierto & A propósito",
   "338": ".on_key",
   "339": "pack.rs",
-  "340": "Onboarding & Learner's Guide",
+  "340": "Spanglings Onboarding & Learner's Guide 🇪🇸 🦀",
   "341": "💻 CLI Commands",
   "342": "Grammar Reference Cards & Cheat Sheets",
   "343": "Contributing to Spanglings",
@@ -422,5 +422,7 @@
   "420": "Intensive Concession 04: Aun A Riesgo De Que (Hypothetical Danger)",
   "421": "Intensive Concession 05: Aun A Sabiendas De Que (Factual Certainty)",
   "422": "Discourse Connectors 06: Con Todo y Con Eso (Adversative Synthesis)",
-  "423": "get_rule_title"
+  "423": "Changelog",
+  "424": ".from_str",
+  "425": ".new_with_state"
 }
