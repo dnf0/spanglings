@@ -8,9 +8,7 @@ pub fn get_exercises_json(concept: Option<&str>) -> anyhow::Result<String> {
     if let Some(target) = concept {
         let t = target.to_lowercase();
         exercises.retain(|e| {
-            e.concept_tags
-                .iter()
-                .any(|c| c.to_lowercase().contains(&t))
+            e.concept_tags.iter().any(|c| c.to_lowercase().contains(&t))
                 || e.prerequisites
                     .iter()
                     .any(|p| p.to_lowercase().contains(&t))
@@ -30,9 +28,7 @@ pub fn list_exercises(json: bool, concept: Option<&str>) -> anyhow::Result<()> {
     if let Some(target) = concept {
         let t = target.to_lowercase();
         exercises.retain(|e| {
-            e.concept_tags
-                .iter()
-                .any(|c| c.to_lowercase().contains(&t))
+            e.concept_tags.iter().any(|c| c.to_lowercase().contains(&t))
                 || e.prerequisites
                     .iter()
                     .any(|p| p.to_lowercase().contains(&t))

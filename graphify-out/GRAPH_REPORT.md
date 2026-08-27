@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-08-27)
 
 ## Corpus Check
-- 331 files · ~93,470 words
+- 371 files · ~113,590 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1761 nodes · 2025 edges · 299 communities (295 shown, 4 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 137 edges (avg confidence: 0.85)
+- 2007 nodes · 2336 edges · 338 communities (335 shown, 3 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 150 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2cfba8b6`
+- Built from commit: `051f5252`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -217,14 +217,14 @@
 - Executive Leadership 04: Headcount Reallocation
 - Executive Leadership 05: Regulatory Exposure
 - Executive Leadership 06: Board Resolutions
-- Exercise
+- export.rs
 - start_lsp_server
 - compilerOptions
 - Standard Spanish & General Conversational Curriculum Expansion Implementation Plan
-- .current_exercise_mut
+- ConceptId
 - app.rs
 - draw_ui
-- curriculum.rs
+- Exercise
 - Diagnostic Placement Test & Level Fast-Track Implementation Plan
 - VS Code Extension & Latin American Spanish Curriculum Expansion Implementation Plan
 - properties
@@ -235,7 +235,7 @@
 - Spanglings: Developer Spanish Learning (VS Code / Cursor Extension)
 - contributes
 - esbuild.config.js
-- get_exercises_json
+- Design Specification: Linguistic Knowledge Graph & Practical Everyday Curriculum Expansion
 - categories
 - spanglings.executablePath
 - scripts
@@ -307,22 +307,58 @@
 - Adverbial Clauses 04: Immediate Succession: Tan pronto como & Apenas
 - Adverbial Clauses 05: Exceptive Conditions: Salvo que, A menos que & A no ser que
 - Adverbial Clauses 06: Strict Conditions: Siempre y cuando & A condición de que
+- Linguistic Knowledge Graph & Practical Everyday Curriculum Expansion Implementation Plan
+- .from_str
+- Travel Logistics 01: Flight Cancellation Claim
+- Travel Logistics 02: Customs Declaration
+- Travel Logistics 03: Lost Luggage PIR & Compensation
+- Travel Logistics 04: Emergency Itinerary Rebooking
+- Travel Logistics 05: Immigration & Visa Inspection
+- Travel Logistics 06: Travel Insurance Policy Claim
+- Banking & Finance 01: Non-Resident Account Requirements
+- Banking & Finance 02: International Wire Transfer & Fees
+- Banking & Finance 03: Income Tax Return Deductions
+- Banking & Finance 04: Mortgage Terms & Floor Clauses
+- Banking & Finance 05: Unauthorized Transaction & Fraud Report
+- Banking & Finance 06: Freelance Invoicing & Withholding Tax
+- Consumer Rights 01: Official Complaint Sheet (Hoja de Reclamaciones)
+- Consumer Rights 02: Warranty Claims & Statutory Conformity
+- Consumer Rights 03: Telecom Subscription Cancellation Dispute
+- Consumer Rights 04: Utility Overbilling & Rectification
+- Consumer Rights 05: Consumer Arbitration Board (Junta Arbitral)
+- Consumer Rights 06: Verbal Hearing Small Claims Filing
+- Home Maintenance 01: Plumbing Emergency & Water Leaks
+- Home Maintenance 02: Electrical Panel & Circuit Breakers
+- Home Maintenance 03: Formal Landlord Repair Request
+- Home Maintenance 04: Community Dampness & Horizontal Property
+- Home Maintenance 05: Appliance Breakdowns & Technical Service
+- Home Maintenance 06: Community Bylaws & Renovation Notification
+- News & Civic Debate 01: Energy Transition Editorial
+- News & Civic Debate 02: Fiscal Policy Controversy & Polarization
+- News & Civic Debate 03: Opinion Column on Democratic Polarization
+- News & Civic Debate 04: Macroeconomic Inflationary Outlook
+- News & Civic Debate 05: Constitutional Reform & Supermajorities
+- News & Civic Debate 06: Cultural Manifesto & Aesthetic Critique
+- Conversational Markers 01: Epistemic Softeners: Pues & Bueno
+- Conversational Markers 02: Reformulation Markers: O sea vs Es decir
+- Conversational Markers 03: Narrative Closures: Total que & En fin
+- Conversational Markers 04: Emphatic Refusal: Ni hablar & Ni de broma
+- Conversational Markers 05: Courteous Formulas: Faltaría más
+- Conversational Markers 06: Digressive Markers: Por cierto & A propósito
 
 ## God Nodes (most connected - your core abstractions)
 1. `App` - 69 edges
-2. `Exercise` - 41 edges
-3. `AppState` - 36 edges
-4. `validate_submission()` - 21 edges
-5. `get_reference_card()` - 18 edges
-6. `create_sample_exercises()` - 18 edges
-7. `conjugate_verb()` - 17 edges
-8. `Level` - 17 edges
-9. `find_all_exercises()` - 16 edges
-10. `draw_ui()` - 16 edges
+2. `Exercise` - 45 edges
+3. `AppState` - 40 edges
+4. `validate_submission()` - 23 edges
+5. `Level` - 20 edges
+6. `get_reference_card()` - 18 edges
+7. `create_sample_exercises()` - 18 edges
+8. `conjugate_verb()` - 17 edges
+9. `find_all_exercises()` - 17 edges
+10. `ConceptId` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `test_list_exercises_json_serialization()` --calls--> `get_exercises_json()`  [INFERRED]
-  tests/json_output_tests.rs → src/cli/commands/list.rs
 - `test_find_all_exercises_or_embedded_fallback()` --calls--> `find_all_exercises_or_embedded()`  [INFERRED]
   tests/embedded_tests.rs → src/core/curriculum.rs
 - `test_state_fast_track_level()` --calls--> `get_embedded_exercises()`  [INFERRED]
@@ -331,11 +367,13 @@
   tests/blitz_tests.rs → src/cli/commands/blitz.rs
 - `test_get_blitz_items_topic_filter()` --calls--> `get_blitz_items()`  [INFERRED]
   tests/blitz_tests.rs → src/cli/commands/blitz.rs
+- `test_evaluate_exercise_for_check_failed_with_diagnostic()` --calls--> `evaluate_exercise_for_check()`  [INFERRED]
+  tests/check_tests.rs → src/cli/commands/check.rs
 
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (299 total, 4 thin omitted)
+## Communities (338 total, 3 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -347,11 +385,11 @@ Nodes (19): 1.1 Problem Statement, 1.2 The Solution: Spanglings, 1. Executive Su
 
 ### Community 2 - "App"
 Cohesion: 0.06
-Nodes (4): App, Self, String, Vec
+Nodes (5): App, Option, Self, String, Vec
 
 ### Community 3 - "exercise.rs"
-Cohesion: 0.13
-Nodes (11): DiagnosticRule, ExerciseType, ParseExerciseTypeError, Display, Err, Formatter, FromStr, P (+3 more)
+Cohesion: 0.16
+Nodes (16): DiagnosticRule, ExerciseType, parse_optional_string(), parse_string_list(), ParseExerciseTypeError, Display, Err, Formatter (+8 more)
 
 ### Community 4 - "embedded.rs"
 Cohesion: 0.15
@@ -359,23 +397,23 @@ Nodes (17): Dir, Option, Result, run_init(), collect_from_embedded_dir(), extrac
 
 ### Community 7 - "AppState"
 Cohesion: 0.06
-Nodes (33): HashSet, export_state_json(), import_state_json(), PortableStateBackup, DateTime, Option, Result, String (+25 more)
+Nodes (36): export_state_json(), import_state_json(), PortableStateBackup, DateTime, Option, Result, String, Utc (+28 more)
 
 ### Community 10 - "validate_submission"
 Cohesion: 0.11
-Nodes (21): Result, run_review_session(), get_rule_title(), String, extract_user_answer(), find_exercise_line_number(), Diagnostic, Option (+13 more)
+Nodes (23): Result, run_review_session(), get_rule_title(), String, extract_user_answer(), find_exercise_line_number(), Diagnostic, Option (+15 more)
 
 ### Community 12 - "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan"
 Cohesion: 0.25
 Nodes (7): Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan, Task 1: Scaffolding and Failing Tests, Task 2: Standard Error Codes, Task 3: Compiler-Style Diagnostics, Task 4: Accent Mode Integration and Module Exporting, Task 5: Core Validation Logic & Submission Evaluator, Task 6: Verification and Automated Quality Control
 
 ### Community 13 - "progress.rs"
-Cohesion: 0.15
-Nodes (24): BTreeMap, ActivitySummary, compute_activity_summary(), compute_weakness_profile(), get_progress_json(), LevelProgress, ProgressSummary, render_activity_heatmap() (+16 more)
+Cohesion: 0.09
+Nodes (30): BTreeMap, get_exercises_json(), list_exercises(), Option, Result, String, ActivitySummary, compute_activity_summary() (+22 more)
 
 ### Community 14 - "Examples"
-Cohesion: 0.10
-Nodes (20): 1. Install via Cargo (Recommended), 1. Interactive TUI Mode, 2. Build from Source, 2. Language Server Protocol (LSP) Editor Integration, 3. Export to Anki & Markdown Study Notes, 4. Headless Watcher Mode & Editor Integration, 5. Search & Explore, 6. JSON Output & Activity Heatmap (+12 more)
+Cohesion: 0.09
+Nodes (21): 10. Git Pre-Commit / Pre-Push Micro-Drill Hook, 1. Install via Cargo (Recommended), 1. Interactive TUI Mode, 2. Build from Source, 2. Diagnostic Placement Assessment & Level Fast-Tracking, 3. Language Server Protocol (LSP) Editor Integration, 4. Export to Anki & Markdown Study Notes, 5. Headless Watcher Mode & Editor Integration (+13 more)
 
 ### Community 15 - "get_reference_card"
 Cohesion: 0.16
@@ -862,8 +900,8 @@ Cohesion: 0.25
 Nodes (7): Discoverability, Portability & Zero-Setup CLI Implementation Plan, Task 1: Embedded Exercises Catalog & In-Memory Fallback, Task 2: `spanglings init` Subcommand, Task 3: Machine-Readable JSON Output (`--json`), Task 4: Fuzzy Topic & Full-Text Search (`spanglings search`), Task 5: Shell Completions Generator (`spanglings completions`), Task 6: Full Verification & Documentation Update
 
 ### Community 138 - "Spanglings Product & Engineering Backlog"
-Cohesion: 0.14
-Nodes (13): 💻 Focus Area 10: VS Code & Cursor IDE Extension (`spanglings-vscode`) (Completed), 🌎 Focus Area 11: Latin American Spanish High-Impact Curriculum Expansion (Completed), 🗣️ Focus Area 12: Standard Spanish, Everyday Life & General Conversational Expansion (Completed), 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Completed), 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion (Completed), 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements (Completed), 📊 Focus Area 4: Interactive TUI & IDE Integrations (Completed), ⚡ Focus Area 5: Terminal Conjugation Engine & Developer Workflow Hooks (Completed) (+5 more)
+Cohesion: 0.12
+Nodes (16): 💻 Focus Area 10: VS Code & Cursor IDE Extension (`spanglings-vscode`) (Completed), 🌎 Focus Area 11: Latin American Spanish High-Impact Curriculum Expansion (Completed), 🗣️ Focus Area 12: Standard Spanish, Everyday Life & General Conversational Expansion (Completed), 🎯 Focus Area 13: Diagnostic Placement Testing & Level Fast-Tracking (Completed), 🌐 Focus Area 14: Linguistic Knowledge Graph & Practical Everyday Expansion (Completed), 🧭 Focus Area 15: Interactive Onboarding Guided Tour (`spanglings tour`) (Planned), 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Completed), 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion (Completed) (+8 more)
 
 ### Community 139 - "Spanglings Init Subcommand Implementation Plan"
 Cohesion: 0.29
@@ -1002,16 +1040,16 @@ Cohesion: 0.14
 Nodes (19): print_conjugation_summary(), Option, Result, run_conjugate(), conjugate_verb(), get_irregular_verb(), ImperativeForms, PronounForms (+11 more)
 
 ### Community 173 - "Level"
-Cohesion: 0.08
-Nodes (37): R, Option, Result, String, run_test(), run_test_with_io(), Level, ParseLevelError (+29 more)
+Cohesion: 0.09
+Nodes (34): R, Option, Result, String, run_test(), run_test_with_io(), Level, Display (+26 more)
 
 ### Community 174 - "tui_tests.rs"
 Cohesion: 0.21
 Nodes (17): create_sample_exercises(), Vec, test_app_draw_ui_in_search_mode(), test_app_draw_ui_renders_without_panicking(), test_app_initialization_and_navigation(), test_app_input_editing(), test_app_reset(), test_app_search_cancel_restores_state() (+9 more)
 
 ### Community 175 - "evaluate_current_exercise_in"
-Cohesion: 0.33
-Nodes (10): AccentMode, clear_screen(), evaluate_current_exercise(), evaluate_current_exercise_in(), P, Result, start_watch_mode(), test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir() (+2 more)
+Cohesion: 0.19
+Nodes (18): AccentMode, clear_screen(), evaluate_current_exercise(), evaluate_current_exercise_in(), evaluate_exercise(), RawModeGuard, render_all_completed(), render_output() (+10 more)
 
 ### Community 176 - "ADR-0002: Language Server Protocol (LSP) Engine & In-TUI Modal Architecture"
 Cohesion: 0.22
@@ -1137,9 +1175,9 @@ Nodes (3): Context, Executive Leadership 05: Regulatory Exposure, Exercise
 Cohesion: 0.50
 Nodes (3): Context, Executive Leadership 06: Board Resolutions, Exercise
 
-### Community 209 - "Exercise"
-Cohesion: 0.25
-Nodes (16): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+8 more)
+### Community 209 - "export.rs"
+Cohesion: 0.29
+Nodes (13): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+5 more)
 
 ### Community 211 - "compilerOptions"
 Cohesion: 0.11
@@ -1149,17 +1187,21 @@ Nodes (17): compilerOptions, lib, module, moduleResolution, noFallthroughCasesIn
 Cohesion: 0.22
 Nodes (8): Standard Spanish & General Conversational Curriculum Expansion Implementation Plan, Task 1: Track 36 – Everyday Life, Housing & Practical Bureaucracy (`exercises/36_everyday_life_and_housing/`), Task 2: Track 37 – Healthcare, Medical Encounters & Symptoms (`exercises/37_healthcare_and_symptoms/`), Task 3: Track 38 – Dining, Socializing, Small Talk & Nightlife (`exercises/38_dining_and_social_conversation/`), Task 4: Track 39 – Nuanced Prepositions & Spatial/Temporal Locutions (`exercises/39_nuanced_prepositions_and_locutions/`), Task 5: Track 40 – Middle-Voice Shifts & Reflexive Nuances (`exercises/40_middle_voice_and_reflexive_shifts/`), Task 6: Track 41 – Advanced Temporal, Manner & Concessive Adverbial Clauses (`exercises/41_adverbial_clauses_and_conjunctions/`), Task 7: Full Verification, Documentation & Knowledge Graph Update
 
+### Community 213 - "ConceptId"
+Cohesion: 0.13
+Nodes (21): From, ConceptCategory, ConceptId, ConceptNode, get_default_linguistic_graph(), LinguisticGraph, Display, Formatter (+13 more)
+
 ### Community 214 - "app.rs"
 Cohesion: 0.21
-Nodes (9): B, Drop, AppMode, Result, run_tui_app(), RawModeGuard, Result, start_tui() (+1 more)
+Nodes (9): B, AppMode, Result, run_tui_app(), RawModeGuard, Drop, Result, start_tui() (+1 more)
 
 ### Community 215 - "draw_ui"
 Cohesion: 0.45
 Nodes (13): Frame, Rect, centered_rect(), draw_conjugator_modal(), draw_footer(), draw_header(), draw_help_modal(), draw_left_pane() (+5 more)
 
-### Community 216 - "curriculum.rs"
+### Community 216 - "Exercise"
 Cohesion: 0.13
-Nodes (19): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), collect_md_files(), find_all_exercises() (+11 more)
+Nodes (20): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), collect_md_files(), find_all_exercises() (+12 more)
 
 ### Community 217 - "Diagnostic Placement Test & Level Fast-Track Implementation Plan"
 Cohesion: 0.29
@@ -1201,9 +1243,9 @@ Nodes (6): contributes, commands, views, viewsContainers, spanglings-explorer, a
 Cohesion: 0.50
 Nodes (4): esbuild, main(), minify, watch
 
-### Community 227 - "get_exercises_json"
-Cohesion: 0.50
-Nodes (4): get_exercises_json(), list_exercises(), Result, String
+### Community 227 - "Design Specification: Linguistic Knowledge Graph & Practical Everyday Curriculum Expansion"
+Cohesion: 0.11
+Nodes (17): 1. Overview & Pedagogical Objective, 2. Core Architecture & Components, 3.1 Grammar Concept Ontology (`src/core/graph.rs`), 3.2 Enhanced Exercise Metadata (`src/core/exercise.rs`), 3.3 State Model Extension (`src/core/state.rs`), 3. Data Models & Schemas, 4. Curriculum Expansion: Tracks 42 to 47 (36 New Exercises), 5. Retroactive Concept Tagging for Tracks 00 to 41 (231 Exercises) (+9 more)
 
 ### Community 228 - "categories"
 Cohesion: 0.50
@@ -1489,25 +1531,177 @@ Nodes (3): Adverbial Clauses 05: Exceptive Conditions: Salvo que, A menos que & 
 Cohesion: 0.50
 Nodes (3): Adverbial Clauses 06: Strict Conditions: Siempre y cuando & A condición de que, Context, Exercise
 
+### Community 299 - "Linguistic Knowledge Graph & Practical Everyday Curriculum Expansion Implementation Plan"
+Cohesion: 0.22
+Nodes (8): Linguistic Knowledge Graph & Practical Everyday Curriculum Expansion Implementation Plan, Task 1: Core Linguistic Graph Engine & Ontology, Task 2: Enhanced Exercise Metadata & Concept Parser, Task 3: State Concept Mastery & Targeted Weakness Profiler, Task 4: Concept-Aware Diagnostic Compiler & Cross-Links, Task 5: Retroactive Conceptual Tagging of Tracks 00–41 (231 Exercises), Task 6: Curriculum Expansion: Tracks 42 to 47 (36 New Exercises), Task 7: CLI Filtering, Reference Cards & Golden Validation
+
+### Community 301 - ".from_str"
+Cohesion: 0.40
+Nodes (4): ParseLevelError, Err, Self, String
+
+### Community 302 - "Travel Logistics 01: Flight Cancellation Claim"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Travel Logistics 01: Flight Cancellation Claim
+
+### Community 303 - "Travel Logistics 02: Customs Declaration"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Travel Logistics 02: Customs Declaration
+
+### Community 304 - "Travel Logistics 03: Lost Luggage PIR & Compensation"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Travel Logistics 03: Lost Luggage PIR & Compensation
+
+### Community 305 - "Travel Logistics 04: Emergency Itinerary Rebooking"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Travel Logistics 04: Emergency Itinerary Rebooking
+
+### Community 306 - "Travel Logistics 05: Immigration & Visa Inspection"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Travel Logistics 05: Immigration & Visa Inspection
+
+### Community 307 - "Travel Logistics 06: Travel Insurance Policy Claim"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Travel Logistics 06: Travel Insurance Policy Claim
+
+### Community 308 - "Banking & Finance 01: Non-Resident Account Requirements"
+Cohesion: 0.50
+Nodes (3): Banking & Finance 01: Non-Resident Account Requirements, Context, Exercise
+
+### Community 309 - "Banking & Finance 02: International Wire Transfer & Fees"
+Cohesion: 0.50
+Nodes (3): Banking & Finance 02: International Wire Transfer & Fees, Context, Exercise
+
+### Community 310 - "Banking & Finance 03: Income Tax Return Deductions"
+Cohesion: 0.50
+Nodes (3): Banking & Finance 03: Income Tax Return Deductions, Context, Exercise
+
+### Community 311 - "Banking & Finance 04: Mortgage Terms & Floor Clauses"
+Cohesion: 0.50
+Nodes (3): Banking & Finance 04: Mortgage Terms & Floor Clauses, Context, Exercise
+
+### Community 312 - "Banking & Finance 05: Unauthorized Transaction & Fraud Report"
+Cohesion: 0.50
+Nodes (3): Banking & Finance 05: Unauthorized Transaction & Fraud Report, Context, Exercise
+
+### Community 313 - "Banking & Finance 06: Freelance Invoicing & Withholding Tax"
+Cohesion: 0.50
+Nodes (3): Banking & Finance 06: Freelance Invoicing & Withholding Tax, Context, Exercise
+
+### Community 314 - "Consumer Rights 01: Official Complaint Sheet (Hoja de Reclamaciones)"
+Cohesion: 0.50
+Nodes (3): Consumer Rights 01: Official Complaint Sheet (Hoja de Reclamaciones), Context, Exercise
+
+### Community 315 - "Consumer Rights 02: Warranty Claims & Statutory Conformity"
+Cohesion: 0.50
+Nodes (3): Consumer Rights 02: Warranty Claims & Statutory Conformity, Context, Exercise
+
+### Community 316 - "Consumer Rights 03: Telecom Subscription Cancellation Dispute"
+Cohesion: 0.50
+Nodes (3): Consumer Rights 03: Telecom Subscription Cancellation Dispute, Context, Exercise
+
+### Community 317 - "Consumer Rights 04: Utility Overbilling & Rectification"
+Cohesion: 0.50
+Nodes (3): Consumer Rights 04: Utility Overbilling & Rectification, Context, Exercise
+
+### Community 318 - "Consumer Rights 05: Consumer Arbitration Board (Junta Arbitral)"
+Cohesion: 0.50
+Nodes (3): Consumer Rights 05: Consumer Arbitration Board (Junta Arbitral), Context, Exercise
+
+### Community 319 - "Consumer Rights 06: Verbal Hearing Small Claims Filing"
+Cohesion: 0.50
+Nodes (3): Consumer Rights 06: Verbal Hearing Small Claims Filing, Context, Exercise
+
+### Community 320 - "Home Maintenance 01: Plumbing Emergency & Water Leaks"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Home Maintenance 01: Plumbing Emergency & Water Leaks
+
+### Community 321 - "Home Maintenance 02: Electrical Panel & Circuit Breakers"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Home Maintenance 02: Electrical Panel & Circuit Breakers
+
+### Community 322 - "Home Maintenance 03: Formal Landlord Repair Request"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Home Maintenance 03: Formal Landlord Repair Request
+
+### Community 323 - "Home Maintenance 04: Community Dampness & Horizontal Property"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Home Maintenance 04: Community Dampness & Horizontal Property
+
+### Community 324 - "Home Maintenance 05: Appliance Breakdowns & Technical Service"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Home Maintenance 05: Appliance Breakdowns & Technical Service
+
+### Community 325 - "Home Maintenance 06: Community Bylaws & Renovation Notification"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Home Maintenance 06: Community Bylaws & Renovation Notification
+
+### Community 326 - "News & Civic Debate 01: Energy Transition Editorial"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, News & Civic Debate 01: Energy Transition Editorial
+
+### Community 327 - "News & Civic Debate 02: Fiscal Policy Controversy & Polarization"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, News & Civic Debate 02: Fiscal Policy Controversy & Polarization
+
+### Community 328 - "News & Civic Debate 03: Opinion Column on Democratic Polarization"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, News & Civic Debate 03: Opinion Column on Democratic Polarization
+
+### Community 329 - "News & Civic Debate 04: Macroeconomic Inflationary Outlook"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, News & Civic Debate 04: Macroeconomic Inflationary Outlook
+
+### Community 330 - "News & Civic Debate 05: Constitutional Reform & Supermajorities"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, News & Civic Debate 05: Constitutional Reform & Supermajorities
+
+### Community 331 - "News & Civic Debate 06: Cultural Manifesto & Aesthetic Critique"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, News & Civic Debate 06: Cultural Manifesto & Aesthetic Critique
+
+### Community 332 - "Conversational Markers 01: Epistemic Softeners: Pues & Bueno"
+Cohesion: 0.50
+Nodes (3): Context, Conversational Markers 01: Epistemic Softeners: Pues & Bueno, Exercise
+
+### Community 333 - "Conversational Markers 02: Reformulation Markers: O sea vs Es decir"
+Cohesion: 0.50
+Nodes (3): Context, Conversational Markers 02: Reformulation Markers: O sea vs Es decir, Exercise
+
+### Community 334 - "Conversational Markers 03: Narrative Closures: Total que & En fin"
+Cohesion: 0.50
+Nodes (3): Context, Conversational Markers 03: Narrative Closures: Total que & En fin, Exercise
+
+### Community 335 - "Conversational Markers 04: Emphatic Refusal: Ni hablar & Ni de broma"
+Cohesion: 0.50
+Nodes (3): Context, Conversational Markers 04: Emphatic Refusal: Ni hablar & Ni de broma, Exercise
+
+### Community 336 - "Conversational Markers 05: Courteous Formulas: Faltaría más"
+Cohesion: 0.50
+Nodes (3): Context, Conversational Markers 05: Courteous Formulas: Faltaría más, Exercise
+
+### Community 337 - "Conversational Markers 06: Digressive Markers: Por cierto & A propósito"
+Cohesion: 0.50
+Nodes (3): Context, Conversational Markers 06: Digressive Markers: Por cierto & A propósito, Exercise
+
 ## Knowledge Gaps
-- **648 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+643 more)
+- **745 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+740 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **4 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Exercise` connect `Exercise` to `App`, `exercise.rs`, `embedded.rs`, `AppState`, `validate_submission`, `progress.rs`, `Level`, `check.rs`, `tui_tests.rs`, `.current_exercise_mut`, `app.rs`, `curriculum.rs`, `search_exercises`?**
-  _High betweenness centrality (0.039) - this node is a cross-community bridge._
-- **Why does `App` connect `App` to `validate_submission`, `conjugate_verb`, `Level`, `Exercise`, `.current_exercise_mut`, `app.rs`, `draw_ui`?**
-  _High betweenness centrality (0.032) - this node is a cross-community bridge._
-- **Why does `AppState` connect `AppState` to `Exercise`, `progress.rs`, `evaluate_current_exercise_in`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **Are the 16 inferred relationships involving `validate_submission()` (e.g. with `evaluate_exercise_for_check()` and `run_pack_validate()`) actually correct?**
-  _`validate_submission()` has 16 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 16 inferred relationships involving `get_reference_card()` (e.g. with `show_explanation()` and `compute_hover()`) actually correct?**
-  _`get_reference_card()` has 16 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `Exercise` connect `Exercise` to `App`, `exercise.rs`, `embedded.rs`, `AppState`, `validate_submission`, `progress.rs`, `Level`, `check.rs`, `evaluate_current_exercise_in`, `export.rs`, `tui_tests.rs`, `app.rs`, `search_exercises`?**
+  _High betweenness centrality (0.041) - this node is a cross-community bridge._
+- **Why does `App` connect `App` to `validate_submission`, `conjugate_verb`, `Level`, `app.rs`, `draw_ui`, `Exercise`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **Why does `Level` connect `Level` to `exercise.rs`, `AppState`, `.from_str`, `ConceptId`, `Exercise`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Are the 18 inferred relationships involving `validate_submission()` (e.g. with `evaluate_exercise_for_check()` and `run_pack_validate()`) actually correct?**
+  _`validate_submission()` has 18 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `esbuild`, `minify` to the rest of the system?**
-  _648 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _745 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
+- **Should `App` be split into smaller, more focused modules?**
+  _Cohesion score 0.05920444033302498 - nodes in this community are weakly interconnected._
