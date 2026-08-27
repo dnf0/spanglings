@@ -43,7 +43,7 @@ fn test_get_tour_stations_contains_all_six_stations() {
     assert_eq!(stations[4].id, "tools_placement");
     assert_eq!(stations[5].id, "workflows");
 
-    for station in &stations {
+    for station in stations {
         assert!(!station.title.is_empty());
         assert!(!station.description.is_empty());
         assert!(!station.bullet_points.is_empty());

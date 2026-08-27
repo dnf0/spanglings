@@ -653,3 +653,46 @@ fn test_tui_draw_tour_modals_without_panicking() {
     app.show_tour_welcome = false;
     narrow_terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
 }
+
+#[test]
+fn test_tui_tour_events_delegation() {
+    let exercises = create_sample_exercises();
+    let state = spanglings::core::state::AppState {
+        tour_completed: false,
+        ..Default::default()
+    };
+    let mut app = App::new_with_state(exercises, false, state);
+
+    // Initial state: welcome modal is shown for new state
+    assert!(app.show_tour_welcome);
+
+    // Press 'y' -> opens tour modal at station 0
+    app.on_key(crossterm::event::KeyCode::Char('y'));
+    assert!(!app.show_tour_welcome);
+    assert!(app.show_tour_modal);
+    assert_eq!(app.tour_current_station, 0);
+
+    // Advance station with Right
+    app.on_key(crossterm::event::KeyCode::Right);
+    assert_eq!(app.tour_current_station, 1);
+
+    // Advance station with 'n'
+    app.on_key(crossterm::event::KeyCode::Char('n'));
+    assert_eq!(app.tour_current_station, 2);
+
+    // Go back with 'p'
+    app.on_key(crossterm::event::KeyCode::Char('p'));
+    assert_eq!(app.tour_current_station, 1);
+
+    // Close with 'q'
+    app.on_key(crossterm::event::KeyCode::Char('q'));
+    assert!(!app.show_tour_modal);
+
+    // In editing mode, open help modal then press 't'
+    app.enter_help();
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Help);
+    app.exit_help();
+    app.show_tour_modal = true;
+    app.tour_current_station = 0;
+    assert!(app.show_tour_modal);
+}

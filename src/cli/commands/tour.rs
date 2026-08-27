@@ -1,6 +1,7 @@
 use crate::core::state::AppState;
 use colored::Colorize;
 use std::io::{self, BufRead, IsTerminal, Write};
+use std::sync::LazyLock;
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct TourChallenge {
@@ -22,7 +23,7 @@ pub struct TourStation {
     pub simulated_output: Option<String>,
 }
 
-pub fn get_tour_stations() -> Vec<TourStation> {
+static TOUR_STATIONS: LazyLock<Vec<TourStation>> = LazyLock::new(|| {
     vec![
         TourStation {
             id: "philosophy".to_string(),
@@ -117,6 +118,10 @@ pub fn get_tour_stations() -> Vec<TourStation> {
             simulated_output: None,
         },
     ]
+});
+
+pub fn get_tour_stations() -> &'static [TourStation] {
+    &TOUR_STATIONS
 }
 
 pub fn render_station_card(station: &TourStation, index: usize, total: usize) {
@@ -304,7 +309,7 @@ pub fn run_tour(skip_challenges: bool) -> anyhow::Result<()> {
     let stations = get_tour_stations();
 
     if is_interactive {
-        let completed = run_interactive_tour(&stations)?;
+        let completed = run_interactive_tour(stations)?;
         if !completed {
             return Ok(());
         }

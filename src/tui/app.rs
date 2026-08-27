@@ -616,7 +616,10 @@ impl App {
                     } else {
                         self.show_tour_modal = false;
                         self.state.mark_tour_completed();
-                        let _ = self.state.save();
+                        if let Err(e) = self.state.save() {
+                            self.status_message =
+                                Some(format!("Warning: Failed to save state: {}", e));
+                        }
                     }
                 }
                 KeyCode::Left | KeyCode::Char('p') | KeyCode::Char('P') => {

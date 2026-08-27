@@ -1311,13 +1311,25 @@ fn draw_help_modal(frame: &mut Frame, _app: &App, area: Rect) {
         ]),
         Line::from(vec![
             Span::styled(
-                "  [t] / [F5]            ",
+                "  [p] / [F5]            ",
                 Style::default()
                     .fg(Color::Yellow)
                     .add_modifier(Modifier::BOLD),
             ),
             Span::styled(
                 "Launch Diagnostic Placement Test & Level Fast-Track",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(vec![
+            Span::styled(
+                "  [T] / [F6]            ",
+                Style::default()
+                    .fg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Launch Interactive Onboarding Guided Tour",
                 Style::default().fg(Color::White),
             ),
         ]),
