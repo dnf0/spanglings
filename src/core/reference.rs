@@ -71,21 +71,11 @@ pub fn get_reference_card(topic: &str) -> Option<&'static str> {
         | "futuro-subjuntivo"
         | "archaic-subjunctive"
         | "e0053" => Some(LEGAL_SUBJUNCTIVE_CARD),
-        "verbs-of-becoming"
-        | "cambio"
-        | "devenir"
-        | "hacerse"
-        | "ponerse"
-        | "quedarse"
-        | "volverse"
-        | "e0054" => Some(VERBS_OF_BECOMING_CARD),
-        "epistemic-adverbs"
-        | "duda"
-        | "a-lo-mejor"
-        | "quizas"
-        | "tal-vez"
-        | "igual"
-        | "e0055" => Some(EPISTEMIC_ADVERBS_CARD),
+        "verbs-of-becoming" | "cambio" | "devenir" | "hacerse" | "ponerse" | "quedarse"
+        | "volverse" | "e0054" => Some(VERBS_OF_BECOMING_CARD),
+        "epistemic-adverbs" | "duda" | "a-lo-mejor" | "quizas" | "tal-vez" | "igual" | "e0055" => {
+            Some(EPISTEMIC_ADVERBS_CARD)
+        }
         "possessive-datives"
         | "dativo-posesivo"
         | "dativo-etico"
@@ -98,11 +88,9 @@ pub fn get_reference_card(topic: &str) -> Option<&'static str> {
         | "de-ahi-que"
         | "no-porque"
         | "e0057" => Some(CORRECTIVE_POLARITY_CARD),
-        "participial-absolutes"
-        | "participio-absoluto"
-        | "absolutas"
-        | "participles"
-        | "e0058" => Some(PARTICIPIAL_ABSOLUTES_CARD),
+        "participial-absolutes" | "participio-absoluto" | "absolutas" | "participles" | "e0058" => {
+            Some(PARTICIPIAL_ABSOLUTES_CARD)
+        }
         "scalar-concession"
         | "concesivas-intensivas"
         | "por-mucho-que"
@@ -117,7 +105,10 @@ pub fn get_reference_card(topic: &str) -> Option<&'static str> {
                 Some(POR_PARA_CARD)
             } else if key.starts_with("ser-vs-estar") || key.starts_with("ser-estar") {
                 Some(SER_ESTAR_CARD)
-            } else if key.starts_with("past-") || key.starts_with("preterite") || key.starts_with("imperfect") {
+            } else if key.starts_with("past-")
+                || key.starts_with("preterite")
+                || key.starts_with("imperfect")
+            {
                 Some(PAST_TENSES_CARD)
             } else if key.starts_with("verbs-of-becoming") {
                 Some(VERBS_OF_BECOMING_CARD)
@@ -133,7 +124,10 @@ pub fn get_reference_card(topic: &str) -> Option<&'static str> {
                 Some(GERUND_RULES_CARD)
             } else if key.starts_with("adversative") {
                 Some(ADVERSATIVES_CARD)
-            } else if key.starts_with("corrective-") || key.starts_with("rejected-cause") || key.starts_with("consecutive-subjunctive") {
+            } else if key.starts_with("corrective-")
+                || key.starts_with("rejected-cause")
+                || key.starts_with("consecutive-subjunctive")
+            {
                 Some(CORRECTIVE_POLARITY_CARD)
             } else if key.starts_with("participial-") {
                 Some(PARTICIPIAL_ABSOLUTES_CARD)
