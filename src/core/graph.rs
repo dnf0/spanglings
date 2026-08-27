@@ -993,6 +993,177 @@ pub fn get_default_linguistic_graph() -> LinguisticGraph {
         .with_prerequisites(vec!["imperfect_subjunctive_formation"])
         .with_reference_topic("legal-subjunctive")
         .with_foundational_track("53_independent_subjunctives_and_legal_tenses"),
+
+        // Track 54: Verbs of Becoming & Transformation (Aspect and Tense)
+        ConceptNode::new(
+            "becoming_temporary_state_ponerse",
+            "Verbs of Becoming: Temporary Physical & Emotional States (Ponerse)",
+            ConceptCategory::AspectAndTense,
+            Level::B2,
+            "Expressing involuntary, rapid, and temporary changes in physical appearance, health, or emotional state using reflexive ponerse + adjective.",
+        )
+        .with_prerequisites(vec!["ser_vs_estar_adjectival_shifts", "middle_voice_reflexive_shifts"])
+        .with_reference_topic("verbs-of-becoming")
+        .with_foundational_track("54_verbs_of_becoming_and_transformation"),
+
+        ConceptNode::new(
+            "becoming_resulting_state_quedarse",
+            "Verbs of Becoming: Resulting States, Reaction & Deprivation (Quedarse)",
+            ConceptCategory::AspectAndTense,
+            Level::B2,
+            "Expressing resulting states caused by an external event, permanent loss/deprivation, or involuntary physical aftermath using quedarse + adjective.",
+        )
+        .with_prerequisites(vec!["becoming_temporary_state_ponerse"])
+        .with_reference_topic("verbs-of-becoming")
+        .with_foundational_track("54_verbs_of_becoming_and_transformation"),
+
+        ConceptNode::new(
+            "becoming_voluntary_evolution_hacerse",
+            "Verbs of Becoming: Voluntary Evolution, Ideology & Profession (Hacerse)",
+            ConceptCategory::AspectAndTense,
+            Level::B2,
+            "Expressing voluntary changes resulting from intentional effort, career trajectory, political/religious beliefs, or natural aging using hacerse.",
+        )
+        .with_prerequisites(vec!["becoming_temporary_state_ponerse"])
+        .with_reference_topic("verbs-of-becoming")
+        .with_foundational_track("54_verbs_of_becoming_and_transformation"),
+
+        ConceptNode::new(
+            "becoming_involuntary_shift_volverse",
+            "Verbs of Becoming: Fundamental Character & Psychological Shifts (Volverse)",
+            ConceptCategory::AspectAndTense,
+            Level::C1,
+            "Expressing profound, lasting, and often involuntary transformations in personality, mental state, or nature using volverse + adjective.",
+        )
+        .with_prerequisites(vec!["becoming_resulting_state_quedarse"])
+        .with_reference_topic("verbs-of-becoming")
+        .with_foundational_track("54_verbs_of_becoming_and_transformation"),
+
+        ConceptNode::new(
+            "becoming_achievement_culmination_llegar_a_ser",
+            "Verbs of Becoming: Effortful Culmination & Lifetime Achievement (Llegar a ser)",
+            ConceptCategory::AspectAndTense,
+            Level::C1,
+            "Expressing the long-term culmination of sustained effort, career ascension, or social standing using periphrastic llegar a ser.",
+        )
+        .with_prerequisites(vec!["becoming_voluntary_evolution_hacerse"])
+        .with_reference_topic("verbs-of-becoming")
+        .with_foundational_track("54_verbs_of_becoming_and_transformation"),
+
+        ConceptNode::new(
+            "becoming_radical_transformation_convertirse_en",
+            "Verbs of Becoming: Radical Transformation & Metamorphosis (Convertirse en)",
+            ConceptCategory::AspectAndTense,
+            Level::C1,
+            "Expressing complete radical transformation or structural category change using convertirse en / transformarse en + noun.",
+        )
+        .with_prerequisites(vec!["prepositional_regimes", "becoming_resulting_state_quedarse"])
+        .with_reference_topic("verbs-of-becoming")
+        .with_foundational_track("54_verbs_of_becoming_and_transformation"),
+
+        // Track 55: Epistemic Adverbs & Mood Selection (Mood Selection)
+        ConceptNode::new(
+            "epistemic_adverbs_indicative_a_lo_mejor_igual",
+            "Epistemic Adverbs of Mandatory Indicative (A lo mejor / Igual)",
+            ConceptCategory::MoodSelection,
+            Level::B1,
+            "Mastering the non-negotiable indicative mood requirement following high-frequency colloquial epistemic markers a lo mejor, igual, and lo mismo.",
+        )
+        .with_prerequisites(vec!["irregular_present_stems"])
+        .with_reference_topic("epistemic-adverbs")
+        .with_foundational_track("55_epistemic_adverbs_and_mood_selection"),
+
+        ConceptNode::new(
+            "epistemic_adverbs_positional_mood_quizas_tal_vez",
+            "Epistemic Adverbs & Positional Mood Alternation (Quizás / Tal vez / Acaso)",
+            ConceptCategory::MoodSelection,
+            Level::B2,
+            "Selecting subjunctive vs indicative based on speaker uncertainty and syntactic pre-verbal vs post-verbal positioning of quizás, tal vez, and acaso.",
+        )
+        .with_prerequisites(vec!["epistemic_adverbs_indicative_a_lo_mejor_igual", "subjunctive_doubt_denial"])
+        .with_reference_topic("epistemic-adverbs")
+        .with_foundational_track("55_epistemic_adverbs_and_mood_selection"),
+
+        // Track 56: Dative of Inalienable Possession & Ethic Dative (Pronouns and Voice)
+        ConceptNode::new(
+            "dative_of_inalienable_possession",
+            "Dative of Inalienable Possession (Body Parts & Personal Belongings)",
+            ConceptCategory::PronounsAndVoice,
+            Level::B1,
+            "Replacing redundant possessive determiners (*mi, *su) with definite articles and indirect object clitics when referring to body parts and personal clothing.",
+        )
+        .with_prerequisites(vec!["direct_indirect_pronouns"])
+        .with_reference_topic("possessive-datives")
+        .with_foundational_track("56_datives_of_possession_and_ethic_datives"),
+
+        ConceptNode::new(
+            "ethic_affective_sympathetic_dative",
+            "Ethic & Affective Clitics of Expressive Involvement",
+            ConceptCategory::PronounsAndVoice,
+            Level::B2,
+            "Mastering non-argumental affective clitics expressing emotional investment, paternal concern, grief, or personal consumption (no me llores, se nos cayó).",
+        )
+        .with_prerequisites(vec!["dative_of_inalienable_possession"])
+        .with_reference_topic("possessive-datives")
+        .with_foundational_track("56_datives_of_possession_and_ethic_datives"),
+
+        // Track 57: Corrective & Concessive Polarities (Mood Selection)
+        ConceptNode::new(
+            "corrective_negation_no_es_que_sino_que",
+            "Corrective Matrix Polarity & Subjunctive (No es que... sino que...)",
+            ConceptCategory::MoodSelection,
+            Level::B2,
+            "Corrective causal structures requiring subjunctive for the rejected proposition and indicative for the asserted replacement clause.",
+        )
+        .with_prerequisites(vec!["adversative_sino_que_clauses", "subjunctive_doubt_denial"])
+        .with_reference_topic("corrective-polarity")
+        .with_foundational_track("57_corrective_and_concessive_polarities"),
+
+        ConceptNode::new(
+            "rejected_cause_consecutive_de_ahi_que",
+            "Rejected Causes (No porque...) & Consecutive Subjunctive (De ahí que...)",
+            ConceptCategory::MoodSelection,
+            Level::C1,
+            "Subjunctive mood triggers in rejected rationale clauses (no porque + subj) and formal consecutive connectors (de ahí que + subj).",
+        )
+        .with_prerequisites(vec!["corrective_negation_no_es_que_sino_que"])
+        .with_reference_topic("corrective-polarity")
+        .with_foundational_track("57_corrective_and_concessive_polarities"),
+
+        // Track 58: Participial Absolute Constructions (Syntax and Rhetoric)
+        ConceptNode::new(
+            "participial_absolute_clauses",
+            "Participial Absolute Clauses & High-Register Syntactic Condensation",
+            ConceptCategory::SyntaxAndRhetoric,
+            Level::C1,
+            "Constructing preposed absolute participle clauses with strict noun agreement for elegant temporal and causal syntactic condensation in formal registers.",
+        )
+        .with_prerequisites(vec!["passive_refleja_vs_impersonal", "discourse_connectors"])
+        .with_reference_topic("participial-absolutes")
+        .with_foundational_track("58_participial_absolute_constructions"),
+
+        // Track 59: Scalar Concession & Intensive Connectors (Syntax and Rhetoric)
+        ConceptNode::new(
+            "scalar_concession_por_mucho_que",
+            "Scalar Concession & Intensive Subjunctive (Por mucho/más que)",
+            ConceptCategory::SyntaxAndRhetoric,
+            Level::C1,
+            "Mastering scalar concessive structures (por mucho/más que, por muy + adj + que) requiring subjunctive to express maximum hypothetical degree.",
+        )
+        .with_prerequisites(vec!["advanced_concessive_mood_alternation"])
+        .with_reference_topic("scalar-concession")
+        .with_foundational_track("59_scalar_concession_and_intensive_connectors"),
+
+        ConceptNode::new(
+            "intensive_concession_riesgo_vs_sabiendas",
+            "Fixed Concessive Mood Contrast (A riesgo de que vs A sabiendas de que)",
+            ConceptCategory::SyntaxAndRhetoric,
+            Level::C1,
+            "Differentiating mood selection in complex locutions between hypothetical risk (aun a riesgo de que + subj) and acknowledged fact (aun a sabiendas de que + ind).",
+        )
+        .with_prerequisites(vec!["scalar_concession_por_mucho_que"])
+        .with_reference_topic("scalar-concession")
+        .with_foundational_track("59_scalar_concession_and_intensive_connectors"),
     ];
 
     for concept in concepts {

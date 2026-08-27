@@ -348,3 +348,55 @@ Tier 3: Write 'sino que rediseñó'.
         _ => panic!("Expected E0052 diagnostic match"),
     }
 }
+
+#[test]
+fn test_language_completeness_diagnostic_rules_e0054_to_e0059() {
+    let raw_md = r#"# Becoming 01
+<!-- id: b2_becoming_test | level: B2 | topic: verbs-of-becoming | type: cloze | concepts: ["becoming_temporary_state_ponerse"] | prerequisites: ["ser_vs_estar_adjective_shifts"] | grammar_focus: "Temporary emotional state with 'ponerse'." | contrast_note: "'Ponerse furioso' vs invalid '*hacerse furioso'." -->
+
+### Exercise
+Cuando el despliegue falló, el director (se puso / se hizo) ___ furioso.
+
+<!-- SOLUTION
+se puso
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "se hizo" | code: "E0054" | message: "Involuntary temporary emotional reaction requires 'se puso', not 'se hizo'."
+-->
+
+<!-- HINTS
+Tier 1: Use ponerse for temporary emotional states.
+Tier 2: Form: 'se puso'.
+Tier 3: Write 'se puso'.
+-->
+"#;
+
+    let exercise = Exercise::from_markdown("exercises/54_becoming/01_test.md", raw_md).unwrap();
+    let result = validate_submission(&exercise, "se hizo", AccentMode::Forgiving);
+
+    match result {
+        ValidationResult::Failed { diagnostic, .. } => {
+            assert_eq!(diagnostic.code, "E0054");
+            assert_eq!(
+                diagnostic.title,
+                "verbs of becoming (ponerse / quedarse / hacerse / volverse)"
+            );
+            assert!(diagnostic
+                .message
+                .contains("Involuntary temporary emotional reaction requires 'se puso'"));
+            assert_eq!(
+                diagnostic.linked_concept,
+                Some("becoming_temporary_state_ponerse".to_string())
+            );
+
+            let terminal = diagnostic.format_terminal();
+            assert!(terminal.contains("error[E0054]"));
+            assert!(
+                terminal.contains("verbs of becoming (ponerse / quedarse / hacerse / volverse)")
+            );
+            assert!(terminal.contains("Linked Concept: becoming_temporary_state_ponerse"));
+        }
+        _ => panic!("Expected E0054 diagnostic match"),
+    }
+}

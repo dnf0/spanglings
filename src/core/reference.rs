@@ -17,6 +17,12 @@ pub const TOPICS: &[&str] = &[
     "gerund-rules",
     "adversatives",
     "legal-subjunctive",
+    "verbs-of-becoming",
+    "epistemic-adverbs",
+    "possessive-datives",
+    "corrective-polarity",
+    "participial-absolutes",
+    "scalar-concession",
 ];
 
 pub fn list_reference_topics() -> &'static [&'static str] {
@@ -51,6 +57,27 @@ pub fn get_reference_card(topic: &str) -> Option<&'static str> {
         "legal-subjunctive" | "optatives" | "futuro-subjuntivo" | "archaic-subjunctive" => {
             Some(LEGAL_SUBJUNCTIVE_CARD)
         }
+        "verbs-of-becoming" | "cambio" | "devenir" | "hacerse" | "ponerse" | "quedarse"
+        | "volverse" => Some(VERBS_OF_BECOMING_CARD),
+        "epistemic-adverbs" | "duda" | "a-lo-mejor" | "quizas" | "tal-vez" | "igual" => {
+            Some(EPISTEMIC_ADVERBS_CARD)
+        }
+        "possessive-datives"
+        | "dativo-posesivo"
+        | "dativo-etico"
+        | "posesion-inalienable"
+        | "datives" => Some(POSSESSIVE_DATIVES_CARD),
+        "corrective-polarity" | "polaridad" | "no-es-que" | "de-ahi-que" | "no-porque" => {
+            Some(CORRECTIVE_POLARITY_CARD)
+        }
+        "participial-absolutes" | "participio-absoluto" | "absolutas" | "participles" => {
+            Some(PARTICIPIAL_ABSOLUTES_CARD)
+        }
+        "scalar-concession"
+        | "concesivas-intensivas"
+        | "por-mucho-que"
+        | "a-riesgo-de-que"
+        | "concession" => Some(SCALAR_CONCESSION_CARD),
         _ => None,
     }
 }
@@ -486,5 +513,148 @@ pub const LEGAL_SUBJUNCTIVE_CARD: &str = r#"
    In high journalistic & literary prose, '-ra' often replaces 'había + participio':
    - El proyecto que INICIARA la empresa hace dos años culminó con éxito.
      (= que había iniciado)
+================================================================================
+"#;
+
+pub const VERBS_OF_BECOMING_CARD: &str = r#"
+================================================================================
+             VERBS OF BECOMING & TRANSFORMATION (VERBOS DE CAMBIO)
+================================================================================
+Spanish lacks a generic verb "to become". Choice depends on voluntariness,
+permanence, and the physical/psychological nature of the transition:
+
+1. PONERSE + Adjective (Involuntary, rapid, temporary emotional/physical state):
+   - Se puso furioso cuando cayó el servidor. (Emotional reaction)
+   - Me puse rojo de la vergüenza. (Physical involuntary change)
+
+2. QUEDARSE + Adjective (Resulting state from external event, loss, or shock):
+   - Nos quedamos atónitos ante el anuncio. (Shock/reaction)
+   - El portátil se quedó sin batería. (Deprivation/loss)
+   - Se quedó ciego tras el accidente. (Permanent physical aftermath)
+
+3. HACERSE + Noun/Adj (Voluntary change through effort, ideology, career, aging):
+   - Se hizo vegetariano por convicción ética. (Voluntary choice)
+   - Se hizo arquitecto tras cinco años de estudio. (Professional evolution)
+   - Se hace tarde. / Se hace mayor. (Natural progression)
+
+4. VOLVERSE + Adjective (Profound, lasting, involuntary character/psychological shift):
+   - Se volvió muy desconfiado con los inversores. (Lasting personality shift)
+   - ¡Te has vuelto loco! (Mental transformation)
+
+5. LLEGAR A SER + Noun/Adj (Culmination of long effort and career ascension):
+   - Tras décadas de trabajo, llegó a ser directora general. (Lifetime summit)
+
+6. CONVERTIRSE EN + Noun (Radical transformation or categorical change):
+   - La startup se convirtió en un unicornio tecnológico. (Total metamorphosis)
+================================================================================
+"#;
+
+pub const EPISTEMIC_ADVERBS_CARD: &str = r#"
+================================================================================
+               EPISTEMIC ADVERBS & MOOD SELECTION (DUDA Y CERTEZA)
+================================================================================
+1. MANDATORY INDICATIVE: A LO MEJOR, IGUAL, LO MISMO:
+   These colloquial epistemic adverbs ALWAYS take the INDICATIVE mood:
+   - A LO MEJOR TIENE (❌ *tenga) la clave de cifrado.
+   - IGUAL LLEGA (❌ *llegue) a tiempo para la demo.
+   - LO MISMO ESTÁ (❌ *esté) todavía en la reunión.
+
+2. POSITIONAL MOOD WITH QUIZÁS / TAL VEZ / ACASO:
+   - Pre-verbal position: INDICATIVE (less doubt) or SUBJUNCTIVE (greater doubt):
+     * Quizás VENGA mañana. (High uncertainty -> Subjunctive)
+     * Quizás VIENE mañana. (Strong expectation / probability -> Indicative)
+   - Post-verbal position: MANDATORY INDICATIVE:
+     * Vendrá mañana, QUIZÁS. (❌ *venga)
+     * Ya lo sabe, TAL VEZ.
+
+3. PROBABLEMENTE / SEGURAMENTE:
+   - Seguramente está en casa. (High probability = Indicative)
+   - Seguramente esté en casa. (Latin American preference / higher doubt = Subjunctive)
+================================================================================
+"#;
+
+pub const POSSESSIVE_DATIVES_CARD: &str = r#"
+================================================================================
+         DATIVE OF INALIENABLE POSSESSION & ETHIC/AFFECTIVE CLITICS
+================================================================================
+1. INALIENABLE POSSESSION (Body Parts & Personal Possessions):
+   Spanish rejects redundant possessive adjectives (*mis, *sus) when an affected
+   person is marked with a dative clitic and definite article:
+   - INCORRECT (English calque): *Lavo mis manos. / *Rompí su pantalla.
+   - CORRECT (Dative + Article):  ME lavo LAS manos. / LE rompí LA pantalla.
+   - SE LE cayó EL pasaporte al suelo.
+
+2. ETHIC & AFFECTIVE CLITICS (Expressive Personal Involvement):
+   Non-argument clitics expressing sympathy, grief, emotional stake, or consumption:
+   - ¡No ME llores! (Paternal/affectionate plea -> "Don't cry on me")
+   - El niño no ME come verdura. (Affective parental concern)
+   - SE NOS cayó el despliegue a producción. (Sympathetic collective impact)
+   - BÉBETE la taza entera de café. (Deliberative complete consumption)
+================================================================================
+"#;
+
+pub const CORRECTIVE_POLARITY_CARD: &str = r#"
+================================================================================
+             CORRECTIVE & CONCESSIVE POLARITY (NO ES QUE... SINO QUE...)
+================================================================================
+1. CORRECTIVE NEGATION: NO ES QUE [Subjuntivo]... SINO QUE [Indicativo]:
+   Rejects a false hypothesis in the first clause and asserts actual fact in the second:
+   - NO ES QUE no QUIERA (Subjunctive) ayudarte, SINO QUE no PUEDO (Indicative).
+   - NO ES QUE SEA (Subjunctive) un mal diseño, SINO QUE FALTA (Indicative) tiempo.
+
+2. REJECTED CAUSES: NO PORQUE [Subjuntivo]:
+   When rejecting an alleged motivation or causal factor:
+   - NO PORQUE SEA (Subjunctive) más caro SIGNIFICA (Indicative) que sea mejor.
+   - NO PORQUE INSISTA (Subjunctive) voy a cambiar los requisitos.
+
+3. CONSECUTIVE SUBJUNCTIVE FORMULA: DE AHÍ QUE [Subjuntivo]:
+   Formal consecutive link expressing consequence arising from an established fact:
+   - El servidor superó su capacidad de memoria, DE AHÍ QUE DECIDIÉRAMOS reiniciar.
+   - Hubo fallos de seguridad, DE AHÍ QUE SE SUSPENDIERA el servicio.
+================================================================================
+"#;
+
+pub const PARTICIPIAL_ABSOLUTES_CARD: &str = r#"
+================================================================================
+        PARTICIPIAL ABSOLUTE CONSTRUCTIONS (CONSTRUCCIONES ABSOLUTAS)
+================================================================================
+A hallmark of formal, legal, journalistic, and administrative Spanish syntax.
+Condenses subordinate temporal or causal clauses into a preposed absolute participle.
+
+1. AGREEMENT RULES:
+   The participle MUST agree in gender and number with the logical postposed subject:
+   - TERMINADA la reunión, el comité emitió el veredicto. (Fem. Sing.)
+   - APROBADAS las reformas, comenzaron los trámites. (Fem. Plur.)
+   - FIRMADO el contrato, procedimos al pago. (Masc. Sing.)
+   - CONCLUIDOS los experimentos, se redactó el informe. (Masc. Plur.)
+
+2. TEMPORAL & CAUSAL PARAPHRASES:
+   - Dicho esto... (= Una vez que se ha dicho esto...)
+   - Visto el resultado... (= Puesto que se ha visto el resultado...)
+   - Aclarado el malentendido, retomaron las negociaciones.
+
+3. PROHIBITION:
+   Never use an auxiliary verb in absolute participial clauses:
+   - INCORRECT: *Habiendo terminada la reunión...
+   - CORRECT:   Terminada la reunión... / Habiendo terminado la reunión...
+================================================================================
+"#;
+
+pub const SCALAR_CONCESSION_CARD: &str = r#"
+================================================================================
+         SCALAR CONCESSION & INTENSIVE CONNECTORS (POR MUCHO QUE...)
+================================================================================
+1. SCALAR INTENSIFIERS WITH SUBJUNCTIVE:
+   Expresses extreme hypothetical resistance or maximum degree using Subjunctive:
+   - POR MUCHO QUE INSISTAS (Subjunctive), no aceptaremos el acuerdo.
+   - POR MÁS QUE TRABAJE (Subjunctive), no llegará a la entrega de mañana.
+   - POR MUY DIFÍCIL QUE SEA (Subjunctive), encontraremos una solución.
+
+2. RISK VS CERTAINTY IN COMPLEX CONCESSIVES:
+   - AUN A RIESGO DE QUE + Subjuntivo (Hypothetical danger):
+     Lanzaremos la versión, AUN A RIESGO DE QUE SURJAN (Subj) incidencias menores.
+   - AUN A SABIENDAS DE QUE + Indicativo (Acknowledged factual certainty):
+     Aceptó el cargo, AUN A SABIENDAS DE QUE ERA (Ind) una tarea titánica.
+   - CON TODO Y CON ESO / ASÍ Y TODO (Adversative-concessive discourse connectors).
 ================================================================================
 "#;

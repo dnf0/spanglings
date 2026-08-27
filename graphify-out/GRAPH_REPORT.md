@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-08-27)
 
 ## Corpus Check
-- 422 files · ~136,028 words
+- 459 files · ~145,970 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2356 nodes · 2675 edges · 387 communities (382 shown, 5 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 160 edges (avg confidence: 0.85)
+- 2523 nodes · 2812 edges · 424 communities (419 shown, 5 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 167 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0258247a`
+- Built from commit: `74515a43`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -222,7 +222,7 @@
 - compilerOptions
 - Standard Spanish & General Conversational Curriculum Expansion Implementation Plan
 - ConceptId
-- run_tui_app
+- app.rs
 - draw_ui
 - TourStation
 - Diagnostic Placement Test & Level Fast-Track Implementation Plan
@@ -309,7 +309,7 @@
 - Adverbial Clauses 06: Strict Conditions: Siempre y cuando & A condición de que
 - Linguistic Knowledge Graph & Practical Everyday Curriculum Expansion Implementation Plan
 - Interactive Onboarding Guided Tour (`spanglings tour`) Implementation Plan
-- .new_with_state
+- ADR-0004: Full-Spectrum C1/C2 Linguistic Completeness & Advanced Syntactic Constructs
 - Travel Logistics 01: Flight Cancellation Claim
 - Travel Logistics 02: Customs Declaration
 - Travel Logistics 03: Lost Luggage PIR & Compensation
@@ -394,18 +394,55 @@
 - Optatives & Legal Tenses 04: Future Subjunctive in Contractual Breaches
 - Optatives & Legal Tenses 05: Statutory Penal Clauses (Cometiere)
 - Optatives & Legal Tenses 06: Literary Pluperfect with '-ra'
+- Verbs of Becoming 01: Ponerse (Temporary Emotional Reaction)
+- Verbs of Becoming 02: Ponerse (Involuntary Physical Reaction)
+- Verbs of Becoming 03: Quedarse (Resulting State & Reaction)
+- Verbs of Becoming 04: Hacerse (Voluntary Evolution & Profession)
+- Verbs of Becoming 05: Volverse (Lasting Character Transformation)
+- Verbs of Becoming 06: Convertirse En (Radical Metamorphosis)
+- Epistemic Adverbs 01: A Lo Mejor (Mandatory Indicative)
+- Epistemic Adverbs 02: Igual (Colloquial Mandatory Indicative)
+- Epistemic Adverbs 03: Quizás (Preposed Subjunctive of Uncertainty)
+- Epistemic Adverbs 04: Tal Vez (Preposed Subjunctive of Risk)
+- Epistemic Adverbs 05: Postposed Position (Mandatory Indicative)
+- Epistemic Adverbs 06: Acaso in Rhetorical Confirmation
+- Inalienable Possession 01: Body Parts & Hygiene
+- Inalienable Possession 02: Personal Belongings
+- Ethic Dative 03: Expressive & Paternal Affection
+- Ethic Dative 04: Affective Involvement & Concern
+- Sympathetic Dative 05: Collective Misfortune (Se Nos)
+- Deliberative Consumption Dative 06: Telic Action
+- Corrective Negation 01: No Es Que (Rejected Premise)
+- Corrective Negation 02: Sino Que (Asserted Reality)
+- Rejected Causal Clauses 03: No Porque (Subjunctive Trigger)
+- Rejected Causal Clauses 04: No Porque in Past Contexts
+- Formal Consecutive Link 05: De Ahí Que (Subjunctive Formula)
+- Formal Consecutive Link 06: De Ahí Que in Present Contexts
+- Participial Absolute Clauses 01: Feminine Singular Agreement
+- Participial Absolute Clauses 02: Feminine Plural Agreement
+- Participial Absolute Clauses 03: Masculine Singular Agreement
+- Participial Absolute Clauses 04: Irregular Participles (Masculine Plural)
+- Participial Absolute Clauses 05: Fixed Formula 'Dicho Esto'
+- Participial Absolute Clauses 06: Causal-Temporal 'Vista la Situación'
+- Scalar Concession 01: Por Mucho Que (Present Subjunctive)
+- Scalar Concession 02: Por Más Que in Past Narratives
+- Scalar Concession 03: Por Muy + Adjective + Que
+- Intensive Concession 04: Aun A Riesgo De Que (Hypothetical Danger)
+- Intensive Concession 05: Aun A Sabiendas De Que (Factual Certainty)
+- Discourse Connectors 06: Con Todo y Con Eso (Adversative Synthesis)
+- get_rule_title
 
 ## God Nodes (most connected - your core abstractions)
 1. `App` - 73 edges
 2. `Exercise` - 46 edges
 3. `AppState` - 43 edges
-4. `get_reference_card()` - 24 edges
-5. `validate_submission()` - 24 edges
+4. `get_reference_card()` - 30 edges
+5. `validate_submission()` - 25 edges
 6. `create_sample_exercises()` - 24 edges
-7. `Level` - 20 edges
-8. `draw_ui()` - 19 edges
-9. `conjugate_verb()` - 17 edges
-10. `find_all_exercises()` - 17 edges
+7. `Grammar Reference Cards & Cheat Sheets` - 21 edges
+8. `Level` - 20 edges
+9. `draw_ui()` - 19 edges
+10. `conjugate_verb()` - 17 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `test_find_all_exercises_or_embedded_fallback()` --calls--> `find_all_exercises_or_embedded()`  [INFERRED]
@@ -422,7 +459,7 @@
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (387 total, 5 thin omitted)
+## Communities (424 total, 5 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -434,7 +471,7 @@ Nodes (19): 1.1 Problem Statement, 1.2 The Solution: Spanglings, 1. Executive Su
 
 ### Community 2 - "App"
 Cohesion: 0.06
-Nodes (3): App, Option, String
+Nodes (5): App, Option, Self, String, Vec
 
 ### Community 3 - "Exercise"
 Cohesion: 0.16
@@ -446,11 +483,11 @@ Nodes (26): Dir, Option, Result, run_init(), collect_from_embedded_dir(), extrac
 
 ### Community 7 - "AppState"
 Cohesion: 0.07
-Nodes (41): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+33 more)
+Nodes (40): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+32 more)
 
 ### Community 10 - "validate_submission"
-Cohesion: 0.11
-Nodes (24): Result, run_review_session(), get_rule_title(), String, extract_user_answer(), find_exercise_line_number(), Diagnostic, Option (+16 more)
+Cohesion: 0.12
+Nodes (23): Result, run_review_session(), extract_user_answer(), find_exercise_line_number(), Diagnostic, Option, String, validate_submission() (+15 more)
 
 ### Community 12 - "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan"
 Cohesion: 0.25
@@ -465,8 +502,8 @@ Cohesion: 0.09
 Nodes (22): 10. Verb Conjugator & Tense Matrix, 11. Git Pre-Commit / Pre-Push Micro-Drill Hook, 1. Install via Cargo (Recommended), 1. Interactive TUI Mode, 2. Build from Source, 2. Interactive Guided Onboarding Tour, 3. Diagnostic Placement Assessment & Level Fast-Tracking, 4. Language Server Protocol (LSP) Editor Integration (+14 more)
 
 ### Community 15 - "get_reference_card"
-Cohesion: 0.13
-Nodes (24): Result, show_explanation(), get_reference_card(), list_reference_topics(), Option, test_get_accents_reference_card(), test_get_accidental_se_reference_card(), test_get_adversatives_reference_card() (+16 more)
+Cohesion: 0.11
+Nodes (30): Result, show_explanation(), get_reference_card(), list_reference_topics(), Option, test_get_accents_reference_card(), test_get_accidental_se_reference_card(), test_get_adversatives_reference_card() (+22 more)
 
 ### Community 16 - "run_drill"
 Cohesion: 0.40
@@ -1240,9 +1277,9 @@ Nodes (8): Standard Spanish & General Conversational Curriculum Expansion Implem
 Cohesion: 0.13
 Nodes (21): From, ConceptCategory, ConceptId, ConceptNode, get_default_linguistic_graph(), LinguisticGraph, Display, Formatter (+13 more)
 
-### Community 214 - "run_tui_app"
-Cohesion: 0.25
-Nodes (8): B, Result, run_tui_app(), RawModeGuard, Drop, Result, start_tui(), Terminal
+### Community 214 - "app.rs"
+Cohesion: 0.21
+Nodes (9): B, AppMode, Result, run_tui_app(), RawModeGuard, Drop, Result, start_tui() (+1 more)
 
 ### Community 215 - "draw_ui"
 Cohesion: 0.41
@@ -1588,6 +1625,10 @@ Nodes (8): Linguistic Knowledge Graph & Practical Everyday Curriculum Expansion 
 Cohesion: 0.29
 Nodes (6): Interactive Onboarding Guided Tour (`spanglings tour`) Implementation Plan, Task 1: Persistent State Onboarding Support, Task 2: Core Tour Engine & 6 Interactive Stations, Task 3: CLI Command Registration & Global Routing, Task 4: TUI First-Run Welcome Modal & Help Shortcut, Task 5: Documentation & Backlog Completion
 
+### Community 301 - "ADR-0004: Full-Spectrum C1/C2 Linguistic Completeness & Advanced Syntactic Constructs"
+Cohesion: 0.20
+Nodes (9): 1. Linguistic Graph Ontology Expansion (66 -> 81 Concepts), 2. Curriculum Track Expansion (Tracks 54–59, 36 New Exercises, 339 Total across 60 Tracks), 3. Grammar Reference Cards & Cheat Sheets Expansion (18 -> 24 Cards), 4. Diagnostic Rules & Compiler Additions, ADR-0004: Full-Spectrum C1/C2 Linguistic Completeness & Advanced Syntactic Constructs, Consequences, Context, Decisions (+1 more)
+
 ### Community 302 - "Travel Logistics 01: Flight Cancellation Claim"
 Cohesion: 0.50
 Nodes (3): Context, Exercise, Travel Logistics 01: Flight Cancellation Claim
@@ -1745,8 +1786,8 @@ Cohesion: 0.10
 Nodes (19): 💻 CLI Commands, CLI & TUI Reference, `spanglings blitz`, `spanglings check`, `spanglings conjugate`, `spanglings drill`, `spanglings explain`, `spanglings export` (+11 more)
 
 ### Community 342 - "Grammar Reference Cards & Cheat Sheets"
-Cohesion: 0.07
-Nodes (28): 10. Clitic Doubling & Left-Dislocation Syntax, 11. Personal *A* & Animacy Shifts, 12. Gerund Restrictions & Anglicism Elimination, 13. Adversatives: *Pero* vs *Sino* vs *Sino Que*, 14. Optatives, Independent Subjunctives & Legal Formulas, 1. Ser vs Estar & Adjective Semantic Shifts, 2. Past Aspectual Shifts (*Pretérito vs Imperfecto*), 3. Subjunctive Triggers (*WEIRDO* & *ESCAPA*) (+20 more)
+Cohesion: 0.06
+Nodes (34): 10. Clitic Doubling & Left-Dislocation Syntax, 11. Personal *A* & Animacy Shifts, 12. Gerund Restrictions & Anglicism Elimination, 13. Adversatives: *Pero* vs *Sino* vs *Sino Que*, 14. Optatives, Independent Subjunctives & Legal Formulas, 15. Verbs of Becoming & Transformation (*Verbos de Cambio*), 16. Epistemic Adverbs & Mandatory Mood Selection, 17. Datives of Possession & Affective Ethic Datives (+26 more)
 
 ### Community 343 - "Contributing to Spanglings"
 Cohesion: 0.20
@@ -1758,7 +1799,7 @@ Nodes (9): ✍️ Authoring Curriculum Exercises, Build & Run Tests, 🏗️ Cod
 
 ### Community 345 - "📊 Curriculum Track Matrix"
 Cohesion: 0.22
-Nodes (8): 🟣 Advanced & Situational Synthesis (C1) • 99 Exercises, 🟢 Baseline Foundations (A1–A2) • 15 Exercises, Curriculum Syllabus & Knowledge Graph, 📊 Curriculum Track Matrix, 🟡 Intermediate Core (B1) • 93 Exercises, Key Graph Primitives, 🌐 The 66-Concept Linguistic Knowledge Graph, 🔵 Upper-Intermediate Mastery (B2) • 96 Exercises
+Nodes (8): 🟣 Advanced & Situational Synthesis (C1) • 154 Exercises, 🟢 Baseline Foundations (A1–A2) • 16 Exercises, Curriculum Syllabus & Knowledge Graph, 📊 Curriculum Track Matrix, 🟡 Intermediate Core (B1) • 74 Exercises, Key Graph Primitives, 🌐 The 81-Concept Linguistic Knowledge Graph, 🔵 Upper-Intermediate Mastery (B2) • 95 Exercises
 
 ### Community 346 - "Spanglings MkDocs Material Documentation Site Implementation Plan"
 Cohesion: 0.29
@@ -1920,25 +1961,169 @@ Nodes (3): Context, Exercise, Optatives & Legal Tenses 05: Statutory Penal Claus
 Cohesion: 0.50
 Nodes (3): Context, Exercise, Optatives & Legal Tenses 06: Literary Pluperfect with '-ra'
 
+### Community 387 - "Verbs of Becoming 01: Ponerse (Temporary Emotional Reaction)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbs of Becoming 01: Ponerse (Temporary Emotional Reaction)
+
+### Community 388 - "Verbs of Becoming 02: Ponerse (Involuntary Physical Reaction)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbs of Becoming 02: Ponerse (Involuntary Physical Reaction)
+
+### Community 389 - "Verbs of Becoming 03: Quedarse (Resulting State & Reaction)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbs of Becoming 03: Quedarse (Resulting State & Reaction)
+
+### Community 390 - "Verbs of Becoming 04: Hacerse (Voluntary Evolution & Profession)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbs of Becoming 04: Hacerse (Voluntary Evolution & Profession)
+
+### Community 391 - "Verbs of Becoming 05: Volverse (Lasting Character Transformation)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbs of Becoming 05: Volverse (Lasting Character Transformation)
+
+### Community 392 - "Verbs of Becoming 06: Convertirse En (Radical Metamorphosis)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbs of Becoming 06: Convertirse En (Radical Metamorphosis)
+
+### Community 393 - "Epistemic Adverbs 01: A Lo Mejor (Mandatory Indicative)"
+Cohesion: 0.50
+Nodes (3): Context, Epistemic Adverbs 01: A Lo Mejor (Mandatory Indicative), Exercise
+
+### Community 394 - "Epistemic Adverbs 02: Igual (Colloquial Mandatory Indicative)"
+Cohesion: 0.50
+Nodes (3): Context, Epistemic Adverbs 02: Igual (Colloquial Mandatory Indicative), Exercise
+
+### Community 395 - "Epistemic Adverbs 03: Quizás (Preposed Subjunctive of Uncertainty)"
+Cohesion: 0.50
+Nodes (3): Context, Epistemic Adverbs 03: Quizás (Preposed Subjunctive of Uncertainty), Exercise
+
+### Community 396 - "Epistemic Adverbs 04: Tal Vez (Preposed Subjunctive of Risk)"
+Cohesion: 0.50
+Nodes (3): Context, Epistemic Adverbs 04: Tal Vez (Preposed Subjunctive of Risk), Exercise
+
+### Community 397 - "Epistemic Adverbs 05: Postposed Position (Mandatory Indicative)"
+Cohesion: 0.50
+Nodes (3): Context, Epistemic Adverbs 05: Postposed Position (Mandatory Indicative), Exercise
+
+### Community 398 - "Epistemic Adverbs 06: Acaso in Rhetorical Confirmation"
+Cohesion: 0.50
+Nodes (3): Context, Epistemic Adverbs 06: Acaso in Rhetorical Confirmation, Exercise
+
+### Community 399 - "Inalienable Possession 01: Body Parts & Hygiene"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Inalienable Possession 01: Body Parts & Hygiene
+
+### Community 400 - "Inalienable Possession 02: Personal Belongings"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Inalienable Possession 02: Personal Belongings
+
+### Community 401 - "Ethic Dative 03: Expressive & Paternal Affection"
+Cohesion: 0.50
+Nodes (3): Context, Ethic Dative 03: Expressive & Paternal Affection, Exercise
+
+### Community 402 - "Ethic Dative 04: Affective Involvement & Concern"
+Cohesion: 0.50
+Nodes (3): Context, Ethic Dative 04: Affective Involvement & Concern, Exercise
+
+### Community 403 - "Sympathetic Dative 05: Collective Misfortune (Se Nos)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Sympathetic Dative 05: Collective Misfortune (Se Nos)
+
+### Community 404 - "Deliberative Consumption Dative 06: Telic Action"
+Cohesion: 0.50
+Nodes (3): Context, Deliberative Consumption Dative 06: Telic Action, Exercise
+
+### Community 405 - "Corrective Negation 01: No Es Que (Rejected Premise)"
+Cohesion: 0.50
+Nodes (3): Context, Corrective Negation 01: No Es Que (Rejected Premise), Exercise
+
+### Community 406 - "Corrective Negation 02: Sino Que (Asserted Reality)"
+Cohesion: 0.50
+Nodes (3): Context, Corrective Negation 02: Sino Que (Asserted Reality), Exercise
+
+### Community 407 - "Rejected Causal Clauses 03: No Porque (Subjunctive Trigger)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Rejected Causal Clauses 03: No Porque (Subjunctive Trigger)
+
+### Community 408 - "Rejected Causal Clauses 04: No Porque in Past Contexts"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Rejected Causal Clauses 04: No Porque in Past Contexts
+
+### Community 409 - "Formal Consecutive Link 05: De Ahí Que (Subjunctive Formula)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Formal Consecutive Link 05: De Ahí Que (Subjunctive Formula)
+
+### Community 410 - "Formal Consecutive Link 06: De Ahí Que in Present Contexts"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Formal Consecutive Link 06: De Ahí Que in Present Contexts
+
+### Community 411 - "Participial Absolute Clauses 01: Feminine Singular Agreement"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Participial Absolute Clauses 01: Feminine Singular Agreement
+
+### Community 412 - "Participial Absolute Clauses 02: Feminine Plural Agreement"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Participial Absolute Clauses 02: Feminine Plural Agreement
+
+### Community 413 - "Participial Absolute Clauses 03: Masculine Singular Agreement"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Participial Absolute Clauses 03: Masculine Singular Agreement
+
+### Community 414 - "Participial Absolute Clauses 04: Irregular Participles (Masculine Plural)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Participial Absolute Clauses 04: Irregular Participles (Masculine Plural)
+
+### Community 415 - "Participial Absolute Clauses 05: Fixed Formula 'Dicho Esto'"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Participial Absolute Clauses 05: Fixed Formula 'Dicho Esto'
+
+### Community 416 - "Participial Absolute Clauses 06: Causal-Temporal 'Vista la Situación'"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Participial Absolute Clauses 06: Causal-Temporal 'Vista la Situación'
+
+### Community 417 - "Scalar Concession 01: Por Mucho Que (Present Subjunctive)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Scalar Concession 01: Por Mucho Que (Present Subjunctive)
+
+### Community 418 - "Scalar Concession 02: Por Más Que in Past Narratives"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Scalar Concession 02: Por Más Que in Past Narratives
+
+### Community 419 - "Scalar Concession 03: Por Muy + Adjective + Que"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Scalar Concession 03: Por Muy + Adjective + Que
+
+### Community 420 - "Intensive Concession 04: Aun A Riesgo De Que (Hypothetical Danger)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Intensive Concession 04: Aun A Riesgo De Que (Hypothetical Danger)
+
+### Community 421 - "Intensive Concession 05: Aun A Sabiendas De Que (Factual Certainty)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Intensive Concession 05: Aun A Sabiendas De Que (Factual Certainty)
+
+### Community 422 - "Discourse Connectors 06: Con Todo y Con Eso (Adversative Synthesis)"
+Cohesion: 0.50
+Nodes (3): Context, Discourse Connectors 06: Con Todo y Con Eso (Adversative Synthesis), Exercise
+
 ## Knowledge Gaps
-- **932 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+927 more)
+- **1017 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+1012 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Exercise` connect `Exercise` to `App`, `SrsItem`, `AppState`, `validate_submission`, `progress.rs`, `Level`, `check.rs`, `.new_with_state`, `evaluate_current_exercise_in`, `tui_tests.rs`, `search_exercises`, `find_all_exercises`?**
-  _High betweenness centrality (0.025) - this node is a cross-community bridge._
-- **Why does `App` connect `App` to `Exercise`, `AppState`, `validate_submission`, `conjugate_verb`, `Level`, `.new_with_state`, `.on_key`, `run_tui_app`, `draw_ui`?**
-  _High betweenness centrality (0.019) - this node is a cross-community bridge._
-- **Why does `AppState` connect `AppState` to `App`, `SrsItem`, `.new_with_state`, `progress.rs`, `evaluate_current_exercise_in`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **Are the 22 inferred relationships involving `get_reference_card()` (e.g. with `show_explanation()` and `compute_hover()`) actually correct?**
-  _`get_reference_card()` has 22 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 19 inferred relationships involving `validate_submission()` (e.g. with `evaluate_exercise_for_check()` and `run_pack_validate()`) actually correct?**
-  _`validate_submission()` has 19 INFERRED edges - model-reasoned connections that need verification._
+- **Why does `Exercise` connect `Exercise` to `App`, `SrsItem`, `AppState`, `validate_submission`, `progress.rs`, `Level`, `check.rs`, `evaluate_current_exercise_in`, `tui_tests.rs`, `app.rs`, `search_exercises`, `find_all_exercises`?**
+  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+- **Why does `App` connect `App` to `Exercise`, `AppState`, `validate_submission`, `conjugate_verb`, `Level`, `.on_key`, `app.rs`, `draw_ui`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `AppState` connect `AppState` to `App`, `SrsItem`, `progress.rs`, `evaluate_current_exercise_in`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+- **Are the 28 inferred relationships involving `get_reference_card()` (e.g. with `show_explanation()` and `compute_hover()`) actually correct?**
+  _`get_reference_card()` has 28 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 20 inferred relationships involving `validate_submission()` (e.g. with `evaluate_exercise_for_check()` and `run_pack_validate()`) actually correct?**
+  _`validate_submission()` has 20 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `esbuild`, `minify` to the rest of the system?**
-  _932 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1017 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._

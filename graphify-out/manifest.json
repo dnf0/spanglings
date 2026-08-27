@@ -84,9 +84,9 @@
     "semantic_hash": ""
   },
   "src/engine/rules.rs": {
-    "mtime": 1787840748.384782,
-    "seen": 1787841352.38002,
-    "ast_hash": "f60d84fcd85a1a7ef31fe8219f67501a",
+    "mtime": 1787842489.9154952,
+    "seen": 1787843772.93503,
+    "ast_hash": "68cf7e0f01e9546aef2fce3729f1bfcd",
     "semantic_hash": ""
   },
   "src/engine/validator.rs": {
@@ -96,9 +96,9 @@
     "semantic_hash": ""
   },
   "tests/diagnostic_rule_tests.rs": {
-    "mtime": 1787840953.845172,
-    "seen": 1787841352.380029,
-    "ast_hash": "b6afb6f0206c60f26119874c99767892",
+    "mtime": 1787842772.2910347,
+    "seen": 1787843772.935039,
+    "ast_hash": "9dc7b07e8bcde7ff22019d8b0f8349ac",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-grammar-diagnostics.md": {
@@ -126,15 +126,15 @@
     "semantic_hash": ""
   },
   "src/core/reference.rs": {
-    "mtime": 1787840953.8185537,
-    "seen": 1787841352.380016,
-    "ast_hash": "780b3c4789e9f3a56abbc5edabdac89e",
+    "mtime": 1787842462.4905791,
+    "seen": 1787843772.935026,
+    "ast_hash": "d57f4b06496073b1ca7ccb7161be083a",
     "semantic_hash": ""
   },
   "tests/reference_tests.rs": {
-    "mtime": 1787840953.8513484,
-    "seen": 1787841352.380034,
-    "ast_hash": "a5c28e33e6b28b2c4a7f8bcd6b9a8e89",
+    "mtime": 1787842772.2975564,
+    "seen": 1787843772.935046,
+    "ast_hash": "a3dc2f7154aa78bd81d1a59a02a4ef92",
     "semantic_hash": ""
   },
   "src/cli/commands/drill.rs": {
@@ -240,9 +240,9 @@
     "semantic_hash": ""
   },
   "tests/exercise_validity_tests.rs": {
-    "mtime": 1787840639.8085678,
-    "seen": 1787841352.38003,
-    "ast_hash": "e176a88cd04f60b4873775d5276f9874",
+    "mtime": 1787842663.143842,
+    "seen": 1787843772.93504,
+    "ast_hash": "e2c9fe05fcda3b29d6b352f89aecbbf8",
     "semantic_hash": ""
   },
   "tests/tui_tests.rs": {
@@ -252,8 +252,8 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787840894.3604379,
-    "seen": 1787841352.38004,
+    "mtime": 1787843760.2843342,
+    "seen": 1787843772.935052,
     "ast_hash": "cc9ec54c88611bf47d85a30193fc74da",
     "semantic_hash": ""
   },
@@ -960,15 +960,15 @@
     "semantic_hash": ""
   },
   "src/core/embedded.rs": {
-    "mtime": 1787813831.0045197,
-    "seen": 1787814389.493143,
+    "mtime": 1787843521.057116,
+    "seen": 1787843772.9350212,
     "ast_hash": "cc7a0201c6406f807bdb225c16a604dc",
     "semantic_hash": ""
   },
   "tests/embedded_tests.rs": {
-    "mtime": 1787841013.3798633,
-    "seen": 1787841352.380029,
-    "ast_hash": "dd396034ce8d69096fab12837f0e5fe2",
+    "mtime": 1787842772.2916582,
+    "seen": 1787843772.93504,
+    "ast_hash": "49500d0332ba24086ece3451830d9152",
     "semantic_hash": ""
   },
   ".github/workflows/check-pr-name.yaml": {
@@ -990,8 +990,8 @@
     "semantic_hash": ""
   },
   "docs/BACKLOG.md": {
-    "mtime": 1787840879.0920162,
-    "seen": 1787841352.380041,
+    "mtime": 1787843760.2914531,
+    "seen": 1787843772.935053,
     "ast_hash": "24ad276449e61c1a6d7e1e7b19dbf888",
     "semantic_hash": ""
   },
@@ -1038,9 +1038,9 @@
     "semantic_hash": ""
   },
   "tests/json_output_tests.rs": {
-    "mtime": 1787841047.2113519,
-    "seen": 1787841352.380032,
-    "ast_hash": "bce690536fb9940cc42b5254d0b6878d",
+    "mtime": 1787842682.6671107,
+    "seen": 1787843772.935043,
+    "ast_hash": "4a46f03ab2cfef972231bbc25519ba83",
     "semantic_hash": ""
   },
   "tests/search_tests.rs": {
@@ -2004,15 +2004,15 @@
     "semantic_hash": ""
   },
   "src/core/graph.rs": {
-    "mtime": 1787840190.750196,
-    "seen": 1787841352.3800142,
-    "ast_hash": "29f5c746a5a11129e566d20eb4358bb9",
+    "mtime": 1787843348.7622328,
+    "seen": 1787843772.935024,
+    "ast_hash": "27314a00944f6437a9858c5efeaac085",
     "semantic_hash": ""
   },
   "tests/graph_tests.rs": {
-    "mtime": 1787840251.673481,
-    "seen": 1787841352.3800309,
-    "ast_hash": "b95fefb9399b1ecf0a94ee0deb15e11c",
+    "mtime": 1787842420.508449,
+    "seen": 1787843772.935041,
+    "ast_hash": "9b0c6b2f3467493b5fbd29ef1505311e",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-27-linguistic-knowledge-graph-and-practical-expansion.md": {
@@ -2274,21 +2274,21 @@
     "semantic_hash": ""
   },
   "CONTRIBUTING.md": {
-    "mtime": 1787838707.8268845,
-    "seen": 1787838753.804259,
-    "ast_hash": "7c17333471b43c4428550ee167a70f20",
+    "mtime": 1787841949.88099,
+    "seen": 1787843772.935052,
+    "ast_hash": "060cb6dfcd7abb714a2967d66477ad4d",
     "semantic_hash": ""
   },
   "docs/cli-reference.md": {
-    "mtime": 1787838666.4918108,
-    "seen": 1787838753.8042612,
-    "ast_hash": "b1dcc9275b6f64a51851aac058b1ffac",
+    "mtime": 1787843760.2594376,
+    "seen": 1787843772.935055,
+    "ast_hash": "38f8d0f6c737bfb5318a92dfd210c0f5",
     "semantic_hash": ""
   },
   "docs/contributing.md": {
-    "mtime": 1787838678.9777753,
-    "seen": 1787838753.8042612,
-    "ast_hash": "7c17333471b43c4428550ee167a70f20",
+    "mtime": 1787841944.0798113,
+    "seen": 1787843772.935055,
+    "ast_hash": "060cb6dfcd7abb714a2967d66477ad4d",
     "semantic_hash": ""
   },
   "docs/getting-started.md": {
@@ -2298,21 +2298,21 @@
     "semantic_hash": ""
   },
   "docs/grammar-reference.md": {
-    "mtime": 1787840864.4668496,
-    "seen": 1787841352.380044,
-    "ast_hash": "cf0acc51804ca2680956ec09910516c8",
+    "mtime": 1787843760.2589917,
+    "seen": 1787843772.935056,
+    "ast_hash": "a4acb4e61947a2e6bb00be6c85c0ef33",
     "semantic_hash": ""
   },
   "docs/index.md": {
-    "mtime": 1787840928.3100493,
-    "seen": 1787841352.380045,
+    "mtime": 1787843760.2743285,
+    "seen": 1787843772.935057,
     "ast_hash": "1dbd21bf94df951b4aa0745ff01bcd59",
     "semantic_hash": ""
   },
   "docs/onboarding-guide.md": {
-    "mtime": 1787838605.4110014,
-    "seen": 1787838753.8042629,
-    "ast_hash": "a8a3ba5ff51915fc8a7f7c3c03d49593",
+    "mtime": 1787843760.264467,
+    "seen": 1787843772.935057,
+    "ast_hash": "0450afd5c253eb4ffafb3e9cff15f4e4",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-27-mkdocs-documentation-site.md": {
@@ -2322,9 +2322,9 @@
     "semantic_hash": ""
   },
   "docs/syllabus.md": {
-    "mtime": 1787840834.7533016,
-    "seen": 1787841352.380055,
-    "ast_hash": "04a998d73423a676acb8d0a732871b8c",
+    "mtime": 1787843759.9719794,
+    "seen": 1787843772.935067,
+    "ast_hash": "ec58f73a0ac82b78b89341cf4032571d",
     "semantic_hash": ""
   },
   "mkdocs.yml": {
@@ -2559,6 +2559,228 @@
     "mtime": 1787840628.854833,
     "seen": 1787841352.380179,
     "ast_hash": "aaf46dc56cfc06794215df3854746d1c",
+    "semantic_hash": ""
+  },
+  "docs/adr/0004-full-spectrum-c1-c2-linguistic-completeness.md": {
+    "mtime": 1787843760.2584882,
+    "seen": 1787843772.935054,
+    "ast_hash": "b09ffaa278e3970958079aa6f2b2912c",
+    "semantic_hash": ""
+  },
+  "exercises/54_verbs_of_becoming_and_transformation/01_ponerse_temporary_emotion.md": {
+    "mtime": 1787843520.5543127,
+    "seen": 1787843772.9351969,
+    "ast_hash": "f5a19ebf068f2f717650eade066418c3",
+    "semantic_hash": ""
+  },
+  "exercises/54_verbs_of_becoming_and_transformation/02_ponerse_physical_appearance.md": {
+    "mtime": 1787843520.562931,
+    "seen": 1787843772.9351969,
+    "ast_hash": "507dc32e9c2fbe226d24781020584651",
+    "semantic_hash": ""
+  },
+  "exercises/54_verbs_of_becoming_and_transformation/03_quedarse_resulting_shock.md": {
+    "mtime": 1787843520.5693364,
+    "seen": 1787843772.935198,
+    "ast_hash": "fa1d60bda7aa73d5db633fd0d9a93810",
+    "semantic_hash": ""
+  },
+  "exercises/54_verbs_of_becoming_and_transformation/04_hacerse_voluntary_profession.md": {
+    "mtime": 1787843520.575004,
+    "seen": 1787843772.935198,
+    "ast_hash": "574c669347cc6ba7595f26cd094f2b80",
+    "semantic_hash": ""
+  },
+  "exercises/54_verbs_of_becoming_and_transformation/05_volverse_personality_shift.md": {
+    "mtime": 1787843520.580514,
+    "seen": 1787843772.935199,
+    "ast_hash": "b7861843f4b0abc534f1a1cc0ffb7427",
+    "semantic_hash": ""
+  },
+  "exercises/54_verbs_of_becoming_and_transformation/06_llegar_a_ser_and_convertirse_en.md": {
+    "mtime": 1787843520.588105,
+    "seen": 1787843772.935199,
+    "ast_hash": "65c19902f73e3fdeeccbb57bd035027f",
+    "semantic_hash": ""
+  },
+  "exercises/55_epistemic_adverbs_and_mood_selection/01_a_lo_mejor_indicative.md": {
+    "mtime": 1787843520.5937462,
+    "seen": 1787843772.935199,
+    "ast_hash": "93be0fd658f3e932d6dc96a0a3b53955",
+    "semantic_hash": ""
+  },
+  "exercises/55_epistemic_adverbs_and_mood_selection/02_igual_colloquial_indicative.md": {
+    "mtime": 1787843520.5983977,
+    "seen": 1787843772.9352,
+    "ast_hash": "273633b2c2ed8ac0d313c1b9eb287fcf",
+    "semantic_hash": ""
+  },
+  "exercises/55_epistemic_adverbs_and_mood_selection/03_quizas_preposed_subjunctive.md": {
+    "mtime": 1787843520.6023498,
+    "seen": 1787843772.9352,
+    "ast_hash": "e7babc6baabc167d5a23600ede4f1392",
+    "semantic_hash": ""
+  },
+  "exercises/55_epistemic_adverbs_and_mood_selection/04_tal_vez_preposed_high_doubt.md": {
+    "mtime": 1787843520.607126,
+    "seen": 1787843772.9352,
+    "ast_hash": "50d0eae6769d78f49390fc41f54e767c",
+    "semantic_hash": ""
+  },
+  "exercises/55_epistemic_adverbs_and_mood_selection/05_postposed_epistemic_adverb_indicative.md": {
+    "mtime": 1787843520.6115167,
+    "seen": 1787843772.935201,
+    "ast_hash": "2bb901023f3da894406602c7d08b844c",
+    "semantic_hash": ""
+  },
+  "exercises/55_epistemic_adverbs_and_mood_selection/06_acaso_rhetorical_indicative.md": {
+    "mtime": 1787843520.6160119,
+    "seen": 1787843772.935201,
+    "ast_hash": "c491d33bd1accc4a608f062100759203",
+    "semantic_hash": ""
+  },
+  "exercises/56_datives_of_possession_and_ethic_datives/01_inalienable_body_parts.md": {
+    "mtime": 1787843520.6202312,
+    "seen": 1787843772.9352021,
+    "ast_hash": "f047cce7825a9f4cecf0f291eb5f85de",
+    "semantic_hash": ""
+  },
+  "exercises/56_datives_of_possession_and_ethic_datives/02_inalienable_personal_possessions.md": {
+    "mtime": 1787843520.624806,
+    "seen": 1787843772.9352021,
+    "ast_hash": "c701d30940ab049f81758edf69cbec19",
+    "semantic_hash": ""
+  },
+  "exercises/56_datives_of_possession_and_ethic_datives/03_ethic_dative_affective_plea.md": {
+    "mtime": 1787843520.628626,
+    "seen": 1787843772.9352021,
+    "ast_hash": "95c40cebff4ee266207d610004009727",
+    "semantic_hash": ""
+  },
+  "exercises/56_datives_of_possession_and_ethic_datives/04_ethic_dative_parental_concern.md": {
+    "mtime": 1787843520.6317334,
+    "seen": 1787843772.935203,
+    "ast_hash": "4727208fb611ec1ebd6a62675ce0bc73",
+    "semantic_hash": ""
+  },
+  "exercises/56_datives_of_possession_and_ethic_datives/05_sympathetic_dative_collective_impact.md": {
+    "mtime": 1787843520.6339808,
+    "seen": 1787843772.935203,
+    "ast_hash": "b00d859da5b9606d0e6c3a61aae87b61",
+    "semantic_hash": ""
+  },
+  "exercises/56_datives_of_possession_and_ethic_datives/06_deliberative_consumption_dative.md": {
+    "mtime": 1787843520.648225,
+    "seen": 1787843772.935203,
+    "ast_hash": "8f84a8c60d0fb23de0581a38dad0d690",
+    "semantic_hash": ""
+  },
+  "exercises/57_corrective_and_concessive_polarities/01_no_es_que_subjunctive_clause.md": {
+    "mtime": 1787843520.9702566,
+    "seen": 1787843772.935204,
+    "ast_hash": "7d2bbd3354396a7f6db6a6abdd3be170",
+    "semantic_hash": ""
+  },
+  "exercises/57_corrective_and_concessive_polarities/02_no_es_que_indicative_second_clause.md": {
+    "mtime": 1787843520.9757123,
+    "seen": 1787843772.935204,
+    "ast_hash": "70ca719cf46e5265c894f76e4bcf163a",
+    "semantic_hash": ""
+  },
+  "exercises/57_corrective_and_concessive_polarities/03_no_porque_rejected_cause.md": {
+    "mtime": 1787843520.9804156,
+    "seen": 1787843772.935204,
+    "ast_hash": "9c5de122927d1a50c6775530bc74e81f",
+    "semantic_hash": ""
+  },
+  "exercises/57_corrective_and_concessive_polarities/04_no_porque_past_subjunctive.md": {
+    "mtime": 1787843520.9857302,
+    "seen": 1787843772.9352052,
+    "ast_hash": "0ae935a66387f3eb2d61a56da4172e96",
+    "semantic_hash": ""
+  },
+  "exercises/57_corrective_and_concessive_polarities/05_de_ahi_que_consecutive_subjunctive.md": {
+    "mtime": 1787843520.990115,
+    "seen": 1787843772.9352052,
+    "ast_hash": "1006d2c2aab7a27af0a9cf39eba4a135",
+    "semantic_hash": ""
+  },
+  "exercises/57_corrective_and_concessive_polarities/06_de_ahi_que_present_subjunctive.md": {
+    "mtime": 1787843520.9949381,
+    "seen": 1787843772.935206,
+    "ast_hash": "cc2be8c19040f56238491feddf299111",
+    "semantic_hash": ""
+  },
+  "exercises/58_participial_absolute_constructions/01_participial_absolute_feminine_singular.md": {
+    "mtime": 1787843521.0000644,
+    "seen": 1787843772.935206,
+    "ast_hash": "e227a7f2a8ee84b2566c81fd8062bafa",
+    "semantic_hash": ""
+  },
+  "exercises/58_participial_absolute_constructions/02_participial_absolute_feminine_plural.md": {
+    "mtime": 1787843521.004839,
+    "seen": 1787843772.935206,
+    "ast_hash": "f45739c7f5c9bff6f2eada4513164a0f",
+    "semantic_hash": ""
+  },
+  "exercises/58_participial_absolute_constructions/03_participial_absolute_masculine_singular.md": {
+    "mtime": 1787843521.0105784,
+    "seen": 1787843772.935207,
+    "ast_hash": "4d25cd710c1468a569fbf1f4f702c21b",
+    "semantic_hash": ""
+  },
+  "exercises/58_participial_absolute_constructions/04_participial_absolute_masculine_plural.md": {
+    "mtime": 1787843521.0155902,
+    "seen": 1787843772.935207,
+    "ast_hash": "6ebedc916d61805d2a1d856700b39b3a",
+    "semantic_hash": ""
+  },
+  "exercises/58_participial_absolute_constructions/05_participial_absolute_fixed_locutions.md": {
+    "mtime": 1787843521.0210161,
+    "seen": 1787843772.935207,
+    "ast_hash": "39527d5e7bdafa546d3584323055edef",
+    "semantic_hash": ""
+  },
+  "exercises/58_participial_absolute_constructions/06_participial_absolute_visto_and_aclarado.md": {
+    "mtime": 1787843521.0287223,
+    "seen": 1787843772.9352078,
+    "ast_hash": "5806ccbe913fa95efae1c21fc13d80aa",
+    "semantic_hash": ""
+  },
+  "exercises/59_scalar_concession_and_intensive_connectors/01_por_mucho_que_present_subjunctive.md": {
+    "mtime": 1787843521.0312936,
+    "seen": 1787843772.9352078,
+    "ast_hash": "6d6d59dfc8a000136b9dcbac7f55ade1",
+    "semantic_hash": ""
+  },
+  "exercises/59_scalar_concession_and_intensive_connectors/02_por_mas_que_past_subjunctive.md": {
+    "mtime": 1787843521.0331085,
+    "seen": 1787843772.9352078,
+    "ast_hash": "46b4e9db5d46cbc70bc387e57f6b0295",
+    "semantic_hash": ""
+  },
+  "exercises/59_scalar_concession_and_intensive_connectors/03_por_muy_adjective_que.md": {
+    "mtime": 1787843521.0353415,
+    "seen": 1787843772.935209,
+    "ast_hash": "606669e192bef4f565763e956f09835b",
+    "semantic_hash": ""
+  },
+  "exercises/59_scalar_concession_and_intensive_connectors/04_aun_a_riesgo_de_que_subjunctive.md": {
+    "mtime": 1787843521.0409806,
+    "seen": 1787843772.935209,
+    "ast_hash": "e872cc6e501e9b81ab6834a5bbac6660",
+    "semantic_hash": ""
+  },
+  "exercises/59_scalar_concession_and_intensive_connectors/05_aun_a_sabiendas_de_que_indicative.md": {
+    "mtime": 1787843521.0429962,
+    "seen": 1787843772.93521,
+    "ast_hash": "0ed739ef28bf975db017e2268f47dce7",
+    "semantic_hash": ""
+  },
+  "exercises/59_scalar_concession_and_intensive_connectors/06_asi_y_todo_discourse_connector.md": {
+    "mtime": 1787843521.045275,
+    "seen": 1787843772.93521,
+    "ast_hash": "d219bfb0077b1520d6d6c0d8da70b102",
     "semantic_hash": ""
   }
 }

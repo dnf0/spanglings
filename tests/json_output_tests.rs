@@ -6,7 +6,7 @@ fn test_list_exercises_json_serialization() {
     let json_str = get_exercises_json(None).expect("Failed to serialize exercises to JSON");
     let parsed: serde_json::Value = serde_json::from_str(&json_str).unwrap();
     assert!(parsed.is_array());
-    assert!(parsed.as_array().unwrap().len() == 303);
+    assert!(parsed.as_array().unwrap().len() == 339);
     let first = &parsed[0];
     assert!(first.get("id").is_some());
     assert!(first.get("title").is_some());

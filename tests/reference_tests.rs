@@ -135,8 +135,57 @@ fn test_get_legal_subjunctive_reference_card() {
 }
 
 #[test]
+fn test_get_verbs_of_becoming_reference_card() {
+    let card = get_reference_card("verbs-of-becoming").expect("Verbs of becoming card not found");
+    assert!(card.contains("VERBOS DE CAMBIO"));
+    assert!(card.contains("PONERSE"));
+    assert!(card.contains("QUEDARSE"));
+    assert!(card.contains("VOLVERSE"));
+}
+
+#[test]
+fn test_get_epistemic_adverbs_reference_card() {
+    let card = get_reference_card("epistemic-adverbs").expect("Epistemic adverbs card not found");
+    assert!(card.contains("EPISTEMIC ADVERBS & MOOD SELECTION"));
+    assert!(card.contains("A LO MEJOR"));
+    assert!(card.contains("QUIZÁS"));
+}
+
+#[test]
+fn test_get_possessive_datives_reference_card() {
+    let card = get_reference_card("possessive-datives").expect("Possessive datives card not found");
+    assert!(card.contains("DATIVE OF INALIENABLE POSSESSION"));
+    assert!(card.contains("ETHIC & AFFECTIVE CLITICS"));
+}
+
+#[test]
+fn test_get_corrective_polarity_reference_card() {
+    let card =
+        get_reference_card("corrective-polarity").expect("Corrective polarity card not found");
+    assert!(card.contains("CORRECTIVE & CONCESSIVE POLARITY"));
+    assert!(card.contains("DE AHÍ QUE"));
+}
+
+#[test]
+fn test_get_participial_absolutes_reference_card() {
+    let card =
+        get_reference_card("participial-absolutes").expect("Participial absolutes card not found");
+    assert!(card.contains("PARTICIPIAL ABSOLUTE CONSTRUCTIONS"));
+    assert!(card.contains("AGREEMENT RULES"));
+}
+
+#[test]
+fn test_get_scalar_concession_reference_card() {
+    let card = get_reference_card("scalar-concession").expect("Scalar concession card not found");
+    assert!(card.contains("SCALAR CONCESSION"));
+    assert!(card.contains("POR MUCHO QUE"));
+    assert!(card.contains("AUN A RIESGO DE QUE"));
+}
+
+#[test]
 fn test_list_reference_topics() {
     let topics = list_reference_topics();
+    assert_eq!(topics.len(), 24);
     assert!(topics.contains(&"subjunctive"));
     assert!(topics.contains(&"por-para"));
     assert!(topics.contains(&"ser-estar"));
@@ -155,6 +204,12 @@ fn test_list_reference_topics() {
     assert!(topics.contains(&"gerund-rules"));
     assert!(topics.contains(&"adversatives"));
     assert!(topics.contains(&"legal-subjunctive"));
+    assert!(topics.contains(&"verbs-of-becoming"));
+    assert!(topics.contains(&"epistemic-adverbs"));
+    assert!(topics.contains(&"possessive-datives"));
+    assert!(topics.contains(&"corrective-polarity"));
+    assert!(topics.contains(&"participial-absolutes"));
+    assert!(topics.contains(&"scalar-concession"));
 }
 
 #[test]

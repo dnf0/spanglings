@@ -229,3 +229,80 @@ Spanish strictly limits gerund syntax compared to English:
 5. **Literary / Journalistic Past in *-ra***:
    - *El acuerdo que firmara el presidente...* (= *había firmado*).
 
+---
+
+## 15. Verbs of Becoming & Transformation (*Verbos de Cambio*)
+
+| Verb | Nature of Change | Volition / Catalyst | Example |
+| :--- | :--- | :--- | :--- |
+| **ponerse** | Temporary emotional / physical reaction | Involuntary, rapid | *Se puso furioso cuando cayó el servidor.* |
+| **quedarse** | Resulting state, shock, loss, aftermath | External shock / event | *Nos quedamos atónitos ante los resultados.* |
+| **hacerse** | Career evolution, ideology, wealth | Voluntary effort, time | *Se hizo especialista en ciberseguridad.* |
+| **volverse** | Lasting character / psychological transformation | Involuntary, fundamental | *Se volvió sumamente desconfiado.* |
+| **convertirse en** | Radical category metamorphosis | Complete transformation | *Se convirtió en el referente del sector.* |
+| **llegar a ser** | Culmination of long journey / goal | Prolonged dedication | *Llegó a ser directora de ingeniería.* |
+
+---
+
+## 16. Epistemic Adverbs & Mandatory Mood Selection
+
+| Epistemic Adverb | Mood Requirement | Position | Example |
+| :--- | :--- | :--- | :--- |
+| **A lo mejor** | **INDICATIVE ONLY** | Pre-verbal / Post-verbal | *A lo mejor tiene una copia de respaldo.* (Never *tenga*) |
+| **Igual** (colloquial) | **INDICATIVE ONLY** | Pre-verbal | *Igual están ocupados con el despliegue.* |
+| **Quizás / Tal vez** | **Subjunctive** (high doubt) | Pre-verbal | *Quizás sea conveniente optimizar la consulta.* |
+| **Quizás / Tal vez** | **Indicative** (strong conviction) | Pre-verbal | *Tal vez los ingenieros tienen la clave.* |
+| **Quizás / Tal vez / Acaso** | **INDICATIVE ONLY** | Post-verbal | *Resolverá la incidencia hoy, quizás.* |
+| **¿Acaso...?** | **Indicative** (rhetorical question) | Direct question | *¿Acaso pensáis que es sencillo?* |
+
+---
+
+## 17. Datives of Possession & Affective Ethic Datives
+
+1. **Inalienable Possession (Body Parts & Personal Belongings)**:
+   - ✅ *Me lavo las manos con cuidado.* (❌ *\*Lavo mis manos...*)
+   - ✅ *A Carlos se le rompió la pantalla.* (❌ *\*Se rompió su pantalla...*)
+2. **Ethic / Affective Dative (*Dativo Ético/Afectivo*)**:
+   - Expresses personal emotional stake, care, or grievance:
+   - *¡No me llores!* ("Don't cry on me!")
+   - *Este desarrollador no me toma ninguna pausa.*
+3. **Sympathetic Dative of Collective Misfortune (*Se nos*)**:
+   - *Se nos cayó el clúster de Kubernetes.* ("The Kubernetes cluster went down on us.")
+4. **Deliberative / Telic Consumption Dative**:
+   - *Bébete toda la infusión.* (Total exhaustive consumption).
+
+---
+
+## 18. Corrective Negation & Rejected Causes
+
+| Construction | Meaning | Mood Selection | Example |
+| :--- | :--- | :--- | :--- |
+| **No es que... sino que...** | "It's not that [A], but rather [B]" | $[A] \rightarrow$ **Subjunctive**, $[B] \rightarrow$ **Indicative** | *No es que rechace la propuesta, sino que exige garantías.* |
+| **No porque... sino porque...** | "Not because [rejected cause], but because [true cause]" | $[A] \rightarrow$ **Subjunctive**, $[B] \rightarrow$ **Indicative** | *No porque sea complejo debemos posponerlo.* |
+| **De ahí que...** | "Hence why... / That's why..." | Always **SUBJUNCTIVE** | *Hubo fallos, de ahí que parchearan la versión.* |
+
+---
+
+## 19. Participial Absolute Constructions (*Construcciones Absolutas*)
+
+Preposed participle clauses acting as temporal/causal modifiers with obligatory gender/number agreement:
+
+- **Feminine Singular**: *Concluida la auditoría, aprobamos el presupuesto.*
+- **Feminine Plural**: *Aprobadas las políticas, iniciamos la capacitación.*
+- **Masculine Singular**: *Firmado el contrato, comenzamos el desarrollo.*
+- **Masculine Plural**: *Resueltos los incidentes, cerramos la guardia.*
+- **Fixed Discourse Formulas**: *Dicho esto, pasemos al siguiente punto.* / *Vista la situación, actuaremos.*
+
+---
+
+## 20. Scalar Concession & Intensive Connectors
+
+| Connector | Meaning | Mood Requirement | Example |
+| :--- | :--- | :--- | :--- |
+| **Por mucho que** | "No matter how much..." | **Subjunctive** | *Por mucho que intenten convencernos, mantendremos la postura.* |
+| **Por más que** | "No matter how much..." | **Subjunctive** | *Por más que investigaran, no hallaron vulnerabilidades.* |
+| **Por muy + [adj] + que** | "No matter how [adj]..." | **Subjunctive** | *Por muy difícil que sea la migración, la completaremos.* |
+| **Aun a riesgo de que** | "Even at the risk of..." | **Subjunctive** | *Aun a riesgo de que haya latencia, aplicaremos el parche.* |
+| **Aun a sabiendas de que** | "Even knowing that..." | **Indicative** | *Aceptó el cargo aun a sabiendas de que era un reto.* |
+| **Así y todo / Con todo y con eso** | "Even so / Still" | Independent clause | *Hubo retrasos; así y todo, entregamos a tiempo.* |
+
