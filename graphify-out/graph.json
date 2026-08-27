@@ -433,6 +433,149 @@
       "source_location": "L10"
     },
     {
+      "id": "src_engine_accents",
+      "label": "accents.rs",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "accents.rs",
+      "source_file": "src/engine/accents.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_engine_accents_accentresult",
+      "label": "AccentResult",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "accentresult",
+      "source_file": "src/engine/accents.rs",
+      "source_location": "L13"
+    },
+    {
+      "id": "src_engine_accents_check_accent_match",
+      "label": "check_accent_match()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "check_accent_match()",
+      "source_file": "src/engine/accents.rs",
+      "source_location": "L27"
+    },
+    {
+      "id": "src_engine_accents_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_engine_accents_strip_accents",
+      "label": "strip_accents()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "strip_accents()",
+      "source_file": "src/engine/accents.rs",
+      "source_location": "L19"
+    },
+    {
+      "id": "src_engine_diagnostics",
+      "label": "diagnostics.rs",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "diagnostics.rs",
+      "source_file": "src/engine/diagnostics.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_engine_diagnostics_diagnostic",
+      "label": "Diagnostic",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "diagnostic",
+      "source_file": "src/engine/diagnostics.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_engine_diagnostics_diagnostic_format_terminal",
+      "label": ".format_terminal()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": ".format_terminal()",
+      "source_file": "src/engine/diagnostics.rs",
+      "source_location": "L18"
+    },
+    {
+      "id": "src_engine_diagnostics_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_engine_diagnostics_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_engine_normalizer",
+      "label": "normalizer.rs",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "normalizer.rs",
+      "source_file": "src/engine/normalizer.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_engine_normalizer_normalize",
+      "label": "normalize()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "normalize()",
+      "source_file": "src/engine/normalizer.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_engine_normalizer_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_engine_rules",
       "label": "rules.rs",
       "_origin": "ast",
@@ -499,6 +642,28 @@
       "source_location": "L92"
     },
     {
+      "id": "src_engine_validator_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_engine_validator_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_engine_validator_validate_submission",
       "label": "validate_submission()",
       "_origin": "ast",
@@ -508,6 +673,28 @@
       "norm_label": "validate_submission()",
       "source_file": "src/engine/validator.rs",
       "source_location": "L103"
+    },
+    {
+      "id": "src_engine_validator_validationresult",
+      "label": "ValidationResult",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "validationresult",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_engine_validator_validationresult_is_success",
+      "label": ".is_success()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": ".is_success()",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L19"
     },
     {
       "id": "tests_diagnostic_rule_tests",
@@ -596,6 +783,116 @@
       "norm_label": "test_validation_targeted_diagnostic_error()",
       "source_file": "tests/diagnostic_rule_tests.rs",
       "source_location": "L46"
+    },
+    {
+      "id": "tests_exercise_validity_tests",
+      "label": "exercise_validity_tests.rs",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "exercise_validity_tests.rs",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_exercise_validity_tests_collect_md_paths",
+      "label": "collect_md_paths()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "collect_md_paths()",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L8"
+    },
+    {
+      "id": "tests_exercise_validity_tests_rs_path",
+      "label": "Path",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_exercise_validity_tests_rs_pathbuf",
+      "label": "PathBuf",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "pathbuf",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_exercise_validity_tests_rs_vec",
+      "label": "Vec",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "vec",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_exercise_validity_tests_test_all_curriculum_exercises_are_valid_and_solvable",
+      "label": "test_all_curriculum_exercises_are_valid_and_solvable()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_all_curriculum_exercises_are_valid_and_solvable()",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L27"
+    },
+    {
+      "id": "tests_normalizer_tests",
+      "label": "normalizer_tests.rs",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "normalizer_tests.rs",
+      "source_file": "tests/normalizer_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_normalizer_tests_test_accent_stripping",
+      "label": "test_accent_stripping()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_accent_stripping()",
+      "source_file": "tests/normalizer_tests.rs",
+      "source_location": "L16"
+    },
+    {
+      "id": "tests_normalizer_tests_test_punctuation_and_whitespace_normalization",
+      "label": "test_punctuation_and_whitespace_normalization()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_punctuation_and_whitespace_normalization()",
+      "source_file": "tests/normalizer_tests.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "tests_normalizer_tests_test_smart_accent_matching",
+      "label": "test_smart_accent_matching()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "test_smart_accent_matching()",
+      "source_file": "tests/normalizer_tests.rs",
+      "source_location": "L24"
     },
     {
       "id": "exercises_14_connectors_04_por_consiguiente",
@@ -2934,6 +3231,18 @@
       "source_location": "L51"
     },
     {
+      "id": "docs_backlog_focus_area_5_terminal_conjugation_engine_developer_workflow_hooks_completed",
+      "label": "\u26a1 Focus Area 5: Terminal Conjugation Engine & Developer Workflow Hooks (Completed)",
+      "_origin": "ast",
+      "community": 138,
+      "community_name": "Spanglings Product & Engineering Backlog",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\u26a1 focus area 5: terminal conjugation engine & developer workflow hooks (completed)",
+      "source_file": "docs/BACKLOG.md",
+      "source_location": "L62"
+    },
+    {
       "id": "docs_backlog_spanglings_product_engineering_backlog",
       "label": "Spanglings Product & Engineering Backlog",
       "_origin": "ast",
@@ -3042,6 +3351,18 @@
       "source_location": "L1"
     },
     {
+      "id": "readme_10_shell_autocompletions",
+      "label": "10. Shell Autocompletions",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Examples",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "10. shell autocompletions",
+      "source_file": "README.md",
+      "source_location": "L204"
+    },
+    {
       "id": "readme_1_install_via_cargo_recommended",
       "label": "1. Install via Cargo (Recommended)",
       "_origin": "ast",
@@ -3138,16 +3459,40 @@
       "source_location": "L158"
     },
     {
-      "id": "readme_7_shell_autocompletions",
-      "label": "7. Shell Autocompletions",
+      "id": "readme_7_verb_conjugator_tense_matrix",
+      "label": "7. Verb Conjugator & Tense Matrix",
       "_origin": "ast",
       "community": 14,
       "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "7. shell autocompletions",
+      "norm_label": "7. verb conjugator & tense matrix",
       "source_file": "README.md",
       "source_location": "L172"
+    },
+    {
+      "id": "readme_8_git_pre_commit_pre_push_micro_drill_hook",
+      "label": "8. Git Pre-Commit / Pre-Push Micro-Drill Hook",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Examples",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "8. git pre-commit / pre-push micro-drill hook",
+      "source_file": "README.md",
+      "source_location": "L186"
+    },
+    {
+      "id": "readme_9_custom_curriculum_packs_linting",
+      "label": "9. Custom Curriculum Packs & Linting",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "Examples",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9. custom curriculum packs & linting",
+      "source_file": "README.md",
+      "source_location": "L195"
     },
     {
       "id": "readme_command_line_interface_cli",
@@ -3171,7 +3516,7 @@
       "node_kind": "heading",
       "norm_label": "curriculum tracks (141 exercises across 27 tracks)",
       "source_file": "README.md",
-      "source_location": "L186"
+      "source_location": "L218"
     },
     {
       "id": "readme_development_testing",
@@ -3183,7 +3528,7 @@
       "node_kind": "heading",
       "norm_label": "development & testing",
       "source_file": "README.md",
-      "source_location": "L220"
+      "source_location": "L252"
     },
     {
       "id": "readme_examples",
@@ -3231,7 +3576,7 @@
       "node_kind": "heading",
       "norm_label": "license",
       "source_file": "README.md",
-      "source_location": "L237"
+      "source_location": "L269"
     },
     {
       "id": "readme_overview",
@@ -5475,6 +5820,28 @@
       "source_location": "L26"
     },
     {
+      "id": "src_cli_mod_hookaction",
+      "label": "HookAction",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "Commands",
+      "file_type": "code",
+      "norm_label": "hookaction",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L99"
+    },
+    {
+      "id": "src_cli_mod_packaction",
+      "label": "PackAction",
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "Commands",
+      "file_type": "code",
+      "norm_label": "packaction",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L115"
+    },
+    {
       "id": "src_cli_mod_rs_option",
       "label": "Option",
       "_origin": "ast",
@@ -5604,268 +5971,477 @@
       "source_location": "L2"
     },
     {
-      "id": "src_engine_accents",
-      "label": "accents.rs",
+      "id": "src_cli_commands_conjugate",
+      "label": "conjugate.rs",
       "_origin": "ast",
       "community": 172,
-      "community_name": "accents.rs",
+      "community_name": "conjugate_verb",
       "file_type": "code",
-      "norm_label": "accents.rs",
-      "source_file": "src/engine/accents.rs",
+      "norm_label": "conjugate.rs",
+      "source_file": "src/cli/commands/conjugate.rs",
       "source_location": "L1"
     },
     {
-      "id": "src_engine_accents_accentresult",
-      "label": "AccentResult",
+      "id": "src_cli_commands_conjugate_print_conjugation_summary",
+      "label": "print_conjugation_summary()",
       "_origin": "ast",
       "community": 172,
-      "community_name": "accents.rs",
+      "community_name": "conjugate_verb",
       "file_type": "code",
-      "norm_label": "accentresult",
-      "source_file": "src/engine/accents.rs",
-      "source_location": "L13"
-    },
-    {
-      "id": "src_engine_accents_check_accent_match",
-      "label": "check_accent_match()",
-      "_origin": "ast",
-      "community": 172,
-      "community_name": "accents.rs",
-      "file_type": "code",
-      "norm_label": "check_accent_match()",
-      "source_file": "src/engine/accents.rs",
+      "norm_label": "print_conjugation_summary()",
+      "source_file": "src/cli/commands/conjugate.rs",
       "source_location": "L27"
     },
     {
-      "id": "src_engine_accents_rs_string",
-      "label": "String",
+      "id": "src_cli_commands_conjugate_rs_option",
+      "label": "Option",
       "_origin": "ast",
       "community": 172,
-      "community_name": "accents.rs",
+      "community_name": "conjugate_verb",
       "file_type": "code",
-      "norm_label": "string",
+      "norm_label": "option",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_engine_accents_strip_accents",
-      "label": "strip_accents()",
-      "_origin": "ast",
-      "community": 172,
-      "community_name": "accents.rs",
-      "file_type": "code",
-      "norm_label": "strip_accents()",
-      "source_file": "src/engine/accents.rs",
-      "source_location": "L19"
-    },
-    {
-      "id": "src_engine_normalizer",
-      "label": "normalizer.rs",
-      "_origin": "ast",
-      "community": 172,
-      "community_name": "accents.rs",
-      "file_type": "code",
-      "norm_label": "normalizer.rs",
-      "source_file": "src/engine/normalizer.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_engine_normalizer_normalize",
-      "label": "normalize()",
-      "_origin": "ast",
-      "community": 172,
-      "community_name": "accents.rs",
-      "file_type": "code",
-      "norm_label": "normalize()",
-      "source_file": "src/engine/normalizer.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_engine_normalizer_rs_string",
-      "label": "String",
-      "_origin": "ast",
-      "community": 172,
-      "community_name": "accents.rs",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_normalizer_tests",
-      "label": "normalizer_tests.rs",
-      "_origin": "ast",
-      "community": 172,
-      "community_name": "accents.rs",
-      "file_type": "code",
-      "norm_label": "normalizer_tests.rs",
-      "source_file": "tests/normalizer_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_normalizer_tests_test_accent_stripping",
-      "label": "test_accent_stripping()",
-      "_origin": "ast",
-      "community": 172,
-      "community_name": "accents.rs",
-      "file_type": "code",
-      "norm_label": "test_accent_stripping()",
-      "source_file": "tests/normalizer_tests.rs",
-      "source_location": "L16"
-    },
-    {
-      "id": "tests_normalizer_tests_test_punctuation_and_whitespace_normalization",
-      "label": "test_punctuation_and_whitespace_normalization()",
-      "_origin": "ast",
-      "community": 172,
-      "community_name": "accents.rs",
-      "file_type": "code",
-      "norm_label": "test_punctuation_and_whitespace_normalization()",
-      "source_file": "tests/normalizer_tests.rs",
-      "source_location": "L5"
-    },
-    {
-      "id": "tests_normalizer_tests_test_smart_accent_matching",
-      "label": "test_smart_accent_matching()",
-      "_origin": "ast",
-      "community": 172,
-      "community_name": "accents.rs",
-      "file_type": "code",
-      "norm_label": "test_smart_accent_matching()",
-      "source_file": "tests/normalizer_tests.rs",
-      "source_location": "L24"
-    },
-    {
-      "id": "src_engine_accents_accentmode",
-      "label": "AccentMode",
-      "_origin": "ast",
-      "community": 173,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "accentmode",
-      "source_file": "src/engine/accents.rs",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_watcher_runner",
-      "label": "runner.rs",
-      "_origin": "ast",
-      "community": 173,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "runner.rs",
-      "source_file": "src/watcher/runner.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_watcher_runner_clear_screen",
-      "label": "clear_screen()",
-      "_origin": "ast",
-      "community": 173,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "clear_screen()",
-      "source_file": "src/watcher/runner.rs",
-      "source_location": "L75"
-    },
-    {
-      "id": "src_watcher_runner_evaluate_current_exercise",
-      "label": "evaluate_current_exercise()",
-      "_origin": "ast",
-      "community": 173,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "evaluate_current_exercise()",
-      "source_file": "src/watcher/runner.rs",
-      "source_location": "L80"
-    },
-    {
-      "id": "src_watcher_runner_evaluate_current_exercise_in",
-      "label": "evaluate_current_exercise_in()",
-      "_origin": "ast",
-      "community": 173,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "evaluate_current_exercise_in()",
-      "source_file": "src/watcher/runner.rs",
-      "source_location": "L88"
-    },
-    {
-      "id": "src_watcher_runner_rs_p",
-      "label": "P",
-      "_origin": "ast",
-      "community": 173,
-      "community_name": "evaluate_current_exercise_in",
-      "file_type": "code",
-      "norm_label": "p",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_watcher_runner_rs_result",
+      "id": "src_cli_commands_conjugate_rs_result",
       "label": "Result",
       "_origin": "ast",
-      "community": 173,
-      "community_name": "evaluate_current_exercise_in",
+      "community": 172,
+      "community_name": "conjugate_verb",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_watcher_runner_start_watch_mode",
-      "label": "start_watch_mode()",
+      "id": "src_cli_commands_conjugate_run_conjugate",
+      "label": "run_conjugate()",
       "_origin": "ast",
-      "community": 173,
-      "community_name": "evaluate_current_exercise_in",
+      "community": 172,
+      "community_name": "conjugate_verb",
       "file_type": "code",
-      "norm_label": "start_watch_mode()",
-      "source_file": "src/watcher/runner.rs",
-      "source_location": "L16"
+      "norm_label": "run_conjugate()",
+      "source_file": "src/cli/commands/conjugate.rs",
+      "source_location": "L4"
     },
     {
-      "id": "tests_watcher_tests",
-      "label": "watcher_tests.rs",
+      "id": "src_core_conjugator",
+      "label": "conjugator.rs",
       "_origin": "ast",
-      "community": 173,
-      "community_name": "evaluate_current_exercise_in",
+      "community": 172,
+      "community_name": "conjugate_verb",
       "file_type": "code",
-      "norm_label": "watcher_tests.rs",
-      "source_file": "tests/watcher_tests.rs",
+      "norm_label": "conjugator.rs",
+      "source_file": "src/core/conjugator.rs",
       "source_location": "L1"
     },
     {
-      "id": "tests_watcher_tests_test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir",
-      "label": "test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir()",
+      "id": "src_core_conjugator_conjugate_verb",
+      "label": "conjugate_verb()",
       "_origin": "ast",
-      "community": 173,
-      "community_name": "evaluate_current_exercise_in",
+      "community": 172,
+      "community_name": "conjugate_verb",
       "file_type": "code",
-      "norm_label": "test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir()",
-      "source_file": "tests/watcher_tests.rs",
+      "norm_label": "conjugate_verb()",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L43"
+    },
+    {
+      "id": "src_core_conjugator_get_irregular_verb",
+      "label": "get_irregular_verb()",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "get_irregular_verb()",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L346"
+    },
+    {
+      "id": "src_core_conjugator_imperativeforms",
+      "label": "ImperativeForms",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "imperativeforms",
+      "source_file": "src/core/conjugator.rs",
       "source_location": "L15"
     },
     {
-      "id": "tests_watcher_tests_test_watcher_detects_failing_submission",
-      "label": "test_watcher_detects_failing_submission()",
+      "id": "src_core_conjugator_pronounforms",
+      "label": "PronounForms",
       "_origin": "ast",
-      "community": 173,
-      "community_name": "evaluate_current_exercise_in",
+      "community": 172,
+      "community_name": "conjugate_verb",
       "file_type": "code",
-      "norm_label": "test_watcher_detects_failing_submission()",
-      "source_file": "tests/watcher_tests.rs",
-      "source_location": "L48"
+      "norm_label": "pronounforms",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L4"
     },
     {
-      "id": "tests_watcher_tests_test_watcher_evaluate_current_exercise_runs_cleanly",
-      "label": "test_watcher_evaluate_current_exercise_runs_cleanly()",
+      "id": "src_core_conjugator_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_conjugator_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_conjugator_verbtable",
+      "label": "VerbTable",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "verbtable",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L25"
+    },
+    {
+      "id": "tests_conjugator_tests",
+      "label": "conjugator_tests.rs",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "conjugator_tests.rs",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_conjugator_tests_test_invalid_verb",
+      "label": "test_invalid_verb()",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "test_invalid_verb()",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L117"
+    },
+    {
+      "id": "tests_conjugator_tests_test_irregular_haber",
+      "label": "test_irregular_haber()",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "test_irregular_haber()",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L68"
+    },
+    {
+      "id": "tests_conjugator_tests_test_irregular_hacer",
+      "label": "test_irregular_hacer()",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "test_irregular_hacer()",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L93"
+    },
+    {
+      "id": "tests_conjugator_tests_test_irregular_ir",
+      "label": "test_irregular_ir()",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "test_irregular_ir()",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L105"
+    },
+    {
+      "id": "tests_conjugator_tests_test_irregular_ser",
+      "label": "test_irregular_ser()",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "test_irregular_ser()",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L53"
+    },
+    {
+      "id": "tests_conjugator_tests_test_irregular_tener",
+      "label": "test_irregular_tener()",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "test_irregular_tener()",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L80"
+    },
+    {
+      "id": "tests_conjugator_tests_test_regular_ar_conjugation",
+      "label": "test_regular_ar_conjugation()",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "test_regular_ar_conjugation()",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L4"
+    },
+    {
+      "id": "tests_conjugator_tests_test_regular_er_conjugation",
+      "label": "test_regular_er_conjugation()",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "test_regular_er_conjugation()",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L25"
+    },
+    {
+      "id": "tests_conjugator_tests_test_regular_ir_conjugation",
+      "label": "test_regular_ir_conjugation()",
+      "_origin": "ast",
+      "community": 172,
+      "community_name": "conjugate_verb",
+      "file_type": "code",
+      "norm_label": "test_regular_ir_conjugation()",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L41"
+    },
+    {
+      "id": "src_core_srs",
+      "label": "srs.rs",
       "_origin": "ast",
       "community": 173,
-      "community_name": "evaluate_current_exercise_in",
+      "community_name": "SrsItem",
       "file_type": "code",
-      "norm_label": "test_watcher_evaluate_current_exercise_runs_cleanly()",
-      "source_file": "tests/watcher_tests.rs",
-      "source_location": "L8"
+      "norm_label": "srs.rs",
+      "source_file": "src/core/srs.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_core_srs_calculate_sm2_review",
+      "label": "calculate_sm2_review()",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "calculate_sm2_review()",
+      "source_file": "src/core/srs.rs",
+      "source_location": "L37"
+    },
+    {
+      "id": "src_core_srs_rs_datetime",
+      "label": "DateTime",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "datetime",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_srs_rs_default",
+      "label": "Default",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "default",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_srs_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_srs_rs_self",
+      "label": "Self",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "self",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_srs_rs_utc",
+      "label": "Utc",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "utc",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_srs_srsitem",
+      "label": "SrsItem",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "srsitem",
+      "source_file": "src/core/srs.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_core_srs_srsitem_default",
+      "label": ".default()",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": ".default()",
+      "source_file": "src/core/srs.rs",
+      "source_location": "L26"
+    },
+    {
+      "id": "src_core_srs_srsitem_new",
+      "label": ".new()",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": ".new()",
+      "source_file": "src/core/srs.rs",
+      "source_location": "L14"
+    },
+    {
+      "id": "tests_srs_tests",
+      "label": "srs_tests.rs",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "srs_tests.rs",
+      "source_file": "tests/srs_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_srs_tests_test_sm2_repetition_intervals",
+      "label": "test_sm2_repetition_intervals()",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "test_sm2_repetition_intervals()",
+      "source_file": "tests/srs_tests.rs",
+      "source_location": "L7"
+    },
+    {
+      "id": "tests_srs_tests_test_srs_item_deterministic_default",
+      "label": "test_srs_item_deterministic_default()",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "test_srs_item_deterministic_default()",
+      "source_file": "tests/srs_tests.rs",
+      "source_location": "L32"
+    },
+    {
+      "id": "tests_srs_tests_test_state_load_corrupt_file_fails",
+      "label": "test_state_load_corrupt_file_fails()",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "test_state_load_corrupt_file_fails()",
+      "source_file": "tests/srs_tests.rs",
+      "source_location": "L53"
+    },
+    {
+      "id": "tests_srs_tests_test_state_mark_completed",
+      "label": "test_state_mark_completed()",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "test_state_mark_completed()",
+      "source_file": "tests/srs_tests.rs",
+      "source_location": "L64"
+    },
+    {
+      "id": "tests_srs_tests_test_state_save_and_load",
+      "label": "test_state_save_and_load()",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "SrsItem",
+      "file_type": "code",
+      "norm_label": "test_state_save_and_load()",
+      "source_file": "tests/srs_tests.rs",
+      "source_location": "L39"
+    },
+    {
+      "id": "src_cli_commands_hint",
+      "label": "hint.rs",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "curriculum.rs",
+      "file_type": "code",
+      "norm_label": "hint.rs",
+      "source_file": "src/cli/commands/hint.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_hint_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "curriculum.rs",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_hint_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "curriculum.rs",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_hint_show_hint",
+      "label": "show_hint()",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "curriculum.rs",
+      "file_type": "code",
+      "norm_label": "show_hint()",
+      "source_file": "src/cli/commands/hint.rs",
+      "source_location": "L6"
     },
     {
       "id": "src_core_curriculum",
@@ -5978,103 +6554,169 @@
       "source_location": ""
     },
     {
-      "id": "src_engine_diagnostics",
-      "label": "diagnostics.rs",
+      "id": "src_cli_commands_pack",
+      "label": "pack.rs",
       "_origin": "ast",
       "community": 175,
-      "community_name": "ValidationResult",
+      "community_name": "pack.rs",
       "file_type": "code",
-      "norm_label": "diagnostics.rs",
-      "source_file": "src/engine/diagnostics.rs",
+      "norm_label": "pack.rs",
+      "source_file": "src/cli/commands/pack.rs",
       "source_location": "L1"
     },
     {
-      "id": "src_engine_diagnostics_diagnostic",
-      "label": "Diagnostic",
+      "id": "src_cli_commands_pack_collect_markdown_files",
+      "label": "collect_markdown_files()",
       "_origin": "ast",
       "community": 175,
-      "community_name": "ValidationResult",
+      "community_name": "pack.rs",
       "file_type": "code",
-      "norm_label": "diagnostic",
-      "source_file": "src/engine/diagnostics.rs",
-      "source_location": "L5"
+      "norm_label": "collect_markdown_files()",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L195"
     },
     {
-      "id": "src_engine_diagnostics_diagnostic_format_terminal",
-      "label": ".format_terminal()",
+      "id": "src_cli_commands_pack_rs_path",
+      "label": "Path",
       "_origin": "ast",
       "community": 175,
-      "community_name": "ValidationResult",
+      "community_name": "pack.rs",
       "file_type": "code",
-      "norm_label": ".format_terminal()",
-      "source_file": "src/engine/diagnostics.rs",
-      "source_location": "L18"
-    },
-    {
-      "id": "src_engine_diagnostics_rs_option",
-      "label": "Option",
-      "_origin": "ast",
-      "community": 175,
-      "community_name": "ValidationResult",
-      "file_type": "code",
-      "norm_label": "option",
+      "norm_label": "path",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_engine_diagnostics_rs_string",
-      "label": "String",
+      "id": "src_cli_commands_pack_rs_pathbuf",
+      "label": "PathBuf",
       "_origin": "ast",
       "community": 175,
-      "community_name": "ValidationResult",
+      "community_name": "pack.rs",
       "file_type": "code",
-      "norm_label": "string",
+      "norm_label": "pathbuf",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_engine_validator_rs_option",
-      "label": "Option",
+      "id": "src_cli_commands_pack_rs_result",
+      "label": "Result",
       "_origin": "ast",
       "community": 175,
-      "community_name": "ValidationResult",
+      "community_name": "pack.rs",
       "file_type": "code",
-      "norm_label": "option",
+      "norm_label": "result",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_engine_validator_rs_string",
-      "label": "String",
+      "id": "src_cli_commands_pack_rs_vec",
+      "label": "Vec",
       "_origin": "ast",
       "community": 175,
-      "community_name": "ValidationResult",
+      "community_name": "pack.rs",
       "file_type": "code",
-      "norm_label": "string",
+      "norm_label": "vec",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_engine_validator_validationresult",
-      "label": "ValidationResult",
+      "id": "src_cli_commands_pack_run_pack_create",
+      "label": "run_pack_create()",
       "_origin": "ast",
       "community": 175,
-      "community_name": "ValidationResult",
+      "community_name": "pack.rs",
       "file_type": "code",
-      "norm_label": "validationresult",
-      "source_file": "src/engine/validator.rs",
+      "norm_label": "run_pack_create()",
+      "source_file": "src/cli/commands/pack.rs",
       "source_location": "L8"
     },
     {
-      "id": "src_engine_validator_validationresult_is_success",
-      "label": ".is_success()",
+      "id": "src_cli_commands_pack_run_pack_validate",
+      "label": "run_pack_validate()",
       "_origin": "ast",
       "community": 175,
-      "community_name": "ValidationResult",
+      "community_name": "pack.rs",
       "file_type": "code",
-      "norm_label": ".is_success()",
-      "source_file": "src/engine/validator.rs",
-      "source_location": "L19"
+      "norm_label": "run_pack_validate()",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L85"
+    },
+    {
+      "id": "tests_pack_tests",
+      "label": "pack_tests.rs",
+      "_origin": "ast",
+      "community": 175,
+      "community_name": "pack.rs",
+      "file_type": "code",
+      "norm_label": "pack_tests.rs",
+      "source_file": "tests/pack_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_pack_tests_test_pack_create_and_validate",
+      "label": "test_pack_create_and_validate()",
+      "_origin": "ast",
+      "community": 175,
+      "community_name": "pack.rs",
+      "file_type": "code",
+      "norm_label": "test_pack_create_and_validate()",
+      "source_file": "tests/pack_tests.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "src_cli_commands_list",
+      "label": "list.rs",
+      "_origin": "ast",
+      "community": 176,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "list.rs",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_list_get_exercises_json",
+      "label": "get_exercises_json()",
+      "_origin": "ast",
+      "community": 176,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "get_exercises_json()",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_cli_commands_list_list_exercises",
+      "label": "list_exercises()",
+      "_origin": "ast",
+      "community": 176,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "list_exercises()",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_cli_commands_list_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 176,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_list_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 176,
+      "community_name": "find_all_exercises",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "src_core_curriculum_collect_md_files",
@@ -6237,125 +6879,187 @@
       "source_location": "L86"
     },
     {
-      "id": "tests_exercise_validity_tests",
-      "label": "exercise_validity_tests.rs",
+      "id": "src_cli_commands_hook",
+      "label": "hook.rs",
       "_origin": "ast",
       "community": 178,
-      "community_name": "exercise_validity_tests.rs",
+      "community_name": "hook.rs",
       "file_type": "code",
-      "norm_label": "exercise_validity_tests.rs",
-      "source_file": "tests/exercise_validity_tests.rs",
+      "norm_label": "hook.rs",
+      "source_file": "src/cli/commands/hook.rs",
       "source_location": "L1"
     },
     {
-      "id": "tests_exercise_validity_tests_collect_md_paths",
-      "label": "collect_md_paths()",
+      "id": "src_cli_commands_hook_find_git_hooks_dir",
+      "label": "find_git_hooks_dir()",
       "_origin": "ast",
       "community": 178,
-      "community_name": "exercise_validity_tests.rs",
+      "community_name": "hook.rs",
       "file_type": "code",
-      "norm_label": "collect_md_paths()",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L8"
+      "norm_label": "find_git_hooks_dir()",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L112"
     },
     {
-      "id": "tests_exercise_validity_tests_rs_path",
-      "label": "Path",
+      "id": "src_cli_commands_hook_remove_spanglings_block",
+      "label": "remove_spanglings_block()",
       "_origin": "ast",
       "community": 178,
-      "community_name": "exercise_validity_tests.rs",
+      "community_name": "hook.rs",
       "file_type": "code",
-      "norm_label": "path",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "remove_spanglings_block()",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L91"
     },
     {
-      "id": "tests_exercise_validity_tests_rs_pathbuf",
+      "id": "src_cli_commands_hook_rs_pathbuf",
       "label": "PathBuf",
       "_origin": "ast",
       "community": 178,
-      "community_name": "exercise_validity_tests.rs",
+      "community_name": "hook.rs",
       "file_type": "code",
       "norm_label": "pathbuf",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "tests_exercise_validity_tests_rs_vec",
-      "label": "Vec",
-      "_origin": "ast",
-      "community": 178,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "vec",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_exercise_validity_tests_test_all_curriculum_exercises_are_valid_and_solvable",
-      "label": "test_all_curriculum_exercises_are_valid_and_solvable()",
-      "_origin": "ast",
-      "community": 178,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "test_all_curriculum_exercises_are_valid_and_solvable()",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L27"
-    },
-    {
-      "id": "src_cli_commands_list",
-      "label": "list.rs",
-      "_origin": "ast",
-      "community": 179,
-      "community_name": "get_exercises_json",
-      "file_type": "code",
-      "norm_label": "list.rs",
-      "source_file": "src/cli/commands/list.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_cli_commands_list_get_exercises_json",
-      "label": "get_exercises_json()",
-      "_origin": "ast",
-      "community": 179,
-      "community_name": "get_exercises_json",
-      "file_type": "code",
-      "norm_label": "get_exercises_json()",
-      "source_file": "src/cli/commands/list.rs",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_cli_commands_list_list_exercises",
-      "label": "list_exercises()",
-      "_origin": "ast",
-      "community": 179,
-      "community_name": "get_exercises_json",
-      "file_type": "code",
-      "norm_label": "list_exercises()",
-      "source_file": "src/cli/commands/list.rs",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_cli_commands_list_rs_result",
+      "id": "src_cli_commands_hook_rs_result",
       "label": "Result",
       "_origin": "ast",
-      "community": 179,
-      "community_name": "get_exercises_json",
+      "community": 178,
+      "community_name": "hook.rs",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_cli_commands_list_rs_string",
+      "id": "src_cli_commands_hook_rs_string",
       "label": "String",
       "_origin": "ast",
-      "community": 179,
-      "community_name": "get_exercises_json",
+      "community": 178,
+      "community_name": "hook.rs",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_hook_run_hook_install",
+      "label": "run_hook_install()",
+      "_origin": "ast",
+      "community": 178,
+      "community_name": "hook.rs",
+      "file_type": "code",
+      "norm_label": "run_hook_install()",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_cli_commands_hook_run_hook_uninstall",
+      "label": "run_hook_uninstall()",
+      "_origin": "ast",
+      "community": 178,
+      "community_name": "hook.rs",
+      "file_type": "code",
+      "norm_label": "run_hook_uninstall()",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L53"
+    },
+    {
+      "id": "src_cli_commands_hook_test_remove_spanglings_block",
+      "label": "test_remove_spanglings_block()",
+      "_origin": "ast",
+      "community": 178,
+      "community_name": "hook.rs",
+      "file_type": "code",
+      "norm_label": "test_remove_spanglings_block()",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L135"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs",
+      "label": "2026-08-27-conjugator-hooks-packs.md",
+      "_origin": "ast",
+      "community": 179,
+      "community_name": "Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-08-27-conjugator-hooks-packs.md",
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_focus_area_5_verb_conjugator_git_workflow_hooks_and_custom_packs_implementation_plan",
+      "label": "Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan",
+      "_origin": "ast",
+      "community": 179,
+      "community_name": "Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "focus area 5: verb conjugator, git workflow hooks, and custom packs implementation plan",
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_task_1_automated_release_pipeline_crates_io_publishing_spang_040",
+      "label": "Task 1: Automated Release Pipeline & Crates.io Publishing (`SPANG-040`)",
+      "_origin": "ast",
+      "community": 179,
+      "community_name": "Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 1: automated release pipeline & crates.io publishing (`spang-040`)",
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_task_2_high_precision_terminal_verb_conjugator_spang_041",
+      "label": "Task 2: High-Precision Terminal Verb Conjugator (`SPANG-041`)",
+      "_origin": "ast",
+      "community": 179,
+      "community_name": "Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 2: high-precision terminal verb conjugator (`spang-041`)",
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L26"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_task_3_git_pre_commit_pre_push_learning_hook_spang_042",
+      "label": "Task 3: Git Pre-Commit / Pre-Push Learning Hook (`SPANG-042`)",
+      "_origin": "ast",
+      "community": 179,
+      "community_name": "Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 3: git pre-commit / pre-push learning hook (`spang-042`)",
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L45"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_task_4_custom_curriculum_pack_scaffolder_validator_spang_043",
+      "label": "Task 4: Custom Curriculum Pack Scaffolder & Validator (`SPANG-043`)",
+      "_origin": "ast",
+      "community": 179,
+      "community_name": "Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 4: custom curriculum pack scaffolder & validator (`spang-043`)",
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L61"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_task_5_documentation_graphify_update_pr_creation",
+      "label": "Task 5: Documentation, Graphify Update & PR Creation",
+      "_origin": "ast",
+      "community": 179,
+      "community_name": "Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 5: documentation, graphify update & pr creation",
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L77"
     },
     {
       "id": "src_cli_commands_mod",
@@ -6424,48 +7128,26 @@
       "source_location": "L5"
     },
     {
-      "id": "src_cli_commands_hint",
-      "label": "hint.rs",
+      "id": "tests_hook_tests",
+      "label": "hook_tests.rs",
       "_origin": "ast",
       "community": 181,
-      "community_name": "show_hint",
+      "community_name": "hook_tests.rs",
       "file_type": "code",
-      "norm_label": "hint.rs",
-      "source_file": "src/cli/commands/hint.rs",
+      "norm_label": "hook_tests.rs",
+      "source_file": "tests/hook_tests.rs",
       "source_location": "L1"
     },
     {
-      "id": "src_cli_commands_hint_rs_option",
-      "label": "Option",
+      "id": "tests_hook_tests_test_hook_helpers",
+      "label": "test_hook_helpers()",
       "_origin": "ast",
       "community": 181,
-      "community_name": "show_hint",
+      "community_name": "hook_tests.rs",
       "file_type": "code",
-      "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_hint_rs_result",
-      "label": "Result",
-      "_origin": "ast",
-      "community": 181,
-      "community_name": "show_hint",
-      "file_type": "code",
-      "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_hint_show_hint",
-      "label": "show_hint()",
-      "_origin": "ast",
-      "community": 181,
-      "community_name": "show_hint",
-      "file_type": "code",
-      "norm_label": "show_hint()",
-      "source_file": "src/cli/commands/hint.rs",
-      "source_location": "L6"
+      "norm_label": "test_hook_helpers()",
+      "source_file": "tests/hook_tests.rs",
+      "source_location": "L4"
     },
     {
       "id": "src_watcher_mod",
@@ -9602,7 +10284,7 @@
       "source_file": "Cargo.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "0.1.1"
+      "version": "0.2.0"
     },
     {
       "id": "exercises_07_por_vs_para_01_cause_vs_purpose",
@@ -10096,116 +10778,6 @@
       "source_location": ""
     },
     {
-      "id": "src_core_srs",
-      "label": "srs.rs",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "AppState",
-      "file_type": "code",
-      "norm_label": "srs.rs",
-      "source_file": "src/core/srs.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_core_srs_calculate_sm2_review",
-      "label": "calculate_sm2_review()",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "AppState",
-      "file_type": "code",
-      "norm_label": "calculate_sm2_review()",
-      "source_file": "src/core/srs.rs",
-      "source_location": "L37"
-    },
-    {
-      "id": "src_core_srs_rs_datetime",
-      "label": "DateTime",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "AppState",
-      "file_type": "code",
-      "norm_label": "datetime",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_srs_rs_default",
-      "label": "Default",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "AppState",
-      "file_type": "code",
-      "norm_label": "default",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_srs_rs_option",
-      "label": "Option",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "AppState",
-      "file_type": "code",
-      "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_srs_rs_self",
-      "label": "Self",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "AppState",
-      "file_type": "code",
-      "norm_label": "self",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_srs_rs_utc",
-      "label": "Utc",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "AppState",
-      "file_type": "code",
-      "norm_label": "utc",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_srs_srsitem",
-      "label": "SrsItem",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "AppState",
-      "file_type": "code",
-      "norm_label": "srsitem",
-      "source_file": "src/core/srs.rs",
-      "source_location": "L5"
-    },
-    {
-      "id": "src_core_srs_srsitem_default",
-      "label": ".default()",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "AppState",
-      "file_type": "code",
-      "norm_label": ".default()",
-      "source_file": "src/core/srs.rs",
-      "source_location": "L26"
-    },
-    {
-      "id": "src_core_srs_srsitem_new",
-      "label": ".new()",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "AppState",
-      "file_type": "code",
-      "norm_label": ".new()",
-      "source_file": "src/core/srs.rs",
-      "source_location": "L14"
-    },
-    {
       "id": "src_core_state",
       "label": "state.rs",
       "_origin": "ast",
@@ -10481,70 +11053,136 @@
       "source_location": ""
     },
     {
-      "id": "tests_srs_tests",
-      "label": "srs_tests.rs",
+      "id": "src_engine_accents_accentmode",
+      "label": "AccentMode",
       "_origin": "ast",
       "community": 7,
       "community_name": "AppState",
       "file_type": "code",
-      "norm_label": "srs_tests.rs",
-      "source_file": "tests/srs_tests.rs",
+      "norm_label": "accentmode",
+      "source_file": "src/engine/accents.rs",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_watcher_runner",
+      "label": "runner.rs",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "AppState",
+      "file_type": "code",
+      "norm_label": "runner.rs",
+      "source_file": "src/watcher/runner.rs",
       "source_location": "L1"
     },
     {
-      "id": "tests_srs_tests_test_sm2_repetition_intervals",
-      "label": "test_sm2_repetition_intervals()",
+      "id": "src_watcher_runner_clear_screen",
+      "label": "clear_screen()",
       "_origin": "ast",
       "community": 7,
       "community_name": "AppState",
       "file_type": "code",
-      "norm_label": "test_sm2_repetition_intervals()",
-      "source_file": "tests/srs_tests.rs",
-      "source_location": "L7"
+      "norm_label": "clear_screen()",
+      "source_file": "src/watcher/runner.rs",
+      "source_location": "L75"
     },
     {
-      "id": "tests_srs_tests_test_srs_item_deterministic_default",
-      "label": "test_srs_item_deterministic_default()",
+      "id": "src_watcher_runner_evaluate_current_exercise",
+      "label": "evaluate_current_exercise()",
       "_origin": "ast",
       "community": 7,
       "community_name": "AppState",
       "file_type": "code",
-      "norm_label": "test_srs_item_deterministic_default()",
-      "source_file": "tests/srs_tests.rs",
-      "source_location": "L32"
+      "norm_label": "evaluate_current_exercise()",
+      "source_file": "src/watcher/runner.rs",
+      "source_location": "L80"
     },
     {
-      "id": "tests_srs_tests_test_state_load_corrupt_file_fails",
-      "label": "test_state_load_corrupt_file_fails()",
+      "id": "src_watcher_runner_evaluate_current_exercise_in",
+      "label": "evaluate_current_exercise_in()",
       "_origin": "ast",
       "community": 7,
       "community_name": "AppState",
       "file_type": "code",
-      "norm_label": "test_state_load_corrupt_file_fails()",
-      "source_file": "tests/srs_tests.rs",
-      "source_location": "L53"
+      "norm_label": "evaluate_current_exercise_in()",
+      "source_file": "src/watcher/runner.rs",
+      "source_location": "L88"
     },
     {
-      "id": "tests_srs_tests_test_state_mark_completed",
-      "label": "test_state_mark_completed()",
+      "id": "src_watcher_runner_rs_p",
+      "label": "P",
       "_origin": "ast",
       "community": 7,
       "community_name": "AppState",
       "file_type": "code",
-      "norm_label": "test_state_mark_completed()",
-      "source_file": "tests/srs_tests.rs",
-      "source_location": "L64"
+      "norm_label": "p",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "tests_srs_tests_test_state_save_and_load",
-      "label": "test_state_save_and_load()",
+      "id": "src_watcher_runner_rs_result",
+      "label": "Result",
       "_origin": "ast",
       "community": 7,
       "community_name": "AppState",
       "file_type": "code",
-      "norm_label": "test_state_save_and_load()",
-      "source_file": "tests/srs_tests.rs",
-      "source_location": "L39"
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_watcher_runner_start_watch_mode",
+      "label": "start_watch_mode()",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "AppState",
+      "file_type": "code",
+      "norm_label": "start_watch_mode()",
+      "source_file": "src/watcher/runner.rs",
+      "source_location": "L16"
+    },
+    {
+      "id": "tests_watcher_tests",
+      "label": "watcher_tests.rs",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "AppState",
+      "file_type": "code",
+      "norm_label": "watcher_tests.rs",
+      "source_file": "tests/watcher_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_watcher_tests_test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir",
+      "label": "test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir()",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "AppState",
+      "file_type": "code",
+      "norm_label": "test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir()",
+      "source_file": "tests/watcher_tests.rs",
+      "source_location": "L15"
+    },
+    {
+      "id": "tests_watcher_tests_test_watcher_detects_failing_submission",
+      "label": "test_watcher_detects_failing_submission()",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "AppState",
+      "file_type": "code",
+      "norm_label": "test_watcher_detects_failing_submission()",
+      "source_file": "tests/watcher_tests.rs",
+      "source_location": "L48"
+    },
+    {
+      "id": "tests_watcher_tests_test_watcher_evaluate_current_exercise_runs_cleanly",
+      "label": "test_watcher_evaluate_current_exercise_runs_cleanly()",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "AppState",
+      "file_type": "code",
+      "norm_label": "test_watcher_evaluate_current_exercise_runs_cleanly()",
+      "source_file": "tests/watcher_tests.rs",
+      "source_location": "L8"
     },
     {
       "id": "exercises_08_pronoun_stacking_05_negative_command_placement",
@@ -12047,6 +12685,90 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_conjugate_run_conjugate",
+      "target": "src_cli_commands_conjugate_print_conjugation_summary",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/conjugate.rs",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook_run_hook_install",
+      "target": "src_cli_commands_hook_remove_spanglings_block",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook_run_hook_install",
+      "target": "src_cli_commands_hook_find_git_hooks_dir",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook_run_hook_uninstall",
+      "target": "src_cli_commands_hook_find_git_hooks_dir",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook_run_hook_uninstall",
+      "target": "src_cli_commands_hook_remove_spanglings_block",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L72",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook_test_remove_spanglings_block",
+      "target": "src_cli_commands_hook_remove_spanglings_block",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack_run_pack_validate",
+      "target": "src_cli_commands_pack_collect_markdown_files",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_progress_get_progress_json",
       "target": "src_cli_commands_progress_compute_weakness_profile",
       "relation": "calls",
@@ -12116,6 +12838,18 @@
       "context": "call",
       "source_file": "src/cli/commands/search.rs",
       "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator_conjugate_verb",
+      "target": "src_core_conjugator_get_irregular_verb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -12823,7 +13557,31 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L73",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_mod_commands",
+      "target": "src_cli_mod_hookaction",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_mod_commands",
+      "target": "src_cli_mod_packaction",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -12835,7 +13593,91 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L78",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_mod_hookaction",
+      "target": "src_cli_mod_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L110",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_mod_packaction",
+      "target": "src_cli_mod_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator_imperativeforms",
+      "target": "src_core_conjugator_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator_pronounforms",
+      "target": "src_core_conjugator_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator_verbtable",
+      "target": "src_core_conjugator_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L30",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator_verbtable",
+      "target": "src_core_conjugator_pronounforms",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator_verbtable",
+      "target": "src_core_conjugator_imperativeforms",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -13175,6 +14017,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_hook_find_git_hooks_dir",
+      "target": "src_cli_commands_hook_rs_pathbuf",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_list_get_exercises_json",
       "target": "src_cli_commands_list_rs_string",
       "relation": "references",
@@ -13184,6 +14038,18 @@
       "context": "generic_arg",
       "source_file": "src/cli/commands/list.rs",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack_collect_markdown_files",
+      "target": "src_cli_commands_pack_rs_pathbuf",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L195",
       "weight": 1.0
     },
     {
@@ -13340,6 +14206,30 @@
       "context": "generic_arg",
       "source_file": "src/cli/mod.rs",
       "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator_conjugate_verb",
+      "target": "src_core_conjugator_verbtable",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator_get_irregular_verb",
+      "target": "src_core_conjugator_verbtable",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L346",
       "weight": 1.0
     },
     {
@@ -13811,6 +14701,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_conjugate",
+      "target": "src_core_conjugator",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/cli/commands/conjugate.rs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_explain",
       "target": "src_core_reference",
       "relation": "imports_from",
@@ -13832,6 +14734,42 @@
       "context": "import",
       "source_file": "src/cli/commands/hint.rs",
       "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook",
+      "target": "src_cli_commands_hook_rs_pathbuf",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack",
+      "target": "src_core_exercise",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack",
+      "target": "src_cli_commands_pack_rs_path",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -14459,6 +15397,18 @@
       "weight": 1.0
     },
     {
+      "source": "tests_pack_tests",
+      "target": "src_cli_commands_pack",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/pack_tests.rs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
       "source": "tests_reference_tests",
       "target": "src_core_reference",
       "relation": "imports_from",
@@ -14675,6 +15625,42 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_conjugate_print_conjugation_summary",
+      "target": "src_cli_commands_conjugate_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/conjugate.rs",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_conjugate_print_conjugation_summary",
+      "target": "src_core_conjugator_verbtable",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/conjugate.rs",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_conjugate_run_conjugate",
+      "target": "src_cli_commands_conjugate_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/conjugate.rs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_drill_run_drill",
       "target": "src_cli_commands_drill_rs_option",
       "relation": "references",
@@ -14708,6 +15694,30 @@
       "context": "parameter_type",
       "source_file": "src/cli/commands/init.rs",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack_collect_markdown_files",
+      "target": "src_cli_commands_pack_rs_path",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack_collect_markdown_files",
+      "target": "src_cli_commands_pack_rs_vec",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L195",
       "weight": 1.0
     },
     {
@@ -15443,6 +16453,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_conjugate_run_conjugate",
+      "target": "src_cli_commands_conjugate_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/conjugate.rs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_drill_run_drill",
       "target": "src_cli_commands_drill_rs_result",
       "relation": "references",
@@ -15479,6 +16501,54 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_hook_find_git_hooks_dir",
+      "target": "src_cli_commands_hook_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook_remove_spanglings_block",
+      "target": "src_cli_commands_hook_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook_run_hook_install",
+      "target": "src_cli_commands_hook_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook_run_hook_uninstall",
+      "target": "src_cli_commands_hook_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_init_run_init",
       "target": "src_cli_commands_init_rs_result",
       "relation": "references",
@@ -15512,6 +16582,42 @@
       "context": "return_type",
       "source_file": "src/cli/commands/list.rs",
       "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack_collect_markdown_files",
+      "target": "src_cli_commands_pack_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack_run_pack_create",
+      "target": "src_cli_commands_pack_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack_run_pack_validate",
+      "target": "src_cli_commands_pack_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -15644,6 +16750,30 @@
       "context": "return_type",
       "source_file": "src/cli/commands/search.rs",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator_conjugate_verb",
+      "target": "src_core_conjugator_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator_get_irregular_verb",
+      "target": "src_core_conjugator_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L346",
       "weight": 1.0
     },
     {
@@ -16168,6 +17298,17 @@
       "confidence_score": 1.0,
       "source_file": "docs/BACKLOG.md",
       "source_location": "L51",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_backlog_spanglings_product_engineering_backlog",
+      "target": "docs_backlog_focus_area_5_terminal_conjugation_engine_developer_workflow_hooks_completed",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/BACKLOG.md",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -16729,6 +17870,72 @@
       "confidence_score": 1.0,
       "source_file": "docs/superpowers/plans/2026-08-26-spanglings-init-subcommand.md",
       "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs",
+      "target": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_focus_area_5_verb_conjugator_git_workflow_hooks_and_custom_packs_implementation_plan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_focus_area_5_verb_conjugator_git_workflow_hooks_and_custom_packs_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_task_2_high_precision_terminal_verb_conjugator_spang_041",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_focus_area_5_verb_conjugator_git_workflow_hooks_and_custom_packs_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_task_3_git_pre_commit_pre_push_learning_hook_spang_042",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_focus_area_5_verb_conjugator_git_workflow_hooks_and_custom_packs_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_task_4_custom_curriculum_pack_scaffolder_validator_spang_043",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_focus_area_5_verb_conjugator_git_workflow_hooks_and_custom_packs_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_task_5_documentation_graphify_update_pr_creation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_focus_area_5_verb_conjugator_git_workflow_hooks_and_custom_packs_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_27_conjugator_hooks_packs_task_1_automated_release_pipeline_crates_io_publishing_spang_040",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-27-conjugator-hooks-packs.md",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -21727,13 +22934,46 @@
     },
     {
       "source": "readme_examples",
-      "target": "readme_7_shell_autocompletions",
+      "target": "readme_7_verb_conjugator_tense_matrix",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
       "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_examples",
+      "target": "readme_8_git_pre_commit_pre_push_micro_drill_hook",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L186",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_examples",
+      "target": "readme_9_custom_curriculum_packs_linting",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_examples",
+      "target": "readme_10_shell_autocompletions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L204",
       "weight": 1.0
     },
     {
@@ -21788,7 +23028,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L186",
+      "source_location": "L218",
       "weight": 1.0
     },
     {
@@ -21799,7 +23039,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L220",
+      "source_location": "L252",
       "weight": 1.0
     },
     {
@@ -21810,7 +23050,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L237",
+      "source_location": "L269",
       "weight": 1.0
     },
     {
@@ -21968,6 +23208,28 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_conjugate",
+      "target": "src_cli_commands_conjugate_print_conjugation_summary",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/conjugate.rs",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_conjugate",
+      "target": "src_cli_commands_conjugate_run_conjugate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/conjugate.rs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_drill",
       "target": "src_cli_commands_drill_run_drill",
       "relation": "contains",
@@ -22012,6 +23274,61 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_hook",
+      "target": "src_cli_commands_hook_find_git_hooks_dir",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook",
+      "target": "src_cli_commands_hook_test_remove_spanglings_block",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L135",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook",
+      "target": "src_cli_commands_hook_run_hook_uninstall",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook",
+      "target": "src_cli_commands_hook_run_hook_install",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_hook",
+      "target": "src_cli_commands_hook_remove_spanglings_block",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/hook.rs",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_init",
       "target": "src_cli_commands_init_run_init",
       "relation": "contains",
@@ -22042,6 +23359,39 @@
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/list.rs",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack",
+      "target": "src_cli_commands_pack_collect_markdown_files",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L195",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack",
+      "target": "src_cli_commands_pack_run_pack_create",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack",
+      "target": "src_cli_commands_pack_run_pack_validate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -22211,6 +23561,17 @@
     },
     {
       "source": "src_cli_mod",
+      "target": "src_cli_mod_packaction",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_mod",
       "target": "src_cli_mod_cli",
       "relation": "contains",
       "_origin": "ast",
@@ -22229,6 +23590,72 @@
       "confidence_score": 1.0,
       "source_file": "src/cli/mod.rs",
       "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_mod",
+      "target": "src_cli_mod_hookaction",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/mod.rs",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator",
+      "target": "src_core_conjugator_imperativeforms",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator",
+      "target": "src_core_conjugator_verbtable",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator",
+      "target": "src_core_conjugator_get_irregular_verb",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L346",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator",
+      "target": "src_core_conjugator_pronounforms",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_conjugator",
+      "target": "src_core_conjugator_conjugate_verb",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/conjugator.rs",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -22903,6 +24330,105 @@
       "weight": 1.0
     },
     {
+      "source": "tests_conjugator_tests",
+      "target": "tests_conjugator_tests_test_irregular_ir",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests",
+      "target": "tests_conjugator_tests_test_invalid_verb",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L117",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests",
+      "target": "tests_conjugator_tests_test_regular_er_conjugation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests",
+      "target": "tests_conjugator_tests_test_regular_ar_conjugation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests",
+      "target": "tests_conjugator_tests_test_regular_ir_conjugation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests",
+      "target": "tests_conjugator_tests_test_irregular_ser",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests",
+      "target": "tests_conjugator_tests_test_irregular_haber",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests",
+      "target": "tests_conjugator_tests_test_irregular_tener",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests",
+      "target": "tests_conjugator_tests_test_irregular_hacer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
       "source": "tests_diagnostic_rule_tests",
       "target": "tests_diagnostic_rule_tests_test_extract_user_answer",
       "relation": "contains",
@@ -23101,6 +24627,17 @@
       "weight": 1.0
     },
     {
+      "source": "tests_hook_tests",
+      "target": "tests_hook_tests_test_hook_helpers",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/hook_tests.rs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
       "source": "tests_init_tests",
       "target": "tests_init_tests_test_run_init_force_flag",
       "relation": "contains",
@@ -23174,6 +24711,17 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/normalizer_tests.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_pack_tests",
+      "target": "tests_pack_tests_test_pack_create_and_validate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/pack_tests.rs",
       "source_location": "L5",
       "weight": 1.0
     },
@@ -24205,6 +25753,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_conjugate_run_conjugate",
+      "target": "src_core_conjugator_conjugate_verb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/cli/commands/conjugate.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_explain_show_explanation",
       "target": "src_core_reference_list_reference_topics",
       "relation": "calls",
@@ -24286,6 +25846,18 @@
       "context": "call",
       "source_file": "src/cli/commands/list.rs",
       "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_pack_run_pack_validate",
+      "target": "src_engine_validator_validate_submission",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/cli/commands/pack.rs",
+      "source_location": "L140",
       "weight": 1.0
     },
     {
@@ -24709,6 +26281,102 @@
       "weight": 1.0
     },
     {
+      "source": "tests_conjugator_tests_test_irregular_haber",
+      "target": "src_core_conjugator_conjugate_verb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests_test_irregular_hacer",
+      "target": "src_core_conjugator_conjugate_verb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L94",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests_test_irregular_ir",
+      "target": "src_core_conjugator_conjugate_verb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests_test_irregular_ser",
+      "target": "src_core_conjugator_conjugate_verb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L54",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests_test_irregular_tener",
+      "target": "src_core_conjugator_conjugate_verb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests_test_regular_ar_conjugation",
+      "target": "src_core_conjugator_conjugate_verb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests_test_regular_er_conjugation",
+      "target": "src_core_conjugator_conjugate_verb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_conjugator_tests_test_regular_ir_conjugation",
+      "target": "src_core_conjugator_conjugate_verb",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/conjugator_tests.rs",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
       "source": "tests_diagnostic_rule_tests_test_dynamic_line_number_in_diagnostic",
       "target": "src_engine_validator_validate_submission",
       "relation": "calls",
@@ -24934,6 +26602,30 @@
       "context": "call",
       "source_file": "tests/normalizer_tests.rs",
       "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_pack_tests_test_pack_create_and_validate",
+      "target": "src_cli_commands_pack_run_pack_create",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/pack_tests.rs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_pack_tests_test_pack_create_and_validate",
+      "target": "src_cli_commands_pack_run_pack_validate",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/pack_tests.rs",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -25250,5 +26942,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "fd93f1455f855ff9d2221fde4825c7ddebdc0144"
+  "built_at_commit": "011b96413c112135954c292b6a58e458fdf54df7"
 }

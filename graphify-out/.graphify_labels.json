@@ -171,14 +171,14 @@
   "169": "Regional Contrasts 03: Pan-American 'Ustedes'",
   "170": "Regional Contrasts 04: Lexical Dialectal Pairs",
   "171": "Regional Contrasts 05: Reflexive Imperatives in Voseo",
-  "172": "accents.rs",
-  "173": "evaluate_current_exercise_in",
+  "172": "conjugate_verb",
+  "173": "SrsItem",
   "174": "curriculum.rs",
-  "175": "ValidationResult",
+  "175": "pack.rs",
   "176": "find_all_exercises",
   "177": "Interactive TUI Heatmap, Fuzzy Search & Editor Diagnostics Implementation Plan",
-  "178": "exercise_validity_tests.rs",
-  "179": "get_exercises_json",
+  "178": "hook.rs",
+  "179": "Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan",
   "180": "exercise_parser_tests.rs",
-  "181": "show_hint"
+  "181": "hook_tests.rs"
 }

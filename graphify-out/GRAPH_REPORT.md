@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-08-27)
 
 ## Corpus Check
-- 206 files · ~52,358 words
+- 214 files · ~57,819 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1030 nodes · 1164 edges · 182 communities (180 shown, 2 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 91 edges (avg confidence: 0.85)
+- 1087 nodes · 1255 edges · 182 communities (180 shown, 2 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 103 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `fd93f145`
+- Built from commit: `011b9641`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -182,27 +182,26 @@
 - Regional Contrasts 03: Pan-American 'Ustedes'
 - Regional Contrasts 04: Lexical Dialectal Pairs
 - Regional Contrasts 05: Reflexive Imperatives in Voseo
-- accents.rs
-- evaluate_current_exercise_in
+- conjugate_verb
+- SrsItem
 - curriculum.rs
-- ValidationResult
+- pack.rs
 - find_all_exercises
 - Interactive TUI Heatmap, Fuzzy Search & Editor Diagnostics Implementation Plan
-- exercise_validity_tests.rs
-- get_exercises_json
-- show_hint
+- hook.rs
+- Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan
 
 ## God Nodes (most connected - your core abstractions)
 1. `App` - 38 edges
 2. `Exercise` - 33 edges
 3. `AppState` - 26 edges
-4. `validate_submission()` - 19 edges
+4. `validate_submission()` - 20 edges
 5. `get_reference_card()` - 16 edges
 6. `find_all_exercises()` - 15 edges
 7. `find_all_exercises_or_embedded()` - 14 edges
-8. `create_sample_exercises()` - 13 edges
-9. `evaluate_current_exercise_in()` - 12 edges
-10. `Spanglings Implementation Plan` - 12 edges
+8. `conjugate_verb()` - 13 edges
+9. `create_sample_exercises()` - 13 edges
+10. `evaluate_current_exercise_in()` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `test_list_exercises_json_serialization()` --calls--> `get_exercises_json()`  [INFERRED]
@@ -242,12 +241,12 @@ Cohesion: 0.15
 Nodes (17): Dir, Option, Result, run_init(), collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir() (+9 more)
 
 ### Community 7 - "AppState"
-Cohesion: 0.08
-Nodes (21): HashSet, calculate_sm2_review(), DateTime, Default, Option, Self, Utc, SrsItem (+13 more)
+Cohesion: 0.10
+Nodes (23): HashSet, AppState, ExerciseStat, DateTime, Default, HashMap, Option, Path (+15 more)
 
 ### Community 10 - "validate_submission"
-Cohesion: 0.17
-Nodes (14): Result, run_review_session(), get_rule_title(), String, extract_user_answer(), find_exercise_line_number(), validate_submission(), test_dynamic_line_number_in_diagnostic() (+6 more)
+Cohesion: 0.07
+Nodes (32): Result, run_review_session(), AccentResult, check_accent_match(), String, strip_accents(), Diagnostic, Option (+24 more)
 
 ### Community 12 - "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan"
 Cohesion: 0.25
@@ -258,8 +257,8 @@ Cohesion: 0.15
 Nodes (23): BTreeMap, ActivitySummary, compute_activity_summary(), compute_weakness_profile(), get_progress_json(), LevelProgress, ProgressSummary, render_activity_heatmap() (+15 more)
 
 ### Community 14 - "Examples"
-Cohesion: 0.11
-Nodes (18): 1. Install via Cargo (Recommended), 1. Interactive TUI Mode, 2. Build from Source, 2. Headless Watcher Mode & Editor Integration, 3. Search & Explore, 4. JSON Output & Activity Heatmap, 5. Targeted Run & Explanation, 6. Spaced Repetition & Rapid-Fire Drills (+10 more)
+Cohesion: 0.09
+Nodes (21): 10. Shell Autocompletions, 1. Install via Cargo (Recommended), 1. Interactive TUI Mode, 2. Build from Source, 2. Headless Watcher Mode & Editor Integration, 3. Search & Explore, 4. JSON Output & Activity Heatmap, 5. Targeted Run & Explanation (+13 more)
 
 ### Community 15 - "get_reference_card"
 Cohesion: 0.16
@@ -270,8 +269,8 @@ Cohesion: 0.40
 Nodes (4): DrillItem, Option, Result, run_drill()
 
 ### Community 17 - "Commands"
-Cohesion: 0.47
-Nodes (5): Cli, Commands, Option, Shell, String
+Cohesion: 0.46
+Nodes (7): Cli, Commands, HookAction, PackAction, Option, Shell, String
 
 ### Community 20 - "File Structure"
 Cohesion: 0.25
@@ -746,8 +745,8 @@ Cohesion: 0.25
 Nodes (7): Discoverability, Portability & Zero-Setup CLI Implementation Plan, Task 1: Embedded Exercises Catalog & In-Memory Fallback, Task 2: `spanglings init` Subcommand, Task 3: Machine-Readable JSON Output (`--json`), Task 4: Fuzzy Topic & Full-Text Search (`spanglings search`), Task 5: Shell Completions Generator (`spanglings completions`), Task 6: Full Verification & Documentation Update
 
 ### Community 138 - "Spanglings Product & Engineering Backlog"
-Cohesion: 0.33
-Nodes (5): 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Completed), 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion (Completed), 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements (Completed), 📊 Focus Area 4: Interactive TUI & IDE Integrations (Completed), Spanglings Product & Engineering Backlog
+Cohesion: 0.29
+Nodes (6): 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Completed), 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion (Completed), 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements (Completed), 📊 Focus Area 4: Interactive TUI & IDE Integrations (Completed), ⚡ Focus Area 5: Terminal Conjugation Engine & Developer Workflow Hooks (Completed), Spanglings Product & Engineering Backlog
 
 ### Community 139 - "Spanglings Init Subcommand Implementation Plan"
 Cohesion: 0.29
@@ -881,44 +880,40 @@ Nodes (3): Context, Exercise, Regional Contrasts 04: Lexical Dialectal Pairs
 Cohesion: 0.50
 Nodes (3): Context, Exercise, Regional Contrasts 05: Reflexive Imperatives in Voseo
 
-### Community 172 - "accents.rs"
-Cohesion: 0.23
-Nodes (7): AccentResult, check_accent_match(), String, strip_accents(), normalize(), String, test_smart_accent_matching()
+### Community 172 - "conjugate_verb"
+Cohesion: 0.16
+Nodes (19): print_conjugation_summary(), Option, Result, run_conjugate(), conjugate_verb(), get_irregular_verb(), ImperativeForms, PronounForms (+11 more)
 
-### Community 173 - "evaluate_current_exercise_in"
-Cohesion: 0.33
-Nodes (10): AccentMode, clear_screen(), evaluate_current_exercise(), evaluate_current_exercise_in(), P, Result, start_watch_mode(), test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir() (+2 more)
+### Community 173 - "SrsItem"
+Cohesion: 0.18
+Nodes (8): calculate_sm2_review(), DateTime, Default, Option, Self, Utc, SrsItem, test_sm2_repetition_intervals()
 
 ### Community 174 - "curriculum.rs"
-Cohesion: 0.24
-Nodes (8): Level, ParseLevelError, Display, Err, FromStr, Path, Self, String
+Cohesion: 0.16
+Nodes (11): Option, Result, show_hint(), Level, ParseLevelError, Display, Err, FromStr (+3 more)
 
-### Community 175 - "ValidationResult"
-Cohesion: 0.25
-Nodes (6): Diagnostic, Option, String, Option, String, ValidationResult
+### Community 175 - "pack.rs"
+Cohesion: 0.33
+Nodes (8): collect_markdown_files(), Path, PathBuf, Result, Vec, run_pack_create(), run_pack_validate(), test_pack_create_and_validate()
 
 ### Community 176 - "find_all_exercises"
-Cohesion: 0.43
-Nodes (7): collect_md_files(), find_all_exercises(), find_all_exercises_or_embedded(), Formatter, P, Result, Vec
+Cohesion: 0.24
+Nodes (11): get_exercises_json(), list_exercises(), Result, String, collect_md_files(), find_all_exercises(), find_all_exercises_or_embedded(), Formatter (+3 more)
 
 ### Community 177 - "Interactive TUI Heatmap, Fuzzy Search & Editor Diagnostics Implementation Plan"
 Cohesion: 0.33
 Nodes (5): Interactive TUI Heatmap, Fuzzy Search & Editor Diagnostics Implementation Plan, Task 1: Activity Heatmap Engine in CLI Progress & TUI, Task 2: Live Fuzzy Search (`/`) in Interactive TUI, Task 3: Editor Diagnostic Checker & JSON Streamer (`spanglings check`), Task 4: Documentation & Final Verification
 
-### Community 178 - "exercise_validity_tests.rs"
-Cohesion: 0.47
-Nodes (5): collect_md_paths(), Path, PathBuf, Vec, test_all_curriculum_exercises_are_valid_and_solvable()
+### Community 178 - "hook.rs"
+Cohesion: 0.44
+Nodes (8): find_git_hooks_dir(), remove_spanglings_block(), PathBuf, Result, String, run_hook_install(), run_hook_uninstall(), test_remove_spanglings_block()
 
-### Community 179 - "get_exercises_json"
-Cohesion: 0.50
-Nodes (4): get_exercises_json(), list_exercises(), Result, String
-
-### Community 181 - "show_hint"
-Cohesion: 0.50
-Nodes (3): Option, Result, show_hint()
+### Community 179 - "Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan"
+Cohesion: 0.29
+Nodes (6): Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan, Task 1: Automated Release Pipeline & Crates.io Publishing (`SPANG-040`), Task 2: High-Precision Terminal Verb Conjugator (`SPANG-041`), Task 3: Git Pre-Commit / Pre-Push Learning Hook (`SPANG-042`), Task 4: Custom Curriculum Pack Scaffolder & Validator (`SPANG-043`), Task 5: Documentation, Graphify Update & PR Creation
 
 ## Knowledge Gaps
-- **361 isolated node(s):** `spanglings`, `DrillItem`, `Key Features`, `1. Install via Cargo (Recommended)`, `2. Build from Source` (+356 more)
+- **370 isolated node(s):** `spanglings`, `DrillItem`, `Key Features`, `1. Install via Cargo (Recommended)`, `2. Build from Source` (+365 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -926,16 +921,16 @@ Nodes (3): Option, Result, show_hint()
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `Exercise` connect `Exercise` to `App`, `embedded.rs`, `validate_submission`, `progress.rs`, `curriculum.rs`, `check.rs`, `search_exercises`, `find_all_exercises`, `find_exercise_by_query`?**
-  _High betweenness centrality (0.058) - this node is a cross-community bridge._
-- **Why does `App` connect `App` to `Exercise`, `ValidationResult`?**
-  _High betweenness centrality (0.035) - this node is a cross-community bridge._
-- **Why does `AppState` connect `AppState` to `progress.rs`, `evaluate_current_exercise_in`?**
+  _High betweenness centrality (0.050) - this node is a cross-community bridge._
+- **Why does `AppState` connect `AppState` to `progress.rs`, `SrsItem`?**
+  _High betweenness centrality (0.021) - this node is a cross-community bridge._
+- **Why does `App` connect `App` to `validate_submission`, `Exercise`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Are the 14 inferred relationships involving `validate_submission()` (e.g. with `evaluate_exercise_for_check()` and `run_review_session()`) actually correct?**
-  _`validate_submission()` has 14 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 15 inferred relationships involving `validate_submission()` (e.g. with `evaluate_exercise_for_check()` and `run_pack_validate()`) actually correct?**
+  _`validate_submission()` has 15 INFERRED edges - model-reasoned connections that need verification._
 - **Are the 14 inferred relationships involving `get_reference_card()` (e.g. with `show_explanation()` and `draw_right_pane()`) actually correct?**
   _`get_reference_card()` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `DrillItem`, `Key Features` to the rest of the system?**
-  _361 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _370 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
