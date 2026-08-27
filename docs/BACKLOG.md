@@ -161,4 +161,19 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
 - [x] **SPANG-114: Track 40 - Middle-Voice Shifts & Reflexive Nuances (B1–C1)**
   - **Topics**: *Ir* vs *Irse* (destination vs departure), *Dormir* vs *Dormirse* (state vs falling asleep), *Comer* vs *Comerse* (atelic vs total consumption), *Llevar* vs *Llevarse* (transport vs getting along / taking away), *Quedar* vs *Quedarse* (meeting/fit vs staying), *Volver* vs *Volverse* (return vs permanent character transformation).
 - [x] **SPANG-115: Track 41 - Advanced Temporal, Manner & Concessive Adverbial Clauses (B2–C1)**
-  - **Topics**: *A medida que* / *Conforme* (proportional change), *De modo que* (purpose vs consequence), *En tanto que* / *Mientras* (duration condition), *Tan pronto como* / *Apenas* (immediate succession), *Salvo que* / *A menos que* (exceptive subjunctive), *Siempre y cuando* / *A condición de que* (contractual condition).
+  - **Topics**: *A medida que* / *Conforme* (proportional change), *De modo que* (purpose vs consequence), *En tanto que* / *Mientras* (duration condition), *Tan pronto como* / *Apenas* (immediate succession), *Salvo que* / *A menos que* (exceptive subjunctive), *Siempre y cuando* / *A practical condition*.
+
+---
+
+## 🎯 Focus Area 13: Diagnostic Placement Testing & Level Fast-Tracking (Completed)
+
+- [x] **SPANG-120: Calibrated CEFR Placement Battery & Evaluation Engine (`src/core/placement.rs`)**
+  - **Description**: 15-question calibrated diagnostic battery spanning Baseline (A1–A2), B1, B2, and C1 evaluating verb inflection, clitic positioning, subjunctive triggers, discourse connectors, and advanced nuance with tiered scoring algorithms.
+- [x] **SPANG-121: CLI Adaptive Diagnostic Test Subcommand (`spanglings test`)**
+  - **Description**: Terminal test runner (`spanglings test [--level <LEVEL>] [--fast-track] [--json]`) assessing CEFR proficiency, generating diagnostic breakdown scorecards, and saving `EvaluatedLevel` in user state.
+- [x] **SPANG-122: Automatic Fast-Track & SM-2 SRS Seeding (`AppState::fast_track_level`)**
+  - **Description**: Automatically marks all exercises in mastered CEFR tiers as completed and initializes spaced repetition cards with optimal ease factors, skipping tedious baseline drilling for intermediate/advanced learners.
+- [x] **SPANG-123: Interactive TUI Diagnostic Assessment Modal (`AppMode::PlacementTest`)**
+  - **Description**: Full-featured in-TUI diagnostic test overlay accessible via `[t]` or `[F5]`, featuring question-by-question cloze inputs, live answer validation, CEFR breakdown tables, and one-key `[F]` fast-track action.
+- [x] **SPANG-124: Verified CEFR Level Badge in Dashboard & LSP Status**
+  - **Description**: Displays verified CEFR placement badges and diagnostic accuracy in `spanglings progress`, JSON metrics, and VS Code / LSP status bar.
