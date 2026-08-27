@@ -1,6 +1,6 @@
+use colored::Colorize;
 use std::fs;
 use std::path::PathBuf;
-use colored::Colorize;
 
 const HOOK_START_MARKER: &str = "# --- SPANGLINGS HOOK START ---";
 const HOOK_END_MARKER: &str = "# --- SPANGLINGS HOOK END ---";
@@ -61,17 +61,29 @@ pub fn run_hook_uninstall(hook_type: &str) -> anyhow::Result<()> {
 
     let content = fs::read_to_string(&hook_file)?;
     if !content.contains(HOOK_START_MARKER) {
-        println!("{} Spanglings hook was not active in {}.", "•".yellow(), hook_type);
+        println!(
+            "{} Spanglings hook was not active in {}.",
+            "•".yellow(),
+            hook_type
+        );
         return Ok(());
     }
 
     let cleaned = remove_spanglings_block(&content);
     if cleaned.trim() == "#!/usr/bin/env bash" || cleaned.trim().is_empty() {
         let _ = fs::remove_file(&hook_file);
-        println!("{} Removed empty {} hook file.", "✓".green().bold(), hook_type);
+        println!(
+            "{} Removed empty {} hook file.",
+            "✓".green().bold(),
+            hook_type
+        );
     } else {
         fs::write(&hook_file, cleaned)?;
-        println!("{} Removed Spanglings block from {}.", "✓".green().bold(), hook_type);
+        println!(
+            "{} Removed Spanglings block from {}.",
+            "✓".green().bold(),
+            hook_type
+        );
     }
     Ok(())
 }
@@ -121,7 +133,6 @@ mod tests {
 
     #[test]
     fn test_remove_spanglings_block() {
-        let original = "#!/usr/bin/env bash\necho 'pre-existing'\n# --- SPANG-HOOK START ---\nspanglings drill\n# --- SPANG-HOOK END ---\necho 'done'";
         let content_with_markers = format!(
             "#!/usr/bin/env bash\necho 'pre-existing'\n{}\nspanglings drill\n{}\necho 'done'",
             HOOK_START_MARKER, HOOK_END_MARKER

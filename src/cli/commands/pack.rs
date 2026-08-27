@@ -75,7 +75,10 @@ Tier 3: The answer is 'propusimos'.
         base_dir.display().to_string().cyan().bold()
     );
     println!("  Added 3 starter markdown exercises ready for editing.");
-    println!("  Run 'spanglings pack validate {}' to check syntax.", base_dir.display());
+    println!(
+        "  Run 'spanglings pack validate {}' to check syntax.",
+        base_dir.display()
+    );
     Ok(())
 }
 
@@ -96,7 +99,11 @@ pub fn run_pack_validate(path_str: &str) -> anyhow::Result<bool> {
     }
 
     if files.is_empty() {
-        println!("{} No markdown exercises found in '{}'.", "•".yellow(), path_str);
+        println!(
+            "{} No markdown exercises found in '{}'.",
+            "•".yellow(),
+            path_str
+        );
         return Ok(true);
     }
 
@@ -122,12 +129,15 @@ pub fn run_pack_validate(path_str: &str) -> anyhow::Result<bool> {
                     issues.push("Missing title header (# Title)".to_string());
                 }
                 if exercise.topic.is_empty() {
-                    issues.push("Missing topic metadata in <!-- id: ... | topic: ... -->".to_string());
+                    issues.push(
+                        "Missing topic metadata in <!-- id: ... | topic: ... -->".to_string(),
+                    );
                 }
 
                 // Verify solvability with the declared primary solution
                 if !exercise.solution.is_empty() {
-                    let validation = validate_submission(&exercise, &exercise.solution, AccentMode::Forgiving);
+                    let validation =
+                        validate_submission(&exercise, &exercise.solution, AccentMode::Forgiving);
                     if !validation.is_success() {
                         issues.push(format!(
                             "Primary solution '{}' fails validator test",
@@ -137,7 +147,12 @@ pub fn run_pack_validate(path_str: &str) -> anyhow::Result<bool> {
                 }
 
                 if issues.is_empty() {
-                    println!("  {} {:<40} [{}]", "✓".green().bold(), relative_display, exercise.level);
+                    println!(
+                        "  {} {:<40} [{}]",
+                        "✓".green().bold(),
+                        relative_display,
+                        exercise.level
+                    );
                 } else {
                     errors_count += 1;
                     println!("  {} {:<40}", "✗".red().bold(), relative_display.red());

@@ -51,11 +51,7 @@ fn main() -> anyhow::Result<()> {
             }
         }
         Some(Commands::Conjugate { verb, tense }) => {
-            spanglings::cli::commands::conjugate::run_conjugate(
-                &verb,
-                tense.as_deref(),
-                cli.json,
-            )?;
+            spanglings::cli::commands::conjugate::run_conjugate(&verb, tense.as_deref(), cli.json)?;
         }
         Some(Commands::Hook { action }) => match action {
             spanglings::cli::HookAction::Install { hook_type } => {

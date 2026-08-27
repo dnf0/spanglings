@@ -59,13 +59,13 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
 
 ---
 
-## ⚡ Focus Area 5: Terminal Conjugation Engine & Developer Workflow Hooks
+## ⚡ Focus Area 5: Terminal Conjugation Engine & Developer Workflow Hooks (Completed)
 
-- [ ] **SPANG-040: Automated Release Pipeline & Crates.io Publishing**
+- [x] **SPANG-040: Automated Release Pipeline & Crates.io Publishing**
   - **Description**: Multi-platform release pipeline publishing signed binary bundles and automated `cargo publish` execution on tag pushes with `CARGO_REGISTRY_TOKEN`.
-- [ ] **SPANG-041: High-Precision Verb Conjugator (`spanglings conjugate <verb> [tense]`)**
+- [x] **SPANG-041: High-Precision Verb Conjugator (`spanglings conjugate <verb> [tense]`)**
   - **Description**: Terminal lookup engine rendering complete color-coded conjugation grids (Present, Preterite, Imperfect, Subjunctive, Imperative, Participle, Gerund) with irregular stem highlights.
-- [ ] **SPANG-042: Git Pre-Commit / Pre-Push Spanish Practice Hook (`spanglings hook`)**
+- [x] **SPANG-042: Git Pre-Commit / Pre-Push Spanish Practice Hook (`spanglings hook`)**
   - **Description**: Installable Git hook prompting developer with 1 rapid active-recall conjugation/grammar flashcard before code commits.
-- [ ] **SPANG-043: Custom Curriculum Pack Scaffolder & Validator (`spanglings pack`)**
+- [x] **SPANG-043: Custom Curriculum Pack Scaffolder & Validator (`spanglings pack`)**
   - **Description**: Tools to scaffold custom community/industry tracks (`spanglings pack create`) and validate exercise markdown solvability (`spanglings pack validate`).
