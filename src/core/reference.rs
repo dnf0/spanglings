@@ -30,14 +30,24 @@ pub fn list_reference_topics() -> &'static [&'static str] {
 }
 
 pub fn get_reference_card(topic: &str) -> Option<&'static str> {
-    match topic.to_lowercase().replace('_', "-").as_str() {
-        "subjunctive" | "subj" | "weirdo" => Some(SUBJUNCTIVE_CARD),
-        "por-para" | "por_para" | "por" | "para" => Some(POR_PARA_CARD),
-        "ser-estar" | "ser_estar" | "ser" | "estar" => Some(SER_ESTAR_CARD),
-        "past" | "preterite" | "imperfect" | "past-aspect" => Some(PAST_TENSES_CARD),
-        "pronouns" | "clitics" | "stacking" | "direct-indirect" => Some(PRONOUN_STACKING_CARD),
-        "prepositions" | "regimen" | "prep" => Some(PREPOSITIONS_CARD),
-        "accidental-se" | "se-accidental" | "accidental" => Some(ACCIDENTAL_SE_CARD),
+    let normalized = topic.to_lowercase().replace('_', "-");
+    let key = normalized.as_str();
+
+    // 1. Exact or alias match
+    match key {
+        "subjunctive" | "subj" | "weirdo" | "e0301" | "e0401" | "e0501" | "e0601" => {
+            Some(SUBJUNCTIVE_CARD)
+        }
+        "por-para" | "por_para" | "por" | "para" | "e0701" => Some(POR_PARA_CARD),
+        "ser-estar" | "ser_estar" | "ser" | "estar" | "e0101" | "e0102" => Some(SER_ESTAR_CARD),
+        "past" | "preterite" | "imperfect" | "past-aspect" | "e0201" | "e0202" | "e0203" => {
+            Some(PAST_TENSES_CARD)
+        }
+        "pronouns" | "clitics" | "stacking" | "direct-indirect" | "e0801" | "e0802" => {
+            Some(PRONOUN_STACKING_CARD)
+        }
+        "prepositions" | "regimen" | "prep" | "e0901" => Some(PREPOSITIONS_CARD),
+        "accidental-se" | "se-accidental" | "accidental" | "e1001" => Some(ACCIDENTAL_SE_CARD),
         "tech-software" | "tech" | "software" | "dev" => Some(TECH_SOFTWARE_CARD),
         "business" | "business-correspondence" | "biz" | "diplomatic" => {
             Some(BUSINESS_CORRESPONDENCE_CARD)
@@ -45,40 +55,96 @@ pub fn get_reference_card(topic: &str) -> Option<&'static str> {
         "false-friends" | "falsos-amigos" | "cognates" | "traps" => Some(FALSE_FRIENDS_CARD),
         "voseo" | "regional" | "rioplatense" => Some(VOSEO_CARD),
         "accents" | "accentuation" | "tildes" | "acentuacion" | "stress" => Some(ACCENTS_CARD),
-        "epistemic-conjecture" | "conjecture" | "probability" | "probabilidad" => {
+        "epistemic-conjecture" | "conjecture" | "probability" | "probabilidad" | "e0048" => {
             Some(EPISTEMIC_CONJECTURE_CARD)
         }
-        "clitic-doubling" | "duplicacion" | "left-dislocation" | "reduplicacion" => {
+        "clitic-doubling" | "duplicacion" | "left-dislocation" | "reduplicacion" | "e0049" => {
             Some(CLITIC_DOUBLING_CARD)
         }
-        "personal-a" | "a-personal" | "dom" | "animacy" => Some(PERSONAL_A_CARD),
-        "gerund-rules" | "gerundio" | "gerunds" | "posteriority" => Some(GERUND_RULES_CARD),
-        "adversatives" | "pero-sino" | "sino-que" | "sino" => Some(ADVERSATIVES_CARD),
-        "legal-subjunctive" | "optatives" | "futuro-subjuntivo" | "archaic-subjunctive" => {
-            Some(LEGAL_SUBJUNCTIVE_CARD)
+        "personal-a" | "a-personal" | "dom" | "animacy" | "e0050" => Some(PERSONAL_A_CARD),
+        "gerund-rules" | "gerundio" | "gerunds" | "posteriority" | "e0051" => {
+            Some(GERUND_RULES_CARD)
         }
-        "verbs-of-becoming" | "cambio" | "devenir" | "hacerse" | "ponerse" | "quedarse"
-        | "volverse" => Some(VERBS_OF_BECOMING_CARD),
-        "epistemic-adverbs" | "duda" | "a-lo-mejor" | "quizas" | "tal-vez" | "igual" => {
-            Some(EPISTEMIC_ADVERBS_CARD)
-        }
+        "adversatives" | "pero-sino" | "sino-que" | "sino" | "e0052" => Some(ADVERSATIVES_CARD),
+        "legal-subjunctive"
+        | "optatives"
+        | "futuro-subjuntivo"
+        | "archaic-subjunctive"
+        | "e0053" => Some(LEGAL_SUBJUNCTIVE_CARD),
+        "verbs-of-becoming"
+        | "cambio"
+        | "devenir"
+        | "hacerse"
+        | "ponerse"
+        | "quedarse"
+        | "volverse"
+        | "e0054" => Some(VERBS_OF_BECOMING_CARD),
+        "epistemic-adverbs"
+        | "duda"
+        | "a-lo-mejor"
+        | "quizas"
+        | "tal-vez"
+        | "igual"
+        | "e0055" => Some(EPISTEMIC_ADVERBS_CARD),
         "possessive-datives"
         | "dativo-posesivo"
         | "dativo-etico"
         | "posesion-inalienable"
-        | "datives" => Some(POSSESSIVE_DATIVES_CARD),
-        "corrective-polarity" | "polaridad" | "no-es-que" | "de-ahi-que" | "no-porque" => {
-            Some(CORRECTIVE_POLARITY_CARD)
-        }
-        "participial-absolutes" | "participio-absoluto" | "absolutas" | "participles" => {
-            Some(PARTICIPIAL_ABSOLUTES_CARD)
-        }
+        | "datives"
+        | "e0056" => Some(POSSESSIVE_DATIVES_CARD),
+        "corrective-polarity"
+        | "polaridad"
+        | "no-es-que"
+        | "de-ahi-que"
+        | "no-porque"
+        | "e0057" => Some(CORRECTIVE_POLARITY_CARD),
+        "participial-absolutes"
+        | "participio-absoluto"
+        | "absolutas"
+        | "participles"
+        | "e0058" => Some(PARTICIPIAL_ABSOLUTES_CARD),
         "scalar-concession"
         | "concesivas-intensivas"
         | "por-mucho-que"
         | "a-riesgo-de-que"
-        | "concession" => Some(SCALAR_CONCESSION_CARD),
-        _ => None,
+        | "concession"
+        | "e0059" => Some(SCALAR_CONCESSION_CARD),
+        _ => {
+            // 2. Fallback: Prefix matching for concept IDs
+            if key.starts_with("subjunctive") {
+                Some(SUBJUNCTIVE_CARD)
+            } else if key.starts_with("por-vs-para") || key.starts_with("por-para") {
+                Some(POR_PARA_CARD)
+            } else if key.starts_with("ser-vs-estar") || key.starts_with("ser-estar") {
+                Some(SER_ESTAR_CARD)
+            } else if key.starts_with("past-") || key.starts_with("preterite") || key.starts_with("imperfect") {
+                Some(PAST_TENSES_CARD)
+            } else if key.starts_with("verbs-of-becoming") {
+                Some(VERBS_OF_BECOMING_CARD)
+            } else if key.starts_with("epistemic-adverb") {
+                Some(EPISTEMIC_ADVERBS_CARD)
+            } else if key.starts_with("epistemic-conjecture") {
+                Some(EPISTEMIC_CONJECTURE_CARD)
+            } else if key.starts_with("clitic-doubling") {
+                Some(CLITIC_DOUBLING_CARD)
+            } else if key.starts_with("personal-a") {
+                Some(PERSONAL_A_CARD)
+            } else if key.starts_with("gerund-") {
+                Some(GERUND_RULES_CARD)
+            } else if key.starts_with("adversative") {
+                Some(ADVERSATIVES_CARD)
+            } else if key.starts_with("corrective-") || key.starts_with("rejected-cause") || key.starts_with("consecutive-subjunctive") {
+                Some(CORRECTIVE_POLARITY_CARD)
+            } else if key.starts_with("participial-") {
+                Some(PARTICIPIAL_ABSOLUTES_CARD)
+            } else if key.starts_with("scalar-concession") {
+                Some(SCALAR_CONCESSION_CARD)
+            } else if key.starts_with("inalienable-") || key.starts_with("ethic-dative") {
+                Some(POSSESSIVE_DATIVES_CARD)
+            } else {
+                None
+            }
+        }
     }
 }
 

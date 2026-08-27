@@ -216,3 +216,15 @@ fn test_list_reference_topics() {
 fn test_unknown_topic_returns_none() {
     assert!(get_reference_card("quantum_physics").is_none());
 }
+
+#[test]
+fn test_error_code_and_concept_lookup() {
+    assert!(get_reference_card("E0301").is_some());
+    assert!(get_reference_card("e0701").is_some());
+    assert!(get_reference_card("E0101").is_some());
+    assert!(get_reference_card("E0048").is_some());
+    assert!(get_reference_card("E0059").is_some());
+    assert!(get_reference_card("subjunctive_volition_influence").is_some());
+    assert!(get_reference_card("por_vs_para_purpose_cause").is_some());
+}
+
