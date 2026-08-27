@@ -7,8 +7,8 @@ struct DrillItem {
     explanation: &'static str,
 }
 
-pub fn run_drill(topic: Option<&str>) -> anyhow::Result<()> {
-    let t = topic.unwrap_or("all").to_lowercase();
+pub fn run_drill(topic: Option<&str>, concept: Option<&str>) -> anyhow::Result<()> {
+    let t = concept.or(topic).unwrap_or("all").to_lowercase();
 
     let preterite_drills = vec![
         DrillItem {
@@ -67,8 +67,8 @@ pub fn run_drill(topic: Option<&str>) -> anyhow::Result<()> {
     ];
 
     let items = match t.as_str() {
-        "preterite" | "pret" | "past" => preterite_drills,
-        "subjunctive" | "subj" => subjunctive_drills,
+        s if s.contains("pret") || s.contains("past") => preterite_drills,
+        s if s.contains("subj") => subjunctive_drills,
         _ => {
             let mut combined = preterite_drills;
             combined.extend(subjunctive_drills);

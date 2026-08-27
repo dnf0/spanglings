@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Baseline 01: Present Irregular 'Yo' Forms
-<!-- id: b0_present_stems_01 | level: Baseline | topic: baseline_present_stems | type: cloze -->
+<!-- id: b0_present_stems_01 | level: Baseline | topic: baseline_present_stems | type: cloze | concepts: ["irregular_present_stems"] | prerequisites: [] | grammar_focus: "Irregular present indicative yo-form and vowel mutation." -->
 
 > **Grammar Rule**: Certain common verbs have irregular 1st-person singular (yo) forms in present indicative.
 

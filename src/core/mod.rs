@@ -2,6 +2,7 @@ pub mod conjugator;
 pub mod curriculum;
 pub mod embedded;
 pub mod exercise;
+pub mod graph;
 pub mod placement;
 pub mod reference;
 pub mod srs;

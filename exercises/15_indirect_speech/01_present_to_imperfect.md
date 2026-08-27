@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Reported Speech 01: Present -> Imperfect Tense Shift
-<!-- id: b2_indirect_present_to_imp | level: B2 | topic: indirect_speech | type: cloze -->
+<!-- id: b2_indirect_present_to_imp | level: B2 | topic: indirect_speech | type: cloze | concepts: ["indirect_speech_transformations"] | prerequisites: ["imperfect_subjunctive_formation", "aspectual_meaning_shifts"] | grammar_focus: "Tense shift and concordance in indirect reported speech." | contrast_note: "Contrast direct present tense with back-shifted indirect past tense." -->
 
 > **Grammar Rule**: When reporting direct speech introduced by a past verb (dijo que...), Present Indicative shifts to Imperfect Indicative.
 

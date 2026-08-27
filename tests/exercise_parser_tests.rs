@@ -3,8 +3,7 @@ use spanglings::core::exercise::{Exercise, ExerciseType};
 
 #[test]
 fn test_parse_valid_markdown_exercise() {
-    let content = r#"<!-- I AM NOT DONE -->
-# Subjunctive 01: Verbs of Influence
+    let content = r#"# Subjunctive 01: Verbs of Influence
 <!-- id: b1_subjunctive_01 | level: B1 | topic: subjunctive_weirdo | type: cloze -->
 
 > **Grammar Rule**: Verbs of wishing/influence require subjunctive with subject change.
@@ -40,7 +39,7 @@ Tier 3: Add -as -> 'vengas'.
     assert_eq!(exercise.id, "b1_subjunctive_01");
     assert_eq!(exercise.level, Level::B1);
     assert_eq!(exercise.exercise_type, ExerciseType::Cloze);
-    assert!(!exercise.is_done);
+    assert!(exercise.is_done);
     assert_eq!(exercise.solution, "vengas");
     assert_eq!(exercise.alternatives, vec!["vengas tú"]);
     assert_eq!(exercise.hints.len(), 3);
@@ -76,4 +75,59 @@ fn test_parse_invalid_type_error() {
 "#;
     let result = Exercise::from_markdown("exercises/test.md", content);
     assert!(result.is_err());
+}
+
+#[test]
+fn test_parse_exercise_with_concepts_and_prerequisites() {
+    let content = r#"<!--
+id: test_concepts_01
+level: B1
+type: cloze
+title: Test Concept Linking
+topic: travel_logistics_and_borders
+concepts: ["subjunctive_temporal_future", "impersonal_se"]
+prerequisites: ["05_subjunctive_conjunctions"]
+grammar_focus: "Subjunctive required for prospective time clauses."
+contrast_note: "Contrast with indicative for habitual actions."
+-->
+
+### Context
+Test context
+
+### Exercise
+En cuanto <!-- ANSWER -->, saldremos.
+"#;
+    let ex = Exercise::from_markdown("exercises/test.md", content).expect("Failed to parse");
+    assert_eq!(
+        ex.concept_tags,
+        vec!["subjunctive_temporal_future", "impersonal_se"]
+    );
+    assert_eq!(ex.prerequisites, vec!["05_subjunctive_conjunctions"]);
+    assert_eq!(
+        ex.grammar_focus.as_deref(),
+        Some("Subjunctive required for prospective time clauses.")
+    );
+    assert_eq!(
+        ex.contrast_note.as_deref(),
+        Some("Contrast with indicative for habitual actions.")
+    );
+    assert_eq!(ex.title, "Test Concept Linking");
+    assert!(ex.is_done);
+}
+
+#[test]
+fn test_parse_exercise_with_concept_tags_and_comma_separated() {
+    let content = r#"# Header Title
+<!-- id: test_concepts_02 | level: B2 | topic: banking | type: transformation | concept_tags: concept_a, concept_b | prerequisites: prereq_1, prereq_2 | grammar_focus: Unquoted grammar focus | contrast_note: Unquoted contrast note -->
+
+### Context
+Test context
+"#;
+    let ex = Exercise::from_markdown("exercises/test2.md", content).expect("Failed to parse");
+    assert_eq!(ex.concept_tags, vec!["concept_a", "concept_b"]);
+    assert_eq!(ex.prerequisites, vec!["prereq_1", "prereq_2"]);
+    assert_eq!(ex.grammar_focus.as_deref(), Some("Unquoted grammar focus"));
+    assert_eq!(ex.contrast_note.as_deref(), Some("Unquoted contrast note"));
+    assert_eq!(ex.title, "Header Title");
+    assert!(ex.is_done);
 }

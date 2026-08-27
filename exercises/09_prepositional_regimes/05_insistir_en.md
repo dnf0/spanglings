@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Prepositional Regimes 05: 'Insistir en'
-<!-- id: b2_prep_insistir_en | level: B2 | topic: prepositional_regimes | type: cloze -->
+<!-- id: b2_prep_insistir_en | level: B2 | topic: prepositional_regimes | type: cloze | concepts: ["prepositional_regimes"] | prerequisites: ["por_vs_para_foundations"] | grammar_focus: "Verbal prepositional regimes (régimen preposicional) with required prepositions." -->
 
 > **Grammar Rule**: 'Insistir' governs the preposition 'en' before nouns, infinitives, or 'que' clauses.
 

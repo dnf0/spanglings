@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Conditionals 05: Inverted Conditional Clause
-<!-- id: b2_cond_inverted | level: B2 | topic: conditionals | type: cloze -->
+<!-- id: b2_cond_inverted | level: B2 | topic: conditionals | type: cloze | concepts: ["hypothetical_conditionals_si_clauses"] | prerequisites: ["imperfect_subjunctive_formation"] | grammar_focus: "Imperfect subjunctive in hypothetical and counterfactual 'si' clauses." | contrast_note: "Contrast real condition (present indicative) with hypothetical condition (imperfect subjunctive)." -->
 
 > **Grammar Rule**: Conditional sentence order can be inverted: Main clause (Conditional) + 'si' + Imperfect Subjunctive.
 

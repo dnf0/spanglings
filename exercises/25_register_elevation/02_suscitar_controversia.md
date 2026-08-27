@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Register Elevation 02: 'Suscitar' (Arouse/Provoke) vs 'Causar'
-<!-- id: c1_reg_suscitar | level: C1 | topic: register_elevation | type: cloze -->
+<!-- id: c1_reg_suscitar | level: C1 | topic: register_elevation | type: cloze | concepts: ["register_elevation_formal"] | prerequisites: ["discourse_connectors", "formal_inversion_hyperbaton"] | grammar_focus: "Register elevation via nominalization and formal administrative prose." | contrast_note: "Contrast conversational phrasing with formal administrative nominalization." -->
 
 > **Register Elevation**: Rather than *causar* or *provocar*, formal academic and journalistic Spanish uses **suscitar** (e.g. *suscitar interés*, *suscitar polémica*, *suscitar sospechas*).
 

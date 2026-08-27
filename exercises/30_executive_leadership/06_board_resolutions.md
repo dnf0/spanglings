@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Executive Leadership 06: Board Resolutions
-<!-- id: c1_exec_board_resolution | level: C1 | topic: executive_leadership | type: cloze -->
+<!-- id: c1_exec_board_resolution | level: C1 | topic: executive_leadership | type: cloze | concepts: ["executive_leadership_communication"] | prerequisites: ["register_elevation_formal", "tech_software_engineering"] | grammar_focus: "Executive leadership communication, board presentations, and strategic alignment." -->
 
 > **Grammar & Lexicon**: "To approve unanimously" in parliamentary and corporate board protocol is **aprobar por unanimidad**.
 

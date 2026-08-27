@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Nuanced Prepositions 02: Tras, Según & Bajo (Formal Sequencing & Conditions)
-<!-- id: b1_prep_tras_segun_bajo | level: B1 | topic: nuanced_prepositions_and_locutions | type: cloze -->
+<!-- id: b1_prep_tras_segun_bajo | level: B1 | topic: nuanced_prepositions_and_locutions | type: cloze | concepts: ["nuanced_prepositions_and_locutions"] | prerequisites: ["relative_pronouns_and_prepositions", "prepositional_regimes"] | grammar_focus: "High-register prepositional locutions and advanced verbal regimes." -->
 
 > **Grammar & Lexicon**: **Tras** denotes temporal/spatial succession (*tras la tormenta* = after the storm). **Según** introduces perspective, accordance, or source (*según el reporte*). **Bajo** denotes subordination, condition, or pressure (*bajo la condición de*, *bajo juramento*).
 

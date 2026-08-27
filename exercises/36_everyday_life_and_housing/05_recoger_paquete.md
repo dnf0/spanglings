@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Everyday Life & Housing 05: Parcel Delivery & Post Office Pickups
-<!-- id: b1_housing_recoger_paquete | level: B1 | topic: everyday_life_and_housing | type: cloze -->
+<!-- id: b1_housing_recoger_paquete | level: B1 | topic: everyday_life_and_housing | type: cloze | concepts: ["lease_agreements_contracts"] | prerequisites: ["por_vs_para_nuances", "passive_refleja_vs_impersonal"] | grammar_focus: "Tenancy contracts, housing logistics, property maintenance, and rental agreements." -->
 
 > **Grammar & Lexicon**: When a parcel delivery misses you, you must **recoger el paquete** at the post office branch (**sucursal postal / oficina de correos**) using the tracking number (**número de seguimiento / guía de rastreo**).
 

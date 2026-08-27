@@ -23,6 +23,10 @@ fn sample_exercises() -> Vec<Exercise> {
             hints: vec!["Root is veng-".to_string()],
             raw_content: "### Context\nEnglish: Come\n### Exercise\nQuiero que tú vengas"
                 .to_string(),
+            concept_tags: vec![],
+            prerequisites: vec![],
+            grammar_focus: None,
+            contrast_note: None,
         },
         Exercise {
             path: PathBuf::from("exercises/02_por.md"),
@@ -37,6 +41,10 @@ fn sample_exercises() -> Vec<Exercise> {
             diagnostic_rules: vec![],
             hints: vec!["Destination".to_string()],
             raw_content: "### Context\nEnglish: For you\n### Exercise\nEsto es para ti".to_string(),
+            concept_tags: vec![],
+            prerequisites: vec![],
+            grammar_focus: None,
+            contrast_note: None,
         },
     ]
 }

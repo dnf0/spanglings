@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Verbal Periphrases 05: Venir a decir
-<!-- id: c1_periphrasis_venir_a_decir | level: C1 | topic: verbal_periphrases | type: cloze -->
+<!-- id: c1_periphrasis_venir_a_decir | level: C1 | topic: verbal_periphrases | type: cloze | concepts: ["advanced_verbal_periphrases"] | prerequisites: ["verbal_periphrases_aspect"] | grammar_focus: "Advanced modal and aspectual periphrases in formal Spanish." -->
 
 > **Grammar & Lexicon**: The approximative periphrasis **venir a decir** expresses what a statement or report effectively amounts to.
 

@@ -31,6 +31,10 @@ fn create_sample_exercises() -> Vec<Exercise> {
             raw_content:
                 "### Context\nEnglish: I want you to come\n### Exercise\nQuiero que tú vengas\n"
                     .to_string(),
+            concept_tags: vec![],
+            prerequisites: vec![],
+            grammar_focus: None,
+            contrast_note: None,
         },
         Exercise {
             path: PathBuf::from("exercises/02_por_para.md"),
@@ -50,6 +54,10 @@ fn create_sample_exercises() -> Vec<Exercise> {
             hints: vec!["Think about destination vs motive.".to_string()],
             raw_content: "### Context\nEnglish: For you\n### Exercise\nEsto es para ti\n"
                 .to_string(),
+            concept_tags: vec![],
+            prerequisites: vec![],
+            grammar_focus: None,
+            contrast_note: None,
         },
     ]
 }
@@ -456,4 +464,235 @@ fn test_tui_placement_test_flow() {
 
     app.exit_placement_test();
     assert_eq!(app.mode, spanglings::tui::app::AppMode::Editing);
+}
+
+#[test]
+fn test_app_first_run_welcome_state_initialization() {
+    let exercises = create_sample_exercises();
+
+    // 1. When state.tour_completed == false, show_tour_welcome is true
+    let state1 = spanglings::core::state::AppState {
+        tour_completed: false,
+        ..Default::default()
+    };
+    let app1 = App::new_with_state(exercises.clone(), false, state1);
+    assert!(app1.show_tour_welcome);
+    assert!(!app1.show_tour_modal);
+
+    // 2. When state.tour_completed == true, show_tour_welcome is false
+    let state2 = spanglings::core::state::AppState {
+        tour_completed: true,
+        ..Default::default()
+    };
+    let app2 = App::new_with_state(exercises, false, state2);
+    assert!(!app2.show_tour_welcome);
+    assert!(!app2.show_tour_modal);
+}
+
+#[test]
+fn test_app_tour_hotkey_toggle_in_normal_mode() {
+    let exercises = create_sample_exercises();
+    let state = spanglings::core::state::AppState {
+        tour_completed: true,
+        ..Default::default()
+    };
+    let mut app = App::new_with_state(exercises, false, state);
+    assert!(!app.show_tour_modal);
+
+    // Press 't' in editing mode opens tour modal
+    app.on_key(crossterm::event::KeyCode::Char('t'));
+    assert!(app.show_tour_modal);
+    assert_eq!(app.tour_current_station, 0);
+
+    // Dismiss with Esc
+    app.on_key(crossterm::event::KeyCode::Esc);
+    assert!(!app.show_tour_modal);
+
+    // Press 'T' (uppercase) opens tour modal
+    app.on_key(crossterm::event::KeyCode::Char('T'));
+    assert!(app.show_tour_modal);
+    assert_eq!(app.tour_current_station, 0);
+
+    // Dismiss with 'q'
+    app.on_key(crossterm::event::KeyCode::Char('q'));
+    assert!(!app.show_tour_modal);
+
+    // Reopen and dismiss with 'Q'
+    app.on_key(crossterm::event::KeyCode::Char('t'));
+    assert!(app.show_tour_modal);
+    app.on_key(crossterm::event::KeyCode::Char('Q'));
+    assert!(!app.show_tour_modal);
+}
+
+#[test]
+fn test_app_tour_navigation_and_completion() {
+    let exercises = create_sample_exercises();
+    let state = spanglings::core::state::AppState {
+        tour_completed: false,
+        ..Default::default()
+    };
+    let mut app = App::new_with_state(exercises, false, state);
+
+    // Open tour modal directly
+    app.show_tour_welcome = false;
+    app.show_tour_modal = true;
+    app.tour_current_station = 0;
+
+    let total_stations = spanglings::cli::commands::tour::get_tour_stations().len();
+    assert_eq!(total_stations, 6);
+
+    // Advance with Right arrow
+    app.on_key(crossterm::event::KeyCode::Right);
+    assert_eq!(app.tour_current_station, 1);
+
+    // Advance with 'n'
+    app.on_key(crossterm::event::KeyCode::Char('n'));
+    assert_eq!(app.tour_current_station, 2);
+
+    // Advance with 'N'
+    app.on_key(crossterm::event::KeyCode::Char('N'));
+    assert_eq!(app.tour_current_station, 3);
+
+    // Go back with Left arrow
+    app.on_key(crossterm::event::KeyCode::Left);
+    assert_eq!(app.tour_current_station, 2);
+
+    // Go back with 'p'
+    app.on_key(crossterm::event::KeyCode::Char('p'));
+    assert_eq!(app.tour_current_station, 1);
+
+    // Go back with 'P'
+    app.on_key(crossterm::event::KeyCode::Char('P'));
+    assert_eq!(app.tour_current_station, 0);
+
+    // Saturating sub at station 0
+    app.on_key(crossterm::event::KeyCode::Left);
+    assert_eq!(app.tour_current_station, 0);
+
+    // Advance to station 5 (last station)
+    for _ in 0..5 {
+        app.on_key(crossterm::event::KeyCode::Right);
+    }
+    assert_eq!(app.tour_current_station, 5);
+    assert!(app.show_tour_modal);
+    assert!(!app.state.tour_completed);
+
+    // Finishing last station with Enter marks tour_completed = true in state
+    app.on_key(crossterm::event::KeyCode::Enter);
+    assert!(!app.show_tour_modal);
+    assert!(app.state.tour_completed);
+}
+
+#[test]
+fn test_app_welcome_modal_responses() {
+    let exercises = create_sample_exercises();
+
+    // 1. Respond with 'y' -> opens tour modal
+    let mut app_y = App::new(exercises.clone(), false);
+    app_y.show_tour_welcome = true;
+    app_y.on_key(crossterm::event::KeyCode::Char('y'));
+    assert!(!app_y.show_tour_welcome);
+    assert!(app_y.show_tour_modal);
+    assert_eq!(app_y.tour_current_station, 0);
+
+    // 2. Respond with 'Y' -> opens tour modal
+    let mut app_cap_y = App::new(exercises.clone(), false);
+    app_cap_y.show_tour_welcome = true;
+    app_cap_y.on_key(crossterm::event::KeyCode::Char('Y'));
+    assert!(!app_cap_y.show_tour_welcome);
+    assert!(app_cap_y.show_tour_modal);
+
+    // 3. Respond with 'n' -> dismisses welcome modal
+    let mut app_n = App::new(exercises.clone(), false);
+    app_n.show_tour_welcome = true;
+    app_n.on_key(crossterm::event::KeyCode::Char('n'));
+    assert!(!app_n.show_tour_welcome);
+    assert!(!app_n.show_tour_modal);
+
+    // 4. Respond with 'N' -> dismisses welcome modal
+    let mut app_cap_n = App::new(exercises.clone(), false);
+    app_cap_n.show_tour_welcome = true;
+    app_cap_n.on_key(crossterm::event::KeyCode::Char('N'));
+    assert!(!app_cap_n.show_tour_welcome);
+    assert!(!app_cap_n.show_tour_modal);
+
+    // 5. Respond with Esc -> dismisses welcome modal
+    let mut app_esc = App::new(exercises, false);
+    app_esc.show_tour_welcome = true;
+    app_esc.on_key(crossterm::event::KeyCode::Esc);
+    assert!(!app_esc.show_tour_welcome);
+    assert!(!app_esc.show_tour_modal);
+}
+
+#[test]
+fn test_tui_draw_tour_modals_without_panicking() {
+    let exercises = create_sample_exercises();
+    let mut app = App::new(exercises, false);
+    let backend = TestBackend::new(120, 40);
+    let mut terminal = Terminal::new(backend).unwrap();
+
+    // 1. Draw Welcome Modal
+    app.show_tour_welcome = true;
+    app.show_tour_modal = false;
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+
+    // 2. Draw each station of Tour Modal
+    app.show_tour_welcome = false;
+    app.show_tour_modal = true;
+    let total_stations = spanglings::cli::commands::tour::get_tour_stations().len();
+    for i in 0..total_stations {
+        app.tour_current_station = i;
+        terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+    }
+
+    // 3. Draw on small/narrow terminal
+    let narrow_backend = TestBackend::new(70, 25);
+    let mut narrow_terminal = Terminal::new(narrow_backend).unwrap();
+    app.show_tour_welcome = true;
+    narrow_terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+    app.show_tour_welcome = false;
+    narrow_terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+}
+
+#[test]
+fn test_tui_tour_events_delegation() {
+    let exercises = create_sample_exercises();
+    let state = spanglings::core::state::AppState {
+        tour_completed: false,
+        ..Default::default()
+    };
+    let mut app = App::new_with_state(exercises, false, state);
+
+    // Initial state: welcome modal is shown for new state
+    assert!(app.show_tour_welcome);
+
+    // Press 'y' -> opens tour modal at station 0
+    app.on_key(crossterm::event::KeyCode::Char('y'));
+    assert!(!app.show_tour_welcome);
+    assert!(app.show_tour_modal);
+    assert_eq!(app.tour_current_station, 0);
+
+    // Advance station with Right
+    app.on_key(crossterm::event::KeyCode::Right);
+    assert_eq!(app.tour_current_station, 1);
+
+    // Advance station with 'n'
+    app.on_key(crossterm::event::KeyCode::Char('n'));
+    assert_eq!(app.tour_current_station, 2);
+
+    // Go back with 'p'
+    app.on_key(crossterm::event::KeyCode::Char('p'));
+    assert_eq!(app.tour_current_station, 1);
+
+    // Close with 'q'
+    app.on_key(crossterm::event::KeyCode::Char('q'));
+    assert!(!app.show_tour_modal);
+
+    // In editing mode, open help modal then press 't'
+    app.enter_help();
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Help);
+    app.exit_help();
+    app.show_tour_modal = true;
+    app.tour_current_station = 0;
+    assert!(app.show_tour_modal);
 }

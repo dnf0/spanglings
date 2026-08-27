@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Dining & Social Conversation 01: Restaurant Ordering & Split Bills
-<!-- id: b1_social_pedir_cuenta_separado | level: B1 | topic: dining_and_social_conversation | type: cloze -->
+<!-- id: b1_social_pedir_cuenta_separado | level: B1 | topic: dining_and_social_conversation | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["gustar_dative_structures"] | grammar_focus: "Dining, social etiquette, gastronomic dialogue, and conversational formulas." -->
 
 > **Grammar & Lexicon**: In restaurants and cafés across the Spanish-speaking world, asking to split the check individually is **pedir la cuenta por separado** (or *pagar a medias / pagar por separado*). Asking for dressings on the side is **la salsa aparte**.
 

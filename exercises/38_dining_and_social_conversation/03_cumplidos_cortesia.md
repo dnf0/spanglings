@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Dining & Social Conversation 03: Social Compliments & Reassurances
-<!-- id: b1_social_cumplidos_cortesia | level: B1 | topic: dining_and_social_conversation | type: cloze -->
+<!-- id: b1_social_cumplidos_cortesia | level: B1 | topic: dining_and_social_conversation | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["gustar_dative_structures"] | grammar_focus: "Dining, social etiquette, gastronomic dialogue, and conversational formulas." -->
 
 > **Grammar & Lexicon**: Giving compliments on appearance uses **quedar bien** (*¡Qué bien te queda esa camisa!*). Reassuring someone after an apology uses **No te preocupes por nada** or **No pasa nada / No te preocupes**.
 

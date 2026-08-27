@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Advanced Concessives 01: Reduplicative Subjunctive Pattern
-<!-- id: c1_concessive_reduplicative | level: C1 | topic: advanced_concessives | type: cloze -->
+<!-- id: c1_concessive_reduplicative | level: C1 | topic: advanced_concessives | type: cloze | concepts: ["advanced_concessive_mood_alternation"] | prerequisites: ["subjunctive_adverbial_clauses", "hypothetical_conditionals_si_clauses"] | grammar_focus: "Advanced concessive clauses (por más que, aun a riesgo de) with mood alternation." | contrast_note: "Contrast factual concession (indicative) with hypothetical concession (subjunctive)." -->
 
 > **Grammar Rule**: The structure '[Verb in Subjunctive] + lo que + [Same Verb in Subjunctive]' means 'no matter what you [verb]' (e.g. digas lo que digas, hagas lo que hagas).
 

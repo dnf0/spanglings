@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Pronoun Stacking 04: Affirmative Imperative Clitic Attachment
-<!-- id: b1_pronoun_command_accent | level: B1 | topic: pronoun_stacking | type: cloze -->
+<!-- id: b1_pronoun_command_accent | level: B1 | topic: pronoun_stacking | type: cloze | concepts: ["clitic_pronoun_stacking"] | prerequisites: ["direct_indirect_pronouns"] | grammar_focus: "Double object pronoun order (indirect before direct) and le -> se transformation." | contrast_note: "Contrast indirect le with spurious se before direct pronouns lo/la." -->
 
 > **Grammar Rule**: Affirmative commands MUST have pronouns attached to the end (enclitic), maintaining spoken stress with a written accent.
 

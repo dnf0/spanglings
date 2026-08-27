@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Everyday Life & Housing 01: Lease Agreements & Security Deposits
-<!-- id: b1_housing_contrato_arrendamiento | level: B1 | topic: everyday_life_and_housing | type: cloze -->
+<!-- id: b1_housing_contrato_arrendamiento | level: B1 | topic: everyday_life_and_housing | type: cloze | concepts: ["lease_agreements_contracts"] | prerequisites: ["por_vs_para_nuances", "passive_refleja_vs_impersonal"] | grammar_focus: "Tenancy contracts, housing logistics, property maintenance, and rental agreements." -->
 
 > **Grammar & Lexicon**: In everyday Spanish life across Spain and Latin America, a residential rental contract is a **contrato de arrendamiento** (or *contrato de alquiler*), and the upfront security deposit is known as the **fianza** (Spain) or **depósito de garantía** (Latin America).
 

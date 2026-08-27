@@ -59,4 +59,146 @@ fn test_progress_json_includes_weak_topics_and_recommendations() {
     // weak_topics and recommendations fields must be valid arrays
     let _ = summary.weak_topics;
     let _ = summary.recommendations;
+    let _ = summary.concept_mastery;
+    let _ = summary.weakest_concepts;
+}
+
+#[test]
+fn test_concept_mastery_initialization_and_success_updates() {
+    let mut state = AppState::default();
+    let now = Utc::now();
+
+    assert!(state.concept_mastery.is_empty());
+
+    // 1st success review
+    state.update_concept_mastery("subjunctive_temporal_future", 5, now);
+    let mastery = state
+        .concept_mastery
+        .get("subjunctive_temporal_future")
+        .expect("Concept mastery should be initialized");
+
+    assert_eq!(mastery.concept_id, "subjunctive_temporal_future");
+    assert_eq!(mastery.total_reviews, 1);
+    assert_eq!(mastery.lapses, 0);
+    assert!((mastery.mastery_score - 0.3).abs() < 1e-4);
+    assert_eq!(mastery.last_practiced, Some(now));
+
+    // 2nd success review (quality 4 >= 3)
+    let t2 = now + Duration::days(1);
+    state.update_concept_mastery("subjunctive_temporal_future", 4, t2);
+    let mastery2 = state
+        .concept_mastery
+        .get("subjunctive_temporal_future")
+        .unwrap();
+    assert_eq!(mastery2.total_reviews, 2);
+    assert_eq!(mastery2.lapses, 0);
+    // 0.3 * 0.7 + 0.3 = 0.51
+    assert!((mastery2.mastery_score - 0.51).abs() < 1e-4);
+    assert_eq!(mastery2.last_practiced, Some(t2));
+
+    // Multiple successes should asymptotically approach and cap at 1.0
+    for _ in 0..50 {
+        state.update_concept_mastery("subjunctive_temporal_future", 5, t2);
+    }
+    let mastery_capped = state
+        .concept_mastery
+        .get("subjunctive_temporal_future")
+        .unwrap();
+    assert!((mastery_capped.mastery_score - 1.0).abs() < 1e-4);
+    assert!(mastery_capped.mastery_score <= 1.0);
+}
+
+#[test]
+fn test_concept_mastery_lapse_penalization_and_recovery() {
+    let mut state = AppState::default();
+    let now = Utc::now();
+
+    // Establish initial mastery ~0.51
+    state.update_concept_mastery("accidental_se", 5, now);
+    state.update_concept_mastery("accidental_se", 5, now + Duration::days(1));
+    let score_before = state
+        .concept_mastery
+        .get("accidental_se")
+        .unwrap()
+        .mastery_score;
+    assert!((score_before - 0.51).abs() < 1e-4);
+
+    // Lapse (quality 2 < 3)
+    let lapse_time = now + Duration::days(2);
+    state.update_concept_mastery("accidental_se", 2, lapse_time);
+    let lapsed = state.concept_mastery.get("accidental_se").unwrap();
+    assert_eq!(lapsed.lapses, 1);
+    assert_eq!(lapsed.total_reviews, 2); // total_reviews not incremented on lapse
+                                         // 0.51 * 0.5 = 0.255
+    assert!((lapsed.mastery_score - 0.255).abs() < 1e-4);
+    assert_eq!(lapsed.last_practiced, Some(lapse_time));
+
+    // Subsequent lapse (quality 1 < 3)
+    state.update_concept_mastery("accidental_se", 1, lapse_time + Duration::hours(1));
+    let lapsed2 = state.concept_mastery.get("accidental_se").unwrap();
+    assert_eq!(lapsed2.lapses, 2);
+    assert!((lapsed2.mastery_score - 0.1275).abs() < 1e-4);
+
+    // Recovery on success (quality 5 >= 3)
+    state.update_concept_mastery("accidental_se", 5, lapse_time + Duration::days(1));
+    let recovered = state.concept_mastery.get("accidental_se").unwrap();
+    assert_eq!(recovered.lapses, 2);
+    assert_eq!(recovered.total_reviews, 3);
+    // 0.1275 * 0.7 + 0.3 = 0.38925
+    assert!((recovered.mastery_score - 0.38925).abs() < 1e-4);
+}
+
+#[test]
+fn test_get_weakest_concepts_sorting_and_limiting() {
+    let mut state = AppState::default();
+    let now = Utc::now();
+
+    state.update_concept_mastery("concept_a", 5, now); // score = 0.3
+    state.update_concept_mastery("concept_b", 5, now);
+    state.update_concept_mastery("concept_b", 5, now); // score = 0.51
+    state.update_concept_mastery("concept_c", 1, now); // score = 0.0
+
+    let weakest_2 = state.get_weakest_concepts(2);
+    assert_eq!(weakest_2.len(), 2);
+    assert_eq!(weakest_2[0].0, "concept_c"); // 0.0
+    assert_eq!(weakest_2[1].0, "concept_a"); // 0.3
+
+    let all_weakest = state.get_weakest_concepts(10);
+    assert_eq!(all_weakest.len(), 3);
+    assert_eq!(all_weakest[0].0, "concept_c");
+    assert_eq!(all_weakest[1].0, "concept_a");
+    assert_eq!(all_weakest[2].0, "concept_b");
+}
+
+#[test]
+fn test_get_concept_mastery_scores() {
+    let mut state = AppState::default();
+    let now = Utc::now();
+
+    state.update_concept_mastery("por_vs_para_foundations", 5, now);
+    state.update_concept_mastery("irregular_preterite_stems", 5, now);
+    state.update_concept_mastery("irregular_preterite_stems", 5, now);
+
+    let scores = state.get_concept_mastery_scores();
+    assert_eq!(scores.len(), 2);
+    assert!((scores.get("por_vs_para_foundations").unwrap() - 0.3).abs() < 1e-4);
+    assert!((scores.get("irregular_preterite_stems").unwrap() - 0.51).abs() < 1e-4);
+}
+
+#[test]
+fn test_state_backwards_compatibility_without_concept_mastery() {
+    let json_legacy = r#"{
+        "version": 1,
+        "completed_exercises": ["ex01"],
+        "current_exercise": null,
+        "accent_mode": "Forgiving",
+        "srs": {},
+        "stats": {}
+    }"#;
+
+    let state: AppState =
+        serde_json::from_str(json_legacy).expect("Should deserialize legacy state");
+    assert!(state.concept_mastery.is_empty());
+    assert!(state.get_weakest_concepts(5).is_empty());
+    assert!(state.get_concept_mastery_scores().is_empty());
 }

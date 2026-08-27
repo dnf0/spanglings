@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # False Friends 03: 'Pretender' vs 'To Pretend'
-<!-- id: b2_false_pretender | level: B2 | topic: false_friends | type: cloze -->
+<!-- id: b2_false_pretender | level: B2 | topic: false_friends | type: cloze | concepts: ["false_friends_anglicisms"] | prerequisites: [] | grammar_focus: "False cognates (falsos amigos) and misleading literal calques from English." | contrast_note: "Contrast deceptively similar English terms with their true Spanish meanings." -->
 
 > **False Friend Trap**: **Pretender** means *to claim / aspire to / attempt*. To translate English *to pretend (feign)*, use **fingir**, **simular**, or **aparentar**.
 

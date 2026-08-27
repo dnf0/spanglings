@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Concessive Subjunctive 04: Reduplicative Structures
-<!-- id: c1_subj_reduplicative | level: C1 | topic: concessive_subjunctive | type: cloze -->
+<!-- id: c1_subj_reduplicative | level: C1 | topic: concessive_subjunctive | type: cloze | concepts: ["advanced_subjunctive_nuances"] | prerequisites: ["advanced_concessive_mood_alternation"] | grammar_focus: "Subjunctive nuances with dubitative adverbs and reduplicative concessives." -->
 
 > **Grammar & Lexicon**: Reduplicative concessive formulas (*haga lo que haga*, *cueste lo que cueste*, *digan lo que digan*) repeat the verb in the **present subjunctive** around a relative pronoun.
 

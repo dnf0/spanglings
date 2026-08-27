@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Healthcare & Symptoms 06: Allergies, Sensitivities & Dietary Warnings
-<!-- id: b2_health_alergias_alimentarias | level: B2 | topic: healthcare_and_symptoms | type: cloze -->
+<!-- id: b2_health_alergias_alimentarias | level: B2 | topic: healthcare_and_symptoms | type: cloze | concepts: ["accidental_se_structures"] | prerequisites: ["gustar_dative_structures", "por_vs_para_nuances"] | grammar_focus: "Medical consultations, describing symptoms, physical sensations, and treatments." -->
 
 > **Grammar & Lexicon**: Expressing allergies and food intolerances uses **ser alérgico a** (e.g. *los frutos secos*, *los mariscos*, *la penicilina*) and **tener intolerancia a** (*el gluten*, *la lactosa*). Cross-contamination is *contaminación cruzada*.
 

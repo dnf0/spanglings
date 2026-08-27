@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Colombian Professional Nuances 02: Staying Attentive & Monitoring Tasks
-<!-- id: b2_colombian_estar_pendiente | level: B2 | topic: colombian_professional_nuances | type: cloze -->
+<!-- id: b2_colombian_estar_pendiente | level: B2 | topic: colombian_professional_nuances | type: cloze | concepts: ["colombian_professional_nuances"] | prerequisites: ["register_elevation_formal"] | grammar_focus: "Colombian business etiquette, formal honorifics, usteo, and diplomatic requests." -->
 
 > **Grammar & Lexicon**: The periphrastic construction **estar pendiente de** is the primary standard formula in Colombian business communications for "keeping an eye on", "monitoring", or "following up with" someone or a deliverable.
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Subjunctive WEIRDO 02: Verbs of Emotion
-<!-- id: b1_subj_weirdo_emotion | level: B1 | topic: subjunctive_weirdo | type: cloze -->
+<!-- id: b1_subj_weirdo_emotion | level: B1 | topic: subjunctive_weirdo | type: cloze | concepts: ["subjunctive_volition_influence"] | prerequisites: ["irregular_present_stems", "irregular_subjunctive_stems"] | grammar_focus: "Subjunctive mood selection in subordinate clauses of influence and volition." | contrast_note: "Contrast indicative certainty with subjunctive volition/doubt." -->
 
 > **Grammar Rule**: Expressions of feeling or emotion (alegrarse de, temer, sentir, molestar) trigger the subjunctive in the subordinate clause.
 

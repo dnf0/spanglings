@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Past Aspects 03: 'Saber' (Found out vs Knew)
-<!-- id: b1_past_saber_shift | level: B1 | topic: past_aspects | type: cloze -->
+<!-- id: b1_past_saber_shift | level: B1 | topic: past_aspects | type: cloze | concepts: ["aspectual_meaning_shifts"] | prerequisites: ["preterite_aspect_completion", "imperfect_aspect_habitual_background"] | grammar_focus: "Aspectual distinction: preterite (bounded completion) vs imperfect (habitual/background)." | contrast_note: "Contrast completed action in preterite with ongoing descriptive state in imperfect." -->
 
 > **Grammar Rule**: 'Supe' (preterite) means 'I found out / discovered at that moment'; 'sabía' (imperfect) means 'I already knew / was aware of'.
 

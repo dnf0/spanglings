@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Enterprise SLA 06: Service Availability Credits & Penalties
-<!-- id: c1_sla_penalizaciones_economicas | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze -->
+<!-- id: c1_sla_penalizaciones_economicas | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["executive_leadership_communication"] | grammar_focus: "Enterprise risk management, SLA negotiations, and compliance dialogue." -->
 
 > **Grammar & Lexicon**: If a provider fails to meet the guaranteed uptime percentage (e.g., 99.9%), the contract stipulates **penalizaciones económicas** or service credits (**créditos de servicio**).
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Connectors 03: 'Puesto que' (Since / Because)
-<!-- id: c1_connector_puesto_que | level: C1 | topic: connectors | type: cloze -->
+<!-- id: c1_connector_puesto_que | level: C1 | topic: connectors | type: cloze | concepts: ["discourse_connectors"] | prerequisites: ["por_vs_para_nuances"] | grammar_focus: "Discourse markers and formal argumentative connectors." -->
 
 > **Grammar Rule**: 'Puesto que' introduces known facts and reasons, taking the indicative mood.
 

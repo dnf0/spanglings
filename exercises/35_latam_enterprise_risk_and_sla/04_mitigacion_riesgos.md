@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Enterprise SLA 04: Risk Mitigation & Contingency Planning
-<!-- id: c1_sla_mitigacion_riesgos | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze -->
+<!-- id: c1_sla_mitigacion_riesgos | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["executive_leadership_communication"] | grammar_focus: "Enterprise risk management, SLA negotiations, and compliance dialogue." -->
 
 > **Grammar & Lexicon**: Enterprise procurement security reviews require submitting a formal **plan de mitigación de riesgos** and a business continuity plan (*plan de continuidad del negocio*).
 

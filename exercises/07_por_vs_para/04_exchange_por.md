@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Por vs Para 04: Cost, Exchange & Trade (Por)
-<!-- id: b1_por_para_exchange | level: B1 | topic: por_vs_para | type: cloze -->
+<!-- id: b1_por_para_exchange | level: B1 | topic: por_vs_para | type: cloze | concepts: ["por_vs_para_nuances"] | prerequisites: ["por_vs_para_foundations"] | grammar_focus: "Nuanced usage of por (cause, duration, medium) vs para (goal, recipient, deadline)." | contrast_note: "Contrast por (cause/motive) with para (aim/destination)." -->
 
 > **Grammar Rule**: Use 'por' to express money paid, trade, substitution, or exchange of goods.
 

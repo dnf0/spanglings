@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Verbal Periphrases 05: 'Volver a + Inf' (Repetition)
-<!-- id: b2_periphrasis_volver_a | level: B2 | topic: verbal_periphrases | type: cloze -->
+<!-- id: b2_periphrasis_volver_a | level: B2 | topic: verbal_periphrases | type: cloze | concepts: ["verbal_periphrases_aspect"] | prerequisites: ["preterite_aspect_completion", "imperfect_aspect_habitual_background"] | grammar_focus: "Verbal periphrases of inception, duration, repetition, and culmination." -->
 
 > **Grammar Rule**: 'Volver a + infinitivo' conveys doing an action again.
 

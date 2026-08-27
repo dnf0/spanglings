@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # System Design 06: Latency SLAs
-<!-- id: c1_sysdesign_sla_latency | level: C1 | topic: system_design | type: cloze -->
+<!-- id: c1_sysdesign_sla_latency | level: C1 | topic: system_design | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["false_friends_anglicisms", "discourse_connectors"] | grammar_focus: "Distributed systems design, cloud infrastructure, and technical architecture." -->
 
 > **Grammar & Lexicon**: Service Level Agreements (SLAs) are formally termed **acuerdo de nivel de servicio** in Spanish enterprise contracts and engineering specifications.
 

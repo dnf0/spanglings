@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Rioplatense Production Voseo 03: Stepping Up During Incidents
-<!-- id: b2_rioplatense_ponerse_las_pilas | level: B2 | topic: rioplatense_production_voseo | type: cloze -->
+<!-- id: b2_rioplatense_ponerse_las_pilas | level: B2 | topic: rioplatense_production_voseo | type: cloze | concepts: ["regional_voseo_rioplatense"] | prerequisites: ["irregular_present_stems"] | grammar_focus: "Rioplatense voseo conjugation in present indicative and imperative." | contrast_note: "Contrast standard tú conjugation with Rioplatense vos conjugation." -->
 
 > **Grammar & Lexicon**: The Rioplatense imperative of reflexive verbs with *vos* drops the 'd' and attaches the pronoun *-te*: *ponete* (from *ponerse*). **Ponerse las pilas** means to get active, focus, or step up during a critical situation.
 

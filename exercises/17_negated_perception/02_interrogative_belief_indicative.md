@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Negated Perception 02: Negative Questions of Belief (Indicative vs Subjunctive)
-<!-- id: c1_neg_perception_question | level: C1 | topic: negated_perception | type: cloze -->
+<!-- id: c1_neg_perception_question | level: C1 | topic: negated_perception | type: cloze | concepts: ["negated_perception_predicates"] | prerequisites: ["subjunctive_doubt_denial"] | grammar_focus: "Negated perception and mental activity predicates governing subjunctive." | contrast_note: "Contrast affirmative perception (indicative) with negated perception (subjunctive)." -->
 
 > **Grammar Rule**: In negative questions expecting confirmation ('¿No crees que...?'), indicative is used when the speaker invites agreement with an evident fact.
 

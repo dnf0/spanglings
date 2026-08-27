@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Rioplatense Production Voseo 06: Negative Subjunctive Voseo in Tech
-<!-- id: c1_rioplatense_subjuntivo_voseo | level: C1 | topic: rioplatense_production_voseo | type: cloze -->
+<!-- id: c1_rioplatense_subjuntivo_voseo | level: C1 | topic: rioplatense_production_voseo | type: cloze | concepts: ["regional_voseo_rioplatense"] | prerequisites: ["irregular_present_stems"] | grammar_focus: "Rioplatense voseo conjugation in present indicative and imperative." | contrast_note: "Contrast standard tú conjugation with Rioplatense vos conjugation." -->
 
 > **Grammar & Lexicon**: In Rioplatense Spanish, negative commands take the present subjunctive with oxytone stress (accent on the final vowel): *no te quedés* (from *quedarse*), *no tengás miedo*, *no rompás nada*.
 

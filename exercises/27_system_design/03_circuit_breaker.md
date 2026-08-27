@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # System Design 03: Circuit Breakers & Resilience
-<!-- id: c1_sysdesign_circuit_breaker | level: C1 | topic: system_design | type: cloze -->
+<!-- id: c1_sysdesign_circuit_breaker | level: C1 | topic: system_design | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["false_friends_anglicisms", "discourse_connectors"] | grammar_focus: "Distributed systems design, cloud infrastructure, and technical architecture." -->
 
 > **Grammar & Lexicon**: The circuit breaker design pattern is referred to as **disyuntor** or **cortacircuitos** in resilient distributed architecture.
 

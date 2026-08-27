@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # System Design 01: Distributed Failover
-<!-- id: c1_sysdesign_failover | level: C1 | topic: system_design | type: cloze -->
+<!-- id: c1_sysdesign_failover | level: C1 | topic: system_design | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["false_friends_anglicisms", "discourse_connectors"] | grammar_focus: "Distributed systems design, cloud infrastructure, and technical architecture." -->
 
 > **Grammar & Lexicon**: In distributed system design, translate "failover" as **conmutación por error** or **conmutación por recuperación**, avoiding unadapted English terms.
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Healthcare & Symptoms 03: Pharmacy, OTC Medications & Side Effects
-<!-- id: b1_health_farmacia_prospecto | level: B1 | topic: healthcare_and_symptoms | type: cloze -->
+<!-- id: b1_health_farmacia_prospecto | level: B1 | topic: healthcare_and_symptoms | type: cloze | concepts: ["accidental_se_structures"] | prerequisites: ["gustar_dative_structures", "por_vs_para_nuances"] | grammar_focus: "Medical consultations, describing symptoms, physical sensations, and treatments." -->
 
 > **Grammar & Lexicon**: Over-the-counter medicine is **medicamento de venta libre**. The patient information leaflet inside the box is **el prospecto** (Spain) / **el instructivo** (LatAm), and unintended reactions are **efectos secundarios**.
 

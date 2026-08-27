@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Subjunctive WEIRDO 03: Impersonal Value Judgments
-<!-- id: b1_subj_weirdo_impersonal | level: B1 | topic: subjunctive_weirdo | type: cloze -->
+<!-- id: b1_subj_weirdo_impersonal | level: B1 | topic: subjunctive_weirdo | type: cloze | concepts: ["subjunctive_volition_influence"] | prerequisites: ["irregular_present_stems", "irregular_subjunctive_stems"] | grammar_focus: "Subjunctive mood selection in subordinate clauses of influence and volition." | contrast_note: "Contrast indicative certainty with subjunctive volition/doubt." -->
 
 > **Grammar Rule**: Impersonal phrases stating necessity, importance, or value judgment (es necesario que, es importante que, es bueno que) trigger subjunctive.
 

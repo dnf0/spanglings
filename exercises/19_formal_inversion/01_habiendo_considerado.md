@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Formal Inversion 01: Compound Gerund Absolute Clause
-<!-- id: c1_formal_habiendo_gerund | level: C1 | topic: formal_inversion | type: cloze -->
+<!-- id: c1_formal_habiendo_gerund | level: C1 | topic: formal_inversion | type: cloze | concepts: ["formal_inversion_hyperbaton"] | prerequisites: ["cleft_sentences_focus"] | grammar_focus: "Stylistic syntactic inversion, fronting, and rhetorical word order." -->
 
 > **Grammar Rule**: Compound gerunds ('habiendo + participio') form absolute antecedent clauses in formal written discourse.
 

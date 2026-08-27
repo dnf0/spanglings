@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Collocations 04: 'Acatar la ley/resolución' (Abide by / Comply with)
-<!-- id: c1_collocation_acatar | level: C1 | topic: nuanced_collocations | type: cloze -->
+<!-- id: c1_collocation_acatar | level: C1 | topic: nuanced_collocations | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["discourse_connectors"] | grammar_focus: "Nuanced lexical collocations and institutional collocations." -->
 
 > **Grammar Rule**: 'Acatar' is the formal legal/institutional collocation for complying with and respecting laws, court rulings, and orders.
 

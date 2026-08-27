@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Baseline 04: Gustar-Type Verbs & Pronouns
-<!-- id: b0_gustar_pronouns_01 | level: Baseline | topic: pronouns | type: cloze -->
+<!-- id: b0_gustar_pronouns_01 | level: Baseline | topic: pronouns | type: cloze | concepts: ["gustar_dative_structures"] | prerequisites: ["direct_indirect_pronouns"] | grammar_focus: "Indirect object pronoun agreement with gustar-like verbs." | contrast_note: "Contrast subject vs indirect object agreement." -->
 
 > **Grammar Rule**: 'Gustar' agrees with the thing pleasing (the subject). The person experiencing pleasure is marked with an Indirect Object Pronoun (me, te, le, nos, os, les).
 

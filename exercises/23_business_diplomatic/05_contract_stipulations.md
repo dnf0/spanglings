@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Business Spanish 05: Contractual Clauses & Stipulations
-<!-- id: c1_biz_stipulations | level: C1 | topic: business_correspondence | type: cloze -->
+<!-- id: c1_biz_stipulations | level: C1 | topic: business_correspondence | type: cloze | concepts: ["register_elevation_formal"] | prerequisites: ["discourse_connectors", "formal_inversion_hyperbaton"] | grammar_focus: "Formal business diplomacy, executive communication, and high-register negotiations." -->
 
 > **Grammar & Lexicon**: In contracts and legal frameworks, terms are **estipulados** or **dispuestos** in clauses, not merely *escritos*.
 

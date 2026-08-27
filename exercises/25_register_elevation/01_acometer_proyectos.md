@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Register Elevation 01: 'Acometer' (Undertake) vs 'Hacer'
-<!-- id: c1_reg_acometer | level: C1 | topic: register_elevation | type: cloze -->
+<!-- id: c1_reg_acometer | level: C1 | topic: register_elevation | type: cloze | concepts: ["register_elevation_formal"] | prerequisites: ["discourse_connectors", "formal_inversion_hyperbaton"] | grammar_focus: "Register elevation via nominalization and formal administrative prose." | contrast_note: "Contrast conversational phrasing with formal administrative nominalization." -->
 
 > **Register Elevation**: At C1, replace light verbs like *hacer* or *empezar* with elevated, precise verbs. To undertake an ambitious endeavor or major project, use **acometer** (e.g. *acometer una reforma estructural*).
 

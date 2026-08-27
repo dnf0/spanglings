@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Pronoun Stacking 05: Negative Command Pronoun Placement
-<!-- id: b1_pronoun_negative_command | level: B1 | topic: pronoun_stacking | type: cloze -->
+<!-- id: b1_pronoun_negative_command | level: B1 | topic: pronoun_stacking | type: cloze | concepts: ["clitic_pronoun_stacking"] | prerequisites: ["direct_indirect_pronouns"] | grammar_focus: "Double object pronoun order (indirect before direct) and le -> se transformation." | contrast_note: "Contrast indirect le with spurious se before direct pronouns lo/la." -->
 
 > **Grammar Rule**: Negative commands place object pronouns BEFORE the verb and separated as distinct words.
 

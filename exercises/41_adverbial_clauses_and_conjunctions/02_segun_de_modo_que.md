@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Adverbial Clauses 02: Manner & Consecutive Result: Según & De modo que
-<!-- id: b2_adverb_segun_de_modo_que | level: B2 | topic: adverbial_clauses_and_conjunctions | type: cloze -->
+<!-- id: b2_adverb_segun_de_modo_que | level: B2 | topic: adverbial_clauses_and_conjunctions | type: cloze | concepts: ["adverbial_clauses_syntax"] | prerequisites: ["subjunctive_adverbial_clauses", "discourse_connectors"] | grammar_focus: "Complex adverbial conjunctions and modal subordination in formal discourse." | contrast_note: "Contrast indicative causal/consecutive connectors with subjunctive conditional/concessive connectors." -->
 
 > **Grammar & Lexicon**: **De modo que** / **De manera que** introduces purpose (requiring the **subjunctive**: *de modo que todos comprendan*) or factive result (requiring the **indicative**: *lo explicó bien, de modo que todos comprendieron*).
 

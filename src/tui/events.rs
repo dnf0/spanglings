@@ -20,6 +20,12 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                     continue;
                 }
 
+                // --- Welcome & Tour Modal Event Handling ---
+                if app.show_tour_welcome || app.show_tour_modal {
+                    app.on_key(key);
+                    continue;
+                }
+
                 // --- Searching Mode Event Handling ---
                 if app.mode == AppMode::Searching {
                     match (key.code, key.modifiers) {
@@ -116,6 +122,11 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                 // --- Help Modal Event Handling ---
                 if app.mode == AppMode::Help {
                     match (key.code, key.modifiers) {
+                        (KeyCode::Char('t'), _) | (KeyCode::Char('T'), _) => {
+                            app.exit_help();
+                            app.show_tour_modal = true;
+                            app.tour_current_station = 0;
+                        }
                         (KeyCode::Esc, _)
                         | (KeyCode::Enter, _)
                         | (KeyCode::F(1), _)
@@ -185,10 +196,14 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                     | (KeyCode::Char('r'), KeyModifiers::ALT) => {
                         app.enter_reference_browser();
                     }
-                    (KeyCode::F(5), _)
+                    (KeyCode::F(5), _) | (KeyCode::Char('p'), KeyModifiers::ALT) => {
+                        app.enter_placement_test();
+                    }
+                    (KeyCode::F(6), _)
                     | (KeyCode::Char('t'), KeyModifiers::ALT)
                     | (KeyCode::Char('t'), KeyModifiers::CONTROL) => {
-                        app.enter_placement_test();
+                        app.show_tour_modal = true;
+                        app.tour_current_station = 0;
                     }
                     (KeyCode::F(1), _) | (KeyCode::Char('h'), KeyModifiers::ALT) => {
                         app.enter_help();

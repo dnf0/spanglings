@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Pluperfect Subjunctive 03: 'De haber' + Participle Shortening
-<!-- id: c1_pluperfect_de_haber | level: C1 | topic: pluperfect_subjunctive | type: cloze -->
+<!-- id: c1_pluperfect_de_haber | level: C1 | topic: pluperfect_subjunctive | type: cloze | concepts: ["pluperfect_subjunctive_counterfactuals"] | prerequisites: ["imperfect_subjunctive_formation", "haber_impersonal_vs_auxiliary"] | grammar_focus: "Pluperfect subjunctive for counterfactual past conditions and unrealized events." | contrast_note: "Contrast imperfect subjunctive with pluperfect subjunctive counterfactuals." -->
 
 > **Grammar Rule**: 'De haber + participio' is an elegant literary equivalent of 'Si hubiera + participio'.
 

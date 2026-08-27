@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Mexican Tech & Startups 02: Seed Round & Pre-Money Valuation
-<!-- id: b2_mextech_ronda_semilla | level: B2 | topic: mexican_tech_and_startups | type: cloze -->
+<!-- id: b2_mextech_ronda_semilla | level: B2 | topic: mexican_tech_and_startups | type: cloze | concepts: ["mexican_professional_pragmatics"] | prerequisites: ["register_elevation_formal"] | grammar_focus: "Mexican tech ecosystem conventions, workplace idioms, and courteous softeners." -->
 
 > **Grammar & Lexicon**: In venture capital across Mexico and Latin America, "seed round" is **ronda semilla** and "pre-money valuation" is translated as **valuación pre-capital**. Avoid literal calques like *ronda de semillas*.
 

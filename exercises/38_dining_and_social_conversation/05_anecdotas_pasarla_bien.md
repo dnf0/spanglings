@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Dining & Social Conversation 05: Recounting Anecdotes & Having Fun
-<!-- id: b2_social_pasarla_bien | level: B2 | topic: dining_and_social_conversation | type: cloze -->
+<!-- id: b2_social_pasarla_bien | level: B2 | topic: dining_and_social_conversation | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["gustar_dative_structures"] | grammar_focus: "Dining, social etiquette, gastronomic dialogue, and conversational formulas." -->
 
 > **Grammar & Lexicon**: Having a great time is expressed as **pasarla muy bien / pasarla bomba** (Latin America) or **pasárselo en grande / pasarlo genial** (Spain). Organizing a fun gathering is **armar un plan**.
 

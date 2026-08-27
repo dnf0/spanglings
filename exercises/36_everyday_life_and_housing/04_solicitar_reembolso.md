@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Everyday Life & Housing 04: Customer Service & Return Refunds
-<!-- id: b1_housing_solicitar_reembolso | level: B1 | topic: everyday_life_and_housing | type: cloze -->
+<!-- id: b1_housing_solicitar_reembolso | level: B1 | topic: everyday_life_and_housing | type: cloze | concepts: ["lease_agreements_contracts"] | prerequisites: ["por_vs_para_nuances", "passive_refleja_vs_impersonal"] | grammar_focus: "Tenancy contracts, housing logistics, property maintenance, and rental agreements." -->
 
 > **Grammar & Lexicon**: When returning a defective product to a store, you ask to **solicitar un reembolso** (or *devolución del dinero*) and must present the receipt (**el comprobante de compra** or **el ticket de compra**).
 

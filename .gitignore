@@ -38,3 +38,7 @@ tarpaulin-report.html
 graphify-out/
 .smellcheck-cache/
 
+# MkDocs build directory
+site/
+
+

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Everyday Life & Housing 02: Setting Up Household Utilities
-<!-- id: b1_housing_alta_servicios | level: B1 | topic: everyday_life_and_housing | type: cloze -->
+<!-- id: b1_housing_alta_servicios | level: B1 | topic: everyday_life_and_housing | type: cloze | concepts: ["lease_agreements_contracts"] | prerequisites: ["por_vs_para_nuances", "passive_refleja_vs_impersonal"] | grammar_focus: "Tenancy contracts, housing logistics, property maintenance, and rental agreements." -->
 
 > **Grammar & Lexicon**: The fixed bureaucratic formula for registering or setting up a new utility (electricity, gas, water, internet) is **dar de alta el suministro / servicio**. Cancelling or disconnecting a service is **dar de baja**.
 

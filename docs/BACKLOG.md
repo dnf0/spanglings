@@ -177,3 +177,63 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
   - **Description**: Full-featured in-TUI diagnostic test overlay accessible via `[t]` or `[F5]`, featuring question-by-question cloze inputs, live answer validation, CEFR breakdown tables, and one-key `[F]` fast-track action.
 - [x] **SPANG-124: Verified CEFR Level Badge in Dashboard & LSP Status**
   - **Description**: Displays verified CEFR placement badges and diagnostic accuracy in `spanglings progress`, JSON metrics, and VS Code / LSP status bar.
+
+---
+
+## 🌐 Focus Area 14: Linguistic Knowledge Graph & Practical Everyday Expansion (Completed)
+
+- [x] **SPANG-130: Directed Acyclic Graph (DAG) Linguistic Knowledge Graph (`src/core/graph.rs`)**
+  - **Description**: In-memory static ontology DAG modeling 53 prerequisite relationships and conceptual primitives across grammar rules, aspectual shifts, and situational domains with cycle detection and learning frontier resolution.
+- [x] **SPANG-131: Concept-Aware Exercise Model & Markdown Parser (`src/core/exercise.rs`)**
+  - **Description**: Extended `Exercise` struct with `concept_tags`, `prerequisites`, `grammar_focus`, and `contrast_note` metadata with support for YAML frontmatter and single-line syntax.
+- [x] **SPANG-132: Concept-Level SRS Mastery & Weakness Profiler (`src/core/state.rs`, `src/cli/commands/progress.rs`)**
+  - **Description**: Aggregates SRS review performance into `ConceptMastery` scores, pinpoints foundational gaps across tracks, and recommends personalized learning frontiers in CLI and JSON output.
+- [x] **SPANG-133: Concept-Aware Compiler Diagnostics & Modern Watcher Experience (`src/engine/diagnostics.rs`, `src/watcher/runner.rs`)**
+  - **Description**: Concept-aware diagnostic error reporting cross-linking failed exercises to prerequisite foundation tracks with actionable remediation notes and contrast guidance. Modernized watcher with non-blocking raw keystrokes (`[n]`, `[p]`, `[r]`, `[q]`) eliminating all legacy comment busywork.
+- [x] **SPANG-134: Curriculum Expansion: Tracks 42 to 47 (36 New Exercises, 267 Total)**
+  - **Description**: Handcrafted situational synthesis tracks for Travel Logistics, Banking/Taxes, Consumer Complaints, Home Maintenance, News/Media, and Conversational Nuance.
+- [x] **SPANG-135: Retroactive Conceptual Tagging of Tracks 00–41 (231 Exercises)**
+  - **Description**: Tag all 231 existing exercises with concepts, prerequisites, and grammar focus notes, completely eliminating legacy `<!-- I AM NOT DONE -->` markers.
+- [x] **SPANG-136: Concept CLI Filtering (`spanglings list --concept`, `spanglings drill --concept`)**
+  - **Description**: Filter exercises and targeted conjugation drills by linguistic concept ID.
+
+---
+
+## 🧭 Focus Area 15: Interactive Onboarding Guided Tour (`spanglings tour`) (Completed)
+
+- [x] **SPANG-140: First-Run Interactive Guided Onboarding Tour (`spanglings tour`)**
+  - **Description**: Dedicated `spanglings tour` subcommand and first-run wizard in TUI introducing the developer workflow step-by-step:
+    1. Navigation and split-pane interface (`Tab`, `Down`, `/` fuzzy search).
+    2. Cloze input mechanics, UTF-8 accent support, and instant evaluation (`Enter`).
+    3. Progressive 3-tier hints (`Ctrl+H` / `F1`) and reference cheat sheets (`Ctrl+E` / `F2`).
+    4. Verb conjugator modal (`Ctrl+K` / `F3`) and cheat sheet browser (`Ctrl+B` / `F4`).
+    5. Headless watch mode workflow (`spanglings watch`) with external editors (VS Code / Neovim / Zed).
+    6. Taking diagnostic placement test (`spanglings test` / `[t]`) to fast-track known levels.
+  - **Completed Components**:
+    - [x] **State Persistence**: Added `AppState::tour_completed` flag with backward compatibility and `mark_tour_completed()`.
+    - [x] **Station Engine**: Implemented 6 interactive guided stations with inline active-recall micro-challenges in `src/cli/commands/tour.rs`.
+    - [x] **CLI Subcommand**: Added `spanglings tour [--skip-challenges]` CLI command with CI batch mode fallback.
+    - [x] **Interactive TUI Integration**: First-run welcome modal dialog, in-TUI station modals, footer `[T]` hint, Help menu integration, and keyboard routing in `src/tui/events.rs`.
+    - [x] **Test Battery**: Full integration test coverage in `tests/tour_tests.rs`, `tests/cli_tests.rs`, and `tests/tui_tests.rs`.
+
+---
+
+## 💎 Focus Area 16: Linguistic Completeness & Advanced Grammatical Subtleties (Completed)
+
+- [x] **SPANG-150: Linguistic Knowledge Graph Expansion to 66 Concepts (`src/core/graph.rs`)**
+  - **Description**: Expanded default linguistic ontology from 53 to 66 concepts covering epistemic conjecture, mandatory dative clitic doubling, fronted accusative left-dislocation, personal *a* animacy/semantic shifts, gerund restrictions/anglicism elimination, adversative coordinate systems (*pero* vs *sino* vs *sino que*), and optative/legal future subjunctives.
+- [x] **SPANG-151: Six New Grammar Reference Cheat Sheets (`src/core/reference.rs`, `docs/grammar-reference.md`)**
+  - **Topics**: `epistemic-conjecture`, `clitic-doubling`, `personal-a`, `gerund-rules`, `adversatives`, `legal-subjunctive` accessible via `spanglings explain <topic>` and the TUI cheat sheet browser.
+- [x] **SPANG-152: Curriculum Expansion: Tracks 48 to 53 (36 New Exercises, 303 Total)**
+  - **Description**: Authored 36 handcrafted exercises with 3-tier progressive hints and targeted diagnostic rules across:
+    - Track 48: `48_epistemic_conjecture_and_probability` (B2–C1)
+    - Track 49: `49_clitic_doubling_and_left_dislocation` (B1–B2)
+    - Track 50: `50_personal_a_and_animacy_shifts` (B1–B2)
+    - Track 51: `51_gerund_restrictions_and_anglicisms` (B2–C1)
+    - Track 52: `52_adversative_pero_sino_sino_que` (B1–B2)
+    - Track 53: `53_independent_subjunctives_and_legal_tenses` (C1)
+- [x] **SPANG-153: Targeted Diagnostic Compiler Rules (E0048–E0053)**
+  - **Description**: Added targeted diagnostic error codes and explanatory feedback in `src/engine/rules.rs` and `src/engine/validator.rs` for common native speaker traps.
+- [x] **SPANG-154: Architectural Decision Record ADR-0003**
+  - **Description**: Documented architecture and rationale in `docs/adr/0003-language-completeness-and-expanded-ontology.md`.
+

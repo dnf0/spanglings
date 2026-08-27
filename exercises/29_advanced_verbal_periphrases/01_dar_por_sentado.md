@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Verbal Periphrases 01: Dar por sentado
-<!-- id: c1_periphrasis_dar_por_sentado | level: C1 | topic: verbal_periphrases | type: cloze -->
+<!-- id: c1_periphrasis_dar_por_sentado | level: C1 | topic: verbal_periphrases | type: cloze | concepts: ["advanced_verbal_periphrases"] | prerequisites: ["verbal_periphrases_aspect"] | grammar_focus: "Advanced modal and aspectual periphrases in formal Spanish." -->
 
 > **Grammar & Lexicon**: The lexicalized periphrasis **dar por sentado** (or *dar por hecho*) means "to take for granted" or "to presuppose as fact".
 

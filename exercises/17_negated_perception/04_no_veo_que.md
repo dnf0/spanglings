@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Negated Perception 04: 'No veo que' (Sensory/Mental Perception)
-<!-- id: c1_neg_perception_no_veo | level: C1 | topic: negated_perception | type: cloze -->
+<!-- id: c1_neg_perception_no_veo | level: C1 | topic: negated_perception | type: cloze | concepts: ["negated_perception_predicates"] | prerequisites: ["subjunctive_doubt_denial"] | grammar_focus: "Negated perception and mental activity predicates governing subjunctive." | contrast_note: "Contrast affirmative perception (indicative) with negated perception (subjunctive)." -->
 
 > **Grammar Rule**: Sensory perception verbs (ver, oír, notar) take indicative when affirmative ('Veo que hay...'), but subjunctive when negated ('No veo que haya...').
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Dining & Social Conversation 02: Making Plans & Meeting Up
-<!-- id: b1_social_hacer_planes_quedar | level: B1 | topic: dining_and_social_conversation | type: cloze -->
+<!-- id: b1_social_hacer_planes_quedar | level: B1 | topic: dining_and_social_conversation | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["gustar_dative_structures"] | grammar_focus: "Dining, social etiquette, gastronomic dialogue, and conversational formulas." -->
 
 > **Grammar & Lexicon**: To arrange to meet someone in Spain is **quedar con alguien a las [hora]**; in Latin America, **verse con alguien** or **encontrarse con alguien**. Cancelling at the last minute is **cancelar a última hora** (or *descolgarse / tirar la toalla*).
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Anglicism Elimination 05: Forwarding vs Reenviar / Redirigir
-<!-- id: c1_anglicism_reenviar | level: C1 | topic: latam_anglicism_elimination | type: cloze -->
+<!-- id: c1_anglicism_reenviar | level: C1 | topic: latam_anglicism_elimination | type: cloze | concepts: ["false_friends_anglicisms"] | prerequisites: [] | grammar_focus: "Elimination of unnecessary English calques and anglicisms in professional Latin American Spanish." | contrast_note: "Contrast direct anglicisms with idiomatic Spanish equivalents." -->
 
 > **Grammar & Lexicon**: The crude verb *forwardear* is replaced in rigorous Latin American technical documentation by **reenviar** (for messages, packets, and emails) or **redirigir** (for traffic, network ports, and HTTP 301/302 routes).
 

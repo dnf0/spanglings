@@ -32,8 +32,7 @@ vengas
 
 #[test]
 fn test_evaluate_exercise_for_check_failed_with_diagnostic() {
-    let raw = r#"<!-- I AM NOT DONE -->
-<!-- id: test_check_02 | level: B1 | topic: subjunctive | type: cloze -->
+    let raw = r#"<!-- id: test_check_02 | level: B1 | topic: subjunctive | type: cloze -->
 # Subjunctive Test
 
 ### Context
@@ -57,7 +56,7 @@ pattern: "viene" | code: "E0301" | message: "Expected Subjunctive, found Indicat
     let report = evaluate_exercise_for_check(&ex, raw, AccentMode::Forgiving);
 
     assert!(!report.passed);
-    assert!(!report.is_done);
+    assert!(report.is_done);
     assert_eq!(report.diagnostics.len(), 1);
     assert_eq!(report.diagnostics[0].code, "E0301");
     assert_eq!(report.diagnostics[0].severity, "error");

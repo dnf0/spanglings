@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Mexican Tech & Startups 04: Product-Market Fit
-<!-- id: c1_mextech_producto_mercado | level: C1 | topic: mexican_tech_and_startups | type: cloze -->
+<!-- id: c1_mextech_producto_mercado | level: C1 | topic: mexican_tech_and_startups | type: cloze | concepts: ["mexican_professional_pragmatics"] | prerequisites: ["register_elevation_formal"] | grammar_focus: "Mexican tech ecosystem conventions, workplace idioms, and courteous softeners." -->
 
 > **Grammar & Lexicon**: "Product-market fit" is formally translated in the Hispanic venture and startup space as **ajuste producto-mercado** (or **encaje producto-mercado**). Avoid crude calques such as *fit de mercado*.
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Concessive Subjunctive 01: Por mucho que
-<!-- id: c1_subj_por_mucho_que | level: C1 | topic: concessive_subjunctive | type: cloze -->
+<!-- id: c1_subj_por_mucho_que | level: C1 | topic: concessive_subjunctive | type: cloze | concepts: ["advanced_subjunctive_nuances"] | prerequisites: ["advanced_concessive_mood_alternation"] | grammar_focus: "Subjunctive nuances with dubitative adverbs and reduplicative concessives." -->
 
 > **Grammar & Lexicon**: Concessive structures with **por mucho que** or **por más que** require the **subjunctive** when the obstacle is hypothetical, non-verified, or future-oriented.
 

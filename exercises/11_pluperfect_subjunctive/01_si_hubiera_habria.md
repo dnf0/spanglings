@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Pluperfect Subjunctive 01: Past Counterfactual 'Si' Clauses (Type 3)
-<!-- id: b2_pluperfect_subj_si | level: B2 | topic: pluperfect_subjunctive | type: cloze -->
+<!-- id: b2_pluperfect_subj_si | level: B2 | topic: pluperfect_subjunctive | type: cloze | concepts: ["pluperfect_subjunctive_counterfactuals"] | prerequisites: ["imperfect_subjunctive_formation", "haber_impersonal_vs_auxiliary"] | grammar_focus: "Pluperfect subjunctive for counterfactual past conditions and unrealized events." | contrast_note: "Contrast imperfect subjunctive with pluperfect subjunctive counterfactuals." -->
 
 > **Grammar Rule**: Third conditional (past unfulfilled conditions): 'Si' + Pluperfect Subjunctive (hubiera/hubiese + participio), + Conditional Perfect (habría + participio).
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Enterprise SLA 01: Non-Disclosure & Confidentiality
-<!-- id: c1_sla_acuerdo_confidencialidad | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze -->
+<!-- id: c1_sla_acuerdo_confidencialidad | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["executive_leadership_communication"] | grammar_focus: "Enterprise risk management, SLA negotiations, and compliance dialogue." -->
 
 > **Grammar & Lexicon**: In Latin American corporate law and enterprise SaaS contracting, an NDA is formalized as an **acuerdo de confidencialidad y no divulgación** (or *convenio de confidencialidad* in Mexico).
 

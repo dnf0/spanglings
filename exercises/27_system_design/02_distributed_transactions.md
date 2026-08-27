@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # System Design 02: Distributed Transactions
-<!-- id: c1_sysdesign_2pc | level: C1 | topic: system_design | type: cloze -->
+<!-- id: c1_sysdesign_2pc | level: C1 | topic: system_design | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["false_friends_anglicisms", "discourse_connectors"] | grammar_focus: "Distributed systems design, cloud infrastructure, and technical architecture." -->
 
 > **Grammar & Lexicon**: Two-phase commit protocol is termed **compromiso en dos fases** or **confirmación en dos fases** in distributed systems engineering.
 

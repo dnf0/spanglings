@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Pluperfect Subjunctive 04: Mixed Conditionals (Past Cause, Present Effect)
-<!-- id: c1_pluperfect_mixed_cond | level: C1 | topic: pluperfect_subjunctive | type: cloze -->
+<!-- id: c1_pluperfect_mixed_cond | level: C1 | topic: pluperfect_subjunctive | type: cloze | concepts: ["pluperfect_subjunctive_counterfactuals"] | prerequisites: ["imperfect_subjunctive_formation", "haber_impersonal_vs_auxiliary"] | grammar_focus: "Pluperfect subjunctive for counterfactual past conditions and unrealized events." | contrast_note: "Contrast imperfect subjunctive with pluperfect subjunctive counterfactuals." -->
 
 > **Grammar Rule**: Mixed conditional: Past condition ('si' + pluperfect subjunctive) with present outcome (conditional simple).
 

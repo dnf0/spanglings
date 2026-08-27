@@ -16,3 +16,4 @@ pub mod run;
 pub mod search;
 pub mod sync;
 pub mod test;
+pub mod tour;

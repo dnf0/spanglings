@@ -24,6 +24,28 @@ pub struct ExerciseStat {
 }
 
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+pub struct ConceptMastery {
+    pub concept_id: String,
+    pub mastery_score: f32, // 0.0 to 1.0
+    pub total_reviews: u32,
+    pub lapses: u32,
+    pub last_practiced: Option<DateTime<Utc>>,
+}
+
+impl ConceptMastery {
+    pub fn new(concept_id: impl Into<String>) -> Self {
+        Self {
+            concept_id: concept_id.into(),
+            mastery_score: 0.0,
+            total_reviews: 0,
+            lapses: 0,
+            last_practiced: None,
+        }
+    }
+}
+
+#[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
+#[serde(default)]
 pub struct AppState {
     pub version: u32,
     pub completed_exercises: HashSet<String>,
@@ -31,10 +53,10 @@ pub struct AppState {
     pub accent_mode: AccentMode,
     pub srs: HashMap<String, SrsItem>,
     pub stats: HashMap<String, ExerciseStat>,
-    #[serde(default)]
     pub activity_history: HashMap<String, u32>,
-    #[serde(default)]
     pub evaluated_level: Option<EvaluatedLevel>,
+    pub concept_mastery: HashMap<String, ConceptMastery>,
+    pub tour_completed: bool,
 }
 
 impl Default for AppState {
@@ -48,6 +70,8 @@ impl Default for AppState {
             stats: HashMap::new(),
             activity_history: HashMap::new(),
             evaluated_level: None,
+            concept_mastery: HashMap::new(),
+            tour_completed: false,
         }
     }
 }
@@ -120,6 +144,10 @@ impl AppState {
         self.record_activity(&today);
     }
 
+    pub fn mark_tour_completed(&mut self) {
+        self.tour_completed = true;
+    }
+
     pub fn unmark_completed(&mut self, exercise_id: &str) {
         self.completed_exercises.remove(exercise_id);
         if let Some(stat) = self.stats.get_mut(exercise_id) {
@@ -174,5 +202,46 @@ impl AppState {
         let today = now.format("%Y-%m-%d").to_string();
         self.record_activity(&today);
         count
+    }
+
+    pub fn update_concept_mastery(&mut self, concept_id: &str, quality: u8, now: DateTime<Utc>) {
+        let entry = self
+            .concept_mastery
+            .entry(concept_id.to_string())
+            .or_insert_with(|| ConceptMastery {
+                concept_id: concept_id.to_string(),
+                mastery_score: 0.0,
+                total_reviews: 0,
+                lapses: 0,
+                last_practiced: None,
+            });
+
+        entry.last_practiced = Some(now);
+        if quality >= 3 {
+            entry.total_reviews += 1;
+            entry.mastery_score = (entry.mastery_score * 0.7 + 0.3).min(1.0);
+        } else {
+            entry.lapses += 1;
+            entry.mastery_score = (entry.mastery_score * 0.5).max(0.0);
+        }
+    }
+
+    pub fn get_weakest_concepts(&self, limit: usize) -> Vec<(&String, &ConceptMastery)> {
+        let mut list: Vec<(&String, &ConceptMastery)> = self.concept_mastery.iter().collect();
+        list.sort_by(|a, b| {
+            a.1.mastery_score
+                .partial_cmp(&b.1.mastery_score)
+                .unwrap_or(std::cmp::Ordering::Equal)
+                .then_with(|| b.1.lapses.cmp(&a.1.lapses))
+                .then_with(|| a.0.cmp(b.0))
+        });
+        list.into_iter().take(limit).collect()
+    }
+
+    pub fn get_concept_mastery_scores(&self) -> HashMap<String, f32> {
+        self.concept_mastery
+            .iter()
+            .map(|(k, v)| (k.clone(), v.mastery_score))
+            .collect()
     }
 }

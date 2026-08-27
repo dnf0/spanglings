@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Past Aspects 04: 'Conocer' (Met for 1st time vs Knew)
-<!-- id: b1_past_conocer_shift | level: B1 | topic: past_aspects | type: cloze -->
+<!-- id: b1_past_conocer_shift | level: B1 | topic: past_aspects | type: cloze | concepts: ["aspectual_meaning_shifts"] | prerequisites: ["preterite_aspect_completion", "imperfect_aspect_habitual_background"] | grammar_focus: "Aspectual distinction: preterite (bounded completion) vs imperfect (habitual/background)." | contrast_note: "Contrast completed action in preterite with ongoing descriptive state in imperfect." -->
 
 > **Grammar Rule**: 'Conocí' (preterite) means 'I met for the first time'; 'conocía' (imperfect) means 'I was already acquainted with'.
 

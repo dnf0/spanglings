@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Reported Speech 02: Preterite -> Pluperfect Shift
-<!-- id: b2_indirect_pret_to_pluperfect | level: B2 | topic: indirect_speech | type: cloze -->
+<!-- id: b2_indirect_pret_to_pluperfect | level: B2 | topic: indirect_speech | type: cloze | concepts: ["indirect_speech_transformations"] | prerequisites: ["imperfect_subjunctive_formation", "aspectual_meaning_shifts"] | grammar_focus: "Tense shift and concordance in indirect reported speech." | contrast_note: "Contrast direct present tense with back-shifted indirect past tense." -->
 
 > **Grammar Rule**: In reported speech with past introductory verb, Preterite / Present Perfect shifts to Pluperfect Indicative (había + participio).
 

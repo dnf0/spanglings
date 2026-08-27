@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Formal Inversion 05: Agreement in Participial Prepositions ('Dada la')
-<!-- id: c1_formal_dada_la | level: C1 | topic: formal_inversion | type: cloze -->
+<!-- id: c1_formal_dada_la | level: C1 | topic: formal_inversion | type: cloze | concepts: ["formal_inversion_hyperbaton"] | prerequisites: ["cleft_sentences_focus"] | grammar_focus: "Stylistic syntactic inversion, fronting, and rhetorical word order." -->
 
 > **Grammar Rule**: 'Dado/dada/dados/dadas' functions as a prepositional participle and agrees in gender and number with the following noun.
 

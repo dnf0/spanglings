@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Cleft Sentences 05: Personal Direct Object Focalization
-<!-- id: c1_cleft_personal_a | level: C1 | topic: cleft_sentences | type: cloze -->
+<!-- id: c1_cleft_personal_a | level: C1 | topic: cleft_sentences | type: cloze | concepts: ["cleft_sentences_focus"] | prerequisites: ["ser_vs_estar_essence_state", "discourse_connectors"] | grammar_focus: "Cleft sentences (oraciones escindidas) for informational focalization." -->
 
 > **Grammar Rule**: When focalizing a specific person, the personal 'a' must be maintained: 'A quien busco es a Juan'.
 

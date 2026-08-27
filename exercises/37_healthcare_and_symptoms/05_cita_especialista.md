@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Healthcare & Symptoms 05: Specialist Referrals & Annual Checkups
-<!-- id: b2_health_cita_especialista | level: B2 | topic: healthcare_and_symptoms | type: cloze -->
+<!-- id: b2_health_cita_especialista | level: B2 | topic: healthcare_and_symptoms | type: cloze | concepts: ["accidental_se_structures"] | prerequisites: ["gustar_dative_structures", "por_vs_para_nuances"] | grammar_focus: "Medical consultations, describing symptoms, physical sensations, and treatments." -->
 
 > **Grammar & Lexicon**: Booking a specialist appointment in the public or private health system is **pedir cita previa con el especialista** (or *sacar turno con el especialista* in the Southern Cone). Routine checkups are **revisiones periódicas / chequeos preventivos**.
 

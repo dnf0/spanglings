@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Accidental Se 03: 'Se nos olvidó' (We forgot)
-<!-- id: b2_accidental_se_olvido | level: B2 | topic: accidental_se | type: cloze -->
+<!-- id: b2_accidental_se_olvido | level: B2 | topic: accidental_se | type: cloze | concepts: ["accidental_se_structures"] | prerequisites: ["gustar_dative_structures", "clitic_pronoun_stacking"] | grammar_focus: "Involuntary and accidental 'se' construction for unplanned events." | contrast_note: "Contrast deliberate direct reflexive with accidental de-agentified se." -->
 
 > **Grammar Rule**: 'Se nos olvidó' depersonalizes forgetting, treating the forgotten item as the grammatical subject.
 

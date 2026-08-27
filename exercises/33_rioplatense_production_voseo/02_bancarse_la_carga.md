@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Rioplatense Production Voseo 02: Resisting Heavy Traffic & Load
-<!-- id: b2_rioplatense_bancarse_la_carga | level: B2 | topic: rioplatense_production_voseo | type: cloze -->
+<!-- id: b2_rioplatense_bancarse_la_carga | level: B2 | topic: rioplatense_production_voseo | type: cloze | concepts: ["regional_voseo_rioplatense"] | prerequisites: ["irregular_present_stems"] | grammar_focus: "Rioplatense voseo conjugation in present indicative and imperative." | contrast_note: "Contrast standard tú conjugation with Rioplatense vos conjugation." -->
 
 > **Grammar & Lexicon**: The colloquial Rioplatense verb **bancarse** (to endure, withstand, support) is ubiquitous in Argentine engineering teams to describe clusters or databases enduring massive traffic spikes (*bancarse el tráfico / la carga*).
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # False Friends 02: 'Eventualmente' vs 'Eventually'
-<!-- id: b2_false_eventualmente | level: B2 | topic: false_friends | type: cloze -->
+<!-- id: b2_false_eventualmente | level: B2 | topic: false_friends | type: cloze | concepts: ["false_friends_anglicisms"] | prerequisites: [] | grammar_focus: "False cognates (falsos amigos) and misleading literal calques from English." | contrast_note: "Contrast deceptively similar English terms with their true Spanish meanings." -->
 
 > **False Friend Trap**: **Eventualmente** in Spanish means *occasionally / by chance / conditionally*. To translate English *eventually / in the end*, use **finalmente**, **con el tiempo**, or **al final**.
 

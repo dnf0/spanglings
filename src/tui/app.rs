@@ -8,6 +8,7 @@ use crate::core::state::{AppState, EvaluatedLevel};
 use crate::engine::accents::AccentMode;
 use crate::engine::validator::{validate_submission, ValidationResult};
 use chrono::Utc;
+use crossterm::event::{KeyCode, KeyEvent};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 pub enum AppMode {
@@ -31,6 +32,7 @@ pub struct App {
     pub last_result: Option<ValidationResult>,
     pub status_message: Option<String>,
     pub should_quit: bool,
+    pub state: AppState,
 
     // Search state
     pub search_query: String,
@@ -60,14 +62,25 @@ pub struct App {
     pub placement_result: Option<PlacementResult>,
     pub placement_finished: bool,
     pub placement_fast_tracked: bool,
+
+    // Tour state
+    pub show_tour_welcome: bool,
+    pub show_tour_modal: bool,
+    pub tour_current_station: usize,
 }
 
 impl App {
     pub fn new(exercises: Vec<Exercise>, strict_accents: bool) -> Self {
+        let state = AppState::load().unwrap_or_default();
+        Self::new_with_state(exercises, strict_accents, state)
+    }
+
+    pub fn new_with_state(exercises: Vec<Exercise>, strict_accents: bool, state: AppState) -> Self {
         let count = exercises.len();
         let filtered_indices = (0..count).collect();
         let ref_topics: Vec<&'static str> = list_reference_topics().to_vec();
         let ref_filtered_topics = ref_topics.clone();
+        let show_tour_welcome = !state.tour_completed;
         Self {
             exercises,
             current_index: 0,
@@ -80,6 +93,7 @@ impl App {
             last_result: None,
             status_message: None,
             should_quit: false,
+            state,
             search_query: String::new(),
             search_cursor: 0,
             filtered_indices,
@@ -101,6 +115,9 @@ impl App {
             placement_result: None,
             placement_finished: false,
             placement_fast_tracked: false,
+            show_tour_welcome,
+            show_tour_modal: false,
+            tour_current_station: 0,
         }
     }
 
@@ -157,6 +174,8 @@ impl App {
     }
 
     pub fn enter_search(&mut self) {
+        self.show_tour_welcome = false;
+        self.show_tour_modal = false;
         self.mode = AppMode::Searching;
         self.search_query.clear();
         self.search_cursor = 0;
@@ -319,6 +338,8 @@ impl App {
     // --- Conjugator Modal Methods ---
 
     pub fn enter_conjugator(&mut self) {
+        self.show_tour_welcome = false;
+        self.show_tour_modal = false;
         self.mode = AppMode::Conjugating;
         self.conjugator_query.clear();
         self.conjugator_cursor = 0;
@@ -374,6 +395,8 @@ impl App {
     // --- Reference Browser Modal Methods ---
 
     pub fn enter_reference_browser(&mut self) {
+        self.show_tour_welcome = false;
+        self.show_tour_modal = false;
         self.mode = AppMode::BrowsingReference;
         self.ref_query.clear();
         self.ref_cursor = 0;
@@ -458,6 +481,8 @@ impl App {
     // --- Help Modal Methods ---
 
     pub fn enter_help(&mut self) {
+        self.show_tour_welcome = false;
+        self.show_tour_modal = false;
         self.mode = AppMode::Help;
     }
 
@@ -468,6 +493,8 @@ impl App {
     // --- Placement Test Modal Methods ---
 
     pub fn enter_placement_test(&mut self) {
+        self.show_tour_welcome = false;
+        self.show_tour_modal = false;
         self.mode = AppMode::PlacementTest;
         self.placement_battery = get_placement_battery(None);
         self.placement_answers = Vec::new();
@@ -507,14 +534,12 @@ impl App {
             );
 
             // Update state
-            if let Ok(mut state) = AppState::load() {
-                state.evaluated_level = Some(EvaluatedLevel {
-                    level: res.assessed_level,
-                    score_percent: res.percentage,
-                    evaluated_at: Utc::now(),
-                });
-                let _ = state.save();
-            }
+            self.state.evaluated_level = Some(EvaluatedLevel {
+                level: res.assessed_level,
+                score_percent: res.percentage,
+                evaluated_at: Utc::now(),
+            });
+            let _ = self.state.save();
 
             self.placement_result = Some(res);
             self.placement_finished = true;
@@ -523,19 +548,17 @@ impl App {
 
     pub fn fast_track_placement_levels(&mut self) -> usize {
         if let Some(res) = &self.placement_result {
-            if let Ok(mut state) = AppState::load() {
-                let mut total_marked = 0;
-                for &lvl in &res.passed_levels {
-                    total_marked += state.fast_track_level(lvl, &self.exercises);
-                }
-                let _ = state.save();
-                self.placement_fast_tracked = true;
-                self.status_message = Some(format!(
-                    "✨ Fast-tracked {} exercises across passed levels!",
-                    total_marked
-                ));
-                return total_marked;
+            let mut total_marked = 0;
+            for &lvl in &res.passed_levels {
+                total_marked += self.state.fast_track_level(lvl, &self.exercises);
             }
+            let _ = self.state.save();
+            self.placement_fast_tracked = true;
+            self.status_message = Some(format!(
+                "✨ Fast-tracked {} exercises across passed levels!",
+                total_marked
+            ));
+            return total_marked;
         }
         0
     }
@@ -562,6 +585,62 @@ impl App {
         if let Some((byte_idx, _)) = self.placement_input.char_indices().nth(char_to_remove) {
             self.placement_input.remove(byte_idx);
             self.placement_cursor -= 1;
+        }
+    }
+
+    // --- Key Event Handling ---
+
+    pub fn on_key(&mut self, key: impl Into<KeyEvent>) {
+        let key = key.into();
+        if self.show_tour_welcome {
+            match key.code {
+                KeyCode::Char('y') | KeyCode::Char('Y') => {
+                    self.show_tour_welcome = false;
+                    self.show_tour_modal = true;
+                    self.tour_current_station = 0;
+                }
+                KeyCode::Char('n') | KeyCode::Char('N') | KeyCode::Esc => {
+                    self.show_tour_welcome = false;
+                }
+                _ => {}
+            }
+            return;
+        }
+
+        if self.show_tour_modal {
+            match key.code {
+                KeyCode::Right | KeyCode::Char('n') | KeyCode::Char('N') | KeyCode::Enter => {
+                    let total_stations = crate::cli::commands::tour::get_tour_stations().len();
+                    if self.tour_current_station + 1 < total_stations {
+                        self.tour_current_station += 1;
+                    } else {
+                        self.show_tour_modal = false;
+                        self.state.mark_tour_completed();
+                        if let Err(e) = self.state.save() {
+                            self.status_message =
+                                Some(format!("Warning: Failed to save state: {}", e));
+                        }
+                    }
+                }
+                KeyCode::Left | KeyCode::Char('p') | KeyCode::Char('P') => {
+                    self.tour_current_station = self.tour_current_station.saturating_sub(1);
+                }
+                KeyCode::Esc | KeyCode::Char('q') | KeyCode::Char('Q') => {
+                    self.show_tour_modal = false;
+                }
+                _ => {}
+            }
+            return;
+        }
+
+        if self.mode == AppMode::Editing {
+            match key.code {
+                KeyCode::Char('t') | KeyCode::Char('T') => {
+                    self.show_tour_modal = true;
+                    self.tour_current_station = 0;
+                }
+                _ => {}
+            }
         }
     }
 }

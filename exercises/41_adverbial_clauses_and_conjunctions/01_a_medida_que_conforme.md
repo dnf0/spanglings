@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Adverbial Clauses 01: Proportional Progression: A medida que & Conforme
-<!-- id: b2_adverb_a_medida_que | level: B2 | topic: adverbial_clauses_and_conjunctions | type: cloze -->
+<!-- id: b2_adverb_a_medida_que | level: B2 | topic: adverbial_clauses_and_conjunctions | type: cloze | concepts: ["adverbial_clauses_syntax"] | prerequisites: ["subjunctive_adverbial_clauses", "discourse_connectors"] | grammar_focus: "Complex adverbial conjunctions and modal subordination in formal discourse." | contrast_note: "Contrast indicative causal/consecutive connectors with subjunctive conditional/concessive connectors." -->
 
 > **Grammar & Lexicon**: **A medida que** and **conforme** express proportional change in tandem. When referring to ongoing/past actions, they take the **indicative** (*a medida que crecía el proyecto*). When anticipating future/hypothetical change, they mandate the **subjunctive** (*a medida que aumente la demanda*).
 

@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Reported Speech 04: Imperative -> Imperfect Subjunctive Shift
-<!-- id: b2_indirect_imp_to_past_subj | level: B2 | topic: indirect_speech | type: cloze -->
+<!-- id: b2_indirect_imp_to_past_subj | level: B2 | topic: indirect_speech | type: cloze | concepts: ["indirect_speech_transformations"] | prerequisites: ["imperfect_subjunctive_formation", "aspectual_meaning_shifts"] | grammar_focus: "Tense shift and concordance in indirect reported speech." | contrast_note: "Contrast direct present tense with back-shifted indirect past tense." -->
 
 > **Grammar Rule**: Commands/imperatives in direct speech shift to the Imperfect Subjunctive when reported after a past verb.
 

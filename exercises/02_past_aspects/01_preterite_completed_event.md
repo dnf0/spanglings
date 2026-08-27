@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Past Aspects 01: Completed Bounded Event
-<!-- id: b1_past_aspect_completed | level: B1 | topic: past_aspects | type: cloze -->
+<!-- id: b1_past_aspect_completed | level: B1 | topic: past_aspects | type: cloze | concepts: ["aspectual_meaning_shifts"] | prerequisites: ["preterite_aspect_completion", "imperfect_aspect_habitual_background"] | grammar_focus: "Aspectual distinction: preterite (bounded completion) vs imperfect (habitual/background)." | contrast_note: "Contrast completed action in preterite with ongoing descriptive state in imperfect." -->
 
 > **Grammar Rule**: Use the preterite for single actions completed at a specific point in time or within a bounded duration.
 

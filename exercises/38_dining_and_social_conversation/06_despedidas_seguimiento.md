@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Dining & Social Conversation 06: Friendly Goodbyes & Follow-ups
-<!-- id: b2_social_despedidas | level: B2 | topic: dining_and_social_conversation | type: cloze -->
+<!-- id: b2_social_despedidas | level: B2 | topic: dining_and_social_conversation | type: cloze | concepts: ["idiomatic_expressions_colloquial"] | prerequisites: ["gustar_dative_structures"] | grammar_focus: "Dining, social etiquette, gastronomic dialogue, and conversational formulas." -->
 
 > **Grammar & Lexicon**: Casual, friendly goodbyes standardly use **estamos en contacto** (we'll be in touch) and the imperative subjunctive request **avísame en cuanto llegues a casa** (let me know as soon as you get home).
 

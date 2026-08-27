@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Pronoun Stacking 01: 'Le' -> 'Se' Cacophony Rule
-<!-- id: b1_pronoun_se_lo | level: B1 | topic: pronoun_stacking | type: cloze -->
+<!-- id: b1_pronoun_se_lo | level: B1 | topic: pronoun_stacking | type: cloze | concepts: ["clitic_pronoun_stacking"] | prerequisites: ["direct_indirect_pronouns"] | grammar_focus: "Double object pronoun order (indirect before direct) and le -> se transformation." | contrast_note: "Contrast indirect le with spurious se before direct pronouns lo/la." -->
 
 > **Grammar Rule**: When an indirect pronoun (le/les) is followed by a 3rd person direct pronoun (lo/la/los/las), 'le/les' changes to 'SE' to avoid repetitive 'l' sounds.
 

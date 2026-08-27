@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Verbal Periphrases 02: Echar a perder
-<!-- id: c1_periphrasis_echar_a_perder | level: C1 | topic: verbal_periphrases | type: cloze -->
+<!-- id: c1_periphrasis_echar_a_perder | level: C1 | topic: verbal_periphrases | type: cloze | concepts: ["advanced_verbal_periphrases"] | prerequisites: ["verbal_periphrases_aspect"] | grammar_focus: "Advanced modal and aspectual periphrases in formal Spanish." -->
 
 > **Grammar & Lexicon**: The aspectual periphrasis **echar(se) a perder** conveys spoiling, corrupting, or ruining a state or process.
 

@@ -1,6 +1,6 @@
 use crate::core::curriculum::{find_all_exercises_or_embedded, Level};
 use crate::core::exercise::Exercise;
-use crate::core::state::AppState;
+use crate::core::state::{AppState, ConceptMastery};
 use chrono::{DateTime, Datelike, Duration, NaiveDate, Utc};
 use colored::Colorize;
 use serde::{Deserialize, Serialize};
@@ -44,6 +44,10 @@ pub struct ProgressSummary {
     pub weak_topics: Vec<TopicWeaknessStat>,
     pub recommendations: Vec<String>,
     pub activity: ActivitySummary,
+    #[serde(default)]
+    pub concept_mastery: HashMap<String, ConceptMastery>,
+    #[serde(default)]
+    pub weakest_concepts: Vec<ConceptMastery>,
 }
 
 pub fn compute_activity_summary(state: &AppState, now: DateTime<Utc>) -> ActivitySummary {
@@ -316,6 +320,12 @@ pub fn get_progress_json() -> anyhow::Result<String> {
 
     let activity = compute_activity_summary(&state, now);
 
+    let weakest_concepts: Vec<ConceptMastery> = state
+        .get_weakest_concepts(5)
+        .into_iter()
+        .map(|(_, m)| m.clone())
+        .collect();
+
     let summary = ProgressSummary {
         total,
         completed,
@@ -326,10 +336,16 @@ pub fn get_progress_json() -> anyhow::Result<String> {
         weak_topics,
         recommendations,
         activity,
+        concept_mastery: state.concept_mastery.clone(),
+        weakest_concepts,
     };
 
     let json_str = serde_json::to_string_pretty(&summary)?;
     Ok(json_str)
+}
+
+pub fn run_progress(json: bool) -> anyhow::Result<()> {
+    show_progress(json)
 }
 
 pub fn show_progress(json: bool) -> anyhow::Result<()> {
@@ -492,6 +508,32 @@ pub fn show_progress(json: bool) -> anyhow::Result<()> {
                 w.lapses,
                 w.due_reviews,
                 w.recommendation.cyan()
+            );
+        }
+    }
+
+    let weakest_concepts = state.get_weakest_concepts(5);
+    if !weakest_concepts.is_empty() {
+        println!(
+            "\n{}",
+            "Targeted Concept Mastery & Weakness Profiler:".bold()
+        );
+        for (concept_id, mastery) in weakest_concepts {
+            let pct = (mastery.mastery_score * 100.0).clamp(0.0, 100.0);
+            let status = if mastery.mastery_score >= 0.8 {
+                "Mastered".green()
+            } else if mastery.mastery_score >= 0.5 {
+                "Developing".yellow()
+            } else {
+                "Needs Review".red().bold()
+            };
+            println!(
+                "  • {:<35} [{:>5.1}%] ({}) - Reviews: {}, Lapses: {}",
+                concept_id.cyan(),
+                pct,
+                status,
+                mastery.total_reviews,
+                mastery.lapses
             );
         }
     }

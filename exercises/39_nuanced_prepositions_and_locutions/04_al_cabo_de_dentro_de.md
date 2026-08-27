@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Nuanced Prepositions 04: Temporal Spans: Al cabo de vs Dentro de
-<!-- id: b2_prep_al_cabo_de_dentro_de | level: B2 | topic: nuanced_prepositions_and_locutions | type: cloze -->
+<!-- id: b2_prep_al_cabo_de_dentro_de | level: B2 | topic: nuanced_prepositions_and_locutions | type: cloze | concepts: ["nuanced_prepositions_and_locutions"] | prerequisites: ["relative_pronouns_and_prepositions", "prepositional_regimes"] | grammar_focus: "High-register prepositional locutions and advanced verbal regimes." -->
 
 > **Grammar & Lexicon**: **Al cabo de** refers to elapsed time after an event in the past (*al cabo de tres meses* = after three months had passed). **Dentro de** expresses future time from the current moment (*dentro de tres meses* = in three months' time).
 

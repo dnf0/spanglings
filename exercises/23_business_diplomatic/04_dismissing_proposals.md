@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Business Spanish 04: Dismissing Proposals & Motions
-<!-- id: c1_biz_dismissal | level: C1 | topic: business_correspondence | type: cloze -->
+<!-- id: c1_biz_dismissal | level: C1 | topic: business_correspondence | type: cloze | concepts: ["register_elevation_formal"] | prerequisites: ["discourse_connectors", "formal_inversion_hyperbaton"] | grammar_focus: "Formal business diplomacy, executive communication, and high-register negotiations." -->
 
 > **Grammar & Lexicon**: In administrative and institutional Spanish, to formally reject or dismiss an appeal or motion is **desestimar** (e.g. *desestimar la propuesta / el recurso*).
 

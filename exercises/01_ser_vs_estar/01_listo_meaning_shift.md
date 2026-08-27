@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Ser vs Estar 01: 'Listo' (Smart vs Ready)
-<!-- id: b1_ser_estar_listo | level: B1 | topic: ser_vs_estar | type: cloze -->
+<!-- id: b1_ser_estar_listo | level: B1 | topic: ser_vs_estar | type: cloze | concepts: ["ser_vs_estar_adjectival_shifts"] | prerequisites: ["ser_vs_estar_essence_state"] | grammar_focus: "Adjectival meaning shift depending on ser vs estar." | contrast_note: "Contrast permanent trait (ser) with temporary state (estar)." -->
 
 > **Grammar Rule**: 'Ser listo' means to be clever/smart (inherent trait); 'estar listo' means to be ready or prepared (temporary state).
 

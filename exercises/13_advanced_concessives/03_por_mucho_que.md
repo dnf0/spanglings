@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Advanced Concessives 03: 'Por mucho que' + Subjunctive
-<!-- id: c1_concessive_por_mucho_que | level: C1 | topic: advanced_concessives | type: cloze -->
+<!-- id: c1_concessive_por_mucho_que | level: C1 | topic: advanced_concessives | type: cloze | concepts: ["advanced_concessive_mood_alternation"] | prerequisites: ["subjunctive_adverbial_clauses", "hypothetical_conditionals_si_clauses"] | grammar_focus: "Advanced concessive clauses (por más que, aun a riesgo de) with mood alternation." | contrast_note: "Contrast factual concession (indicative) with hypothetical concession (subjunctive)." -->
 
 > **Grammar Rule**: 'Por mucho que' takes the subjunctive when expressing hypothetical or potential obstacles.
 

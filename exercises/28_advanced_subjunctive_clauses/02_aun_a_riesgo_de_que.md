@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Concessive Subjunctive 02: Aun a riesgo de que
-<!-- id: c1_subj_aun_a_riesgo | level: C1 | topic: concessive_subjunctive | type: cloze -->
+<!-- id: c1_subj_aun_a_riesgo | level: C1 | topic: concessive_subjunctive | type: cloze | concepts: ["advanced_subjunctive_nuances"] | prerequisites: ["advanced_concessive_mood_alternation"] | grammar_focus: "Subjunctive nuances with dubitative adverbs and reduplicative concessives." -->
 
 > **Grammar & Lexicon**: The concessive connector **aun a riesgo de que** ("even at the risk that") inherently introduces an uncertain risk and strictly triggers the **subjunctive**.
 

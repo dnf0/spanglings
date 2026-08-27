@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Anglicism Elimination 06: Resetting vs Restablecer
-<!-- id: c1_anglicism_restablecer | level: C1 | topic: latam_anglicism_elimination | type: cloze -->
+<!-- id: c1_anglicism_restablecer | level: C1 | topic: latam_anglicism_elimination | type: cloze | concepts: ["false_friends_anglicisms"] | prerequisites: [] | grammar_focus: "Elimination of unnecessary English calques and anglicisms in professional Latin American Spanish." | contrast_note: "Contrast direct anglicisms with idiomatic Spanish equivalents." -->
 
 > **Grammar & Lexicon**: Instead of *resetear/rebootear*, standard formal Spanish across Latin America uses **restablecer** (to restore factory defaults / reset state) and **reiniciar** (to restart a server or daemon).
 

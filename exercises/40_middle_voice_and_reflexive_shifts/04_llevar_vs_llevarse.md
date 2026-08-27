@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Middle-Voice & Reflexive Shifts 04: Llevar vs Llevarse (Transport vs Social Affinity / Appropriating)
-<!-- id: b2_reflex_llevar_vs_llevarse | level: B2 | topic: middle_voice_and_reflexive_shifts | type: cloze -->
+<!-- id: b2_reflex_llevar_vs_llevarse | level: B2 | topic: middle_voice_and_reflexive_shifts | type: cloze | concepts: ["middle_voice_reflexive_shifts"] | prerequisites: ["passive_refleja_vs_impersonal", "accidental_se_structures"] | grammar_focus: "Middle voice, inchoative aspect, and telic reflexive shifts." | contrast_note: "Contrast non-reflexive base verb with reflexive aspectual/inchoative nuance." -->
 
 > **Grammar & Lexicon**: **Llevar** means to carry or transport an object (*llevo las llaves*). **Llevarse bien/mal con** denotes interpersonal harmony (*me llevo bien con mis colegas*), and **llevarse algo** denotes winning or taking possession of something (*se llevó el premio*).
 

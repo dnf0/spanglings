@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # LatAm Enterprise SLA 05: Indemnification & Hold Harmless
-<!-- id: c1_sla_indemnidad_legal | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze -->
+<!-- id: c1_sla_indemnidad_legal | level: C1 | topic: latam_enterprise_risk_and_sla | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["executive_leadership_communication"] | grammar_focus: "Enterprise risk management, SLA negotiations, and compliance dialogue." -->
 
 > **Grammar & Lexicon**: The legal obligation to hold a client harmless against third-party intellectual property or security infringement claims is expressed as **mantener indemne a** (or *obligación de indemnidad*).
 

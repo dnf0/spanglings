@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Nuanced Prepositions 01: Hacia vs Hasta (Direction vs Endpoint)
-<!-- id: b1_prep_hacia_vs_hasta | level: B1 | topic: nuanced_prepositions_and_locutions | type: cloze -->
+<!-- id: b1_prep_hacia_vs_hasta | level: B1 | topic: nuanced_prepositions_and_locutions | type: cloze | concepts: ["nuanced_prepositions_and_locutions"] | prerequisites: ["relative_pronouns_and_prepositions", "prepositional_regimes"] | grammar_focus: "High-register prepositional locutions and advanced verbal regimes." -->
 
 > **Grammar & Lexicon**: **Hacia** indicates direction, motion toward, or approximate time (*caminó hacia el norte*, *hacia las cinco*). **Hasta** indicates a definite boundary, limit, or final terminal point (*llegó hasta la cima*, *hasta las cinco en punto*).
 

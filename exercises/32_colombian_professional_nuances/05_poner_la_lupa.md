@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Colombian Professional Nuances 05: Scrutinizing & Auditing Systems
-<!-- id: c1_colombian_poner_la_lupa | level: C1 | topic: colombian_professional_nuances | type: cloze -->
+<!-- id: c1_colombian_poner_la_lupa | level: C1 | topic: colombian_professional_nuances | type: cloze | concepts: ["colombian_professional_nuances"] | prerequisites: ["register_elevation_formal"] | grammar_focus: "Colombian business etiquette, formal honorifics, usteo, and diplomatic requests." -->
 
 > **Grammar & Lexicon**: To place something under intense scrutiny, audit, or rigorous inspection is idiomatically expressed in Colombian media and business as **poner la lupa sobre / en** (literally *to place the magnifying glass over*).
 

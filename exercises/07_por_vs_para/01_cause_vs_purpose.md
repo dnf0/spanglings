@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Por vs Para 01: Cause/Reason (Por) vs Goal/Purpose (Para)
-<!-- id: b1_por_para_cause_purpose | level: B1 | topic: por_vs_para | type: cloze -->
+<!-- id: b1_por_para_cause_purpose | level: B1 | topic: por_vs_para | type: cloze | concepts: ["por_vs_para_nuances"] | prerequisites: ["por_vs_para_foundations"] | grammar_focus: "Nuanced usage of por (cause, duration, medium) vs para (goal, recipient, deadline)." | contrast_note: "Contrast por (cause/motive) with para (aim/destination)." -->
 
 > **Grammar Rule**: Use 'por' for motive, cause, or reason (looking back: because of); use 'para' for goal, intention, or purpose (looking forward: in order to).
 

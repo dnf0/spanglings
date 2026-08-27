@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Por vs Para 03: Specific Deadline (Para)
-<!-- id: b1_por_para_deadline | level: B1 | topic: por_vs_para | type: cloze -->
+<!-- id: b1_por_para_deadline | level: B1 | topic: por_vs_para | type: cloze | concepts: ["por_vs_para_nuances"] | prerequisites: ["por_vs_para_foundations"] | grammar_focus: "Nuanced usage of por (cause, duration, medium) vs para (goal, recipient, deadline)." | contrast_note: "Contrast por (cause/motive) with para (aim/destination)." -->
 
 > **Grammar Rule**: Use 'para' for specific deadlines or targeted future times (due dates). Use 'por' for approximate duration or time of day.
 

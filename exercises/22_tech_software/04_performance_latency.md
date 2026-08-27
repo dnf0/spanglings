@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Tech Spanish 04: System Performance & Latency
-<!-- id: b2_tech_performance | level: B2 | topic: tech_software | type: cloze -->
+<!-- id: b2_tech_performance | level: B2 | topic: tech_software | type: cloze | concepts: ["tech_software_engineering"] | prerequisites: ["false_friends_anglicisms", "discourse_connectors"] | grammar_focus: "Technical software engineering terminology, code reviews, and architecture discussions." -->
 
 > **Grammar & Lexicon**: While *performance* is often heard informally, formal technical Spanish requires **rendimiento** (or **desempeño**) to describe throughput, speed, and efficiency.
 

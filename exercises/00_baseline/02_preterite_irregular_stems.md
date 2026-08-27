@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Baseline 02: Irregular Preterite Stems
-<!-- id: b0_preterite_stems_01 | level: Baseline | topic: baseline_preterite_stems | type: cloze -->
+<!-- id: b0_preterite_stems_01 | level: Baseline | topic: baseline_preterite_stems | type: cloze | concepts: ["irregular_preterite_stems"] | prerequisites: ["irregular_present_stems"] | grammar_focus: "Irregular preterite stem changes and metaphony." | contrast_note: "Contrast with regular preterite endings." -->
 
 > **Grammar Rule**: Verbs with irregular preterite stems (hacer -> hic-/hiz-, poner -> pus-, tener -> tuv-) take unaccented endings -e, -iste, -o, -imos, -isteis, -ieron.
 

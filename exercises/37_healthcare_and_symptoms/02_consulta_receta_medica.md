@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Healthcare & Symptoms 02: Doctor Consultations & Prescriptions
-<!-- id: b1_health_consulta_receta | level: B1 | topic: healthcare_and_symptoms | type: cloze -->
+<!-- id: b1_health_consulta_receta | level: B1 | topic: healthcare_and_symptoms | type: cloze | concepts: ["accidental_se_structures"] | prerequisites: ["gustar_dative_structures", "por_vs_para_nuances"] | grammar_focus: "Medical consultations, describing symptoms, physical sensations, and treatments." -->
 
 > **Grammar & Lexicon**: When a physician prescribes medication, they **recetan un fármaco / antibiótico**. The dosage instructions are given with the distributive formula: **tomar una dosis / pastilla cada ocho horas**.
 

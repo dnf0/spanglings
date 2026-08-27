@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Middle-Voice & Reflexive Shifts 01: Ir vs Irse (Motion vs Departure)
-<!-- id: b1_reflex_ir_vs_irse | level: B1 | topic: middle_voice_and_reflexive_shifts | type: cloze -->
+<!-- id: b1_reflex_ir_vs_irse | level: B1 | topic: middle_voice_and_reflexive_shifts | type: cloze | concepts: ["middle_voice_reflexive_shifts"] | prerequisites: ["passive_refleja_vs_impersonal", "accidental_se_structures"] | grammar_focus: "Middle voice, inchoative aspect, and telic reflexive shifts." | contrast_note: "Contrast non-reflexive base verb with reflexive aspectual/inchoative nuance." -->
 
 > **Grammar & Lexicon**: **Ir** focuses on destination and motion toward a point (*voy al supermercado*). **Irse** (pronominal/middle voice) emphasizes departure, leaving the current location behind (*ya es tarde, me tengo que ir de aquí*).
 

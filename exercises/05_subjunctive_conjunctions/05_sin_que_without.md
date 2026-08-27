@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Subjunctive Conjunctions 05: Negative Circumstance (Sin que)
-<!-- id: b1_subj_conj_sin_que | level: B1 | topic: subjunctive_conjunctions | type: cloze -->
+<!-- id: b1_subj_conj_sin_que | level: B1 | topic: subjunctive_conjunctions | type: cloze | concepts: ["subjunctive_temporal_future"] | prerequisites: ["subjunctive_volition_influence"] | grammar_focus: "Subjunctive mood with temporal and adverbial conjunctions referring to future." | contrast_note: "Contrast habitual temporal clause (indicative) with future anticipated action (subjunctive)." -->
 
 > **Grammar Rule**: 'Sin que' (without [someone doing something]) always requires the subjunctive.
 

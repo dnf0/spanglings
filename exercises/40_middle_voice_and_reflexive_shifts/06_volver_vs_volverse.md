@@ -1,6 +1,5 @@
-<!-- I AM NOT DONE -->
 # Middle-Voice & Reflexive Shifts 06: Volver vs Volverse (Returning vs Radical Transformation)
-<!-- id: c1_reflex_volver_vs_volverse | level: C1 | topic: middle_voice_and_reflexive_shifts | type: cloze -->
+<!-- id: c1_reflex_volver_vs_volverse | level: C1 | topic: middle_voice_and_reflexive_shifts | type: cloze | concepts: ["middle_voice_reflexive_shifts"] | prerequisites: ["passive_refleja_vs_impersonal", "accidental_se_structures"] | grammar_focus: "Middle voice, inchoative aspect, and telic reflexive shifts." | contrast_note: "Contrast non-reflexive base verb with reflexive aspectual/inchoative nuance." -->
 
 > **Grammar & Lexicon**: **Volver** signifies returning to a physical place (*volvió a su país*). **Volverse** is a verb of becoming denoting a profound, radical, or involuntary personality/quality transformation (*se volvió sumamente desconfiado*).
 

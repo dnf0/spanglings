@@ -34,9 +34,10 @@ fn test_all_curriculum_exercises_are_valid_and_solvable() {
     let mut md_paths = Vec::new();
     collect_md_paths(exercises_dir, &mut md_paths);
 
-    assert!(
-        md_paths.len() >= 116,
-        "Expected at least 116 exercises to be discovered, found {}",
+    assert_eq!(
+        md_paths.len(),
+        339,
+        "Expected exactly 339 exercises across all 60 tracks, found {}",
         md_paths.len()
     );
 
@@ -45,8 +46,14 @@ fn test_all_curriculum_exercises_are_valid_and_solvable() {
         find_all_exercises(exercises_dir).expect("find_all_exercises should succeed");
     assert_eq!(
         discovered_exercises.len(),
-        md_paths.len(),
-        "find_all_exercises should return all discovered exercises"
+        339,
+        "find_all_exercises should return all 339 discovered exercises"
+    );
+
+    let graph = spanglings::core::graph::get_default_linguistic_graph();
+    assert!(
+        graph.validate_no_cycles().is_ok(),
+        "Default linguistic ontology graph must be a valid DAG without cycles"
     );
 
     for path in &md_paths {
@@ -71,6 +78,40 @@ fn test_all_curriculum_exercises_are_valid_and_solvable() {
             "Exercise at {:?} has empty solution",
             path
         );
+        assert!(
+            !exercise.concept_tags.is_empty(),
+            "Exercise '{}' at {:?} must have at least one concept tag",
+            exercise.id,
+            path
+        );
+        assert!(
+            exercise.grammar_focus.is_some(),
+            "Exercise '{}' at {:?} must have a grammar_focus note",
+            exercise.id,
+            path
+        );
+
+        // Verify that all concept_tags and prerequisites exist in the default ontology graph
+        for tag in &exercise.concept_tags {
+            let cid = spanglings::core::graph::ConceptId::from(tag.as_str());
+            assert!(
+                graph.nodes.contains_key(&cid),
+                "Exercise '{}' ({:?}) references unknown concept '{}' not in ontology graph",
+                exercise.id,
+                path,
+                tag
+            );
+        }
+        for prereq in &exercise.prerequisites {
+            let cid = spanglings::core::graph::ConceptId::from(prereq.as_str());
+            assert!(
+                graph.nodes.contains_key(&cid),
+                "Exercise '{}' ({:?}) references unknown prerequisite concept '{}' not in ontology graph",
+                exercise.id,
+                path,
+                prereq
+            );
+        }
 
         // 1. Primary solution validates with AccentMode::Forgiving
         let forgiving_res =

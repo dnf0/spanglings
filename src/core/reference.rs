@@ -11,6 +11,18 @@ pub const TOPICS: &[&str] = &[
     "false-friends",
     "voseo",
     "accents",
+    "epistemic-conjecture",
+    "clitic-doubling",
+    "personal-a",
+    "gerund-rules",
+    "adversatives",
+    "legal-subjunctive",
+    "verbs-of-becoming",
+    "epistemic-adverbs",
+    "possessive-datives",
+    "corrective-polarity",
+    "participial-absolutes",
+    "scalar-concession",
 ];
 
 pub fn list_reference_topics() -> &'static [&'static str] {
@@ -33,6 +45,39 @@ pub fn get_reference_card(topic: &str) -> Option<&'static str> {
         "false-friends" | "falsos-amigos" | "cognates" | "traps" => Some(FALSE_FRIENDS_CARD),
         "voseo" | "regional" | "rioplatense" => Some(VOSEO_CARD),
         "accents" | "accentuation" | "tildes" | "acentuacion" | "stress" => Some(ACCENTS_CARD),
+        "epistemic-conjecture" | "conjecture" | "probability" | "probabilidad" => {
+            Some(EPISTEMIC_CONJECTURE_CARD)
+        }
+        "clitic-doubling" | "duplicacion" | "left-dislocation" | "reduplicacion" => {
+            Some(CLITIC_DOUBLING_CARD)
+        }
+        "personal-a" | "a-personal" | "dom" | "animacy" => Some(PERSONAL_A_CARD),
+        "gerund-rules" | "gerundio" | "gerunds" | "posteriority" => Some(GERUND_RULES_CARD),
+        "adversatives" | "pero-sino" | "sino-que" | "sino" => Some(ADVERSATIVES_CARD),
+        "legal-subjunctive" | "optatives" | "futuro-subjuntivo" | "archaic-subjunctive" => {
+            Some(LEGAL_SUBJUNCTIVE_CARD)
+        }
+        "verbs-of-becoming" | "cambio" | "devenir" | "hacerse" | "ponerse" | "quedarse"
+        | "volverse" => Some(VERBS_OF_BECOMING_CARD),
+        "epistemic-adverbs" | "duda" | "a-lo-mejor" | "quizas" | "tal-vez" | "igual" => {
+            Some(EPISTEMIC_ADVERBS_CARD)
+        }
+        "possessive-datives"
+        | "dativo-posesivo"
+        | "dativo-etico"
+        | "posesion-inalienable"
+        | "datives" => Some(POSSESSIVE_DATIVES_CARD),
+        "corrective-polarity" | "polaridad" | "no-es-que" | "de-ahi-que" | "no-porque" => {
+            Some(CORRECTIVE_POLARITY_CARD)
+        }
+        "participial-absolutes" | "participio-absoluto" | "absolutas" | "participles" => {
+            Some(PARTICIPIAL_ABSOLUTES_CARD)
+        }
+        "scalar-concession"
+        | "concesivas-intensivas"
+        | "por-mucho-que"
+        | "a-riesgo-de-que"
+        | "concession" => Some(SCALAR_CONCESSION_CARD),
         _ => None,
     }
 }
@@ -321,5 +366,295 @@ DIACRITICAL ACCENT (Acento Diacrítico - Distinguishing Homonyms):
 INTERROGATIVE & EXCLAMATORY PRONOUNS:
   - ¿Qué?, ¿Quién?, ¿Cómo?, ¿Dónde?, ¿Cuándo?, ¿Por qué?, ¿Cuánto?
   (Always carry a tilde in questions and exclamations, direct or indirect!)
+================================================================================
+"#;
+
+pub const EPISTEMIC_CONJECTURE_CARD: &str = r#"
+================================================================================
+          EPISTEMIC CONJECTURE & PROBABILITY (FUTURO Y CONDICIONAL)
+================================================================================
+In Spanish, the future and conditional tenses frequently express conjecture,
+hypothesis, or probability in place of adverbs like 'probablemente'.
+
+1. PRESENT CONJECTURE (Futuro Simple):
+   Expresses probability or speculation about the PRESENT moment.
+   - ¿Qué hora es? -> Serán las cuatro. (It must be / is probably around 4:00)
+   - ¿Dónde está Juan? -> Estará en la oficina. (He's probably in the office)
+   - ¿Quién llama a la puerta? -> Será el mensajero. (It must be the courier)
+
+2. PAST CONJECTURE / HYPOTHESIS (Condicional Simple):
+   Expresses speculation about an action occurring in the PAST.
+   - Ayer no asistió. -> Estaría enfermo. (He was probably sick)
+   - Tenía un reloj caro. -> Le costaría una fortuna. (It probably cost him a fortune)
+   - Tendría unos 20 años cuando migró. (He must have been about 20 years old)
+
+3. PRIOR PAST CONJECTURE (Futuro Compuesto / Condicional Compuesto):
+   - Futuro Compuesto: Habrá terminado ya. (He has probably finished by now)
+   - Condicional Compuesto: Habría salido antes de las ocho. (He must have left earlier)
+================================================================================
+"#;
+
+pub const CLITIC_DOUBLING_CARD: &str = r#"
+================================================================================
+            CLITIC DOUBLING & LEFT-DISLOCATION (DUPLICACIÓN CLÍTICA)
+================================================================================
+Spanish has rigorous syntactic rules requiring redundant object pronouns:
+
+1. MANDATORY LEFT-DISLOCATION (Fronted Direct & Indirect Objects):
+   When an object is placed BEFORE the verb for topicalization, the clitic is OBLIGATORY:
+   - A María LE entregué el informe. (NOT: *A María entregué el informe)
+   - A los clientes LOS llamé temprano. (NOT: *A los clientes llamé temprano)
+   - Este libro LO leí el año pasado. (NOT: *Este libro leí el año pasado)
+
+2. MANDATORY DATIVE REDUPLICATION WITH TONIC PRONOUNS:
+   Tonic prepositional pronouns (a mí, a ti, a él) REQUIRE the clitic pronoun:
+   - A mí ME gusta la arquitectura distribuida. (NOT: *A mí gusta...)
+   - TE vi A TI en la conferencia. (NOT: *Vi a ti...)
+
+3. DATIVE OF INHERENT INTEREST & PSYCH-VERBS (Gustar, Parecer, Costar):
+   - A los ingenieros LES parece razonable el plazo.
+   - A mi colega LE cuesta adaptarse al nuevo framework.
+================================================================================
+"#;
+
+pub const PERSONAL_A_CARD: &str = r#"
+================================================================================
+             THE 'PERSONAL A' SYSTEM & ANIMACY (A PERSONAL)
+================================================================================
+The preposition 'A' precedes direct objects according to specificity and animacy:
+
+1. MANDATORY WITH SPECIFIC, KNOWN HUMAN BEINGS:
+   - Vi A María en el standup. / Contrataron AL nuevo arquitecto.
+   - Conozco A todos los miembros del equipo de backend.
+
+2. OMITTED WITH NON-SPECIFIC, INDEFINITE HUMANS:
+   - Busco programador con experiencia en Rust. (Any programmer)
+   - Necesitamos secretaria para la oficina central. (Generic role)
+   - BUT: Busco AL programador que diseñó el pipeline. (Specific person)
+
+3. PERSONIFIED OBJECTS & DOMESTIC ANIMALS:
+   - Paseo AL perro todas las mañanas. (Treated as an animate family companion)
+   - Defendemos A la patria. (Personified collective noun)
+
+4. VERBS WITH SEMANTIC SHIFTS:
+   - TENER: Tengo dos servidores. vs Tengo A mi hijo enfermo en casa.
+   - PERDER: Perdió el tren. vs Perdió A su socio en la disputa legal.
+================================================================================
+"#;
+
+pub const GERUND_RULES_CARD: &str = r#"
+================================================================================
+        GERUND RESTRICTIONS & ANGLICISM TRAPS (GERUNDIO CORRECTO)
+================================================================================
+Spanish gerunds (-ando, -iendo) MUST express actions that are SIMULTANEOUS or
+IMMEDIATELY PRECEDING the main verb.
+
+1. PROHIBITED: GERUND OF POSTERIORITY (Gerundio de Posterioridad):
+   A gerund cannot express a subsequent outcome or consequence of the main verb:
+   - INCORRECT: *El servidor se cayó, provocando una interrupción del servicio.
+   - CORRECT:   El servidor se cayó Y PROVOCÓ una interrupción del servicio.
+   - INCORRECT: *Llegó a Madrid, reuniéndose al día siguiente con el cliente.
+   - CORRECT:   Llegó a Madrid Y SE REUNIÓ al día siguiente con el cliente.
+
+2. PROHIBITED: ADJECTIVAL GERUNDS (Gerundio Especificativo):
+   A gerund cannot act as an adjective modifying a non-fluid noun:
+   - INCORRECT: *Una directiva regulando la privacidad de los datos.
+   - CORRECT:   Una directiva QUE REGULA la privacidad de los datos.
+   - (ONLY ALLOWED with: agua hirviendo, clavo ardiendo).
+
+3. CORRECT SPANISH GERUND USAGE:
+   - Continuous aspect: Estamos refactorizando el módulo de pagos.
+   - Simultaneous manner: Entró en la sala gritando consignas.
+================================================================================
+"#;
+
+pub const ADVERSATIVES_CARD: &str = r#"
+================================================================================
+         ADVERSATIVE COORDINATION: PERO VS SINO VS SINO QUE
+================================================================================
+1. PERO (Additive Contrast / Restriction):
+   Adds a qualification or limitation to the first clause without negating it:
+   - El algoritmo es complejo, PERO es extremadamente rápido.
+   - No tenemos mucho presupuesto, PERO alcanzaremos el objetivo.
+
+2. SINO (Exclusive Substitution with Words & Phrases):
+   Used after a NEGATIVE clause to substitute with an alternative element:
+   - No usamos una arquitectura monolítica, SINO microservicios.
+   - No vino el martes, SINO el miércoles.
+   - (Pattern: NO [X], SINO [Y])
+
+3. SINO QUE (Exclusive Substitution with CONJUGATED CLAUSES):
+   Used after a negative clause when substituting with a full finite verb phrase:
+   - No solo corregimos el bug, SINO QUE rediseñamos todo el flujo.
+   - No rechazó la propuesta, SINO QUE sugirió ajustes menores.
+   - (Pattern: NO [Cláusula], SINO QUE [Cláusula con verbo conjugado])
+================================================================================
+"#;
+
+pub const LEGAL_SUBJUNCTIVE_CARD: &str = r#"
+================================================================================
+       OPTATIVES, INDEPENDENT SUBJUNCTIVE & LEGAL TENSES
+================================================================================
+1. INDEPENDENT OPTATIVE FORMULAS (Wishes & Imprecations):
+   - ¡Quién + Imperfecto de Subjuntivo! (Counterfactual longing):
+     ¡Quién tuviera veinte años otra vez! (If only I were twenty again!)
+     ¡Quién pudiera resolver este bug tan fácilmente!
+   - ¡Que + Presente de Subjuntivo! (Independent benevolent wish):
+     ¡Que tengas un excelente día! / ¡Que aproveche!
+   - Fixed expressions: ¡Maldita sea! / ¡Viva la ciencia! / ¡Cueste lo que cueste!
+
+2. FUTURE SUBJUNCTIVE (-are, -iere):
+   Archaic in modern speech, but MANDATORY in legal statutes, contracts, and proverbs:
+   - Si alguna de las partes INCUMPLIERE lo pactado en este contrato...
+   - Quien COMETIERE delito de estafa será sancionado...
+   - Donde FUERES, haz lo que vieres. (Proverb)
+
+3. LITERARY PLUPERFECT IN '-RA':
+   In high journalistic & literary prose, '-ra' often replaces 'había + participio':
+   - El proyecto que INICIARA la empresa hace dos años culminó con éxito.
+     (= que había iniciado)
+================================================================================
+"#;
+
+pub const VERBS_OF_BECOMING_CARD: &str = r#"
+================================================================================
+             VERBS OF BECOMING & TRANSFORMATION (VERBOS DE CAMBIO)
+================================================================================
+Spanish lacks a generic verb "to become". Choice depends on voluntariness,
+permanence, and the physical/psychological nature of the transition:
+
+1. PONERSE + Adjective (Involuntary, rapid, temporary emotional/physical state):
+   - Se puso furioso cuando cayó el servidor. (Emotional reaction)
+   - Me puse rojo de la vergüenza. (Physical involuntary change)
+
+2. QUEDARSE + Adjective (Resulting state from external event, loss, or shock):
+   - Nos quedamos atónitos ante el anuncio. (Shock/reaction)
+   - El portátil se quedó sin batería. (Deprivation/loss)
+   - Se quedó ciego tras el accidente. (Permanent physical aftermath)
+
+3. HACERSE + Noun/Adj (Voluntary change through effort, ideology, career, aging):
+   - Se hizo vegetariano por convicción ética. (Voluntary choice)
+   - Se hizo arquitecto tras cinco años de estudio. (Professional evolution)
+   - Se hace tarde. / Se hace mayor. (Natural progression)
+
+4. VOLVERSE + Adjective (Profound, lasting, involuntary character/psychological shift):
+   - Se volvió muy desconfiado con los inversores. (Lasting personality shift)
+   - ¡Te has vuelto loco! (Mental transformation)
+
+5. LLEGAR A SER + Noun/Adj (Culmination of long effort and career ascension):
+   - Tras décadas de trabajo, llegó a ser directora general. (Lifetime summit)
+
+6. CONVERTIRSE EN + Noun (Radical transformation or categorical change):
+   - La startup se convirtió en un unicornio tecnológico. (Total metamorphosis)
+================================================================================
+"#;
+
+pub const EPISTEMIC_ADVERBS_CARD: &str = r#"
+================================================================================
+               EPISTEMIC ADVERBS & MOOD SELECTION (DUDA Y CERTEZA)
+================================================================================
+1. MANDATORY INDICATIVE: A LO MEJOR, IGUAL, LO MISMO:
+   These colloquial epistemic adverbs ALWAYS take the INDICATIVE mood:
+   - A LO MEJOR TIENE (❌ *tenga) la clave de cifrado.
+   - IGUAL LLEGA (❌ *llegue) a tiempo para la demo.
+   - LO MISMO ESTÁ (❌ *esté) todavía en la reunión.
+
+2. POSITIONAL MOOD WITH QUIZÁS / TAL VEZ / ACASO:
+   - Pre-verbal position: INDICATIVE (less doubt) or SUBJUNCTIVE (greater doubt):
+     * Quizás VENGA mañana. (High uncertainty -> Subjunctive)
+     * Quizás VIENE mañana. (Strong expectation / probability -> Indicative)
+   - Post-verbal position: MANDATORY INDICATIVE:
+     * Vendrá mañana, QUIZÁS. (❌ *venga)
+     * Ya lo sabe, TAL VEZ.
+
+3. PROBABLEMENTE / SEGURAMENTE:
+   - Seguramente está en casa. (High probability = Indicative)
+   - Seguramente esté en casa. (Latin American preference / higher doubt = Subjunctive)
+================================================================================
+"#;
+
+pub const POSSESSIVE_DATIVES_CARD: &str = r#"
+================================================================================
+         DATIVE OF INALIENABLE POSSESSION & ETHIC/AFFECTIVE CLITICS
+================================================================================
+1. INALIENABLE POSSESSION (Body Parts & Personal Possessions):
+   Spanish rejects redundant possessive adjectives (*mis, *sus) when an affected
+   person is marked with a dative clitic and definite article:
+   - INCORRECT (English calque): *Lavo mis manos. / *Rompí su pantalla.
+   - CORRECT (Dative + Article):  ME lavo LAS manos. / LE rompí LA pantalla.
+   - SE LE cayó EL pasaporte al suelo.
+
+2. ETHIC & AFFECTIVE CLITICS (Expressive Personal Involvement):
+   Non-argument clitics expressing sympathy, grief, emotional stake, or consumption:
+   - ¡No ME llores! (Paternal/affectionate plea -> "Don't cry on me")
+   - El niño no ME come verdura. (Affective parental concern)
+   - SE NOS cayó el despliegue a producción. (Sympathetic collective impact)
+   - BÉBETE la taza entera de café. (Deliberative complete consumption)
+================================================================================
+"#;
+
+pub const CORRECTIVE_POLARITY_CARD: &str = r#"
+================================================================================
+             CORRECTIVE & CONCESSIVE POLARITY (NO ES QUE... SINO QUE...)
+================================================================================
+1. CORRECTIVE NEGATION: NO ES QUE [Subjuntivo]... SINO QUE [Indicativo]:
+   Rejects a false hypothesis in the first clause and asserts actual fact in the second:
+   - NO ES QUE no QUIERA (Subjunctive) ayudarte, SINO QUE no PUEDO (Indicative).
+   - NO ES QUE SEA (Subjunctive) un mal diseño, SINO QUE FALTA (Indicative) tiempo.
+
+2. REJECTED CAUSES: NO PORQUE [Subjuntivo]:
+   When rejecting an alleged motivation or causal factor:
+   - NO PORQUE SEA (Subjunctive) más caro SIGNIFICA (Indicative) que sea mejor.
+   - NO PORQUE INSISTA (Subjunctive) voy a cambiar los requisitos.
+
+3. CONSECUTIVE SUBJUNCTIVE FORMULA: DE AHÍ QUE [Subjuntivo]:
+   Formal consecutive link expressing consequence arising from an established fact:
+   - El servidor superó su capacidad de memoria, DE AHÍ QUE DECIDIÉRAMOS reiniciar.
+   - Hubo fallos de seguridad, DE AHÍ QUE SE SUSPENDIERA el servicio.
+================================================================================
+"#;
+
+pub const PARTICIPIAL_ABSOLUTES_CARD: &str = r#"
+================================================================================
+        PARTICIPIAL ABSOLUTE CONSTRUCTIONS (CONSTRUCCIONES ABSOLUTAS)
+================================================================================
+A hallmark of formal, legal, journalistic, and administrative Spanish syntax.
+Condenses subordinate temporal or causal clauses into a preposed absolute participle.
+
+1. AGREEMENT RULES:
+   The participle MUST agree in gender and number with the logical postposed subject:
+   - TERMINADA la reunión, el comité emitió el veredicto. (Fem. Sing.)
+   - APROBADAS las reformas, comenzaron los trámites. (Fem. Plur.)
+   - FIRMADO el contrato, procedimos al pago. (Masc. Sing.)
+   - CONCLUIDOS los experimentos, se redactó el informe. (Masc. Plur.)
+
+2. TEMPORAL & CAUSAL PARAPHRASES:
+   - Dicho esto... (= Una vez que se ha dicho esto...)
+   - Visto el resultado... (= Puesto que se ha visto el resultado...)
+   - Aclarado el malentendido, retomaron las negociaciones.
+
+3. PROHIBITION:
+   Never use an auxiliary verb in absolute participial clauses:
+   - INCORRECT: *Habiendo terminada la reunión...
+   - CORRECT:   Terminada la reunión... / Habiendo terminado la reunión...
+================================================================================
+"#;
+
+pub const SCALAR_CONCESSION_CARD: &str = r#"
+================================================================================
+         SCALAR CONCESSION & INTENSIVE CONNECTORS (POR MUCHO QUE...)
+================================================================================
+1. SCALAR INTENSIFIERS WITH SUBJUNCTIVE:
+   Expresses extreme hypothetical resistance or maximum degree using Subjunctive:
+   - POR MUCHO QUE INSISTAS (Subjunctive), no aceptaremos el acuerdo.
+   - POR MÁS QUE TRABAJE (Subjunctive), no llegará a la entrega de mañana.
+   - POR MUY DIFÍCIL QUE SEA (Subjunctive), encontraremos una solución.
+
+2. RISK VS CERTAINTY IN COMPLEX CONCESSIVES:
+   - AUN A RIESGO DE QUE + Subjuntivo (Hypothetical danger):
+     Lanzaremos la versión, AUN A RIESGO DE QUE SURJAN (Subj) incidencias menores.
+   - AUN A SABIENDAS DE QUE + Indicativo (Acknowledged factual certainty):
+     Aceptó el cargo, AUN A SABIENDAS DE QUE ERA (Ind) una tarea titánica.
+   - CON TODO Y CON ESO / ASÍ Y TODO (Adversative-concessive discourse connectors).
 ================================================================================
 "#;

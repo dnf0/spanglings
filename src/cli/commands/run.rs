@@ -57,17 +57,18 @@ pub fn run_exercise(exercise_query: &str, strict_accents: bool) -> anyhow::Resul
             let mut state = AppState::load().unwrap_or_default();
             state.mark_completed(&parsed_ex.id);
             state.update_srs(&parsed_ex.id, 5, Utc::now());
-            state.save()?;
-
-            if !parsed_ex.is_done {
-                println!(
-                    "\n{}",
-                    "💡 Tip: Remove '<!-- I AM NOT DONE -->' from the exercise file when you're ready to advance."
-                        .dimmed()
-                );
+            for concept in &parsed_ex.concept_tags {
+                state.update_concept_mastery(concept, 5, Utc::now());
             }
+            state.save()?;
         }
         ValidationResult::Failed { diagnostic, .. } => {
+            let mut state = AppState::load().unwrap_or_default();
+            for concept in &parsed_ex.concept_tags {
+                state.update_concept_mastery(concept, 1, Utc::now());
+            }
+            let _ = state.save();
+
             println!("{}", diagnostic.format_terminal());
             println!(
                 "\n{} For hints, run: {}",
@@ -92,12 +93,6 @@ pub fn reset_exercise(exercise_query: &str) -> anyhow::Result<()> {
         Some(ex) => ex,
         None => anyhow::bail!("No exercise found matching query: '{}'", exercise_query),
     };
-
-    let content = fs::read_to_string(&exercise.path)?;
-    if !content.contains("<!-- I AM NOT DONE -->") {
-        let updated = format!("<!-- I AM NOT DONE -->\n{}", content);
-        fs::write(&exercise.path, updated)?;
-    }
 
     let mut state = AppState::load().unwrap_or_default();
     state.unmark_completed(&exercise.id);
