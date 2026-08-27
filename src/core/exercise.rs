@@ -64,9 +64,82 @@ pub struct Exercise {
     pub diagnostic_rules: Vec<DiagnosticRule>,
     pub hints: Vec<String>,
     pub raw_content: String,
+    #[serde(default)]
+    pub concept_tags: Vec<String>,
+    #[serde(default)]
+    pub prerequisites: Vec<String>,
+    #[serde(default)]
+    pub grammar_focus: Option<String>,
+    #[serde(default)]
+    pub contrast_note: Option<String>,
 }
 
 static COMMENT_RE: OnceLock<regex::Regex> = OnceLock::new();
+
+fn split_metadata_line(line: &str) -> Vec<&str> {
+    if !line.contains('|') {
+        return vec![line];
+    }
+    let mut parts = Vec::new();
+    let mut in_quotes = false;
+    let mut quote_char = ' ';
+    let mut in_brackets = false;
+    let mut start = 0;
+    let bytes = line.as_bytes();
+
+    for (i, &b) in bytes.iter().enumerate() {
+        if b == b'"' || b == b'\'' {
+            if !in_quotes {
+                in_quotes = true;
+                quote_char = b as char;
+            } else if quote_char == b as char {
+                in_quotes = false;
+            }
+        } else if b == b'[' && !in_quotes {
+            in_brackets = true;
+        } else if b == b']' && !in_quotes {
+            in_brackets = false;
+        } else if b == b'|' && !in_quotes && !in_brackets {
+            parts.push(&line[start..i]);
+            start = i + 1;
+        }
+    }
+    parts.push(&line[start..]);
+    parts
+}
+
+fn parse_string_list(val: &str) -> Vec<String> {
+    let val = val.trim();
+    if val.is_empty() || val == "[]" {
+        return Vec::new();
+    }
+    let inner = if let Some(stripped) = val.strip_prefix('[').and_then(|s| s.strip_suffix(']')) {
+        stripped.trim()
+    } else {
+        val
+    };
+
+    if inner.is_empty() {
+        return Vec::new();
+    }
+
+    inner
+        .split(',')
+        .map(|item| item.trim().trim_matches(|c| c == '"' || c == '\'').trim())
+        .filter(|item| !item.is_empty())
+        .map(|item| item.to_string())
+        .collect()
+}
+
+fn parse_optional_string(val: &str) -> Option<String> {
+    let trimmed = val.trim();
+    let unquoted = trimmed.trim_matches(|c| c == '"' || c == '\'').trim();
+    if unquoted.is_empty() {
+        None
+    } else {
+        Some(unquoted.to_string())
+    }
+}
 
 impl Exercise {
     pub fn from_markdown<P: AsRef<Path>>(path: P, content: &str) -> anyhow::Result<Self> {
@@ -103,18 +176,60 @@ impl Exercise {
         let mut level = None;
         let mut topic = None;
         let mut exercise_type = None;
+        let mut title_from_meta = None;
+        let mut concept_tags = Vec::new();
+        let mut prerequisites = Vec::new();
+        let mut grammar_focus = None;
+        let mut contrast_note = None;
 
         if let Some(meta_str) = metadata_str {
-            for part in meta_str.split('|') {
-                if let Some((k, v)) = part.split_once(':') {
-                    let key = k.trim();
-                    let val = v.trim();
-                    match key {
-                        "id" => id = Some(val.to_string()),
-                        "level" => level = Some(val.parse::<Level>()?),
-                        "topic" => topic = Some(val.to_string()),
-                        "type" => exercise_type = Some(val.parse::<ExerciseType>()?),
-                        _ => {}
+            for line in meta_str.lines() {
+                let trimmed_line = line.trim();
+                if trimmed_line.is_empty() {
+                    continue;
+                }
+                for part in split_metadata_line(trimmed_line) {
+                    if let Some((k, v)) = part.split_once(':') {
+                        let key = k.trim();
+                        let val = v.trim();
+                        match key {
+                            "id" => {
+                                id = Some(
+                                    val.trim_matches(|c| c == '"' || c == '\'')
+                                        .trim()
+                                        .to_string(),
+                                )
+                            }
+                            "level" => {
+                                let unquoted = val.trim_matches(|c| c == '"' || c == '\'').trim();
+                                level = Some(unquoted.parse::<Level>()?);
+                            }
+                            "topic" => {
+                                topic = Some(
+                                    val.trim_matches(|c| c == '"' || c == '\'')
+                                        .trim()
+                                        .to_string(),
+                                )
+                            }
+                            "type" => {
+                                let unquoted = val.trim_matches(|c| c == '"' || c == '\'').trim();
+                                exercise_type = Some(unquoted.parse::<ExerciseType>()?);
+                            }
+                            "title" => title_from_meta = parse_optional_string(val),
+                            "concepts" | "concept_tags" => {
+                                concept_tags = parse_string_list(val);
+                            }
+                            "prerequisites" => {
+                                prerequisites = parse_string_list(val);
+                            }
+                            "grammar_focus" => {
+                                grammar_focus = parse_optional_string(val);
+                            }
+                            "contrast_note" => {
+                                contrast_note = parse_optional_string(val);
+                            }
+                            _ => {}
+                        }
                     }
                 }
             }
@@ -126,14 +241,19 @@ impl Exercise {
         let exercise_type =
             exercise_type.ok_or_else(|| anyhow::anyhow!("Missing 'type' in exercise metadata"))?;
 
-        let mut title = String::new();
-        for line in content.lines() {
-            let line = line.trim();
-            if let Some(stripped) = line.strip_prefix("# ") {
-                title = stripped.trim().to_string();
-                break;
+        let title = if let Some(t) = title_from_meta.filter(|s| !s.is_empty()) {
+            t
+        } else {
+            let mut t = String::new();
+            for line in content.lines() {
+                let line = line.trim();
+                if let Some(stripped) = line.strip_prefix("# ") {
+                    t = stripped.trim().to_string();
+                    break;
+                }
             }
-        }
+            t
+        };
 
         let solution = solution_str.unwrap_or_default().trim().to_string();
 
@@ -203,6 +323,10 @@ impl Exercise {
             diagnostic_rules,
             hints,
             raw_content: content.to_string(),
+            concept_tags,
+            prerequisites,
+            grammar_focus,
+            contrast_note,
         })
     }
 }

@@ -31,6 +31,10 @@ fn create_sample_exercises() -> Vec<Exercise> {
             raw_content:
                 "### Context\nEnglish: I want you to come\n### Exercise\nQuiero que tú vengas\n"
                     .to_string(),
+            concept_tags: vec![],
+            prerequisites: vec![],
+            grammar_focus: None,
+            contrast_note: None,
         },
         Exercise {
             path: PathBuf::from("exercises/02_por_para.md"),
@@ -50,6 +54,10 @@ fn create_sample_exercises() -> Vec<Exercise> {
             hints: vec!["Think about destination vs motive.".to_string()],
             raw_content: "### Context\nEnglish: For you\n### Exercise\nEsto es para ti\n"
                 .to_string(),
+            concept_tags: vec![],
+            prerequisites: vec![],
+            grammar_focus: None,
+            contrast_note: None,
         },
     ]
 }
