@@ -177,3 +177,33 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
   - **Description**: Full-featured in-TUI diagnostic test overlay accessible via `[t]` or `[F5]`, featuring question-by-question cloze inputs, live answer validation, CEFR breakdown tables, and one-key `[F]` fast-track action.
 - [x] **SPANG-124: Verified CEFR Level Badge in Dashboard & LSP Status**
   - **Description**: Displays verified CEFR placement badges and diagnostic accuracy in `spanglings progress`, JSON metrics, and VS Code / LSP status bar.
+
+---
+
+## 🌐 Focus Area 14: Linguistic Knowledge Graph & Practical Everyday Expansion (In Progress)
+
+- [ ] **SPANG-130: Directed Acyclic Graph (DAG) Linguistic Knowledge Graph (`src/core/graph.rs`)**
+  - **Description**: In-memory static ontology DAG modeling prerequisite relationships and conceptual primitives across grammar rules, aspectual shifts, and situational domains.
+- [ ] **SPANG-131: Concept-Aware Exercise Model & Markdown Parser (`src/core/exercise.rs`)**
+  - **Description**: Extended `Exercise` struct with `concept_tags`, `prerequisites`, and `grammar_focus` metadata.
+- [ ] **SPANG-132: Concept-Level SRS Mastery & Weakness Profiler (`src/core/state.rs`, `src/cli/commands/progress.rs`)**
+  - **Description**: Aggregates SRS review performance into `ConceptMastery` scores and pinpoints foundational gaps across tracks.
+- [ ] **SPANG-133: Concept-Aware Compiler Diagnostics (`src/core/diagnostic.rs`)**
+  - **Description**: Cross-links failed exercises to prerequisite foundation tracks with actionable remediation notes and drill suggestions.
+- [ ] **SPANG-134: Curriculum Expansion: Tracks 42 to 47 (36 New Exercises)**
+  - **Description**: Handcrafted situational synthesis tracks for Travel Logistics, Banking/Taxes, Consumer Complaints, Home Maintenance, News/Media, and Conversational Markers.
+- [ ] **SPANG-135: Retroactive Conceptual Tagging of Tracks 00–41 (231 Exercises)**
+  - **Description**: Tag all 231 existing exercises with concepts, prerequisites, and grammar focus notes.
+
+---
+
+## 🧭 Focus Area 15: Interactive Onboarding Guided Tour (`spanglings tour`) (Planned)
+
+- [ ] **SPANG-140: First-Run Interactive Guided Onboarding Tour**
+  - **Description**: Dedicated `spanglings tour` subcommand and first-run wizard in TUI introducing the developer workflow step-by-step:
+    1. Navigation and split-pane interface (`Tab`, `Down`, `/` fuzzy search).
+    2. Cloze input mechanics, UTF-8 accent support, and instant evaluation (`Enter`).
+    3. Progressive 3-tier hints (`Ctrl+H` / `F1`) and reference cheat sheets (`Ctrl+E` / `F2`).
+    4. Verb conjugator modal (`Ctrl+K` / `F3`) and cheat sheet browser (`Ctrl+B` / `F4`).
+    5. Headless watch mode workflow (`spanglings watch`) with external editors (VS Code / Neovim / Zed).
+    6. Taking diagnostic placement test (`spanglings test` / `[t]`) to fast-track known levels.
