@@ -40,6 +40,16 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Completions { shell }) => {
             spanglings::cli::commands::completions::run_completions(shell)?;
         }
+        Some(Commands::Check { exercise }) => {
+            let passed = spanglings::cli::commands::check::run_check(
+                exercise.as_deref(),
+                cli.json,
+                cli.strict_accents,
+            )?;
+            if !passed {
+                std::process::exit(1);
+            }
+        }
         Some(Commands::Tui) => {
             spanglings::tui::start_tui(cli.strict_accents)?;
         }

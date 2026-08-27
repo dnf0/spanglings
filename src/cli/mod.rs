@@ -67,6 +67,11 @@ pub enum Commands {
         /// Shell to generate completions for (bash, zsh, fish, powershell, elvish)
         shell: clap_complete::Shell,
     },
+    /// Check exercise file for errors or validate curriculum for editor diagnostics
+    Check {
+        /// Specific exercise path or ID to check (checks all if omitted)
+        exercise: Option<String>,
+    },
     /// Launch the interactive terminal UI
     Tui,
     /// Reset an exercise to its initial prompt

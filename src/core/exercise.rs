@@ -86,13 +86,13 @@ impl Exercise {
                 if comment_body == "I AM NOT DONE" {
                     is_done = false;
                 } else if let Some(stripped) = comment_body.strip_prefix("SOLUTION") {
-                    solution_str = Some(stripped.trim());
+                    solution_str = Some(stripped.trim_start_matches(':').trim());
                 } else if let Some(stripped) = comment_body.strip_prefix("ALTERNATIVES") {
-                    alternatives_str = Some(stripped.trim());
+                    alternatives_str = Some(stripped.trim_start_matches(':').trim());
                 } else if let Some(stripped) = comment_body.strip_prefix("DIAGNOSTIC_RULES") {
-                    diagnostic_rules_str = Some(stripped.trim());
+                    diagnostic_rules_str = Some(stripped.trim_start_matches(':').trim());
                 } else if let Some(stripped) = comment_body.strip_prefix("HINTS") {
-                    hints_str = Some(stripped.trim());
+                    hints_str = Some(stripped.trim_start_matches(':').trim());
                 } else if comment_body.contains("id:") && comment_body.contains("level:") {
                     metadata_str = Some(comment_body);
                 }
@@ -141,7 +141,7 @@ impl Exercise {
         if let Some(alt_str) = alternatives_str {
             for line in alt_str.lines() {
                 let line = line.trim();
-                if !line.is_empty() {
+                if !line.is_empty() && line != "[]" {
                     alternatives.push(line.to_string());
                 }
             }
@@ -151,7 +151,7 @@ impl Exercise {
         if let Some(rules_str) = diagnostic_rules_str {
             for line in rules_str.lines() {
                 let line = line.trim();
-                if line.is_empty() {
+                if line.is_empty() || line == "[]" {
                     continue;
                 }
                 let mut pattern = String::new();
@@ -170,11 +170,13 @@ impl Exercise {
                         }
                     }
                 }
-                diagnostic_rules.push(DiagnosticRule {
-                    pattern,
-                    code,
-                    message,
-                });
+                if !pattern.is_empty() {
+                    diagnostic_rules.push(DiagnosticRule {
+                        pattern,
+                        code,
+                        message,
+                    });
+                }
             }
         }
 
@@ -182,7 +184,7 @@ impl Exercise {
         if let Some(h_str) = hints_str {
             for line in h_str.lines() {
                 let line = line.trim();
-                if !line.is_empty() {
+                if !line.is_empty() && line != "[]" {
                     hints.push(line.to_string());
                 }
             }

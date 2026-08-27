@@ -134,6 +134,9 @@ pub fn validate_submission(
     // 3. Match against targeted diagnostic rules
     let norm_user = normalize(user_input);
     for rule in &exercise.diagnostic_rules {
+        if rule.pattern.trim().is_empty() {
+            continue;
+        }
         let norm_pat = normalize(&rule.pattern);
         if norm_user.contains(&norm_pat) || user_input.contains(&rule.pattern) {
             return ValidationResult::Failed {

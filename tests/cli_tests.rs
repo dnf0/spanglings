@@ -62,6 +62,14 @@ fn test_cli_parsing_subcommands() {
         })
     );
 
+    let cli_check = Cli::parse_from(["spanglings", "check", "b1_subj_01"]);
+    assert_eq!(
+        cli_check.command,
+        Some(Commands::Check {
+            exercise: Some("b1_subj_01".to_string())
+        })
+    );
+
     let cli_list = Cli::parse_from(["spanglings", "list"]);
     assert_eq!(cli_list.command, Some(Commands::List));
 

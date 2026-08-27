@@ -1,4 +1,5 @@
 pub mod blitz;
+pub mod check;
 pub mod completions;
 pub mod drill;
 pub mod explain;

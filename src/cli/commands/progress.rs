@@ -143,12 +143,8 @@ pub fn render_activity_heatmap(
     let days_labels = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
     let mut rows: Vec<String> = Vec::new();
 
-    for row_idx in 0..7 {
-        let label = if row_idx % 2 == 0 {
-            days_labels[row_idx]
-        } else {
-            "   "
-        };
+    for (row_idx, day_label) in days_labels.iter().enumerate() {
+        let label = if row_idx % 2 == 0 { *day_label } else { "   " };
         let mut row_str = format!("  {} ", label);
         for col_idx in 0..weeks {
             let cell_date = start_date + Duration::days((col_idx * 7 + row_idx) as i64);
