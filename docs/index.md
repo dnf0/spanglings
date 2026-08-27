@@ -4,7 +4,7 @@
 
 *A developer-grade CLI & interactive TUI for mastering Spanish grammar, verb mechanics, and nuanced syntactic architecture.*
 
-Inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](https://github.com/ray-project/raylings), **Spanglings** provides a terminal-native, hands-on learning environment for engineers, developers, and power users who want to master real Spanish syntax, aspectual contrasts, and professional collocations without childish gamification.
+Inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](https://github.com/dnf0/raylings), **Spanglings** provides a terminal-native, hands-on learning environment for engineers, developers, and power users who want to master real Spanish syntax, aspectual contrasts, and professional collocations without childish gamification.
 
 ---
 
