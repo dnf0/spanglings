@@ -3,8 +3,9 @@ use crate::engine::accents::AccentMode;
 use crate::engine::validator::{validate_submission, ValidationResult};
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
-pub enum AppState {
+pub enum AppMode {
     Editing,
+    Searching,
 }
 
 pub struct App {
@@ -12,54 +13,157 @@ pub struct App {
     pub current_index: usize,
     pub input_buffer: String,
     pub cursor_position: usize,
-    pub state: AppState,
+    pub mode: AppMode,
     pub strict_accents: bool,
     pub show_hint: bool,
     pub show_reference: bool,
     pub last_result: Option<ValidationResult>,
     pub status_message: Option<String>,
     pub should_quit: bool,
+
+    // Search state
+    pub search_query: String,
+    pub search_cursor: usize,
+    pub filtered_indices: Vec<usize>,
 }
 
 impl App {
     pub fn new(exercises: Vec<Exercise>, strict_accents: bool) -> Self {
+        let count = exercises.len();
+        let filtered_indices = (0..count).collect();
         Self {
             exercises,
             current_index: 0,
             input_buffer: String::new(),
             cursor_position: 0,
-            state: AppState::Editing,
+            mode: AppMode::Editing,
             strict_accents,
             show_hint: false,
             show_reference: false,
             last_result: None,
             status_message: None,
             should_quit: false,
+            search_query: String::new(),
+            search_cursor: 0,
+            filtered_indices,
         }
     }
 
     pub fn current_exercise(&self) -> Option<&Exercise> {
-        self.exercises.get(self.current_index)
+        if self.mode == AppMode::Searching || !self.search_query.is_empty() {
+            self.filtered_indices
+                .get(self.current_index)
+                .and_then(|&idx| self.exercises.get(idx))
+        } else {
+            self.exercises.get(self.current_index)
+        }
+    }
+
+    pub fn current_exercise_mut(&mut self) -> Option<&mut Exercise> {
+        if self.mode == AppMode::Searching || !self.search_query.is_empty() {
+            if let Some(&actual_idx) = self.filtered_indices.get(self.current_index) {
+                self.exercises.get_mut(actual_idx)
+            } else {
+                None
+            }
+        } else {
+            self.exercises.get_mut(self.current_index)
+        }
     }
 
     pub fn next_exercise(&mut self) {
-        if self.exercises.is_empty() {
+        let len = self.active_list_len();
+        if len == 0 {
             return;
         }
-        self.current_index = (self.current_index + 1) % self.exercises.len();
+        self.current_index = (self.current_index + 1) % len;
         self.reset_current_state();
     }
 
     pub fn prev_exercise(&mut self) {
-        if self.exercises.is_empty() {
+        let len = self.active_list_len();
+        if len == 0 {
             return;
         }
         if self.current_index == 0 {
-            self.current_index = self.exercises.len() - 1;
+            self.current_index = len - 1;
         } else {
             self.current_index -= 1;
         }
         self.reset_current_state();
+    }
+
+    fn active_list_len(&self) -> usize {
+        if self.mode == AppMode::Searching || !self.search_query.is_empty() {
+            self.filtered_indices.len()
+        } else {
+            self.exercises.len()
+        }
+    }
+
+    pub fn enter_search(&mut self) {
+        self.mode = AppMode::Searching;
+        self.search_query.clear();
+        self.search_cursor = 0;
+        self.update_search_filter();
+    }
+
+    pub fn exit_search(&mut self, confirm: bool) {
+        if confirm {
+            if let Some(&actual_idx) = self.filtered_indices.get(self.current_index) {
+                self.current_index = actual_idx;
+            }
+        } else {
+            self.search_query.clear();
+            self.filtered_indices = (0..self.exercises.len()).collect();
+        }
+        self.mode = AppMode::Editing;
+        self.reset_current_state();
+    }
+
+    pub fn update_search_filter(&mut self) {
+        let q = self.search_query.trim().to_lowercase();
+        if q.is_empty() {
+            self.filtered_indices = (0..self.exercises.len()).collect();
+        } else {
+            self.filtered_indices = self
+                .exercises
+                .iter()
+                .enumerate()
+                .filter(|(_, ex)| {
+                    ex.id.to_lowercase().contains(&q)
+                        || ex.title.to_lowercase().contains(&q)
+                        || ex.topic.to_lowercase().contains(&q)
+                        || ex.level.to_string().to_lowercase().contains(&q)
+                        || ex.raw_content.to_lowercase().contains(&q)
+                })
+                .map(|(idx, _)| idx)
+                .collect();
+        }
+        self.current_index = 0;
+    }
+
+    pub fn insert_search_char(&mut self, c: char) {
+        let byte_idx = self
+            .search_query
+            .char_indices()
+            .nth(self.search_cursor)
+            .map(|(idx, _)| idx)
+            .unwrap_or(self.search_query.len());
+        self.search_query.insert(byte_idx, c);
+        self.search_cursor += 1;
+        self.update_search_filter();
+    }
+
+    pub fn delete_search_char_backwards(&mut self) {
+        if self.search_cursor > 0 {
+            let char_to_remove = self.search_cursor - 1;
+            if let Some((byte_idx, _)) = self.search_query.char_indices().nth(char_to_remove) {
+                self.search_query.remove(byte_idx);
+                self.search_cursor -= 1;
+                self.update_search_filter();
+            }
+        }
     }
 
     pub fn insert_char(&mut self, c: char) {
@@ -117,8 +221,7 @@ impl App {
         let result = validate_submission(ex, &self.input_buffer, accent_mode);
 
         if result.is_success() {
-            // Mark exercise as done in our local clone
-            if let Some(e) = self.exercises.get_mut(self.current_index) {
+            if let Some(e) = self.current_exercise_mut() {
                 e.is_done = true;
             }
             self.status_message = Some("Correct!".to_string());
@@ -143,7 +246,7 @@ impl App {
     }
 
     pub fn reset(&mut self) {
-        if let Some(e) = self.exercises.get_mut(self.current_index) {
+        if let Some(e) = self.current_exercise_mut() {
             e.is_done = false;
         }
         self.reset_current_state();

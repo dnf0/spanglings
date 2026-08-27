@@ -216,3 +216,79 @@ fn test_app_utf8_spanish_characters_editing_and_rendering() {
     let mut terminal = Terminal::new(backend).unwrap();
     terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
 }
+
+#[test]
+fn test_app_search_filtering_and_navigation() {
+    let exercises = create_sample_exercises();
+    let mut app = App::new(exercises, false);
+
+    assert_eq!(app.exercises.len(), 2);
+
+    // Enter search mode
+    app.enter_search();
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Searching);
+    assert_eq!(app.filtered_indices.len(), 2);
+
+    // Type "para"
+    app.insert_search_char('p');
+    app.insert_search_char('a');
+    app.insert_search_char('r');
+    app.insert_search_char('a');
+    assert_eq!(app.search_query, "para");
+    assert_eq!(app.filtered_indices.len(), 1);
+    assert_eq!(app.current_exercise().unwrap().id, "b1_por_para_01");
+
+    // Delete characters back
+    app.delete_search_char_backwards(); // "par"
+    app.delete_search_char_backwards(); // "pa"
+    app.delete_search_char_backwards(); // "p"
+    app.delete_search_char_backwards(); // ""
+    assert_eq!(app.filtered_indices.len(), 2);
+
+    // Filter by "subj"
+    app.insert_search_char('s');
+    app.insert_search_char('u');
+    app.insert_search_char('b');
+    app.insert_search_char('j');
+    assert_eq!(app.filtered_indices.len(), 1);
+    assert_eq!(app.current_exercise().unwrap().id, "b1_subj_01");
+
+    // Confirm search selection
+    app.exit_search(true);
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Editing);
+    assert_eq!(app.current_exercise().unwrap().id, "b1_subj_01");
+}
+
+#[test]
+fn test_app_search_cancel_restores_state() {
+    let exercises = create_sample_exercises();
+    let mut app = App::new(exercises, false);
+
+    app.enter_search();
+    app.insert_search_char('p');
+    app.insert_search_char('a');
+    app.insert_search_char('r');
+    app.insert_search_char('a');
+    assert_eq!(app.filtered_indices.len(), 1);
+
+    // Cancel search
+    app.exit_search(false);
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::Editing);
+    assert_eq!(app.exercises.len(), 2);
+    assert!(app.search_query.is_empty());
+}
+
+#[test]
+fn test_app_draw_ui_in_search_mode() {
+    let exercises = create_sample_exercises();
+    let mut app = App::new(exercises, false);
+
+    app.enter_search();
+    app.insert_search_char('p');
+    app.insert_search_char('o');
+    app.insert_search_char('r');
+
+    let backend = TestBackend::new(120, 40);
+    let mut terminal = Terminal::new(backend).unwrap();
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+}
