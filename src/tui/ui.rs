@@ -95,11 +95,12 @@ fn draw_header(frame: &mut Frame, app: &App, area: Rect) {
     .block(info_block);
     frame.render_widget(info_text, header_chunks[1]);
 
-    let total_len = if app.mode == crate::tui::app::AppMode::Searching || !app.search_query.is_empty() {
-        app.filtered_indices.len()
-    } else {
-        app.exercises.len()
-    };
+    let total_len =
+        if app.mode == crate::tui::app::AppMode::Searching || !app.search_query.is_empty() {
+            app.filtered_indices.len()
+        } else {
+            app.exercises.len()
+        };
     let current_idx_display = if total_len == 0 {
         0
     } else {
@@ -130,10 +131,7 @@ fn draw_header(frame: &mut Frame, app: &App, area: Rect) {
                     .add_modifier(Modifier::BOLD),
             )
         };
-        (
-            format!(" {} / {} ", current_idx_display, total_len),
-            status,
-        )
+        (format!(" {} / {} ", current_idx_display, total_len), status)
     };
 
     let status_block = Block::default()

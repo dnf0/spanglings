@@ -142,8 +142,10 @@
   "140": "get_blitz_items",
   "141": "Smart Diagnostics & Pedagogical Enhancements Implementation Plan",
   "142": "generate_completions_string",
+  "143": "check.rs",
   "144": "search_exercises",
   "145": "Curriculum & Advanced Vocabulary Expansion Implementation Plan",
+  "146": "find_exercise_by_query",
   "147": "Tech Spanish 01: Deployment & Releases",
   "148": "Tech Spanish 02: Remediating Vulnerabilities & Debugging",
   "149": "Tech Spanish 03: Concurrency & Deadlocks",
@@ -168,5 +170,15 @@
   "168": "Regional Contrasts 02: Voseo Affirmative Imperative",
   "169": "Regional Contrasts 03: Pan-American 'Ustedes'",
   "170": "Regional Contrasts 04: Lexical Dialectal Pairs",
-  "171": "Regional Contrasts 05: Reflexive Imperatives in Voseo"
+  "171": "Regional Contrasts 05: Reflexive Imperatives in Voseo",
+  "172": "accents.rs",
+  "173": "evaluate_current_exercise_in",
+  "174": "curriculum.rs",
+  "175": "ValidationResult",
+  "176": "find_all_exercises",
+  "177": "Interactive TUI Heatmap, Fuzzy Search & Editor Diagnostics Implementation Plan",
+  "178": "exercise_validity_tests.rs",
+  "179": "get_exercises_json",
+  "180": "exercise_parser_tests.rs",
+  "181": "show_hint"
 }

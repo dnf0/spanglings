@@ -86,7 +86,10 @@ impl AppState {
     }
 
     pub fn record_activity(&mut self, date_str: &str) {
-        *self.activity_history.entry(date_str.to_string()).or_insert(0) += 1;
+        *self
+            .activity_history
+            .entry(date_str.to_string())
+            .or_insert(0) += 1;
     }
 
     pub fn mark_completed(&mut self, exercise_id: &str) {
