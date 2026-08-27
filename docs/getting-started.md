@@ -43,7 +43,7 @@ spanglings tour
 
 ### Step 2: Initialize Your Workspace
 
-Scaffold all 267 curriculum exercises into your current directory or target path with zero git-cloning needed:
+Scaffold all 303 curriculum exercises into your current directory or target path with zero git-cloning needed:
 
 ```bash
 spanglings init

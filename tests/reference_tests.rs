@@ -161,4 +161,3 @@ fn test_list_reference_topics() {
 fn test_unknown_topic_returns_none() {
     assert!(get_reference_card("quantum_physics").is_none());
 }
-
