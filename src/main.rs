@@ -75,6 +75,27 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Tui) => {
             spanglings::tui::start_tui(cli.strict_accents)?;
         }
+        Some(Commands::Export {
+            format,
+            out,
+            level,
+            topic,
+            only_due,
+        }) => {
+            spanglings::cli::commands::export::run_export(
+                &format,
+                out.as_deref(),
+                level.as_deref(),
+                topic.as_deref(),
+                only_due,
+            )?;
+        }
+        Some(Commands::Sync { export, import }) => {
+            spanglings::cli::commands::sync::run_sync(export.as_deref(), import.as_deref())?;
+        }
+        Some(Commands::Lsp) => {
+            spanglings::lsp::start_lsp_server(cli.strict_accents)?;
+        }
         Some(Commands::Reset { exercise }) => {
             spanglings::cli::commands::run::reset_exercise(&exercise)?;
         }

@@ -1,4 +1,6 @@
+use crate::core::conjugator::{conjugate_verb, VerbTable};
 use crate::core::exercise::Exercise;
+use crate::core::reference::list_reference_topics;
 use crate::engine::accents::AccentMode;
 use crate::engine::validator::{validate_submission, ValidationResult};
 
@@ -6,6 +8,9 @@ use crate::engine::validator::{validate_submission, ValidationResult};
 pub enum AppMode {
     Editing,
     Searching,
+    Conjugating,
+    BrowsingReference,
+    Help,
 }
 
 pub struct App {
@@ -25,12 +30,28 @@ pub struct App {
     pub search_query: String,
     pub search_cursor: usize,
     pub filtered_indices: Vec<usize>,
+
+    // Conjugator modal state
+    pub conjugator_query: String,
+    pub conjugator_cursor: usize,
+    pub conjugator_table: Option<VerbTable>,
+    pub conjugator_scroll: usize,
+
+    // Reference browser modal state
+    pub ref_query: String,
+    pub ref_cursor: usize,
+    pub ref_topics: Vec<&'static str>,
+    pub ref_filtered_topics: Vec<&'static str>,
+    pub ref_selected_idx: usize,
+    pub ref_scroll: usize,
 }
 
 impl App {
     pub fn new(exercises: Vec<Exercise>, strict_accents: bool) -> Self {
         let count = exercises.len();
         let filtered_indices = (0..count).collect();
+        let ref_topics: Vec<&'static str> = list_reference_topics().to_vec();
+        let ref_filtered_topics = ref_topics.clone();
         Self {
             exercises,
             current_index: 0,
@@ -46,6 +67,16 @@ impl App {
             search_query: String::new(),
             search_cursor: 0,
             filtered_indices,
+            conjugator_query: String::new(),
+            conjugator_cursor: 0,
+            conjugator_table: None,
+            conjugator_scroll: 0,
+            ref_query: String::new(),
+            ref_cursor: 0,
+            ref_topics,
+            ref_filtered_topics,
+            ref_selected_idx: 0,
+            ref_scroll: 0,
         }
     }
 
@@ -259,5 +290,154 @@ impl App {
         self.show_reference = false;
         self.last_result = None;
         self.status_message = None;
+    }
+
+    // --- Conjugator Modal Methods ---
+
+    pub fn enter_conjugator(&mut self) {
+        self.mode = AppMode::Conjugating;
+        self.conjugator_query.clear();
+        self.conjugator_cursor = 0;
+        self.conjugator_table = None;
+        self.conjugator_scroll = 0;
+    }
+
+    pub fn exit_conjugator(&mut self) {
+        self.mode = AppMode::Editing;
+    }
+
+    pub fn insert_conjugator_char(&mut self, c: char) {
+        let byte_idx = self
+            .conjugator_query
+            .char_indices()
+            .nth(self.conjugator_cursor)
+            .map(|(idx, _)| idx)
+            .unwrap_or(self.conjugator_query.len());
+        self.conjugator_query.insert(byte_idx, c);
+        self.conjugator_cursor += 1;
+        self.conjugator_table = conjugate_verb(&self.conjugator_query);
+    }
+
+    pub fn delete_conjugator_char_backwards(&mut self) {
+        if self.conjugator_cursor > 0 {
+            let char_to_remove = self.conjugator_cursor - 1;
+            if let Some((byte_idx, _)) = self.conjugator_query.char_indices().nth(char_to_remove) {
+                self.conjugator_query.remove(byte_idx);
+                self.conjugator_cursor -= 1;
+                self.conjugator_table = if self.conjugator_query.trim().is_empty() {
+                    None
+                } else {
+                    conjugate_verb(&self.conjugator_query)
+                };
+            }
+        }
+    }
+
+    pub fn submit_conjugation(&mut self) {
+        self.conjugator_table = conjugate_verb(&self.conjugator_query);
+    }
+
+    pub fn scroll_conjugator_up(&mut self) {
+        if self.conjugator_scroll > 0 {
+            self.conjugator_scroll -= 1;
+        }
+    }
+
+    pub fn scroll_conjugator_down(&mut self) {
+        self.conjugator_scroll = self.conjugator_scroll.saturating_add(1);
+    }
+
+    // --- Reference Browser Modal Methods ---
+
+    pub fn enter_reference_browser(&mut self) {
+        self.mode = AppMode::BrowsingReference;
+        self.ref_query.clear();
+        self.ref_cursor = 0;
+        self.ref_filtered_topics = self.ref_topics.clone();
+        self.ref_selected_idx = 0;
+        self.ref_scroll = 0;
+    }
+
+    pub fn exit_reference_browser(&mut self) {
+        self.mode = AppMode::Editing;
+    }
+
+    pub fn insert_ref_search_char(&mut self, c: char) {
+        let byte_idx = self
+            .ref_query
+            .char_indices()
+            .nth(self.ref_cursor)
+            .map(|(idx, _)| idx)
+            .unwrap_or(self.ref_query.len());
+        self.ref_query.insert(byte_idx, c);
+        self.ref_cursor += 1;
+        self.update_ref_filter();
+    }
+
+    pub fn delete_ref_search_char_backwards(&mut self) {
+        if self.ref_cursor > 0 {
+            let char_to_remove = self.ref_cursor - 1;
+            if let Some((byte_idx, _)) = self.ref_query.char_indices().nth(char_to_remove) {
+                self.ref_query.remove(byte_idx);
+                self.ref_cursor -= 1;
+                self.update_ref_filter();
+            }
+        }
+    }
+
+    pub fn update_ref_filter(&mut self) {
+        let q = self.ref_query.trim().to_lowercase();
+        if q.is_empty() {
+            self.ref_filtered_topics = self.ref_topics.clone();
+        } else {
+            self.ref_filtered_topics = self
+                .ref_topics
+                .iter()
+                .filter(|topic| topic.to_lowercase().contains(&q))
+                .copied()
+                .collect();
+        }
+        self.ref_selected_idx = 0;
+        self.ref_scroll = 0;
+    }
+
+    pub fn next_ref_topic(&mut self) {
+        if self.ref_filtered_topics.is_empty() {
+            return;
+        }
+        self.ref_selected_idx = (self.ref_selected_idx + 1) % self.ref_filtered_topics.len();
+        self.ref_scroll = 0;
+    }
+
+    pub fn prev_ref_topic(&mut self) {
+        if self.ref_filtered_topics.is_empty() {
+            return;
+        }
+        if self.ref_selected_idx == 0 {
+            self.ref_selected_idx = self.ref_filtered_topics.len() - 1;
+        } else {
+            self.ref_selected_idx -= 1;
+        }
+        self.ref_scroll = 0;
+    }
+
+    pub fn scroll_ref_up(&mut self) {
+        if self.ref_scroll > 0 {
+            self.ref_scroll -= 1;
+        }
+    }
+
+    pub fn scroll_ref_down(&mut self) {
+        self.ref_scroll = self.ref_scroll.saturating_add(1);
+    }
+
+    // --- Help Modal Methods ---
+
+    pub fn enter_help(&mut self) {
+        self.mode = AppMode::Help;
+    }
+
+    pub fn exit_help(&mut self) {
+        self.mode = AppMode::Editing;
     }
 }
