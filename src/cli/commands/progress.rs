@@ -43,7 +43,10 @@ pub fn compute_weakness_profile(
 ) -> Vec<TopicWeaknessStat> {
     let mut topic_exercises: HashMap<String, Vec<&Exercise>> = HashMap::new();
     for ex in exercises {
-        topic_exercises.entry(ex.topic.clone()).or_default().push(ex);
+        topic_exercises
+            .entry(ex.topic.clone())
+            .or_default()
+            .push(ex);
     }
 
     let mut profiles = Vec::new();
@@ -297,9 +300,15 @@ pub fn show_progress(json: bool) -> anyhow::Result<()> {
     println!("  • Avg Ease Factor: {:.2}", avg_ease);
 
     let weak_topics = compute_weakness_profile(&exercises, &state, now);
-    println!("\n{}", "Targeted Weakness Profiler & Recommendations:".bold());
+    println!(
+        "\n{}",
+        "Targeted Weakness Profiler & Recommendations:".bold()
+    );
     if weak_topics.is_empty() {
-        println!("  ✨ {}", "No critical weak areas detected! All reviewed topics in good standing.".green());
+        println!(
+            "  ✨ {}",
+            "No critical weak areas detected! All reviewed topics in good standing.".green()
+        );
     } else {
         for w in weak_topics.iter().take(4) {
             println!(

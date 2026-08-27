@@ -3,7 +3,11 @@ use spanglings::cli::commands::blitz::{evaluate_blitz_answer, get_blitz_items, B
 #[test]
 fn test_get_all_blitz_items() {
     let items = get_blitz_items(None);
-    assert!(items.len() >= 20, "Expected at least 20 blitz items, got {}", items.len());
+    assert!(
+        items.len() >= 20,
+        "Expected at least 20 blitz items, got {}",
+        items.len()
+    );
 }
 
 #[test]

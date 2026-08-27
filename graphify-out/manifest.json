@@ -1,14 +1,14 @@
 {
   "Cargo.toml": {
-    "mtime": 1787760605.3231075,
-    "seen": 1787760776.943723,
-    "ast_hash": "392596f5681f7fd091beea94ce2044f3",
+    "mtime": 1787783266.4640403,
+    "seen": 1787783664.554865,
+    "ast_hash": "5ad280148ca2cde895e45de86a9a4c9e",
     "semantic_hash": ""
   },
   "src/main.rs": {
-    "mtime": 1787782783.000675,
-    "seen": 1787782846.39966,
-    "ast_hash": "ce462f4c4ed2ea59a4b39155779d748b",
+    "mtime": 1787783998.3413792,
+    "seen": 1787784109.346297,
+    "ast_hash": "0facec5416fa7191ade3142605144786",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-spanglings-implementation.md": {
@@ -126,15 +126,15 @@
     "semantic_hash": ""
   },
   "src/core/reference.rs": {
-    "mtime": 1787754302.848208,
-    "seen": 1787754325.13495,
-    "ast_hash": "7aca9819391e0339946e4a3954b43ad6",
+    "mtime": 1787783846.9066741,
+    "seen": 1787784109.346293,
+    "ast_hash": "afdd628797f79ebbc2d76fb88192eb8e",
     "semantic_hash": ""
   },
   "tests/reference_tests.rs": {
-    "mtime": 1787754131.3113003,
-    "seen": 1787754171.400531,
-    "ast_hash": "18a62e4f8693237001c61cb48c36bc3d",
+    "mtime": 1787783859.8486786,
+    "seen": 1787784109.3463051,
+    "ast_hash": "131a81f5b52ce5511543b646544870f2",
     "semantic_hash": ""
   },
   "src/cli/commands/drill.rs": {
@@ -162,15 +162,15 @@
     "semantic_hash": ""
   },
   "src/cli/commands/mod.rs": {
-    "mtime": 1787782769.2159796,
-    "seen": 1787782846.399633,
-    "ast_hash": "d3facb522eba0a8783d929eedeefcc0e",
+    "mtime": 1787783985.8863788,
+    "seen": 1787784109.3462882,
+    "ast_hash": "9a307a6cd58109eac8e3f97e6b28b641",
     "semantic_hash": ""
   },
   "src/cli/commands/progress.rs": {
-    "mtime": 1787761673.1927707,
-    "seen": 1787782846.399634,
-    "ast_hash": "2d78868378b08178389e586d810fe917",
+    "mtime": 1787784086.0529356,
+    "seen": 1787784109.3462882,
+    "ast_hash": "fba632d32458a0db865d5d0bc773bc90",
     "semantic_hash": ""
   },
   "src/cli/commands/review.rs": {
@@ -186,15 +186,15 @@
     "semantic_hash": ""
   },
   "src/cli/mod.rs": {
-    "mtime": 1787782775.2995746,
-    "seen": 1787782846.3996391,
-    "ast_hash": "fa0966cb6b50394ad5eb82b5122fbb23",
+    "mtime": 1787783991.7588542,
+    "seen": 1787784109.3462899,
+    "ast_hash": "7238e7d2f82726588e3ddadaedaa64a5",
     "semantic_hash": ""
   },
   "tests/cli_tests.rs": {
-    "mtime": 1787761770.115858,
-    "seen": 1787782846.399669,
-    "ast_hash": "d25a4940efa9d042aa4b8df9933d39f7",
+    "mtime": 1787784086.0646281,
+    "seen": 1787784109.3463008,
+    "ast_hash": "4b5dcbd089f969e6a303e48ce493f23f",
     "semantic_hash": ""
   },
   "src/watcher/mod.rs": {
@@ -240,9 +240,9 @@
     "semantic_hash": ""
   },
   "tests/exercise_validity_tests.rs": {
-    "mtime": 1787757904.6980147,
-    "seen": 1787758112.929868,
-    "ast_hash": "54ee68c94a3303d8f04f8b71382953f8",
+    "mtime": 1787783366.8632388,
+    "seen": 1787783664.554888,
+    "ast_hash": "c909aad93f92c42cfca95c2d3e76aa98",
     "semantic_hash": ""
   },
   "tests/tui_tests.rs": {
@@ -252,9 +252,9 @@
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1787782825.414141,
-    "seen": 1787782846.399689,
-    "ast_hash": "c2033db279f3909d6cc860fa50309882",
+    "mtime": 1787784075.0455766,
+    "seen": 1787784109.3463092,
+    "ast_hash": "ff81556d60356ec5fe914a1ddbb8f1c1",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-interactive-tui.md": {
@@ -990,9 +990,9 @@
     "semantic_hash": ""
   },
   "docs/BACKLOG.md": {
-    "mtime": 1787760511.0907223,
-    "seen": 1787760776.943748,
-    "ast_hash": "019dd33f3d80e2d0c764bb12efe0f411",
+    "mtime": 1787784083.2767572,
+    "seen": 1787784109.3463092,
+    "ast_hash": "d6b466b1fb06b146ddb2f504e6a63182",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-discoverability-and-portability.md": {
@@ -1047,6 +1047,186 @@
     "mtime": 1787782732.034892,
     "seen": 1787782846.39968,
     "ast_hash": "33eb876ae69e392deb44428ab57a7509",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md": {
+    "mtime": 1787783320.0500813,
+    "seen": 1787783664.554894,
+    "ast_hash": "ca3db2052fc5be1e7d0aef10561643f9",
+    "semantic_hash": ""
+  },
+  "exercises/22_tech_software/01_deployment_git.md": {
+    "mtime": 1787783354.6816185,
+    "seen": 1787783664.55495,
+    "ast_hash": "c572825924661d5a52a6b73876c13d45",
+    "semantic_hash": ""
+  },
+  "exercises/22_tech_software/02_debugging_fixes.md": {
+    "mtime": 1787783354.6881328,
+    "seen": 1787783664.55495,
+    "ast_hash": "8cc61487a749e1612603da84acd5663f",
+    "semantic_hash": ""
+  },
+  "exercises/22_tech_software/03_concurrency_deadlocks.md": {
+    "mtime": 1787783354.6951652,
+    "seen": 1787783664.554951,
+    "ast_hash": "81a17cf379772c1f841e99c8cddff718",
+    "semantic_hash": ""
+  },
+  "exercises/22_tech_software/04_performance_latency.md": {
+    "mtime": 1787783354.7006786,
+    "seen": 1787783664.554951,
+    "ast_hash": "5e03d092a9467cc7881e30899ecc980a",
+    "semantic_hash": ""
+  },
+  "exercises/22_tech_software/05_api_routing.md": {
+    "mtime": 1787783354.7073367,
+    "seen": 1787783664.554952,
+    "ast_hash": "9f53fbe6ae5e19549cc1de6bd024aec5",
+    "semantic_hash": ""
+  },
+  "exercises/23_business_diplomatic/01_email_opening_closing.md": {
+    "mtime": 1787783419.3542066,
+    "seen": 1787783664.554952,
+    "ast_hash": "eb360333d3201113db4b3af9c7144d18",
+    "semantic_hash": ""
+  },
+  "exercises/23_business_diplomatic/02_negotiation_terms.md": {
+    "mtime": 1787783419.3597465,
+    "seen": 1787783664.554952,
+    "ast_hash": "b86fc0f8619014db0a8e4370fcfb9dbc",
+    "semantic_hash": ""
+  },
+  "exercises/23_business_diplomatic/03_debt_settlement.md": {
+    "mtime": 1787783419.3650227,
+    "seen": 1787783664.5549529,
+    "ast_hash": "e84d7da89804c45e11ded7bdd4d2d205",
+    "semantic_hash": ""
+  },
+  "exercises/23_business_diplomatic/04_dismissing_proposals.md": {
+    "mtime": 1787783419.3705084,
+    "seen": 1787783664.5549529,
+    "ast_hash": "032a4ec02a13cbe359018e7f88411a62",
+    "semantic_hash": ""
+  },
+  "exercises/23_business_diplomatic/05_contract_stipulations.md": {
+    "mtime": 1787783419.374618,
+    "seen": 1787783664.5549529,
+    "ast_hash": "5cf48cff3f470b4aadf1e04d5d4c61da",
+    "semantic_hash": ""
+  },
+  "exercises/24_false_friends/01_actualmente_actually.md": {
+    "mtime": 1787783446.6177382,
+    "seen": 1787783664.554954,
+    "ast_hash": "e592b1fc7a044ec3532a301f52dfb31a",
+    "semantic_hash": ""
+  },
+  "exercises/24_false_friends/02_eventualmente_eventually.md": {
+    "mtime": 1787783446.6237986,
+    "seen": 1787783664.554954,
+    "ast_hash": "ae2bf1b9f0521457548891a9580a6c65",
+    "semantic_hash": ""
+  },
+  "exercises/24_false_friends/03_pretender_realizar.md": {
+    "mtime": 1787783446.630716,
+    "seen": 1787783664.554955,
+    "ast_hash": "12aa81735b79c2d257377e489d23a127",
+    "semantic_hash": ""
+  },
+  "exercises/24_false_friends/04_soportar_apoyar.md": {
+    "mtime": 1787783446.6410253,
+    "seen": 1787783664.554955,
+    "ast_hash": "b68e8661ffbb5d2d11d6bdb819237fc5",
+    "semantic_hash": ""
+  },
+  "exercises/24_false_friends/05_sensible_embarazada.md": {
+    "mtime": 1787783446.6463256,
+    "seen": 1787783664.554955,
+    "ast_hash": "a77770074a54e8c171be4a2efeacf132",
+    "semantic_hash": ""
+  },
+  "exercises/25_register_elevation/01_acometer_proyectos.md": {
+    "mtime": 1787783470.482546,
+    "seen": 1787783664.554955,
+    "ast_hash": "85d575502a133f0ab8e3bdb13c19f267",
+    "semantic_hash": ""
+  },
+  "exercises/25_register_elevation/02_suscitar_controversia.md": {
+    "mtime": 1787783470.4876702,
+    "seen": 1787783664.554956,
+    "ast_hash": "998fe7d9a0a7789dbda7248528d78749",
+    "semantic_hash": ""
+  },
+  "exercises/25_register_elevation/03_surtir_efecto.md": {
+    "mtime": 1787783470.493215,
+    "seen": 1787783664.554956,
+    "ast_hash": "8033ad17801004be79ed302491a7e3d2",
+    "semantic_hash": ""
+  },
+  "exercises/25_register_elevation/04_albergar_dudas.md": {
+    "mtime": 1787783470.4992177,
+    "seen": 1787783664.554956,
+    "ast_hash": "4182170fcb4722997357241073552cad",
+    "semantic_hash": ""
+  },
+  "exercises/25_register_elevation/05_arrojar_luz.md": {
+    "mtime": 1787783470.5039732,
+    "seen": 1787783664.5549572,
+    "ast_hash": "404b5ced3efdacabc9874a5d1762c698",
+    "semantic_hash": ""
+  },
+  "exercises/26_regional_contrasts/01_voseo_present.md": {
+    "mtime": 1787783520.7820091,
+    "seen": 1787783664.5549572,
+    "ast_hash": "307cdfc968a9fa51d49a502fc2eb4c3a",
+    "semantic_hash": ""
+  },
+  "exercises/26_regional_contrasts/02_voseo_imperative.md": {
+    "mtime": 1787783533.7005591,
+    "seen": 1787783664.5549572,
+    "ast_hash": "9e3e46c7a4e0a79763a665bc390eb5da",
+    "semantic_hash": ""
+  },
+  "exercises/26_regional_contrasts/03_latin_america_ustedes.md": {
+    "mtime": 1787783507.427191,
+    "seen": 1787783664.554958,
+    "ast_hash": "1de42b2185f98d51f8501b01287065f7",
+    "semantic_hash": ""
+  },
+  "exercises/26_regional_contrasts/04_lexical_variants_driving.md": {
+    "mtime": 1787783507.4337273,
+    "seen": 1787783664.554958,
+    "ast_hash": "3d414ff01cdfd29830d7517ffa94c663",
+    "semantic_hash": ""
+  },
+  "exercises/26_regional_contrasts/05_clitic_order_leismo.md": {
+    "mtime": 1787783520.8298748,
+    "seen": 1787783664.554958,
+    "ast_hash": "f9ff02364198720b96606f4080112ffb",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/blitz.rs": {
+    "mtime": 1787784086.0504827,
+    "seen": 1787784109.346282,
+    "ast_hash": "26fde3b294e3bea998f00be3acbbd4a8",
+    "semantic_hash": ""
+  },
+  "tests/blitz_tests.rs": {
+    "mtime": 1787784086.0637038,
+    "seen": 1787784109.3463,
+    "ast_hash": "4f86f018f3dd9464487a4332115c1022",
+    "semantic_hash": ""
+  },
+  "tests/weakness_profiler_tests.rs": {
+    "mtime": 1787784086.1479945,
+    "seen": 1787784109.346307,
+    "ast_hash": "bfdf272bb713b83e8630403355f05c0b",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md": {
+    "mtime": 1787783810.4539568,
+    "seen": 1787784109.3463109,
+    "ast_hash": "f15e930d0bc100976de586b6c8c70ea6",
     "semantic_hash": ""
   }
 }

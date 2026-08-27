@@ -400,17 +400,6 @@
       "source_location": "L241"
     },
     {
-      "id": "appstate",
-      "label": "AppState",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "validate_submission",
-      "file_type": "code",
-      "norm_label": "appstate",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_cli_commands_review",
       "label": "review.rs",
       "_origin": "ast",
@@ -664,6 +653,17 @@
       "source_location": "L92"
     },
     {
+      "id": "src_engine_validator_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_engine_validator_rs_string",
       "label": "String",
       "_origin": "ast",
@@ -684,6 +684,28 @@
       "norm_label": "validate_submission()",
       "source_file": "src/engine/validator.rs",
       "source_location": "L103"
+    },
+    {
+      "id": "src_engine_validator_validationresult",
+      "label": "ValidationResult",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "validationresult",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L8"
+    },
+    {
+      "id": "src_engine_validator_validationresult_is_success",
+      "label": ".is_success()",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": ".is_success()",
+      "source_file": "src/engine/validator.rs",
+      "source_location": "L19"
     },
     {
       "id": "src_watcher_runner",
@@ -728,6 +750,17 @@
       "norm_label": "evaluate_current_exercise_in()",
       "source_file": "src/watcher/runner.rs",
       "source_location": "L88"
+    },
+    {
+      "id": "src_watcher_runner_rs_appstate",
+      "label": "AppState",
+      "_origin": "ast",
+      "community": 10,
+      "community_name": "validate_submission",
+      "file_type": "code",
+      "norm_label": "appstate",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "src_watcher_runner_rs_p",
@@ -2563,17 +2596,6 @@
       "source_location": ""
     },
     {
-      "id": "hashmap",
-      "label": "HashMap",
-      "_origin": "ast",
-      "community": 13,
-      "community_name": "progress.rs",
-      "file_type": "code",
-      "norm_label": "hashmap",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_cli_commands_progress",
       "label": "progress.rs",
       "_origin": "ast",
@@ -2585,6 +2607,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_cli_commands_progress_compute_weakness_profile",
+      "label": "compute_weakness_profile()",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "compute_weakness_profile()",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L39"
+    },
+    {
       "id": "src_cli_commands_progress_get_progress_json",
       "label": "get_progress_json()",
       "_origin": "ast",
@@ -2593,7 +2626,7 @@
       "file_type": "code",
       "norm_label": "get_progress_json()",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L25"
+      "source_location": "L123"
     },
     {
       "id": "src_cli_commands_progress_levelprogress",
@@ -2604,7 +2637,7 @@
       "file_type": "code",
       "norm_label": "levelprogress",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L10"
+      "source_location": "L11"
     },
     {
       "id": "src_cli_commands_progress_progresssummary",
@@ -2615,7 +2648,7 @@
       "file_type": "code",
       "norm_label": "progresssummary",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L17"
+      "source_location": "L29"
     },
     {
       "id": "src_cli_commands_progress_render_progress_bar",
@@ -2626,7 +2659,29 @@
       "file_type": "code",
       "norm_label": "render_progress_bar()",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L202"
+      "source_location": "L333"
+    },
+    {
+      "id": "src_cli_commands_progress_rs_appstate",
+      "label": "AppState",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "appstate",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_progress_rs_datetime",
+      "label": "DateTime",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "datetime",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "src_cli_commands_progress_rs_result",
@@ -2651,6 +2706,28 @@
       "source_location": ""
     },
     {
+      "id": "src_cli_commands_progress_rs_utc",
+      "label": "Utc",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "utc",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_progress_rs_vec",
+      "label": "Vec",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "vec",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_cli_commands_progress_show_progress",
       "label": "show_progress()",
       "_origin": "ast",
@@ -2659,7 +2736,18 @@
       "file_type": "code",
       "norm_label": "show_progress()",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L89"
+      "source_location": "L196"
+    },
+    {
+      "id": "src_cli_commands_progress_topicweaknessstat",
+      "label": "TopicWeaknessStat",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "topicweaknessstat",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L18"
     },
     {
       "id": "tests_json_output_tests",
@@ -2693,6 +2781,39 @@
       "norm_label": "test_progress_json_serialization()",
       "source_file": "tests/json_output_tests.rs",
       "source_location": "L18"
+    },
+    {
+      "id": "tests_weakness_profiler_tests",
+      "label": "weakness_profiler_tests.rs",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "weakness_profiler_tests.rs",
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_weakness_profiler_tests_test_progress_json_includes_weak_topics_and_recommendations",
+      "label": "test_progress_json_includes_weak_topics_and_recommendations()",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "test_progress_json_includes_weak_topics_and_recommendations()",
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L55"
+    },
+    {
+      "id": "tests_weakness_profiler_tests_test_weakness_profiler_detects_low_ease_and_lapses",
+      "label": "test_weakness_profiler_detects_low_ease_and_lapses()",
+      "_origin": "ast",
+      "community": 13,
+      "community_name": "progress.rs",
+      "file_type": "code",
+      "norm_label": "test_weakness_profiler_detects_low_ease_and_lapses()",
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L10"
     },
     {
       "id": "exercises_20_passive_refleja_04_se_prohibe_fumar",
@@ -3139,38 +3260,38 @@
       "source_location": "L1"
     },
     {
-      "id": "docs_backlog_focus_area_1_discoverability_portability_zero_setup_cli_current_sprint",
-      "label": "\ud83c\udfaf Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Current Sprint)",
+      "id": "docs_backlog_focus_area_1_discoverability_portability_zero_setup_cli_completed",
+      "label": "\ud83c\udfaf Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Completed)",
       "_origin": "ast",
       "community": 138,
       "community_name": "Spanglings Product & Engineering Backlog",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83c\udfaf focus area 1: discoverability, portability & zero-setup cli (current sprint)",
+      "norm_label": "\ud83c\udfaf focus area 1: discoverability, portability & zero-setup cli (completed)",
       "source_file": "docs/BACKLOG.md",
       "source_location": "L7"
     },
     {
-      "id": "docs_backlog_focus_area_2_curriculum_advanced_vocabulary_expansion",
-      "label": "\ud83d\udcda Focus Area 2: Curriculum & Advanced Vocabulary Expansion",
+      "id": "docs_backlog_focus_area_2_curriculum_advanced_vocabulary_expansion_completed",
+      "label": "\ud83d\udcda Focus Area 2: Curriculum & Advanced Vocabulary Expansion (Completed)",
       "_origin": "ast",
       "community": 138,
       "community_name": "Spanglings Product & Engineering Backlog",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\udcda focus area 2: curriculum & advanced vocabulary expansion",
+      "norm_label": "\ud83d\udcda focus area 2: curriculum & advanced vocabulary expansion (completed)",
       "source_file": "docs/BACKLOG.md",
       "source_location": "L25"
     },
     {
-      "id": "docs_backlog_focus_area_3_smart_diagnostics_pedagogical_enhancements",
-      "label": "\ud83e\udde0 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements",
+      "id": "docs_backlog_focus_area_3_smart_diagnostics_pedagogical_enhancements_completed",
+      "label": "\ud83e\udde0 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements (Completed)",
       "_origin": "ast",
       "community": 138,
       "community_name": "Spanglings Product & Engineering Backlog",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83e\udde0 focus area 3: smart diagnostics & pedagogical enhancements",
+      "norm_label": "\ud83e\udde0 focus area 3: smart diagnostics & pedagogical enhancements (completed)",
       "source_file": "docs/BACKLOG.md",
       "source_location": "L40"
     },
@@ -3379,16 +3500,16 @@
       "source_location": "L129"
     },
     {
-      "id": "readme_6_spaced_repetition_drills",
-      "label": "6. Spaced Repetition Drills",
+      "id": "readme_6_spaced_repetition_rapid_fire_drills",
+      "label": "6. Spaced Repetition & Rapid-Fire Drills",
       "_origin": "ast",
       "community": 14,
       "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "6. spaced repetition drills",
+      "norm_label": "6. spaced repetition & rapid-fire drills",
       "source_file": "README.md",
-      "source_location": "L144"
+      "source_location": "L146"
     },
     {
       "id": "readme_7_shell_autocompletions",
@@ -3400,7 +3521,7 @@
       "node_kind": "heading",
       "norm_label": "7. shell autocompletions",
       "source_file": "README.md",
-      "source_location": "L154"
+      "source_location": "L160"
     },
     {
       "id": "readme_command_line_interface_cli",
@@ -3415,16 +3536,16 @@
       "source_location": "L58"
     },
     {
-      "id": "readme_curriculum_tracks_116_exercises",
-      "label": "Curriculum Tracks (116 Exercises)",
+      "id": "readme_curriculum_tracks_141_exercises_across_27_tracks",
+      "label": "Curriculum Tracks (141 Exercises across 27 Tracks)",
       "_origin": "ast",
       "community": 14,
       "community_name": "Examples",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "curriculum tracks (116 exercises)",
+      "norm_label": "curriculum tracks (141 exercises across 27 tracks)",
       "source_file": "README.md",
-      "source_location": "L168"
+      "source_location": "L174"
     },
     {
       "id": "readme_development_testing",
@@ -3436,7 +3557,7 @@
       "node_kind": "heading",
       "norm_label": "development & testing",
       "source_file": "README.md",
-      "source_location": "L197"
+      "source_location": "L208"
     },
     {
       "id": "readme_examples",
@@ -3484,7 +3605,7 @@
       "node_kind": "heading",
       "norm_label": "license",
       "source_file": "README.md",
-      "source_location": "L214"
+      "source_location": "L225"
     },
     {
       "id": "readme_overview",
@@ -3511,323 +3632,219 @@
       "source_location": "L1"
     },
     {
-      "id": "src_cli_commands_hint",
-      "label": "hint.rs",
+      "id": "src_cli_commands_blitz",
+      "label": "blitz.rs",
       "_origin": "ast",
       "community": 140,
-      "community_name": "run_exercise",
+      "community_name": "get_blitz_items",
       "file_type": "code",
-      "norm_label": "hint.rs",
-      "source_file": "src/cli/commands/hint.rs",
+      "norm_label": "blitz.rs",
+      "source_file": "src/cli/commands/blitz.rs",
       "source_location": "L1"
     },
     {
-      "id": "src_cli_commands_hint_rs_option",
+      "id": "src_cli_commands_blitz_blitzitem",
+      "label": "BlitzItem",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "get_blitz_items",
+      "file_type": "code",
+      "norm_label": "blitzitem",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_cli_commands_blitz_blitzresult",
+      "label": "BlitzResult",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "get_blitz_items",
+      "file_type": "code",
+      "norm_label": "blitzresult",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L14"
+    },
+    {
+      "id": "src_cli_commands_blitz_evaluate_blitz_answer",
+      "label": "evaluate_blitz_answer()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "get_blitz_items",
+      "file_type": "code",
+      "norm_label": "evaluate_blitz_answer()",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L194"
+    },
+    {
+      "id": "src_cli_commands_blitz_get_blitz_items",
+      "label": "get_blitz_items()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "get_blitz_items",
+      "file_type": "code",
+      "norm_label": "get_blitz_items()",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L24"
+    },
+    {
+      "id": "src_cli_commands_blitz_rs_option",
       "label": "Option",
       "_origin": "ast",
       "community": 140,
-      "community_name": "run_exercise",
+      "community_name": "get_blitz_items",
       "file_type": "code",
       "norm_label": "option",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_cli_commands_hint_rs_result",
+      "id": "src_cli_commands_blitz_rs_result",
       "label": "Result",
       "_origin": "ast",
       "community": 140,
-      "community_name": "run_exercise",
+      "community_name": "get_blitz_items",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_cli_commands_hint_show_hint",
-      "label": "show_hint()",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "show_hint()",
-      "source_file": "src/cli/commands/hint.rs",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_cli_commands_run",
-      "label": "run.rs",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "run.rs",
-      "source_file": "src/cli/commands/run.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_cli_commands_run_reset_exercise",
-      "label": "reset_exercise()",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "reset_exercise()",
-      "source_file": "src/cli/commands/run.rs",
-      "source_location": "L87"
-    },
-    {
-      "id": "src_cli_commands_run_rs_result",
-      "label": "Result",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_run_run_exercise",
-      "label": "run_exercise()",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "run_exercise()",
-      "source_file": "src/cli/commands/run.rs",
-      "source_location": "L11"
-    },
-    {
-      "id": "src_core_curriculum_find_exercise_by_query",
-      "label": "find_exercise_by_query()",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "find_exercise_by_query()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L88"
-    },
-    {
-      "id": "src_core_curriculum_rs_option",
-      "label": "Option",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_cli_tests",
-      "label": "cli_tests.rs",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "cli_tests.rs",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_cli_tests_test_cli_parsing_subcommands",
-      "label": "test_cli_parsing_subcommands()",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "test_cli_parsing_subcommands()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L13"
-    },
-    {
-      "id": "tests_cli_tests_test_curriculum_discovery_and_query",
-      "label": "test_curriculum_discovery_and_query()",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "test_curriculum_discovery_and_query()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L113"
-    },
-    {
-      "id": "tests_cli_tests_test_explain_command_executes_cleanly",
-      "label": "test_explain_command_executes_cleanly()",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "test_explain_command_executes_cleanly()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L71"
-    },
-    {
-      "id": "tests_cli_tests_test_list_and_progress_execute_cleanly",
-      "label": "test_list_and_progress_execute_cleanly()",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "test_list_and_progress_execute_cleanly()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L83"
-    },
-    {
-      "id": "tests_cli_tests_test_run_exercise_with_file_path",
-      "label": "test_run_exercise_with_file_path()",
-      "_origin": "ast",
-      "community": 140,
-      "community_name": "run_exercise",
-      "file_type": "code",
-      "norm_label": "test_run_exercise_with_file_path()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L92"
-    },
-    {
-      "id": "src_cli_commands_list",
-      "label": "list.rs",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "list.rs",
-      "source_file": "src/cli/commands/list.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_cli_commands_list_get_exercises_json",
-      "label": "get_exercises_json()",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "get_exercises_json()",
-      "source_file": "src/cli/commands/list.rs",
-      "source_location": "L6"
-    },
-    {
-      "id": "src_cli_commands_list_list_exercises",
-      "label": "list_exercises()",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "list_exercises()",
-      "source_file": "src/cli/commands/list.rs",
-      "source_location": "L12"
-    },
-    {
-      "id": "src_cli_commands_list_rs_result",
-      "label": "Result",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_list_rs_string",
-      "label": "String",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum",
-      "label": "curriculum.rs",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "curriculum.rs",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_core_curriculum_collect_md_files",
-      "label": "collect_md_files()",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "collect_md_files()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L68"
-    },
-    {
-      "id": "src_core_curriculum_find_all_exercises",
-      "label": "find_all_exercises()",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "find_all_exercises()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L46"
-    },
-    {
-      "id": "src_core_curriculum_find_all_exercises_or_embedded",
-      "label": "find_all_exercises_or_embedded()",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "find_all_exercises_or_embedded()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L57"
-    },
-    {
-      "id": "src_core_curriculum_rs_p",
-      "label": "P",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "p",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_path",
-      "label": "Path",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_result",
-      "label": "Result",
-      "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
-      "file_type": "code",
-      "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_vec",
+      "id": "src_cli_commands_blitz_rs_vec",
       "label": "Vec",
       "_origin": "ast",
-      "community": 141,
-      "community_name": "find_all_exercises",
+      "community": 140,
+      "community_name": "get_blitz_items",
       "file_type": "code",
       "norm_label": "vec",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_blitz_run_blitz",
+      "label": "run_blitz()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "get_blitz_items",
+      "file_type": "code",
+      "norm_label": "run_blitz()",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L200"
+    },
+    {
+      "id": "tests_blitz_tests",
+      "label": "blitz_tests.rs",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "get_blitz_items",
+      "file_type": "code",
+      "norm_label": "blitz_tests.rs",
+      "source_file": "tests/blitz_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_blitz_tests_test_evaluate_blitz_answer_case_and_whitespace",
+      "label": "test_evaluate_blitz_answer_case_and_whitespace()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "get_blitz_items",
+      "file_type": "code",
+      "norm_label": "test_evaluate_blitz_answer_case_and_whitespace()",
+      "source_file": "tests/blitz_tests.rs",
+      "source_location": "L29"
+    },
+    {
+      "id": "tests_blitz_tests_test_get_all_blitz_items",
+      "label": "test_get_all_blitz_items()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "get_blitz_items",
+      "file_type": "code",
+      "norm_label": "test_get_all_blitz_items()",
+      "source_file": "tests/blitz_tests.rs",
+      "source_location": "L4"
+    },
+    {
+      "id": "tests_blitz_tests_test_get_blitz_items_topic_filter",
+      "label": "test_get_blitz_items_topic_filter()",
+      "_origin": "ast",
+      "community": 140,
+      "community_name": "get_blitz_items",
+      "file_type": "code",
+      "norm_label": "test_get_blitz_items_topic_filter()",
+      "source_file": "tests/blitz_tests.rs",
+      "source_location": "L14"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy",
+      "label": "2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "Smart Diagnostics & Pedagogical Enhancements Implementation Plan",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_file": "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_smart_diagnostics_pedagogical_enhancements_implementation_plan",
+      "label": "Smart Diagnostics & Pedagogical Enhancements Implementation Plan",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "Smart Diagnostics & Pedagogical Enhancements Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "smart diagnostics & pedagogical enhancements implementation plan",
+      "source_file": "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_task_1_accentuation_orthographic_stress_reference_card",
+      "label": "Task 1: Accentuation & Orthographic Stress Reference Card",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "Smart Diagnostics & Pedagogical Enhancements Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 1: accentuation & orthographic stress reference card",
+      "source_file": "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_task_2_weakness_profiler_topic_error_diagnostics",
+      "label": "Task 2: Weakness Profiler & Topic Error Diagnostics",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "Smart Diagnostics & Pedagogical Enhancements Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 2: weakness profiler & topic error diagnostics",
+      "source_file": "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_task_3_60_second_rapid_fire_blitz_mode_spanglings_blitz",
+      "label": "Task 3: 60-Second Rapid-Fire Blitz Mode (`spanglings blitz`)",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "Smart Diagnostics & Pedagogical Enhancements Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 3: 60-second rapid-fire blitz mode (`spanglings blitz`)",
+      "source_file": "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_location": "L61"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_task_4_documentation_update_verification",
+      "label": "Task 4: Documentation Update & Verification",
+      "_origin": "ast",
+      "community": 141,
+      "community_name": "Smart Diagnostics & Pedagogical Enhancements Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 4: documentation update & verification",
+      "source_file": "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_location": "L88"
     },
     {
       "id": "src_cli_commands_completions",
@@ -3940,116 +3957,6 @@
       "source_location": "L15"
     },
     {
-      "id": "src_core_curriculum_level",
-      "label": "Level",
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": "level",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L9"
-    },
-    {
-      "id": "src_core_curriculum_level_fmt",
-      "label": ".fmt()",
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": ".fmt()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L17"
-    },
-    {
-      "id": "src_core_curriculum_rs_display",
-      "label": "Display",
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": "display",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_formatter",
-      "label": "Formatter",
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": "formatter",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_fromstr",
-      "label": "FromStr",
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": "fromstr",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_exercise_parser_tests",
-      "label": "exercise_parser_tests.rs",
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": "exercise_parser_tests.rs",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_exercise_parser_tests_test_parse_invalid_level_error",
-      "label": "test_parse_invalid_level_error()",
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": "test_parse_invalid_level_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L62"
-    },
-    {
-      "id": "tests_exercise_parser_tests_test_parse_invalid_type_error",
-      "label": "test_parse_invalid_type_error()",
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": "test_parse_invalid_type_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L72"
-    },
-    {
-      "id": "tests_exercise_parser_tests_test_parse_missing_id_error",
-      "label": "test_parse_missing_id_error()",
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": "test_parse_missing_id_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L52"
-    },
-    {
-      "id": "tests_exercise_parser_tests_test_parse_valid_markdown_exercise",
-      "label": "test_parse_valid_markdown_exercise()",
-      "_origin": "ast",
-      "community": 143,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": "test_parse_valid_markdown_exercise()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L5"
-    },
-    {
       "id": "src_cli_commands_search",
       "label": "search.rs",
       "_origin": "ast",
@@ -4149,59 +4056,232 @@
       "source_location": "L4"
     },
     {
-      "id": "src_core_curriculum_level_from_str",
-      "label": ".from_str()",
+      "id": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion",
+      "label": "2026-08-26-curriculum-and-vocab-expansion.md",
       "_origin": "ast",
       "community": 145,
-      "community_name": ".from_str",
-      "file_type": "code",
-      "norm_label": ".from_str()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L35"
+      "community_name": "Curriculum & Advanced Vocabulary Expansion Implementation Plan",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L1"
     },
     {
-      "id": "src_core_curriculum_parselevelerror",
-      "label": "ParseLevelError",
+      "id": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_curriculum_advanced_vocabulary_expansion_implementation_plan",
+      "label": "Curriculum & Advanced Vocabulary Expansion Implementation Plan",
       "_origin": "ast",
       "community": 145,
-      "community_name": ".from_str",
-      "file_type": "code",
-      "norm_label": "parselevelerror",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L30"
+      "community_name": "Curriculum & Advanced Vocabulary Expansion Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "curriculum & advanced vocabulary expansion implementation plan",
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L1"
     },
     {
-      "id": "src_core_curriculum_rs_err",
-      "label": "Err",
+      "id": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_task_1_track_22_tech_software_engineering_spanish_b2_c1",
+      "label": "Task 1: Track 22 - Tech & Software Engineering Spanish (B2-C1)",
       "_origin": "ast",
       "community": 145,
-      "community_name": ".from_str",
-      "file_type": "code",
-      "norm_label": "err",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "Curriculum & Advanced Vocabulary Expansion Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 1: track 22 - tech & software engineering spanish (b2-c1)",
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L13"
     },
     {
-      "id": "src_core_curriculum_rs_self",
-      "label": "Self",
+      "id": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_task_2_track_23_formal_business_diplomatic_correspondence_b2_c1",
+      "label": "Task 2: Track 23 - Formal Business & Diplomatic Correspondence (B2-C1)",
       "_origin": "ast",
       "community": 145,
-      "community_name": ".from_str",
-      "file_type": "code",
-      "norm_label": "self",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "Curriculum & Advanced Vocabulary Expansion Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 2: track 23 - formal business & diplomatic correspondence (b2-c1)",
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L43"
     },
     {
-      "id": "src_core_curriculum_rs_string",
-      "label": "String",
+      "id": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_task_3_track_24_false_friends_high_frequency_trap_drills",
+      "label": "Task 3: Track 24 - False Friends & High-Frequency Trap Drills",
       "_origin": "ast",
       "community": 145,
-      "community_name": ".from_str",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "Curriculum & Advanced Vocabulary Expansion Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 3: track 24 - false friends & high-frequency trap drills",
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L73"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_task_4_track_25_register_elevation_track_26_regional_contrasts_voseo",
+      "label": "Task 4: Track 25 (Register Elevation) & Track 26 (Regional Contrasts & Voseo)",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "Curriculum & Advanced Vocabulary Expansion Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 4: track 25 (register elevation) & track 26 (regional contrasts & voseo)",
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L103"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_task_5_new_in_terminal_reference_cheat_sheets_documentation_update",
+      "label": "Task 5: New In-Terminal Reference Cheat Sheets & Documentation Update",
+      "_origin": "ast",
+      "community": 145,
+      "community_name": "Curriculum & Advanced Vocabulary Expansion Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 5: new in-terminal reference cheat sheets & documentation update",
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L131"
+    },
+    {
+      "id": "exercises_22_tech_software_01_deployment_git",
+      "label": "01_deployment_git.md",
+      "_origin": "ast",
+      "community": 147,
+      "community_name": "Tech Spanish 01: Deployment & Releases",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "01_deployment_git.md",
+      "source_file": "exercises/22_tech_software/01_deployment_git.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_22_tech_software_01_deployment_git_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 147,
+      "community_name": "Tech Spanish 01: Deployment & Releases",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/22_tech_software/01_deployment_git.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_22_tech_software_01_deployment_git_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 147,
+      "community_name": "Tech Spanish 01: Deployment & Releases",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/22_tech_software/01_deployment_git.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_22_tech_software_01_deployment_git_tech_spanish_01_deployment_releases",
+      "label": "Tech Spanish 01: Deployment & Releases",
+      "_origin": "ast",
+      "community": 147,
+      "community_name": "Tech Spanish 01: Deployment & Releases",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tech spanish 01: deployment & releases",
+      "source_file": "exercises/22_tech_software/01_deployment_git.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_22_tech_software_02_debugging_fixes",
+      "label": "02_debugging_fixes.md",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Tech Spanish 02: Remediating Vulnerabilities & Debugging",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "02_debugging_fixes.md",
+      "source_file": "exercises/22_tech_software/02_debugging_fixes.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_22_tech_software_02_debugging_fixes_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Tech Spanish 02: Remediating Vulnerabilities & Debugging",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/22_tech_software/02_debugging_fixes.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_22_tech_software_02_debugging_fixes_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Tech Spanish 02: Remediating Vulnerabilities & Debugging",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/22_tech_software/02_debugging_fixes.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_22_tech_software_02_debugging_fixes_tech_spanish_02_remediating_vulnerabilities_debugging",
+      "label": "Tech Spanish 02: Remediating Vulnerabilities & Debugging",
+      "_origin": "ast",
+      "community": 148,
+      "community_name": "Tech Spanish 02: Remediating Vulnerabilities & Debugging",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tech spanish 02: remediating vulnerabilities & debugging",
+      "source_file": "exercises/22_tech_software/02_debugging_fixes.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_22_tech_software_03_concurrency_deadlocks",
+      "label": "03_concurrency_deadlocks.md",
+      "_origin": "ast",
+      "community": 149,
+      "community_name": "Tech Spanish 03: Concurrency & Deadlocks",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "03_concurrency_deadlocks.md",
+      "source_file": "exercises/22_tech_software/03_concurrency_deadlocks.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_22_tech_software_03_concurrency_deadlocks_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 149,
+      "community_name": "Tech Spanish 03: Concurrency & Deadlocks",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/22_tech_software/03_concurrency_deadlocks.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_22_tech_software_03_concurrency_deadlocks_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 149,
+      "community_name": "Tech Spanish 03: Concurrency & Deadlocks",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/22_tech_software/03_concurrency_deadlocks.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_22_tech_software_03_concurrency_deadlocks_tech_spanish_03_concurrency_deadlocks",
+      "label": "Tech Spanish 03: Concurrency & Deadlocks",
+      "_origin": "ast",
+      "community": 149,
+      "community_name": "Tech Spanish 03: Concurrency & Deadlocks",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tech spanish 03: concurrency & deadlocks",
+      "source_file": "exercises/22_tech_software/03_concurrency_deadlocks.md",
+      "source_location": "L2"
     },
     {
       "id": "src_cli_commands_explain",
@@ -4256,7 +4336,7 @@
       "file_type": "code",
       "norm_label": "get_reference_card()",
       "source_file": "src/core/reference.rs",
-      "source_location": "L15"
+      "source_location": "L20"
     },
     {
       "id": "src_core_reference_list_reference_topics",
@@ -4267,7 +4347,7 @@
       "file_type": "code",
       "norm_label": "list_reference_topics()",
       "source_file": "src/core/reference.rs",
-      "source_location": "L11"
+      "source_location": "L16"
     },
     {
       "id": "src_core_reference_rs_option",
@@ -4292,6 +4372,17 @@
       "source_location": "L1"
     },
     {
+      "id": "tests_reference_tests_test_get_accents_reference_card",
+      "label": "test_get_accents_reference_card()",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "test_get_accents_reference_card()",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L84"
+    },
+    {
       "id": "tests_reference_tests_test_get_accidental_se_reference_card",
       "label": "test_get_accidental_se_reference_card()",
       "_origin": "ast",
@@ -4301,6 +4392,28 @@
       "norm_label": "test_get_accidental_se_reference_card()",
       "source_file": "tests/reference_tests.rs",
       "source_location": "L48"
+    },
+    {
+      "id": "tests_reference_tests_test_get_business_reference_card",
+      "label": "test_get_business_reference_card()",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "test_get_business_reference_card()",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L63"
+    },
+    {
+      "id": "tests_reference_tests_test_get_false_friends_reference_card",
+      "label": "test_get_false_friends_reference_card()",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "test_get_false_friends_reference_card()",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L70"
     },
     {
       "id": "tests_reference_tests_test_get_past_tenses_reference_card",
@@ -4369,6 +4482,28 @@
       "source_location": "L4"
     },
     {
+      "id": "tests_reference_tests_test_get_tech_reference_card",
+      "label": "test_get_tech_reference_card()",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "test_get_tech_reference_card()",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L55"
+    },
+    {
+      "id": "tests_reference_tests_test_get_voseo_reference_card",
+      "label": "test_get_voseo_reference_card()",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "test_get_voseo_reference_card()",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L77"
+    },
+    {
       "id": "tests_reference_tests_test_list_reference_topics",
       "label": "test_list_reference_topics()",
       "_origin": "ast",
@@ -4377,7 +4512,7 @@
       "file_type": "code",
       "norm_label": "test_list_reference_topics()",
       "source_file": "tests/reference_tests.rs",
-      "source_location": "L55"
+      "source_location": "L94"
     },
     {
       "id": "tests_reference_tests_test_unknown_topic_returns_none",
@@ -4388,7 +4523,487 @@
       "file_type": "code",
       "norm_label": "test_unknown_topic_returns_none()",
       "source_file": "tests/reference_tests.rs",
-      "source_location": "L67"
+      "source_location": "L111"
+    },
+    {
+      "id": "exercises_22_tech_software_04_performance_latency",
+      "label": "04_performance_latency.md",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "Tech Spanish 04: System Performance & Latency",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "04_performance_latency.md",
+      "source_file": "exercises/22_tech_software/04_performance_latency.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_22_tech_software_04_performance_latency_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "Tech Spanish 04: System Performance & Latency",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/22_tech_software/04_performance_latency.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_22_tech_software_04_performance_latency_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "Tech Spanish 04: System Performance & Latency",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/22_tech_software/04_performance_latency.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_22_tech_software_04_performance_latency_tech_spanish_04_system_performance_latency",
+      "label": "Tech Spanish 04: System Performance & Latency",
+      "_origin": "ast",
+      "community": 150,
+      "community_name": "Tech Spanish 04: System Performance & Latency",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tech spanish 04: system performance & latency",
+      "source_file": "exercises/22_tech_software/04_performance_latency.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_22_tech_software_05_api_routing",
+      "label": "05_api_routing.md",
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "Tech Spanish 05: Request Routing & Gateways",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "05_api_routing.md",
+      "source_file": "exercises/22_tech_software/05_api_routing.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_22_tech_software_05_api_routing_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "Tech Spanish 05: Request Routing & Gateways",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/22_tech_software/05_api_routing.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_22_tech_software_05_api_routing_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "Tech Spanish 05: Request Routing & Gateways",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/22_tech_software/05_api_routing.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_22_tech_software_05_api_routing_tech_spanish_05_request_routing_gateways",
+      "label": "Tech Spanish 05: Request Routing & Gateways",
+      "_origin": "ast",
+      "community": 151,
+      "community_name": "Tech Spanish 05: Request Routing & Gateways",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tech spanish 05: request routing & gateways",
+      "source_file": "exercises/22_tech_software/05_api_routing.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_01_email_opening_closing",
+      "label": "01_email_opening_closing.md",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": "Business Spanish 01: Formal Closings",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "01_email_opening_closing.md",
+      "source_file": "exercises/23_business_diplomatic/01_email_opening_closing.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_01_email_opening_closing_business_spanish_01_formal_closings",
+      "label": "Business Spanish 01: Formal Closings",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": "Business Spanish 01: Formal Closings",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "business spanish 01: formal closings",
+      "source_file": "exercises/23_business_diplomatic/01_email_opening_closing.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_01_email_opening_closing_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": "Business Spanish 01: Formal Closings",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/23_business_diplomatic/01_email_opening_closing.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_01_email_opening_closing_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 152,
+      "community_name": "Business Spanish 01: Formal Closings",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/23_business_diplomatic/01_email_opening_closing.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_02_negotiation_terms",
+      "label": "02_negotiation_terms.md",
+      "_origin": "ast",
+      "community": 153,
+      "community_name": "Business Spanish 02: Formal Discourse Connectors",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "02_negotiation_terms.md",
+      "source_file": "exercises/23_business_diplomatic/02_negotiation_terms.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_02_negotiation_terms_business_spanish_02_formal_discourse_connectors",
+      "label": "Business Spanish 02: Formal Discourse Connectors",
+      "_origin": "ast",
+      "community": 153,
+      "community_name": "Business Spanish 02: Formal Discourse Connectors",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "business spanish 02: formal discourse connectors",
+      "source_file": "exercises/23_business_diplomatic/02_negotiation_terms.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_02_negotiation_terms_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 153,
+      "community_name": "Business Spanish 02: Formal Discourse Connectors",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/23_business_diplomatic/02_negotiation_terms.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_02_negotiation_terms_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 153,
+      "community_name": "Business Spanish 02: Formal Discourse Connectors",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/23_business_diplomatic/02_negotiation_terms.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_03_debt_settlement",
+      "label": "03_debt_settlement.md",
+      "_origin": "ast",
+      "community": 154,
+      "community_name": "Business Spanish 03: Financial Settlements & Debts",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "03_debt_settlement.md",
+      "source_file": "exercises/23_business_diplomatic/03_debt_settlement.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_03_debt_settlement_business_spanish_03_financial_settlements_debts",
+      "label": "Business Spanish 03: Financial Settlements & Debts",
+      "_origin": "ast",
+      "community": 154,
+      "community_name": "Business Spanish 03: Financial Settlements & Debts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "business spanish 03: financial settlements & debts",
+      "source_file": "exercises/23_business_diplomatic/03_debt_settlement.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_03_debt_settlement_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 154,
+      "community_name": "Business Spanish 03: Financial Settlements & Debts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/23_business_diplomatic/03_debt_settlement.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_03_debt_settlement_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 154,
+      "community_name": "Business Spanish 03: Financial Settlements & Debts",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/23_business_diplomatic/03_debt_settlement.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_04_dismissing_proposals",
+      "label": "04_dismissing_proposals.md",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "Business Spanish 04: Dismissing Proposals & Motions",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "04_dismissing_proposals.md",
+      "source_file": "exercises/23_business_diplomatic/04_dismissing_proposals.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_04_dismissing_proposals_business_spanish_04_dismissing_proposals_motions",
+      "label": "Business Spanish 04: Dismissing Proposals & Motions",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "Business Spanish 04: Dismissing Proposals & Motions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "business spanish 04: dismissing proposals & motions",
+      "source_file": "exercises/23_business_diplomatic/04_dismissing_proposals.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_04_dismissing_proposals_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "Business Spanish 04: Dismissing Proposals & Motions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/23_business_diplomatic/04_dismissing_proposals.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_04_dismissing_proposals_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 155,
+      "community_name": "Business Spanish 04: Dismissing Proposals & Motions",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/23_business_diplomatic/04_dismissing_proposals.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_05_contract_stipulations",
+      "label": "05_contract_stipulations.md",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "Business Spanish 05: Contractual Clauses & Stipulations",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "05_contract_stipulations.md",
+      "source_file": "exercises/23_business_diplomatic/05_contract_stipulations.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_05_contract_stipulations_business_spanish_05_contractual_clauses_stipulations",
+      "label": "Business Spanish 05: Contractual Clauses & Stipulations",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "Business Spanish 05: Contractual Clauses & Stipulations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "business spanish 05: contractual clauses & stipulations",
+      "source_file": "exercises/23_business_diplomatic/05_contract_stipulations.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_05_contract_stipulations_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "Business Spanish 05: Contractual Clauses & Stipulations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/23_business_diplomatic/05_contract_stipulations.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_23_business_diplomatic_05_contract_stipulations_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 156,
+      "community_name": "Business Spanish 05: Contractual Clauses & Stipulations",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/23_business_diplomatic/05_contract_stipulations.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_24_false_friends_01_actualmente_actually",
+      "label": "01_actualmente_actually.md",
+      "_origin": "ast",
+      "community": 157,
+      "community_name": "False Friends 01: 'Actualmente' vs 'Actually'",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "01_actualmente_actually.md",
+      "source_file": "exercises/24_false_friends/01_actualmente_actually.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_24_false_friends_01_actualmente_actually_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 157,
+      "community_name": "False Friends 01: 'Actualmente' vs 'Actually'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/24_false_friends/01_actualmente_actually.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_24_false_friends_01_actualmente_actually_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 157,
+      "community_name": "False Friends 01: 'Actualmente' vs 'Actually'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/24_false_friends/01_actualmente_actually.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_24_false_friends_01_actualmente_actually_false_friends_01_actualmente_vs_actually",
+      "label": "False Friends 01: 'Actualmente' vs 'Actually'",
+      "_origin": "ast",
+      "community": 157,
+      "community_name": "False Friends 01: 'Actualmente' vs 'Actually'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "false friends 01: 'actualmente' vs 'actually'",
+      "source_file": "exercises/24_false_friends/01_actualmente_actually.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_24_false_friends_02_eventualmente_eventually",
+      "label": "02_eventualmente_eventually.md",
+      "_origin": "ast",
+      "community": 158,
+      "community_name": "False Friends 02: 'Eventualmente' vs 'Eventually'",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "02_eventualmente_eventually.md",
+      "source_file": "exercises/24_false_friends/02_eventualmente_eventually.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_24_false_friends_02_eventualmente_eventually_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 158,
+      "community_name": "False Friends 02: 'Eventualmente' vs 'Eventually'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/24_false_friends/02_eventualmente_eventually.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_24_false_friends_02_eventualmente_eventually_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 158,
+      "community_name": "False Friends 02: 'Eventualmente' vs 'Eventually'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/24_false_friends/02_eventualmente_eventually.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_24_false_friends_02_eventualmente_eventually_false_friends_02_eventualmente_vs_eventually",
+      "label": "False Friends 02: 'Eventualmente' vs 'Eventually'",
+      "_origin": "ast",
+      "community": 158,
+      "community_name": "False Friends 02: 'Eventualmente' vs 'Eventually'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "false friends 02: 'eventualmente' vs 'eventually'",
+      "source_file": "exercises/24_false_friends/02_eventualmente_eventually.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_24_false_friends_03_pretender_realizar",
+      "label": "03_pretender_realizar.md",
+      "_origin": "ast",
+      "community": 159,
+      "community_name": "False Friends 03: 'Pretender' vs 'To Pretend'",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "03_pretender_realizar.md",
+      "source_file": "exercises/24_false_friends/03_pretender_realizar.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_24_false_friends_03_pretender_realizar_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 159,
+      "community_name": "False Friends 03: 'Pretender' vs 'To Pretend'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/24_false_friends/03_pretender_realizar.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_24_false_friends_03_pretender_realizar_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 159,
+      "community_name": "False Friends 03: 'Pretender' vs 'To Pretend'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/24_false_friends/03_pretender_realizar.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_24_false_friends_03_pretender_realizar_false_friends_03_pretender_vs_to_pretend",
+      "label": "False Friends 03: 'Pretender' vs 'To Pretend'",
+      "_origin": "ast",
+      "community": 159,
+      "community_name": "False Friends 03: 'Pretender' vs 'To Pretend'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "false friends 03: 'pretender' vs 'to pretend'",
+      "source_file": "exercises/24_false_friends/03_pretender_realizar.md",
+      "source_location": "L2"
     },
     {
       "id": "src_cli_commands_drill",
@@ -4444,6 +5059,486 @@
       "norm_label": "run_drill()",
       "source_file": "src/cli/commands/drill.rs",
       "source_location": "L10"
+    },
+    {
+      "id": "exercises_24_false_friends_04_soportar_apoyar",
+      "label": "04_soportar_apoyar.md",
+      "_origin": "ast",
+      "community": 160,
+      "community_name": "False Friends 04: 'Soportar' vs 'To Support'",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "04_soportar_apoyar.md",
+      "source_file": "exercises/24_false_friends/04_soportar_apoyar.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_24_false_friends_04_soportar_apoyar_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 160,
+      "community_name": "False Friends 04: 'Soportar' vs 'To Support'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/24_false_friends/04_soportar_apoyar.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_24_false_friends_04_soportar_apoyar_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 160,
+      "community_name": "False Friends 04: 'Soportar' vs 'To Support'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/24_false_friends/04_soportar_apoyar.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_24_false_friends_04_soportar_apoyar_false_friends_04_soportar_vs_to_support",
+      "label": "False Friends 04: 'Soportar' vs 'To Support'",
+      "_origin": "ast",
+      "community": 160,
+      "community_name": "False Friends 04: 'Soportar' vs 'To Support'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "false friends 04: 'soportar' vs 'to support'",
+      "source_file": "exercises/24_false_friends/04_soportar_apoyar.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_24_false_friends_05_sensible_embarazada",
+      "label": "05_sensible_embarazada.md",
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "False Friends 05: 'Sensible' vs 'Sensible'",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "05_sensible_embarazada.md",
+      "source_file": "exercises/24_false_friends/05_sensible_embarazada.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_24_false_friends_05_sensible_embarazada_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "False Friends 05: 'Sensible' vs 'Sensible'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/24_false_friends/05_sensible_embarazada.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_24_false_friends_05_sensible_embarazada_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "False Friends 05: 'Sensible' vs 'Sensible'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/24_false_friends/05_sensible_embarazada.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_24_false_friends_05_sensible_embarazada_false_friends_05_sensible_vs_sensible",
+      "label": "False Friends 05: 'Sensible' vs 'Sensible'",
+      "_origin": "ast",
+      "community": 161,
+      "community_name": "False Friends 05: 'Sensible' vs 'Sensible'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "false friends 05: 'sensible' vs 'sensible'",
+      "source_file": "exercises/24_false_friends/05_sensible_embarazada.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_25_register_elevation_01_acometer_proyectos",
+      "label": "01_acometer_proyectos.md",
+      "_origin": "ast",
+      "community": 162,
+      "community_name": "Register Elevation 01: 'Acometer' (Undertake) vs 'Hacer'",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "01_acometer_proyectos.md",
+      "source_file": "exercises/25_register_elevation/01_acometer_proyectos.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_25_register_elevation_01_acometer_proyectos_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 162,
+      "community_name": "Register Elevation 01: 'Acometer' (Undertake) vs 'Hacer'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/25_register_elevation/01_acometer_proyectos.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_25_register_elevation_01_acometer_proyectos_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 162,
+      "community_name": "Register Elevation 01: 'Acometer' (Undertake) vs 'Hacer'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/25_register_elevation/01_acometer_proyectos.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_25_register_elevation_01_acometer_proyectos_register_elevation_01_acometer_undertake_vs_hacer",
+      "label": "Register Elevation 01: 'Acometer' (Undertake) vs 'Hacer'",
+      "_origin": "ast",
+      "community": 162,
+      "community_name": "Register Elevation 01: 'Acometer' (Undertake) vs 'Hacer'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "register elevation 01: 'acometer' (undertake) vs 'hacer'",
+      "source_file": "exercises/25_register_elevation/01_acometer_proyectos.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_25_register_elevation_02_suscitar_controversia",
+      "label": "02_suscitar_controversia.md",
+      "_origin": "ast",
+      "community": 163,
+      "community_name": "Register Elevation 02: 'Suscitar' (Arouse/Provoke) vs 'Causar'",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "02_suscitar_controversia.md",
+      "source_file": "exercises/25_register_elevation/02_suscitar_controversia.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_25_register_elevation_02_suscitar_controversia_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 163,
+      "community_name": "Register Elevation 02: 'Suscitar' (Arouse/Provoke) vs 'Causar'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/25_register_elevation/02_suscitar_controversia.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_25_register_elevation_02_suscitar_controversia_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 163,
+      "community_name": "Register Elevation 02: 'Suscitar' (Arouse/Provoke) vs 'Causar'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/25_register_elevation/02_suscitar_controversia.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_25_register_elevation_02_suscitar_controversia_register_elevation_02_suscitar_arouse_provoke_vs_causar",
+      "label": "Register Elevation 02: 'Suscitar' (Arouse/Provoke) vs 'Causar'",
+      "_origin": "ast",
+      "community": 163,
+      "community_name": "Register Elevation 02: 'Suscitar' (Arouse/Provoke) vs 'Causar'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "register elevation 02: 'suscitar' (arouse/provoke) vs 'causar'",
+      "source_file": "exercises/25_register_elevation/02_suscitar_controversia.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_25_register_elevation_03_surtir_efecto",
+      "label": "03_surtir_efecto.md",
+      "_origin": "ast",
+      "community": 164,
+      "community_name": "Register Elevation 03: 'Surtir Efecto' (Take Effect)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "03_surtir_efecto.md",
+      "source_file": "exercises/25_register_elevation/03_surtir_efecto.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_25_register_elevation_03_surtir_efecto_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 164,
+      "community_name": "Register Elevation 03: 'Surtir Efecto' (Take Effect)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/25_register_elevation/03_surtir_efecto.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_25_register_elevation_03_surtir_efecto_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 164,
+      "community_name": "Register Elevation 03: 'Surtir Efecto' (Take Effect)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/25_register_elevation/03_surtir_efecto.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_25_register_elevation_03_surtir_efecto_register_elevation_03_surtir_efecto_take_effect",
+      "label": "Register Elevation 03: 'Surtir Efecto' (Take Effect)",
+      "_origin": "ast",
+      "community": 164,
+      "community_name": "Register Elevation 03: 'Surtir Efecto' (Take Effect)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "register elevation 03: 'surtir efecto' (take effect)",
+      "source_file": "exercises/25_register_elevation/03_surtir_efecto.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_25_register_elevation_04_albergar_dudas",
+      "label": "04_albergar_dudas.md",
+      "_origin": "ast",
+      "community": 165,
+      "community_name": "Register Elevation 04: 'Albergar' (Harbor) vs 'Tener'",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "04_albergar_dudas.md",
+      "source_file": "exercises/25_register_elevation/04_albergar_dudas.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_25_register_elevation_04_albergar_dudas_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 165,
+      "community_name": "Register Elevation 04: 'Albergar' (Harbor) vs 'Tener'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/25_register_elevation/04_albergar_dudas.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_25_register_elevation_04_albergar_dudas_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 165,
+      "community_name": "Register Elevation 04: 'Albergar' (Harbor) vs 'Tener'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/25_register_elevation/04_albergar_dudas.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_25_register_elevation_04_albergar_dudas_register_elevation_04_albergar_harbor_vs_tener",
+      "label": "Register Elevation 04: 'Albergar' (Harbor) vs 'Tener'",
+      "_origin": "ast",
+      "community": 165,
+      "community_name": "Register Elevation 04: 'Albergar' (Harbor) vs 'Tener'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "register elevation 04: 'albergar' (harbor) vs 'tener'",
+      "source_file": "exercises/25_register_elevation/04_albergar_dudas.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_25_register_elevation_05_arrojar_luz",
+      "label": "05_arrojar_luz.md",
+      "_origin": "ast",
+      "community": 166,
+      "community_name": "Register Elevation 05: 'Arrojar Luz' (Shed Light)",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "05_arrojar_luz.md",
+      "source_file": "exercises/25_register_elevation/05_arrojar_luz.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_25_register_elevation_05_arrojar_luz_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 166,
+      "community_name": "Register Elevation 05: 'Arrojar Luz' (Shed Light)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/25_register_elevation/05_arrojar_luz.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_25_register_elevation_05_arrojar_luz_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 166,
+      "community_name": "Register Elevation 05: 'Arrojar Luz' (Shed Light)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/25_register_elevation/05_arrojar_luz.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_25_register_elevation_05_arrojar_luz_register_elevation_05_arrojar_luz_shed_light",
+      "label": "Register Elevation 05: 'Arrojar Luz' (Shed Light)",
+      "_origin": "ast",
+      "community": 166,
+      "community_name": "Register Elevation 05: 'Arrojar Luz' (Shed Light)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "register elevation 05: 'arrojar luz' (shed light)",
+      "source_file": "exercises/25_register_elevation/05_arrojar_luz.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_01_voseo_present",
+      "label": "01_voseo_present.md",
+      "_origin": "ast",
+      "community": 167,
+      "community_name": "Regional Contrasts 01: Rioplatense Voseo in Present Tense",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "01_voseo_present.md",
+      "source_file": "exercises/26_regional_contrasts/01_voseo_present.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_01_voseo_present_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 167,
+      "community_name": "Regional Contrasts 01: Rioplatense Voseo in Present Tense",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/26_regional_contrasts/01_voseo_present.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_01_voseo_present_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 167,
+      "community_name": "Regional Contrasts 01: Rioplatense Voseo in Present Tense",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/26_regional_contrasts/01_voseo_present.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_01_voseo_present_regional_contrasts_01_rioplatense_voseo_in_present_tense",
+      "label": "Regional Contrasts 01: Rioplatense Voseo in Present Tense",
+      "_origin": "ast",
+      "community": 167,
+      "community_name": "Regional Contrasts 01: Rioplatense Voseo in Present Tense",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "regional contrasts 01: rioplatense voseo in present tense",
+      "source_file": "exercises/26_regional_contrasts/01_voseo_present.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_02_voseo_imperative",
+      "label": "02_voseo_imperative.md",
+      "_origin": "ast",
+      "community": 168,
+      "community_name": "Regional Contrasts 02: Voseo Affirmative Imperative",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "02_voseo_imperative.md",
+      "source_file": "exercises/26_regional_contrasts/02_voseo_imperative.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_02_voseo_imperative_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 168,
+      "community_name": "Regional Contrasts 02: Voseo Affirmative Imperative",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/26_regional_contrasts/02_voseo_imperative.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_02_voseo_imperative_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 168,
+      "community_name": "Regional Contrasts 02: Voseo Affirmative Imperative",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/26_regional_contrasts/02_voseo_imperative.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_02_voseo_imperative_regional_contrasts_02_voseo_affirmative_imperative",
+      "label": "Regional Contrasts 02: Voseo Affirmative Imperative",
+      "_origin": "ast",
+      "community": 168,
+      "community_name": "Regional Contrasts 02: Voseo Affirmative Imperative",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "regional contrasts 02: voseo affirmative imperative",
+      "source_file": "exercises/26_regional_contrasts/02_voseo_imperative.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_03_latin_america_ustedes",
+      "label": "03_latin_america_ustedes.md",
+      "_origin": "ast",
+      "community": 169,
+      "community_name": "Regional Contrasts 03: Pan-American 'Ustedes'",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "03_latin_america_ustedes.md",
+      "source_file": "exercises/26_regional_contrasts/03_latin_america_ustedes.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_03_latin_america_ustedes_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 169,
+      "community_name": "Regional Contrasts 03: Pan-American 'Ustedes'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/26_regional_contrasts/03_latin_america_ustedes.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_03_latin_america_ustedes_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 169,
+      "community_name": "Regional Contrasts 03: Pan-American 'Ustedes'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/26_regional_contrasts/03_latin_america_ustedes.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_03_latin_america_ustedes_regional_contrasts_03_pan_american_ustedes",
+      "label": "Regional Contrasts 03: Pan-American 'Ustedes'",
+      "_origin": "ast",
+      "community": 169,
+      "community_name": "Regional Contrasts 03: Pan-American 'Ustedes'",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "regional contrasts 03: pan-american 'ustedes'",
+      "source_file": "exercises/26_regional_contrasts/03_latin_america_ustedes.md",
+      "source_location": "L2"
     },
     {
       "id": "src_cli_mod",
@@ -4512,6 +5607,102 @@
       "source_location": ""
     },
     {
+      "id": "exercises_26_regional_contrasts_04_lexical_variants_driving",
+      "label": "04_lexical_variants_driving.md",
+      "_origin": "ast",
+      "community": 170,
+      "community_name": "Regional Contrasts 04: Lexical Dialectal Pairs",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "04_lexical_variants_driving.md",
+      "source_file": "exercises/26_regional_contrasts/04_lexical_variants_driving.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_04_lexical_variants_driving_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 170,
+      "community_name": "Regional Contrasts 04: Lexical Dialectal Pairs",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/26_regional_contrasts/04_lexical_variants_driving.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_04_lexical_variants_driving_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 170,
+      "community_name": "Regional Contrasts 04: Lexical Dialectal Pairs",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/26_regional_contrasts/04_lexical_variants_driving.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_04_lexical_variants_driving_regional_contrasts_04_lexical_dialectal_pairs",
+      "label": "Regional Contrasts 04: Lexical Dialectal Pairs",
+      "_origin": "ast",
+      "community": 170,
+      "community_name": "Regional Contrasts 04: Lexical Dialectal Pairs",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "regional contrasts 04: lexical dialectal pairs",
+      "source_file": "exercises/26_regional_contrasts/04_lexical_variants_driving.md",
+      "source_location": "L2"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_05_clitic_order_leismo",
+      "label": "05_clitic_order_leismo.md",
+      "_origin": "ast",
+      "community": 171,
+      "community_name": "Regional Contrasts 05: Reflexive Imperatives in Voseo",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "05_clitic_order_leismo.md",
+      "source_file": "exercises/26_regional_contrasts/05_clitic_order_leismo.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_05_clitic_order_leismo_context",
+      "label": "Context",
+      "_origin": "ast",
+      "community": 171,
+      "community_name": "Regional Contrasts 05: Reflexive Imperatives in Voseo",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "context",
+      "source_file": "exercises/26_regional_contrasts/05_clitic_order_leismo.md",
+      "source_location": "L7"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_05_clitic_order_leismo_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 171,
+      "community_name": "Regional Contrasts 05: Reflexive Imperatives in Voseo",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "exercise",
+      "source_file": "exercises/26_regional_contrasts/05_clitic_order_leismo.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "exercises_26_regional_contrasts_05_clitic_order_leismo_regional_contrasts_05_reflexive_imperatives_in_voseo",
+      "label": "Regional Contrasts 05: Reflexive Imperatives in Voseo",
+      "_origin": "ast",
+      "community": 171,
+      "community_name": "Regional Contrasts 05: Reflexive Imperatives in Voseo",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "regional contrasts 05: reflexive imperatives in voseo",
+      "source_file": "exercises/26_regional_contrasts/05_clitic_order_leismo.md",
+      "source_location": "L2"
+    },
+    {
       "id": "src_cli_commands_mod",
       "label": "commands/mod.rs",
       "_origin": "ast",
@@ -4576,39 +5767,6 @@
       "norm_label": "rect",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "src_engine_validator_rs_option",
-      "label": "Option",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_engine_validator_validationresult",
-      "label": "ValidationResult",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": "validationresult",
-      "source_file": "src/engine/validator.rs",
-      "source_location": "L8"
-    },
-    {
-      "id": "src_engine_validator_validationresult_is_success",
-      "label": ".is_success()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".is_success()",
-      "source_file": "src/engine/validator.rs",
-      "source_location": "L19"
     },
     {
       "id": "src_tui_app",
@@ -5667,6 +6825,369 @@
       "source_location": "L2"
     },
     {
+      "id": "src_cli_commands_hint",
+      "label": "hint.rs",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "hint.rs",
+      "source_file": "src/cli/commands/hint.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_hint_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_hint_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_hint_show_hint",
+      "label": "show_hint()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "show_hint()",
+      "source_file": "src/cli/commands/hint.rs",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_cli_commands_list",
+      "label": "list.rs",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "list.rs",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_list_get_exercises_json",
+      "label": "get_exercises_json()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "get_exercises_json()",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L6"
+    },
+    {
+      "id": "src_cli_commands_list_list_exercises",
+      "label": "list_exercises()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "list_exercises()",
+      "source_file": "src/cli/commands/list.rs",
+      "source_location": "L12"
+    },
+    {
+      "id": "src_cli_commands_list_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_list_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_run",
+      "label": "run.rs",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "run.rs",
+      "source_file": "src/cli/commands/run.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_run_reset_exercise",
+      "label": "reset_exercise()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "reset_exercise()",
+      "source_file": "src/cli/commands/run.rs",
+      "source_location": "L87"
+    },
+    {
+      "id": "src_cli_commands_run_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_run_run_exercise",
+      "label": "run_exercise()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "run_exercise()",
+      "source_file": "src/cli/commands/run.rs",
+      "source_location": "L11"
+    },
+    {
+      "id": "src_core_curriculum",
+      "label": "curriculum.rs",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "curriculum.rs",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_core_curriculum_collect_md_files",
+      "label": "collect_md_files()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "collect_md_files()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L68"
+    },
+    {
+      "id": "src_core_curriculum_find_all_exercises",
+      "label": "find_all_exercises()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "find_all_exercises()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L46"
+    },
+    {
+      "id": "src_core_curriculum_find_all_exercises_or_embedded",
+      "label": "find_all_exercises_or_embedded()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "find_all_exercises_or_embedded()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L57"
+    },
+    {
+      "id": "src_core_curriculum_find_exercise_by_query",
+      "label": "find_exercise_by_query()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "find_exercise_by_query()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L88"
+    },
+    {
+      "id": "src_core_curriculum_level",
+      "label": "Level",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "level",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L9"
+    },
+    {
+      "id": "src_core_curriculum_level_fmt",
+      "label": ".fmt()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": ".fmt()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L17"
+    },
+    {
+      "id": "src_core_curriculum_level_from_str",
+      "label": ".from_str()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": ".from_str()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L35"
+    },
+    {
+      "id": "src_core_curriculum_parselevelerror",
+      "label": "ParseLevelError",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "parselevelerror",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_core_curriculum_rs_display",
+      "label": "Display",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "display",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_err",
+      "label": "Err",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "err",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_formatter",
+      "label": "Formatter",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "formatter",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_fromstr",
+      "label": "FromStr",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "fromstr",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_p",
+      "label": "P",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "p",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_path",
+      "label": "Path",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_self",
+      "label": "Self",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "self",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_vec",
+      "label": "Vec",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "vec",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_core_exercise",
       "label": "exercise.rs",
       "_origin": "ast",
@@ -5863,6 +7384,127 @@
       "norm_label": "vec",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "tests_cli_tests",
+      "label": "cli_tests.rs",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "cli_tests.rs",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_cli_tests_test_cli_parsing_subcommands",
+      "label": "test_cli_parsing_subcommands()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "test_cli_parsing_subcommands()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L13"
+    },
+    {
+      "id": "tests_cli_tests_test_curriculum_discovery_and_query",
+      "label": "test_curriculum_discovery_and_query()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "test_curriculum_discovery_and_query()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L129"
+    },
+    {
+      "id": "tests_cli_tests_test_explain_command_executes_cleanly",
+      "label": "test_explain_command_executes_cleanly()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "test_explain_command_executes_cleanly()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L87"
+    },
+    {
+      "id": "tests_cli_tests_test_list_and_progress_execute_cleanly",
+      "label": "test_list_and_progress_execute_cleanly()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "test_list_and_progress_execute_cleanly()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L99"
+    },
+    {
+      "id": "tests_cli_tests_test_run_exercise_with_file_path",
+      "label": "test_run_exercise_with_file_path()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "test_run_exercise_with_file_path()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L108"
+    },
+    {
+      "id": "tests_exercise_parser_tests",
+      "label": "exercise_parser_tests.rs",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "exercise_parser_tests.rs",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_invalid_level_error",
+      "label": "test_parse_invalid_level_error()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "test_parse_invalid_level_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L62"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_invalid_type_error",
+      "label": "test_parse_invalid_type_error()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "test_parse_invalid_type_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L72"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_missing_id_error",
+      "label": "test_parse_missing_id_error()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "test_parse_missing_id_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L52"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_valid_markdown_exercise",
+      "label": "test_parse_valid_markdown_exercise()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "test_parse_valid_markdown_exercise()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L5"
     },
     {
       "id": "exercises_01_ser_vs_estar_05_passive_vs_resultant_state",
@@ -7580,7 +9222,7 @@
       "source_file": "Cargo.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "0.1.0"
+      "version": "0.1.1"
     },
     {
       "id": "exercises_07_por_vs_para_01_cause_vs_purpose",
@@ -8061,6 +9703,17 @@
       "norm_label": "pronoun stacking 04: affirmative imperative clitic attachment",
       "source_file": "exercises/08_pronoun_stacking/04_affirmative_command_accent.md",
       "source_location": "L2"
+    },
+    {
+      "id": "hashmap",
+      "label": "HashMap",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "AppState",
+      "file_type": "code",
+      "norm_label": "hashmap",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "hashset",
@@ -9967,6 +11620,54 @@
   ],
   "links": [
     {
+      "source": "src_cli_commands_blitz_run_blitz",
+      "target": "src_cli_commands_blitz_get_blitz_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz_run_blitz",
+      "target": "src_cli_commands_blitz_evaluate_blitz_answer",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L262",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_get_progress_json",
+      "target": "src_cli_commands_progress_compute_weakness_profile",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L175",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_show_progress",
+      "target": "src_cli_commands_progress_compute_weakness_profile",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L302",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_search_run_search",
       "target": "src_cli_commands_search_search_exercises",
       "relation": "calls",
@@ -10407,7 +12108,31 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L22",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_progresssummary",
+      "target": "src_cli_commands_progress_rs_vec",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_topicweaknessstat",
+      "target": "src_cli_commands_progress_rs_string",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -10431,7 +12156,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L44",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -10443,7 +12168,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L59",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -10455,7 +12180,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L64",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -10723,6 +12448,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_blitz_get_blitz_items",
+      "target": "src_cli_commands_blitz_blitzitem",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz_run_blitz",
+      "target": "src_cli_commands_blitz_blitzresult",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_list_get_exercises_json",
       "target": "src_cli_commands_list_rs_string",
       "relation": "references",
@@ -10735,6 +12484,30 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_progress_compute_weakness_profile",
+      "target": "src_cli_commands_progress_rs_utc",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_compute_weakness_profile",
+      "target": "src_cli_commands_progress_topicweaknessstat",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_progress_get_progress_json",
       "target": "src_cli_commands_progress_rs_string",
       "relation": "references",
@@ -10743,7 +12516,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L25",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -10755,7 +12528,19 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L22",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_progresssummary",
+      "target": "src_cli_commands_progress_topicweaknessstat",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -10767,7 +12552,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L22",
+      "source_location": "L36",
       "weight": 1.0
     },
     {
@@ -11251,30 +13036,6 @@
       "weight": 1.0
     },
     {
-      "source": "src_cli_commands_hint",
-      "target": "appstate",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/cli/commands/hint.rs",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_commands_list",
-      "target": "appstate",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/cli/commands/list.rs",
-      "source_location": "L2",
-      "weight": 1.0
-    },
-    {
       "source": "src_cli_commands_progress",
       "target": "src_core_curriculum",
       "relation": "imports_from",
@@ -11288,7 +13049,7 @@
     },
     {
       "source": "src_cli_commands_progress",
-      "target": "appstate",
+      "target": "src_core_exercise_exercise",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -11300,6 +13061,18 @@
     },
     {
       "source": "src_cli_commands_progress",
+      "target": "src_cli_commands_progress_rs_appstate",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress",
       "target": "hashmap",
       "relation": "imports_from",
       "_origin": "ast",
@@ -11307,19 +13080,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_commands_review",
-      "target": "appstate",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/cli/commands/review.rs",
-      "source_location": "L2",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -11356,18 +13117,6 @@
       "context": "import",
       "source_file": "src/cli/commands/run.rs",
       "source_location": "L2",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_commands_run",
-      "target": "appstate",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/cli/commands/run.rs",
-      "source_location": "L3",
       "weight": 1.0
     },
     {
@@ -11684,7 +13433,7 @@
     },
     {
       "source": "src_watcher_runner",
-      "target": "appstate",
+      "target": "src_watcher_runner_rs_appstate",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -11728,6 +13477,18 @@
       "context": "import",
       "source_file": "src/watcher/runner.rs",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_blitz_tests",
+      "target": "src_cli_commands_blitz",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/blitz_tests.rs",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -11887,18 +13648,6 @@
       "weight": 1.0
     },
     {
-      "source": "tests_srs_tests",
-      "target": "appstate",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "tests/srs_tests.rs",
-      "source_location": "L3",
-      "weight": 1.0
-    },
-    {
       "source": "tests_tui_tests",
       "target": "terminal",
       "relation": "imports_from",
@@ -11948,18 +13697,6 @@
     },
     {
       "source": "tests_watcher_tests",
-      "target": "appstate",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "tests/watcher_tests.rs",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_watcher_tests",
       "target": "src_watcher_runner",
       "relation": "imports_from",
       "_origin": "ast",
@@ -11968,6 +13705,78 @@
       "context": "import",
       "source_file": "tests/watcher_tests.rs",
       "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_weakness_profiler_tests",
+      "target": "src_cli_commands_progress",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_weakness_profiler_tests",
+      "target": "src_core_srs_srsitem",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_weakness_profiler_tests",
+      "target": "src_core_state",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz_evaluate_blitz_answer",
+      "target": "src_cli_commands_blitz_blitzitem",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L194",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz_get_blitz_items",
+      "target": "src_cli_commands_blitz_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz_run_blitz",
+      "target": "src_cli_commands_blitz_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L200",
       "weight": 1.0
     },
     {
@@ -12028,6 +13837,42 @@
       "context": "parameter_type",
       "source_file": "src/cli/commands/init.rs",
       "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_compute_weakness_profile",
+      "target": "src_cli_commands_progress_rs_appstate",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_compute_weakness_profile",
+      "target": "src_cli_commands_progress_rs_datetime",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress_compute_weakness_profile",
+      "target": "src_core_exercise_exercise",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -12548,7 +14393,7 @@
     },
     {
       "source": "src_watcher_runner_evaluate_current_exercise_in",
-      "target": "appstate",
+      "target": "src_engine_accents_accentmode",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -12560,7 +14405,7 @@
     },
     {
       "source": "src_watcher_runner_evaluate_current_exercise_in",
-      "target": "src_engine_accents_accentmode",
+      "target": "src_watcher_runner_rs_appstate",
       "relation": "references",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -12604,6 +14449,30 @@
       "context": "parameter_type",
       "source_file": "tests/exercise_validity_tests.rs",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz_get_blitz_items",
+      "target": "src_cli_commands_blitz_rs_vec",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz_run_blitz",
+      "target": "src_cli_commands_blitz_rs_result",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L200",
       "weight": 1.0
     },
     {
@@ -12703,6 +14572,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_progress_compute_weakness_profile",
+      "target": "src_cli_commands_progress_rs_vec",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_progress_get_progress_json",
       "target": "src_cli_commands_progress_rs_result",
       "relation": "references",
@@ -12711,7 +14592,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L25",
+      "source_location": "L123",
       "weight": 1.0
     },
     {
@@ -12723,7 +14604,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L202",
+      "source_location": "L333",
       "weight": 1.0
     },
     {
@@ -12735,7 +14616,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L89",
+      "source_location": "L196",
       "weight": 1.0
     },
     {
@@ -12963,7 +14844,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/reference.rs",
-      "source_location": "L15",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -13279,7 +15160,7 @@
     },
     {
       "source": "docs_backlog_spanglings_product_engineering_backlog",
-      "target": "docs_backlog_focus_area_2_curriculum_advanced_vocabulary_expansion",
+      "target": "docs_backlog_focus_area_2_curriculum_advanced_vocabulary_expansion_completed",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13290,7 +15171,7 @@
     },
     {
       "source": "docs_backlog_spanglings_product_engineering_backlog",
-      "target": "docs_backlog_focus_area_3_smart_diagnostics_pedagogical_enhancements",
+      "target": "docs_backlog_focus_area_3_smart_diagnostics_pedagogical_enhancements_completed",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13312,13 +15193,79 @@
     },
     {
       "source": "docs_backlog_spanglings_product_engineering_backlog",
-      "target": "docs_backlog_focus_area_1_discoverability_portability_zero_setup_cli_current_sprint",
+      "target": "docs_backlog_focus_area_1_discoverability_portability_zero_setup_cli_completed",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/BACKLOG.md",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion",
+      "target": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_curriculum_advanced_vocabulary_expansion_implementation_plan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_curriculum_advanced_vocabulary_expansion_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_task_4_track_25_register_elevation_track_26_regional_contrasts_voseo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L103",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_curriculum_advanced_vocabulary_expansion_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_task_1_track_22_tech_software_engineering_spanish_b2_c1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_curriculum_advanced_vocabulary_expansion_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_task_5_new_in_terminal_reference_cheat_sheets_documentation_update",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_curriculum_advanced_vocabulary_expansion_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_task_2_track_23_formal_business_diplomatic_correspondence_b2_c1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_curriculum_advanced_vocabulary_expansion_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_curriculum_and_vocab_expansion_task_3_track_24_false_friends_high_frequency_trap_drills",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion.md",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -13550,6 +15497,61 @@
       "confidence_score": 1.0,
       "source_file": "docs/superpowers/plans/2026-08-26-interactive-tui.md",
       "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy",
+      "target": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_smart_diagnostics_pedagogical_enhancements_implementation_plan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_smart_diagnostics_pedagogical_enhancements_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_task_1_accentuation_orthographic_stress_reference_card",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_smart_diagnostics_pedagogical_enhancements_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_task_2_weakness_profiler_topic_error_diagnostics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_smart_diagnostics_pedagogical_enhancements_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_task_3_60_second_rapid_fire_blitz_mode_spanglings_blitz",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_smart_diagnostics_pedagogical_enhancements_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_26_smart_diagnostics_and_pedagogy_task_4_documentation_update_verification",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -17788,6 +19790,831 @@
       "weight": 1.0
     },
     {
+      "source": "exercises_22_tech_software_01_deployment_git",
+      "target": "exercises_22_tech_software_01_deployment_git_tech_spanish_01_deployment_releases",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/01_deployment_git.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_01_deployment_git_tech_spanish_01_deployment_releases",
+      "target": "exercises_22_tech_software_01_deployment_git_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/01_deployment_git.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_01_deployment_git_tech_spanish_01_deployment_releases",
+      "target": "exercises_22_tech_software_01_deployment_git_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/01_deployment_git.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_02_debugging_fixes",
+      "target": "exercises_22_tech_software_02_debugging_fixes_tech_spanish_02_remediating_vulnerabilities_debugging",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/02_debugging_fixes.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_02_debugging_fixes_tech_spanish_02_remediating_vulnerabilities_debugging",
+      "target": "exercises_22_tech_software_02_debugging_fixes_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/02_debugging_fixes.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_02_debugging_fixes_tech_spanish_02_remediating_vulnerabilities_debugging",
+      "target": "exercises_22_tech_software_02_debugging_fixes_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/02_debugging_fixes.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_03_concurrency_deadlocks",
+      "target": "exercises_22_tech_software_03_concurrency_deadlocks_tech_spanish_03_concurrency_deadlocks",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/03_concurrency_deadlocks.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_03_concurrency_deadlocks_tech_spanish_03_concurrency_deadlocks",
+      "target": "exercises_22_tech_software_03_concurrency_deadlocks_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/03_concurrency_deadlocks.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_03_concurrency_deadlocks_tech_spanish_03_concurrency_deadlocks",
+      "target": "exercises_22_tech_software_03_concurrency_deadlocks_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/03_concurrency_deadlocks.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_04_performance_latency",
+      "target": "exercises_22_tech_software_04_performance_latency_tech_spanish_04_system_performance_latency",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/04_performance_latency.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_04_performance_latency_tech_spanish_04_system_performance_latency",
+      "target": "exercises_22_tech_software_04_performance_latency_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/04_performance_latency.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_04_performance_latency_tech_spanish_04_system_performance_latency",
+      "target": "exercises_22_tech_software_04_performance_latency_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/04_performance_latency.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_05_api_routing",
+      "target": "exercises_22_tech_software_05_api_routing_tech_spanish_05_request_routing_gateways",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/05_api_routing.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_05_api_routing_tech_spanish_05_request_routing_gateways",
+      "target": "exercises_22_tech_software_05_api_routing_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/05_api_routing.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_22_tech_software_05_api_routing_tech_spanish_05_request_routing_gateways",
+      "target": "exercises_22_tech_software_05_api_routing_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/22_tech_software/05_api_routing.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_01_email_opening_closing",
+      "target": "exercises_23_business_diplomatic_01_email_opening_closing_business_spanish_01_formal_closings",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/01_email_opening_closing.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_01_email_opening_closing_business_spanish_01_formal_closings",
+      "target": "exercises_23_business_diplomatic_01_email_opening_closing_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/01_email_opening_closing.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_01_email_opening_closing_business_spanish_01_formal_closings",
+      "target": "exercises_23_business_diplomatic_01_email_opening_closing_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/01_email_opening_closing.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_02_negotiation_terms",
+      "target": "exercises_23_business_diplomatic_02_negotiation_terms_business_spanish_02_formal_discourse_connectors",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/02_negotiation_terms.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_02_negotiation_terms_business_spanish_02_formal_discourse_connectors",
+      "target": "exercises_23_business_diplomatic_02_negotiation_terms_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/02_negotiation_terms.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_02_negotiation_terms_business_spanish_02_formal_discourse_connectors",
+      "target": "exercises_23_business_diplomatic_02_negotiation_terms_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/02_negotiation_terms.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_03_debt_settlement",
+      "target": "exercises_23_business_diplomatic_03_debt_settlement_business_spanish_03_financial_settlements_debts",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/03_debt_settlement.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_03_debt_settlement_business_spanish_03_financial_settlements_debts",
+      "target": "exercises_23_business_diplomatic_03_debt_settlement_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/03_debt_settlement.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_03_debt_settlement_business_spanish_03_financial_settlements_debts",
+      "target": "exercises_23_business_diplomatic_03_debt_settlement_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/03_debt_settlement.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_04_dismissing_proposals",
+      "target": "exercises_23_business_diplomatic_04_dismissing_proposals_business_spanish_04_dismissing_proposals_motions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/04_dismissing_proposals.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_04_dismissing_proposals_business_spanish_04_dismissing_proposals_motions",
+      "target": "exercises_23_business_diplomatic_04_dismissing_proposals_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/04_dismissing_proposals.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_04_dismissing_proposals_business_spanish_04_dismissing_proposals_motions",
+      "target": "exercises_23_business_diplomatic_04_dismissing_proposals_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/04_dismissing_proposals.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_05_contract_stipulations",
+      "target": "exercises_23_business_diplomatic_05_contract_stipulations_business_spanish_05_contractual_clauses_stipulations",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/05_contract_stipulations.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_05_contract_stipulations_business_spanish_05_contractual_clauses_stipulations",
+      "target": "exercises_23_business_diplomatic_05_contract_stipulations_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/05_contract_stipulations.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_23_business_diplomatic_05_contract_stipulations_business_spanish_05_contractual_clauses_stipulations",
+      "target": "exercises_23_business_diplomatic_05_contract_stipulations_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/23_business_diplomatic/05_contract_stipulations.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_01_actualmente_actually",
+      "target": "exercises_24_false_friends_01_actualmente_actually_false_friends_01_actualmente_vs_actually",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/01_actualmente_actually.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_01_actualmente_actually_false_friends_01_actualmente_vs_actually",
+      "target": "exercises_24_false_friends_01_actualmente_actually_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/01_actualmente_actually.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_01_actualmente_actually_false_friends_01_actualmente_vs_actually",
+      "target": "exercises_24_false_friends_01_actualmente_actually_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/01_actualmente_actually.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_02_eventualmente_eventually",
+      "target": "exercises_24_false_friends_02_eventualmente_eventually_false_friends_02_eventualmente_vs_eventually",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/02_eventualmente_eventually.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_02_eventualmente_eventually_false_friends_02_eventualmente_vs_eventually",
+      "target": "exercises_24_false_friends_02_eventualmente_eventually_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/02_eventualmente_eventually.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_02_eventualmente_eventually_false_friends_02_eventualmente_vs_eventually",
+      "target": "exercises_24_false_friends_02_eventualmente_eventually_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/02_eventualmente_eventually.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_03_pretender_realizar",
+      "target": "exercises_24_false_friends_03_pretender_realizar_false_friends_03_pretender_vs_to_pretend",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/03_pretender_realizar.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_03_pretender_realizar_false_friends_03_pretender_vs_to_pretend",
+      "target": "exercises_24_false_friends_03_pretender_realizar_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/03_pretender_realizar.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_03_pretender_realizar_false_friends_03_pretender_vs_to_pretend",
+      "target": "exercises_24_false_friends_03_pretender_realizar_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/03_pretender_realizar.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_04_soportar_apoyar",
+      "target": "exercises_24_false_friends_04_soportar_apoyar_false_friends_04_soportar_vs_to_support",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/04_soportar_apoyar.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_04_soportar_apoyar_false_friends_04_soportar_vs_to_support",
+      "target": "exercises_24_false_friends_04_soportar_apoyar_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/04_soportar_apoyar.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_04_soportar_apoyar_false_friends_04_soportar_vs_to_support",
+      "target": "exercises_24_false_friends_04_soportar_apoyar_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/04_soportar_apoyar.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_05_sensible_embarazada",
+      "target": "exercises_24_false_friends_05_sensible_embarazada_false_friends_05_sensible_vs_sensible",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/05_sensible_embarazada.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_05_sensible_embarazada_false_friends_05_sensible_vs_sensible",
+      "target": "exercises_24_false_friends_05_sensible_embarazada_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/05_sensible_embarazada.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_24_false_friends_05_sensible_embarazada_false_friends_05_sensible_vs_sensible",
+      "target": "exercises_24_false_friends_05_sensible_embarazada_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/24_false_friends/05_sensible_embarazada.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_01_acometer_proyectos",
+      "target": "exercises_25_register_elevation_01_acometer_proyectos_register_elevation_01_acometer_undertake_vs_hacer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/01_acometer_proyectos.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_01_acometer_proyectos_register_elevation_01_acometer_undertake_vs_hacer",
+      "target": "exercises_25_register_elevation_01_acometer_proyectos_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/01_acometer_proyectos.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_01_acometer_proyectos_register_elevation_01_acometer_undertake_vs_hacer",
+      "target": "exercises_25_register_elevation_01_acometer_proyectos_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/01_acometer_proyectos.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_02_suscitar_controversia",
+      "target": "exercises_25_register_elevation_02_suscitar_controversia_register_elevation_02_suscitar_arouse_provoke_vs_causar",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/02_suscitar_controversia.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_02_suscitar_controversia_register_elevation_02_suscitar_arouse_provoke_vs_causar",
+      "target": "exercises_25_register_elevation_02_suscitar_controversia_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/02_suscitar_controversia.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_02_suscitar_controversia_register_elevation_02_suscitar_arouse_provoke_vs_causar",
+      "target": "exercises_25_register_elevation_02_suscitar_controversia_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/02_suscitar_controversia.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_03_surtir_efecto",
+      "target": "exercises_25_register_elevation_03_surtir_efecto_register_elevation_03_surtir_efecto_take_effect",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/03_surtir_efecto.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_03_surtir_efecto_register_elevation_03_surtir_efecto_take_effect",
+      "target": "exercises_25_register_elevation_03_surtir_efecto_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/03_surtir_efecto.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_03_surtir_efecto_register_elevation_03_surtir_efecto_take_effect",
+      "target": "exercises_25_register_elevation_03_surtir_efecto_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/03_surtir_efecto.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_04_albergar_dudas",
+      "target": "exercises_25_register_elevation_04_albergar_dudas_register_elevation_04_albergar_harbor_vs_tener",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/04_albergar_dudas.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_04_albergar_dudas_register_elevation_04_albergar_harbor_vs_tener",
+      "target": "exercises_25_register_elevation_04_albergar_dudas_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/04_albergar_dudas.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_04_albergar_dudas_register_elevation_04_albergar_harbor_vs_tener",
+      "target": "exercises_25_register_elevation_04_albergar_dudas_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/04_albergar_dudas.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_05_arrojar_luz",
+      "target": "exercises_25_register_elevation_05_arrojar_luz_register_elevation_05_arrojar_luz_shed_light",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/05_arrojar_luz.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_05_arrojar_luz_register_elevation_05_arrojar_luz_shed_light",
+      "target": "exercises_25_register_elevation_05_arrojar_luz_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/05_arrojar_luz.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_25_register_elevation_05_arrojar_luz_register_elevation_05_arrojar_luz_shed_light",
+      "target": "exercises_25_register_elevation_05_arrojar_luz_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/25_register_elevation/05_arrojar_luz.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_01_voseo_present",
+      "target": "exercises_26_regional_contrasts_01_voseo_present_regional_contrasts_01_rioplatense_voseo_in_present_tense",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/01_voseo_present.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_01_voseo_present_regional_contrasts_01_rioplatense_voseo_in_present_tense",
+      "target": "exercises_26_regional_contrasts_01_voseo_present_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/01_voseo_present.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_01_voseo_present_regional_contrasts_01_rioplatense_voseo_in_present_tense",
+      "target": "exercises_26_regional_contrasts_01_voseo_present_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/01_voseo_present.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_02_voseo_imperative",
+      "target": "exercises_26_regional_contrasts_02_voseo_imperative_regional_contrasts_02_voseo_affirmative_imperative",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/02_voseo_imperative.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_02_voseo_imperative_regional_contrasts_02_voseo_affirmative_imperative",
+      "target": "exercises_26_regional_contrasts_02_voseo_imperative_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/02_voseo_imperative.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_02_voseo_imperative_regional_contrasts_02_voseo_affirmative_imperative",
+      "target": "exercises_26_regional_contrasts_02_voseo_imperative_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/02_voseo_imperative.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_03_latin_america_ustedes",
+      "target": "exercises_26_regional_contrasts_03_latin_america_ustedes_regional_contrasts_03_pan_american_ustedes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/03_latin_america_ustedes.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_03_latin_america_ustedes_regional_contrasts_03_pan_american_ustedes",
+      "target": "exercises_26_regional_contrasts_03_latin_america_ustedes_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/03_latin_america_ustedes.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_03_latin_america_ustedes_regional_contrasts_03_pan_american_ustedes",
+      "target": "exercises_26_regional_contrasts_03_latin_america_ustedes_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/03_latin_america_ustedes.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_04_lexical_variants_driving",
+      "target": "exercises_26_regional_contrasts_04_lexical_variants_driving_regional_contrasts_04_lexical_dialectal_pairs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/04_lexical_variants_driving.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_04_lexical_variants_driving_regional_contrasts_04_lexical_dialectal_pairs",
+      "target": "exercises_26_regional_contrasts_04_lexical_variants_driving_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/04_lexical_variants_driving.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_04_lexical_variants_driving_regional_contrasts_04_lexical_dialectal_pairs",
+      "target": "exercises_26_regional_contrasts_04_lexical_variants_driving_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/04_lexical_variants_driving.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_05_clitic_order_leismo",
+      "target": "exercises_26_regional_contrasts_05_clitic_order_leismo_regional_contrasts_05_reflexive_imperatives_in_voseo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/05_clitic_order_leismo.md",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_05_clitic_order_leismo_regional_contrasts_05_reflexive_imperatives_in_voseo",
+      "target": "exercises_26_regional_contrasts_05_clitic_order_leismo_exercise",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/05_clitic_order_leismo.md",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "exercises_26_regional_contrasts_05_clitic_order_leismo_regional_contrasts_05_reflexive_imperatives_in_voseo",
+      "target": "exercises_26_regional_contrasts_05_clitic_order_leismo_context",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "exercises/26_regional_contrasts/05_clitic_order_leismo.md",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "readme",
       "target": "readme_spanglings",
       "relation": "contains",
@@ -17844,13 +20671,13 @@
     },
     {
       "source": "readme_examples",
-      "target": "readme_6_spaced_repetition_drills",
+      "target": "readme_6_spaced_repetition_rapid_fire_drills",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L144",
+      "source_location": "L146",
       "weight": 1.0
     },
     {
@@ -17861,7 +20688,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L154",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -17921,13 +20748,13 @@
     },
     {
       "source": "readme_spanglings",
-      "target": "readme_curriculum_tracks_116_exercises",
+      "target": "readme_curriculum_tracks_141_exercises_across_27_tracks",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L168",
+      "source_location": "L174",
       "weight": 1.0
     },
     {
@@ -17938,7 +20765,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L197",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -17949,7 +20776,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "README.md",
-      "source_location": "L214",
+      "source_location": "L225",
       "weight": 1.0
     },
     {
@@ -17983,6 +20810,61 @@
       "confidence_score": 1.0,
       "source_file": "README.md",
       "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz",
+      "target": "src_cli_commands_blitz_blitzresult",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz",
+      "target": "src_cli_commands_blitz_evaluate_blitz_answer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L194",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz",
+      "target": "src_cli_commands_blitz_run_blitz",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L200",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz",
+      "target": "src_cli_commands_blitz_get_blitz_items",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz",
+      "target": "src_cli_commands_blitz_blitzitem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -18092,29 +20974,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L10",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_commands_progress",
-      "target": "src_cli_commands_progress_progresssummary",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L17",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_commands_progress",
-      "target": "src_cli_commands_progress_render_progress_bar",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L202",
+      "source_location": "L11",
       "weight": 1.0
     },
     {
@@ -18125,7 +20985,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L25",
+      "source_location": "L123",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress",
+      "target": "src_cli_commands_progress_topicweaknessstat",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -18136,7 +21007,40 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L89",
+      "source_location": "L196",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress",
+      "target": "src_cli_commands_progress_progresssummary",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress",
+      "target": "src_cli_commands_progress_render_progress_bar",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L333",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_progress",
+      "target": "src_cli_commands_progress_compute_weakness_profile",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/progress.rs",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -18378,7 +21282,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/core/reference.rs",
-      "source_location": "L11",
+      "source_location": "L16",
       "weight": 1.0
     },
     {
@@ -18389,7 +21293,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/core/reference.rs",
-      "source_location": "L15",
+      "source_location": "L20",
       "weight": 1.0
     },
     {
@@ -18734,6 +21638,50 @@
       "weight": 1.0
     },
     {
+      "source": "tests_blitz_tests",
+      "target": "tests_blitz_tests_test_get_blitz_items_topic_filter",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/blitz_tests.rs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_blitz_tests",
+      "target": "tests_blitz_tests_test_evaluate_blitz_answer_case_and_whitespace",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/blitz_tests.rs",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_blitz_tests",
+      "target": "tests_blitz_tests_test_get_all_blitz_items",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/blitz_tests.rs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_cli_tests",
+      "target": "tests_cli_tests_test_run_exercise_with_file_path",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
       "source": "tests_cli_tests",
       "target": "tests_cli_tests_test_curriculum_discovery_and_query",
       "relation": "contains",
@@ -18741,7 +21689,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L113",
+      "source_location": "L129",
       "weight": 1.0
     },
     {
@@ -18763,7 +21711,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L71",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -18774,18 +21722,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L83",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_cli_tests",
-      "target": "tests_cli_tests_test_run_exercise_with_file_path",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L92",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -19076,6 +22013,17 @@
     },
     {
       "source": "tests_reference_tests",
+      "target": "tests_reference_tests_test_unknown_topic_returns_none",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_reference_tests",
       "target": "tests_reference_tests_test_get_por_para_reference_card",
       "relation": "contains",
       "_origin": "ast",
@@ -19153,7 +22101,7 @@
     },
     {
       "source": "tests_reference_tests",
-      "target": "tests_reference_tests_test_list_reference_topics",
+      "target": "tests_reference_tests_test_get_tech_reference_card",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -19164,13 +22112,57 @@
     },
     {
       "source": "tests_reference_tests",
-      "target": "tests_reference_tests_test_unknown_topic_returns_none",
+      "target": "tests_reference_tests_test_get_business_reference_card",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/reference_tests.rs",
-      "source_location": "L67",
+      "source_location": "L63",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_reference_tests",
+      "target": "tests_reference_tests_test_get_false_friends_reference_card",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_reference_tests",
+      "target": "tests_reference_tests_test_get_voseo_reference_card",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_reference_tests",
+      "target": "tests_reference_tests_test_get_accents_reference_card",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_reference_tests",
+      "target": "tests_reference_tests_test_list_reference_topics",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -19380,6 +22372,28 @@
       "confidence_score": 1.0,
       "source_file": "tests/watcher_tests.rs",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_weakness_profiler_tests",
+      "target": "tests_weakness_profiler_tests_test_weakness_profiler_detects_low_ease_and_lapses",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_weakness_profiler_tests",
+      "target": "tests_weakness_profiler_tests_test_progress_json_includes_weak_topics_and_recommendations",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L55",
       "weight": 1.0
     },
     {
@@ -19948,7 +22962,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L26",
+      "source_location": "L124",
       "weight": 1.0
     },
     {
@@ -19960,7 +22974,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/cli/commands/progress.rs",
-      "source_location": "L95",
+      "source_location": "L202",
       "weight": 1.0
     },
     {
@@ -20228,6 +23242,30 @@
       "weight": 1.0
     },
     {
+      "source": "tests_blitz_tests_test_get_all_blitz_items",
+      "target": "src_cli_commands_blitz_get_blitz_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/blitz_tests.rs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_blitz_tests_test_get_blitz_items_topic_filter",
+      "target": "src_cli_commands_blitz_get_blitz_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/blitz_tests.rs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
       "source": "tests_cli_tests_test_curriculum_discovery_and_query",
       "target": "src_core_curriculum_find_all_exercises",
       "relation": "calls",
@@ -20236,7 +23274,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L132",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -20248,7 +23286,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L136",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -20260,7 +23298,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L108",
+      "source_location": "L124",
       "weight": 1.0
     },
     {
@@ -20428,7 +23466,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L51",
+      "source_location": "L45",
       "weight": 1.0
     },
     {
@@ -20440,7 +23478,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L83",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -20504,6 +23542,18 @@
       "weight": 1.0
     },
     {
+      "source": "tests_reference_tests_test_get_accents_reference_card",
+      "target": "src_core_reference_get_reference_card",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
       "source": "tests_reference_tests_test_get_accidental_se_reference_card",
       "target": "src_core_reference_get_reference_card",
       "relation": "calls",
@@ -20513,6 +23563,30 @@
       "context": "call",
       "source_file": "tests/reference_tests.rs",
       "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_reference_tests_test_get_business_reference_card",
+      "target": "src_core_reference_get_reference_card",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_reference_tests_test_get_false_friends_reference_card",
+      "target": "src_core_reference_get_reference_card",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -20588,6 +23662,30 @@
       "weight": 1.0
     },
     {
+      "source": "tests_reference_tests_test_get_tech_reference_card",
+      "target": "src_core_reference_get_reference_card",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_reference_tests_test_get_voseo_reference_card",
+      "target": "src_core_reference_get_reference_card",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
       "source": "tests_reference_tests_test_list_reference_topics",
       "target": "src_core_reference_list_reference_topics",
       "relation": "calls",
@@ -20596,7 +23694,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/reference_tests.rs",
-      "source_location": "L56",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -20706,8 +23804,44 @@
       "source_file": "tests/watcher_tests.rs",
       "source_location": "L10",
       "weight": 1.0
+    },
+    {
+      "source": "tests_weakness_profiler_tests_test_progress_json_includes_weak_topics_and_recommendations",
+      "target": "src_cli_commands_progress_get_progress_json",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_weakness_profiler_tests_test_weakness_profiler_detects_low_ease_and_lapses",
+      "target": "src_core_curriculum_find_all_exercises_or_embedded",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_weakness_profiler_tests_test_weakness_profiler_detects_low_ease_and_lapses",
+      "target": "src_cli_commands_progress_compute_weakness_profile",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L34",
+      "weight": 1.0
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "2d48cba5b1b090951f4b16d5f73a32817ff3dbbb"
+  "built_at_commit": "6cb08e095bc4d01ddecaadcd53fb61349cd6682a"
 }

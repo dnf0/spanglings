@@ -153,7 +153,8 @@ pub fn get_blitz_items(topic_filter: Option<&str>) -> Vec<BlitzItem> {
             explanation: "le + lo -> se lo",
         },
         BlitzItem {
-            prompt: "Replace 'les las' with cacophony rule: 'Les compro las flores' -> '___ compro'",
+            prompt:
+                "Replace 'les las' with cacophony rule: 'Les compro las flores' -> '___ compro'",
             target: "se las",
             topic: "pronouns",
             explanation: "les + las -> se las",
@@ -298,10 +299,19 @@ pub fn run_blitz(duration_secs: Option<u64>, topic: Option<&str>) -> anyhow::Res
         "{}",
         "==========================================================".blue()
     );
-    println!("  • Total Answered:   {}", total_answered.to_string().cyan().bold());
-    println!("  • Correct Answers:  {}", correct.to_string().green().bold());
+    println!(
+        "  • Total Answered:   {}",
+        total_answered.to_string().cyan().bold()
+    );
+    println!(
+        "  • Correct Answers:  {}",
+        correct.to_string().green().bold()
+    );
     println!("  • Accuracy:         {:.1}%", accuracy);
-    println!("  • Max Streak:       {}", max_streak.to_string().yellow().bold());
+    println!(
+        "  • Max Streak:       {}",
+        max_streak.to_string().yellow().bold()
+    );
     println!("  • Speed:            {:.1} answers/min", items_per_minute);
     println!(
         "{}",

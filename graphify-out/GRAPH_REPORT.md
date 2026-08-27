@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-08-26)
 
 ## Corpus Check
-- 172 files · ~41,863 words
+- 202 files · ~49,757 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 855 nodes · 945 edges · 146 communities (144 shown, 2 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 71 edges (avg confidence: 0.85)
+- 995 nodes · 1077 edges · 170 communities (168 shown, 2 thin omitted)
+- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 81 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2d48cba5`
+- Built from commit: `6cb08e09`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -150,41 +150,65 @@
 - Discoverability, Portability & Zero-Setup CLI Implementation Plan
 - Spanglings Product & Engineering Backlog
 - Spanglings Init Subcommand Implementation Plan
-- run_exercise
-- find_all_exercises
+- get_blitz_items
+- Smart Diagnostics & Pedagogical Enhancements Implementation Plan
 - generate_completions_string
-- Level
 - search_exercises
-- .from_str
+- Curriculum & Advanced Vocabulary Expansion Implementation Plan
+- Tech Spanish 01: Deployment & Releases
+- Tech Spanish 02: Remediating Vulnerabilities & Debugging
+- Tech Spanish 03: Concurrency & Deadlocks
+- Tech Spanish 04: System Performance & Latency
+- Tech Spanish 05: Request Routing & Gateways
+- Business Spanish 01: Formal Closings
+- Business Spanish 02: Formal Discourse Connectors
+- Business Spanish 03: Financial Settlements & Debts
+- Business Spanish 04: Dismissing Proposals & Motions
+- Business Spanish 05: Contractual Clauses & Stipulations
+- False Friends 01: 'Actualmente' vs 'Actually'
+- False Friends 02: 'Eventualmente' vs 'Eventually'
+- False Friends 03: 'Pretender' vs 'To Pretend'
+- False Friends 04: 'Soportar' vs 'To Support'
+- False Friends 05: 'Sensible' vs 'Sensible'
+- Register Elevation 01: 'Acometer' (Undertake) vs 'Hacer'
+- Register Elevation 02: 'Suscitar' (Arouse/Provoke) vs 'Causar'
+- Register Elevation 03: 'Surtir Efecto' (Take Effect)
+- Register Elevation 04: 'Albergar' (Harbor) vs 'Tener'
+- Register Elevation 05: 'Arrojar Luz' (Shed Light)
+- Regional Contrasts 01: Rioplatense Voseo in Present Tense
+- Regional Contrasts 02: Voseo Affirmative Imperative
+- Regional Contrasts 03: Pan-American 'Ustedes'
+- Regional Contrasts 04: Lexical Dialectal Pairs
+- Regional Contrasts 05: Reflexive Imperatives in Voseo
 
 ## God Nodes (most connected - your core abstractions)
 1. `App` - 31 edges
-2. `Exercise` - 28 edges
+2. `Exercise` - 30 edges
 3. `AppState` - 20 edges
 4. `validate_submission()` - 18 edges
-5. `find_all_exercises()` - 15 edges
-6. `find_all_exercises_or_embedded()` - 12 edges
-7. `evaluate_current_exercise_in()` - 12 edges
-8. `Spanglings Implementation Plan` - 12 edges
-9. `get_reference_card()` - 11 edges
-10. `create_sample_exercises()` - 10 edges
+5. `get_reference_card()` - 16 edges
+6. `find_all_exercises()` - 15 edges
+7. `find_all_exercises_or_embedded()` - 13 edges
+8. `evaluate_current_exercise_in()` - 12 edges
+9. `Spanglings Implementation Plan` - 12 edges
+10. `compute_weakness_profile()` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `test_list_exercises_json_serialization()` --calls--> `get_exercises_json()`  [INFERRED]
   tests/json_output_tests.rs → src/cli/commands/list.rs
 - `test_find_all_exercises_or_embedded_fallback()` --calls--> `find_all_exercises_or_embedded()`  [INFERRED]
   tests/embedded_tests.rs → src/core/curriculum.rs
+- `test_get_all_blitz_items()` --calls--> `get_blitz_items()`  [INFERRED]
+  tests/blitz_tests.rs → src/cli/commands/blitz.rs
+- `test_get_blitz_items_topic_filter()` --calls--> `get_blitz_items()`  [INFERRED]
+  tests/blitz_tests.rs → src/cli/commands/blitz.rs
 - `test_generate_bash_completions()` --calls--> `generate_completions_string()`  [INFERRED]
-  tests/completions_tests.rs → src/cli/commands/completions.rs
-- `test_generate_fish_completions()` --calls--> `generate_completions_string()`  [INFERRED]
-  tests/completions_tests.rs → src/cli/commands/completions.rs
-- `test_generate_zsh_completions()` --calls--> `generate_completions_string()`  [INFERRED]
   tests/completions_tests.rs → src/cli/commands/completions.rs
 
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (146 total, 2 thin omitted)
+## Communities (170 total, 2 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -196,11 +220,11 @@ Nodes (19): 1.1 Problem Statement, 1.2 The Solution: Spanglings, 1. Executive Su
 
 ### Community 2 - "App"
 Cohesion: 0.07
-Nodes (33): B, Drop, Frame, Rect, Option, ValidationResult, App, AppState (+25 more)
+Nodes (31): B, Drop, Frame, Rect, App, AppState, Option, Self (+23 more)
 
 ### Community 3 - "Exercise"
-Cohesion: 0.17
-Nodes (14): DiagnosticRule, Exercise, ExerciseType, ParseExerciseTypeError, Display, Err, Formatter, FromStr (+6 more)
+Cohesion: 0.05
+Nodes (43): Option, Result, show_hint(), get_exercises_json(), list_exercises(), Result, String, reset_exercise() (+35 more)
 
 ### Community 4 - "embedded.rs"
 Cohesion: 0.15
@@ -208,27 +232,27 @@ Nodes (17): Dir, Option, Result, run_init(), collect_from_embedded_dir(), extrac
 
 ### Community 7 - "AppState"
 Cohesion: 0.08
-Nodes (20): HashSet, calculate_sm2_review(), DateTime, Default, Option, Self, Utc, SrsItem (+12 more)
+Nodes (21): HashMap, HashSet, calculate_sm2_review(), DateTime, Default, Option, Self, Utc (+13 more)
 
 ### Community 10 - "validate_submission"
 Cohesion: 0.06
-Nodes (41): AppState, Result, run_review_session(), AccentMode, AccentResult, check_accent_match(), String, strip_accents() (+33 more)
+Nodes (43): Result, run_review_session(), AccentMode, AccentResult, check_accent_match(), String, strip_accents(), Diagnostic (+35 more)
 
 ### Community 12 - "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan"
 Cohesion: 0.25
 Nodes (7): Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan, Task 1: Scaffolding and Failing Tests, Task 2: Standard Error Codes, Task 3: Compiler-Style Diagnostics, Task 4: Accent Mode Integration and Module Exporting, Task 5: Core Validation Logic & Submission Evaluator, Task 6: Verification and Automated Quality Control
 
 ### Community 13 - "progress.rs"
-Cohesion: 0.21
-Nodes (11): BTreeMap, HashMap, get_progress_json(), LevelProgress, ProgressSummary, render_progress_bar(), Result, String (+3 more)
+Cohesion: 0.16
+Nodes (18): BTreeMap, compute_weakness_profile(), get_progress_json(), LevelProgress, ProgressSummary, render_progress_bar(), AppState, DateTime (+10 more)
 
 ### Community 14 - "Examples"
 Cohesion: 0.11
-Nodes (18): 1. Install via Cargo (Recommended), 1. Interactive TUI Mode, 2. Build from Source, 2. Headless Watcher Mode, 3. Search & Explore, 4. JSON Output Mode, 5. Targeted Run & Explanation, 6. Spaced Repetition Drills (+10 more)
+Nodes (18): 1. Install via Cargo (Recommended), 1. Interactive TUI Mode, 2. Build from Source, 2. Headless Watcher Mode, 3. Search & Explore, 4. JSON Output Mode, 5. Targeted Run & Explanation, 6. Spaced Repetition & Rapid-Fire Drills (+10 more)
 
 ### Community 15 - "get_reference_card"
-Cohesion: 0.19
-Nodes (13): Result, show_explanation(), get_reference_card(), list_reference_topics(), Option, test_get_accidental_se_reference_card(), test_get_past_tenses_reference_card(), test_get_por_para_reference_card() (+5 more)
+Cohesion: 0.16
+Nodes (18): Result, show_explanation(), get_reference_card(), list_reference_topics(), Option, test_get_accents_reference_card(), test_get_accidental_se_reference_card(), test_get_business_reference_card() (+10 more)
 
 ### Community 16 - "run_drill"
 Cohesion: 0.40
@@ -712,55 +736,151 @@ Nodes (7): Discoverability, Portability & Zero-Setup CLI Implementation Plan, Ta
 
 ### Community 138 - "Spanglings Product & Engineering Backlog"
 Cohesion: 0.33
-Nodes (5): 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Current Sprint), 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion, 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements, 📊 Focus Area 4: Interactive TUI & IDE Integrations, Spanglings Product & Engineering Backlog
+Nodes (5): 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Completed), 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion (Completed), 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements (Completed), 📊 Focus Area 4: Interactive TUI & IDE Integrations, Spanglings Product & Engineering Backlog
 
 ### Community 139 - "Spanglings Init Subcommand Implementation Plan"
 Cohesion: 0.29
 Nodes (6): Spanglings Init Subcommand Implementation Plan, Task 1: Create Integration Tests, Task 2: Implement Init Subcommand Command Handler, Task 3: Update CLI Definition and Main Dispatcher, Task 4: Verification and Code Quality, Task 5: Commit changes
 
-### Community 140 - "run_exercise"
-Cohesion: 0.15
-Nodes (10): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), find_exercise_by_query(), Option (+2 more)
+### Community 140 - "get_blitz_items"
+Cohesion: 0.26
+Nodes (10): BlitzItem, BlitzResult, evaluate_blitz_answer(), get_blitz_items(), Option, Result, Vec, run_blitz() (+2 more)
 
-### Community 141 - "find_all_exercises"
-Cohesion: 0.28
-Nodes (11): get_exercises_json(), list_exercises(), Result, String, collect_md_files(), find_all_exercises(), find_all_exercises_or_embedded(), P (+3 more)
+### Community 141 - "Smart Diagnostics & Pedagogical Enhancements Implementation Plan"
+Cohesion: 0.33
+Nodes (5): Smart Diagnostics & Pedagogical Enhancements Implementation Plan, Task 1: Accentuation & Orthographic Stress Reference Card, Task 2: Weakness Profiler & Topic Error Diagnostics, Task 3: 60-Second Rapid-Fire Blitz Mode (`spanglings blitz`), Task 4: Documentation Update & Verification
 
 ### Community 142 - "generate_completions_string"
 Cohesion: 0.27
 Nodes (8): generate_completions_string(), Result, Shell, String, run_completions(), test_generate_bash_completions(), test_generate_fish_completions(), test_generate_zsh_completions()
 
-### Community 143 - "Level"
-Cohesion: 0.20
-Nodes (4): Level, Display, Formatter, FromStr
-
 ### Community 144 - "search_exercises"
 Cohesion: 0.33
 Nodes (7): Result, Vec, run_search(), search_exercises(), test_search_by_id(), test_search_by_level(), test_search_by_topic_and_keyword()
 
-### Community 145 - ".from_str"
-Cohesion: 0.40
-Nodes (4): ParseLevelError, Err, Self, String
+### Community 145 - "Curriculum & Advanced Vocabulary Expansion Implementation Plan"
+Cohesion: 0.29
+Nodes (6): Curriculum & Advanced Vocabulary Expansion Implementation Plan, Task 1: Track 22 - Tech & Software Engineering Spanish (B2-C1), Task 2: Track 23 - Formal Business & Diplomatic Correspondence (B2-C1), Task 3: Track 24 - False Friends & High-Frequency Trap Drills, Task 4: Track 25 (Register Elevation) & Track 26 (Regional Contrasts & Voseo), Task 5: New In-Terminal Reference Cheat Sheets & Documentation Update
+
+### Community 147 - "Tech Spanish 01: Deployment & Releases"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Tech Spanish 01: Deployment & Releases
+
+### Community 148 - "Tech Spanish 02: Remediating Vulnerabilities & Debugging"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Tech Spanish 02: Remediating Vulnerabilities & Debugging
+
+### Community 149 - "Tech Spanish 03: Concurrency & Deadlocks"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Tech Spanish 03: Concurrency & Deadlocks
+
+### Community 150 - "Tech Spanish 04: System Performance & Latency"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Tech Spanish 04: System Performance & Latency
+
+### Community 151 - "Tech Spanish 05: Request Routing & Gateways"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Tech Spanish 05: Request Routing & Gateways
+
+### Community 152 - "Business Spanish 01: Formal Closings"
+Cohesion: 0.50
+Nodes (3): Business Spanish 01: Formal Closings, Context, Exercise
+
+### Community 153 - "Business Spanish 02: Formal Discourse Connectors"
+Cohesion: 0.50
+Nodes (3): Business Spanish 02: Formal Discourse Connectors, Context, Exercise
+
+### Community 154 - "Business Spanish 03: Financial Settlements & Debts"
+Cohesion: 0.50
+Nodes (3): Business Spanish 03: Financial Settlements & Debts, Context, Exercise
+
+### Community 155 - "Business Spanish 04: Dismissing Proposals & Motions"
+Cohesion: 0.50
+Nodes (3): Business Spanish 04: Dismissing Proposals & Motions, Context, Exercise
+
+### Community 156 - "Business Spanish 05: Contractual Clauses & Stipulations"
+Cohesion: 0.50
+Nodes (3): Business Spanish 05: Contractual Clauses & Stipulations, Context, Exercise
+
+### Community 157 - "False Friends 01: 'Actualmente' vs 'Actually'"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, False Friends 01: 'Actualmente' vs 'Actually'
+
+### Community 158 - "False Friends 02: 'Eventualmente' vs 'Eventually'"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, False Friends 02: 'Eventualmente' vs 'Eventually'
+
+### Community 159 - "False Friends 03: 'Pretender' vs 'To Pretend'"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, False Friends 03: 'Pretender' vs 'To Pretend'
+
+### Community 160 - "False Friends 04: 'Soportar' vs 'To Support'"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, False Friends 04: 'Soportar' vs 'To Support'
+
+### Community 161 - "False Friends 05: 'Sensible' vs 'Sensible'"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, False Friends 05: 'Sensible' vs 'Sensible'
+
+### Community 162 - "Register Elevation 01: 'Acometer' (Undertake) vs 'Hacer'"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Register Elevation 01: 'Acometer' (Undertake) vs 'Hacer'
+
+### Community 163 - "Register Elevation 02: 'Suscitar' (Arouse/Provoke) vs 'Causar'"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Register Elevation 02: 'Suscitar' (Arouse/Provoke) vs 'Causar'
+
+### Community 164 - "Register Elevation 03: 'Surtir Efecto' (Take Effect)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Register Elevation 03: 'Surtir Efecto' (Take Effect)
+
+### Community 165 - "Register Elevation 04: 'Albergar' (Harbor) vs 'Tener'"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Register Elevation 04: 'Albergar' (Harbor) vs 'Tener'
+
+### Community 166 - "Register Elevation 05: 'Arrojar Luz' (Shed Light)"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Register Elevation 05: 'Arrojar Luz' (Shed Light)
+
+### Community 167 - "Regional Contrasts 01: Rioplatense Voseo in Present Tense"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Regional Contrasts 01: Rioplatense Voseo in Present Tense
+
+### Community 168 - "Regional Contrasts 02: Voseo Affirmative Imperative"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Regional Contrasts 02: Voseo Affirmative Imperative
+
+### Community 169 - "Regional Contrasts 03: Pan-American 'Ustedes'"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Regional Contrasts 03: Pan-American 'Ustedes'
+
+### Community 170 - "Regional Contrasts 04: Lexical Dialectal Pairs"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Regional Contrasts 04: Lexical Dialectal Pairs
+
+### Community 171 - "Regional Contrasts 05: Reflexive Imperatives in Voseo"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Regional Contrasts 05: Reflexive Imperatives in Voseo
 
 ## Knowledge Gaps
-- **298 isolated node(s):** `spanglings`, `DrillItem`, `Key Features`, `1. Install via Cargo (Recommended)`, `2. Build from Source` (+293 more)
+- **357 isolated node(s):** `spanglings`, `DrillItem`, `Key Features`, `1. Install via Cargo (Recommended)`, `2. Build from Source` (+352 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Exercise` connect `Exercise` to `App`, `embedded.rs`, `validate_submission`, `run_exercise`, `find_all_exercises`, `Level`, `search_exercises`?**
-  _High betweenness centrality (0.048) - this node is a cross-community bridge._
-- **Why does `App` connect `App` to `Exercise`?**
-  _High betweenness centrality (0.027) - this node is a cross-community bridge._
-- **Why does `validate_submission()` connect `validate_submission` to `App`, `Exercise`, `run_exercise`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
+- **Why does `Exercise` connect `Exercise` to `App`, `embedded.rs`, `validate_submission`, `progress.rs`, `search_exercises`?**
+  _High betweenness centrality (0.044) - this node is a cross-community bridge._
+- **Why does `App` connect `App` to `validate_submission`, `Exercise`?**
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+- **Why does `validate_submission()` connect `validate_submission` to `App`, `Exercise`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
 - **Are the 13 inferred relationships involving `validate_submission()` (e.g. with `run_review_session()` and `run_exercise()`) actually correct?**
   _`validate_submission()` has 13 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 8 inferred relationships involving `find_all_exercises()` (e.g. with `show_hint()` and `run_review_session()`) actually correct?**
-  _`find_all_exercises()` has 8 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 14 inferred relationships involving `get_reference_card()` (e.g. with `show_explanation()` and `draw_right_pane()`) actually correct?**
+  _`get_reference_card()` has 14 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `DrillItem`, `Key Features` to the rest of the system?**
-  _298 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _357 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
