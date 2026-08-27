@@ -298,3 +298,54 @@ rompió
         _ => panic!("Expected fallback diagnostic with populated concept metadata"),
     }
 }
+
+#[test]
+fn test_language_completeness_diagnostic_rules_e0048_to_e0053() {
+    let raw_md = r#"# Adversatives 04
+<!-- id: b2_adversative_test | level: B2 | topic: adversatives | type: cloze | concepts: ["adversative_sino_que_clauses"] | prerequisites: ["adversative_pero_vs_sino"] | grammar_focus: "Finite clause substitution with 'sino que'." | contrast_note: "Finite clause substitution (*sino que rediseñó*) vs bare *sino* or *pero*." -->
+
+### Exercise
+El equipo no solo corrigió el error en producción, (sino que rediseñó / pero rediseñó) ___ todo el subsistema.
+
+<!-- SOLUTION
+sino que rediseñó
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "pero rediseñó" | code: "E0052" | message: "Substituting with a conjugated verb requires 'sino que rediseñó'."
+-->
+
+<!-- HINTS
+Tier 1: Use 'sino que' followed by 'rediseñó'.
+Tier 2: Form: 'sino que rediseñó'.
+Tier 3: Write 'sino que rediseñó'.
+-->
+"#;
+
+    let exercise = Exercise::from_markdown("exercises/52_adversatives/04_test.md", raw_md).unwrap();
+    let result = validate_submission(&exercise, "pero rediseñó", AccentMode::Forgiving);
+
+    match result {
+        ValidationResult::Failed { diagnostic, .. } => {
+            assert_eq!(diagnostic.code, "E0052");
+            assert_eq!(
+                diagnostic.title,
+                "adversative contrast (pero / sino / sino que)"
+            );
+            assert!(diagnostic
+                .message
+                .contains("Substituting with a conjugated verb requires 'sino que rediseñó'."));
+            assert_eq!(
+                diagnostic.linked_concept,
+                Some("adversative_sino_que_clauses".to_string())
+            );
+
+            let terminal = diagnostic.format_terminal();
+            assert!(terminal.contains("error[E0052]"));
+            assert!(terminal.contains("adversative contrast (pero / sino / sino que)"));
+            assert!(terminal.contains("Linked Concept: adversative_sino_que_clauses"));
+        }
+        _ => panic!("Expected E0052 diagnostic match"),
+    }
+}
+

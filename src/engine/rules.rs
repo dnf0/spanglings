@@ -14,6 +14,12 @@ pub const CODE_CLITIC_STACKING: &str = "E0801";
 pub const CODE_CLITIC_ACCENT: &str = "E0802";
 pub const CODE_PREPOSITIONAL_REGIME: &str = "E0901";
 pub const CODE_ACCIDENTAL_SE: &str = "E1001";
+pub const CODE_EPISTEMIC_CONJECTURE: &str = "E0048";
+pub const CODE_CLITIC_DOUBLING: &str = "E0049";
+pub const CODE_PERSONAL_A: &str = "E0050";
+pub const CODE_GERUND_RESTRICTION: &str = "E0051";
+pub const CODE_ADVERSATIVE_CONTRAST: &str = "E0052";
+pub const CODE_OPTATIVE_LEGAL: &str = "E0053";
 
 pub fn get_rule_title(code: &str) -> String {
     match code {
@@ -32,6 +38,12 @@ pub fn get_rule_title(code: &str) -> String {
         "E0802" => "clitic accentuation error".to_string(),
         "E0901" => "prepositional regime mismatch".to_string(),
         "E1001" => "accidental se usage".to_string(),
+        "E0048" => "epistemic conjecture / probability".to_string(),
+        "E0049" => "clitic doubling / left-dislocation".to_string(),
+        "E0050" => "personal a / animacy marking".to_string(),
+        "E0051" => "gerund restriction / posteriority".to_string(),
+        "E0052" => "adversative contrast (pero / sino / sino que)".to_string(),
+        "E0053" => "optative / legal subjunctive".to_string(),
         _ => "grammatical rule violation".to_string(),
     }
 }
