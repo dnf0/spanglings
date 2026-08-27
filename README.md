@@ -20,7 +20,10 @@ Duolingo is often too slow, repetitive, and child-oriented. **Spanglings** provi
 - 🤖 **Machine-Readable Output (`--json`)**: Streamlined JSON serialization for external scripts, status bars (Starship, tmux), and IDE integrations.
 - 🐚 **Shell Auto-Completions (`spanglings completions`)**: Native autocompletions for Bash, Zsh, Fish, PowerShell, and Elvish.
 - 📖 **In-Terminal Cheat Sheets (`spanglings explain <topic>`)**: Reference cards for *ser vs estar*, past aspectual shifts, subjunctive triggers (WEIRDO), *por vs para*, prepositional regimes, pronoun stacking, accidental *se*, tech Spanish, business correspondence, false friends, and *voseo*.
-- 📚 **141 Handcrafted Exercises across 27 Tracks**: Complete coverage from baseline drills through advanced C1 collocations and technical domains.
+- 🔌 **Native Language Server Protocol (LSP) Engine (`spanglings lsp`)**: Real-time stdio JSON-RPC server with live diagnostics, rich hover popups (conjugations and grammar sheets), and autocompletion for VS Code, Neovim, Helix, and Zed.
+- 📦 **Anki & Markdown Study Pack Exporter (`spanglings export`)**: Export full decks to Anki TSV format, generate Markdown study guides for Obsidian, or export JSON progress metrics.
+- 🔄 **Portable State Sync (`spanglings sync`)**: Export and merge learning history, streaks, and SRS mastery across workstations.
+- 📚 **165 Handcrafted Exercises across 31 Tracks**: Complete coverage from baseline drills through advanced C1 collocations, distributed system architecture RFCs, and executive leadership.
 
 ---
 
@@ -73,6 +76,12 @@ Commands:
   blitz        Start 60-second rapid-fire conjugation speed drill
   review       Review exercises due for Spaced Repetition (SM-2)
   explain      Display in-terminal grammar cheat sheet for a topic
+  conjugate    Look up full conjugation tables and tenses for any Spanish verb
+  export       Export study materials to Anki TSV, Markdown guide, or JSON
+  sync         Backup, restore, or merge learning state and review history
+  lsp          Start Language Server Protocol (LSP) stdio server for editor integrations
+  hook         Manage Git pre-commit / pre-push Spanish practice hooks
+  pack         Manage, scaffold, and validate custom curriculum exercise packs
   completions  Generate shell auto-completions (bash, zsh, fish, powershell)
   reset        Reset an exercise to its initial prompt
   tui          Launch the interactive terminal UI
@@ -95,12 +104,39 @@ spanglings
 - `Enter`: Submit answer (or select search result)
 - `Ctrl+H` / `F1`: Cycle progressive hints (Tier 1 → 2 → 3)
 - `Ctrl+E` / `F2`: Toggle grammar reference cheat sheet
+- `Ctrl+K` / `F3`: Open in-TUI Verb Conjugator modal
+- `Ctrl+B` / `F4`: Open in-TUI Reference Sheet Browser modal
+- `?`: Open Help & Keybindings overlay
 - `Tab` / `Ctrl+N` / `Down`: Next exercise
 - `BackTab` / `Ctrl+P` / `Up`: Previous exercise
 - `Ctrl+R`: Reset current exercise
-- `Esc` / `Ctrl+C`: Cancel search / Quit
+- `Esc` / `Ctrl+C`: Dismiss modal / Cancel search / Quit
 
-#### 2. Headless Watcher Mode & Editor Integration
+#### 2. Language Server Protocol (LSP) Editor Integration
+Configure your editor to run `spanglings lsp` for live diagnostics and hover grammar docs.
+
+**VS Code / Neovim / Helix configuration:**
+```bash
+spanglings lsp
+```
+
+#### 3. Export to Anki & Markdown Study Notes
+```bash
+# Export full curriculum to Anki TSV format
+spanglings export --format anki --out anki_spanish_deck.txt
+
+# Export only exercises due for SRS review
+spanglings export --format anki --only-due --out due_cards.txt
+
+# Export comprehensive Markdown study guide
+spanglings export --format markdown --out SPANGLINGS_GUIDE.md
+
+# Backup and sync state between machines
+spanglings sync --export backup.json
+spanglings sync --import backup.json
+```
+
+#### 4. Headless Watcher Mode & Editor Integration
 ```bash
 # Continuous file watcher
 spanglings watch
@@ -109,9 +145,8 @@ spanglings watch
 spanglings check exercises/03_subjunctive_weirdo/01_wishes_volition.md
 spanglings check --json
 ```
-Open any `.md` file under `exercises/` in your editor, remove `<!-- I AM NOT DONE -->`, fill in the `___`, and save. Spanglings will automatically validate and report results.
 
-#### 3. Search & Explore
+#### 5. Search & Explore
 ```bash
 # Search for subjunctive exercises
 spanglings search subjunctive
@@ -123,7 +158,7 @@ spanglings search "se me"
 spanglings search C1
 ```
 
-#### 4. JSON Output & Activity Heatmap
+#### 6. JSON Output & Activity Heatmap
 ```bash
 # Terminal progress with 12-week ANSI contribution heatmap and weakness diagnostics
 spanglings progress
@@ -133,29 +168,9 @@ spanglings progress --json
 
 # Machine-readable exercise listing
 spanglings list --json
-
-# Machine-readable search results
-spanglings search subjunctive --json
 ```
 
-#### 5. Targeted Run & Explanation
-```bash
-# Validate a single exercise
-spanglings run exercises/03_subjunctive_weirdo/01_wishes_volition.md
-
-# Get progressive hints
-spanglings hint b1_subj_weirdo_wishes
-
-# Read a grammar cheat sheet
-spanglings explain subjunctive
-spanglings explain accents
-spanglings explain tech
-spanglings explain business
-spanglings explain false-friends
-spanglings explain voseo
-```
-
-#### 6. Spaced Repetition & Rapid-Fire Drills
+#### 7. Spaced Repetition & Rapid-Fire Drills
 ```bash
 # Review due exercises with SM-2 spaced repetition
 spanglings review
@@ -169,7 +184,7 @@ spanglings blitz
 spanglings blitz --seconds 30 --topic preterite
 ```
 
-#### 7. Verb Conjugator & Tense Matrix
+#### 8. Verb Conjugator & Tense Matrix
 ```bash
 # Full colorized conjugation table (Indicative & Subjunctive)
 spanglings conjugate ser
@@ -183,7 +198,7 @@ spanglings conjugate poner imperativo
 spanglings conjugate tener --json
 ```
 
-#### 8. Git Pre-Commit / Pre-Push Micro-Drill Hook
+#### 9. Git Pre-Commit / Pre-Push Micro-Drill Hook
 ```bash
 # Install pre-commit Spanish practice hook
 spanglings hook install
@@ -192,30 +207,9 @@ spanglings hook install
 spanglings hook uninstall
 ```
 
-#### 9. Custom Curriculum Packs & Linting
-```bash
-# Scaffold a new custom exercise track
-spanglings pack create "medical-spanish"
-
-# Validate custom tracks for schema correctness and solvability
-spanglings pack validate exercises/medical_spanish
-```
-
-#### 10. Shell Autocompletions
-```bash
-# For Zsh (add to ~/.zshrc)
-eval "$(spanglings completions zsh)"
-
-# For Bash
-eval "$(spanglings completions bash)"
-
-# For Fish
-spanglings completions fish | source
-```
-
 ---
 
-## Curriculum Tracks (141 Exercises across 27 Tracks)
+## Curriculum Tracks (165 Exercises across 31 Tracks)
 
 | Track | Topic | CEFR Level | Exercises |
 |---|---|---|---|
@@ -246,6 +240,10 @@ spanglings completions fish | source
 | `24_false_friends` | High-frequency cognate traps (*actualmente*, *eventualmente*, *pretender*, *sensato*) | B1 / B2 | 5 |
 | `25_register_elevation` | Elevating light verbs to literary C1 equivalents (*acometer*, *suscitar*, *albergar*) | C1 | 5 |
 | `26_regional_contrasts` | Rioplatense *voseo* (*tenés*, *decime*, *sentate*), Pan-American *ustedes* & lexical pairs | B1 / B2 | 5 |
+| `27_system_design` | Distributed failover, 2PC transactions, circuit breakers, cache invalidation, database sharding | C1 | 6 |
+| `28_advanced_subjunctive_clauses` | Reduplicative subjunctive, *por mucho que*, *aun a riesgo de que*, *así sea*, *pase lo que pase* | C1 | 6 |
+| `29_advanced_verbal_periphrases` | High-register periphrases (*dar por sentado*, *echar a perder*, *ponerse a*, *llevar sin*, *venir a decir*) | B2 / C1 | 6 |
+| `30_executive_leadership` | Stakeholder diplomacy, strategic pivots, KPI reporting, headcount reallocation, board resolutions | C1 | 6 |
 
 ---
 
