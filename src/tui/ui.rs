@@ -39,6 +39,10 @@ pub fn draw_ui(frame: &mut Frame, app: &App) {
             let modal_area = centered_rect(74, 78, size);
             draw_help_modal(frame, app, modal_area);
         }
+        crate::tui::app::AppMode::PlacementTest => {
+            let modal_area = centered_rect(82, 85, size);
+            draw_placement_test_modal(frame, app, modal_area);
+        }
         _ => {}
     }
 }
@@ -675,6 +679,40 @@ fn draw_footer(frame: &mut Frame, app: &App, area: Rect) {
             ),
             Span::styled(" Close Help Overlay ", Style::default().fg(Color::White)),
         ]),
+        crate::tui::app::AppMode::PlacementTest => Line::from(vec![
+            Span::styled(
+                " [Type] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Answer  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Enter] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Green)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Submit / Next  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [F] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Fast-Track  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [Esc] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Red)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Exit Placement ", Style::default().fg(Color::White)),
+        ]),
         crate::tui::app::AppMode::Editing => Line::from(vec![
             Span::styled(
                 " [/] ",
@@ -1253,6 +1291,18 @@ fn draw_help_modal(frame: &mut Frame, _app: &App, area: Rect) {
         ]),
         Line::from(vec![
             Span::styled(
+                "  [t] / [F5]            ",
+                Style::default()
+                    .fg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Launch Diagnostic Placement Test & Level Fast-Track",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(vec![
+            Span::styled(
                 "  [/]                   ",
                 Style::default()
                     .fg(Color::Yellow)
@@ -1351,4 +1401,285 @@ fn draw_help_modal(frame: &mut Frame, _app: &App, area: Rect) {
         .block(modal_block)
         .wrap(Wrap { trim: false });
     frame.render_widget(help_para, area);
+}
+
+fn draw_placement_test_modal(frame: &mut Frame, app: &App, area: Rect) {
+    frame.render_widget(Clear, area);
+
+    if !app.placement_finished {
+        let total = app.placement_battery.len();
+        let current_num = (app.placement_current_idx + 1).min(total);
+        let q_opt = app.placement_battery.get(app.placement_current_idx);
+
+        let modal_block = Block::default()
+            .borders(Borders::ALL)
+            .border_type(BorderType::Rounded)
+            .title(format!(
+                " 🎯 Diagnostic Placement Test ({}/{}) — [Esc to Exit] ",
+                current_num, total
+            ))
+            .border_style(Style::default().fg(Color::Cyan));
+        frame.render_widget(modal_block.clone(), area);
+
+        let inner_area = modal_block.inner(area);
+        let chunks = Layout::default()
+            .direction(Direction::Vertical)
+            .constraints([
+                Constraint::Length(3), // Progress & Tier
+                Constraint::Length(4), // English Context
+                Constraint::Length(5), // Spanish Cloze Prompt
+                Constraint::Length(3), // User Input
+                Constraint::Length(2), // Hotkey instructions
+            ])
+            .split(inner_area);
+
+        if let Some(q) = q_opt {
+            let pct = if total > 0 {
+                (app.placement_current_idx as f64 / total as f64) * 100.0
+            } else {
+                0.0
+            };
+
+            let progress_block = Block::default()
+                .borders(Borders::ALL)
+                .border_type(BorderType::Rounded)
+                .border_style(Style::default().fg(Color::DarkGray));
+            let progress_text = Paragraph::new(Line::from(vec![
+                Span::styled(" CEFR Tier: ", Style::default().fg(Color::White)),
+                Span::styled(
+                    format!("[{:?}]", q.level),
+                    Style::default()
+                        .fg(Color::Yellow)
+                        .add_modifier(Modifier::BOLD),
+                ),
+                Span::styled(
+                    format!("   |   Progress: {:.0}% ({}/{})", pct, app.placement_current_idx, total),
+                    Style::default().fg(Color::Cyan),
+                ),
+            ]))
+            .block(progress_block);
+            frame.render_widget(progress_text, chunks[0]);
+
+            let ctx_block = Block::default()
+                .borders(Borders::ALL)
+                .border_type(BorderType::Rounded)
+                .title(" English Context & Objective ")
+                .border_style(Style::default().fg(Color::White));
+            let ctx_para = Paragraph::new(Line::from(Span::styled(
+                format!(" {}", q.context_en),
+                Style::default().fg(Color::White).add_modifier(Modifier::ITALIC),
+            )))
+            .block(ctx_block);
+            frame.render_widget(ctx_para, chunks[1]);
+
+            let prompt_block = Block::default()
+                .borders(Borders::ALL)
+                .border_type(BorderType::Rounded)
+                .title(" Spanish Prompt (Fill in the blank ___) ")
+                .border_style(Style::default().fg(Color::Yellow));
+            let prompt_para = Paragraph::new(Line::from(Span::styled(
+                format!(" {}", q.prompt_es),
+                Style::default()
+                    .fg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            )))
+            .block(prompt_block)
+            .wrap(Wrap { trim: false });
+            frame.render_widget(prompt_para, chunks[2]);
+
+            let input_block = Block::default()
+                .borders(Borders::ALL)
+                .border_type(BorderType::Rounded)
+                .title(" Your Answer ")
+                .border_style(Style::default().fg(Color::Green));
+
+            let cursor_display = if app.placement_cursor < app.placement_input.chars().count() {
+                let byte_idx = app
+                    .placement_input
+                    .char_indices()
+                    .nth(app.placement_cursor)
+                    .map(|(i, _)| i)
+                    .unwrap_or(app.placement_input.len());
+                let (b, rest) = app.placement_input.split_at(byte_idx);
+                let mut chars = rest.chars();
+                let c = chars.next().unwrap_or(' ');
+                let rem = chars.as_str();
+                vec![
+                    Span::styled(
+                        format!(" {}", b),
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        c.to_string(),
+                        Style::default()
+                            .fg(Color::Black)
+                            .bg(Color::Green)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        rem,
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]
+            } else {
+                vec![
+                    Span::styled(
+                        format!(" {}", app.placement_input),
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(" ", Style::default().fg(Color::Black).bg(Color::Green)),
+                ]
+            };
+
+            let input_para = Paragraph::new(Line::from(cursor_display)).block(input_block);
+            frame.render_widget(input_para, chunks[3]);
+
+            let footer_text = Paragraph::new(Line::from(vec![
+                Span::styled(
+                    " [Enter] ",
+                    Style::default()
+                        .fg(Color::Green)
+                        .add_modifier(Modifier::BOLD),
+                ),
+                Span::styled("Submit & Next Question   ", Style::default().fg(Color::DarkGray)),
+                Span::styled(
+                    " [Esc] ",
+                    Style::default().fg(Color::Red).add_modifier(Modifier::BOLD),
+                ),
+                Span::styled("Cancel Placement Test", Style::default().fg(Color::DarkGray)),
+            ]))
+            .alignment(Alignment::Center);
+            frame.render_widget(footer_text, chunks[4]);
+        }
+    } else {
+        // Placement Results Screen
+        let modal_block = Block::default()
+            .borders(Borders::ALL)
+            .border_type(BorderType::Rounded)
+            .title(" 🏆 CEFR Diagnostic Placement Results ")
+            .border_style(Style::default().fg(Color::Green));
+        frame.render_widget(modal_block.clone(), area);
+
+        let inner_area = modal_block.inner(area);
+        let chunks = Layout::default()
+            .direction(Direction::Vertical)
+            .constraints([
+                Constraint::Length(5), // Assessed Level Banner
+                Constraint::Min(8),    // Breakdown Table
+                Constraint::Length(3), // Action bar
+            ])
+            .split(inner_area);
+
+        if let Some(res) = &app.placement_result {
+            let banner_block = Block::default()
+                .borders(Borders::ALL)
+                .border_type(BorderType::Rounded)
+                .border_style(Style::default().fg(Color::Yellow));
+
+            let banner_text = Paragraph::new(vec![
+                Line::from(vec![
+                    Span::styled(" Assessed CEFR Level: ", Style::default().fg(Color::White)),
+                    Span::styled(
+                        format!(" [{:?}] ", res.assessed_level),
+                        Style::default()
+                            .fg(Color::Black)
+                            .bg(Color::Green)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+                Line::from(vec![
+                    Span::styled(" Diagnostic Accuracy: ", Style::default().fg(Color::White)),
+                    Span::styled(
+                        format!("{:.1}% ({} of {} correct)", res.percentage, res.total_correct, res.total_questions),
+                        Style::default()
+                            .fg(Color::Yellow)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+            ])
+            .block(banner_block);
+            frame.render_widget(banner_text, chunks[0]);
+
+            let mut breakdown_lines = vec![
+                Line::from(Span::styled(
+                    "CEFR Level Mastery Breakdown:",
+                    Style::default()
+                        .fg(Color::Cyan)
+                        .add_modifier(Modifier::BOLD | Modifier::UNDERLINED),
+                )),
+                Line::from(""),
+            ];
+
+            for lvl in [
+                crate::core::curriculum::Level::Baseline,
+                crate::core::curriculum::Level::B1,
+                crate::core::curriculum::Level::B2,
+                crate::core::curriculum::Level::C1,
+            ] {
+                if let Some(&(correct, total)) = res.scores_by_level.get(&lvl) {
+                    let pct = if total > 0 {
+                        (correct as f64 / total as f64) * 100.0
+                    } else {
+                        0.0
+                    };
+                    let (status_str, status_style) = if pct >= 75.0 {
+                        ("PASS (Mastered)", Style::default().fg(Color::Green).add_modifier(Modifier::BOLD))
+                    } else {
+                        ("IN PROGRESS", Style::default().fg(Color::Yellow))
+                    };
+
+                    breakdown_lines.push(Line::from(vec![
+                        Span::styled(format!("  • {:<10} ", format!("{:?}", lvl)), Style::default().fg(Color::White).add_modifier(Modifier::BOLD)),
+                        Span::styled(format!("{:>2}/{} ({:>5.1}%)  ", correct, total, pct), Style::default().fg(Color::Cyan)),
+                        Span::styled(format!("[{}]", status_str), status_style),
+                    ]));
+                }
+            }
+
+            let breakdown_block = Block::default()
+                .borders(Borders::ALL)
+                .border_type(BorderType::Rounded)
+                .border_style(Style::default().fg(Color::DarkGray));
+            let breakdown_para = Paragraph::new(breakdown_lines).block(breakdown_block);
+            frame.render_widget(breakdown_para, chunks[1]);
+
+            let action_block = Block::default()
+                .borders(Borders::ALL)
+                .border_type(BorderType::Rounded)
+                .border_style(Style::default().fg(Color::Cyan));
+
+            let action_text = if app.placement_fast_tracked {
+                Paragraph::new(Line::from(vec![
+                    Span::styled(" ✨ Level exercises fast-tracked! ", Style::default().fg(Color::Green).add_modifier(Modifier::BOLD)),
+                    Span::styled(" [Enter/Esc] Close Modal ", Style::default().fg(Color::White)),
+                ]))
+                .block(action_block)
+                .alignment(Alignment::Center)
+            } else if !res.passed_levels.is_empty() {
+                Paragraph::new(Line::from(vec![
+                    Span::styled(" [F] ", Style::default().fg(Color::Yellow).add_modifier(Modifier::BOLD)),
+                    Span::styled("Fast-Track & Auto-Complete Mastered Levels   ", Style::default().fg(Color::White)),
+                    Span::styled(" [Enter/Esc] ", Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD)),
+                    Span::styled("Close Modal", Style::default().fg(Color::DarkGray)),
+                ]))
+                .block(action_block)
+                .alignment(Alignment::Center)
+            } else {
+                Paragraph::new(Line::from(vec![
+                    Span::styled(" [Enter/Esc] ", Style::default().fg(Color::Cyan).add_modifier(Modifier::BOLD)),
+                    Span::styled("Close Modal & Begin Recommended Tracks", Style::default().fg(Color::White)),
+                ]))
+                .block(action_block)
+                .alignment(Alignment::Center)
+            };
+
+            frame.render_widget(action_text, chunks[2]);
+        }
+    }
 }
