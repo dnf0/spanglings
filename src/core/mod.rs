@@ -1,3 +1,4 @@
+pub mod conjugator;
 pub mod curriculum;
 pub mod embedded;
 pub mod exercise;

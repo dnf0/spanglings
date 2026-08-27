@@ -50,6 +50,28 @@ fn main() -> anyhow::Result<()> {
                 std::process::exit(1);
             }
         }
+        Some(Commands::Conjugate { verb, tense }) => {
+            spanglings::cli::commands::conjugate::run_conjugate(&verb, tense.as_deref(), cli.json)?;
+        }
+        Some(Commands::Hook { action }) => match action {
+            spanglings::cli::HookAction::Install { hook_type } => {
+                spanglings::cli::commands::hook::run_hook_install(&hook_type)?;
+            }
+            spanglings::cli::HookAction::Uninstall { hook_type } => {
+                spanglings::cli::commands::hook::run_hook_uninstall(&hook_type)?;
+            }
+        },
+        Some(Commands::Pack { action }) => match action {
+            spanglings::cli::PackAction::Create { name } => {
+                spanglings::cli::commands::pack::run_pack_create(&name)?;
+            }
+            spanglings::cli::PackAction::Validate { path } => {
+                let passed = spanglings::cli::commands::pack::run_pack_validate(&path)?;
+                if !passed {
+                    std::process::exit(1);
+                }
+            }
+        },
         Some(Commands::Tui) => {
             spanglings::tui::start_tui(cli.strict_accents)?;
         }

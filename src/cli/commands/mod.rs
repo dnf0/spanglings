@@ -1,11 +1,14 @@
 pub mod blitz;
 pub mod check;
 pub mod completions;
+pub mod conjugate;
 pub mod drill;
 pub mod explain;
 pub mod hint;
+pub mod hook;
 pub mod init;
 pub mod list;
+pub mod pack;
 pub mod progress;
 pub mod review;
 pub mod run;

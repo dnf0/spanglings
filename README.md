@@ -169,7 +169,39 @@ spanglings blitz
 spanglings blitz --seconds 30 --topic preterite
 ```
 
-#### 7. Shell Autocompletions
+#### 7. Verb Conjugator & Tense Matrix
+```bash
+# Full colorized conjugation table (Indicative & Subjunctive)
+spanglings conjugate ser
+spanglings conjugate haber
+
+# Specific tense lookup (Subjunctive or Imperatives)
+spanglings conjugate hablar subjuntivo
+spanglings conjugate poner imperativo
+
+# Machine-readable verb paradigm JSON
+spanglings conjugate tener --json
+```
+
+#### 8. Git Pre-Commit / Pre-Push Micro-Drill Hook
+```bash
+# Install pre-commit Spanish practice hook
+spanglings hook install
+
+# Remove hook safely
+spanglings hook uninstall
+```
+
+#### 9. Custom Curriculum Packs & Linting
+```bash
+# Scaffold a new custom exercise track
+spanglings pack create "medical-spanish"
+
+# Validate custom tracks for schema correctness and solvability
+spanglings pack validate exercises/medical_spanish
+```
+
+#### 10. Shell Autocompletions
 ```bash
 # For Zsh (add to ~/.zshrc)
 eval "$(spanglings completions zsh)"

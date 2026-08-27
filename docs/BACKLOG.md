@@ -56,3 +56,16 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
   - **Description**: Press `/` in TUI to filter exercises instantly by topic, keyword, or level with interactive search bar and live keyboard navigation.
 - [x] **SPANG-032: Editor Diagnostic Checker & JSON Streamer (`spanglings check`)**
   - **Description**: Real-time compiler-style and JSON diagnostic streamer (`spanglings check <file> [--json]`) for seamless integration with VS Code, Zed, Neovim, and CI pipelines.
+
+---
+
+## ⚡ Focus Area 5: Terminal Conjugation Engine & Developer Workflow Hooks (Completed)
+
+- [x] **SPANG-040: Automated Release Pipeline & Crates.io Publishing**
+  - **Description**: Multi-platform release pipeline publishing signed binary bundles and automated `cargo publish` execution on tag pushes with `CARGO_REGISTRY_TOKEN`.
+- [x] **SPANG-041: High-Precision Verb Conjugator (`spanglings conjugate <verb> [tense]`)**
+  - **Description**: Terminal lookup engine rendering complete color-coded conjugation grids (Present, Preterite, Imperfect, Subjunctive, Imperative, Participle, Gerund) with irregular stem highlights.
+- [x] **SPANG-042: Git Pre-Commit / Pre-Push Spanish Practice Hook (`spanglings hook`)**
+  - **Description**: Installable Git hook prompting developer with 1 rapid active-recall conjugation/grammar flashcard before code commits.
+- [x] **SPANG-043: Custom Curriculum Pack Scaffolder & Validator (`spanglings pack`)**
+  - **Description**: Tools to scaffold custom community/industry tracks (`spanglings pack create`) and validate exercise markdown solvability (`spanglings pack validate`).
