@@ -1,0 +1,50 @@
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [0.3.0] - 2026-08-27
+
+### Added
+- **Full-Spectrum C1 & Practical Curriculum Expansion**: Added Tracks 27 through 59, bringing the total curriculum catalog to **60 Tracks and 339 handcrafted exercises** across CEFR levels A1 through C1.
+- **81-Concept Linguistic Knowledge Graph (DAG)**: Built a cycle-free Directed Acyclic Graph modeling dependencies between 81 linguistic concepts with automatic learning frontier computation and weakness root-cause tracing.
+- **Compiler Diagnostic System & 59 Error Codes**: Implemented rustc-style diagnostics with dynamic carets (`^^^^`), contrast notes, linked concepts, and actionable tips for compiler error codes `E0001` through `E0059`.
+- **In-Terminal Error Code Resolution**: Enabled direct query of compiler diagnostics via `spanglings explain <ERROR_CODE>` (e.g. `spanglings explain E0301`).
+- **Interactive 6-Station Guided Onboarding Tour**: Added `spanglings tour` and an interactive first-run onboarding popup dialog in the TUI.
+- **Native Language Server Protocol (LSP)**: Integrated `spanglings lsp` providing real-time diagnostics, autocompletions, and hover tooltips for VS Code, Neovim, Helix, and Zed.
+- **Calibrated CEFR Diagnostic Placement Assessment**: Added `spanglings test` for multi-tier level evaluation and automatic level fast-tracking.
+- **Anki & Markdown Study Exporter**: Added `spanglings export` supporting Anki TSV decks, Obsidian Markdown notes, and JSON progress exports.
+- **Multi-Machine Progress Sync Engine**: Added `spanglings sync` for portable backup, restore, and progress merging.
+- **Kubelings-Grade Documentation Site**: Launched live documentation site at https://dnf0.github.io/spanglings/ with an animated 4-frame CSS keyframe terminal demo.
+
+### Changed
+- **Modern Watcher Experience**: Replaced legacy comment-deletion markers (`<!-- I AM NOT DONE -->`) with non-blocking keybindings (`[n]`, `[p]`, `[r]`, `[h]`, `[c]`, `[q]`) and sub-20ms evaluation on pure correctness.
+- **Retroactive Exercise Tagging**: Tagged all 339 exercises with `concepts: [...]`, `prerequisites: [...]`, and `grammar_focus: "..."` metadata.
+
+---
+
+## [0.2.0] - 2026-08-27
+
+### Added
+- **Full Interactive Terminal UI (`ratatui`)**: Dual-pane editor, exercise browser, and live validation.
+- **In-TUI Verb Conjugator & Reference Browser**: Real-time verb table lookups and 24 searchable grammar cheat sheets.
+- **Git Practice Hooks**: Pre-commit and pre-push Spanish micro-drill hooks (`spanglings hook`).
+- **Custom Curriculum Packs**: Pack scaffolding, validation, and installation engine (`spanglings pack`).
+- **Rapid-Fire Blitz Drills**: 60-second conjugation speed challenge (`spanglings blitz`).
+
+---
+
+## [0.1.1] - 2026-08-27
+
+### Fixed
+- Fixed headless file watcher event loop and terminal raw mode teardown.
+- Corrected UTF-8 Spanish diacritic handling for accented characters (`á`, `é`, `í`, `ó`, `ú`, `ñ`, `ü`).
+
+---
+
+## [0.1.0] - 2026-08-27
+
+### Added
+- Initial release of Spanglings: core exercise validator, CLI runner, and baseline A1-B1 curriculum tracks.
