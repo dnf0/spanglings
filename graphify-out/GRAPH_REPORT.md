@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-08-27)
 
 ## Corpus Check
-- 214 files · ~57,819 words
+- 289 files · ~78,780 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1087 nodes · 1255 edges · 182 communities (180 shown, 2 thin omitted)
-- Extraction: 92% EXTRACTED · 8% INFERRED · 0% AMBIGUOUS · INFERRED: 103 edges (avg confidence: 0.85)
+- 1560 nodes · 1802 edges · 264 communities (259 shown, 5 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 123 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `011b9641`
+- Built from commit: `48d82e66`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -154,9 +154,9 @@
 - Smart Diagnostics & Pedagogical Enhancements Implementation Plan
 - generate_completions_string
 - check.rs
-- search_exercises
+- protocol.rs
 - Curriculum & Advanced Vocabulary Expansion Implementation Plan
-- find_exercise_by_query
+- extension.ts
 - Tech Spanish 01: Deployment & Releases
 - Tech Spanish 02: Remediating Vulnerabilities & Debugging
 - Tech Spanish 03: Concurrency & Deadlocks
@@ -183,25 +183,107 @@
 - Regional Contrasts 04: Lexical Dialectal Pairs
 - Regional Contrasts 05: Reflexive Imperatives in Voseo
 - conjugate_verb
-- SrsItem
-- curriculum.rs
-- pack.rs
-- find_all_exercises
+- accents.rs
+- tui_tests.rs
+- evaluate_current_exercise_in
+- ADR-0002: Language Server Protocol (LSP) Engine & In-TUI Modal Architecture
 - Interactive TUI Heatmap, Fuzzy Search & Editor Diagnostics Implementation Plan
 - hook.rs
 - Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan
+- Spanglings Next-Gen Capabilities Implementation Plan
+- exercise_validity_tests.rs
+- Diagnostic
+- System Design 01: Distributed Failover
+- System Design 02: Distributed Transactions
+- System Design 03: Circuit Breakers & Resilience
+- System Design 04: Cache Invalidation
+- System Design 05: Database Sharding
+- System Design 06: Latency SLAs
+- Concessive Subjunctive 01: Por mucho que
+- Concessive Subjunctive 02: Aun a riesgo de que
+- Concessive Subjunctive 03: Concessive Así
+- Concessive Subjunctive 04: Reduplicative Structures
+- Concessive Subjunctive 05: Pase lo que pase
+- Concessive Subjunctive 06: A pesar de que (Hypothetical)
+- Verbal Periphrases 01: Dar por sentado
+- Verbal Periphrases 02: Echar a perder
+- Verbal Periphrases 03: Ponerse a + Infinitive
+- Verbal Periphrases 04: Llevar sin + Infinitive
+- Verbal Periphrases 05: Venir a decir
+- Verbal Periphrases 06: Quedar en + Infinitive
+- Executive Leadership 01: Stakeholder Diplomacy
+- Executive Leadership 02: Strategic Pivots
+- Executive Leadership 03: Performance Indicators (KPIs)
+- Executive Leadership 04: Headcount Reallocation
+- Executive Leadership 05: Regulatory Exposure
+- Executive Leadership 06: Board Resolutions
+- get_rule_title
+- start_lsp_server
+- compilerOptions
+- export_sync_tests.rs
+- Level
+- app.rs
+- draw_ui
+- find_all_exercises
+- find_exercise_by_query
+- VS Code Extension & Latin American Spanish Curriculum Expansion Implementation Plan
+- properties
+- package.json
+- pack.rs
+- devDependencies
+- search_exercises
+- Spanglings: Developer Spanish Learning (VS Code / Cursor Extension)
+- contributes
+- esbuild.config.js
+- get_exercises_json
+- categories
+- spanglings.executablePath
+- scripts
+- Mexican Tech & Startups 01: Capital Raising & Fundraising
+- Mexican Tech & Startups 02: Seed Round & Pre-Money Valuation
+- Mexican Tech & Startups 03: Customer Churn Rate
+- Mexican Tech & Startups 04: Product-Market Fit
+- Mexican Tech & Startups 05: Burn Rate & Financial Runway
+- Mexican Tech & Startups 06: Series A & Equity Dilution
+- Colombian Professional Nuances 01: Administrative Errands & Procedures
+- Colombian Professional Nuances 02: Staying Attentive & Monitoring Tasks
+- Colombian Professional Nuances 03: Coming to a Sudden Realization
+- Colombian Professional Nuances 04: Backtracking & Reversing Decisions
+- Colombian Professional Nuances 05: Scrutinizing & Auditing Systems
+- Colombian Professional Nuances 06: Operational Security & Vulnerability
+- Rioplatense Production Voseo 01: Shipping to Production
+- Rioplatense Production Voseo 02: Resisting Heavy Traffic & Load
+- Rioplatense Production Voseo 03: Stepping Up During Incidents
+- Rioplatense Production Voseo 04: Decommissioning Infrastructure
+- Rioplatense Production Voseo 05: Meticulous Architectural Work
+- Rioplatense Production Voseo 06: Negative Subjunctive Voseo in Tech
+- LatAm Anglicism Elimination 01: Tracking vs Rastrear
+- LatAm Anglicism Elimination 02: Customizing vs Personalizar
+- LatAm Anglicism Elimination 03: Performance vs Rendimiento
+- LatAm Anglicism Elimination 04: Deprecating vs Desaconsejar / Descontinuar
+- LatAm Anglicism Elimination 05: Forwarding vs Reenviar / Redirigir
+- LatAm Anglicism Elimination 06: Resetting vs Restablecer
+- LatAm Enterprise SLA 01: Non-Disclosure & Confidentiality
+- LatAm Enterprise SLA 02: Consequential Damages & Lost Profits
+- LatAm Enterprise SLA 03: Early Termination for Material Breach
+- LatAm Enterprise SLA 04: Risk Mitigation & Contingency Planning
+- LatAm Enterprise SLA 05: Indemnification & Hold Harmless
+- LatAm Enterprise SLA 06: Service Availability Credits & Penalties
+- dependencies
+- repository
+- .new
 
 ## God Nodes (most connected - your core abstractions)
-1. `App` - 38 edges
-2. `Exercise` - 33 edges
-3. `AppState` - 26 edges
-4. `validate_submission()` - 20 edges
-5. `get_reference_card()` - 16 edges
-6. `find_all_exercises()` - 15 edges
-7. `find_all_exercises_or_embedded()` - 14 edges
-8. `conjugate_verb()` - 13 edges
-9. `create_sample_exercises()` - 13 edges
-10. `evaluate_current_exercise_in()` - 12 edges
+1. `App` - 60 edges
+2. `Exercise` - 39 edges
+3. `AppState` - 34 edges
+4. `validate_submission()` - 21 edges
+5. `get_reference_card()` - 18 edges
+6. `conjugate_verb()` - 17 edges
+7. `create_sample_exercises()` - 17 edges
+8. `find_all_exercises()` - 16 edges
+9. `draw_ui()` - 15 edges
+10. `compilerOptions` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `test_list_exercises_json_serialization()` --calls--> `get_exercises_json()`  [INFERRED]
@@ -218,7 +300,7 @@
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (182 total, 2 thin omitted)
+## Communities (264 total, 5 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -229,8 +311,8 @@ Cohesion: 0.10
 Nodes (19): 1.1 Problem Statement, 1.2 The Solution: Spanglings, 1. Executive Summary & Philosophy, 2.1 CLI Interface & Commands, 2.2 Configuration & SRS State Persistence, 2. Architecture & System Design, 3.1 Accent & Punctuation Handling, 3.2 Compiler-Style Diagnostic Output (+11 more)
 
 ### Community 2 - "App"
-Cohesion: 0.06
-Nodes (34): B, Drop, Frame, Rect, App, AppMode, Option, Self (+26 more)
+Cohesion: 0.07
+Nodes (3): App, Option, String
 
 ### Community 3 - "Exercise"
 Cohesion: 0.17
@@ -241,12 +323,12 @@ Cohesion: 0.15
 Nodes (17): Dir, Option, Result, run_init(), collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir() (+9 more)
 
 ### Community 7 - "AppState"
-Cohesion: 0.10
-Nodes (23): HashSet, AppState, ExerciseStat, DateTime, Default, HashMap, Option, Path (+15 more)
+Cohesion: 0.07
+Nodes (31): HashSet, export_state_json(), import_state_json(), PortableStateBackup, DateTime, Option, Result, String (+23 more)
 
 ### Community 10 - "validate_submission"
-Cohesion: 0.07
-Nodes (32): Result, run_review_session(), AccentResult, check_accent_match(), String, strip_accents(), Diagnostic, Option (+24 more)
+Cohesion: 0.13
+Nodes (19): Result, run_review_session(), extract_user_answer(), find_exercise_line_number(), Diagnostic, Option, String, validate_submission() (+11 more)
 
 ### Community 12 - "Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan"
 Cohesion: 0.25
@@ -257,8 +339,8 @@ Cohesion: 0.15
 Nodes (23): BTreeMap, ActivitySummary, compute_activity_summary(), compute_weakness_profile(), get_progress_json(), LevelProgress, ProgressSummary, render_activity_heatmap() (+15 more)
 
 ### Community 14 - "Examples"
-Cohesion: 0.09
-Nodes (21): 10. Shell Autocompletions, 1. Install via Cargo (Recommended), 1. Interactive TUI Mode, 2. Build from Source, 2. Headless Watcher Mode & Editor Integration, 3. Search & Explore, 4. JSON Output & Activity Heatmap, 5. Targeted Run & Explanation (+13 more)
+Cohesion: 0.10
+Nodes (20): 1. Install via Cargo (Recommended), 1. Interactive TUI Mode, 2. Build from Source, 2. Language Server Protocol (LSP) Editor Integration, 3. Export to Anki & Markdown Study Notes, 4. Headless Watcher Mode & Editor Integration, 5. Search & Explore, 6. JSON Output & Activity Heatmap (+12 more)
 
 ### Community 15 - "get_reference_card"
 Cohesion: 0.16
@@ -745,8 +827,8 @@ Cohesion: 0.25
 Nodes (7): Discoverability, Portability & Zero-Setup CLI Implementation Plan, Task 1: Embedded Exercises Catalog & In-Memory Fallback, Task 2: `spanglings init` Subcommand, Task 3: Machine-Readable JSON Output (`--json`), Task 4: Fuzzy Topic & Full-Text Search (`spanglings search`), Task 5: Shell Completions Generator (`spanglings completions`), Task 6: Full Verification & Documentation Update
 
 ### Community 138 - "Spanglings Product & Engineering Backlog"
-Cohesion: 0.29
-Nodes (6): 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Completed), 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion (Completed), 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements (Completed), 📊 Focus Area 4: Interactive TUI & IDE Integrations (Completed), ⚡ Focus Area 5: Terminal Conjugation Engine & Developer Workflow Hooks (Completed), Spanglings Product & Engineering Backlog
+Cohesion: 0.15
+Nodes (12): 💻 Focus Area 10: VS Code & Cursor IDE Extension (`spanglings-vscode`) (Completed), 🌎 Focus Area 11: Latin American Spanish High-Impact Curriculum Expansion (Completed), 🎯 Focus Area 1: Discoverability, Portability & Zero-Setup CLI (Completed), 📚 Focus Area 2: Curriculum & Advanced Vocabulary Expansion (Completed), 🧠 Focus Area 3: Smart Diagnostics & Pedagogical Enhancements (Completed), 📊 Focus Area 4: Interactive TUI & IDE Integrations (Completed), ⚡ Focus Area 5: Terminal Conjugation Engine & Developer Workflow Hooks (Completed), 🖥️ Focus Area 6: In-TUI Power Tools & Modal Modifiers (Completed) (+4 more)
 
 ### Community 139 - "Spanglings Init Subcommand Implementation Plan"
 Cohesion: 0.29
@@ -768,17 +850,17 @@ Nodes (8): generate_completions_string(), Result, Shell, String, run_completions
 Cohesion: 0.27
 Nodes (11): CheckDiagnosticItem, CheckReport, evaluate_exercise_for_check(), Option, Result, String, Vec, run_check() (+3 more)
 
-### Community 144 - "search_exercises"
-Cohesion: 0.33
-Nodes (7): Result, Vec, run_search(), search_exercises(), test_search_by_id(), test_search_by_level(), test_search_by_topic_and_keyword()
+### Community 144 - "protocol.rs"
+Cohesion: 0.11
+Nodes (31): compute_hover(), is_word_char(), Option, CodeAction, CompletionItem, Diagnostic, Hover, JsonRpcError (+23 more)
 
 ### Community 145 - "Curriculum & Advanced Vocabulary Expansion Implementation Plan"
 Cohesion: 0.29
 Nodes (6): Curriculum & Advanced Vocabulary Expansion Implementation Plan, Task 1: Track 22 - Tech & Software Engineering Spanish (B2-C1), Task 2: Track 23 - Formal Business & Diplomatic Correspondence (B2-C1), Task 3: Track 24 - False Friends & High-Frequency Trap Drills, Task 4: Track 25 (Register Elevation) & Track 26 (Regional Contrasts & Voseo), Task 5: New In-Terminal Reference Cheat Sheets & Documentation Update
 
-### Community 146 - "find_exercise_by_query"
-Cohesion: 0.21
-Nodes (7): reset_exercise(), Result, run_exercise(), find_exercise_by_query(), Option, test_curriculum_discovery_and_query(), test_run_exercise_with_file_path()
+### Community 146 - "extension.ts"
+Cohesion: 0.10
+Nodes (14): execFileAsync, registerCommands(), DiagnosticRule, execFileAsync, RawExercise, SpanglingsTreeProvider, TreeItemNode, activate() (+6 more)
 
 ### Community 147 - "Tech Spanish 01: Deployment & Releases"
 Cohesion: 0.50
@@ -881,24 +963,24 @@ Cohesion: 0.50
 Nodes (3): Context, Exercise, Regional Contrasts 05: Reflexive Imperatives in Voseo
 
 ### Community 172 - "conjugate_verb"
-Cohesion: 0.16
+Cohesion: 0.14
 Nodes (19): print_conjugation_summary(), Option, Result, run_conjugate(), conjugate_verb(), get_irregular_verb(), ImperativeForms, PronounForms (+11 more)
 
-### Community 173 - "SrsItem"
-Cohesion: 0.18
-Nodes (8): calculate_sm2_review(), DateTime, Default, Option, Self, Utc, SrsItem, test_sm2_repetition_intervals()
+### Community 173 - "accents.rs"
+Cohesion: 0.23
+Nodes (7): AccentResult, check_accent_match(), String, strip_accents(), normalize(), String, test_smart_accent_matching()
 
-### Community 174 - "curriculum.rs"
-Cohesion: 0.16
-Nodes (11): Option, Result, show_hint(), Level, ParseLevelError, Display, Err, FromStr (+3 more)
+### Community 174 - "tui_tests.rs"
+Cohesion: 0.22
+Nodes (16): create_sample_exercises(), Vec, test_app_draw_ui_in_search_mode(), test_app_draw_ui_renders_without_panicking(), test_app_initialization_and_navigation(), test_app_input_editing(), test_app_reset(), test_app_search_cancel_restores_state() (+8 more)
 
-### Community 175 - "pack.rs"
+### Community 175 - "evaluate_current_exercise_in"
 Cohesion: 0.33
-Nodes (8): collect_markdown_files(), Path, PathBuf, Result, Vec, run_pack_create(), run_pack_validate(), test_pack_create_and_validate()
+Nodes (10): AccentMode, clear_screen(), evaluate_current_exercise(), evaluate_current_exercise_in(), P, Result, start_watch_mode(), test_watcher_detects_and_evaluates_uncompleted_exercise_in_dir() (+2 more)
 
-### Community 176 - "find_all_exercises"
-Cohesion: 0.24
-Nodes (11): get_exercises_json(), list_exercises(), Result, String, collect_md_files(), find_all_exercises(), find_all_exercises_or_embedded(), Formatter (+3 more)
+### Community 176 - "ADR-0002: Language Server Protocol (LSP) Engine & In-TUI Modal Architecture"
+Cohesion: 0.22
+Nodes (8): 1. In-TUI Non-Disruptive Popup Modals, 2. Native Stdio Language Server Protocol (LSP) Engine (`spanglings lsp`), 3. Portable Study Notes & Spaced Repetition Exporter, ADR-0002: Language Server Protocol (LSP) Engine & In-TUI Modal Architecture, Consequences, Context, Decisions, Status
 
 ### Community 177 - "Interactive TUI Heatmap, Fuzzy Search & Editor Diagnostics Implementation Plan"
 Cohesion: 0.33
@@ -912,25 +994,341 @@ Nodes (8): find_git_hooks_dir(), remove_spanglings_block(), PathBuf, Result, Str
 Cohesion: 0.29
 Nodes (6): Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan, Task 1: Automated Release Pipeline & Crates.io Publishing (`SPANG-040`), Task 2: High-Precision Terminal Verb Conjugator (`SPANG-041`), Task 3: Git Pre-Commit / Pre-Push Learning Hook (`SPANG-042`), Task 4: Custom Curriculum Pack Scaffolder & Validator (`SPANG-043`), Task 5: Documentation, Graphify Update & PR Creation
 
+### Community 180 - "Spanglings Next-Gen Capabilities Implementation Plan"
+Cohesion: 0.25
+Nodes (7): Spanglings Next-Gen Capabilities Implementation Plan, Task 1: In-TUI Verb Conjugator Modal (`SPANG-050`), Task 2: In-TUI Grammar Reference Browser & Help Modals (`SPANG-051`, `SPANG-053`), Task 3: Advanced C1 Technical, RFC & Professional Track Expansion (`SPANG-060` - `SPANG-063`), Task 4: Anki Deck, Markdown Study Notes Exporter & State Sync (`SPANG-070` - `SPANG-072`), Task 5: Native Language Server Protocol (LSP) Engine (`SPANG-080` - `SPANG-082`), Task 6: Documentation, ADR & Full System Verification
+
+### Community 183 - "exercise_validity_tests.rs"
+Cohesion: 0.47
+Nodes (5): collect_md_paths(), Path, PathBuf, Vec, test_all_curriculum_exercises_are_valid_and_solvable()
+
+### Community 184 - "Diagnostic"
+Cohesion: 0.50
+Nodes (3): Diagnostic, Option, String
+
+### Community 185 - "System Design 01: Distributed Failover"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, System Design 01: Distributed Failover
+
+### Community 186 - "System Design 02: Distributed Transactions"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, System Design 02: Distributed Transactions
+
+### Community 187 - "System Design 03: Circuit Breakers & Resilience"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, System Design 03: Circuit Breakers & Resilience
+
+### Community 188 - "System Design 04: Cache Invalidation"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, System Design 04: Cache Invalidation
+
+### Community 189 - "System Design 05: Database Sharding"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, System Design 05: Database Sharding
+
+### Community 190 - "System Design 06: Latency SLAs"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, System Design 06: Latency SLAs
+
+### Community 191 - "Concessive Subjunctive 01: Por mucho que"
+Cohesion: 0.50
+Nodes (3): Concessive Subjunctive 01: Por mucho que, Context, Exercise
+
+### Community 192 - "Concessive Subjunctive 02: Aun a riesgo de que"
+Cohesion: 0.50
+Nodes (3): Concessive Subjunctive 02: Aun a riesgo de que, Context, Exercise
+
+### Community 193 - "Concessive Subjunctive 03: Concessive Así"
+Cohesion: 0.50
+Nodes (3): Concessive Subjunctive 03: Concessive Así, Context, Exercise
+
+### Community 194 - "Concessive Subjunctive 04: Reduplicative Structures"
+Cohesion: 0.50
+Nodes (3): Concessive Subjunctive 04: Reduplicative Structures, Context, Exercise
+
+### Community 195 - "Concessive Subjunctive 05: Pase lo que pase"
+Cohesion: 0.50
+Nodes (3): Concessive Subjunctive 05: Pase lo que pase, Context, Exercise
+
+### Community 196 - "Concessive Subjunctive 06: A pesar de que (Hypothetical)"
+Cohesion: 0.50
+Nodes (3): Concessive Subjunctive 06: A pesar de que (Hypothetical), Context, Exercise
+
+### Community 197 - "Verbal Periphrases 01: Dar por sentado"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbal Periphrases 01: Dar por sentado
+
+### Community 198 - "Verbal Periphrases 02: Echar a perder"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbal Periphrases 02: Echar a perder
+
+### Community 199 - "Verbal Periphrases 03: Ponerse a + Infinitive"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbal Periphrases 03: Ponerse a + Infinitive
+
+### Community 200 - "Verbal Periphrases 04: Llevar sin + Infinitive"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbal Periphrases 04: Llevar sin + Infinitive
+
+### Community 201 - "Verbal Periphrases 05: Venir a decir"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbal Periphrases 05: Venir a decir
+
+### Community 202 - "Verbal Periphrases 06: Quedar en + Infinitive"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Verbal Periphrases 06: Quedar en + Infinitive
+
+### Community 203 - "Executive Leadership 01: Stakeholder Diplomacy"
+Cohesion: 0.50
+Nodes (3): Context, Executive Leadership 01: Stakeholder Diplomacy, Exercise
+
+### Community 204 - "Executive Leadership 02: Strategic Pivots"
+Cohesion: 0.50
+Nodes (3): Context, Executive Leadership 02: Strategic Pivots, Exercise
+
+### Community 205 - "Executive Leadership 03: Performance Indicators (KPIs)"
+Cohesion: 0.50
+Nodes (3): Context, Executive Leadership 03: Performance Indicators (KPIs), Exercise
+
+### Community 206 - "Executive Leadership 04: Headcount Reallocation"
+Cohesion: 0.50
+Nodes (3): Context, Executive Leadership 04: Headcount Reallocation, Exercise
+
+### Community 207 - "Executive Leadership 05: Regulatory Exposure"
+Cohesion: 0.50
+Nodes (3): Context, Executive Leadership 05: Regulatory Exposure, Exercise
+
+### Community 208 - "Executive Leadership 06: Board Resolutions"
+Cohesion: 0.50
+Nodes (3): Context, Executive Leadership 06: Board Resolutions, Exercise
+
+### Community 211 - "compilerOptions"
+Cohesion: 0.11
+Nodes (17): compilerOptions, lib, module, moduleResolution, noFallthroughCasesInSwitch, noImplicitReturns, noUnusedLocals, noUnusedParameters (+9 more)
+
+### Community 212 - "export_sync_tests.rs"
+Cohesion: 0.29
+Nodes (13): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+5 more)
+
+### Community 213 - "Level"
+Cohesion: 0.13
+Nodes (8): Level, ParseLevelError, Display, Err, Formatter, FromStr, Self, String
+
+### Community 214 - "app.rs"
+Cohesion: 0.21
+Nodes (9): B, Drop, AppMode, Result, run_tui_app(), RawModeGuard, Result, start_tui() (+1 more)
+
+### Community 215 - "draw_ui"
+Cohesion: 0.47
+Nodes (12): Frame, Rect, centered_rect(), draw_conjugator_modal(), draw_footer(), draw_header(), draw_help_modal(), draw_left_pane() (+4 more)
+
+### Community 216 - "find_all_exercises"
+Cohesion: 0.30
+Nodes (10): Option, Result, show_hint(), collect_md_files(), find_all_exercises(), find_all_exercises_or_embedded(), P, Path (+2 more)
+
+### Community 217 - "find_exercise_by_query"
+Cohesion: 0.21
+Nodes (7): reset_exercise(), Result, run_exercise(), find_exercise_by_query(), Option, test_curriculum_discovery_and_query(), test_run_exercise_with_file_path()
+
+### Community 218 - "VS Code Extension & Latin American Spanish Curriculum Expansion Implementation Plan"
+Cohesion: 0.18
+Nodes (10): Task 1: VS Code Extension Manifest, Build Pipeline & Scaffolding, Task 2: LSP Client & Status Bar Widget Integration, Task 3: Exercise Explorer Tree View & Command Handlers, Task 4: Track 31 – Mexican Tech, Startup & Venture Capital Spanish (`exercises/31_mexican_tech_and_startups/`), Task 5: Track 32 – Colombian & Andean Professional Nuances (`exercises/32_colombian_professional_nuances/`), Task 6: Track 33 – Rioplatense Production Voseo & Engineering (`exercises/33_rioplatense_production_voseo/`), Task 7: Track 34 – LatAm Tech Anglicism Elimination & Precision Spanish (`exercises/34_latam_anglicism_elimination/`), Task 8: Track 35 – Latin American Enterprise SLA & Risk Governance (`exercises/35_latam_enterprise_risk_and_sla/`) (+2 more)
+
+### Community 219 - "properties"
+Cohesion: 0.18
+Nodes (11): properties, title, configuration, spanglings.enableLsp, spanglings.strictAccents, default, description, type (+3 more)
+
+### Community 220 - "package.json"
+Cohesion: 0.20
+Nodes (9): activationEvents, description, displayName, engines, vscode, main, name, publisher (+1 more)
+
+### Community 221 - "pack.rs"
+Cohesion: 0.33
+Nodes (8): collect_markdown_files(), Path, PathBuf, Result, Vec, run_pack_create(), run_pack_validate(), test_pack_create_and_validate()
+
+### Community 222 - "devDependencies"
+Cohesion: 0.22
+Nodes (9): devDependencies, esbuild, @types/node, @types/vscode, typescript, esbuild, @types/node, @types/vscode (+1 more)
+
+### Community 223 - "search_exercises"
+Cohesion: 0.33
+Nodes (7): Result, Vec, run_search(), search_exercises(), test_search_by_id(), test_search_by_level(), test_search_by_topic_and_keyword()
+
+### Community 224 - "Spanglings: Developer Spanish Learning (VS Code / Cursor Extension)"
+Cohesion: 0.29
+Nodes (6): Development, Extension Settings, Features, License, Requirements, Spanglings: Developer Spanish Learning (VS Code / Cursor Extension)
+
+### Community 225 - "contributes"
+Cohesion: 0.33
+Nodes (6): contributes, commands, views, viewsContainers, spanglings-explorer, activitybar
+
+### Community 226 - "esbuild.config.js"
+Cohesion: 0.50
+Nodes (4): esbuild, main(), minify, watch
+
+### Community 227 - "get_exercises_json"
+Cohesion: 0.50
+Nodes (4): get_exercises_json(), list_exercises(), Result, String
+
+### Community 228 - "categories"
+Cohesion: 0.50
+Nodes (4): categories, Education, Linters, Programming Languages
+
+### Community 229 - "spanglings.executablePath"
+Cohesion: 0.50
+Nodes (4): spanglings.executablePath, default, description, type
+
+### Community 230 - "scripts"
+Cohesion: 0.50
+Nodes (4): scripts, compile, vscode:prepublish, watch
+
+### Community 231 - "Mexican Tech & Startups 01: Capital Raising & Fundraising"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Mexican Tech & Startups 01: Capital Raising & Fundraising
+
+### Community 232 - "Mexican Tech & Startups 02: Seed Round & Pre-Money Valuation"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Mexican Tech & Startups 02: Seed Round & Pre-Money Valuation
+
+### Community 233 - "Mexican Tech & Startups 03: Customer Churn Rate"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Mexican Tech & Startups 03: Customer Churn Rate
+
+### Community 234 - "Mexican Tech & Startups 04: Product-Market Fit"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Mexican Tech & Startups 04: Product-Market Fit
+
+### Community 235 - "Mexican Tech & Startups 05: Burn Rate & Financial Runway"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Mexican Tech & Startups 05: Burn Rate & Financial Runway
+
+### Community 236 - "Mexican Tech & Startups 06: Series A & Equity Dilution"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Mexican Tech & Startups 06: Series A & Equity Dilution
+
+### Community 237 - "Colombian Professional Nuances 01: Administrative Errands & Procedures"
+Cohesion: 0.50
+Nodes (3): Colombian Professional Nuances 01: Administrative Errands & Procedures, Context, Exercise
+
+### Community 238 - "Colombian Professional Nuances 02: Staying Attentive & Monitoring Tasks"
+Cohesion: 0.50
+Nodes (3): Colombian Professional Nuances 02: Staying Attentive & Monitoring Tasks, Context, Exercise
+
+### Community 239 - "Colombian Professional Nuances 03: Coming to a Sudden Realization"
+Cohesion: 0.50
+Nodes (3): Colombian Professional Nuances 03: Coming to a Sudden Realization, Context, Exercise
+
+### Community 240 - "Colombian Professional Nuances 04: Backtracking & Reversing Decisions"
+Cohesion: 0.50
+Nodes (3): Colombian Professional Nuances 04: Backtracking & Reversing Decisions, Context, Exercise
+
+### Community 241 - "Colombian Professional Nuances 05: Scrutinizing & Auditing Systems"
+Cohesion: 0.50
+Nodes (3): Colombian Professional Nuances 05: Scrutinizing & Auditing Systems, Context, Exercise
+
+### Community 242 - "Colombian Professional Nuances 06: Operational Security & Vulnerability"
+Cohesion: 0.50
+Nodes (3): Colombian Professional Nuances 06: Operational Security & Vulnerability, Context, Exercise
+
+### Community 243 - "Rioplatense Production Voseo 01: Shipping to Production"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Rioplatense Production Voseo 01: Shipping to Production
+
+### Community 244 - "Rioplatense Production Voseo 02: Resisting Heavy Traffic & Load"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Rioplatense Production Voseo 02: Resisting Heavy Traffic & Load
+
+### Community 245 - "Rioplatense Production Voseo 03: Stepping Up During Incidents"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Rioplatense Production Voseo 03: Stepping Up During Incidents
+
+### Community 246 - "Rioplatense Production Voseo 04: Decommissioning Infrastructure"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Rioplatense Production Voseo 04: Decommissioning Infrastructure
+
+### Community 247 - "Rioplatense Production Voseo 05: Meticulous Architectural Work"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Rioplatense Production Voseo 05: Meticulous Architectural Work
+
+### Community 248 - "Rioplatense Production Voseo 06: Negative Subjunctive Voseo in Tech"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, Rioplatense Production Voseo 06: Negative Subjunctive Voseo in Tech
+
+### Community 249 - "LatAm Anglicism Elimination 01: Tracking vs Rastrear"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Anglicism Elimination 01: Tracking vs Rastrear
+
+### Community 250 - "LatAm Anglicism Elimination 02: Customizing vs Personalizar"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Anglicism Elimination 02: Customizing vs Personalizar
+
+### Community 251 - "LatAm Anglicism Elimination 03: Performance vs Rendimiento"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Anglicism Elimination 03: Performance vs Rendimiento
+
+### Community 252 - "LatAm Anglicism Elimination 04: Deprecating vs Desaconsejar / Descontinuar"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Anglicism Elimination 04: Deprecating vs Desaconsejar / Descontinuar
+
+### Community 253 - "LatAm Anglicism Elimination 05: Forwarding vs Reenviar / Redirigir"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Anglicism Elimination 05: Forwarding vs Reenviar / Redirigir
+
+### Community 254 - "LatAm Anglicism Elimination 06: Resetting vs Restablecer"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Anglicism Elimination 06: Resetting vs Restablecer
+
+### Community 255 - "LatAm Enterprise SLA 01: Non-Disclosure & Confidentiality"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Enterprise SLA 01: Non-Disclosure & Confidentiality
+
+### Community 256 - "LatAm Enterprise SLA 02: Consequential Damages & Lost Profits"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Enterprise SLA 02: Consequential Damages & Lost Profits
+
+### Community 257 - "LatAm Enterprise SLA 03: Early Termination for Material Breach"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Enterprise SLA 03: Early Termination for Material Breach
+
+### Community 258 - "LatAm Enterprise SLA 04: Risk Mitigation & Contingency Planning"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Enterprise SLA 04: Risk Mitigation & Contingency Planning
+
+### Community 259 - "LatAm Enterprise SLA 05: Indemnification & Hold Harmless"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Enterprise SLA 05: Indemnification & Hold Harmless
+
+### Community 260 - "LatAm Enterprise SLA 06: Service Availability Credits & Penalties"
+Cohesion: 0.50
+Nodes (3): Context, Exercise, LatAm Enterprise SLA 06: Service Availability Credits & Penalties
+
+### Community 261 - "dependencies"
+Cohesion: 0.67
+Nodes (3): dependencies, vscode-languageclient, vscode-languageclient
+
+### Community 262 - "repository"
+Cohesion: 0.67
+Nodes (3): repository, type, url
+
 ## Knowledge Gaps
-- **370 isolated node(s):** `spanglings`, `DrillItem`, `Key Features`, `1. Install via Cargo (Recommended)`, `2. Build from Source` (+365 more)
+- **563 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+558 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **5 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Exercise` connect `Exercise` to `App`, `embedded.rs`, `validate_submission`, `progress.rs`, `curriculum.rs`, `check.rs`, `search_exercises`, `find_all_exercises`, `find_exercise_by_query`?**
-  _High betweenness centrality (0.050) - this node is a cross-community bridge._
-- **Why does `AppState` connect `AppState` to `progress.rs`, `SrsItem`?**
-  _High betweenness centrality (0.021) - this node is a cross-community bridge._
-- **Why does `App` connect `App` to `validate_submission`, `Exercise`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Are the 15 inferred relationships involving `validate_submission()` (e.g. with `evaluate_exercise_for_check()` and `run_pack_validate()`) actually correct?**
-  _`validate_submission()` has 15 INFERRED edges - model-reasoned connections that need verification._
-- **Are the 14 inferred relationships involving `get_reference_card()` (e.g. with `show_explanation()` and `draw_right_pane()`) actually correct?**
-  _`get_reference_card()` has 14 INFERRED edges - model-reasoned connections that need verification._
-- **What connects `spanglings`, `DrillItem`, `Key Features` to the rest of the system?**
-  _370 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `Exercise` connect `Exercise` to `App`, `embedded.rs`, `.new`, `validate_submission`, `progress.rs`, `tui_tests.rs`, `check.rs`, `export_sync_tests.rs`, `Level`, `app.rs`, `find_all_exercises`, `find_exercise_by_query`, `search_exercises`?**
+  _High betweenness centrality (0.047) - this node is a cross-community bridge._
+- **Why does `App` connect `App` to `Exercise`, `.new`, `validate_submission`, `conjugate_verb`, `app.rs`, `draw_ui`?**
+  _High betweenness centrality (0.032) - this node is a cross-community bridge._
+- **Why does `AppState` connect `AppState` to `export_sync_tests.rs`, `progress.rs`, `evaluate_current_exercise_in`?**
+  _High betweenness centrality (0.020) - this node is a cross-community bridge._
+- **Are the 16 inferred relationships involving `validate_submission()` (e.g. with `evaluate_exercise_for_check()` and `run_pack_validate()`) actually correct?**
+  _`validate_submission()` has 16 INFERRED edges - model-reasoned connections that need verification._
+- **Are the 16 inferred relationships involving `get_reference_card()` (e.g. with `show_explanation()` and `compute_hover()`) actually correct?**
+  _`get_reference_card()` has 16 INFERRED edges - model-reasoned connections that need verification._
+- **What connects `spanglings`, `esbuild`, `minify` to the rest of the system?**
+  _563 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._

@@ -209,7 +209,7 @@ spanglings hook uninstall
 
 ---
 
-## Curriculum Tracks (165 Exercises across 31 Tracks)
+## Curriculum Tracks (195 Exercises across 36 Tracks)
 
 | Track | Topic | CEFR Level | Exercises |
 |---|---|---|---|
@@ -244,6 +244,11 @@ spanglings hook uninstall
 | `28_advanced_subjunctive_clauses` | Reduplicative subjunctive, *por mucho que*, *aun a riesgo de que*, *así sea*, *pase lo que pase* | C1 | 6 |
 | `29_advanced_verbal_periphrases` | High-register periphrases (*dar por sentado*, *echar a perder*, *ponerse a*, *llevar sin*, *venir a decir*) | B2 / C1 | 6 |
 | `30_executive_leadership` | Stakeholder diplomacy, strategic pivots, KPI reporting, headcount reallocation, board resolutions | C1 | 6 |
+| `31_mexican_tech_and_startups` | Capital raises (*levantamiento de capital*), seed rounds, churn (*tasa de abandono*), burn rate (*tasa de quema*), PMF | B2 / C1 | 6 |
+| `32_colombian_professional_nuances` | Administrative errands (*hacer una vuelta*), monitoring (*estar pendiente*), realizing (*caer en cuenta*), rollback (*echar reversa*) | B2 / C1 | 6 |
+| `33_rioplatense_production_voseo` | Production deploys (*sacar a producción*), load endurance (*bancarse la carga*), on-call (*ponete las pilas*), *voseo* subjunctives | B2 / C1 | 6 |
+| `34_latam_anglicism_elimination` | Replacing Spanglish calques (*rastrear* vs *trackear*, *personalizar* vs *customizar*, *rendir* vs *performar*, *descontinuar* vs *deprecar*) | B2 / C1 | 6 |
+| `35_latam_enterprise_risk_and_sla` | Non-disclosure agreements (*acuerdos de confidencialidad*), lost profits (*lucro cesante*), breach termination, indemnification | C1 | 6 |
 
 ---
 

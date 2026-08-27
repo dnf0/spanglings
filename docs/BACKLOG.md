@@ -117,5 +117,32 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
   - **Description**: Publishes live diagnostic squigglies on exercise markdown files as the developer types, with rich hover tooltips explaining grammar rules and conjugations.
 - [x] **SPANG-082: Grammar Autocompletion & Code Action Quick Fixes**
   - **Description**: Intelligent autocomplete for Spanish technical vocabulary and conjugations, plus one-click Quick Fixes (*"Mark exercise as done (remove <!-- I AM NOT DONE -->)"*).
+---
 
+## 💻 Focus Area 10: VS Code & Cursor IDE Extension (`spanglings-vscode`) (Completed)
 
+- [x] **SPANG-090: Extension Manifest & Bundling Pipeline (`editors/vscode`)**
+  - **Description**: Package manifest, TypeScript configuration, and esbuild pipeline for `spanglings-vscode`.
+- [x] **SPANG-091: Native LSP Client Lifecycle & Auto-Connecting Server**
+  - **Description**: Uses `vscode-languageclient` to manage the `spanglings lsp` subprocess over stdio with concurrency guards and shell injection protection.
+- [x] **SPANG-092: Activity Bar Sidebar Curriculum Explorer Tree View**
+  - **Description**: Visual curriculum tree grouping tracks, displaying completion checkmarks (`✅` / `⬜`), CEFR badges, and opening exercise files on click.
+- [x] **SPANG-093: Streak & Due Review Status Bar Widget**
+  - **Description**: Real-time status bar widget showing active learning streaks 🔥 and due spaced repetition reviews with interactive markdown tooltips.
+- [x] **SPANG-094: Command Palette Spanish Tools**
+  - **Description**: Integrated commands for verb conjugation lookups (`Spanglings: Look Up Verb Conjugator`), grammar cheat sheets (`Spanglings: Browse Grammar Cheat Sheets`), and opening the next due exercise.
+
+---
+
+## 🌎 Focus Area 11: Latin American Spanish High-Impact Curriculum Expansion (Completed)
+
+- [x] **SPANG-100: Track 31 - Mexican Tech, Startup & Venture Capital Spanish (B2–C1)**
+  - **Topics**: *levantamiento de capital*, *ronda semilla*, *valuación pre-capital*, *tasa de abandono (churn)*, *ajuste producto-mercado*, *tasa de quema*, *dilución accionaria*.
+- [x] **SPANG-101: Track 32 - Colombian & Andean Professional Nuances (B2–C1)**
+  - **Topics**: *hacer una vuelta*, *estar pendiente de*, *caer en cuenta de que*, *echar reversa a*, *poner la lupa sobre*, *dar papaya*.
+- [x] **SPANG-102: Track 33 - Rioplatense Production Voseo & Engineering (B2–C1)**
+  - **Topics**: *sacar a producción*, *bancarse la carga*, *ponete las pilas*, *dar de baja la instancia*, *hacer un laburo fino*, *no te quedés atrás*.
+- [x] **SPANG-103: Track 34 - LatAm Technical Anglicism Elimination (B2–C1)**
+  - **Topics**: *rastrear* vs *trackear*, *personalizar* vs *customizar*, *rendir* vs *performar*, *desaconsejar/descontinuar* vs *deprecar*, *redirigir* vs *forwardear*, *restablecer* vs *resetear*.
+- [x] **SPANG-104: Track 35 - Latin American Enterprise SLA & Risk Governance (C1)**
+  - **Topics**: *acuerdos de confidencialidad*, *lucro cesante y daño emergente*, *cláusulas de rescisión por incumplimiento*, *planes de mitigación de riesgos*, *mantener indemne*, *penalizaciones económicas y créditos de servicio*.

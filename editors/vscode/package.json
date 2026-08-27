@@ -1,0 +1,96 @@
+{
+  "name": "spanglings-vscode",
+  "displayName": "Spanglings: Developer Spanish Learning",
+  "description": "VS Code and Cursor extension for Spanglings: learn Spanish through compiler diagnostics, LSP feedback, and interactive exercises",
+  "version": "0.1.0",
+  "publisher": "spanglings",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnf0/spanglings"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Linters",
+    "Education"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "spanglings.openNextExercise",
+        "title": "Open Next Exercise",
+        "category": "Spanglings"
+      },
+      {
+        "command": "spanglings.conjugateVerb",
+        "title": "Conjugate Verb",
+        "category": "Spanglings"
+      },
+      {
+        "command": "spanglings.openReferenceBrowser",
+        "title": "Open Reference Browser",
+        "category": "Spanglings"
+      },
+      {
+        "command": "spanglings.syncState",
+        "title": "Sync Progress / State",
+        "category": "Spanglings"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "spanglings-explorer",
+          "title": "Spanglings",
+          "icon": "$(mortar-board)"
+        }
+      ]
+    },
+    "views": {
+      "spanglings-explorer": [
+        {
+          "id": "spanglings.exerciseTree",
+          "name": "Exercises"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "Spanglings",
+      "properties": {
+        "spanglings.executablePath": {
+          "type": "string",
+          "default": "spanglings",
+          "description": "Path to the spanglings executable binary"
+        },
+        "spanglings.strictAccents": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enforce strict accent mark checking during exercise compilation and LSP diagnostics"
+        },
+        "spanglings.enableLsp": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable the built-in Spanglings Language Server (LSP) client"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "node esbuild.config.js --minify",
+    "compile": "node esbuild.config.js",
+    "watch": "node esbuild.config.js --watch"
+  },
+  "dependencies": {
+    "vscode-languageclient": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "@types/vscode": "^1.85.0",
+    "esbuild": "^0.20.0",
+    "typescript": "^5.3.3"
+  }
+}

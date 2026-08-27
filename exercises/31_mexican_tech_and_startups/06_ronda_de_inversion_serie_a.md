@@ -1,0 +1,31 @@
+<!-- I AM NOT DONE -->
+# Mexican Tech & Startups 06: Series A & Equity Dilution
+<!-- id: c1_mextech_dilucion_serie_a | level: C1 | topic: mexican_tech_and_startups | type: cloze -->
+
+> **Grammar & Lexicon**: When negotiating venture capital agreements and term sheets (*hojas de términos*), "Series A investment round" is **ronda de inversión Serie A** and "equity dilution" is **dilución accionaria** or **dilución del capital social**. Avoid using *dilución de equity*.
+
+### Context
+English: "Upon signing the Series A term sheet, the founders agreed to a fifteen percent equity dilution to bring in the lead fund."
+
+### Exercise
+Al firmar la hoja de términos de la Serie A, los fundadores acordaron una (dilución accionaria) ___ del quince por ciento para incorporar al fondo líder.
+
+<!-- SOLUTION
+dilución accionaria
+-->
+
+<!-- ALTERNATIVES
+dilución del capital social
+dilución de acciones
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "dilución de equity" | code: "E3106" | message: "Use the formal corporate finance term 'dilución accionaria' or 'dilución del capital social' rather than 'dilución de equity'."
+pattern: "equity dilution" | code: "E3106" | message: "Translate 'equity dilution' as 'dilución accionaria' in legal and VC Spanish."
+-->
+
+<!-- HINTS
+Tier 1: Translate 'equity dilution' in corporate and venture capital law.
+Tier 2: 'dilución' (with tilde on ó) + adjective 'accionaria'.
+Tier 3: Solution: 'dilución accionaria'.
+-->

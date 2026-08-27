@@ -1,0 +1,31 @@
+<!-- I AM NOT DONE -->
+# Rioplatense Production Voseo 01: Shipping to Production
+<!-- id: b2_rioplatense_sacar_produccion | level: B2 | topic: rioplatense_production_voseo | type: cloze -->
+
+> **Grammar & Lexicon**: In Argentina and Uruguay (Rioplatense Spanish), deploying or releasing software to production is universally referred to as **sacar a producción**. When using the informal *vos* imperative, verbs retain the final stress with dropped 'd': *sacá*.
+
+### Context
+English: "Deploy the new microservice to production before the promotional campaign kicks off."
+
+### Exercise
+(Sacá a producción el / Saca a producción el) ___ nuevo microservicio antes de que comience la campaña de promoción.
+
+<!-- SOLUTION
+Sacá a producción el
+-->
+
+<!-- ALTERNATIVES
+Saca a produccion el
+Sacá a produccion el
+Saca a producción el
+-->
+
+<!-- DIAGNOSTIC_RULES
+pattern: "deployá" | code: "E3301" | message: "Use the authentic Rioplatense engineering phrase 'Sacá a producción el' instead of the raw borrowing 'deployá'."
+-->
+
+<!-- HINTS
+Tier 1: Use the Rioplatense voseo imperative of 'sacar' + 'a producción el'.
+Tier 2: 'Sacá' + 'a' + 'producción' + 'el'.
+Tier 3: Solution: 'Sacá a producción el'.
+-->
