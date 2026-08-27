@@ -91,6 +91,50 @@ fn test_get_accents_reference_card() {
 }
 
 #[test]
+fn test_get_epistemic_conjecture_reference_card() {
+    let card = get_reference_card("epistemic-conjecture").expect("Conjecture card not found");
+    assert!(card.contains("EPISTEMIC CONJECTURE"));
+    assert!(card.contains("Serán las cuatro"));
+    assert!(card.contains("Estaría enfermo"));
+}
+
+#[test]
+fn test_get_clitic_doubling_reference_card() {
+    let card = get_reference_card("clitic-doubling").expect("Clitic doubling card not found");
+    assert!(card.contains("CLITIC DOUBLING"));
+    assert!(card.contains("A María LE entregué"));
+}
+
+#[test]
+fn test_get_personal_a_reference_card() {
+    let card = get_reference_card("personal-a").expect("Personal a card not found");
+    assert!(card.contains("PERSONAL A"));
+    assert!(card.contains("Busco programador"));
+}
+
+#[test]
+fn test_get_gerund_rules_reference_card() {
+    let card = get_reference_card("gerund-rules").expect("Gerund rules card not found");
+    assert!(card.contains("GERUND RESTRICTIONS"));
+    assert!(card.contains("Gerundio de Posterioridad"));
+}
+
+#[test]
+fn test_get_adversatives_reference_card() {
+    let card = get_reference_card("adversatives").expect("Adversatives card not found");
+    assert!(card.contains("ADVERSATIVE COORDINATION"));
+    assert!(card.contains("SINO QUE"));
+}
+
+#[test]
+fn test_get_legal_subjunctive_reference_card() {
+    let card = get_reference_card("legal-subjunctive").expect("Legal subjunctive card not found");
+    assert!(card.contains("OPTATIVES, INDEPENDENT SUBJUNCTIVE"));
+    assert!(card.contains("Quién tuviera"));
+    assert!(card.contains("FUTURE SUBJUNCTIVE"));
+}
+
+#[test]
 fn test_list_reference_topics() {
     let topics = list_reference_topics();
     assert!(topics.contains(&"subjunctive"));
@@ -105,9 +149,16 @@ fn test_list_reference_topics() {
     assert!(topics.contains(&"false-friends"));
     assert!(topics.contains(&"voseo"));
     assert!(topics.contains(&"accents"));
+    assert!(topics.contains(&"epistemic-conjecture"));
+    assert!(topics.contains(&"clitic-doubling"));
+    assert!(topics.contains(&"personal-a"));
+    assert!(topics.contains(&"gerund-rules"));
+    assert!(topics.contains(&"adversatives"));
+    assert!(topics.contains(&"legal-subjunctive"));
 }
 
 #[test]
 fn test_unknown_topic_returns_none() {
     assert!(get_reference_card("quantum_physics").is_none());
 }
+

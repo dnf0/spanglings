@@ -7,9 +7,10 @@ use std::collections::{HashMap, HashSet};
 #[test]
 fn test_default_graph_ontology_is_valid_dag() {
     let graph = get_default_linguistic_graph();
-    assert!(
-        graph.nodes.len() >= 40,
-        "Expected at least 40 concepts in ontology, found {}",
+    assert_eq!(
+        graph.nodes.len(),
+        66,
+        "Expected 66 concepts in ontology, found {}",
         graph.nodes.len()
     );
 

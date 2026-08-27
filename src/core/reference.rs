@@ -11,6 +11,12 @@ pub const TOPICS: &[&str] = &[
     "false-friends",
     "voseo",
     "accents",
+    "epistemic-conjecture",
+    "clitic-doubling",
+    "personal-a",
+    "gerund-rules",
+    "adversatives",
+    "legal-subjunctive",
 ];
 
 pub fn list_reference_topics() -> &'static [&'static str] {
@@ -33,6 +39,18 @@ pub fn get_reference_card(topic: &str) -> Option<&'static str> {
         "false-friends" | "falsos-amigos" | "cognates" | "traps" => Some(FALSE_FRIENDS_CARD),
         "voseo" | "regional" | "rioplatense" => Some(VOSEO_CARD),
         "accents" | "accentuation" | "tildes" | "acentuacion" | "stress" => Some(ACCENTS_CARD),
+        "epistemic-conjecture" | "conjecture" | "probability" | "probabilidad" => {
+            Some(EPISTEMIC_CONJECTURE_CARD)
+        }
+        "clitic-doubling" | "duplicacion" | "left-dislocation" | "reduplicacion" => {
+            Some(CLITIC_DOUBLING_CARD)
+        }
+        "personal-a" | "a-personal" | "dom" | "animacy" => Some(PERSONAL_A_CARD),
+        "gerund-rules" | "gerundio" | "gerunds" | "posteriority" => Some(GERUND_RULES_CARD),
+        "adversatives" | "pero-sino" | "sino-que" | "sino" => Some(ADVERSATIVES_CARD),
+        "legal-subjunctive" | "optatives" | "futuro-subjuntivo" | "archaic-subjunctive" => {
+            Some(LEGAL_SUBJUNCTIVE_CARD)
+        }
         _ => None,
     }
 }
@@ -323,3 +341,151 @@ INTERROGATIVE & EXCLAMATORY PRONOUNS:
   (Always carry a tilde in questions and exclamations, direct or indirect!)
 ================================================================================
 "#;
+
+pub const EPISTEMIC_CONJECTURE_CARD: &str = r#"
+================================================================================
+          EPISTEMIC CONJECTURE & PROBABILITY (FUTURO Y CONDICIONAL)
+================================================================================
+In Spanish, the future and conditional tenses frequently express conjecture,
+hypothesis, or probability in place of adverbs like 'probablemente'.
+
+1. PRESENT CONJECTURE (Futuro Simple):
+   Expresses probability or speculation about the PRESENT moment.
+   - ¿Qué hora es? -> Serán las cuatro. (It must be / is probably around 4:00)
+   - ¿Dónde está Juan? -> Estará en la oficina. (He's probably in the office)
+   - ¿Quién llama a la puerta? -> Será el mensajero. (It must be the courier)
+
+2. PAST CONJECTURE / HYPOTHESIS (Condicional Simple):
+   Expresses speculation about an action occurring in the PAST.
+   - Ayer no asistió. -> Estaría enfermo. (He was probably sick)
+   - Tenía un reloj caro. -> Le costaría una fortuna. (It probably cost him a fortune)
+   - Tendría unos 20 años cuando migró. (He must have been about 20 years old)
+
+3. PRIOR PAST CONJECTURE (Futuro Compuesto / Condicional Compuesto):
+   - Futuro Compuesto: Habrá terminado ya. (He has probably finished by now)
+   - Condicional Compuesto: Habría salido antes de las ocho. (He must have left earlier)
+================================================================================
+"#;
+
+pub const CLITIC_DOUBLING_CARD: &str = r#"
+================================================================================
+            CLITIC DOUBLING & LEFT-DISLOCATION (DUPLICACIÓN CLÍTICA)
+================================================================================
+Spanish has rigorous syntactic rules requiring redundant object pronouns:
+
+1. MANDATORY LEFT-DISLOCATION (Fronted Direct & Indirect Objects):
+   When an object is placed BEFORE the verb for topicalization, the clitic is OBLIGATORY:
+   - A María LE entregué el informe. (NOT: *A María entregué el informe)
+   - A los clientes LOS llamé temprano. (NOT: *A los clientes llamé temprano)
+   - Este libro LO leí el año pasado. (NOT: *Este libro leí el año pasado)
+
+2. MANDATORY DATIVE REDUPLICATION WITH TONIC PRONOUNS:
+   Tonic prepositional pronouns (a mí, a ti, a él) REQUIRE the clitic pronoun:
+   - A mí ME gusta la arquitectura distribuida. (NOT: *A mí gusta...)
+   - TE vi A TI en la conferencia. (NOT: *Vi a ti...)
+
+3. DATIVE OF INHERENT INTEREST & PSYCH-VERBS (Gustar, Parecer, Costar):
+   - A los ingenieros LES parece razonable el plazo.
+   - A mi colega LE cuesta adaptarse al nuevo framework.
+================================================================================
+"#;
+
+pub const PERSONAL_A_CARD: &str = r#"
+================================================================================
+             THE 'PERSONAL A' SYSTEM & ANIMACY (A PERSONAL)
+================================================================================
+The preposition 'A' precedes direct objects according to specificity and animacy:
+
+1. MANDATORY WITH SPECIFIC, KNOWN HUMAN BEINGS:
+   - Vi A María en el standup. / Contrataron AL nuevo arquitecto.
+   - Conozco A todos los miembros del equipo de backend.
+
+2. OMITTED WITH NON-SPECIFIC, INDEFINITE HUMANS:
+   - Busco programador con experiencia en Rust. (Any programmer)
+   - Necesitamos secretaria para la oficina central. (Generic role)
+   - BUT: Busco AL programador que diseñó el pipeline. (Specific person)
+
+3. PERSONIFIED OBJECTS & DOMESTIC ANIMALS:
+   - Paseo AL perro todas las mañanas. (Treated as an animate family companion)
+   - Defendemos A la patria. (Personified collective noun)
+
+4. VERBS WITH SEMANTIC SHIFTS:
+   - TENER: Tengo dos servidores. vs Tengo A mi hijo enfermo en casa.
+   - PERDER: Perdió el tren. vs Perdió A su socio en la disputa legal.
+================================================================================
+"#;
+
+pub const GERUND_RULES_CARD: &str = r#"
+================================================================================
+        GERUND RESTRICTIONS & ANGLICISM TRAPS (GERUNDIO CORRECTO)
+================================================================================
+Spanish gerunds (-ando, -iendo) MUST express actions that are SIMULTANEOUS or
+IMMEDIATELY PRECEDING the main verb.
+
+1. PROHIBITED: GERUND OF POSTERIORITY (Gerundio de Posterioridad):
+   A gerund cannot express a subsequent outcome or consequence of the main verb:
+   - INCORRECT: *El servidor se cayó, provocando una interrupción del servicio.
+   - CORRECT:   El servidor se cayó Y PROVOCÓ una interrupción del servicio.
+   - INCORRECT: *Llegó a Madrid, reuniéndose al día siguiente con el cliente.
+   - CORRECT:   Llegó a Madrid Y SE REUNIÓ al día siguiente con el cliente.
+
+2. PROHIBITED: ADJECTIVAL GERUNDS (Gerundio Especificativo):
+   A gerund cannot act as an adjective modifying a non-fluid noun:
+   - INCORRECT: *Una directiva regulando la privacidad de los datos.
+   - CORRECT:   Una directiva QUE REGULA la privacidad de los datos.
+   - (ONLY ALLOWED with: agua hirviendo, clavo ardiendo).
+
+3. CORRECT SPANISH GERUND USAGE:
+   - Continuous aspect: Estamos refactorizando el módulo de pagos.
+   - Simultaneous manner: Entró en la sala gritando consignas.
+================================================================================
+"#;
+
+pub const ADVERSATIVES_CARD: &str = r#"
+================================================================================
+         ADVERSATIVE COORDINATION: PERO VS SINO VS SINO QUE
+================================================================================
+1. PERO (Additive Contrast / Restriction):
+   Adds a qualification or limitation to the first clause without negating it:
+   - El algoritmo es complejo, PERO es extremadamente rápido.
+   - No tenemos mucho presupuesto, PERO alcanzaremos el objetivo.
+
+2. SINO (Exclusive Substitution with Words & Phrases):
+   Used after a NEGATIVE clause to substitute with an alternative element:
+   - No usamos una arquitectura monolítica, SINO microservicios.
+   - No vino el martes, SINO el miércoles.
+   - (Pattern: NO [X], SINO [Y])
+
+3. SINO QUE (Exclusive Substitution with CONJUGATED CLAUSES):
+   Used after a negative clause when substituting with a full finite verb phrase:
+   - No solo corregimos el bug, SINO QUE rediseñamos todo el flujo.
+   - No rechazó la propuesta, SINO QUE sugirió ajustes menores.
+   - (Pattern: NO [Cláusula], SINO QUE [Cláusula con verbo conjugado])
+================================================================================
+"#;
+
+pub const LEGAL_SUBJUNCTIVE_CARD: &str = r#"
+================================================================================
+       OPTATIVES, INDEPENDENT SUBJUNCTIVE & LEGAL TENSES
+================================================================================
+1. INDEPENDENT OPTATIVE FORMULAS (Wishes & Imprecations):
+   - ¡Quién + Imperfecto de Subjuntivo! (Counterfactual longing):
+     ¡Quién tuviera veinte años otra vez! (If only I were twenty again!)
+     ¡Quién pudiera resolver este bug tan fácilmente!
+   - ¡Que + Presente de Subjuntivo! (Independent benevolent wish):
+     ¡Que tengas un excelente día! / ¡Que aproveche!
+   - Fixed expressions: ¡Maldita sea! / ¡Viva la ciencia! / ¡Cueste lo que cueste!
+
+2. FUTURE SUBJUNCTIVE (-are, -iere):
+   Archaic in modern speech, but MANDATORY in legal statutes, contracts, and proverbs:
+   - Si alguna de las partes INCUMPLIERE lo pactado en este contrato...
+   - Quien COMETIERE delito de estafa será sancionado...
+   - Donde FUERES, haz lo que vieres. (Proverb)
+
+3. LITERARY PLUPERFECT IN '-RA':
+   In high journalistic & literary prose, '-ra' often replaces 'había + participio':
+   - El proyecto que INICIARA la empresa hace dos años culminó con éxito.
+     (= que había iniciado)
+================================================================================
+"#;
+

@@ -847,6 +847,152 @@ pub fn get_default_linguistic_graph() -> LinguisticGraph {
         .with_prerequisites(vec!["register_elevation_formal", "cleft_sentences_focus", "adverbial_clauses_syntax"])
         .with_reference_topic("business")
         .with_foundational_track("47_academic_research_and_publishing"),
+
+        // ==========================================
+        // Category: Language Completeness Expansion (Tracks 48-53)
+        // ==========================================
+        ConceptNode::new(
+            "future_of_probability_present",
+            "Present Conjecture & Epistemic Future (Futuro de Probabilidad)",
+            ConceptCategory::AspectAndTense,
+            Level::B2,
+            "Expressing probability, speculation, or hypothesis about present states without epistemic adverbs (e.g., Serán las cuatro).",
+        )
+        .with_prerequisites(vec!["irregular_present_stems"])
+        .with_reference_topic("epistemic-conjecture")
+        .with_foundational_track("48_epistemic_conjecture_and_probability"),
+
+        ConceptNode::new(
+            "conditional_of_probability_past",
+            "Past Conjecture & Epistemic Conditional (Condicional de Probabilidad)",
+            ConceptCategory::AspectAndTense,
+            Level::B2,
+            "Expressing speculation or probability about past states and circumstances (e.g., Estaría enfermo, Tendría 20 años).",
+        )
+        .with_prerequisites(vec!["future_of_probability_present", "imperfect_aspect_habitual_background"])
+        .with_reference_topic("epistemic-conjecture")
+        .with_foundational_track("48_epistemic_conjecture_and_probability"),
+
+        ConceptNode::new(
+            "compound_conditional_conjecture",
+            "Prior Past Conjecture & Perfect Epistemic Modality",
+            ConceptCategory::AspectAndTense,
+            Level::C1,
+            "Speculation regarding anterior actions in the past using compound future and conditional (Habrá terminado, Habría salido antes).",
+        )
+        .with_prerequisites(vec!["conditional_of_probability_past", "haber_impersonal_vs_auxiliary"])
+        .with_reference_topic("epistemic-conjecture")
+        .with_foundational_track("48_epistemic_conjecture_and_probability"),
+
+        ConceptNode::new(
+            "clitic_doubling_mandatory_dative",
+            "Mandatory Dative Clitic Doubling & Psych-Verb Syntax",
+            ConceptCategory::PronounsAndVoice,
+            Level::B1,
+            "Mandatory reduplication of indirect object pronouns with tonic pronouns and lexical dative recipients (A María le dije).",
+        )
+        .with_prerequisites(vec!["direct_indirect_pronouns", "gustar_dative_structures"])
+        .with_reference_topic("clitic-doubling")
+        .with_foundational_track("49_clitic_doubling_and_left_dislocation"),
+
+        ConceptNode::new(
+            "clitic_doubling_fronted_accusative",
+            "Left-Dislocated Direct Object Clitic Resumption",
+            ConceptCategory::PronounsAndVoice,
+            Level::B2,
+            "Mandatory accusative clitic resumption when direct objects are preposed/topicalized before the verb (A los clientes los llamé).",
+        )
+        .with_prerequisites(vec!["clitic_doubling_mandatory_dative", "clitic_pronoun_stacking"])
+        .with_reference_topic("clitic-doubling")
+        .with_foundational_track("49_clitic_doubling_and_left_dislocation"),
+
+        ConceptNode::new(
+            "personal_a_specificity_animacy",
+            "Differential Object Marking (Personal A) & Animacy",
+            ConceptCategory::PrepositionsAndRelators,
+            Level::B1,
+            "Grammatical distribution of 'a' conditioned by direct object human specificity, individualization, and domestic animal personification.",
+        )
+        .with_prerequisites(vec!["por_vs_para_foundations"])
+        .with_reference_topic("personal-a")
+        .with_foundational_track("50_personal_a_and_animacy_shifts"),
+
+        ConceptNode::new(
+            "personal_a_verb_semantic_shifts",
+            "Verb Semantic Shifts Conditioned by Personal A",
+            ConceptCategory::PrepositionsAndRelators,
+            Level::B2,
+            "Systematic semantic and relational mutations conditioned by personal 'a' with verbs like tener, perder, conocer, and querer.",
+        )
+        .with_prerequisites(vec!["personal_a_specificity_animacy"])
+        .with_reference_topic("personal-a")
+        .with_foundational_track("50_personal_a_and_animacy_shifts"),
+
+        ConceptNode::new(
+            "gerund_restrictions_posteriority",
+            "Prohibition of the Gerund of Posteriority & Temporal Sequence",
+            ConceptCategory::SyntaxAndRhetoric,
+            Level::B2,
+            "Eliminating erroneous subsequent-action gerunds calqued from English in favor of coordinated finite verbs (se cayó y causó).",
+        )
+        .with_prerequisites(vec!["discourse_connectors"])
+        .with_reference_topic("gerund-rules")
+        .with_foundational_track("51_gerund_restrictions_and_anglicisms"),
+
+        ConceptNode::new(
+            "gerund_restrictions_adjectival",
+            "Prohibition of Adjectival & Restrictive Gerunds",
+            ConceptCategory::SyntaxAndRhetoric,
+            Level::C1,
+            "Eliminating invalid adjectival gerunds modifying nouns in favor of relative clauses (un informe que detalla vs *un informe detallando).",
+        )
+        .with_prerequisites(vec!["gerund_restrictions_posteriority"])
+        .with_reference_topic("gerund-rules")
+        .with_foundational_track("51_gerund_restrictions_and_anglicisms"),
+
+        ConceptNode::new(
+            "adversative_pero_vs_sino",
+            "Adversative Coordination: Additive Pero vs Exclusive Sino",
+            ConceptCategory::SyntaxAndRhetoric,
+            Level::B1,
+            "Distinguishing between restrictive qualification (pero) and exclusive noun/phrase substitution after negation (sino).",
+        )
+        .with_prerequisites(vec!["discourse_connectors"])
+        .with_reference_topic("adversatives")
+        .with_foundational_track("52_adversative_pero_sino_sino_que"),
+
+        ConceptNode::new(
+            "adversative_sino_que_clauses",
+            "Adversative Substitution with Finite Clauses (Sino Que)",
+            ConceptCategory::SyntaxAndRhetoric,
+            Level::B2,
+            "Exclusive substitution introducing full finite verb clauses following a negative main clause (no solo... sino que).",
+        )
+        .with_prerequisites(vec!["adversative_pero_vs_sino"])
+        .with_reference_topic("adversatives")
+        .with_foundational_track("52_adversative_pero_sino_sino_que"),
+
+        ConceptNode::new(
+            "optative_independent_subjunctive",
+            "Independent Optatives & Exclamatory Subjunctive Formulas",
+            ConceptCategory::MoodSelection,
+            Level::C1,
+            "Subjunctive mood in independent matrix clauses expressing counterfactual longing (¡Quién pudiera!), wishes, and fixed oaths.",
+        )
+        .with_prerequisites(vec!["imperfect_subjunctive_formation", "subjunctive_volition_influence"])
+        .with_reference_topic("legal-subjunctive")
+        .with_foundational_track("53_independent_subjunctives_and_legal_tenses"),
+
+        ConceptNode::new(
+            "future_subjunctive_legal_archaic",
+            "Future Subjunctive in Statutory Texts & Proverbs",
+            ConceptCategory::MoodSelection,
+            Level::C1,
+            "Recognition and formation of archaic future subjunctive (-are, -iere) in legal contracts, statutory penal codes, and proverbs.",
+        )
+        .with_prerequisites(vec!["imperfect_subjunctive_formation"])
+        .with_reference_topic("legal-subjunctive")
+        .with_foundational_track("53_independent_subjunctives_and_legal_tenses"),
     ];
 
     for concept in concepts {
