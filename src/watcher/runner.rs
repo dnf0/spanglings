@@ -340,6 +340,9 @@ pub fn start_watch_mode(strict_accents: bool) -> Result<()> {
         if had_file_change {
             if let Ok(updated) = find_all_exercises(exercises_dir) {
                 exercises = updated;
+                if !exercises.is_empty() && current_index >= exercises.len() {
+                    current_index = exercises.len().saturating_sub(1);
+                }
             }
             if let Ok(res) = evaluate_at(current_index, &exercises, &mut state) {
                 last_passed = res;
@@ -417,6 +420,9 @@ pub fn start_watch_mode(strict_accents: bool) -> Result<()> {
                         {
                             if let Ok(updated) = find_all_exercises(exercises_dir) {
                                 exercises = updated;
+                                if !exercises.is_empty() && current_index >= exercises.len() {
+                                    current_index = exercises.len().saturating_sub(1);
+                                }
                             }
                             if let Ok(res) = evaluate_at(current_index, &exercises, &mut state) {
                                 last_passed = res;

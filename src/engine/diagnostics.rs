@@ -34,7 +34,7 @@ impl Diagnostic {
         let underline_len = if self.user_snippet.is_empty() {
             1
         } else {
-            self.user_snippet.len()
+            self.user_snippet.chars().count()
         };
         let underline = "^".repeat(underline_len).red().bold();
 

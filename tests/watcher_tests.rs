@@ -1,14 +1,19 @@
 use spanglings::core::state::AppState;
 use spanglings::engine::accents::AccentMode;
-use spanglings::watcher::runner::{evaluate_current_exercise, evaluate_current_exercise_in};
+use spanglings::watcher::runner::evaluate_current_exercise_in;
 use std::fs;
 use tempfile::tempdir;
 
 #[test]
 fn test_watcher_evaluate_current_exercise_runs_cleanly() {
-    // When no exercises exist, evaluate_current_exercise returns Ok(false)
-    let result = evaluate_current_exercise(AccentMode::Forgiving);
+    let temp_dir = tempdir().unwrap();
+    let exercises_path = temp_dir.path().join("exercises");
+    fs::create_dir_all(&exercises_path).unwrap();
+
+    let mut state = AppState::default();
+    let result = evaluate_current_exercise_in(&exercises_path, &mut state, AccentMode::Forgiving);
     assert!(result.is_ok());
+    assert!(!result.unwrap());
 }
 
 #[test]

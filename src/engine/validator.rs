@@ -92,10 +92,26 @@ pub fn extract_user_answer(exercise: &Exercise, file_content: &str) -> String {
 
 fn find_exercise_line_number(exercise: &Exercise) -> usize {
     if let Ok(content) = std::fs::read_to_string(&exercise.path) {
+        // First pass: find placeholder ___
         for (idx, line) in content.lines().enumerate() {
             if line.contains("___") {
                 return idx + 1;
             }
+        }
+        // Second pass: find exercise question/code line
+        for (idx, line) in content.lines().enumerate() {
+            let trimmed = line.trim();
+            if trimmed.is_empty()
+                || trimmed.starts_with('#')
+                || trimmed.starts_with('>')
+                || trimmed.starts_with("<!--")
+                || trimmed.starts_with("English:")
+                || trimmed.starts_with("Prompt:")
+                || trimmed.starts_with("Context:")
+            {
+                continue;
+            }
+            return idx + 1;
         }
     }
     1
