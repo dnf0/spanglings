@@ -9,7 +9,7 @@
 Duolingo is often too slow, repetitive, and child-oriented. **Spanglings** provides a developer-first, terminal-native environment for mastering the nuances of Spanish syntax, subjunctive triggers, aspectual contrasts (*pretérito vs imperfecto*), clitic pronoun stacking, accidental *se*, and formal C1 collocations.
 
 ### Key Features
-- 🌐 **Linguistic Knowledge Graph (DAG Ontology)**: 53-concept ontological graph mapping prerequisite relationships, morphological shifts, and situational domains with learning frontier resolution.
+- 🌐 **Linguistic Knowledge Graph (DAG Ontology)**: 66-concept ontological graph mapping prerequisite relationships, morphological shifts, and situational domains with learning frontier resolution.
 - 🚀 **Interactive Terminal UI (`ratatui`)**: Real-time dual-pane editor with live validation, syntax styling, progress tracking, and interactive drill modes.
 - ⚡ **Modern Headless Watch Mode (`spanglings watch`)**: Modify exercise files in your favorite editor (VS Code, Neovim, Zed) while Spanglings continuously validates submissions. Features interactive non-blocking terminal keystrokes (`[n]` next, `[p]` previous, `[r]` reset, `[q]` quit) with zero comment-deletion busywork.
 - 📦 **Turnkey Zero-Setup Scaffolding (`spanglings init`)**: Embedded exercise catalog compiled directly into the binary—run `spanglings init` in any directory with zero git-cloning needed.
@@ -17,16 +17,16 @@ Duolingo is often too slow, repetitive, and child-oriented. **Spanglings** provi
 - 💡 **Progressive 3-Tier Hint System**: Get hints on demand (Tier 1: conceptual clue, Tier 2: morphological/structural clue, Tier 3: solution reveal).
 - 🧠 **Forgiving Smart Accent Matching**: Designed for QWERTY keyboards. Accents and inverted punctuation (`¿`, `¡`) are forgiven by default with helpful tip notices, or enforced with `--strict-accents`.
 - 🔄 **SM-2 Spaced Repetition (SRS)**: Active recall review scheduler using the SuperMemo-2 algorithm (`spanglings review` / `spanglings drill`).
-- 🔎 **Full-Text, Concept & Topic Search (`spanglings search`, `spanglings list --concept`)**: Instant matching across grammar topics, CEFR levels, exercise titles, prompts, solutions, and 53 linguistic ontology concepts.
+- 🔎 **Full-Text, Concept & Topic Search (`spanglings search`, `spanglings list --concept`)**: Instant matching across grammar topics, CEFR levels, exercise titles, prompts, solutions, and 66 linguistic ontology concepts.
 - 🤖 **Machine-Readable Output (`--json`)**: Streamlined JSON serialization for external scripts, status bars (Starship, tmux), and IDE integrations.
 - 🐚 **Shell Auto-Completions (`spanglings completions`)**: Native autocompletions for Bash, Zsh, Fish, PowerShell, and Elvish.
-- 📖 **In-Terminal Cheat Sheets (`spanglings explain <topic>`)**: Reference cards for *ser vs estar*, past aspectual shifts, subjunctive triggers (WEIRDO), *por vs para*, prepositional regimes, pronoun stacking, accidental *se*, tech Spanish, business correspondence, false friends, and *voseo*.
+- 📖 **In-Terminal Cheat Sheets (`spanglings explain <topic>`)**: Reference cards for *ser vs estar*, past aspectual shifts, subjunctive triggers (WEIRDO), *por vs para*, prepositional regimes, pronoun stacking, accidental *se*, tech Spanish, business correspondence, false friends, *voseo*, accents, epistemic conjecture, clitic doubling, personal *a*, gerund restrictions, adversatives (*pero/sino/sino que*), and legal subjunctives.
 - 🧭 **Interactive Guided Onboarding Tour (`spanglings tour`)**: 6-station interactive walkthrough with active-recall micro-challenges, architecture overviews, and developer shortcuts for first-time learners.
 - 🎯 **Diagnostic Placement & CEFR Assessment (`spanglings test`)**: Calibrated multi-tier diagnostic test battery assessing CEFR proficiency (Baseline through C1). Includes one-click automatic fast-tracking to mark mastered tiers and seed SM-2 spaced repetition cards.
 - 🔌 **Native Language Server Protocol (LSP) Engine (`spanglings lsp`)**: Real-time stdio JSON-RPC server with live diagnostics, rich hover popups (conjugations and grammar sheets), and autocompletion for VS Code, Neovim, Helix, and Zed.
 - 📦 **Anki & Markdown Study Pack Exporter (`spanglings export`)**: Export full decks to Anki TSV format, generate Markdown study guides for Obsidian, or export JSON progress metrics.
 - 🔄 **Portable State Sync (`spanglings sync`)**: Export and merge learning history, streaks, and SRS mastery across workstations.
-- 📚 **267 Handcrafted Exercises across 48 Tracks**: Complete coverage from baseline irregular drills through Latin American engineering, everyday conversational mastery, practical logistics, and formal C1 collocations.
+- 📚 **303 Handcrafted Exercises across 54 Tracks**: Complete coverage from baseline irregular drills through Latin American engineering, everyday conversational mastery, practical logistics, formal C1 collocations, and nuanced linguistic edge cases.
 
 ---
 

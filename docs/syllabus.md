@@ -1,8 +1,8 @@
 # Curriculum Syllabus & Knowledge Graph
 
-The Spanglings curriculum comprises **267 handcrafted exercises** organized across **48 thematic tracks** spanning CEFR Baseline (A1–A2), B1, B2, and C1.
+The Spanglings curriculum comprises **303 handcrafted exercises** organized across **54 thematic tracks** spanning CEFR Baseline (A1–A2), B1, B2, and C1.
 
-All exercises are mapped into a **53-concept Directed Acyclic Graph (DAG) ontology** that tracks prerequisite dependencies and powers personalized weakness profiling.
+All exercises are mapped into a **66-concept Directed Acyclic Graph (DAG) ontology** that tracks prerequisite dependencies and powers personalized weakness profiling.
 
 ---
 
@@ -17,7 +17,7 @@ All exercises are mapped into a **53-concept Directed Acyclic Graph (DAG) ontolo
 
 ---
 
-### 🟡 Intermediate Core (B1) • 75 Exercises
+### 🟡 Intermediate Core (B1) • 93 Exercises
 | Track | Name | CEFR | Exercises | Key Concepts Covered |
 | :--- | :--- | :--- | :---: | :--- |
 | `03_subjunctive_weirdo` | Subjunctive Volition, Emotion & Doubt | B1 | 5 | WEIRDO triggers (*querer que*, *alegrarse de que*, *dudar que*) |
@@ -35,6 +35,9 @@ All exercises are mapped into a **53-concept Directed Acyclic Graph (DAG) ontolo
 | `15_diminutives_augmentatives` | Pragmatic Suffixation & Softening | B1 | 5 | *-ito*, *-illo*, *-azo*, discourse softening, situational affection |
 | `16_comparatives_superlatives` | Nuanced Scales & Relative Quantities | B1 | 5 | *Tanto como*, *de lo que*, *mayor/menor*, absolute superlatives |
 | `17_imperative_mood` | Directives & Clipped Commands | B1 | 5 | Affirmative *tú* irregulars (*haz*, *pon*, *ten*), negative subjunctive |
+| `49_clitic_doubling_and_left_dislocation` | Clitic Doubling & Left Dislocation | B1–B2 | 6 | Mandatory dative doubling (*A mí me parece*), psych-verbs, topicalization |
+| `50_personal_a_and_animacy_shifts` | Personal A & Animacy Shifts | B1–B2 | 6 | Specific humans vs generic roles, *al perro*, semantic shift of *tener* & *perder* |
+| `52_adversative_pero_sino_sino_que` | Adversative Pero, Sino & Sino Que | B1–B2 | 6 | Additive contrast (*pero*) vs exclusive substitution (*sino* / *sino que + verbo*) |
 
 ---
 
@@ -59,10 +62,11 @@ All exercises are mapped into a **53-concept Directed Acyclic Graph (DAG) ontolo
 | `33_latam_fintech_banking` | Latin American Fintech & Payments | B2 | 6 | Wallets, QR transactions, KYC verification, exchange regulations |
 | `34_latam_cloud_devops` | LatAm DevOps & Cloud Architecture | B2 | 6 | Microservices, autoscaling, CI/CD pipelines, latency mitigation |
 | `35_latam_business_negotiation` | LatAm Commercial Strategy & SLAs | B2 | 6 | Vendor SLAs, contract renewals, milestone deliverables |
+| `48_epistemic_conjecture_and_probability` | Epistemic Future & Conditional Conjecture | B2–C1 | 6 | Present conjecture (*serán las 4*), past conjecture (*estaría enfermo*), compound forms |
 
 ---
 
-### 🟣 Advanced & Situational Synthesis (C1) • 81 Exercises
+### 🟣 Advanced & Situational Synthesis (C1) • 99 Exercises
 | Track | Name | CEFR | Exercises | Key Concepts Covered |
 | :--- | :--- | :--- | :---: | :--- |
 | `36_everyday_life_housing` | Housing, Lease & Bureaucracy | C1 | 6 | Lease deposits (*fianza*), utilities (*dar de alta*), banking transfers |
@@ -77,10 +81,12 @@ All exercises are mapped into a **53-concept Directed Acyclic Graph (DAG) ontolo
 | `45_home_maintenance_repairs` | Electrical, Plumbing & Utilities | C1 | 6 | Fuse breakers (*diferencial*), plumbing leaks (*fuga de agua*), repairs |
 | `46_news_media_editorial` | Socioeconomic Analysis & Editorial | C1 | 6 | Economic trends, policy debates, investigative reporting |
 | `47_conversational_nuance_slang` | Pan-Hispanic Pragmatics & Colloquialisms | C1 | 6 | Irony, colloquial markers (*¡qué va!*, *ni hablar*), discourse flow |
+| `51_gerund_restrictions_and_anglicisms` | Gerund Restrictions & Anglicisms | B2–C1 | 6 | Gerund of posteriority rejection, adjectival gerund elimination (*que regula*), *agua hirviendo* |
+| `53_independent_subjunctives_and_legal_tenses` | Optatives & Legal Subjunctives | C1 | 6 | *¡Quién pudiera!*, independent wishes (*¡Que tengas éxito!*), legal future subjunctive (*incumpliere*) |
 
 ---
 
-## 🌐 The 53-Concept Linguistic Knowledge Graph
+## 🌐 The 66-Concept Linguistic Knowledge Graph
 
 Spanglings compiles a static, cycle-free Directed Acyclic Graph (DAG) modeling dependencies between grammatical concepts:
 
@@ -96,9 +102,15 @@ graph TD
     G --> I[subjunctive_temporal_conjunctions]
     F --> J[counterfactual_si_clauses]
     C --> K[ser_vs_estar_adjective_shifts]
+    B --> L[future_of_probability_present]
+    L --> M[conditional_of_probability_past]
+    M --> N[compound_conditional_conjecture]
+    F --> O[optative_independent_subjunctive]
+    F --> P[future_subjunctive_legal_archaic]
 ```
 
 ### Key Graph Primitives
-- **Node**: A linguistic concept with an identifier (e.g. `subjunctive_wishes_desires`), display name, CEFR level, category, and explanation.
+- **Node**: A linguistic concept with an identifier (e.g. `optative_independent_subjunctive`), display name, CEFR level, category, and explanation.
 - **Edge**: Prerequisite link indicating that concept $A$ should be mastered before concept $B$.
 - **Learning Frontier**: Computes the set of unmastered concepts whose prerequisites have all been fulfilled ($M \ge 70\%$).
+

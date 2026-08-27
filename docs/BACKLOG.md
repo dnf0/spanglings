@@ -215,3 +215,25 @@ This backlog documents upcoming enhancements, planned curriculum tracks, diagnos
     - [x] **CLI Subcommand**: Added `spanglings tour [--skip-challenges]` CLI command with CI batch mode fallback.
     - [x] **Interactive TUI Integration**: First-run welcome modal dialog, in-TUI station modals, footer `[T]` hint, Help menu integration, and keyboard routing in `src/tui/events.rs`.
     - [x] **Test Battery**: Full integration test coverage in `tests/tour_tests.rs`, `tests/cli_tests.rs`, and `tests/tui_tests.rs`.
+
+---
+
+## 💎 Focus Area 16: Linguistic Completeness & Advanced Grammatical Subtleties (Completed)
+
+- [x] **SPANG-150: Linguistic Knowledge Graph Expansion to 66 Concepts (`src/core/graph.rs`)**
+  - **Description**: Expanded default linguistic ontology from 53 to 66 concepts covering epistemic conjecture, mandatory dative clitic doubling, fronted accusative left-dislocation, personal *a* animacy/semantic shifts, gerund restrictions/anglicism elimination, adversative coordinate systems (*pero* vs *sino* vs *sino que*), and optative/legal future subjunctives.
+- [x] **SPANG-151: Six New Grammar Reference Cheat Sheets (`src/core/reference.rs`, `docs/grammar-reference.md`)**
+  - **Topics**: `epistemic-conjecture`, `clitic-doubling`, `personal-a`, `gerund-rules`, `adversatives`, `legal-subjunctive` accessible via `spanglings explain <topic>` and the TUI cheat sheet browser.
+- [x] **SPANG-152: Curriculum Expansion: Tracks 48 to 53 (36 New Exercises, 303 Total)**
+  - **Description**: Authored 36 handcrafted exercises with 3-tier progressive hints and targeted diagnostic rules across:
+    - Track 48: `48_epistemic_conjecture_and_probability` (B2–C1)
+    - Track 49: `49_clitic_doubling_and_left_dislocation` (B1–B2)
+    - Track 50: `50_personal_a_and_animacy_shifts` (B1–B2)
+    - Track 51: `51_gerund_restrictions_and_anglicisms` (B2–C1)
+    - Track 52: `52_adversative_pero_sino_sino_que` (B1–B2)
+    - Track 53: `53_independent_subjunctives_and_legal_tenses` (C1)
+- [x] **SPANG-153: Targeted Diagnostic Compiler Rules (E0048–E0053)**
+  - **Description**: Added targeted diagnostic error codes and explanatory feedback in `src/engine/rules.rs` and `src/engine/validator.rs` for common native speaker traps.
+- [x] **SPANG-154: Architectural Decision Record ADR-0003**
+  - **Description**: Documented architecture and rationale in `docs/adr/0003-language-completeness-and-expanded-ontology.md`.
+
