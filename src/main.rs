@@ -57,6 +57,14 @@ fn main() -> anyhow::Result<()> {
                 cli.json,
             )?;
         }
+        Some(Commands::Hook { action }) => match action {
+            spanglings::cli::HookAction::Install { hook_type } => {
+                spanglings::cli::commands::hook::run_hook_install(&hook_type)?;
+            }
+            spanglings::cli::HookAction::Uninstall { hook_type } => {
+                spanglings::cli::commands::hook::run_hook_uninstall(&hook_type)?;
+            }
+        },
         Some(Commands::Tui) => {
             spanglings::tui::start_tui(cli.strict_accents)?;
         }

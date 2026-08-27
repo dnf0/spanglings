@@ -79,8 +79,29 @@ pub enum Commands {
         /// Optional tense filter (e.g. 'subjuntivo', 'imperativo', 'preterito')
         tense: Option<String>,
     },
+    /// Manage Git pre-commit / pre-push Spanish practice hooks
+    Hook {
+        #[command(subcommand)]
+        action: HookAction,
+    },
     /// Launch the interactive terminal UI
     Tui,
     /// Reset an exercise to its initial prompt
     Reset { exercise: String },
+}
+
+#[derive(Subcommand, Debug, PartialEq, Eq)]
+pub enum HookAction {
+    /// Install Spanish practice git hook in current repository
+    Install {
+        /// Hook type (e.g. pre-commit, pre-push)
+        #[arg(short = 't', long, default_value = "pre-commit")]
+        hook_type: String,
+    },
+    /// Remove Spanish practice git hook from current repository
+    Uninstall {
+        /// Hook type (e.g. pre-commit, pre-push)
+        #[arg(short = 't', long, default_value = "pre-commit")]
+        hook_type: String,
+    },
 }
