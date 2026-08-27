@@ -164,7 +164,7 @@ pub fn render_station_card(station: &TourStation, index: usize, total: usize) {
     println!();
 }
 
-fn run_interactive_tour(stations: &[TourStation]) -> anyhow::Result<()> {
+fn run_interactive_tour(stations: &[TourStation]) -> anyhow::Result<bool> {
     let stdin = io::stdin();
     let mut reader = stdin.lock();
     let mut idx = 0;
@@ -286,7 +286,7 @@ fn run_interactive_tour(stations: &[TourStation]) -> anyhow::Result<()> {
                     "\n{}",
                     "Exiting tour early. You can return anytime with 'spanglings tour'.".yellow()
                 );
-                return Ok(());
+                return Ok(false);
             }
             _ => {
                 idx += 1;
@@ -295,15 +295,19 @@ fn run_interactive_tour(stations: &[TourStation]) -> anyhow::Result<()> {
         println!();
     }
 
-    Ok(())
+    Ok(idx >= stations.len())
 }
 
 pub fn run_tour(skip_challenges: bool) -> anyhow::Result<()> {
-    let is_interactive = io::stdin().is_terminal() && io::stdout().is_terminal() && !skip_challenges;
+    let is_interactive =
+        io::stdin().is_terminal() && io::stdout().is_terminal() && !skip_challenges;
     let stations = get_tour_stations();
 
     if is_interactive {
-        run_interactive_tour(&stations)?;
+        let completed = run_interactive_tour(&stations)?;
+        if !completed {
+            return Ok(());
+        }
     } else {
         println!("{}", "═".repeat(64).blue());
         println!(
@@ -321,7 +325,9 @@ pub fn run_tour(skip_challenges: bool) -> anyhow::Result<()> {
     println!("{}", "═".repeat(64).green());
     println!(
         "{}",
-        "              TOUR COMPLETE — ¡BUEN VIAJE!                    ".green().bold()
+        "              TOUR COMPLETE — ¡BUEN VIAJE!                    "
+            .green()
+            .bold()
     );
     println!("{}", "═".repeat(64).green());
     println!("You are now ready to start your Spanglings journey!\n");
@@ -346,7 +352,9 @@ pub fn run_tour(skip_challenges: bool) -> anyhow::Result<()> {
 
     let mut state = AppState::load().unwrap_or_default();
     state.mark_tour_completed();
-    let _ = state.save();
+    if let Err(e) = state.save() {
+        eprintln!("Warning: Failed to save onboarding state: {}", e);
+    }
 
     Ok(())
 }
