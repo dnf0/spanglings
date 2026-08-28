@@ -2,6 +2,7 @@ use ratatui::backend::TestBackend;
 use ratatui::Terminal;
 use spanglings::core::curriculum::Level;
 use spanglings::core::exercise::{DiagnosticRule, Exercise, ExerciseType};
+use spanglings::core::state::AppState;
 use spanglings::tui::app::App;
 use spanglings::tui::ui::draw_ui;
 use std::path::PathBuf;
@@ -62,10 +63,14 @@ fn create_sample_exercises() -> Vec<Exercise> {
     ]
 }
 
+fn new_test_app(exercises: Vec<Exercise>, strict: bool) -> App {
+    App::new_with_state(exercises, strict, AppState::default())
+}
+
 #[test]
 fn test_app_initialization_and_navigation() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     assert_eq!(app.current_index, 0);
     assert_eq!(app.current_exercise().unwrap().id, "b1_subj_01");
@@ -86,7 +91,7 @@ fn test_app_initialization_and_navigation() {
 #[test]
 fn test_app_input_editing() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     app.insert_char('h');
     app.insert_char('o');
@@ -112,7 +117,7 @@ fn test_app_input_editing() {
 #[test]
 fn test_app_submission_evaluation_passed_and_failed() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     // Submit wrong answer
     app.input_buffer = "viene".to_string();
@@ -132,7 +137,7 @@ fn test_app_submission_evaluation_passed_and_failed() {
 #[test]
 fn test_app_toggles_hints_and_reference() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     assert!(!app.show_hint);
     assert!(!app.show_reference);
@@ -152,7 +157,7 @@ fn test_app_toggles_hints_and_reference() {
 #[test]
 fn test_app_reset() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     app.input_buffer = "vengas".to_string();
     app.submit_current_answer();
@@ -167,7 +172,7 @@ fn test_app_reset() {
 #[test]
 fn test_app_draw_ui_renders_without_panicking() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
     app.input_buffer = "viene".to_string();
     app.submit_current_answer();
 
@@ -185,7 +190,7 @@ fn test_app_draw_ui_renders_without_panicking() {
 #[test]
 fn test_app_utf8_spanish_characters_editing_and_rendering() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     // Type Spanish accented characters and ñ
     app.insert_char('e');
@@ -228,7 +233,7 @@ fn test_app_utf8_spanish_characters_editing_and_rendering() {
 #[test]
 fn test_app_search_filtering_and_navigation() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     assert_eq!(app.exercises.len(), 2);
 
@@ -270,7 +275,7 @@ fn test_app_search_filtering_and_navigation() {
 #[test]
 fn test_app_search_cancel_restores_state() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     app.enter_search();
     app.insert_search_char('p');
@@ -289,7 +294,7 @@ fn test_app_search_cancel_restores_state() {
 #[test]
 fn test_app_draw_ui_in_search_mode() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     app.enter_search();
     app.insert_search_char('p');
@@ -304,7 +309,7 @@ fn test_app_draw_ui_in_search_mode() {
 #[test]
 fn test_tui_conjugator_modal_navigation_and_lookup() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
     assert_eq!(app.mode, spanglings::tui::app::AppMode::Editing);
 
     // Open conjugator modal
@@ -342,7 +347,7 @@ fn test_tui_conjugator_modal_navigation_and_lookup() {
 #[test]
 fn test_tui_reference_browser_modal() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     app.enter_reference_browser();
     assert_eq!(app.mode, spanglings::tui::app::AppMode::BrowsingReference);
@@ -383,7 +388,7 @@ fn test_tui_reference_browser_modal() {
 #[test]
 fn test_tui_help_modal() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     app.enter_help();
     assert_eq!(app.mode, spanglings::tui::app::AppMode::Help);
@@ -395,7 +400,7 @@ fn test_tui_help_modal() {
 #[test]
 fn test_tui_draw_all_modals_without_panicking() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
     let backend = TestBackend::new(120, 40);
     let mut terminal = Terminal::new(backend).unwrap();
 
@@ -431,7 +436,7 @@ fn test_tui_draw_all_modals_without_panicking() {
 #[test]
 fn test_tui_placement_test_flow() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
 
     app.enter_placement_test();
     assert_eq!(app.mode, spanglings::tui::app::AppMode::PlacementTest);
@@ -588,7 +593,7 @@ fn test_app_welcome_modal_responses() {
     let exercises = create_sample_exercises();
 
     // 1. Respond with 'y' -> opens tour modal
-    let mut app_y = App::new(exercises.clone(), false);
+    let mut app_y = new_test_app(exercises.clone(), false);
     app_y.show_tour_welcome = true;
     app_y.on_key(crossterm::event::KeyCode::Char('y'));
     assert!(!app_y.show_tour_welcome);
@@ -596,28 +601,28 @@ fn test_app_welcome_modal_responses() {
     assert_eq!(app_y.tour_current_station, 0);
 
     // 2. Respond with 'Y' -> opens tour modal
-    let mut app_cap_y = App::new(exercises.clone(), false);
+    let mut app_cap_y = new_test_app(exercises.clone(), false);
     app_cap_y.show_tour_welcome = true;
     app_cap_y.on_key(crossterm::event::KeyCode::Char('Y'));
     assert!(!app_cap_y.show_tour_welcome);
     assert!(app_cap_y.show_tour_modal);
 
     // 3. Respond with 'n' -> dismisses welcome modal
-    let mut app_n = App::new(exercises.clone(), false);
+    let mut app_n = new_test_app(exercises.clone(), false);
     app_n.show_tour_welcome = true;
     app_n.on_key(crossterm::event::KeyCode::Char('n'));
     assert!(!app_n.show_tour_welcome);
     assert!(!app_n.show_tour_modal);
 
     // 4. Respond with 'N' -> dismisses welcome modal
-    let mut app_cap_n = App::new(exercises.clone(), false);
+    let mut app_cap_n = new_test_app(exercises.clone(), false);
     app_cap_n.show_tour_welcome = true;
     app_cap_n.on_key(crossterm::event::KeyCode::Char('N'));
     assert!(!app_cap_n.show_tour_welcome);
     assert!(!app_cap_n.show_tour_modal);
 
     // 5. Respond with Esc -> dismisses welcome modal
-    let mut app_esc = App::new(exercises, false);
+    let mut app_esc = new_test_app(exercises, false);
     app_esc.show_tour_welcome = true;
     app_esc.on_key(crossterm::event::KeyCode::Esc);
     assert!(!app_esc.show_tour_welcome);
@@ -627,7 +632,7 @@ fn test_app_welcome_modal_responses() {
 #[test]
 fn test_tui_draw_tour_modals_without_panicking() {
     let exercises = create_sample_exercises();
-    let mut app = App::new(exercises, false);
+    let mut app = new_test_app(exercises, false);
     let backend = TestBackend::new(120, 40);
     let mut terminal = Terminal::new(backend).unwrap();
 
@@ -731,7 +736,7 @@ Nosotros (estar) ___ listos.
         contrast_note: None,
     };
 
-    let mut app = App::new(vec![exercise], true);
+    let mut app = new_test_app(vec![exercise], true);
     app.show_tour_welcome = false;
     app.show_tour_modal = false;
     let backend = TestBackend::new(100, 30);
@@ -770,8 +775,49 @@ fn test_app_initialization_with_embedded_fallback() {
     ))
     .expect("Embedded exercises should load");
     assert_eq!(embedded.len(), 339);
-    let app = App::new(embedded, false);
+    let app = new_test_app(embedded, false);
     assert_eq!(app.exercises.len(), 339);
     assert_eq!(app.filtered_indices.len(), 339);
+}
+
+#[test]
+fn test_tui_progress_persistence_and_resume() {
+    let dir = tempfile::tempdir().unwrap();
+    let state_path = dir.path().join("state.json");
+
+    let exercises = create_sample_exercises();
+    let initial_state = AppState::default();
+    let mut app = App::new_with_state(exercises.clone(), false, initial_state);
     assert_eq!(app.current_index, 0);
+    assert!(!app.current_exercise().unwrap().is_done);
+
+    // Solve exercise 0
+    app.input_buffer = "vengas".to_string();
+    app.submit_current_answer();
+    assert!(app.current_exercise().unwrap().is_done);
+    assert!(app.state.is_completed("b1_subj_01"));
+
+    // Save state to disk
+    app.state.save_to_path(&state_path).unwrap();
+
+    // Navigate to exercise 1
+    app.next_exercise();
+    assert_eq!(app.current_index, 1);
+    assert_eq!(
+        app.state.current_exercise.as_deref(),
+        Some("b1_por_para_01")
+    );
+    app.state.save_to_path(&state_path).unwrap();
+
+    // Reload state in a new App instance simulating TUI restart
+    let loaded_state = AppState::load_from_path(&state_path).unwrap();
+    let reopened_app = App::new_with_state(exercises, false, loaded_state);
+
+    // Verify exercise 0 is loaded as done, and TUI resumes at exercise 1
+    assert!(reopened_app.exercises[0].is_done);
+    assert_eq!(reopened_app.current_index, 1);
+    assert_eq!(
+        reopened_app.current_exercise().unwrap().id,
+        "b1_por_para_01"
+    );
 }
