@@ -4,7 +4,7 @@
   "description": "VS Code and Cursor extension for Spanglings: learn Spanish through compiler diagnostics, LSP feedback, and interactive exercises",
   "version": "0.4.0",
   "license": "Apache-2.0",
-  "publisher": "spanglings",
+  "publisher": "dnf0",
   "repository": {
     "type": "git",
     "url": "https://github.com/dnf0/spanglings"

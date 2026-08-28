@@ -191,3 +191,26 @@ jobs:
         run: cargo publish --token ${{ secrets.CARGO_REGISTRY_TOKEN }}
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+
+  publish-vscode-marketplace:
+    name: Publish to VS Code Marketplace
+    needs: [check-version, publish-release]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Publish to Marketplace
+        run: |
+          cd editors/vscode
+          npm ci
+          npm run package
+          npx @vscode/vsce publish --packagePath spanglings-vscode-*.vsix --pat "${{ secrets.VSCE_PAT }}"
+        env:
+          VSCE_PAT: ${{ secrets.VSCE_PAT }}
+
