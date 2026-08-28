@@ -2,7 +2,8 @@
   "name": "spanglings-vscode",
   "displayName": "Spanglings: Developer Spanish Learning",
   "description": "VS Code and Cursor extension for Spanglings: learn Spanish through compiler diagnostics, LSP feedback, and interactive exercises",
-  "version": "0.1.0",
+  "version": "0.4.0",
+  "license": "Apache-2.0",
   "publisher": "spanglings",
   "repository": {
     "type": "git",
@@ -82,7 +83,8 @@
   "scripts": {
     "vscode:prepublish": "node esbuild.config.js --minify",
     "compile": "node esbuild.config.js",
-    "watch": "node esbuild.config.js --watch"
+    "watch": "node esbuild.config.js --watch",
+    "package": "npx @vscode/vsce package --no-dependencies"
   },
   "dependencies": {
     "vscode-languageclient": "^9.0.1"
