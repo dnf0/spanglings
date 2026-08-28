@@ -860,3 +860,45 @@ fn test_tui_progress_persistence_and_resume() {
         "b1_por_para_01"
     );
 }
+
+#[test]
+fn test_tui_reference_browser_shows_functional_glosses_and_searches_glosses() {
+    let exercises = create_sample_exercises();
+    let mut app = new_test_app(exercises, false);
+
+    app.enter_reference_browser();
+
+    // Test filter matches on communicative gloss keyword "wishes"
+    app.ref_query = "wishes".to_string();
+    app.update_ref_filter();
+    assert_eq!(app.ref_filtered_topics.len(), 1);
+    assert_eq!(app.ref_filtered_topics[0], "subjunctive");
+
+    // Test filter matches on communicative gloss keyword "unintentional"
+    app.ref_query = "unintentional".to_string();
+    app.update_ref_filter();
+    assert!(app.ref_filtered_topics.contains(&"accidental-se"));
+
+    // Test filter matches on communicative gloss keyword "conjecture"
+    app.ref_query = "conjecture".to_string();
+    app.update_ref_filter();
+    assert!(app.ref_filtered_topics.contains(&"epistemic-conjecture"));
+
+    // Test rendering modal with functional glosses
+    let backend = TestBackend::new(140, 40);
+    let mut terminal = Terminal::new(backend).unwrap();
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+
+    let buffer = terminal.backend().buffer();
+    let rendered_text: String = buffer
+        .content()
+        .iter()
+        .map(|cell| cell.symbol())
+        .collect::<Vec<_>>()
+        .join("");
+
+    assert!(
+        rendered_text.contains("Cheat Sheet: Epistemic Conjecture"),
+        "Buffer should render Cheat Sheet header with concept title"
+    );
+}
