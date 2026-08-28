@@ -2,7 +2,7 @@ pub mod app;
 pub mod events;
 pub mod ui;
 
-use crate::core::curriculum::find_all_exercises;
+use crate::core::curriculum::find_all_exercises_or_embedded;
 use crate::tui::app::App;
 use crate::tui::events::run_tui_app;
 use anyhow::Result;
@@ -27,7 +27,7 @@ impl Drop for RawModeGuard {
 
 pub fn start_tui(strict_accents: bool) -> Result<()> {
     let exercises_dir = Path::new("exercises");
-    let exercises = find_all_exercises(exercises_dir).unwrap_or_default();
+    let exercises = find_all_exercises_or_embedded(exercises_dir).unwrap_or_default();
 
     // Register panic hook to restore terminal if a panic occurs
     let default_panic = std::panic::take_hook();

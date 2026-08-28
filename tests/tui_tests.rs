@@ -762,3 +762,16 @@ Nosotros (estar) ___ listos.
         "Buffer should render Sentence section"
     );
 }
+
+#[test]
+fn test_app_initialization_with_embedded_fallback() {
+    let embedded = spanglings::core::curriculum::find_all_exercises_or_embedded(PathBuf::from(
+        "nonexistent_directory_for_test",
+    ))
+    .expect("Embedded exercises should load");
+    assert_eq!(embedded.len(), 339);
+    let app = App::new(embedded, false);
+    assert_eq!(app.exercises.len(), 339);
+    assert_eq!(app.filtered_indices.len(), 339);
+    assert_eq!(app.current_index, 0);
+}

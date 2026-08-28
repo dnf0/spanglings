@@ -1,4 +1,4 @@
-use crate::core::curriculum::find_all_exercises;
+use crate::core::curriculum::find_all_exercises_or_embedded;
 use crate::core::state::AppState;
 use crate::engine::accents::AccentMode;
 use crate::engine::validator::{validate_submission, ValidationResult};
@@ -9,7 +9,7 @@ use std::path::Path;
 
 pub fn run_review_session() -> anyhow::Result<()> {
     let exercises_dir = Path::new("exercises");
-    let exercises = find_all_exercises(exercises_dir)?;
+    let exercises = find_all_exercises_or_embedded(exercises_dir)?;
     let mut state = AppState::load().unwrap_or_default();
     let now = Utc::now();
 

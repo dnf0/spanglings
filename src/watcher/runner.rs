@@ -245,8 +245,10 @@ pub fn evaluate_current_exercise_in<P: AsRef<Path>>(
     let exercises = find_all_exercises(exercises_dir)?;
     if exercises.is_empty() {
         println!(
-            "{}",
-            "No exercises found in directory. Waiting for exercise files...".yellow()
+            "{}\n{}",
+            "No exercises found in 'exercises/' directory.".yellow(),
+            "💡 Tip: Run 'spanglings init' to create the exercises workspace in this folder."
+                .cyan()
         );
         return Ok(false);
     }
@@ -304,8 +306,10 @@ pub fn start_watch_mode(strict_accents: bool) -> Result<()> {
         if exercises.is_empty() {
             clear_screen();
             println!(
-                "{}",
-                "No exercises found in directory. Waiting for exercise files...".yellow()
+                "{}\n{}",
+                "No exercises found in 'exercises/' directory.".yellow(),
+                "💡 Tip: Run 'spanglings init' to create the exercises workspace in this folder."
+                    .cyan()
             );
             return Ok(false);
         }

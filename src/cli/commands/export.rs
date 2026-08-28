@@ -1,4 +1,4 @@
-use crate::core::curriculum::find_all_exercises;
+use crate::core::curriculum::find_all_exercises_or_embedded;
 use crate::core::exercise::Exercise;
 use crate::core::state::AppState;
 use anyhow::{Context, Result};
@@ -193,7 +193,7 @@ pub fn run_export(
     only_due: bool,
 ) -> Result<()> {
     let exercises_dir = Path::new("exercises");
-    let exercises = find_all_exercises(exercises_dir)?;
+    let exercises = find_all_exercises_or_embedded(exercises_dir)?;
     let state = AppState::load().unwrap_or_default();
 
     let output_content = match format.to_lowercase().as_str() {

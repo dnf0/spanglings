@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.2] - 2026-08-28
+
+### Fixed
+- **Seamless Global TUI & CLI Execution**:
+  - Enhanced `spanglings tui`, `spanglings run`, `spanglings hint`, `spanglings review`, and `spanglings export` to automatically fallback to the embedded 339-exercise curriculum when run outside the repo or before running `spanglings init`.
+  - Added helpful tip to `spanglings watch` pointing users to `spanglings init` when launched in an uninitialized directory.
+
 ## [0.4.1] - 2026-08-28
 
 ### Fixed
