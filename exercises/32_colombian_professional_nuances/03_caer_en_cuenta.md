@@ -7,11 +7,11 @@
 English: "It was only after running the integration suite that the lead engineer realized that the token had expired."
 
 ### Instructions
-**TODO**: Supply the authentic regional business/tech expression described in the context.
-**Why**: Rather than *darse the required term*, Colombian speakers very frequently use the expressive fixed phrase **caer en the required term (de que)** when suddenly noticing an oversight, bug, or discrepancy during a technical review.
+**TODO**: Conjugate the Colombian realization idiom based on *(caer)* in the 3rd-person singular preterite indicative.
+**Why**: The regional verbal locution expressing sudden realization or awareness combines the falling verb with the prepositional ledger noun and subordinating 'que'.
 
 ### Exercise
-<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
+<!-- TODO: Conjugate the Colombian sudden realization idiom in 3rd-person singular preterite -->
 Fue solo tras ejecutar la suite de integración cuando el ingeniero principal (cayó en cuenta de que) ___ el token de autenticación había expirado.
 
 <!-- SOLUTION

@@ -7,11 +7,11 @@
 English: "The platform architects decided to deprecate the v1 REST API in favor of gRPC endpoints."
 
 ### Instructions
-**TODO**: Replace the informal English anglicism with standard professional Spanish vocabulary.
-**Why**: In traditional Spanish, *deprecar* means "to plead / beg fervently for mercy". Translating "to deprecate an API" as *deprecar* is a classic false friend. In precise technical documentation, use **the required term el the required term de**, **marcar como obsoleto**, or **descontinuar**.
+**TODO**: Form the elevated documentation phrase using the infinitive meaning 'to advise against utilizing' the legacy interface.
+**Why**: Rather than the erroneous calque 'deprecar', formal technical documentation employs the negative recommendation infinitive and nominalized utilization.
 
 ### Exercise
-<!-- TODO: Replace the informal English anglicism with standard professional Spanish vocabulary. -->
+<!-- TODO: Supply the formal documentation phrase for advising against legacy interface usage -->
 Los arquitectos de la plataforma decidieron (desaconsejar el uso de la / deprecar la) ___ interfaz REST v1 en favor de los puntos de conexión gRPC.
 
 <!-- SOLUTION

@@ -7,11 +7,11 @@
 English: "I will be out of the office for one hour because I have to run an administrative errand at the tax agency."
 
 ### Instructions
-**TODO**: Supply the authentic regional business/tech expression described in the context.
-**Why**: In Colombian and Andean business/administrative contexts, taking care of an administrative task, banking procedure, or legal errand outside the office is universally described with the high-frequency idiom **the required term una the required term** (or *the required term vueltas*).
+**TODO**: Insert the ubiquitous Colombian professional idiom meaning to complete an administrative errand outside the office.
+**Why**: In Colombian workplace culture, everyday administrative errands or institutional procedures are colloquially and widely referred to using the primary verb of performance followed by the feminine tour noun.
 
 ### Exercise
-<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
+<!-- TODO: Supply the Colombian idiom for running an administrative errand -->
 Estaré fuera de la oficina durante una hora porque tengo que (hacer una vuelta) ___ en la entidad tributaria.
 
 <!-- SOLUTION

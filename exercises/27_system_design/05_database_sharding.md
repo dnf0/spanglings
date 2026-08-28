@@ -7,11 +7,11 @@
 English: "To scale writes beyond a single primary instance, we partition tables using database horizontal sharding."
 
 ### Instructions
-**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
-**Why**: the required term database partitioning (sharding) is known as **the required term** or **particionamiento the required term**.
+**TODO**: Insert the standard database engineering term for lateral tabular partitioning across nodes.
+**Why**: Relational and distributed database architecture replaces the English colloquialism 'sharding' with formal Romance terminology combining nominal division with spatial orientation.
 
 ### Exercise
-<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
+<!-- TODO: Insert the formal Spanish term for database lateral partitioning -->
 Para escalar las escrituras más allá de una sola instancia principal, dividimos las tablas mediante (fragmentación horizontal) ___.
 
 <!-- SOLUTION

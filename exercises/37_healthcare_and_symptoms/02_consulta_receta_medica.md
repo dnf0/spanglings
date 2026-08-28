@@ -7,11 +7,11 @@
 English: "The physician decided to prescribe an antibiotic and instructed him to take one tablet every eight hours with food."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: When a physician prescribes medication, they **recetan un fármaco / the required term**. The dosage instructions are given with the distributive formula: **tomar una the required term / pastilla the required term the required term**.
+**TODO**: Form the clinical prescription and posology clause with infinitives taking 3rd-person indirect clitics, the medication noun, and the subjunctive dosage schedule.
+**Why**: Medical posology links physician directives via reporting verbs governing the imperfect subjunctive mood (*que...*), with distributive intervals for drug administration.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Form the medical prescription and posology clause with indirect clitics and subjunctive -->
 El médico decidió (recetarle un antibiótico e indicarle que tomara una dosis cada ocho horas / recetarle un antibiotico) ___ junto con las comidas principales.
 
 <!-- SOLUTION

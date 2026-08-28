@@ -7,11 +7,11 @@
 English: "The bank charged a ten euro transaction fee for making an international bank transfer."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: In banking, sending money between institutions is a **the required term interbancaria** or **the required term**, and any transaction charge is a **the required term de the required term** (or *the required term*).
+**TODO**: Insert the banking noun phrase for the fee charged for executing an electronic bank remittance with correct tildes.
+**Why**: In Spanish financial terminology, institutional service charges use the accented banking noun accompanied by 'por' and the execution infinitive.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Insert the banking phrase for electronic remittance execution fee -->
 El banco cobró una (comisión por realizar una transferencia bancaria / comision por realizar una transferencia bancaria) ___ al extranjero.
 
 <!-- SOLUTION

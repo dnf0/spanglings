@@ -7,11 +7,11 @@
 English: "To get to the historical center, you must change trains at the central junction station."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: Changing lines on a subway, train, or bus route is expressed as **the required term** (or *the required term trasbordo / combinación* in Latin America). Missing your stop is *pasarse de parada*.
+**TODO**: Insert the standard public transit verbal locution meaning 'to switch train lines / connect lines at the (feminine)'.
+**Why**: Metropolitan transit systems in Spanish express changing lines using the fixed verbal locution with the preposition 'en' and feminine article.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Supply the transit verbal locution for switching train lines -->
 Para llegar al centro histórico, tienes que (hacer transbordo en la / hacer transbordo en) ___ estación de intercambio modal.
 
 <!-- SOLUTION

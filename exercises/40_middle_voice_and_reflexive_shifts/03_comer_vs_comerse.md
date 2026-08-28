@@ -7,11 +7,11 @@
 English: "After hiking all morning, the ravenous mountaineers ate up the entire stew in minutes."
 
 ### Instructions
-**TODO**: Conjugate *(se)* incorporating middle voice or aspectual pronominal marking.
-**Why**: Non-reflexive **comer** is atelic/general (*como fruta todos los días*). The pronominal "dative of totality" **comerse** adds telicity, indicating the entire discrete portion was completely consumed with appetite (*se comió todo el pastel*).
+**TODO**: Form the aspectual consumption clause using the 3rd-person plural preterite indicative of pronominal *(comerse)*, the quantified stew object, and the rapidity idiom of time.
+**Why**: The reflexive clitic with verbs of ingestion marks telic completeness, indicating that the entire portion was fully consumed within a brief span.
 
 ### Exercise
-<!-- TODO: Conjugate (se) incorporating middle voice or aspectual pronominal marking. -->
+<!-- TODO: Conjugate telic ingestion verb (comerse) in preterite with quantified object -->
 Tras caminar toda la mañana, los montañistas hambrientos (se comieron todo el guiso en cuestión de / se comieron todo el guisado) ___ pocos minutos.
 
 <!-- SOLUTION

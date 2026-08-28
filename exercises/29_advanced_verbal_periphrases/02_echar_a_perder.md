@@ -7,11 +7,11 @@
 English: "A single misconfigured parameter in the environment variables can ruin the entire data migration."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: The aspectual periphrasis **the required term(se) a the required term** conveys spoiling, corrupting, or ruining a state or process.
+**TODO**: Insert the infinitive verbal periphrasis based on the cast/throw verb meaning 'to ruin / spoil / corrupt'.
+**Why**: The aspectual-lexical periphrasis combines the casting verb with the preposition 'a' and the infinitive of loss to signify causing something to deteriorate, used here following modal *(poder)*.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Insert the verbal periphrasis meaning 'to ruin / spoil' -->
 Un solo parámetro mal configurado en las variables de entorno puede (echar a perder) ___ toda la migración de datos.
 
 <!-- SOLUTION

@@ -7,11 +7,11 @@
 English: "To reinforce cloud security resilience, leadership carried out a headcount reallocation across engineering divisions."
 
 ### Instructions
-**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
-**Why**: "Headcount allocation / staffing" in formal human capital governance is **the required term de the required term** or **the required term de personal**.
+**TODO**: Insert the formal corporate term for organizational workforce restructuring avoiding unadapted English loanwords.
+**Why**: Human resources governance in Spanish-speaking enterprises refers to workforce restructuring through the action noun with acute accent on the suffix paired with 'de personal' (or equivalent staff noun).
 
 ### Exercise
-<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
+<!-- TODO: Supply the formal Spanish human resources term for workforce restructuring -->
 Para reforzar la seguridad en la nube, la dirección llevó a cabo una (reasignación de plantilla) ___ en los equipos de ingeniería.
 
 <!-- SOLUTION

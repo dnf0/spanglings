@@ -7,11 +7,11 @@
 English: "After acute chest pains, he had to go to the emergency room, where they kept him under observation before giving him medical discharge."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: Going to the emergency department is **the required term al servicio de the required term** (or *ir a la guardia* in Argentina). When the hospital releases a patient after recovery, they **le dan el the required term**.
+**TODO**: Construct the hospital emergency narrative using the infinitive for going to the ER, the preterite of monitoring, and the locution for hospital discharge.
+**Why**: Clinical Spanish uses formal register verbs for seeking emergency care, and official medical release uses the feminine noun taking masculine 'el' due to tonic initial 'a'.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Construct the emergency hospital narrative with ER terms and medical release -->
 Tras sufrir un dolor agudo, tuvo que (acudir a urgencias, donde permaneció en observación hasta recibir el alta médica / ir a urgencias) ___.
 
 <!-- SOLUTION

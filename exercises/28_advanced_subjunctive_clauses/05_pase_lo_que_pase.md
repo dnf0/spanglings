@@ -7,11 +7,11 @@
 English: "The emergency quarantine protocol will trigger automatically, come what may."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of *(pasar)* to complete the sentence.
-**Why**: The fixed expression **the required term lo que the required term** ("come what may", "no matter what happens") employs the present subjunctive of *pasar*.
+**TODO**: Conjugate the verb *(pasar)* in the 3rd-person singular present subjunctive to complete the fixed concessive expression meaning 'come what may'.
+**Why**: The fixed reduplicative concessive locution expresses unconditional certainty regardless of future events and requires the subjunctive form of the verb *(pasar)* in both parts of the formula.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of (pasar) to complete the sentence. -->
+<!-- TODO: Conjugate (pasar) in present subjunctive to complete the fixed idiom -->
 El protocolo de aislamiento de emergencia se activará automáticamente, (pasar) ___ lo que pase.
 
 <!-- SOLUTION

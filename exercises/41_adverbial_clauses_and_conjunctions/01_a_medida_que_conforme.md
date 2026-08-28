@@ -7,11 +7,11 @@
 English: "As user demand increases in the coming months, the system will scale automatically."
 
 ### Instructions
-**TODO**: Conjugate *(A)* or supply the adverbial connector matching clause mood requirements.
-**Why**: **A the required term que** and **conforme** express proportional change in tandem. When referring to ongoing/past actions, they take the **indicative** (*a the required term que crecía el proyecto*). When anticipating future/hypothetical change, they mandate the **subjunctive** (*a the required term que the required term la the required term*).
+**TODO**: Form the proportional clause with the progressive connector of correlation, the 3rd-person singular present subjunctive of *(aumentar)*, and the demand noun phrase.
+**Why**: Proportional subordinators expressing progressive correlation with future events mandate the subjunctive mood in the adverbial clause.
 
 ### Exercise
-<!-- TODO: Conjugate (A) or supply the adverbial connector matching clause mood requirements. -->
+<!-- TODO: Form the proportional progression clause using progressive correlation connector and subjunctive of (aumentar) -->
 (A medida que aumente la demanda de usuarios en los próximos / Conforme aumente la demanda) ___ meses, la infraestructura escalará automáticamente.
 
 <!-- SOLUTION

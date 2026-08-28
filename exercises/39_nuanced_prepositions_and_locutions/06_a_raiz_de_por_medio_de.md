@@ -7,11 +7,11 @@
 English: "As a result of the audit findings, communication between services will be enforced through an encrypted gateway."
 
 ### Instructions
-**TODO**: Insert the appropriate compound prepositional locution.
-**Why**: **A the required term de** introduces the originating event or spark from which subsequent consequences emerge (*a the required term de los recientes incidentes*). **Por the required term de** specifies the intermediate mechanism or conduit (*por the required term de un canal cifrado*).
+**TODO**: Form the causal origin and mediating channel sentence using the seminal cause locution, audit findings, passive reflexive future, and instrumental conduit.
+**Why**: Prepositional syntax employs seminal origin connectors to introduce audit consequences and instrumental locutions to establish communication channels.
 
 ### Exercise
-<!-- TODO: Insert the appropriate compound prepositional locution. -->
+<!-- TODO: Combine seminal causal connector with instrumental channel locution -->
 (A raíz de los hallazgos de la auditoría, la comunicación se gestionará por medio de / A raiz de los hallazgos) ___ una pasarela cifrada.
 
 <!-- SOLUTION

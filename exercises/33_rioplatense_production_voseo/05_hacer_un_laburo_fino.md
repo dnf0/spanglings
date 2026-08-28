@@ -7,11 +7,11 @@
 English: "To migrate the legacy billing system without downtime, the platform engineers had to do meticulous work."
 
 ### Instructions
-**TODO**: Conjugate the verb applying standard Rioplatense voseo morphology.
-**Why**: The Lunfardo-derived term **the required term** is standard everyday business vocabulary in Argentina for work/job. **the required term un the required term** means to execute precise, meticulous engineering without taking clumsy shortcuts.
+**TODO**: Insert the Rioplatense regional engineering idiom signifying executing high-precision, craftsmanship-grade software work.
+**Why**: In Argentine and Uruguayan tech slang, the lunfardo term for work is paired with the adjective for delicacy to describe intricate engineering.
 
 ### Exercise
-<!-- TODO: Conjugate the verb applying standard Rioplatense voseo morphology. -->
+<!-- TODO: Supply the Rioplatense regional idiom for high-precision engineering work -->
 Para migrar el sistema de facturación sin tiempo de inactividad, los ingenieros tuvieron que (hacer un laburo fino) ___ en la capa de persistencia.
 
 <!-- SOLUTION

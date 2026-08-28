@@ -7,11 +7,11 @@
 English: "Before signing the lease agreement, the tenant had to pay two months of security deposit."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: In everyday Spanish life across Spain and Latin America, a residential rental contract is a **the required term de the required term** (or *the required term de alquiler*), and the upfront security deposit is known as the **the required term** (Spain) or **depósito de garantía** (Latin America).
+**TODO**: Construct the formal tenancy clause specifying the lease document, the lessee subject, the preterite modal of past financial obligation, and the deposit guarantee.
+**Why**: Formal housing Spanish designates the lease document via legal terms for renting, the occupant as the lessee, and the statutory security deposit with the traditional Iberian noun.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Construct the formal tenancy clause with lease terms and security deposit -->
 Antes de firmar el (contrato de arrendamiento, el arrendatario tuvo que pagar la fianza / contrato de alquiler) ___ correspondiente a dos meses de renta.
 
 <!-- SOLUTION

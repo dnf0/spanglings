@@ -7,11 +7,11 @@
 English: "The product team managed to reduce the customer churn rate by ten percent in the last quarter."
 
 ### Instructions
-**TODO**: Supply the authentic regional business/tech expression described in the context.
-**Why**: In product analytics and SaaS startups, "churn rate" is formally **the required term de the required term** or **the required term de cancelación** (of clients/users). Avoid unadapted Anglicisms like *churn* or *the required term de churn*.
+**TODO**: Insert the formal SaaS metric noun phrase corresponding to customer churn percentage.
+**Why**: Professional product management in Latin America translates user attrition using the ratio noun phrase combining proportion with user departure (or 'de cancelación'), avoiding unadapted Anglicisms.
 
 ### Exercise
-<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
+<!-- TODO: Supply the formal SaaS metric phrase for user attrition percentage -->
 El equipo de producto logró reducir la (tasa de abandono) ___ en un diez por ciento durante el último trimestre.
 
 <!-- SOLUTION

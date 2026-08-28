@@ -7,11 +7,11 @@
 English: "We cannot take for granted that third-party cloud providers will maintain 100% uptime."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: The lexicalized periphrasis **the required term por the required term** (or *the required term por hecho*) means "to take for granted" or "to presuppose as fact".
+**TODO**: Insert the infinitive idiomatic verbal periphrasis based on the primary transfer verb meaning 'to take for granted / assume without verification'.
+**Why**: The fixed lexical periphrasis combines the basic Romance transitive verb with the preposition 'por' and the participle modifier to indicate unexamined epistemic assumptions.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Supply the verbal idiom meaning 'to take for granted' -->
 No podemos (dar por sentado) ___ que los proveedores externos en la nube mantendrán una disponibilidad del cien por cien.
 
 <!-- SOLUTION

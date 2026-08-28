@@ -7,11 +7,11 @@
 English: "No matter how much they try to optimize the query, the raw data volume will exhaust server memory."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of *(intentar ellos)* to complete the sentence.
-**Why**: Concessive structures with **por mucho que** or **por más que** require the **subjunctive** when the obstacle is hypothetical, non-verified, or future-oriented.
+**TODO**: Conjugate the verb *(intentar)* in the 3rd-person plural present subjunctive to complete the concessive clause.
+**Why**: The concessive conjunction 'por mucho que' governing an ineffective or counteracting action obligatorily requires the subjunctive mood.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of (intentar ellos) to complete the sentence. -->
+<!-- TODO: Conjugate (intentar) in the present subjunctive for 'ellos' -->
 Por mucho que (intentar, ellos) ___ optimizar la consulta, el volumen bruto de datos agotará la memoria del servidor.
 
 <!-- SOLUTION

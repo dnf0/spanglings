@@ -7,11 +7,11 @@
 English: "Everyone complimented her on how well the jacket suited her, and told her not to worry about arriving late."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: Giving compliments on appearance uses **quedar the required term** (*¡Qué the required term te queda esa camisa!*). Reassuring someone after an apology uses **No te preocupes por nada** or **No pasa nada / No te preocupes**.
+**TODO**: Form the social compliment using the neuter intensifier of appraisal, the imperfect of aesthetic fit, and the reported reassurance with imperfect subjunctive of *(preocuparse)*.
+**Why**: Neuter 'lo + adverb + que' introduces exclamative clauses of degree, while indirect polite reassurances require the imperfect subjunctive of the reflexive verb.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Form the social compliment with neuter intensifier and subjunctive reassurance -->
 Todos le comentaron (lo bien que le quedaba la chaqueta y que no se preocupara / que bien le quedaba) ___ por el retraso.
 
 <!-- SOLUTION

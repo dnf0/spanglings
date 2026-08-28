@@ -7,11 +7,11 @@
 English: "To request a full refund, you must present the original proof of purchase."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: When returning a defective product to a store, you ask to **the required term un the required term** (or *devolución del dinero*) and must present the receipt (**el the required term de the required term** or **el ticket de the required term**).
+**TODO**: Form the customer service clause for requesting a full money-back return and showing proof of payment.
+**Why**: Consumer rights procedures require formal verbs of petition for financial payback and the administrative term for transaction documentation.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Form the customer service clause for requesting full payback and showing proof -->
 Para (solicitar un reembolso completo, debe presentar el comprobante de compra / pedir un reembolso) ___ original en el mostrador de atención al cliente.
 
 <!-- SOLUTION

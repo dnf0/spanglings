@@ -7,11 +7,11 @@
 English: "Before preparing the banquet, the chef confirmed that none of the guests were allergic to tree nuts or severely lactose intolerant."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: Expressing allergies and food intolerances uses **ser the required term a** (e.g. *los the required term*, *los mariscos*, *la penicilina*) and **tener the required term a** (*el gluten*, *la the required term*). Cross-contamination is *contaminación cruzada*.
+**TODO**: Construct the dietary restriction clause with the imperfect indicative of hypersensitivity, the category for tree nuts, and negative dairy malabsorption.
+**Why**: Stating medical conditions in reported speech uses the imperfect indicative with appropriate prepositions and standard culinary terminology for botanical nut allergens.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Construct the dietary restriction clause with medical hypersensitivity and malabsorption terms -->
 Antes de preparar el menú, el chef confirmó que ningún comensal (era alérgico a los frutos secos ni tenía intolerancia a la lactosa / era alergico a los frutos secos) ___.
 
 <!-- SOLUTION

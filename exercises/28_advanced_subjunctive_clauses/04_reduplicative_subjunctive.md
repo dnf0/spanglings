@@ -7,11 +7,11 @@
 English: "The committee will safeguard user confidentiality, whatever the cost may be."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of *(costar)* to complete the sentence.
-**Why**: Reduplicative concessive formulas (*haga lo que haga*, *the required term lo que the required term*, *digan lo que digan*) repeat the verb in the **present subjunctive** around a relative pronoun.
+**TODO**: Conjugate the verb *(costar)* in the 3rd-person singular present subjunctive to form the reduplicative concessive structure.
+**Why**: Reduplicative concessive formulas of the pattern [V-subjunctive + relative pronoun + V-subjunctive] (such as 'haga lo que haga' or the equivalent with *(costar)*) require the subjunctive mood in both positions.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of (costar) to complete the sentence. -->
+<!-- TODO: Conjugate (costar) in present subjunctive to complete the reduplicative formula -->
 El comité salvaguardará la confidencialidad de los usuarios, (costar) ___ lo que cueste.
 
 <!-- SOLUTION

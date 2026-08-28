@@ -7,11 +7,11 @@
 English: "The chief financial officer warned that we must control the monthly burn rate to extend our financial runway until next year."
 
 ### Instructions
-**TODO**: Supply the authentic regional business/tech expression described in the context.
-**Why**: In startup financial modeling, "burn rate" is known as **the required term de the required term** or formally **ritmo de consumo de efectivo**, while "runway" is *pista financiera* or *meses de liquidez*. Avoid raw Anglicisms like *burn rate*.
+**TODO**: Insert the standard startup financial metric for monthly cash expenditure velocity.
+**Why**: Financial modeling across Latin American venture hubs renders capital depletion velocity using the direct metaphorical ratio noun phrase of combustion.
 
 ### Exercise
-<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
+<!-- TODO: Supply the standard startup finance metric for cash expenditure velocity -->
 El director de finanzas advirtió que debemos controlar la (tasa de quema) ___ mensual para extender nuestra pista financiera hasta el próximo año.
 
 <!-- SOLUTION

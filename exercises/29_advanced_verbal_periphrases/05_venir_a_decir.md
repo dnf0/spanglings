@@ -7,11 +7,11 @@
 English: "The post-mortem report essentially boils down to saying that disk I/O was the true bottleneck."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: The approximative periphrasis **venir a the required term** expresses what a statement or report effectively amounts to.
+**TODO**: Conjugate the approximate verbal periphrasis of movement and speech *(venir a + verbo de comunicación)* in the 3rd-person singular present indicative.
+**Why**: The periphrasis combining the motion verb with preposition 'a' and the utterance infinitive conveys approximation or essential equivalence, expressing that a text boils down to a specific meaning.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Conjugate the approximate verbal periphrasis in 3rd-person singular present indicative -->
 El informe retrospectivo (viene a decir) ___ que el cuello de botella residía en la velocidad del disco.
 
 <!-- SOLUTION

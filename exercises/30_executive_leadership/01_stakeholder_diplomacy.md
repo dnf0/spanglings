@@ -7,11 +7,11 @@
 English: "The executive team's priority is aligning the expectations of the stakeholders prior to announcing the merger."
 
 ### Instructions
-**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
-**Why**: In C-level communications, avoid the raw Anglicism *stakeholders*. Use **the required term** or **the required term involucradas**.
+**TODO**: Insert the formal Spanish corporate term for organizational stakeholders in the feminine plural.
+**Why**: In corporate governance and C-level diplomatic communications, avoid raw Anglicisms and use the elevated legal-corporate noun phrase with participle agreement.
 
 ### Exercise
-<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
+<!-- TODO: Insert the formal Spanish corporate term for organizational stakeholders -->
 La prioridad de la dirección ejecutiva es alinear las expectativas de las (partes interesadas) ___ antes de anunciar la fusión.
 
 <!-- SOLUTION

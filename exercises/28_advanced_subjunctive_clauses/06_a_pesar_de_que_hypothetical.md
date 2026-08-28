@@ -7,11 +7,11 @@
 English: "We will proceed with the security audit despite the vendor possibly not being in agreement."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of *(estar)* to complete the sentence.
-**Why**: While **a pesar de que** takes the indicative for acknowledged facts (*a pesar de que llueve*), it mandates the **subjunctive** when referring to unverified or hypothetical circumstances.
+**TODO**: Conjugate the verb *(estar)* in the 3rd-person singular present subjunctive with the required graphic accent.
+**Why**: While 'a pesar de que' takes the indicative for known factual realities, it requires the subjunctive when presenting an unverified, potential, or hypothetical reservation.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of (estar) to complete the sentence. -->
+<!-- TODO: Conjugate (estar) in 3rd-person singular present subjunctive with graphic accent -->
 Procederemos con la auditoría de seguridad a pesar de que el proveedor no (estar) ___ conforme.
 
 <!-- SOLUTION

@@ -7,11 +7,11 @@
 English: "The service level agreement guarantees that p99 latency will remain under fifty milliseconds."
 
 ### Instructions
-**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
-**Why**: Service Level Agreements (SLAs) are formally termed **the required term de the required term de the required term** in Spanish enterprise contracts and engineering specifications.
+**TODO**: Spell out the full formal Spanish legal-technical designation for an SLA agreement.
+**Why**: In enterprise engineering contracts and high-stakes service governance, acronyms must be expanded into their full formal legal-technical noun phrase.
 
 ### Exercise
-<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
+<!-- TODO: Expand the SLA acronym into its formal Spanish noun phrase -->
 El (acuerdo de nivel de servicio) ___ garantiza que la latencia en el percentil noventa y nueve permanecerá por debajo de cincuenta milisegundos.
 
 <!-- SOLUTION

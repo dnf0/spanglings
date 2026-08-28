@@ -7,11 +7,11 @@
 English: "Deploy the new microservice to production before the promotional campaign kicks off."
 
 ### Instructions
-**TODO**: Conjugate the verb applying standard Rioplatense voseo morphology.
-**Why**: In Argentina and Uruguay (Rioplatense Spanish), deploying or releasing software to production is universally referred to as **sacar a the required term**. When using the informal *vos* imperative, verbs retain the final stress with dropped 'd': *the required term*.
+**TODO**: Form the affirmative voseo imperative of *(sacar)* with the deployment prepositional phrase.
+**Why**: In Rioplatense Spanish, the affirmative imperative of -ar verbs drops the -d and bears the tonic stress and graphic tilde on the final vowel (-á).
 
 ### Exercise
-<!-- TODO: Conjugate the verb applying standard Rioplatense voseo morphology. -->
+<!-- TODO: Form the affirmative voseo imperative of (sacar) with graphic accent -->
 (Sacá a producción el / Saca a producción el) ___ nuevo microservicio antes de que comience la campaña de promoción.
 
 <!-- SOLUTION

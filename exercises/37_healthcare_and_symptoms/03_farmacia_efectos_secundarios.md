@@ -7,11 +7,11 @@
 English: "The pharmacist recommended an over-the-counter medication and advised reading the leaflet for possible side effects."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: Over-the-counter medicine is **the required term de the required term**. The patient information leaflet inside the box is **el the required term** (Spain) / **el instructivo** (LatAm), and unintended reactions are **efectos secundarios**.
+**TODO**: Form the pharmacy guidance clause with the classification for non-prescription drugs, the preterite of *(aconsejar)*, and the infinitive for reviewing the package insert.
+**Why**: In Spanish pharmacology, over-the-counter pharmaceuticals are termed with the non-prescription commercial phrase, and the informational sheet inside is the package insert.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Form the pharmacy guidance clause with non-prescription terms and package insert -->
 El farmacéutico recomendó un (medicamento de venta libre y aconsejó leer el prospecto / fármaco de venta libre) ___ para verificar los posibles efectos secundarios.
 
 <!-- SOLUTION

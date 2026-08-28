@@ -7,11 +7,11 @@
 English: "The committee will approve the project budget, provided that the team meets all quality benchmarks."
 
 ### Instructions
-**TODO**: Conjugate the verb or supply the adverbial connector matching clause mood requirements.
-**Why**: **the required term y the required term** and **a condición de que** establish a strict prerequisite or contractual condition ("provided that / on the condition that"), and **always take the subjunctive**.
+**TODO**: Construct the strict prerequisite clause using the compound conditional connector of stipulation, the subject noun phrase, and the 3rd-person singular present subjunctive of *(cumplir con)*.
+**Why**: Subordinating locutions of mandatory prerequisite introduce a binding operational stipulation and obligatorily require the subjunctive mood.
 
 ### Exercise
-<!-- TODO: Conjugate the verb or supply the adverbial connector matching clause mood requirements. -->
+<!-- TODO: Form the strict stipulation clause with compound conditional connector and present subjunctive of (cumplir) -->
 El comité aprobará el presupuesto del proyecto, (siempre y cuando el equipo cumpla con todos los criterios de / a condicion de que el equipo cumpla) ___ calidad establecidos.
 
 <!-- SOLUTION

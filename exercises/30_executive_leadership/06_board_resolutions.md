@@ -7,11 +7,11 @@
 English: "The board of directors resolved to unanimously approve the corporate restructuring proposal."
 
 ### Instructions
-**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
-**Why**: "To approve unanimously" in parliamentary and corporate board protocol is **the required term por the required term**.
+**TODO**: Form the formal verbal phrase with the voting sanction infinitive and the prepositional locution meaning with total consensus.
+**Why**: Corporate board resolutions and parliamentary protocols express consensus voting using the preposition 'por' followed by the abstract noun, avoiding informal adverbs.
 
 ### Exercise
-<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
+<!-- TODO: Form the formal verbal phrase meaning 'to pass / sanction with total consensus' -->
 El consejo directivo acordó (aprobar por unanimidad) ___ la propuesta de reestructuración corporativa.
 
 <!-- SOLUTION

@@ -7,11 +7,11 @@
 English: "The committee reviewed the key performance indicators for the fiscal quarter."
 
 ### Instructions
-**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
-**Why**: Key Performance Indicators (KPIs) should be formally translated as **the required term de the required term** (or *the required term de desempeño*).
+**TODO**: Insert the full, formal Spanish translation for Key Performance Indicators.
+**Why**: In board presentations and executive reporting, the acronym is expanded into a masculine plural noun phrase featuring the invariability of the appositive modifying noun.
 
 ### Exercise
-<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
+<!-- TODO: Insert the full formal Spanish noun phrase for Key Performance Indicators -->
 El comité evaluó los (indicadores clave de rendimiento) ___ correspondientes al último trimestre fiscal.
 
 <!-- SOLUTION

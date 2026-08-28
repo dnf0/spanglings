@@ -7,11 +7,11 @@
 English: "The chief security officer presented a comprehensive risk mitigation plan to comply with regional financial regulations."
 
 ### Instructions
-**TODO**: Complete the contractual SLA / incident-response phrasing with the correct business term.
-**Why**: Enterprise procurement security reviews require submitting a formal **the required term de the required term de the required term** and a business continuity the required term (*the required term de continuidad del negocio*).
+**TODO**: Insert the executive governance noun phrase for risk abatement strategy with proper tilde on the action noun.
+**Why**: Enterprise security governance pairs the strategy blueprint noun with the prepositional hazard abatement phrase.
 
 ### Exercise
-<!-- TODO: Complete the contractual SLA / incident-response phrasing with the correct business term. -->
+<!-- TODO: Supply the executive governance phrase for risk abatement strategy -->
 El director de seguridad de la información presentó un exhaustivo (plan de mitigación de riesgos / plan de mitigacion de riesgos) ___ para cumplir con la normativa bancaria regional.
 
 <!-- SOLUTION

@@ -7,11 +7,11 @@
 English: "We need to set up the electricity and high-speed internet service as soon as we move in."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: The fixed bureaucratic formula for registering or setting up a new utility (electricity, gas, water, internet) is **the required term de the required term el the required term / servicio**. Cancelling or disconnecting a service is **the required term de baja**.
+**TODO**: Insert the administrative verbal idiom meaning 'to formally register / activate utility provision of'.
+**Why**: The standard bureaucratic locution in Spain and Latin America for initiating a utility contract uses the registration idiom with preposition followed by the noun phrase for provision.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Supply the administrative idiom for activating utility provision -->
 Tenemos que (dar de alta el suministro de / activar el servicio de) ___ electricidad e internet de alta velocidad en cuanto nos mudemos.
 
 <!-- SOLUTION

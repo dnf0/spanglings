@@ -7,11 +7,11 @@
 English: "Repeated availability failures allow the client to trigger the termination clause for material breach."
 
 ### Instructions
-**TODO**: Complete the contractual SLA / incident-response phrasing with the correct business term.
-**Why**: The legal right to terminate an enterprise contract due to severe service outage or SLA violation is codified under a **the required term de the required term por the required term** (or *resolución contractual*).
+**TODO**: Insert the contractual legal noun phrase for contract cancellation due to default, ensuring proper graphic tildes.
+**Why**: Commercial contracts designate contract termination provisions via the accented feminine noun phrase followed by the prepositional cause for contract violation.
 
 ### Exercise
-<!-- TODO: Complete the contractual SLA / incident-response phrasing with the correct business term. -->
+<!-- TODO: Supply the contractual phrase for contract cancellation due to default -->
 Las fallas reiteradas de disponibilidad facultan al cliente a activar la (cláusula de rescisión por incumplimiento / clausula de rescision por incumplimiento) ___ sin penalización financiera.
 
 <!-- SOLUTION

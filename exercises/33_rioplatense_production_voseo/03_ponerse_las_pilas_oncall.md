@@ -7,11 +7,11 @@
 English: "Step up and review the distributed tracing logs because the checkout service is down."
 
 ### Instructions
-**TODO**: Conjugate the verb applying standard Rioplatense voseo morphology.
-**Why**: The Rioplatense imperative of reflexive verbs with *vos* drops the 'd' and attaches the pronoun *-te*: *the required term* (from *ponerse*). **Ponerse las the required term** means to get active, focus, or step up during a critical situation.
+**TODO**: Form the coordinated affirmative voseo commands for the reflexive battery-energizing idiom and inspecting code.
+**Why**: With affirmative voseo imperatives, enclitic pronouns attach directly to the verb base without 'd' and subsequent coordinated imperatives carry final-syllable tonic stress with an acute accent.
 
 ### Exercise
-<!-- TODO: Conjugate the verb applying standard Rioplatense voseo morphology. -->
+<!-- TODO: Form coordinated affirmative voseo commands with enclitic pronoun and accented imperative -->
 (Ponete las pilas y revisá / Ponte las pilas y revisa) ___ los registros de trazas porque el servicio de pagos está caído.
 
 <!-- SOLUTION

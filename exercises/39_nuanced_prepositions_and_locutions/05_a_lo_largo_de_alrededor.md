@@ -7,11 +7,11 @@
 English: "Throughout the entire quarter, the engineers built sensors all around the experimental facility."
 
 ### Instructions
-**TODO**: Insert the appropriate compound prepositional locution.
-**Why**: **A lo the required term de** describes continuous extension across physical space (*a lo the required term de la costa*) or over time (*a lo the required term del año*). **the required term de** denotes spatial surrounding (*the required term del campus*) or numerical approximation (*the required term de cien personas*).
+**TODO**: Form the temporal extension and spatial perimeter clause using the progressive duration idiom, the preterite of *(instalar)*, and circumferential placement.
+**Why**: Compound locutions mark continuous temporal extension across an entire quarter and circumferential spatial distribution encircling the facility.
 
 ### Exercise
-<!-- TODO: Insert the appropriate compound prepositional locution. -->
+<!-- TODO: Combine continuous temporal extension with circumferential spatial placement -->
 (A lo largo de todo el trimestre, los ingenieros instalaron sensores alrededor de / A lo largo de todo el trimestre) ___ las instalaciones de prueba.
 
 <!-- SOLUTION

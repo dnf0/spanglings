@@ -7,11 +7,11 @@
 English: "If monthly system availability drops below 99.9%, the provider will apply financial penalties in the form of service credits."
 
 ### Instructions
-**TODO**: Complete the contractual SLA / incident-response phrasing with the correct business term.
-**Why**: If a provider fails to meet the guaranteed uptime percentage (e.g., 99.9%), the contract stipulates **the required term** or service credits (**créditos de servicio**).
+**TODO**: Insert the enterprise SLA sanction phrase combining the feminine plural noun, the accented financial adjective, and the locution of structure.
+**Why**: Service level agreements specify sanctions through the plural noun phrase accompanied by the proparoxytone financial modifier and structural locution.
 
 ### Exercise
-<!-- TODO: Complete the contractual SLA / incident-response phrasing with the correct business term. -->
+<!-- TODO: Insert the enterprise SLA sanction phrase with proper accentuation -->
 Si la disponibilidad mensual cae por debajo del 99.9%, el proveedor aplicará (penalizaciones económicas en forma de / penalizaciones economicas en forma de) ___ créditos aplicables a la siguiente factura.
 
 <!-- SOLUTION

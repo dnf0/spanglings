@@ -7,11 +7,11 @@
 English: "We agreed to meet at eight at the plaza, but he had to cancel at the last minute due to an emergency."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: To arrange to meet someone in Spain is **the required term con alguien a las [the required term]**; in Latin America, **verse con alguien** or **encontrarse con alguien**. Cancelling at the last minute is **the required term a the required term** (or *descolgarse / tirar la toalla*).
+**TODO**: Construct the social meeting clause for an evening rendezvous at the public square, followed by an unforeseen last-minute withdrawal.
+**Why**: In social Spanish, setting a meeting point uses the intransitive verb of appointment with time markers, while sudden schedule changes use the temporal idiom of tardiness.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Construct the social plan clause with meeting appointment and sudden withdrawal -->
 Habíamos acordado (quedar a las ocho en la plaza, pero tuvo que cancelar a última hora / vernos a las ocho) ___ por un imprevisto.
 
 <!-- SOLUTION

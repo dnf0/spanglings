@@ -7,11 +7,11 @@
 English: "The board of directors unanimously authorized a strategic pivot toward AI-driven enterprise tooling."
 
 ### Instructions
-**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
-**Why**: A corporate or technical "pivot" is formally expressed as **the required term** or **reorientación estratégica**.
+**TODO**: Translate the corporate strategy concept of a directional pivot using elevated executive Spanish.
+**Why**: Standard Spanish corporate parlance uses a masculine noun indicating reorientation combined with the adjective with tilde on the antepenultimate syllable.
 
 ### Exercise
-<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
+<!-- TODO: Insert the elevated corporate Spanish phrase for a directional strategic pivot -->
 El consejo de administración autorizó por unanimidad un (giro estratégico) ___ hacia herramientas corporativas basadas en IA.
 
 <!-- SOLUTION

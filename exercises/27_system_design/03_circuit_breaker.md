@@ -7,11 +7,11 @@
 English: "We implemented a circuit breaker pattern to prevent cascading timeouts when downstream services falter."
 
 ### Instructions
-**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
-**Why**: The circuit breaker design pattern is referred to as **the required term** or **cortacircuitos** in resilient distributed architecture.
+**TODO**: Insert the standard Spanish electrical-architectural noun for automated fault isolation switches.
+**Why**: Resilient systems engineering borrows the electrical safety term for automatic cutoff switches to designate automated fault-isolation mechanisms, avoiding raw English design pattern jargon.
 
 ### Exercise
-<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
+<!-- TODO: Supply the standard architectural noun for fault isolation cutoff switches -->
 Implementamos un patrón de (disyuntor) ___ para evitar tiempos de espera en cascada cuando los servicios dependientes fallan.
 
 <!-- SOLUTION

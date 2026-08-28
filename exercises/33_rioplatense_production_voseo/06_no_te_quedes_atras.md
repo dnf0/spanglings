@@ -7,11 +7,11 @@
 English: "Don't fall behind on the migration to Kubernetes; update the Helm charts this sprint."
 
 ### Instructions
-**TODO**: Conjugate *(No)* applying standard Rioplatense voseo morphology.
-**Why**: In Rioplatense Spanish, negative commands take the present subjunctive with oxytone stress (accent on the final vowel): *no te the required term* (from *quedarse*), *no tengás miedo*, *no rompás nada*.
+**TODO**: Form the negative voseo command for reflexive *(quedarse)* using the present subjunctive form with Rioplatense tonic accentuation.
+**Why**: In Rioplatense voseo, negative commands employ the 2nd-person singular subjunctive bearing the distinctive regional stress and written tilde on the ending (-és).
 
 ### Exercise
-<!-- TODO: Conjugate (No) applying standard Rioplatense voseo morphology. -->
+<!-- TODO: Form the negative voseo command with accented subjunctive of (quedarse) -->
 (No te quedés atrás con / No te quedes atrás con) ___ la migración a contenedores; actualizá los manifiestos de despliegue esta semana.
 
 <!-- SOLUTION

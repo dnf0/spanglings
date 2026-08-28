@@ -7,11 +7,11 @@
 English: "The regulatory entity announced that it will closely scrutinize data security practices across fintech platforms."
 
 ### Instructions
-**TODO**: Supply the authentic regional business/tech expression described in the context.
-**Why**: To place something under intense scrutiny, audit, or rigorous inspection is idiomatically expressed in Colombian media and business as **poner la the required term / en** (literally *to place the magnifying glass over*).
+**TODO**: Conjugate the idiomatic auditing locution with *(poner)* meaning to place under close magnifying scrutiny in the 3rd-person singular future indicative.
+**Why**: The figurative expression based on placing a magnifying glass over an entity denotes rigorous regulatory auditing, agreeing with the singular subject in the future tense.
 
 ### Exercise
-<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
+<!-- TODO: Conjugate the close scrutiny idiom in 3rd-person singular future indicative -->
 La entidad regulatoria anunció que (pondrá la lupa sobre) ___ las prácticas de seguridad de datos de las plataformas fintech.
 
 <!-- SOLUTION

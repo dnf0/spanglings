@@ -7,11 +7,11 @@
 English: "The SaaS vendor agrees to hold the enterprise client harmless against third-party intellectual property infringement claims."
 
 ### Instructions
-**TODO**: Complete the contractual SLA / incident-response phrasing with the correct business term.
-**Why**: The legal obligation to hold a client harmless against third-party intellectual property or security infringement claims is expressed as **the required term a** (or *obligación de indemnidad*).
+**TODO**: Form the legal hold-harmless commitment using the infinitive of preservation, the adjective for unharmed/immune, the direct object, and prepositional locution.
+**Why**: In Latin American contract drafting, indemnification clauses employ the legal formula meaning to hold harmless a party when facing third-party claims.
 
 ### Exercise
-<!-- TODO: Complete the contractual SLA / incident-response phrasing with the correct business term. -->
+<!-- TODO: Form the formal legal hold-harmless commitment formula -->
 El proveedor de software se compromete a (mantener indemne al cliente frente a / mantener indemne al cliente frente a) ___ cualquier reclamación por infracción de propiedad intelectual.
 
 <!-- SOLUTION

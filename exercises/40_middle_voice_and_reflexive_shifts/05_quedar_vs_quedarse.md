@@ -7,11 +7,11 @@
 English: "Although we agreed to meet downtown, he decided to stay at home because of the storm."
 
 ### Instructions
-**TODO**: Conjugate the verb incorporating middle voice or aspectual pronominal marking.
-**Why**: **Quedar** expresses meeting agreements (*quedamos a las seis*), location (*el museo queda cerca*), or fit (*te queda bien*). **the required term** expresses remaining, staying behind, or retaining possession (*nos quedamos en the required term*, *se quedó con el dinero*).
+**TODO**: Form the past participle of appointment agreement *(quedar en)* with reflexive meeting infinitive, followed by the preterite of decision and pronominal physical staying.
+**Why**: Non-reflexive *(quedar en)* signifies agreeing on a meeting plan, whereas pronominal *(quedar)* with reflexive clitic expresses remaining physically in place.
 
 ### Exercise
-<!-- TODO: Conjugate the verb incorporating middle voice or aspectual pronominal marking. -->
+<!-- TODO: Contrast appointment agreement verb (quedar en) with physical staying verb -->
 Aunque habíamos (quedado en encontrarnos en el centro, decidió quedarse en casa / acordado encontrarnos) ___ debido a la fuerte tormenta.
 
 <!-- SOLUTION

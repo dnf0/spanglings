@@ -7,11 +7,11 @@
 English: "Upon signing the Series A term sheet, the founders agreed to a fifteen percent equity dilution to bring in the lead fund."
 
 ### Instructions
-**TODO**: Supply the authentic regional business/tech expression described in the context.
-**Why**: When negotiating venture capital agreements and term sheets (*hojas de términos*), "Series A investment round" is **ronda de inversión Serie A** and "equity dilution" is **the required term** or **the required term del capital social**. Avoid using *the required term de equity*.
+**TODO**: Insert the corporate finance and legal term for shareholder equity reduction.
+**Why**: When issuing new shares in funding rounds, legal Spanish refers to shareholding reduction using the feminine noun with an acute accent followed by the adjective derived from *(acción)*.
 
 ### Exercise
-<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
+<!-- TODO: Insert the corporate finance term for shareholder equity reduction -->
 Al firmar la hoja de términos de la Serie A, los fundadores acordaron una (dilución accionaria) ___ del quince por ciento para incorporar al fondo líder.
 
 <!-- SOLUTION

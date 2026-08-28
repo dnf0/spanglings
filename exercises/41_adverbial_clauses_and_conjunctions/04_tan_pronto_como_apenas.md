@@ -7,11 +7,11 @@
 English: "As soon as we receive the final audit report, we will convene an extraordinary committee meeting."
 
 ### Instructions
-**TODO**: Conjugate *(Tan)* or supply the adverbial connector matching clause mood requirements.
-**Why**: **Tan the required term**, **apenas**, and **en cuanto** express immediate succession. When pointing to a future prospective action, the dependent clause strictly demands the **subjunctive** (*tan the required term the required term del reporte*).
+**TODO**: Build the immediate temporal clause starting with the promptness subordinator, the 1st-person plural present subjunctive of *(disponer)* with 'de', and the future assembly verb.
+**Why**: Subordinating conjunctions of immediate temporal succession require the subjunctive when the dependent action refers to an anticipated prospective event.
 
 ### Exercise
-<!-- TODO: Conjugate (Tan) or supply the adverbial connector matching clause mood requirements. -->
+<!-- TODO: Build the immediate temporal clause with succession connector and present subjunctive of (disponer) -->
 (Tan pronto como dispongamos del informe definitivo de auditoría, convocaremos / Apenas dispongamos del informe) ___ una reunión extraordinaria de directorio.
 
 <!-- SOLUTION

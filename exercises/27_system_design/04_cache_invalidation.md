@@ -7,11 +7,11 @@
 English: "Carefully coordinating cache invalidation across edge nodes prevents stale reads."
 
 ### Instructions
-**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
-**Why**: "the required term invalidation" translates directly to **the required term de the required term**, maintaining orthographic accent marks on both nouns.
+**TODO**: Translate the concept of high-speed temporary store invalidation into formal technical Spanish with accurate orthographic accentuation.
+**Why**: The technical noun phrase pairs the action noun derived from *(invalidar)* with the preposition 'de' and the adapted French-origin noun bearing an acute accent mark on the final vowel.
 
 ### Exercise
-<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
+<!-- TODO: Insert the technical term for temporary store invalidation with proper accents -->
 Coordinar adecuadamente la (invalidación de caché) ___ en los nodos perimetrales evita lecturas obsoletas.
 
 <!-- SOLUTION

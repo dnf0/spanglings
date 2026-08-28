@@ -7,11 +7,11 @@
 English: "Before scaling user acquisition campaigns, it is essential to achieve product-market fit in the target segment."
 
 ### Instructions
-**TODO**: Supply the authentic regional business/tech expression described in the context.
-**Why**: "Product-market fit" is formally translated in the Hispanic venture and startup space as **the required term-the required term** (or **encaje the required term-the required term**). Avoid crude calques such as *fit de the required term*.
+**TODO**: Insert the standard Spanish venture ecosystem term for commercial product-market alignment.
+**Why**: The foundational startup milestone is expressed by pairing the masculine noun with the hyphenated compound indicating market alignment.
 
 ### Exercise
-<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
+<!-- TODO: Insert the standard venture capital term for product-market alignment -->
 Antes de escalar las campañas de adquisición de usuarios, es indispensable alcanzar el (ajuste producto-mercado) ___ en el segmento objetivo.
 
 <!-- SOLUTION

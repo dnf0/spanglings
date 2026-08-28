@@ -7,11 +7,11 @@
 English: "We will be in touch, and let me know as soon as you get home so I know you arrived safely."
 
 ### Instructions
-**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
-**Why**: Casual, friendly goodbyes standardly use **the required term en the required term** (we'll be in touch) and the imperative subjunctive request **the required term en the required term a the required term** (let me know as soon as you get home).
+**TODO**: Form the friendly parting formula using the ongoing communication phrase, the imperative of notification with graphic tilde, and prospective temporal arrival.
+**Why**: Friendly goodbyes pair the cooperative status expression with a direct command governing an anticipated subjunctive temporal clause.
 
 ### Exercise
-<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
+<!-- TODO: Form the friendly parting formula with notification command and subjunctive arrival -->
 (Estamos en contacto y avísame en cuanto llegues a casa / Estamos en contacto y avisame en cuanto llegues) ___ para saber que todo está en orden.
 
 <!-- SOLUTION

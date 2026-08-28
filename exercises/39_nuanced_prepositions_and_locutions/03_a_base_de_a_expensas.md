@@ -7,11 +7,11 @@
 English: "The team achieved success through relentless dedication, but at the expense of their personal rest."
 
 ### Instructions
-**TODO**: Insert the appropriate compound prepositional locution.
-**Why**: **A the required term de** introduces an essential ingredient, continuous repeated method, or raw effort (*a the required term de the required term*). **A the required term de** means "at the expense/detriment of" (*a the required term de su propia salud*).
+**TODO**: Construct the clause using the compound locution for sustained foundational effort and the locution for detrimental sacrifice.
+**Why**: Prepositional locutions distinguish the fundamental instrument through which an outcome is achieved from the collateral cost incurred.
 
 ### Exercise
-<!-- TODO: Insert the appropriate compound prepositional locution. -->
+<!-- TODO: Combine the locution of sustained effort with the locution of detrimental sacrifice -->
 El equipo alcanzó el éxito (a base de perseverancia y disciplina, pero a expensas de / a base de constancia) ___ su descanso personal.
 
 <!-- SOLUTION

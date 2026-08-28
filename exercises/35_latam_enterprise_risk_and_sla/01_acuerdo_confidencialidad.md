@@ -7,11 +7,11 @@
 English: "Before granting access to proprietary source code, both parties signed a strict non-disclosure agreement."
 
 ### Instructions
-**TODO**: Complete the contractual SLA / incident-response phrasing with the correct business term.
-**Why**: In Latin American corporate law and enterprise SaaS contracting, an NDA is formalized as an **the required term de the required term y no divulgación** (or *convenio de the required term* in Mexico).
+**TODO**: Insert the standard legal Spanish commercial term for a Non-Disclosure Agreement (NDA).
+**Why**: Corporate legal contracts in Latin America translate NDA as the formal noun phrase denoting mutual secrecy and non-disclosure rather than using English acronyms.
 
 ### Exercise
-<!-- TODO: Complete the contractual SLA / incident-response phrasing with the correct business term. -->
+<!-- TODO: Insert the formal Spanish legal term for an NDA -->
 Antes de conceder acceso al código fuente propietario, ambas partes suscribieron un estricto (acuerdo de confidencialidad / NDA) ___ con validez de cinco años.
 
 <!-- SOLUTION

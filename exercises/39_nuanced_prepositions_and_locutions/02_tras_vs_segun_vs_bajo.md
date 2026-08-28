@@ -7,11 +7,11 @@
 English: "After several weeks of evaluation, and according to the official report, the project was approved under strict conditions."
 
 ### Instructions
-**TODO**: Insert the appropriate compound prepositional locution.
-**Why**: **the required term** denotes temporal/spatial succession (*the required term la tormenta* = after the storm). **the required term** introduces perspective, accordance, or source (*the required term el reporte*). **the required term** denotes subordination, condition, or pressure (*the required term la condición de*, *the required term juramento*).
+**TODO**: Apply nuanced prepositions expressing posteriority for the timeline, conformity for the official report, and conditional subordination for the parameters.
+**Why**: Prepositional nuance distinguishes posteriority ('after / following'), conformity to standards ('in accordance with'), and state or constraint ('subject to').
 
 ### Exercise
-<!-- TODO: Insert the appropriate compound prepositional locution. -->
+<!-- TODO: Apply nuanced prepositions for posteriority, conformity, and subordination -->
 (Tras varias semanas de evaluación, y según el informe oficial, se aprobó bajo / Tras varias semanas de evaluacion) ___ estrictas condiciones de seguridad.
 
 <!-- SOLUTION
