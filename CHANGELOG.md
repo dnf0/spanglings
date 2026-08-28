@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.4] - 2026-08-28
+
+### Fixed
+- **Drill Randomization & Comprehensive Question Variety**:
+  - Fixed deterministic drill question sequencing in `spanglings drill` and `spanglings blitz` by shuffling candidate question pools with `rand::seq::SliceRandom` at the start of every session.
+  - Expanded the drill question bank from 10 hardcoded items to **70+ comprehensive drill questions** covering 12 linguistic topics: irregular preterite stems, present & imperfect subjunctive, irregular future/conditional stems, affirmative/negative imperatives, por vs para, ser vs estar, clitic cacophony (`se lo`), prepositional verbs (*régimen preposicional*), accidental *se*, false friends / cognates, and native idioms.
+  - Added `-n` / `--count` flag to `spanglings drill` allowing users to configure question batch sizes (e.g., `spanglings drill -n 10` or `spanglings drill preterite --count 15`).
+  - Integrated smart forgiving accent evaluation with explanatory feedback tips into the drilling engine.
+
 ## [0.4.3] - 2026-08-28
 
 ### Fixed

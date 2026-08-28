@@ -19,8 +19,17 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Explain { topic }) => {
             spanglings::cli::commands::explain::show_explanation(&topic)?;
         }
-        Some(Commands::Drill { topic, concept }) => {
-            spanglings::cli::commands::drill::run_drill(topic.as_deref(), concept.as_deref())?;
+        Some(Commands::Drill {
+            topic,
+            concept,
+            count,
+        }) => {
+            spanglings::cli::commands::drill::run_drill(
+                topic.as_deref(),
+                concept.as_deref(),
+                count,
+                cli.strict_accents,
+            )?;
         }
         Some(Commands::Blitz { seconds, topic }) => {
             spanglings::cli::commands::blitz::run_blitz(seconds, topic.as_deref())?;

@@ -44,6 +44,7 @@ fn test_cli_parsing_subcommands() {
         Some(Commands::Drill {
             topic: Some("preterite".to_string()),
             concept: None,
+            count: None,
         })
     );
 
@@ -58,6 +59,7 @@ fn test_cli_parsing_subcommands() {
         Some(Commands::Drill {
             topic: None,
             concept: Some("subjunctive_wishes_desires".to_string()),
+            count: None,
         })
     );
 

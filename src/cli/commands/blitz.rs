@@ -1,4 +1,5 @@
 use colored::Colorize;
+use rand::seq::SliceRandom;
 use std::io::{self, BufRead, Write};
 use std::time::{Duration, Instant};
 
@@ -22,187 +23,41 @@ pub struct BlitzResult {
 }
 
 pub fn get_blitz_items(topic_filter: Option<&str>) -> Vec<BlitzItem> {
-    let all_items = vec![
-        // Irregular Preterite Stems
-        BlitzItem {
-            prompt: "Preterite Stem: 'tener' (yo tuve -> stem: ?)",
-            target: "tuv",
-            topic: "preterite",
-            explanation: "tener -> tuv- (tuve, tuviste, tuvo)",
-        },
-        BlitzItem {
-            prompt: "Preterite Stem: 'poner' (yo puse -> stem: ?)",
-            target: "pus",
-            topic: "preterite",
-            explanation: "poner -> pus- (puse, pusiste, puso)",
-        },
-        BlitzItem {
-            prompt: "Preterite Stem: 'saber' (yo supe -> stem: ?)",
-            target: "sup",
-            topic: "preterite",
-            explanation: "saber -> sup- (supe, supiste, supo)",
-        },
-        BlitzItem {
-            prompt: "Preterite Stem: 'hacer' (yo hice -> stem: ?)",
-            target: "hic",
-            topic: "preterite",
-            explanation: "hacer -> hic- (hice, hiciste, hizo)",
-        },
-        BlitzItem {
-            prompt: "Preterite Stem: 'decir' (yo dije -> stem: ?)",
-            target: "dij",
-            topic: "preterite",
-            explanation: "decir -> dij- (dije, dijiste, dijo)",
-        },
-        BlitzItem {
-            prompt: "Preterite Stem: 'estar' (yo estuve -> stem: ?)",
-            target: "estuv",
-            topic: "preterite",
-            explanation: "estar -> estuv- (estuve, estuviste, estuvo)",
-        },
-        BlitzItem {
-            prompt: "Preterite Stem: 'querer' (yo quise -> stem: ?)",
-            target: "quis",
-            topic: "preterite",
-            explanation: "querer -> quis- (quise, quisiste, quiso)",
-        },
-        BlitzItem {
-            prompt: "Preterite Stem: 'venir' (yo vine -> stem: ?)",
-            target: "vin",
-            topic: "preterite",
-            explanation: "venir -> vin- (vine, viniste, vino)",
-        },
-        BlitzItem {
-            prompt: "Preterite Stem: 'caber' (yo cupe -> stem: ?)",
-            target: "cup",
-            topic: "preterite",
-            explanation: "caber -> cup- (cupe, cupiste, cupo)",
-        },
-        BlitzItem {
-            prompt: "Preterite Stem: 'andar' (yo anduve -> stem: ?)",
-            target: "anduv",
-            topic: "preterite",
-            explanation: "andar -> anduv- (anduve, anduviste, anduvo)",
-        },
-        // Subjunctive Forms
-        BlitzItem {
-            prompt: "Subjunctive 'yo': 'tener' (que yo...)",
-            target: "tenga",
-            topic: "subjunctive",
-            explanation: "yo tengo -> drop -o -> tenga",
-        },
-        BlitzItem {
-            prompt: "Subjunctive 'yo': 'salir' (que yo...)",
-            target: "salga",
-            topic: "subjunctive",
-            explanation: "yo salgo -> drop -o -> salga",
-        },
-        BlitzItem {
-            prompt: "Subjunctive 'yo': 'poner' (que yo...)",
-            target: "ponga",
-            topic: "subjunctive",
-            explanation: "yo pongo -> drop -o -> ponga",
-        },
-        BlitzItem {
-            prompt: "Subjunctive 'yo': 'decir' (que yo...)",
-            target: "diga",
-            topic: "subjunctive",
-            explanation: "yo digo -> drop -o -> diga",
-        },
-        BlitzItem {
-            prompt: "Subjunctive 'yo': 'hacer' (que yo...)",
-            target: "haga",
-            topic: "subjunctive",
-            explanation: "yo hago -> drop -o -> haga",
-        },
-        BlitzItem {
-            prompt: "Subjunctive 'yo': 'ver' (que yo...)",
-            target: "vea",
-            topic: "subjunctive",
-            explanation: "yo veo -> drop -o -> vea",
-        },
-        BlitzItem {
-            prompt: "Subjunctive 'yo': 'caber' (que yo...)",
-            target: "quepa",
-            topic: "subjunctive",
-            explanation: "caber -> quepa, quepas, quepa",
-        },
-        BlitzItem {
-            prompt: "Subjunctive 'yo': 'ir' (que yo...)",
-            target: "vaya",
-            topic: "subjunctive",
-            explanation: "ir -> vaya, vayas, vaya",
-        },
-        BlitzItem {
-            prompt: "Subjunctive 'yo': 'saber' (que yo...)",
-            target: "sepa",
-            topic: "subjunctive",
-            explanation: "saber -> sepa, sepas, sepa",
-        },
-        BlitzItem {
-            prompt: "Subjunctive 'yo': 'ser' (que yo...)",
-            target: "sea",
-            topic: "subjunctive",
-            explanation: "ser -> sea, seas, sea",
-        },
-        // Clitics & Pronouns
-        BlitzItem {
-            prompt: "Replace 'le lo' with cacophony rule: 'Le doy el libro' -> '___ doy'",
-            target: "se lo",
-            topic: "pronouns",
-            explanation: "le + lo -> se lo",
-        },
-        BlitzItem {
-            prompt:
-                "Replace 'les las' with cacophony rule: 'Les compro las flores' -> '___ compro'",
-            target: "se las",
-            topic: "pronouns",
-            explanation: "les + las -> se las",
-        },
-        // False friends
-        BlitzItem {
-            prompt: "Translate 'currently / at present' to Spanish (looks like 'actually'):",
-            target: "actualmente",
-            topic: "false_friends",
-            explanation: "actualmente = currently",
-        },
-        BlitzItem {
-            prompt: "Translate 'to pretend / feign' to Spanish (verb starting with f):",
-            target: "fingir",
-            topic: "false_friends",
-            explanation: "fingir = to pretend / feign",
-        },
-        BlitzItem {
-            prompt: "Translate 'sensible / prudent' to Spanish (not sensible):",
-            target: "sensato",
-            topic: "false_friends",
-            explanation: "sensato = sensible/prudent; sensible = sensitive",
-        },
-    ];
-
-    if let Some(filt) = topic_filter {
-        let f = filt.to_lowercase().replace('_', "-");
-        all_items
-            .into_iter()
-            .filter(|item| item.topic.replace('_', "-").contains(&f))
-            .collect()
-    } else {
-        all_items
-    }
+    crate::cli::commands::drill::get_drill_items(topic_filter)
+        .into_iter()
+        .map(|item| BlitzItem {
+            prompt: item.prompt,
+            target: item.target,
+            topic: item.topic,
+            explanation: item.explanation,
+        })
+        .collect()
 }
 
 pub fn evaluate_blitz_answer(item: &BlitzItem, user_input: &str) -> bool {
     let clean_user = user_input.trim().to_lowercase();
     let clean_target = item.target.trim().to_lowercase();
-    clean_user == clean_target
+    if clean_user.is_empty() {
+        return false;
+    }
+    if clean_user == clean_target {
+        return true;
+    }
+    // Forgiving accent check in blitz
+    crate::engine::accents::strip_accents(&clean_user)
+        == crate::engine::accents::strip_accents(&clean_target)
 }
 
 pub fn run_blitz(duration_secs: Option<u64>, topic: Option<&str>) -> anyhow::Result<BlitzResult> {
     let duration_limit = Duration::from_secs(duration_secs.unwrap_or(60));
-    let items = get_blitz_items(topic);
+    let mut items = get_blitz_items(topic);
     if items.is_empty() {
         anyhow::bail!("No blitz items found for topic: {:?}", topic);
     }
+
+    // Shuffle items randomly so each blitz run is fresh
+    let mut rng = rand::thread_rng();
+    items.shuffle(&mut rng);
 
     println!(
         "{}",
