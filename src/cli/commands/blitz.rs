@@ -3,12 +3,40 @@ use rand::seq::SliceRandom;
 use std::io::{self, BufRead, Write};
 use std::time::{Duration, Instant};
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq, Eq)]
 pub struct BlitzItem {
-    pub prompt: &'static str,
-    pub target: &'static str,
     pub topic: &'static str,
+    pub formula_cue: &'static str,
+    pub trigger_sentence: &'static str,
+    pub target_verb: &'static str,
+    pub target_subject: &'static str,
+    pub target: &'static str,
     pub explanation: &'static str,
+}
+
+impl BlitzItem {
+    pub fn format_prompt(&self, remaining_secs: u64, streak: usize) -> String {
+        let topic_display = if self.topic.is_empty() {
+            String::new()
+        } else {
+            let parts: Vec<String> = self
+                .topic
+                .split('_')
+                .map(|word| {
+                    let mut chars = word.chars();
+                    match chars.next() {
+                        None => String::new(),
+                        Some(f) => f.to_uppercase().collect::<String>() + chars.as_str(),
+                    }
+                })
+                .collect();
+            parts.join(" ")
+        };
+        format!(
+            "[{remaining_secs}s remaining | Streak: {streak}] [{topic_display} | {}]\nSentence: \"{}\" (verb: {} | subject: {}) > ",
+            self.formula_cue, self.trigger_sentence, self.target_verb, self.target_subject
+        )
+    }
 }
 
 #[derive(Debug, Clone, PartialEq, serde::Serialize, serde::Deserialize)]
@@ -26,9 +54,12 @@ pub fn get_blitz_items(topic_filter: Option<&str>) -> Vec<BlitzItem> {
     crate::cli::commands::drill::get_drill_items(topic_filter)
         .into_iter()
         .map(|item| BlitzItem {
-            prompt: item.trigger_sentence,
-            target: item.target,
             topic: item.topic,
+            formula_cue: item.formula_cue,
+            trigger_sentence: item.trigger_sentence,
+            target_verb: item.target_verb,
+            target_subject: item.target_subject,
+            target: item.target,
             explanation: item.explanation,
         })
         .collect()
@@ -78,6 +109,13 @@ pub fn run_blitz(duration_secs: Option<u64>, topic: Option<&str>) -> anyhow::Res
     );
     println!("Answer as many as you can before the timer expires! Press Ctrl+C to abort.\n");
 
+    if let Some(sheet) = crate::cli::commands::drill::get_topic_cheat_sheet(topic.unwrap_or("all"))
+    {
+        println!("{}", "--- [TOPIC CHEAT SHEET] ---".yellow().bold());
+        println!("{}\n", sheet.cyan());
+        println!("{}", "---------------------------".yellow());
+    }
+
     let stdin = io::stdin();
     let mut reader = stdin.lock();
     let start_time = Instant::now();
@@ -88,47 +126,63 @@ pub fn run_blitz(duration_secs: Option<u64>, topic: Option<&str>) -> anyhow::Res
     let mut max_streak: usize = 0;
 
     let mut index = 0;
-    while start_time.elapsed() < duration_limit {
-        let remaining = duration_limit.saturating_sub(start_time.elapsed());
+    'blitz: while start_time.elapsed() < duration_limit {
         let item = &items[index % items.len()];
         index += 1;
 
-        print!(
-            "[{:02}s remaining | Streak: {}] {} > ",
-            remaining.as_secs(),
-            current_streak.to_string().yellow().bold(),
-            item.prompt.bright_white()
-        );
-        io::stdout().flush()?;
-
-        let mut line = String::new();
-        if reader.read_line(&mut line)? == 0 {
-            // EOF
-            println!();
-            break;
-        }
-
-        if start_time.elapsed() >= duration_limit {
-            println!("\n⏳ {}", "Time's up!".red().bold());
-            break;
-        }
-
-        total_answered += 1;
-        if evaluate_blitz_answer(item, &line) {
-            current_streak += 1;
-            if current_streak > max_streak {
-                max_streak = current_streak;
+        loop {
+            let remaining = duration_limit.saturating_sub(start_time.elapsed());
+            if start_time.elapsed() >= duration_limit {
+                println!("\n⏳ {}", "Time's up!".red().bold());
+                break 'blitz;
             }
-            correct += 1;
-            println!("  {} Correct!\n", "✓".green().bold());
-        } else {
-            current_streak = 0;
-            println!(
-                "  {} Incorrect. Expected: '{}' ({})\n",
-                "✗".red().bold(),
-                item.target.green().bold(),
-                item.explanation.dimmed()
+
+            print!(
+                "{}",
+                item.format_prompt(remaining.as_secs(), current_streak)
             );
+            io::stdout().flush()?;
+
+            let mut line = String::new();
+            if reader.read_line(&mut line)? == 0 {
+                // EOF
+                println!();
+                break 'blitz;
+            }
+
+            if start_time.elapsed() >= duration_limit {
+                println!("\n⏳ {}", "Time's up!".red().bold());
+                break 'blitz;
+            }
+
+            let trimmed = line.trim();
+            if trimmed.is_empty() {
+                continue;
+            }
+
+            if trimmed.eq_ignore_ascii_case("?") || trimmed.eq_ignore_ascii_case("hint") {
+                println!("  💡 Hint: {}\n", item.explanation.yellow());
+                continue;
+            }
+
+            total_answered += 1;
+            if evaluate_blitz_answer(item, trimmed) {
+                current_streak += 1;
+                if current_streak > max_streak {
+                    max_streak = current_streak;
+                }
+                correct += 1;
+                println!("  {} Correct!\n", "✓".green().bold());
+            } else {
+                current_streak = 0;
+                println!(
+                    "  {} Incorrect. Expected: '{}' ({})\n",
+                    "✗".red().bold(),
+                    item.target.green().bold(),
+                    item.explanation.dimmed()
+                );
+            }
+            break;
         }
     }
 
