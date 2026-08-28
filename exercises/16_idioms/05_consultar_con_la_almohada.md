@@ -6,7 +6,12 @@
 ### Context
 English: "Before making such an important decision, I will sleep on it tonight."
 
+### Instructions
+**TODO**: Complete the idiomatic phrase with the correct vocabulary item.
+**Why**: 'Consultar con la the required term' means to sleep on a decision before finalizing it.
+
 ### Exercise
+<!-- TODO: Complete the idiomatic phrase with the correct vocabulary item. -->
 Antes de decidir, voy a consultar con la ___ esta noche.
 
 <!-- SOLUTION

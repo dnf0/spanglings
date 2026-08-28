@@ -6,7 +6,12 @@
 ### Context
 English: "Besides getting along great with all team members, she took home the annual innovation award."
 
+### Instructions
+**TODO**: Conjugate the verb *(llevar)* incorporating middle voice or aspectual pronominal marking.
+**Why**: While the base verb indicates transport, adding reflexive clitics specifies interpersonal rapport in the infinitive and claiming a prize in the preterite.
+
 ### Exercise
+<!-- TODO: Conjugate llevar with reflexive pronouns for interpersonal rapport and winning an award -->
 Además de (llevarse de maravilla con todos los integrantes, se llevó el premio / llevarse muy bien con) ___ anual a la innovación.
 
 <!-- SOLUTION

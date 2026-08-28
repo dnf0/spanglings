@@ -6,7 +6,12 @@
 ### Context
 English: "After several weeks of evaluation, and according to the official report, the project was approved under strict conditions."
 
+### Instructions
+**TODO**: Insert the appropriate compound prepositional locution.
+**Why**: **the required term** denotes temporal/spatial succession (*the required term la tormenta* = after the storm). **the required term** introduces perspective, accordance, or source (*the required term el reporte*). **the required term** denotes subordination, condition, or pressure (*the required term la condición de*, *the required term juramento*).
+
 ### Exercise
+<!-- TODO: Insert the appropriate compound prepositional locution. -->
 (Tras varias semanas de evaluación, y según el informe oficial, se aprobó bajo / Tras varias semanas de evaluacion) ___ estrictas condiciones de seguridad.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "Everyone complimented her on how well the jacket suited her, and told her not to worry about arriving late."
 
+### Instructions
+**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
+**Why**: Giving compliments on appearance uses **quedar the required term** (*¡Qué the required term te queda esa camisa!*). Reassuring someone after an apology uses **No te preocupes por nada** or **No pasa nada / No te preocupes**.
+
 ### Exercise
+<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
 Todos le comentaron (lo bien que le quedaba la chaqueta y que no se preocupara / que bien le quedaba) ___ por el retraso.
 
 <!-- SOLUTION

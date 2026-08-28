@@ -6,7 +6,12 @@
 ### Context
 English: "It was then when I truly understood the dilemma."
 
+### Instructions
+**TODO**: Supply the relative temporal adverb connecting the focalized time expression (*fue entonces*) with the presupposition clause.
+**Why**: Canonical Spanish cleft sentences (*oraciones escindidas o hendidas*) require the relative connective to match the semantic category of the focalized constituent (using a temporal relative adverb for time, avoiding the non-standard *que galicado*).
+
 ### Exercise
+<!-- TODO: Supply the temporal relative adverb for the temporal cleft construction -->
 Fue entonces ___ comprendí la gravedad del dilema.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "That luxury car costs an arm and a leg."
 
+### Instructions
+**TODO**: Complete the idiomatic phrase with the correct vocabulary item.
+**Why**: 'Costar un the required term de la cara' is the Spanish idiom for costing an exorbitant amount of money.
+
 ### Exercise
+<!-- TODO: Complete the idiomatic phrase with the correct vocabulary item. -->
 Ese coche de alta gama cuesta un ___ de la cara.
 
 <!-- SOLUTION

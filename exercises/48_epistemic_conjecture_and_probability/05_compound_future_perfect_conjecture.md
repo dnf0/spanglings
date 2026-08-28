@@ -6,7 +6,12 @@
 ### Context
 English: "Don't worry about the CI pipeline; by this hour it has probably already finished running the test suite."
 
+### Instructions
+**TODO**: Conjugate the verb to express epistemic conjecture or probability.
+**Why**: The compound future (*futuro compuesto: the required term + participio*) conveys conjecture about an action completed prior to the present moment.
+
 ### Exercise
+<!-- TODO: Conjugate the verb to express epistemic conjecture or probability. -->
 No te preocupes por el pipeline; a estas horas ya (habrá terminado / ha terminado probablemente) ___ la ejecución de pruebas.
 
 <!-- SOLUTION

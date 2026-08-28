@@ -6,7 +6,12 @@
 ### Context
 English: "Before launching the new version, we have to deploy the microservices to the production environment."
 
+### Instructions
+**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
+**Why**: In software engineering, avoid Spanglish calques like *deployar*. Use the standard verb **the required term** (to deploy) and **solicitud de extracción** (pull request).
+
 ### Exercise
+<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
 Antes de lanzar la nueva versión, tenemos que (desplegar) ___ los microservicios en el entorno de producción.
 
 <!-- SOLUTION

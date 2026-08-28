@@ -6,7 +6,12 @@
 ### Context
 English: "It was only after running the integration suite that the lead engineer realized that the token had expired."
 
+### Instructions
+**TODO**: Supply the authentic regional business/tech expression described in the context.
+**Why**: Rather than *darse the required term*, Colombian speakers very frequently use the expressive fixed phrase **caer en the required term (de que)** when suddenly noticing an oversight, bug, or discrepancy during a technical review.
+
 ### Exercise
+<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
 Fue solo tras ejecutar la suite de integración cuando el ingeniero principal (cayó en cuenta de que) ___ el token de autenticación había expirado.
 
 <!-- SOLUTION

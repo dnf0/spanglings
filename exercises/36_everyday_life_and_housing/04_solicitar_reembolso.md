@@ -6,7 +6,12 @@
 ### Context
 English: "To request a full refund, you must present the original proof of purchase."
 
+### Instructions
+**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
+**Why**: When returning a defective product to a store, you ask to **the required term un the required term** (or *devolución del dinero*) and must present the receipt (**el the required term de the required term** or **el ticket de the required term**).
+
 ### Exercise
+<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
 Para (solicitar un reembolso completo, debe presentar el comprobante de compra / pedir un reembolso) ___ original en el mostrador de atención al cliente.
 
 <!-- SOLUTION

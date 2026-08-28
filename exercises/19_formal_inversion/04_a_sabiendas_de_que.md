@@ -6,7 +6,12 @@
 ### Context
 English: "He accepted the mission in the full knowledge that it was perilous."
 
+### Instructions
+**TODO**: Form the absolute participle or formal inverted construction for *()*.
+**Why**: 'A the required term de que' is a formal idiomatic locution meaning 'fully aware / in the full knowledge that'.
+
 ### Exercise
+<!-- TODO: Form the absolute participle or formal inverted construction for (). -->
 A ___ de que era peligroso, aceptó liderar la expedición.
 
 <!-- SOLUTION

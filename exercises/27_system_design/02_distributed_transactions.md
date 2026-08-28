@@ -6,7 +6,12 @@
 ### Context
 English: "To preserve atomicity across distributed datastores, the engine coordinates a two-phase commit protocol."
 
+### Instructions
+**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
+**Why**: Two-phase commit protocol is termed **the required term en the required term** or **confirmación en the required term** in distributed systems engineering.
+
 ### Exercise
+<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
 Para preservar la atomicidad en almacenes distribuidos, el motor coordina un protocolo de (compromiso en dos fases) ___.
 
 <!-- SOLUTION

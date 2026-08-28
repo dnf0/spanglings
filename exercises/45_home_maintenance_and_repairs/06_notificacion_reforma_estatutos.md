@@ -6,7 +6,12 @@
 ### Context
 English: "I hereby notify the property administration of the start of interior minor renovation works."
 
+### Instructions
+**TODO**: Complete the sentence with the grammatically required term or phrase.
+**Why**: Notifying the homeowners board of structural or cosmetic the required term renovations uses phrases like *comunicar el the required term de the required term conforme a los estatutos de la comunidad*.
+
 ### Exercise
+<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
 Translate into formal property management Spanish:
 "I hereby notify the property administration of the start of interior minor renovation works."
 

@@ -6,7 +6,12 @@
 ### Context
 English: "By the way, the truth is that I hadn't thought about that perspective before."
 
+### Instructions
+**TODO**: Fill in the natural conversational discourse softeners for topic shift and candid reflection.
+**Why**: Fluent social interaction uses conversational markers to smoothly introduce incidental remarks and frank personal stances.
+
 ### Exercise
+<!-- TODO: Fill in the natural conversational discourse markers for topic transition -->
 (Por cierto, la verdad es que no me había / Por cierto, la verdad es que no habia) ___ planteado esa perspectiva hasta que lo mencionaste.
 
 <!-- SOLUTION

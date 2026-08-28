@@ -6,7 +6,12 @@
 ### Context
 English: "The imposter tried to pretend that he was a doctor to enter the operating room."
 
+### Instructions
+**TODO**: Insert the correct Spanish term, avoiding deceptive English false cognates.
+**Why**: **Pretender** means *to claim / aspire to / attempt*. To translate English *to pretend (feign)*, use **the required term**, **simular**, or **aparentar**.
+
 ### Exercise
+<!-- TODO: Insert the correct Spanish term, avoiding deceptive English false cognates. -->
 El impostor intentó (fingir) ___ que era médico para entrar en el quirófano.
 
 <!-- SOLUTION

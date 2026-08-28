@@ -6,7 +6,12 @@
 ### Context
 English: "I am contacting customer service to dispute several unauthorized charges on my credit card."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: When disputing fraudulent bank charges, consumers must *the required term los the required term no the required term* and request *bloqueo cautelar de la the required term*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 Me pongo en contacto para (impugnar varios cargos no autorizados en mi tarjeta de crédito / desconocer transacciones no autorizadas) ___ y solicitar su inmediata retrocesión.
 
 <!-- SOLUTION

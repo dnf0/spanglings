@@ -6,7 +6,12 @@
 ### Context
 English: "We are challenging the electricity bill because it was issued based on disproportionate estimated consumption rather than actual meter readings."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: Overbilling based on estimates rather than meter readings is challenged as *facturación basada en the required term desproporcionados*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 Impugnamos la factura eléctrica por haber sido emitida con base en (consumos estimados que no reflejan la lectura real del contador / lecturas estimadas desproporcionadas) ___.
 
 <!-- SOLUTION

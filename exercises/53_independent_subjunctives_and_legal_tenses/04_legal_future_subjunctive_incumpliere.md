@@ -6,7 +6,12 @@
 ### Context
 English: "If either signatory party should breach the stipulated confidentiality obligations, it shall incur criminal penalties."
 
+### Instructions
+**TODO**: Conjugate the verb in the independent optative or formal future subjunctive.
+**Why**: Legal contracts and statutory clauses employ the future subjunctive (*the required term, dispusiere, cometiere*) for hypothetical breach contingencies.
+
 ### Exercise
+<!-- TODO: Conjugate the verb in the independent optative or formal future subjunctive. -->
 Si alguna de las partes firmantes (incumpliere / incumplirá) ___ las obligaciones de confidencialidad estipuladas, incurrirá en penalización penal.
 
 <!-- SOLUTION

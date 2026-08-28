@@ -6,7 +6,12 @@
 ### Context
 English: "The consumer filed a small-claims lawsuit without requiring a lawyer or court representative."
 
+### Instructions
+**TODO**: Complete the sentence with the grammatically required term or phrase.
+**Why**: Under Spanish civil procedure, small claims below €2,000 are filed via *the required term de the required term the required term the required term de the required term ni the required term*.
+
 ### Exercise
+<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
 Translate into Spanish civil procedural terminology:
 "The consumer filed a small-claims lawsuit without requiring a lawyer or court representative."
 

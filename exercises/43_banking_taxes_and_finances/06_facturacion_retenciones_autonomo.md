@@ -6,7 +6,12 @@
 ### Context
 English: "The invoice must detail the taxable base, the accrued VAT, and the personal income tax withholding."
 
+### Instructions
+**TODO**: Complete the sentence with the grammatically required term or phrase.
+**Why**: Freelancers in Spain emit invoices with *the required term* and *the required term de the required term aplicable*.
+
 ### Exercise
+<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
 Translate into professional Spanish accounting terms:
 "The invoice must detail the taxable base, the accrued VAT, and the personal income tax withholding."
 

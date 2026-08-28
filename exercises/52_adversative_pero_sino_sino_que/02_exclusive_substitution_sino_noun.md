@@ -6,7 +6,12 @@
 ### Context
 English: "For the backend we did not choose a monolithic architecture, but rather a decoupled microservices pattern."
 
+### Instructions
+**TODO**: Insert the correct adversative connector (*pero*, *the required term*, or *the required term que*).
+**Why**: Following a negative main clause (*No usamos X*), *the required term* introduces the exclusive alternative (*the required term Y*).
+
 ### Exercise
+<!-- TODO: Insert the correct adversative connector (pero, the required term, or the required term que). -->
 Para el backend no elegimos una arquitectura monolítica, (sino / pero) ___ un esquema desacoplado de microservicios.
 
 <!-- SOLUTION

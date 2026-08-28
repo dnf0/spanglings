@@ -6,7 +6,12 @@
 ### Context
 English: "During the sprint retrospective, we agreed to automate regression tests before next week."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: The periphrasis **quedar en + infinitive** denotes reaching a shared agreement to undertake a mutual task.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 Durante la retrospectiva del sprint, (quedamos en) ___ automatizar las pruebas de regresión antes de la próxima semana.
 
 <!-- SOLUTION

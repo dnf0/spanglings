@@ -6,7 +6,12 @@
 ### Context
 English: "By the way, speaking of the deadline, did the legal team review the latest addendum?"
 
+### Instructions
+**TODO**: Translate the full sentence incorporating nuanced conversational digressive markers and legal terminology.
+**Why**: Digressive discourse markers introduce incidental commentary connected to a previous topic, paired with formal terminology for legal counsel and addenda.
+
 ### Exercise
+<!-- TODO: Translate into nuanced conversational Spanish with digressive marker and legal vocabulary -->
 Translate into nuanced professional conversational Spanish:
 "By the way, speaking of the deadline, did the legal team review the latest addendum?"
 

@@ -6,7 +6,12 @@
 ### Context
 English: "The critical incidents on the payment gateway having been resolved, commercial transactions resumed normally."
 
+### Instructions
+**TODO**: Form the absolute participle construction for the verb with proper agreement.
+**Why**: Irregular participles (*resuelto, abierto, escrito*) inflect for number and gender in absolute clauses (*the required term los problemas...*).
+
 ### Exercise
+<!-- TODO: Form the absolute participle construction for the verb with proper agreement. -->
 (Resueltos / Resolvidos) ___ los incidentes críticos en la pasarela de pagos, se reanudaron las transacciones comerciales con total normalidad.
 
 <!-- SOLUTION

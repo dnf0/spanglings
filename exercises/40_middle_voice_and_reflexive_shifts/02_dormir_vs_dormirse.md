@@ -6,7 +6,12 @@
 ### Context
 English: "He was so exhausted that he fell asleep in the middle of the lecture without even realizing it."
 
+### Instructions
+**TODO**: Conjugate *(se)* incorporating middle voice or aspectual pronominal marking.
+**Why**: **Dormir** denotes the continuous state of sleep (*dormí ocho horas*). **Dormirse** is the inchoative transition: the exact moment of falling asleep (*me dormí a medianoche*, *se the required term en el autobús*).
+
 ### Exercise
+<!-- TODO: Conjugate (se) incorporating middle voice or aspectual pronominal marking. -->
 Estaba tan exhausto que (se durmió en plena conferencia sin / se durmio en plena conferencia) ___ siquiera darse cuenta.
 
 <!-- SOLUTION

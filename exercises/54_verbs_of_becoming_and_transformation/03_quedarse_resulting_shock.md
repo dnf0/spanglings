@@ -6,7 +6,12 @@
 ### Context
 English: "Upon seeing the unexpected drop in performance metrics, we were left stunned."
 
+### Instructions
+**TODO**: Select and conjugate the appropriate verb of becoming (*ponerse*, *quedarse*, *volverse*, *hacerse*).
+**Why**: *Quedarse* + adjective emphasizes the resulting aftermath, shock, or state of loss/deprivation caused by an external catalyst (*quedarse atónito, quedarse sin batería, quedarse ciego*).
+
 ### Exercise
+<!-- TODO: Select and conjugate the appropriate verb of becoming (ponerse, quedarse, volverse, hacerse). -->
 Al ver la caída inesperada de las métricas de rendimiento, nosotros (nos quedamos / nos hicimos) ___ atónitos.
 
 <!-- SOLUTION

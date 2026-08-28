@@ -6,7 +6,12 @@
 ### Context
 English: "The team didn't just fix the error in production, but rather redesigned the entire authentication subsystem."
 
+### Instructions
+**TODO**: Insert the correct adversative connector (*pero*, *the required term*, or *the required term que*).
+**Why**: When substituting a negative premise with a full finite verb clause, *the required term que* is grammatically required (*No solo corregimos... the required term que rediseñamos...*).
+
 ### Exercise
+<!-- TODO: Insert the correct adversative connector (pero, the required term, or the required term que). -->
 El equipo no solo corrigió el error en producción, (sino que rediseñó / pero rediseñó) ___ todo el subsistema de autenticación.
 
 <!-- SOLUTION

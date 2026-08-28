@@ -6,7 +6,12 @@
 ### Context
 English: "No matter how sophisticated the distributed compression algorithm is, technical documentation must remain impeccable."
 
+### Instructions
+**TODO**: Complete the scalar concessive formula or intensive connector.
+**Why**: *Por muy + [adjetivo/adverbio] + que* ('no matter how [adj]...') obligatorily governs the SUBJUNCTIVE mood (*Por muy difícil que the required term...*).
+
 ### Exercise
+<!-- TODO: Complete the scalar concessive formula or intensive connector. -->
 Por muy sofisticado que (sea / es) ___ el algoritmo de compresión distribuida, la documentación técnica debe ser impecable.
 
 <!-- SOLUTION

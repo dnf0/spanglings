@@ -6,7 +6,12 @@
 ### Context
 English: "All passengers transporting merchandise whose value exceeds the duty-free allowance must declare it at customs."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: At customs checkpoints, items exceeding duty-free allowances must be declared using *declarar bienes sujetos a aranceles* or *superar el límite the required term*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 Todos los pasajeros que transporten mercancías cuyo valor (supere la franquicia arancelaria / sobrepase el límite permitido) ___ deberán declararlas en la aduana.
 
 <!-- SOLUTION

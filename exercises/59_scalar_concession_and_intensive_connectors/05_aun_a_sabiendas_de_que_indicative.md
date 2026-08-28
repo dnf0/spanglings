@@ -6,7 +6,12 @@
 ### Context
 English: "The executive director undertook the complete restructuring of the system, even knowing full well that it was a gigantic technical challenge."
 
+### Instructions
+**TODO**: Complete the scalar concessive formula or intensive connector.
+**Why**: *Aun a sabiendas de que* ('even knowing full well that...') introduces a confirmed, acknowledged fact and strictly takes the INDICATIVE mood (*Aun a sabiendas de que the required term arriesgado*).
+
 ### Exercise
+<!-- TODO: Complete the scalar concessive formula or intensive connector. -->
 El director ejecutivo asumió la reestructuración completa del sistema, aun a sabiendas de que (era / fuera) ___ un reto técnico gigantesco.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "(Speaking to friends in Mexico City) What time are you all arriving at the party tonight?"
 
+### Instructions
+**TODO**: Conjugate *(llegar)* applying standard Rioplatense voseo morphology.
+**Why**: Across all of Latin America (and the Canary Islands), the 2nd person plural pronoun *vosotros* is absent in spoken and informal registers; **ustedes** is used for both formal and informal plural 'you', taking 3rd-person plural verbs (*tienen*, *están*).
+
 ### Exercise
+<!-- TODO: Conjugate (llegar) applying standard Rioplatense voseo morphology. -->
 Amigos, ¿a qué hora (llegar) ___ ustedes a la fiesta esta noche?
 
 <!-- SOLUTION

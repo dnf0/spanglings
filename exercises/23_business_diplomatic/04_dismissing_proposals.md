@@ -6,7 +6,12 @@
 ### Context
 English: "The board of directors decided to dismiss the proposal submitted for failing to comply with statutory rules."
 
+### Instructions
+**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
+**Why**: In administrative and institutional Spanish, to formally reject or dismiss an appeal or motion is **the required term** (e.g. *the required term la propuesta / el recurso*).
+
 ### Exercise
+<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
 El comité directivo decidió (desestimar) ___ la propuesta presentada por no cumplir con las normas estatutarias.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "Because the product presented a manufacturing defect, the buyer has the right to demand repair or replacement."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: When a product arrives damaged or defective, consumer legislation gives the right to *the required term la the required term por falta de conformidad mediante la the required term del bien*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 Al presentar un vicio de origen, el comprador tiene derecho a (exigir la subsanación o sustitución del producto / solicitar el reemplazo o reparación del bien) ___ sin gasto alguno.
 
 <!-- SOLUTION

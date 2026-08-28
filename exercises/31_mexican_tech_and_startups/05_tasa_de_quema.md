@@ -6,7 +6,12 @@
 ### Context
 English: "The chief financial officer warned that we must control the monthly burn rate to extend our financial runway until next year."
 
+### Instructions
+**TODO**: Supply the authentic regional business/tech expression described in the context.
+**Why**: In startup financial modeling, "burn rate" is known as **the required term de the required term** or formally **ritmo de consumo de efectivo**, while "runway" is *pista financiera* or *meses de liquidez*. Avoid raw Anglicisms like *burn rate*.
+
 ### Exercise
+<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
 El director de finanzas advirtió que debemos controlar la (tasa de quema) ___ mensual para extender nuestra pista financiera hasta el próximo año.
 
 <!-- SOLUTION

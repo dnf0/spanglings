@@ -6,7 +6,12 @@
 ### Context
 English: "The database query performs significantly better after indexing foreign key columns."
 
+### Instructions
+**TODO**: Replace the informal English anglicism with standard professional Spanish vocabulary.
+**Why**: The non-existent verb *performar* and adjective *performático* are severe Spanglish corruptions. In high-stakes executive and engineering environments, use **rendir** / **desempeñarse** for actions, and **rendimiento** / **desempeño** for metrics.
+
 ### Exercise
+<!-- TODO: Replace the informal English anglicism with standard professional Spanish vocabulary. -->
 La consulta a la base de datos (rinde significativamente mejor / performa significativamente mejor) ___ tras indexar las columnas de clave foránea.
 
 <!-- SOLUTION

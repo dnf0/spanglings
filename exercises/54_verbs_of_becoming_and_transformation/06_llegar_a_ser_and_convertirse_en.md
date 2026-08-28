@@ -6,7 +6,12 @@
 ### Context
 English: "With persistence and leadership, the small startup became a global benchmark in the sector."
 
+### Instructions
+**TODO**: Select and conjugate the appropriate verb of becoming (*ponerse*, *quedarse*, *volverse*, *hacerse*).
+**Why**: *Convertirse en* + noun represents a complete transformation or metamorphosis into a new ontological category (*convertirse en un líder del sector*).
+
 ### Exercise
+<!-- TODO: Select and conjugate the appropriate verb of becoming (ponerse, quedarse, volverse, hacerse). -->
 Con persistencia y liderazgo, la pequeña empresa emergente (se convirtió / se puso) ___ en un referente global del sector.
 
 <!-- SOLUTION

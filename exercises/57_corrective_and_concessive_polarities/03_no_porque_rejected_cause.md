@@ -6,7 +6,12 @@
 ### Context
 English: "Just because a tool is novel does not mean that it should be blindly adopted across the company."
 
+### Instructions
+**TODO**: Conjugate the verb or supply the connector indicating corrective polarity.
+**Why**: *No porque* introduces a rejected causal explanation and strictly governs the SUBJUNCTIVE mood (*No porque the required term fácil significa que debamos hacerlo*).
+
 ### Exercise
+<!-- TODO: Conjugate the verb or supply the connector indicating corrective polarity. -->
 No porque una herramienta (sea / es) ___ novedosa significa que deba adoptarse ciegamente en toda la empresa.
 
 <!-- SOLUTION

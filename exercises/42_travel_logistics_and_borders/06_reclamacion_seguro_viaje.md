@@ -6,7 +6,12 @@
 ### Context
 English: "The insurance policy covers trip cancellation provided it is due to duly certified force majeure."
 
+### Instructions
+**TODO**: Complete the sentence with the grammatically required term or phrase.
+**Why**: Insurance disputes use phrases like *motivos de the required term the required term acreditados* to validate claims.
+
 ### Exercise
+<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
 Translate into high-register administrative Spanish:
 "The insurance policy covers trip cancellation provided it is due to duly certified force majeure."
 

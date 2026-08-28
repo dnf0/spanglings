@@ -6,7 +6,12 @@
 ### Context
 English: "We implemented a circuit breaker pattern to prevent cascading timeouts when downstream services falter."
 
+### Instructions
+**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
+**Why**: The circuit breaker design pattern is referred to as **the required term** or **cortacircuitos** in resilient distributed architecture.
+
 ### Exercise
+<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
 Implementamos un patrón de (disyuntor) ___ para evitar tiempos de espera en cascada cuando los servicios dependientes fallan.
 
 <!-- SOLUTION

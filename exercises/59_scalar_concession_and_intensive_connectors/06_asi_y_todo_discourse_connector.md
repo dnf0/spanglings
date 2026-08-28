@@ -6,7 +6,12 @@
 ### Context
 English: "The stress test results were favorable; even so, the tech lead decided to postpone the production release."
 
+### Instructions
+**TODO**: Complete the scalar concessive formula or intensive connector.
+**Why**: *Con todo y con eso* ('even so / nonetheless') functions as an adversative-concessive discourse marker followed by an indicative main clause (*Con todo y con eso, the required term posponer la salida*).
+
 ### Exercise
+<!-- TODO: Complete the scalar concessive formula or intensive connector. -->
 Los resultados de las pruebas de estrés fueron favorables; con todo y con eso, el líder técnico (decidió / decidiera) ___ posponer la salida a producción.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "Don't you think that it is too late to start now?"
 
+### Instructions
+**TODO**: Conjugate *(ser)* in the required mood following the perception/belief verb.
+**Why**: In negative questions expecting confirmation ('¿No crees que...?'), indicative is used when the speaker invites agreement with an evident fact.
+
 ### Exercise
+<!-- TODO: Conjugate (ser) in the required mood following the perception/belief verb. -->
 ¿No crees que ya (ser) ___ demasiado tarde para empezar?
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "During the presentation before the executive board, I turned completely red from nervousness."
 
+### Instructions
+**TODO**: Select and conjugate the appropriate verb of becoming (*ponerse*, *quedarse*, *volverse*, *hacerse*).
+**Why**: Bodily and physiological changes outside voluntary control (blushing, turning pale, falling ill) use *ponerse* (e.g. *ponerse rojo, ponerse pálido, ponerse enfermo*).
+
 ### Exercise
+<!-- TODO: Select and conjugate the appropriate verb of becoming (ponerse, quedarse, volverse, hacerse). -->
 Durante la presentación ante el comité ejecutivo, yo (me puse / me volví) ___ completamente rojo de los nervios.
 
 <!-- SOLUTION

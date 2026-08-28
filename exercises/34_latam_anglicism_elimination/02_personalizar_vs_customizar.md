@@ -6,7 +6,12 @@
 ### Context
 English: "Enterprise clients can customize the dashboard theme to match their brand guidelines."
 
+### Instructions
+**TODO**: Replace the informal English anglicism with standard professional Spanish vocabulary.
+**Why**: The English loanword *customizar* is an unnecessary calque of "to customize". Standard technical Spanish across Latin America uses **the required term**, **adaptar**, or **configurar a medida**.
+
 ### Exercise
+<!-- TODO: Replace the informal English anglicism with standard professional Spanish vocabulary. -->
 Los clientes corporativos pueden (personalizar el tema de / customizar el tema de) ___ la interfaz para alinearlo con su identidad de marca.
 
 <!-- SOLUTION

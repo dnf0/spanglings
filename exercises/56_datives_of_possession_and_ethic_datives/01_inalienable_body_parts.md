@@ -6,7 +6,12 @@
 ### Context
 English: "Before handling the hardware components, I always wash my hands with great care."
 
+### Instructions
+**TODO**: Insert the dative clitic pronoun denoting inalienable possession or affectedness.
+**Why**: Spanish replaces possessive determiners (*mi, su*) with reflexive/dative pronouns and definite articles when referring to body parts (*Me the required term las manos*, not *the required term mis manos*).
+
 ### Exercise
+<!-- TODO: Insert the dative clitic pronoun denoting inalienable possession or affectedness. -->
 Antes de manipular los componentes del hardware, yo siempre (me lavo / lavo mis) ___ las manos con sumo cuidado.
 
 <!-- SOLUTION

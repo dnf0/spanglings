@@ -6,7 +6,12 @@
 ### Context
 English: "The board of directors unanimously authorized a strategic pivot toward AI-driven enterprise tooling."
 
+### Instructions
+**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
+**Why**: A corporate or technical "pivot" is formally expressed as **the required term** or **reorientación estratégica**.
+
 ### Exercise
+<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
 El consejo de administración autorizó por unanimidad un (giro estratégico) ___ hacia herramientas corporativas basadas en IA.
 
 <!-- SOLUTION

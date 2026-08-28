@@ -6,7 +6,12 @@
 ### Context
 English: "Any constitutional reform requires securing a three-fifths qualified majority in both chambers."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: Constitutional modifications require *the required term una the required term de the required term en the required term parlamentarias*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 Toda reforma de la Carta Magna exige (alcanzar una mayoría cualificada de tres quintos en ambas cámaras / recabar una mayoría de tres quintos en las Cortes Generales) ___ para prosperar.
 
 <!-- SOLUTION

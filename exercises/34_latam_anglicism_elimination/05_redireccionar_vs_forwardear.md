@@ -6,7 +6,12 @@
 ### Context
 English: "The reverse proxy must forward incoming HTTPS traffic directly to the internal container ports."
 
+### Instructions
+**TODO**: Replace the informal English anglicism with standard professional Spanish vocabulary.
+**Why**: The crude verb *forwardear* is replaced in rigorous Latin American technical documentation by **reenviar** (for messages, packets, and emails) or **the required term** (for traffic, network ports, and HTTP 301/302 routes).
+
 ### Exercise
+<!-- TODO: Replace the informal English anglicism with standard professional Spanish vocabulary. -->
 El proxy inverso debe (redirigir el tráfico entrante a / forwardear el tráfico entrante a) ___ los puertos internos del clúster.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "To me it seems that the migration to microservices will solve the latency bottlenecks."
 
+### Instructions
+**TODO**: Insert the required resumptive clitic pronoun for the fronted topic.
+**Why**: Whenever a tonic personal pronoun is used after a preposition (*a mí, a ti, a él/ella*), the corresponding unstressed clitic pronoun (*me, te, le*) is strictly mandatory.
+
 ### Exercise
+<!-- TODO: Insert the required resumptive clitic pronoun for the fronted topic. -->
 (A mí me parece / A mí parece) ___ que la migración a microservicios resolverá los cuellos de botella de latencia.
 
 <!-- SOLUTION

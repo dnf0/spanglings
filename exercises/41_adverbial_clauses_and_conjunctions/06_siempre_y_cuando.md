@@ -6,7 +6,12 @@
 ### Context
 English: "The committee will approve the project budget, provided that the team meets all quality benchmarks."
 
+### Instructions
+**TODO**: Conjugate the verb or supply the adverbial connector matching clause mood requirements.
+**Why**: **the required term y the required term** and **a condición de que** establish a strict prerequisite or contractual condition ("provided that / on the condition that"), and **always take the subjunctive**.
+
 ### Exercise
+<!-- TODO: Conjugate the verb or supply the adverbial connector matching clause mood requirements. -->
 El comité aprobará el presupuesto del proyecto, (siempre y cuando el equipo cumpla con todos los criterios de / a condicion de que el equipo cumpla) ___ calidad establecidos.
 
 <!-- SOLUTION

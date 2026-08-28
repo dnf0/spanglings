@@ -243,26 +243,58 @@ fn draw_left_pane(frame: &mut Frame, app: &App, area: Rect) {
 
     // Extract markdown description from in-memory raw_content
     if !ex.raw_content.is_empty() {
+        let mut in_context_section = false;
+        let mut in_instructions_section = false;
         let mut in_exercise_section = false;
         let mut context_lines = Vec::new();
+        let mut instructions_lines = Vec::new();
         let mut exercise_lines = Vec::new();
 
         for line in ex.raw_content.lines() {
-            if line.starts_with("<!--") {
-                continue;
-            }
-            if line.starts_with("### Context") || line.starts_with("> **Grammar Rule**") {
-                context_lines.push(line);
-            } else if line.starts_with("### Exercise") {
-                in_exercise_section = true;
-            } else if in_exercise_section {
-                if line.starts_with("<!--") {
+            let trimmed = line.trim();
+            if trimmed.starts_with("<!--") {
+                if in_exercise_section {
+                    if trimmed.starts_with("<!-- TODO") || exercise_lines.is_empty() {
+                        continue;
+                    }
                     break;
                 }
-                if !line.trim().is_empty() {
+                continue;
+            }
+
+            if trimmed.starts_with("### Instructions") {
+                in_instructions_section = true;
+                in_exercise_section = false;
+                in_context_section = false;
+            } else if trimmed.starts_with("### Exercise") {
+                in_exercise_section = true;
+                in_instructions_section = false;
+                in_context_section = false;
+            } else if trimmed.starts_with("### Context")
+                || trimmed.starts_with("> **Grammar Rule**")
+            {
+                in_context_section = true;
+                in_instructions_section = false;
+                in_exercise_section = false;
+                context_lines.push(line);
+            } else if in_instructions_section {
+                if trimmed.starts_with('#') {
+                    in_instructions_section = false;
+                } else if !trimmed.is_empty() {
+                    instructions_lines.push(line);
+                }
+            } else if in_exercise_section {
+                if trimmed.starts_with('#') {
+                    break;
+                }
+                if !trimmed.is_empty() {
                     exercise_lines.push(line);
                 }
-            } else if line.starts_with('>') || line.starts_with("English:") {
+            } else if (in_context_section
+                || trimmed.starts_with('>')
+                || trimmed.starts_with("English:"))
+                && !trimmed.is_empty()
+            {
                 context_lines.push(line);
             }
         }
@@ -279,6 +311,51 @@ fn draw_left_pane(frame: &mut Frame, app: &App, area: Rect) {
                     format!("  {}", cl),
                     Style::default().fg(Color::Gray),
                 )));
+            }
+            lines.push(Line::from(""));
+        }
+
+        if !instructions_lines.is_empty() {
+            lines.push(Line::from(Span::styled(
+                "Instructions (TODO & Why):",
+                Style::default()
+                    .fg(Color::Cyan)
+                    .add_modifier(Modifier::UNDERLINED),
+            )));
+            for il in instructions_lines {
+                let trimmed = il.trim();
+                if let Some(rest) = trimmed.strip_prefix("**TODO**:") {
+                    lines.push(Line::from(vec![
+                        Span::styled(
+                            "  TODO:",
+                            Style::default()
+                                .fg(Color::Yellow)
+                                .add_modifier(Modifier::BOLD),
+                        ),
+                        Span::styled(
+                            format!(" {}", rest.trim()),
+                            Style::default().fg(Color::White),
+                        ),
+                    ]));
+                } else if let Some(rest) = trimmed.strip_prefix("**Why**:") {
+                    lines.push(Line::from(vec![
+                        Span::styled(
+                            "  Why: ",
+                            Style::default()
+                                .fg(Color::Cyan)
+                                .add_modifier(Modifier::BOLD),
+                        ),
+                        Span::styled(
+                            format!(" {}", rest.trim()),
+                            Style::default().fg(Color::White),
+                        ),
+                    ]));
+                } else {
+                    lines.push(Line::from(Span::styled(
+                        format!("  {}", trimmed),
+                        Style::default().fg(Color::White),
+                    )));
+                }
             }
             lines.push(Line::from(""));
         }

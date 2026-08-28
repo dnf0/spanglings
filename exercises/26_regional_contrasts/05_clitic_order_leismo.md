@@ -6,7 +6,12 @@
 ### Context
 English: "(To an Argentine colleague) Sit down here, please; we need to talk."
 
+### Instructions
+**TODO**: Conjugate *(Sentarse + vos)* applying standard Rioplatense voseo morphology.
+**Why**: In reflexive commands under *voseo*, the ending is formed from the imperative stem plus *te*: *the required term* (siéntate), *parate* (párate), *ponete* (ponte). Notice that diphthongization is absent.
+
 ### Exercise
+<!-- TODO: Conjugate (Sentarse + vos) applying standard Rioplatense voseo morphology. -->
 (Sentarse + vos) ___, por favor; tenemos que hablar de un asunto importante.
 
 <!-- SOLUTION

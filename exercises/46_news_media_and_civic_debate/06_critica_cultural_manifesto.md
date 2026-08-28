@@ -6,7 +6,12 @@
 ### Context
 English: "The manifesto questions not so much the form as the commodification of contemporary aesthetic expressions."
 
+### Instructions
+**TODO**: Complete the sentence with the grammatically required term or phrase.
+**Why**: Literary cultural critique often deploys correlative structures: *no the required term... the required term / lejos de... reivindica*.
+
 ### Exercise
+<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
 Translate into high-register cultural critique Spanish:
 "The manifesto questions not so much the form as the commodification of contemporary aesthetic expressions."
 

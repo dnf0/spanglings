@@ -6,7 +6,12 @@
 ### Context
 English: "The infrastructure team will resolve the technical incident today, perhaps before noon."
 
+### Instructions
+**TODO**: Conjugate the verb in the mood dictated by the epistemic adverb.
+**Why**: When *quizás*, *tal vez*, or *acaso* appear AFTER the verb, the verb MUST be in the INDICATIVE mood (*Vendrá mañana, quizás*).
+
 ### Exercise
+<!-- TODO: Conjugate the verb in the mood dictated by the epistemic adverb. -->
 El equipo de infraestructura (resolverá / resuelva) ___ la incidencia técnica hoy mismo, quizás antes del mediodía.
 
 <!-- SOLUTION

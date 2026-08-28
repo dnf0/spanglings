@@ -6,7 +6,12 @@
 ### Context
 English: "Far from constituting an insurmountable obstacle, the green transition presents a strategic industrial opportunity."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: Journalistic editorials deploy fronted participial or adverbial locutions like *the required term de the required term un the required term*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 (Lejos de constituir un obstáculo insalvable / Distante de suponer un freno insuperable) ___, la transición ecológica se erige como una oportunidad industrial sin parangón.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "The general practitioner gave him a referral so that he could book an appointment with the cardiologist for a routine checkup."
 
+### Instructions
+**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
+**Why**: Booking a specialist appointment in the public or private health system is **the required term previa con el the required term** (or *sacar turno con el the required term* in the Southern Cone). Routine checkups are **revisiones periódicas / chequeos preventivos**.
+
 ### Exercise
+<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
 El médico de cabecera le entregó un volante de derivación para que (pudiera pedir cita con el especialista y realizarse una revisión / pudiera sacar turno) ___ preventiva.
 
 <!-- SOLUTION

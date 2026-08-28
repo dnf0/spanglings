@@ -6,7 +6,12 @@
 ### Context
 English: "This technical report I wrote over the weekend for the board of directors."
 
+### Instructions
+**TODO**: Insert the required resumptive clitic pronoun for the fronted topic.
+**Why**: When a specific, definite inanimate direct object is placed before the verb for topical emphasis, standard Spanish requires clitic resumption with *lo/la/los/las*.
+
 ### Exercise
+<!-- TODO: Insert the required resumptive clitic pronoun for the fronted topic. -->
 (Este informe técnico lo redacté / Este informe técnico redacté) ___ durante el fin de semana para la junta directiva.
 
 <!-- SOLUTION

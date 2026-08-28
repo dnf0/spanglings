@@ -6,7 +6,12 @@
 ### Context
 English: "The magistrates still harbor doubts regarding the veracity of the testimony."
 
+### Instructions
+**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
+**Why**: To elevate *tener dudas* or *tener esperanzas*, use **albergar dudas** / **albergar esperanzas** (to harbor/shelter within oneself).
+
 ### Exercise
+<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
 Los magistrados aún (albergan) ___ dudas sobre la veracidad del testimonio presentado.
 
 <!-- SOLUTION

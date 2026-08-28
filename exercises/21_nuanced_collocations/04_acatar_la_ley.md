@@ -6,7 +6,12 @@
 ### Context
 English: "All citizens must comply with and respect judicial decisions."
 
+### Instructions
+**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
+**Why**: 'the required term' is the formal legal/institutional collocation for complying with and respecting laws, court rulings, and orders.
+
 ### Exercise
+<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
 Todos los ciudadanos tienen el deber de ___ las resoluciones judiciales.
 
 <!-- SOLUTION

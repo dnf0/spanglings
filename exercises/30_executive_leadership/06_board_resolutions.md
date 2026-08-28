@@ -6,7 +6,12 @@
 ### Context
 English: "The board of directors resolved to unanimously approve the corporate restructuring proposal."
 
+### Instructions
+**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
+**Why**: "To approve unanimously" in parliamentary and corporate board protocol is **the required term por the required term**.
+
 ### Exercise
+<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
 El consejo directivo acordó (aprobar por unanimidad) ___ la propuesta de reestructuración corporativa.
 
 <!-- SOLUTION

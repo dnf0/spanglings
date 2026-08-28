@@ -6,7 +6,12 @@
 ### Context
 English: "The persistence of core inflationary pressures forced the central bank to accelerate monetary tightening."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: Economic reporting uses precise terms like *endurecimiento de la the required term* and *the required term the required term*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 La persistencia de las (presiones inflacionarias subyacentes obligó al banco emisor a endurecer la política monetaria / tensiones inflacionistas forzó el endurecimiento monetario) ___ a lo largo del trimestre.
 
 <!-- SOLUTION

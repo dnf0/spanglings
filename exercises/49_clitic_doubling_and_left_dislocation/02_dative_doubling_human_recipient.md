@@ -6,7 +6,12 @@
 ### Context
 English: "To the client we delivered the contract renewal proposal before noon."
 
+### Instructions
+**TODO**: Insert the required resumptive clitic pronoun for the fronted topic.
+**Why**: When an indirect object phrase (*A la the required term*) is placed before the verb, the dative clitic *le/les* is mandatory.
+
 ### Exercise
+<!-- TODO: Insert the required resumptive clitic pronoun for the fronted topic. -->
 (A la clienta le entregamos / A la clienta entregamos) ___ la propuesta de renovación del contrato antes del mediodía.
 
 <!-- SOLUTION

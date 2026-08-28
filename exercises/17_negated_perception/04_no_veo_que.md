@@ -6,7 +6,12 @@
 ### Context
 English: "I do not see that there are any viable alternatives."
 
+### Instructions
+**TODO**: Provide the present subjunctive impersonal form of *(haber)*.
+**Why**: Negation of verbs expressing direct perception (*no ver que*, *no notar que*) casts doubt on the existence or reality of the perceived event, triggering the subjunctive mood in the subordinate clause.
+
 ### Exercise
+<!-- TODO: Supply the impersonal present subjunctive of (haber) after negated perception verb -->
 No veo que (haber) ___ alternativas viables en este momento.
 
 <!-- SOLUTION

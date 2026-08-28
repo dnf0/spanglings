@@ -6,7 +6,12 @@
 ### Context
 English: "The ministry will undertake a structural reform of the healthcare system next year."
 
+### Instructions
+**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
+**Why**: At C1, replace light verbs like *hacer* or *empezar* with elevated, precise verbs. To undertake an ambitious endeavor or major project, use **the required term** (e.g. *the required term una reforma estructural*).
+
 ### Exercise
+<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
 El ministerio va a (acometer) ___ una reforma estructural del sistema sanitario el próximo año.
 
 <!-- SOLUTION

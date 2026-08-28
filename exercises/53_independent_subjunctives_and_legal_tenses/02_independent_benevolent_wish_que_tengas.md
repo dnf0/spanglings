@@ -6,7 +6,12 @@
 ### Context
 English: "May you have great success in the presentation before the Silicon Valley investor committee!"
 
+### Instructions
+**TODO**: Conjugate *(Que)* in the independent optative or formal future subjunctive.
+**Why**: Independent expressions of desire and goodwill omit the main verb (*Deseo que...*) and begin directly with *¡Que + subjuntivo!*.
+
 ### Exercise
+<!-- TODO: Conjugate (Que) in the independent optative or formal future subjunctive. -->
 ¡(Que tengas / Que tienes) ___ mucho éxito en la presentación ante el comité de inversores de Silicon Valley!
 
 <!-- SOLUTION

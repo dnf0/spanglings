@@ -6,7 +6,12 @@
 ### Context
 English: "Despite the obstacles, they still harbor hopes of reaching an agreement."
 
+### Instructions
+**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
+**Why**: 'Albergar' collocates with abstract feelings/expectations: 'albergar esperanzas', 'albergar dudas'.
+
 ### Exercise
+<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
 A pesar de las dificultades, todavía (albergar) ___ esperanzas de éxito.
 
 <!-- SOLUTION

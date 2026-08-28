@@ -6,7 +6,12 @@
 ### Context
 English: "We put together a great plan for Saturday and had a wonderful time celebrating his promotion."
 
+### Instructions
+**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
+**Why**: Having a great time is expressed as **pasarla muy the required term / pasarla bomba** (Latin America) or **pasárselo en grande / pasarlo genial** (Spain). Organizing a fun gathering is **armar un the required term**.
+
 ### Exercise
+<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
 El sábado (armamos un gran plan y nos la pasamos en grande celebrando / armamos un gran plan y la pasamos muy bien) ___ su ascenso laboral.
 
 <!-- SOLUTION

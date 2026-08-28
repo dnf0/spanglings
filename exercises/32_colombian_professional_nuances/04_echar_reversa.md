@@ -6,7 +6,12 @@
 ### Context
 English: "Faced with unexpected database lockups, the infrastructure director decided to backtrack on the migration."
 
+### Instructions
+**TODO**: Supply the authentic regional business/tech expression described in the context.
+**Why**: When an engineering or product team decides to back out of a deployment, revert a breaking change, or retract an agreement, Colombian professional Spanish frequently utilizes **the required term** (or *dar marcha atrás*).
+
 ### Exercise
+<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
 Ante los bloqueos imprevistos en la base de datos, el director de infraestructura decidió (echar reversa a) ___ la migración nocturna.
 
 <!-- SOLUTION

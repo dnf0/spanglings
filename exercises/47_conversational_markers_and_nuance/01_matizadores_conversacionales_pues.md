@@ -6,7 +6,12 @@
 ### Context
 English: "Well, let's see, to be completely frank, I'm not totally convinced by that proposal."
 
+### Instructions
+**TODO**: Insert the authentic pragmatic discourse marker for conversational hesitation and softening.
+**Why**: In spoken Spanish, introductory mitigating particles soften disagreement to maintain conversational rapport.
+
 ### Exercise
+<!-- TODO: Insert the authentic pragmatic discourse marker for conversational softening -->
 (Bueno, a ver, siendo totalmente francos / Pues, mira, para ser sinceros) ___, esa propuesta no termina de convencerme del todo.
 
 <!-- SOLUTION

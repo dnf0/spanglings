@@ -6,7 +6,12 @@
 ### Context
 English: "After hiking all morning, the ravenous mountaineers ate up the entire stew in minutes."
 
+### Instructions
+**TODO**: Conjugate *(se)* incorporating middle voice or aspectual pronominal marking.
+**Why**: Non-reflexive **comer** is atelic/general (*como fruta todos los días*). The pronominal "dative of totality" **comerse** adds telicity, indicating the entire discrete portion was completely consumed with appetite (*se comió todo el pastel*).
+
 ### Exercise
+<!-- TODO: Conjugate (se) incorporating middle voice or aspectual pronominal marking. -->
 Tras caminar toda la mañana, los montañistas hambrientos (se comieron todo el guiso en cuestión de / se comieron todo el guisado) ___ pocos minutos.
 
 <!-- SOLUTION

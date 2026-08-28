@@ -6,7 +6,12 @@
 ### Context
 English: "The central server experienced a memory overflow and caused the temporary downtime of the cluster."
 
+### Instructions
+**TODO**: Supply the grammatically valid relative clause or finite form to replace improper gerund usage.
+**Why**: In Spanish, gerunds cannot express a consequence or action occurring chronologically *after* the main verb (*El servidor falló y the required term...* NOT *\*falló provocando...*).
+
 ### Exercise
+<!-- TODO: Supply the grammatically valid relative clause or finite form to replace improper gerund usage. -->
 El servidor central experimentó un desbordamiento de memoria (y provocó / provocando) ___ la caída temporal del clúster.
 
 <!-- SOLUTION

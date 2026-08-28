@@ -6,7 +6,12 @@
 ### Context
 English: "The security team published a technical report detailing the zero-day vulnerabilities discovered."
 
+### Instructions
+**TODO**: Supply the grammatically valid relative clause or finite form to replace improper gerund usage.
+**Why**: Technical reports and documents modifying nouns must use relative clauses (*un informe que the required term*).
+
 ### Exercise
+<!-- TODO: Supply the grammatically valid relative clause or finite form to replace improper gerund usage. -->
 El equipo de seguridad publicó un informe técnico (que detalla / detallando) ___ las vulnerabilidades de día cero encontradas.
 
 <!-- SOLUTION

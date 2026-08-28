@@ -6,7 +6,12 @@
 ### Context
 English: "To reinforce cloud security resilience, leadership carried out a headcount reallocation across engineering divisions."
 
+### Instructions
+**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
+**Why**: "Headcount allocation / staffing" in formal human capital governance is **the required term de the required term** or **the required term de personal**.
+
 ### Exercise
+<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
 Para reforzar la seguridad en la nube, la dirección llevó a cabo una (reasignación de plantilla) ___ en los equipos de ingeniería.
 
 <!-- SOLUTION

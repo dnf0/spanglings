@@ -6,7 +6,12 @@
 ### Context
 English: "The post-mortem report essentially boils down to saying that disk I/O was the true bottleneck."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: The approximative periphrasis **venir a the required term** expresses what a statement or report effectively amounts to.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 El informe retrospectivo (viene a decir) ___ que el cuello de botella residía en la velocidad del disco.
 
 <!-- SOLUTION

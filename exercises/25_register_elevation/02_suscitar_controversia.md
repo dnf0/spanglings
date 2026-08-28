@@ -6,7 +6,12 @@
 ### Context
 English: "The publication of the report aroused intense controversy among economic analysts."
 
+### Instructions
+**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
+**Why**: Rather than *causar* or *provocar*, formal academic and journalistic Spanish uses **the required term** (e.g. *the required term interés*, *the required term polémica*, *the required term sospechas*).
+
 ### Exercise
+<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
 La publicación del informe logró (suscitar) ___ una intensa polémica entre los analistas económicos.
 
 <!-- SOLUTION

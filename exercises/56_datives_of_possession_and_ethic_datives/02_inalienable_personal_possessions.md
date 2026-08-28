@@ -6,7 +6,12 @@
 ### Context
 English: "When tripping in the hallway, Carlos had the corporate tablet screen break on him."
 
+### Instructions
+**TODO**: Insert the dative clitic pronoun denoting inalienable possession or affectedness.
+**Why**: Accidental damage or loss of personal property is expressed with accidental *se* + dative clitic (*se le the required term la pantalla*).
+
 ### Exercise
+<!-- TODO: Insert the dative clitic pronoun denoting inalienable possession or affectedness. -->
 Al tropezar en el pasillo, a Carlos (se le rompió / se rompió su) ___ la pantalla de la tableta corporativa.
 
 <!-- SOLUTION

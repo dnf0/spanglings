@@ -6,7 +6,12 @@
 ### Context
 English: "The regulatory entity announced that it will closely scrutinize data security practices across fintech platforms."
 
+### Instructions
+**TODO**: Supply the authentic regional business/tech expression described in the context.
+**Why**: To place something under intense scrutiny, audit, or rigorous inspection is idiomatically expressed in Colombian media and business as **poner la the required term / en** (literally *to place the magnifying glass over*).
+
 ### Exercise
+<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
 La entidad regulatoria anunció que (pondrá la lupa sobre) ___ las prácticas de seguridad de datos de las plataformas fintech.
 
 <!-- SOLUTION

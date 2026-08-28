@@ -6,7 +6,12 @@
 ### Context
 English: "The pharmacist recommended an over-the-counter medication and advised reading the leaflet for possible side effects."
 
+### Instructions
+**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
+**Why**: Over-the-counter medicine is **the required term de the required term**. The patient information leaflet inside the box is **el the required term** (Spain) / **el instructivo** (LatAm), and unintended reactions are **efectos secundarios**.
+
 ### Exercise
+<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
 El farmacéutico recomendó un (medicamento de venta libre y aconsejó leer el prospecto / fármaco de venta libre) ___ para verificar los posibles efectos secundarios.
 
 <!-- SOLUTION

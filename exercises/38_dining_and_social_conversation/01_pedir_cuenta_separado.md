@@ -6,7 +6,12 @@
 ### Context
 English: "When the waiter brought dessert, we asked him if we could pay the bill separately."
 
+### Instructions
+**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
+**Why**: In restaurants and cafés across the Spanish-speaking world, asking to split the check individually is **the required term la the required term por the required term** (or *the required term a medias / the required term por the required term*). Asking for dressings on the side is **la salsa aparte**.
+
 ### Exercise
+<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
 Cuando el camarero trajo el postre, le preguntamos si podíamos (pedir la cuenta por separado y pagar con tarjeta / pagar por separado) ___.
 
 <!-- SOLUTION

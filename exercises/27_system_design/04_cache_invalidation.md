@@ -6,7 +6,12 @@
 ### Context
 English: "Carefully coordinating cache invalidation across edge nodes prevents stale reads."
 
+### Instructions
+**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
+**Why**: "the required term invalidation" translates directly to **the required term de the required term**, maintaining orthographic accent marks on both nouns.
+
 ### Exercise
+<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
 Coordinar adecuadamente la (invalidación de caché) ___ en los nodos perimetrales evita lecturas obsoletas.
 
 <!-- SOLUTION

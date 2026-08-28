@@ -6,7 +6,12 @@
 ### Context
 English: "The SaaS vendor agrees to hold the enterprise client harmless against third-party intellectual property infringement claims."
 
+### Instructions
+**TODO**: Complete the contractual SLA / incident-response phrasing with the correct business term.
+**Why**: The legal obligation to hold a client harmless against third-party intellectual property or security infringement claims is expressed as **the required term a** (or *obligación de indemnidad*).
+
 ### Exercise
+<!-- TODO: Complete the contractual SLA / incident-response phrasing with the correct business term. -->
 El proveedor de software se compromete a (mantener indemne al cliente frente a / mantener indemne al cliente frente a) ___ cualquier reclamación por infracción de propiedad intelectual.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "As long as the regulatory investigation remains ongoing, all public statements must be reviewed by legal counsel."
 
+### Instructions
+**TODO**: Conjugate *(En)* or supply the adverbial connector matching clause mood requirements.
+**Why**: **En the required term que** and **mientras** introduce conditions of duration: "as long as / provided that". When referencing an open or future condition, they require the **present subjunctive** (*en the required term que persista la incertidumbre*).
+
 ### Exercise
+<!-- TODO: Conjugate (En) or supply the adverbial connector matching clause mood requirements. -->
 (En tanto que continúe abierta la investigación regulatoria, todas las declaraciones / Mientras continue abierta la investigacion) ___ deberán ser aprobadas por el departamento legal.
 
 <!-- SOLUTION

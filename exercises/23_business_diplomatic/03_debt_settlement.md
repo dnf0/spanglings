@@ -6,7 +6,12 @@
 ### Context
 English: "The company committed to settle the outstanding debt before the close of the fiscal quarter."
 
+### Instructions
+**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
+**Why**: In commercial and financial contracts, to settle or balance an outstanding account or debt is **the required term la deuda** (or *liquidar la cuenta*).
+
 ### Exercise
+<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
 La empresa se comprometió a (saldar) ___ la deuda pendiente antes del cierre del trimestre fiscal.
 
 <!-- SOLUTION

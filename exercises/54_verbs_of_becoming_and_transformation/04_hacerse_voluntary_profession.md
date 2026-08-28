@@ -6,7 +6,12 @@
 ### Context
 English: "After several years of intensive technical training, she became a cybersecurity specialist."
 
+### Instructions
+**TODO**: Select and conjugate the appropriate verb of becoming (*ponerse*, *quedarse*, *volverse*, *hacerse*).
+**Why**: *Hacerse* + noun/adjective denotes an intentional transformation resulting from conscious effort, time, career evolution, or ideological alignment (*hacerse médico, hacerse vegetariano*).
+
 ### Exercise
+<!-- TODO: Select and conjugate the appropriate verb of becoming (ponerse, quedarse, volverse, hacerse). -->
 Tras varios años de formación técnica intensiva, ella (se hizo / se puso) ___ especialista en ciberseguridad.
 
 <!-- SOLUTION

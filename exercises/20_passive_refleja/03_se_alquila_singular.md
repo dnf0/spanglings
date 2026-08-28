@@ -6,7 +6,12 @@
 ### Context
 English: "Room for rent in the center of Madrid."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of *(the designated verb)* to complete the sentence.
+**Why**: With a singular patient subject, the verb is 3rd person singular.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of (the designated verb) to complete the sentence. -->
 Se (alquilar) ___ habitación luminosa en el centro de Madrid.
 
 <!-- SOLUTION

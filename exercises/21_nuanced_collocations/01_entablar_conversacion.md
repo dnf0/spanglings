@@ -6,7 +6,12 @@
 ### Context
 English: "He tried to strike up a conversation with the ambassador."
 
+### Instructions
+**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
+**Why**: 'the required term' is the formal collocation for starting/striking up a conversation, dialogue, or friendship.
+
 ### Exercise
+<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
 Intentó ___ conversación con el diplomático durante la recepción.
 
 <!-- SOLUTION

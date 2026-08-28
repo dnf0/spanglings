@@ -6,7 +6,12 @@
 ### Context
 English: "Before starting my remote work day, I always take the dog out for a walk in the park."
 
+### Instructions
+**TODO**: Apply Differential Object Marking (personal *a*) where syntactically required.
+**Why**: Domestic pets and companion animals treated with emotional affection take personal 'a' (*a + el = al*): *Pasear al the required term*.
+
 ### Exercise
+<!-- TODO: Apply Differential Object Marking (personal a) where syntactically required. -->
 Antes de iniciar mi jornada de trabajo remoto, siempre saco a pasear (al perro / el perro) ___ por el parque.
 
 <!-- SOLUTION

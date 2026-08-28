@@ -7,7 +7,12 @@
 Simple proposition: 'La falta de diálogo daña las instituciones democráticas.'
 Transform into an elevated cleft focus sentence: 'Es en...' (la erosión del diálogo constructivo donde reside la mayor vulnerabilidad institucional / el debilitamiento de los consensos donde radica el peligro).
 
+### Instructions
+**TODO**: Complete the sentence with the grammatically required term or phrase.
+**Why**: Cleft focus for societal critique: *Es en la the required term del consenso the required term donde radica la the required term amenaza democrática*.
+
 ### Exercise
+<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
 Es en ___ de nuestras democracias contemporáneas.
 
 <!-- SOLUTION

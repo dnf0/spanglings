@@ -6,7 +6,12 @@
 ### Context
 English: "Out of the question! I won't accept an unfair contract that removes all our intellectual property rights."
 
+### Instructions
+**TODO**: Insert the authentic emphatic conversational idiom of categorical rejection.
+**Why**: Categorical refusal expressions reject outright unacceptable proposals with assertive exclamation marks and negative polarity.
+
 ### Exercise
+<!-- TODO: Insert the authentic emphatic conversational idiom of categorical refusal -->
 (¡Ni hablar! No pienso aceptar / ¡Ni de broma voy a firmar) ___ un contrato leonino que suprima todos nuestros derechos de autor.
 
 <!-- SOLUTION

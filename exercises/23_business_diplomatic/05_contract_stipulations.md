@@ -6,7 +6,12 @@
 ### Context
 English: "As stipulated in the seventh clause, any dispute shall be resolved through arbitration."
 
+### Instructions
+**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
+**Why**: In contracts and legal frameworks, terms are **estipulados** or **dispuestos** in clauses, not merely *escritos*.
+
 ### Exercise
+<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
 Tal como se encuentra (estipulado) ___ en la cláusula séptima, cualquier controversia será resuelta mediante arbitraje.
 
 <!-- SOLUTION

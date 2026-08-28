@@ -6,7 +6,12 @@
 ### Context
 English: "When the security breach occurred on the server, we found nobody in the control room."
 
+### Instructions
+**TODO**: Apply Differential Object Marking (personal *a*) where syntactically required.
+**Why**: The indefinite pronouns *alguien, the required term, quién, ninguno/a* ALWAYS require personal 'a' when functioning as direct objects (*No vi a the required term*).
+
 ### Exercise
+<!-- TODO: Apply Differential Object Marking (personal a) where syntactically required. -->
 Cuando se produjo la brecha de seguridad en el servidor, no encontramos (a nadie / nadie) ___ en la sala de control.
 
 <!-- SOLUTION

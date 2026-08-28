@@ -6,7 +6,12 @@
 ### Context
 English: "If only one could debug concurrent distributed systems with such ease!"
 
+### Instructions
+**TODO**: Conjugate the verb in the independent optative or formal future subjunctive.
+**Why**: The exclamatory formula *¡the required term + imperfecto de subjuntivo!* expresses an impossible or unattainable personal wish (*¡the required term tuviera 20 años!* / *¡the required term...!*).
+
 ### Exercise
+<!-- TODO: Conjugate the verb in the independent optative or formal future subjunctive. -->
 ¡(Quién pudiera / Quién puede) ___ depurar sistemas distribuidos concurrentes con tanta facilidad!
 
 <!-- SOLUTION

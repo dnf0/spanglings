@@ -6,7 +6,12 @@
 ### Context
 English: "I will be out of the office for one hour because I have to run an administrative errand at the tax agency."
 
+### Instructions
+**TODO**: Supply the authentic regional business/tech expression described in the context.
+**Why**: In Colombian and Andean business/administrative contexts, taking care of an administrative task, banking procedure, or legal errand outside the office is universally described with the high-frequency idiom **the required term una the required term** (or *the required term vueltas*).
+
 ### Exercise
+<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
 Estaré fuera de la oficina durante una hora porque tengo que (hacer una vuelta) ___ en la entidad tributaria.
 
 <!-- SOLUTION

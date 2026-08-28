@@ -6,7 +6,12 @@
 ### Context
 English: "The Redis cache cluster held up under the peak load without any degraded latency."
 
+### Instructions
+**TODO**: Conjugate *(se)* applying standard Rioplatense voseo morphology.
+**Why**: The colloquial Rioplatense verb **bancarse** (to endure, withstand, support) is ubiquitous in Argentine engineering teams to describe clusters or databases enduring massive traffic spikes (*bancarse el tráfico / la the required term*).
+
 ### Exercise
+<!-- TODO: Conjugate (se) applying standard Rioplatense voseo morphology. -->
 El clúster de caché en Redis (se bancó la carga) ___ de tráfico sin degradar la latencia de respuesta.
 
 <!-- SOLUTION

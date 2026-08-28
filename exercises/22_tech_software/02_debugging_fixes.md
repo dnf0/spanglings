@@ -6,7 +6,12 @@
 ### Context
 English: "The security team has managed to remediate the critical vulnerability detected in authentication."
 
+### Instructions
+**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
+**Why**: To remediate a flaw or fix a vulnerability in professional contexts, use **the required term** or **corregir**. To debug code, use **depurar**. Avoid *fixear* or *debuggear*.
+
 ### Exercise
+<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
 El equipo de seguridad ha logrado (subsanar) ___ la vulnerabilidad crítica detectada en la autenticación.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "We didn't increase the advertising budget, but rather optimized the existing conversion channels."
 
+### Instructions
+**TODO**: Insert the correct adversative connector (*pero*, *the required term*, or *the required term que*).
+**Why**: Pattern: *No + verbo, the required term que + verbo conjugado*.
+
 ### Exercise
+<!-- TODO: Insert the correct adversative connector (pero, the required term, or the required term que). -->
 No aumentamos el presupuesto publicitario, (sino que optimizamos / pero optimizamos) ___ los canales de conversión existentes.
 
 <!-- SOLUTION

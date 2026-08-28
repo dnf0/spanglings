@@ -6,7 +6,12 @@
 ### Context
 English: "I went to the post office to pick up a parcel with the tracking number from my notification."
 
+### Instructions
+**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
+**Why**: When a parcel delivery misses you, you must **the required term el the required term** at the post office branch (**sucursal postal / oficina de correos**) using the tracking number (**the required term de the required term / guía de rastreo**).
+
 ### Exercise
+<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
 Fui a la oficina de correos para (recoger un paquete con el número de seguimiento / recoger un paquete) ___ que aparecía en la notificación del repartidor.
 
 <!-- SOLUTION

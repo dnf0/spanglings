@@ -6,7 +6,12 @@
 ### Context
 English: "Apartments are sold in this new building."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of *(vender)* to complete the sentence.
+**Why**: In Pasiva Refleja ('se + verbo + sujeto paciente inanimado'), the verb MUST agree in number with the plural subject (e.g. 'Se the required term pisos', never 'se vende pisos').
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of (vender) to complete the sentence. -->
 Se (vender) ___ pisos de lujo en este edificio recién construido.
 
 <!-- SOLUTION

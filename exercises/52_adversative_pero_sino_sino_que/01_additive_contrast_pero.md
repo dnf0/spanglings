@@ -6,7 +6,12 @@
 ### Context
 English: "The new compression algorithm is mathematically complex, but it offers unmatched decompression speed."
 
+### Instructions
+**TODO**: Insert the correct adversative connector (*pero*, *sino*, or *sino que*).
+**Why**: *Pero* introduces a qualifying caveat to an affirmative or non-exclusive clause (*El algoritmo es complejo, pero es rápido*).
+
 ### Exercise
+<!-- TODO: Insert the correct adversative connector (pero, sino, or sino que). -->
 El nuevo algoritmo de compresión es matemáticamente complejo, (pero / sino) ___ ofrece una velocidad de descompresión inigualable.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "To improve server performance, we optimized the SQL queries and reduced network latency."
 
+### Instructions
+**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
+**Why**: While *performance* is often heard informally, formal technical Spanish requires **the required term** (or **desempeño**) to describe throughput, speed, and efficiency.
+
 ### Exercise
+<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
 Para mejorar el (rendimiento) ___ del servidor, optimizamos las consultas SQL y redujimos la latencia.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "After several months of testing, the system stabilized, and in a few weeks the final rollout will begin."
 
+### Instructions
+**TODO**: Insert the appropriate compound prepositional locution.
+**Why**: **Al the required term de** refers to elapsed time after an event in the past (*al the required term de tres the required term* = after three months had passed). **the required term de** expresses future time from the current moment (*the required term de tres the required term* = in three months' time).
+
 ### Exercise
+<!-- TODO: Insert the appropriate compound prepositional locution. -->
 (Al cabo de varios meses de pruebas, el sistema se estabilizó, y dentro de / Al cabo de varios meses) ___ pocas semanas comenzará el despliegue final.
 
 <!-- SOLUTION

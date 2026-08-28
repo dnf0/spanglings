@@ -6,7 +6,12 @@
 ### Context
 English: "When the deployment failed at midnight, the infrastructure director became furious."
 
+### Instructions
+**TODO**: Select and conjugate the appropriate verb of becoming (*ponerse*, *quedarse*, *volverse*, *hacerse*).
+**Why**: *Ponerse* + adjective expresses a sudden, involuntary, and temporary change in emotional or psychological state (e.g., *ponerse contento, ponerse furioso*).
+
 ### Exercise
+<!-- TODO: Select and conjugate the appropriate verb of becoming (ponerse, quedarse, volverse, hacerse). -->
 Cuando el despliegue falló a medianoche, el director de infraestructura (se puso / se hizo) ___ furioso.
 
 <!-- SOLUTION

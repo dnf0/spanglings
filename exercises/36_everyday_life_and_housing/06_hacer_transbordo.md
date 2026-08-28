@@ -6,7 +6,12 @@
 ### Context
 English: "To get to the historical center, you must change trains at the central junction station."
 
+### Instructions
+**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
+**Why**: Changing lines on a subway, train, or bus route is expressed as **the required term** (or *the required term trasbordo / combinación* in Latin America). Missing your stop is *pasarse de parada*.
+
 ### Exercise
+<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
 Para llegar al centro histórico, tienes que (hacer transbordo en la / hacer transbordo en) ___ estación de intercambio modal.
 
 <!-- SOLUTION

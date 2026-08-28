@@ -6,7 +6,12 @@
 ### Context
 English: "(To an Argentine friend) Do you know where the keys to the apartment are?"
 
+### Instructions
+**TODO**: Conjugate *(saber)* applying standard Rioplatense voseo morphology.
+**Why**: In Argentina, Uruguay, Paraguay, and parts of Central America, *vos* replaces *tú*. The present tense has an oxytone stressed vowel without diphthongization: *vos tenés* (tú tienes), *vos querés* (tú quieres), *vos hablás* (tú hablas).
+
 ### Exercise
+<!-- TODO: Conjugate (saber) applying standard Rioplatense voseo morphology. -->
 Che, ¿vos (saber) ___ dónde quedaron las llaves del departamento?
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "The team agreed to refactor the core engine, even at the risk of regressions arising during deployment."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of *(surgir)* to complete the sentence.
+**Why**: The concessive connector **aun a riesgo de que** ("even at the risk that") inherently introduces an uncertain risk and strictly triggers the **subjunctive**.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of (surgir) to complete the sentence. -->
 El equipo acordó refactorizar el motor principal, aun a riesgo de que (surgir) ___ regresiones durante el despliegue.
 
 <!-- SOLUTION

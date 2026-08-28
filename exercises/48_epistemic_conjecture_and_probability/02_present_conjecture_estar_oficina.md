@@ -6,7 +6,12 @@
 ### Context
 English: "Where is the principal architect? He's not answering; he's probably in the infrastructure meeting."
 
+### Instructions
+**TODO**: Conjugate the verb to express epistemic conjecture or probability.
+**Why**: The future of *estar* (*the required term*) expresses a hypothesis about someone's current location or activity.
+
 ### Exercise
+<!-- TODO: Conjugate the verb to express epistemic conjecture or probability. -->
 ¿Dónde está el arquitecto principal? No responde; (estará / está probablemente) ___ en la reunión de infraestructura.
 
 <!-- SOLUTION

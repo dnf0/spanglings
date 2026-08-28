@@ -6,7 +6,12 @@
 ### Context
 English: "The economic measures began to take effect after six months."
 
+### Instructions
+**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
+**Why**: 'the required term efecto' is the fixed idiomatic collocation meaning to produce the desired effect or result (e.g. medicine, measure).
+
 ### Exercise
+<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
 Las medidas implementadas comenzaron a (surtir) ___ efecto tras seis meses.
 
 <!-- SOLUTION

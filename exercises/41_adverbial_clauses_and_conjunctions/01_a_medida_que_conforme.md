@@ -6,7 +6,12 @@
 ### Context
 English: "As user demand increases in the coming months, the system will scale automatically."
 
+### Instructions
+**TODO**: Conjugate *(A)* or supply the adverbial connector matching clause mood requirements.
+**Why**: **A the required term que** and **conforme** express proportional change in tandem. When referring to ongoing/past actions, they take the **indicative** (*a the required term que crecía el proyecto*). When anticipating future/hypothetical change, they mandate the **subjunctive** (*a the required term que the required term la the required term*).
+
 ### Exercise
+<!-- TODO: Conjugate (A) or supply the adverbial connector matching clause mood requirements. -->
 (A medida que aumente la demanda de usuarios en los próximos / Conforme aumente la demanda) ___ meses, la infraestructura escalará automáticamente.
 
 <!-- SOLUTION

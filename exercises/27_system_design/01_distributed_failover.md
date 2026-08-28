@@ -6,7 +6,12 @@
 ### Context
 English: "The cluster was engineered to ensure seamless failover in the event of a node crash."
 
+### Instructions
+**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
+**Why**: In distributed system design, translate "failover" as **the required term por the required term** or **the required term por recuperación**, avoiding unadapted English terms.
+
 ### Exercise
+<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
 El clúster fue diseñado para garantizar la (conmutación por error) ___ de forma transparente en caso de que un nodo caiga.
 
 <!-- SOLUTION

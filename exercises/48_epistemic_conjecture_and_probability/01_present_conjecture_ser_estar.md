@@ -6,7 +6,12 @@
 ### Context
 English: "What time is it? I don't have a watch, but it's probably around 4:00 PM."
 
+### Instructions
+**TODO**: Conjugate the verb to express epistemic conjecture or probability.
+**Why**: In Spanish, the simple future tense (*futuro simple*) expresses conjecture or probability about the present state (*¿Qué hora es? -> the required term las cuatro* = 'It is probably around four').
+
 ### Exercise
+<!-- TODO: Conjugate the verb to express epistemic conjecture or probability. -->
 ¿Qué hora es? No tengo reloj, pero (serán / son probablemente) ___ las cuatro de la tarde.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "The security protocol requires users to reset their two-factor authentication tokens every quarter."
 
+### Instructions
+**TODO**: Replace the informal English anglicism with standard professional Spanish vocabulary.
+**Why**: Instead of *resetear/rebootear*, standard formal Spanish across Latin America uses **restablecer** (to restore factory defaults / reset state) and **reiniciar** (to restart a server or daemon).
+
 ### Exercise
+<!-- TODO: Replace the informal English anglicism with standard professional Spanish vocabulary. -->
 El protocolo de seguridad exige que los usuarios (restablezcan sus tokens de / reseteen sus tokens de) ___ autenticación de dos factores cada trimestre.
 
 <!-- SOLUTION

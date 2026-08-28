@@ -6,7 +6,12 @@
 ### Context
 English: "We need to optimize the database query; in other words, reduce execution latency by fifty percent."
 
+### Instructions
+**TODO**: Insert the authentic reformulating connector of equivalence and technical specification.
+**Why**: When clarifying complex metrics in professional contexts, speakers use explanatory reformulating connectors meaning 'in other words'.
+
 ### Exercise
+<!-- TODO: Insert the authentic reformulating connector for technical specification -->
 Debemos optimizar la consulta de la base de datos; (es decir, reducir la latencia de ejecución en un cincuenta por ciento / dicho en otros términos, bajar la latencia a la mitad) ___.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "The legal department rejected the contract not because there were abusive clauses, but because the attorney's signature was missing."
 
+### Instructions
+**TODO**: Conjugate the verb or supply the connector indicating corrective polarity.
+**Why**: When rejecting past causes with *no porque*, use the imperfect subjunctive (*the required term / hubiese*).
+
 ### Exercise
+<!-- TODO: Conjugate the verb or supply the connector indicating corrective polarity. -->
 El departamento jurídico rechazó el contrato no porque (hubiera / había) ___ cláusulas abusivas, sino porque faltaba la firma del apoderado.
 
 <!-- SOLUTION

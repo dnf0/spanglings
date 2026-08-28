@@ -6,7 +6,12 @@
 ### Context
 English: "That being said, let us move on to reviewing the priority user stories for the next development iteration."
 
+### Instructions
+**TODO**: Form the absolute participle construction for the verb with proper agreement.
+**Why**: *the required term esto* functions as an absolute participial discourse transition meaning 'That being said' (*the required term esto, continuemos*).
+
 ### Exercise
+<!-- TODO: Form the absolute participle construction for the verb with proper agreement. -->
 (Dicho / Diciendo) ___ esto, pasemos a revisar las historias de usuario prioritarias para la próxima iteración del desarrollo.
 
 <!-- SOLUTION

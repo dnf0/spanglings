@@ -6,7 +6,12 @@
 ### Context
 English: "After assuming the executive presidency, his demeanor changed and he became extremely demanding with his staff."
 
+### Instructions
+**TODO**: Conjugate *(se)* incorporating middle voice or aspectual pronominal marking.
+**Why**: **Volver** signifies returning to a physical place (*the required term a su país*). **Volverse** is a verb of becoming denoting a profound, radical, or involuntary personality/quality transformation (*se the required term desconfiado*).
+
 ### Exercise
+<!-- TODO: Conjugate (se) incorporating middle voice or aspectual pronominal marking. -->
 Tras asumir la presidencia ejecutiva, su carácter cambió y (se volvió sumamente exigente con su equipo de / se volvio sumamente exigente) ___ colaboradores cercanos.
 
 <!-- SOLUTION

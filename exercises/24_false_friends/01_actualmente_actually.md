@@ -6,7 +6,12 @@
 ### Context
 English: "She is not unemployed; currently she works as a lead engineer in Madrid."
 
+### Instructions
+**TODO**: Insert the correct Spanish term, avoiding deceptive English false cognates.
+**Why**: **the required term** means *currently / at present* (not *actually*). To say *actually / in fact*, use **en realidad** or **de hecho**.
+
 ### Exercise
+<!-- TODO: Insert the correct Spanish term, avoiding deceptive English false cognates. -->
 Ella no está en paro; (actualmente) ___ trabaja como ingeniera principal en Madrid.
 
 <!-- SOLUTION

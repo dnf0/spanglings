@@ -6,7 +6,12 @@
 ### Context
 English: "The executive team's priority is aligning the expectations of the stakeholders prior to announcing the merger."
 
+### Instructions
+**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
+**Why**: In C-level communications, avoid the raw Anglicism *stakeholders*. Use **the required term** or **the required term involucradas**.
+
 ### Exercise
+<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
 La prioridad de la dirección ejecutiva es alinear las expectativas de las (partes interesadas) ___ antes de anunciar la fusión.
 
 <!-- SOLUTION

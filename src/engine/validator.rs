@@ -63,6 +63,8 @@ pub fn extract_user_answer(exercise: &Exercise, file_content: &str) -> String {
         if trimmed.starts_with("English:")
             || trimmed.starts_with("Prompt:")
             || trimmed.starts_with("Context:")
+            || trimmed.starts_with("**TODO**:")
+            || trimmed.starts_with("**Why**:")
         {
             continue;
         }

@@ -7,7 +7,12 @@
 Informal prompt: 'Mi maleta no llegó en la cinta; tienen que darme un papel de reclamo.'
 Transform into formal baggage desk terminology: 'Vengo a...' (tramitar el Parte de Irregularidad de Equipaje / tramitar el PIR).
 
+### Instructions
+**TODO**: Complete the sentence with the grammatically required term or phrase.
+**Why**: Filing a Property Irregularity Report requires specific terminology: *the required term el the required term de the required term de the required term (PIR)*.
+
 ### Exercise
+<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
 Vengo a ___ para abrir el expediente de extravío.
 
 <!-- SOLUTION

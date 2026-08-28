@@ -6,7 +6,12 @@
 ### Context
 English: "Before sending the technician, please provide a written estimate including labor and travel expenses."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of *(un)* to complete the sentence.
+**Why**: Before dispatching a technician, clients request *un the required term por the required term que desglose the required term de the required term y the required term*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of (un) to complete the sentence. -->
 Antes de autorizar la visita, solicitamos (un presupuesto previo por escrito que incluya mano de obra y desplazamiento / una cotización detallada con mano de obra y desplazamiento) ___.
 
 <!-- SOLUTION

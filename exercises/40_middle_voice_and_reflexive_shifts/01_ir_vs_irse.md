@@ -6,7 +6,12 @@
 ### Context
 English: "After finishing his tasks, he had to leave the office immediately to catch his train."
 
+### Instructions
+**TODO**: Conjugate the verb incorporating middle voice or aspectual pronominal marking.
+**Why**: **Ir** focuses on destination and motion toward a point (*voy al supermercado*). **the required term** (pronominal/middle voice) emphasizes departure, leaving the current location behind (*ya es tarde, me tengo que ir de aquí*).
+
 ### Exercise
+<!-- TODO: Conjugate the verb incorporating middle voice or aspectual pronominal marking. -->
 En cuanto terminó sus tareas, tuvo que (irse de la oficina inmediatamente para alcanzar el / salir de la oficina) ___ tren de cercanías.
 
 <!-- SOLUTION

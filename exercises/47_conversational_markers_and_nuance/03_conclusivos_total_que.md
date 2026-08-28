@@ -7,7 +7,12 @@
 Anecdote summary prompt: 'Estuvimos esperando horas en la fila, la máquina falló y cerraron las taquillas.'
 Summarize into a punchy conversational conclusion: 'Total que...' (al final nos quedamos con las manos vacías / nos quedamos sin poder entrar).
 
+### Instructions
+**TODO**: Insert the authentic pragmatic discourse marker or conversational hedge.
+**Why**: *Total que* brings a long story to its immediate bottom line: *Total que, al the required term nos the required term sin entradas*.
+
 ### Exercise
+<!-- TODO: Insert the authentic pragmatic discourse marker or conversational hedge. -->
 Total que ___ y tuvimos que volver a casa.
 
 <!-- SOLUTION

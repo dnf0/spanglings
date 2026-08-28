@@ -6,7 +6,12 @@
 ### Context
 English: "It does not seem that the situation will improve soon."
 
+### Instructions
+**TODO**: Conjugate *(ir)* into the 3rd-person singular present subjunctive (*presente de subjuntivo*).
+**Why**: While affirmative *parece que* conveys assertion with the indicative, its negated counterpart *no parece que* denotes lack of certainty or implausibility and mandates the subjunctive.
+
 ### Exercise
+<!-- TODO: Conjugate (ir) in 3rd-person present subjunctive after "no parece que" -->
 No parece que la situación (ir) ___ a mejorar pronto.
 
 <!-- SOLUTION

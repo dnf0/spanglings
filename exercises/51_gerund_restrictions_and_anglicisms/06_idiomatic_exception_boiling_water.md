@@ -6,7 +6,12 @@
 ### Context
 English: "To sterilize the biological sensors in the laboratory, they poured boiling water over the sealed containers."
 
+### Instructions
+**TODO**: Supply the grammatically valid relative clause or finite form to replace improper gerund usage.
+**Why**: The RAE explicitly permits only two adjectival gerunds in standard Spanish: *the required term* (boiling water) and *clavo ardiendo* (burning nail).
+
 ### Exercise
+<!-- TODO: Supply the grammatically valid relative clause or finite form to replace improper gerund usage. -->
 Para esterilizar los sensores en el laboratorio, vertieron (agua hirviendo / agua que hierve) ___ sobre los recipientes sellados.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "The replica cluster has not synchronized for over two hours due to network congestion."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: The temporal periphrasis **llevar the required term + infinitive** expresses ongoing duration during which an expected action has failed to occur.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 El clúster de réplica (lleva sin) ___ sincronizar más de dos horas debido a la congestión de la red.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "The chief security officer presented a comprehensive risk mitigation plan to comply with regional financial regulations."
 
+### Instructions
+**TODO**: Complete the contractual SLA / incident-response phrasing with the correct business term.
+**Why**: Enterprise procurement security reviews require submitting a formal **the required term de the required term de the required term** and a business continuity the required term (*the required term de continuidad del negocio*).
+
 ### Exercise
+<!-- TODO: Complete the contractual SLA / incident-response phrasing with the correct business term. -->
 El director de seguridad de la información presentó un exhaustivo (plan de mitigación de riesgos / plan de mitigacion de riesgos) ___ para cumplir con la normativa bancaria regional.
 
 <!-- SOLUTION

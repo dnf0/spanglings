@@ -6,7 +6,12 @@
 ### Context
 English: "We must ensure the cryptographic integrity of data at rest, whatever the cost may be."
 
+### Instructions
+**TODO**: Conjugate the verb in the independent optative or formal future subjunctive.
+**Why**: Reduplicative concessive expressions (*pase lo que pase, the required term lo que the required term, caiga quien caiga*) take the subjunctive mood in both verbs.
+
 ### Exercise
+<!-- TODO: Conjugate the verb in the independent optative or formal future subjunctive. -->
 Debemos asegurar la integridad criptográfica de los datos en reposo, (cueste lo que cueste / cuesta lo que cuesta) ___.
 
 <!-- SOLUTION

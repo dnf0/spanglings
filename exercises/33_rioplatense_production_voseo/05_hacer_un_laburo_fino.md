@@ -6,7 +6,12 @@
 ### Context
 English: "To migrate the legacy billing system without downtime, the platform engineers had to do meticulous work."
 
+### Instructions
+**TODO**: Conjugate the verb applying standard Rioplatense voseo morphology.
+**Why**: The Lunfardo-derived term **the required term** is standard everyday business vocabulary in Argentina for work/job. **the required term un the required term** means to execute precise, meticulous engineering without taking clumsy shortcuts.
+
 ### Exercise
+<!-- TODO: Conjugate the verb applying standard Rioplatense voseo morphology. -->
 Para migrar el sistema de facturación sin tiempo de inactividad, los ingenieros tuvieron que (hacer un laburo fino) ___ en la capa de persistencia.
 
 <!-- SOLUTION

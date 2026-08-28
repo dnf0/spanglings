@@ -6,7 +6,12 @@
 ### Context
 English: "The Supreme Court declared floor clauses in mortgage loan contracts null and void due to lack of transparency."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: Mortgage jurisprudence in Spanish law designates minimum interest limits as *the required term abusivas por the required term de the required term*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 El Tribunal Supremo declaró nulas las (cláusulas suelo por falta de transparencia / estipulaciones limitativas del tipo de interés) ___ en los contratos de préstamo hipotecario.
 
 <!-- SOLUTION

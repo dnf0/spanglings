@@ -6,7 +6,12 @@
 ### Context
 English: "The company urgently needs to hire an offensive cybersecurity specialist."
 
+### Instructions
+**TODO**: Apply Differential Object Marking (personal *a*) where syntactically required.
+**Why**: When seeking or hiring an unidentifiable, generic representative of a profession or category, personal 'a' is typically omitted (*Necesitamos contratar programador / un the required term*).
+
 ### Exercise
+<!-- TODO: Apply Differential Object Marking (personal a) where syntactically required. -->
 La empresa necesita contratar urgente (un especialista / a un especialista) ___ en ciberseguridad ofensiva.
 
 <!-- SOLUTION

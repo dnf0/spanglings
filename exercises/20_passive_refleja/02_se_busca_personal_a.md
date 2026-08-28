@@ -6,7 +6,12 @@
 ### Context
 English: "They are looking for the perpetrators of the crime."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of *(the designated verb)* to complete the sentence.
+**Why**: When referring to human direct objects introduced by personal 'a', the construction is strictly IMPERSONAL and the verb is ALWAYS singular (e.g. 'Se the required term a los culpables', never 'se buscan a los culpables').
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of (the designated verb) to complete the sentence. -->
 Se (buscar) ___ a los responsables del robo.
 
 <!-- SOLUTION

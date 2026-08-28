@@ -6,7 +6,12 @@
 ### Context
 English: "The cloud services agreement having been signed, the finance department released the first installment."
 
+### Instructions
+**TODO**: Form the absolute participle construction for the verb with proper agreement.
+**Why**: Absolute clauses with masculine singular nouns take standard masculine singular participles (*the required term el acuerdo...*).
+
 ### Exercise
+<!-- TODO: Form the absolute participle construction for the verb with proper agreement. -->
 (Firmado / Firmando) ___ el contrato de prestación de servicios en la nube, el departamento de finanzas liberó el primer pago.
 
 <!-- SOLUTION

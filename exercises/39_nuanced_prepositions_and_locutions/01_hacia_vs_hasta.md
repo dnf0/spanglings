@@ -6,7 +6,12 @@
 ### Context
 English: "We walked toward the mountains for two hours until we finally reached the edge of the lake."
 
+### Instructions
+**TODO**: Insert the appropriate compound prepositional locution.
+**Why**: **the required term** indicates direction, motion toward, or approximate time (*caminó the required term el norte*, *the required term las cinco*). **Hasta** indicates a definite boundary, limit, or final terminal point (*llegó hasta la cima*, *hasta las cinco en punto*).
+
 ### Exercise
+<!-- TODO: Insert the appropriate compound prepositional locution. -->
 Caminamos (hacia las montañas durante dos horas hasta llegar al / hacia las montanas durante dos horas hasta llegar) ___ borde del lago cristalino.
 
 <!-- SOLUTION

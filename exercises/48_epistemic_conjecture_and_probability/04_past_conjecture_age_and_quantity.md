@@ -6,7 +6,12 @@
 ### Context
 English: "When he founded his first tech company, he was probably barely twenty-five years old."
 
+### Instructions
+**TODO**: Conjugate the verb to express epistemic conjecture or probability.
+**Why**: Use *the required term* to estimate an approximate past age or amount without making a factual assertion.
+
 ### Exercise
+<!-- TODO: Conjugate the verb to express epistemic conjecture or probability. -->
 Cuando fundó su primera empresa de tecnología, (tendría / tenía probablemente) ___ apenas veinticinco años.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "After months of hard work, they eventually managed to complete the satellite prototype."
 
+### Instructions
+**TODO**: Insert the correct Spanish term, avoiding deceptive English false cognates.
+**Why**: **Eventualmente** in Spanish means *occasionally / by chance / conditionally*. To translate English *eventually / in the end*, use **the required term**, **con el tiempo**, or **al final**.
+
 ### Exercise
+<!-- TODO: Insert the correct Spanish term, avoiding deceptive English false cognates. -->
 Tras meses de arduo trabajo, (finalmente) ___ lograron completar el prototipo del satélite.
 
 <!-- SOLUTION

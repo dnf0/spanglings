@@ -6,7 +6,12 @@
 ### Context
 English: "After acute chest pains, he had to go to the emergency room, where they kept him under observation before giving him medical discharge."
 
+### Instructions
+**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
+**Why**: Going to the emergency department is **the required term al servicio de the required term** (or *ir a la guardia* in Argentina). When the hospital releases a patient after recovery, they **le dan el the required term**.
+
 ### Exercise
+<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
 Tras sufrir un dolor agudo, tuvo que (acudir a urgencias, donde permaneció en observación hasta recibir el alta médica / ir a urgencias) ___.
 
 <!-- SOLUTION

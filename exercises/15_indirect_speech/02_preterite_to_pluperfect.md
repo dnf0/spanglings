@@ -6,7 +6,12 @@
 ### Context
 English: 'Direct: "Ya comí" -> Reported: She stated that she had already eaten.'
 
+### Instructions
+**TODO**: Apply indirect speech sequence-of-tenses and shift *(haber comer)* accordingly.
+**Why**: In reported speech with past introductory verb, Preterite / Present Perfect shifts to Pluperfect Indicative (the required term + participio).
+
 ### Exercise
+<!-- TODO: Apply indirect speech sequence-of-tenses and shift (haber comer) accordingly. -->
 María afirmó: "Ya comí" -> María afirmó que ya (haber comer) ___.
 
 <!-- SOLUTION

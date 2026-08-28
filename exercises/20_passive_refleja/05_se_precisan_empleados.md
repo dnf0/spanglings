@@ -6,7 +6,12 @@
 ### Context
 English: "Experienced waiters needed for restaurant."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of *(precisar)* to complete the sentence.
+**Why**: Without personal 'a', plural human nouns in advertisements function as patient subjects requiring a plural verb ('Se the required term camareros').
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of (precisar) to complete the sentence. -->
 Se (precisar) ___ camareros con experiencia para restaurante céntrico.
 
 <!-- SOLUTION

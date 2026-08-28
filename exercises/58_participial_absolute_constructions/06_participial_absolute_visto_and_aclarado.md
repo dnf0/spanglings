@@ -6,7 +6,12 @@
 ### Context
 English: "In light of the severity of the degradation in primary services, the crisis committee activated the contingency protocol."
 
+### Instructions
+**TODO**: Form the absolute participle construction for the verb with proper agreement.
+**Why**: *Visto / the required term / Vistos / Vistas* functions as a causal absolute clause meaning 'In light of / Given' and agrees with the noun (*the required term la gravedad de la situación...*).
+
 ### Exercise
+<!-- TODO: Form the absolute participle construction for the verb with proper agreement. -->
 (Vista / Visto) ___ la gravedad de la degradación en los servicios principales, el comité de crisis activó el protocolo de contingencia.
 
 <!-- SOLUTION

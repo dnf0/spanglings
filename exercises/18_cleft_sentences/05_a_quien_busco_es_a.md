@@ -6,7 +6,12 @@
 ### Context
 English: "The person I am looking for is Maria."
 
+### Instructions
+**TODO**: Supply the capitalized single-letter preposition required before the relative pronoun *quien* to mark a human direct object.
+**Why**: In cleft sentences focalizing a specific animate direct object (*a María*), differential object marking (personal *a*) must be duplicated before the relative pronoun (*... quien busco*).
+
 ### Exercise
+<!-- TODO: Supply the preposition marking the human object relative pronoun in the cleft sentence -->
 ___ quien busco en este departamento es a María.
 
 <!-- SOLUTION

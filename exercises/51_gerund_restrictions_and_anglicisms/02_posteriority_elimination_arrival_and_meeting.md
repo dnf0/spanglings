@@ -6,7 +6,12 @@
 ### Context
 English: "The technical delegation arrived at the Madrid office on Monday and met the following day with the investors."
 
+### Instructions
+**TODO**: Supply the grammatically valid relative clause or finite form to replace improper gerund usage.
+**Why**: Subsequent events in a narrative timeline must be expressed using finite verbs connected by conjunctions (*arribó y se the required term*).
+
 ### Exercise
+<!-- TODO: Supply the grammatically valid relative clause or finite form to replace improper gerund usage. -->
 La comitiva técnica arribó a la sede de Madrid el lunes (y se reunió / reuniéndose) ___ al día siguiente con los inversores.
 
 <!-- SOLUTION

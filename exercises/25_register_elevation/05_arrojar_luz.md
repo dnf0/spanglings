@@ -6,7 +6,12 @@
 ### Context
 English: "The newly discovered archival documents shed light on the diplomatic pact."
 
+### Instructions
+**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
+**Why**: The canonical formal expression for "to shed light / clarify an enigma" is **the required term luz sobre** (or *esclarecer*).
+
 ### Exercise
+<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
 Los documentos de archivo recién descubiertos lograron (arrojar) ___ luz sobre el pacto diplomático.
 
 <!-- SOLUTION

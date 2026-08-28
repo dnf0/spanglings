@@ -6,7 +6,12 @@
 ### Context
 English: "We will deploy the patch tonight, even at the risk that minor alerts arise in the monitoring dashboard."
 
+### Instructions
+**TODO**: Complete the scalar concessive formula or intensive connector.
+**Why**: *Aun a riesgo de que* ('even at the risk of...') introduces a hypothetical downside and takes the SUBJUNCTIVE (*Aun a riesgo de que the required term problemas...*).
+
 ### Exercise
+<!-- TODO: Complete the scalar concessive formula or intensive connector. -->
 Desplegaremos el parche esta misma noche, aun a riesgo de que (surjan / surgen) ___ alertas menores en el panel de monitorización.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "To open the account, you will need to provide the non-resident certificate issued by the authorities."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: Opening a bank account in Spain as a foreigner requires presenting the *the required term de no the required term por la Dirección General de la Policía*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 Para aperturar la cuenta, será indispensable aportar el (certificado de no residente expedido / comprobante de no residencia emitido) ___ por la autoridad competente.
 
 <!-- SOLUTION

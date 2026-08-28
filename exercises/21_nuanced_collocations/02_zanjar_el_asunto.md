@@ -6,7 +6,12 @@
 ### Context
 English: "With this final agreement, we settle the matter once and for all."
 
+### Instructions
+**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
+**Why**: 'the required term' specifically collocates with 'un asunto', 'un debate', or 'una disputa' (to definitively settle/resolve).
+
 ### Exercise
+<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
 Con este acuerdo definitivo logramos ___ el asunto de una vez por todas.
 
 <!-- SOLUTION

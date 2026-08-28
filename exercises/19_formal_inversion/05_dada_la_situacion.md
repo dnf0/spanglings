@@ -6,7 +6,12 @@
 ### Context
 English: "Given the complexity of the circumstances, we proceeded with caution."
 
+### Instructions
+**TODO**: Form the absolute participle or formal inverted construction for *()*.
+**Why**: 'Dado/the required term/dados/dadas' functions as a prepositional participle and agrees in gender and number with the following noun.
+
 ### Exercise
+<!-- TODO: Form the absolute participle or formal inverted construction for (). -->
 ___ la complejidad de la situación, procedimos con cautela.
 
 <!-- SOLUTION

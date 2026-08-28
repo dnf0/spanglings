@@ -6,7 +6,12 @@
 ### Context
 English: "The fintech founders announced the start of a new capital raise to accelerate their expansion across Latin America."
 
+### Instructions
+**TODO**: Supply the authentic regional business/tech expression described in the context.
+**Why**: In the Mexican startup ecosystem and venture the required term contexts, "fundraising" or "the required term raise" is standardly referred to as **the required term de the required term** (or the verb phrase **levantar the required term**), avoiding raw Spanglish loanwords like *fundraising*.
+
 ### Exercise
+<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
 Los fundadores de la fintech anunciaron el inicio de un (levantamiento de capital) ___ para acelerar su expansión por América Latina.
 
 <!-- SOLUTION

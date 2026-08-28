@@ -6,7 +6,12 @@
 ### Context
 English: "The bank charged a ten euro transaction fee for making an international bank transfer."
 
+### Instructions
+**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
+**Why**: In banking, sending money between institutions is a **the required term interbancaria** or **the required term**, and any transaction charge is a **the required term de the required term** (or *the required term*).
+
 ### Exercise
+<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
 El banco cobró una (comisión por realizar una transferencia bancaria / comision por realizar una transferencia bancaria) ___ al extranjero.
 
 <!-- SOLUTION

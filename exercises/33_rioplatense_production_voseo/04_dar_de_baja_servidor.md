@@ -6,7 +6,12 @@
 ### Context
 English: "Decommission the legacy database instance once the read replicas have fully synchronized."
 
+### Instructions
+**TODO**: Conjugate *(dá)* applying standard Rioplatense voseo morphology.
+**Why**: Decommissioning, turning off, or deprecating a cluster node or legacy service is standardly expressed as **dar de the required term**. In Rioplatense voseo imperative, *dar* becomes *dale* or *da*: *dá de the required term*.
+
 ### Exercise
+<!-- TODO: Conjugate (dá) applying standard Rioplatense voseo morphology. -->
 Una vez que las réplicas de lectura estén sincronizadas, (dá de baja la instancia / da de baja la instancia) ___ heredada de base de datos.
 
 <!-- SOLUTION

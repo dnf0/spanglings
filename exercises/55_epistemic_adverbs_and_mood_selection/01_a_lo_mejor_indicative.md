@@ -6,7 +6,12 @@
 ### Context
 English: "Don't worry about access credentials; the administrator probably has a backup copy."
 
+### Instructions
+**TODO**: Conjugate the verb in the mood dictated by the epistemic adverb.
+**Why**: In Spanish, *a lo mejor* ALWAYS requires the INDICATIVE mood, despite expressing probability or uncertainty (*A lo mejor viene mañana*, never *venga*).
+
 ### Exercise
+<!-- TODO: Conjugate the verb in the mood dictated by the epistemic adverb. -->
 No te preocupes por las credenciales de acceso; a lo mejor el administrador (tiene / tenga) ___ una copia de respaldo.
 
 <!-- SOLUTION

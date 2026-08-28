@@ -6,7 +6,12 @@
 ### Context
 English: "In order to cross the border, you are required to demonstrate proof of sufficient financial means for your stay."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: Immigration officers require non-EU visitors to provide *the required term de the required term the required term* and *justificante de alojamiento*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 Para cruzar el control fronterizo, es preceptivo aportar la (acreditación de medios económicos suficientes / prueba de solvencia económica) ___ durante toda la estancia.
 
 <!-- SOLUTION

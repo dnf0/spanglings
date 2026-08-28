@@ -6,7 +6,12 @@
 ### Context
 English: "Smoking is strictly prohibited inside the premises."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of *(prohibir)* to complete the sentence.
+**Why**: When the subject of a passive refleja sentence is an infinitive or subordinate clause, the verb is always singular.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of (prohibir) to complete the sentence. -->
 Se (prohibir) ___ fumar dentro del recinto.
 
 <!-- SOLUTION

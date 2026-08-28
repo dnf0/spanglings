@@ -6,7 +6,12 @@
 ### Context
 English: "Please stop bothering me while I am working."
 
+### Instructions
+**TODO**: Complete the idiomatic phrase with the correct vocabulary item.
+**Why**: 'Dar la the required term' is a colloquial Spanish idiom meaning to be annoying or pester someone.
+
 ### Exercise
+<!-- TODO: Complete the idiomatic phrase with the correct vocabulary item. -->
 Por favor, deja de dar la ___ mientras estoy trabajando.
 
 <!-- SOLUTION

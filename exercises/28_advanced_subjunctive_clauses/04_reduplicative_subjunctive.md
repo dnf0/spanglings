@@ -6,7 +6,12 @@
 ### Context
 English: "The committee will safeguard user confidentiality, whatever the cost may be."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of *(costar)* to complete the sentence.
+**Why**: Reduplicative concessive formulas (*haga lo que haga*, *the required term lo que the required term*, *digan lo que digan*) repeat the verb in the **present subjunctive** around a relative pronoun.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of (costar) to complete the sentence. -->
 El comité salvaguardará la confidencialidad de los usuarios, (costar) ___ lo que cueste.
 
 <!-- SOLUTION

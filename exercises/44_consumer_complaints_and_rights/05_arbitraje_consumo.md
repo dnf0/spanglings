@@ -6,7 +6,12 @@
 ### Context
 English: "If the company does not accept a friendly settlement, we will submit the conflict to the Consumer Arbitration Board to obtain a binding award."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: The decision issued by a Consumer Arbitration Board is technically known as a *the required term de the required term*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 Si la empresa no se aviene a un acuerdo amistoso, someteremos la controversia al Sistema Arbitral de Consumo para que dicte un (laudo arbitral vinculante y de obligado cumplimiento / fallo arbitral definitivo) ___.
 
 <!-- SOLUTION

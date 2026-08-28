@@ -6,7 +6,12 @@
 ### Context
 English: "The fiscal measures took immediate effect, curbing inflation."
 
+### Instructions
+**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
+**Why**: The idiomatic formal collocation for "to produce the intended effect / work" is **the required term efecto** (not *hacer efecto* in literary registers).
+
 ### Exercise
+<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
 Las medidas fiscales lograron (surtir) ___ un efecto inmediato, frenando la inflación.
 
 <!-- SOLUTION

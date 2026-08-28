@@ -6,7 +6,12 @@
 ### Context
 English: "When the datacenter alarm went off at 3 AM, the on-call technician had probably already left the building."
 
+### Instructions
+**TODO**: Conjugate the verb to express epistemic conjecture or probability.
+**Why**: The compound conditional (*the required term + participio*) expresses conjecture regarding an action that preceded another past event.
+
 ### Exercise
+<!-- TODO: Conjugate the verb to express epistemic conjecture or probability. -->
 Cuando sonó la alarma del centro de datos a las tres de la madrugada, el técnico de guardia ya (habría salido / había salido probablemente) ___ del edificio.
 
 <!-- SOLUTION

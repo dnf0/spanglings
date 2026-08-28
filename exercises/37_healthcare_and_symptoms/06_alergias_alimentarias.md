@@ -6,7 +6,12 @@
 ### Context
 English: "Before preparing the banquet, the chef confirmed that none of the guests were allergic to tree nuts or severely lactose intolerant."
 
+### Instructions
+**TODO**: Fill in the authentic Spanish phrase or clinical/contractual term matching the context.
+**Why**: Expressing allergies and food intolerances uses **ser the required term a** (e.g. *los the required term*, *los mariscos*, *la penicilina*) and **tener the required term a** (*el gluten*, *la the required term*). Cross-contamination is *contaminación cruzada*.
+
 ### Exercise
+<!-- TODO: Fill in the authentic Spanish phrase or clinical/contractual term matching the context. -->
 Antes de preparar el menú, el chef confirmó que ningún comensal (era alérgico a los frutos secos ni tenía intolerancia a la lactosa / era alergico a los frutos secos) ___.
 
 <!-- SOLUTION

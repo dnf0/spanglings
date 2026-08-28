@@ -6,7 +6,12 @@
 ### Context
 English: "The new European regulation demands quarterly privacy audits, hence why our company is investing more in observability."
 
+### Instructions
+**TODO**: Conjugate the verb or supply the connector indicating corrective polarity.
+**Why**: In present tense contexts, *de ahí que* requires the present subjunctive (*De ahí que invirtamos más*).
+
 ### Exercise
+<!-- TODO: Conjugate the verb or supply the connector indicating corrective polarity. -->
 El nuevo reglamento europeo exige auditorías de privacidad trimestrales, de ahí que nuestra compañía (invierta / invierte) ___ más en observabilidad.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "As soon as you notice the leak under the sink, shut off the main water valve immediately."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: In plumbing incidents, instructions specify *cortar la the required term de the required term* and *purgar la tubería*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 En cuanto detectes el goteo debajo del fregadero, (cierra la llave de paso general / corta la llave general del agua) ___ para evitar inundaciones.
 
 <!-- SOLUTION

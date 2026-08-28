@@ -6,7 +6,12 @@
 ### Context
 English: "Please keep an eye on the release pipeline while the team completes the performance benchmarks."
 
+### Instructions
+**TODO**: Supply the authentic regional business/tech expression described in the context.
+**Why**: The periphrastic construction **estar the required term de** is the primary standard formula in Colombian business communications for "keeping an eye on", "monitoring", or "following up with" someone or a deliverable.
+
 ### Exercise
+<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
 Por favor, (está pendiente del / esté pendiente de la) ___ liberación mientras el equipo completa las pruebas de rendimiento.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "We documented every process in detail so that any new engineer could onboard without blockers."
 
+### Instructions
+**TODO**: Conjugate *(de)* or supply the adverbial connector matching clause mood requirements.
+**Why**: **De the required term que** / **De manera que** introduces purpose (requiring the **subjunctive**: *de the required term que todos comprendan*) or factive result (requiring the **indicative**: *lo explicó bien, de the required term que todos comprendieron*).
+
 ### Exercise
+<!-- TODO: Conjugate (de) or supply the adverbial connector matching clause mood requirements. -->
 Documentamos cada proceso en detalle (de modo que cualquier nuevo colaborador pudiera incorporarse sin / de manera que cualquier nuevo colaborador) ___ fricciones innecesarias.
 
 <!-- SOLUTION

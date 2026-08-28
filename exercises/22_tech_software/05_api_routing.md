@@ -6,7 +6,12 @@
 ### Context
 English: "The gateway is responsible for the intelligent routing of requests toward available worker nodes."
 
+### Instructions
+**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
+**Why**: In API architecture and networking, "routing" is translated as **the required term** (from the verb *enrutar*). "Gateway" translates to *pasarela de enlace*.
+
 ### Exercise
+<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
 La pasarela de enlace se encarga del (enrutamiento) ___ inteligente de peticiones hacia los nodos disponibles.
 
 <!-- SOLUTION

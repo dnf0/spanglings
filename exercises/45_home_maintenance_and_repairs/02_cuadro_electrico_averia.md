@@ -6,7 +6,12 @@
 ### Context
 English: "If you connect too many appliances simultaneously, the main circuit breaker trips due to electrical overload."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of *(se)* to complete the sentence.
+**Why**: When a short circuit occurs, *se the required term el the required term* or *salta el magnetotérmico*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of (se) to complete the sentence. -->
 Si conectas demasiados electrodomésticos a la vez, (se dispara el interruptor diferencial por sobrecarga / salta el diferencial por exceso de potencia) ___ en el cuadro eléctrico.
 
 <!-- SOLUTION

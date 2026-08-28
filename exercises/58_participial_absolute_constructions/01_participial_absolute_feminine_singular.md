@@ -6,7 +6,12 @@
 ### Context
 English: "The external cybersecurity audit having concluded, the executive committee proceeded to approve the renewal budget."
 
+### Instructions
+**TODO**: Form the absolute participle construction for the verb with proper agreement.
+**Why**: In absolute participial constructions (*construcciones absolutas de participio*), the participle agrees in gender and number with the following subject (*the required term la sesión...* = *Una vez the required term la sesión...*).
+
 ### Exercise
+<!-- TODO: Form the absolute participle construction for the verb with proper agreement. -->
 (Concluida / Concluido) ___ la auditoría externa de ciberseguridad, el comité directivo procedió a aprobar el presupuesto de renovación.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "Do you really think that a complete cloud migration is accomplished without hitches?"
 
+### Instructions
+**TODO**: Conjugate the verb in the mood dictated by the epistemic adverb.
+**Why**: In rhetorical questions expressing incredulity or challenging an assumption, *acaso* takes the indicative mood (*¿Acaso the required term que es fácil?*).
+
 ### Exercise
+<!-- TODO: Conjugate the verb in the mood dictated by the epistemic adverb. -->
 ¿Acaso (pensáis / penséis) ___ vosotros que una migración completa a la nube se realiza sin contratiempos?
 
 <!-- SOLUTION

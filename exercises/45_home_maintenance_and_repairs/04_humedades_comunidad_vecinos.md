@@ -6,7 +6,12 @@
 ### Context
 English: "The moisture in the bedroom ceiling is caused by water seepage from communal building elements."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
+**Why**: Moisture seepage caused by facade or roof degradation is legally described as *the required term por the required term de the required term de la finca*.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
 El perito determinó que los daños en el techo corresponden a una (humedad por filtración derivada de elementos comunes / filtración de agua procedente de la fachada comunitaria) ___.
 
 <!-- SOLUTION

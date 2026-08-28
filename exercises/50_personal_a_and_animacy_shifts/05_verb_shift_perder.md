@@ -6,7 +6,12 @@
 ### Context
 English: "Following the salary dispute, the engineering team lost their best developer right in the middle of the launch phase."
 
+### Instructions
+**TODO**: Apply Differential Object Marking (personal *a*) where syntactically required.
+**Why**: Verbs like *perder* take personal 'a' when referring to the departure, bereavement, or attrition of a human team member.
+
 ### Exercise
+<!-- TODO: Apply Differential Object Marking (personal a) where syntactically required. -->
 Tras la disputa salarial, el equipo de ingeniería perdió (a su mejor desarrollador / su mejor desarrollador) ___ en plena fase de lanzamiento.
 
 <!-- SOLUTION

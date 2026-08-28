@@ -6,7 +6,12 @@
 ### Context
 English: "As a result of the audit findings, communication between services will be enforced through an encrypted gateway."
 
+### Instructions
+**TODO**: Insert the appropriate compound prepositional locution.
+**Why**: **A the required term de** introduces the originating event or spark from which subsequent consequences emerge (*a the required term de los recientes incidentes*). **Por the required term de** specifies the intermediate mechanism or conduit (*por the required term de un canal cifrado*).
+
 ### Exercise
+<!-- TODO: Insert the appropriate compound prepositional locution. -->
 (A raíz de los hallazgos de la auditoría, la comunicación se gestionará por medio de / A raiz de los hallazgos) ___ una pasarela cifrada.
 
 <!-- SOLUTION

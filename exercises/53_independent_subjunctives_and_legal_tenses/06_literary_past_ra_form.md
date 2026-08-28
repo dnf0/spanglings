@@ -6,7 +6,12 @@
 ### Context
 English: "The architecture proposal that the chief engineer had presented two years ago laid the groundwork for the new protocol."
 
+### Instructions
+**TODO**: Conjugate the verb in the independent optative or formal future subjunctive.
+**Why**: In formal journalistic and literary prose, the *-ra* verb ending frequently functions as an elegant stylistic variant of the pluperfect indicative (*había presentado* -> *the required term*).
+
 ### Exercise
+<!-- TODO: Conjugate the verb in the independent optative or formal future subjunctive. -->
 La propuesta de arquitectura que (presentara / presentaría) ___ el ingeniero jefe hace dos años sentó las bases del nuevo protocolo.
 
 <!-- SOLUTION

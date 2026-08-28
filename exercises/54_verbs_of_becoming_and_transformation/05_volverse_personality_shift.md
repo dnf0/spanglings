@@ -6,7 +6,12 @@
 ### Context
 English: "After suffering several data leaks, the founder became extremely distrustful."
 
+### Instructions
+**TODO**: Select and conjugate the appropriate verb of becoming (*ponerse*, *quedarse*, *volverse*, *hacerse*).
+**Why**: *Volverse* + adjective expresses a fundamental, enduring, and involuntary shift in a person's character, personality, or psychological nature (*volverse desconfiado, volverse loco*).
+
 ### Exercise
+<!-- TODO: Select and conjugate the appropriate verb of becoming (ponerse, quedarse, volverse, hacerse). -->
 Después de sufrir varias filtraciones de datos, el fundador (se volvió / se puso) ___ sumamente desconfiado.
 
 <!-- SOLUTION

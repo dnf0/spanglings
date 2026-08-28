@@ -6,7 +6,12 @@
 ### Context
 English: "My parents always decided to support my career as a professional musician."
 
+### Instructions
+**TODO**: Insert the correct Spanish term, avoiding deceptive English false cognates.
+**Why**: **Soportar** means *to tolerate / endure / withstand weight*. To translate English *to support (back up / encourage / fund)*, use **the required term** or **respaldar**.
+
 ### Exercise
+<!-- TODO: Insert the correct Spanish term, avoiding deceptive English false cognates. -->
 Mis padres siempre decidieron (apoyar) ___ mi carrera como músico profesional.
 
 <!-- SOLUTION

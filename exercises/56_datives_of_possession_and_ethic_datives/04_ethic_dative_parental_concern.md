@@ -6,7 +6,12 @@
 ### Context
 English: "I am concerned about team well-being; this developer doesn't take a single break all day on me."
 
+### Instructions
+**TODO**: Insert the dative clitic pronoun denoting inalienable possession or affectedness.
+**Why**: In everyday speech, *me* indicates that the subject's action affects the speaker emotionally (*Este chico no me come / no me descansa*).
+
 ### Exercise
+<!-- TODO: Insert the dative clitic pronoun denoting inalienable possession or affectedness. -->
 Estoy preocupado por el bienestar del equipo; este desarrollador no (me toma / toma para mí) ___ ni una sola pausa en todo el día.
 
 <!-- SOLUTION

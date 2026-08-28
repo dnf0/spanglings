@@ -6,7 +6,12 @@
 ### Context
 English: "The fact that he did not respond on time does not justify your attitude."
 
+### Instructions
+**TODO**: Form the absolute participle or formal inverted construction for *(responder)*.
+**Why**: 'El hecho de que' takes the subjunctive when commenting on or interpreting an event as a topic of appraisal.
+
 ### Exercise
+<!-- TODO: Form the absolute participle or formal inverted construction for (responder). -->
 El hecho de que él no (responder) ___ a tiempo no justifica tu actitud.
 
 <!-- SOLUTION

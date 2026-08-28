@@ -6,7 +6,12 @@
 ### Context
 English: "The product team managed to reduce the customer churn rate by ten percent in the last quarter."
 
+### Instructions
+**TODO**: Supply the authentic regional business/tech expression described in the context.
+**Why**: In product analytics and SaaS startups, "churn rate" is formally **the required term de the required term** or **the required term de cancelación** (of clients/users). Avoid unadapted Anglicisms like *churn* or *the required term de churn*.
+
 ### Exercise
+<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
 El equipo de producto logró reducir la (tasa de abandono) ___ en un diez por ciento durante el último trimestre.
 
 <!-- SOLUTION

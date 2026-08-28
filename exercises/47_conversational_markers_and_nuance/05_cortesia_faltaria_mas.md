@@ -6,7 +6,12 @@
 ### Context
 English: "By all means! Feel free to count on my full collaboration whenever you need it."
 
+### Instructions
+**TODO**: Insert the courteous formulaic expression conveying enthusiastic consent and professional support.
+**Why**: High-register courtesy formulas reinforce gracious agreement and reassurance in formal interpersonal exchanges.
+
 ### Exercise
+<!-- TODO: Insert the courteous formulaic expression conveying enthusiastic consent -->
 (¡Faltaría más! Cuente usted con mi plena colaboración / ¡No faltaba más! Tiene a su disposición mi apoyo) ___ siempre que lo estime oportuno.
 
 <!-- SOLUTION

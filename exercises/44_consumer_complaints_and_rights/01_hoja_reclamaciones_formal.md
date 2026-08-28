@@ -6,7 +6,12 @@
 ### Context
 English: "Given your refusal to resolve the issue, I request the official complaint form immediately."
 
+### Instructions
+**TODO**: Provide the appropriate conjugation or form of *(le)* to complete the sentence.
+**Why**: Every commercial establishment in Spain is legally obligated to provide the *the required term de the required term y the required term* upon request.
+
 ### Exercise
+<!-- TODO: Provide the appropriate conjugation or form of (le) to complete the sentence. -->
 Ante su negativa a resolver la incidencia, (le solicito la hoja oficial de quejas y reclamaciones / exijo la hoja de reclamaciones) ___ para remitirla a la Oficina Municipal de Información al Consumidor.
 
 <!-- SOLUTION

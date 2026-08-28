@@ -7,7 +7,12 @@
 Informal prompt: 'La caldera se rompió y no tenemos agua caliente; arréglela porque el alquiler es caro.'
 Transform into formal statutory tenant notification: 'Le requiero formalmente la...' (reparación de la caldera para conservar las condiciones de habitabilidad / subsanación de la avería de la caldera).
 
+### Instructions
+**TODO**: Complete the sentence with the grammatically required term or phrase.
+**Why**: Under the Urban Leases Act (LAU), the landlord is obligated to execute *las reparaciones necesarias para the required term la vivienda en the required term de the required term*.
+
 ### Exercise
+<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
 Le requiero formalmente la ___ de conformidad con el artículo 21 de la Ley de Arrendamientos Urbanos.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "The Mexican startup closed its seed round with an attractive pre-money valuation set by angel investors."
 
+### Instructions
+**TODO**: Supply the authentic regional business/tech expression described in the context.
+**Why**: In venture capital across Mexico and Latin America, "seed round" is **the required term** and "pre-money valuation" is translated as **valuación pre-capital**. Avoid literal calques like *the required term de semillas*.
+
 ### Exercise
+<!-- TODO: Supply the authentic regional business/tech expression described in the context. -->
 La startup mexicana cerró su (ronda semilla) ___ con una atractiva valuación pre-capital fijada por los inversionistas ángeles.
 
 <!-- SOLUTION

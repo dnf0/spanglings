@@ -6,7 +6,12 @@
 ### Context
 English: "All affected users we notified via an urgent transactional email."
 
+### Instructions
+**TODO**: Insert the required resumptive clitic pronoun for the fronted topic.
+**Why**: In Spanish, whenever a direct object is fronted (left-dislocated) before the verb, it MUST be resumed by an accusative clitic pronoun (*los, las, lo, la*).
+
 ### Exercise
+<!-- TODO: Insert the required resumptive clitic pronoun for the fronted topic. -->
 (A todos los usuarios afectados los notificamos / A todos los usuarios afectados notificamos) ___ mediante un correo transaccional urgente.
 
 <!-- SOLUTION
