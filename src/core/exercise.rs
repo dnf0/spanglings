@@ -420,8 +420,8 @@ impl Exercise {
         // Extract target subject
         let mut target_subject = String::new();
         let common_subjects = [
-            "yo", "tú", "vos", "él", "ella", "usted", "nosotros", "nosotras", "vosotros",
-            "vosotras", "ellos", "ellas", "ustedes",
+            "nosotras", "nosotros", "vosotras", "vosotros", "ustedes", "ellos", "ellas", "usted",
+            "ella", "vos", "él", "tú", "yo",
         ];
         for line in self.raw_content.lines() {
             let lower = line.to_lowercase();
