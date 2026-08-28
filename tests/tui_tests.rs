@@ -592,41 +592,80 @@ fn test_app_tour_navigation_and_completion() {
 fn test_app_welcome_modal_responses() {
     let exercises = create_sample_exercises();
 
-    // 1. Respond with 'y' -> opens tour modal
+    // 1. Respond with 'y' -> opens tour modal & marks completed
     let mut app_y = new_test_app(exercises.clone(), false);
     app_y.show_tour_welcome = true;
     app_y.on_key(crossterm::event::KeyCode::Char('y'));
     assert!(!app_y.show_tour_welcome);
     assert!(app_y.show_tour_modal);
     assert_eq!(app_y.tour_current_station, 0);
+    assert!(app_y.state.tour_completed);
 
-    // 2. Respond with 'Y' -> opens tour modal
+    // 2. Respond with 'Y' -> opens tour modal & marks completed
     let mut app_cap_y = new_test_app(exercises.clone(), false);
     app_cap_y.show_tour_welcome = true;
     app_cap_y.on_key(crossterm::event::KeyCode::Char('Y'));
     assert!(!app_cap_y.show_tour_welcome);
     assert!(app_cap_y.show_tour_modal);
+    assert!(app_cap_y.state.tour_completed);
 
-    // 3. Respond with 'n' -> dismisses welcome modal
+    // 3. Respond with 'n' -> dismisses welcome modal & marks completed
     let mut app_n = new_test_app(exercises.clone(), false);
     app_n.show_tour_welcome = true;
     app_n.on_key(crossterm::event::KeyCode::Char('n'));
     assert!(!app_n.show_tour_welcome);
     assert!(!app_n.show_tour_modal);
+    assert!(app_n.state.tour_completed);
 
-    // 4. Respond with 'N' -> dismisses welcome modal
+    // 4. Respond with 'N' -> dismisses welcome modal & marks completed
     let mut app_cap_n = new_test_app(exercises.clone(), false);
     app_cap_n.show_tour_welcome = true;
     app_cap_n.on_key(crossterm::event::KeyCode::Char('N'));
     assert!(!app_cap_n.show_tour_welcome);
     assert!(!app_cap_n.show_tour_modal);
+    assert!(app_cap_n.state.tour_completed);
 
-    // 5. Respond with Esc -> dismisses welcome modal
-    let mut app_esc = new_test_app(exercises, false);
+    // 5. Respond with Esc -> dismisses welcome modal & marks completed
+    let mut app_esc = new_test_app(exercises.clone(), false);
     app_esc.show_tour_welcome = true;
     app_esc.on_key(crossterm::event::KeyCode::Esc);
     assert!(!app_esc.show_tour_welcome);
     assert!(!app_esc.show_tour_modal);
+    assert!(app_esc.state.tour_completed);
+}
+
+#[test]
+fn test_tui_tour_persisted_and_not_reshown_on_second_launch() {
+    let temp_dir = tempfile::tempdir().unwrap();
+    let state_file = temp_dir.path().join("state.json");
+
+    // 1. First run with fresh uncompleted state
+    let initial_state = spanglings::core::state::AppState {
+        tour_completed: false,
+        ..Default::default()
+    };
+    initial_state.save_to_path(&state_file).unwrap();
+
+    let loaded1 = spanglings::core::state::AppState::load_from_path(&state_file).unwrap();
+    assert!(!loaded1.tour_completed);
+
+    let exercises = create_sample_exercises();
+    let mut app1 = App::new_with_state(exercises.clone(), false, loaded1);
+    assert!(app1.show_tour_welcome);
+
+    // Dismiss with 'n'
+    app1.on_key(crossterm::event::KeyCode::Char('n'));
+    assert!(!app1.show_tour_welcome);
+    assert!(app1.state.tour_completed);
+    app1.state.save_to_path(&state_file).unwrap();
+
+    // 2. Second run: reload saved state from disk
+    let loaded2 = spanglings::core::state::AppState::load_from_path(&state_file).unwrap();
+    assert!(loaded2.tour_completed);
+
+    let app2 = App::new_with_state(exercises, false, loaded2);
+    assert!(!app2.show_tour_welcome);
+    assert!(!app2.show_tour_modal);
 }
 
 #[test]
