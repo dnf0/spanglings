@@ -1,11 +1,11 @@
-use crate::core::curriculum::{find_all_exercises, find_exercise_by_query};
+use crate::core::curriculum::{find_all_exercises_or_embedded, find_exercise_by_query};
 use crate::core::state::AppState;
 use colored::Colorize;
 use std::path::Path;
 
 pub fn show_hint(exercise_query: Option<&str>) -> anyhow::Result<()> {
     let exercises_dir = Path::new("exercises");
-    let exercises = find_all_exercises(exercises_dir)?;
+    let exercises = find_all_exercises_or_embedded(exercises_dir)?;
     let state = AppState::load().unwrap_or_default();
 
     let target_exercise = match exercise_query {

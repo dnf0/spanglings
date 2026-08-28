@@ -1,4 +1,4 @@
-use crate::core::curriculum::{find_all_exercises, find_exercise_by_query};
+use crate::core::curriculum::{find_all_exercises_or_embedded, find_exercise_by_query};
 use crate::core::exercise::Exercise;
 use crate::core::state::AppState;
 use crate::engine::accents::AccentMode;
@@ -10,7 +10,7 @@ use std::path::Path;
 
 pub fn run_exercise(exercise_query: &str, strict_accents: bool) -> anyhow::Result<()> {
     let exercises_dir = Path::new("exercises");
-    let exercises = find_all_exercises(exercises_dir)?;
+    let exercises = find_all_exercises_or_embedded(exercises_dir)?;
 
     let target_path = Path::new(exercise_query);
     let (parsed_ex, content) = if target_path.exists() && target_path.is_file() {
@@ -20,7 +20,11 @@ pub fn run_exercise(exercise_query: &str, strict_accents: bool) -> anyhow::Resul
     } else {
         match find_exercise_by_query(&exercises, exercise_query) {
             Some(ex) => {
-                let content = fs::read_to_string(&ex.path)?;
+                let content = if ex.path.exists() {
+                    fs::read_to_string(&ex.path)?
+                } else {
+                    ex.raw_content.clone()
+                };
                 let parsed = Exercise::from_markdown(&ex.path, &content)?;
                 (parsed, content)
             }
@@ -87,7 +91,7 @@ pub fn run_exercise(exercise_query: &str, strict_accents: bool) -> anyhow::Resul
 
 pub fn reset_exercise(exercise_query: &str) -> anyhow::Result<()> {
     let exercises_dir = Path::new("exercises");
-    let exercises = find_all_exercises(exercises_dir)?;
+    let exercises = find_all_exercises_or_embedded(exercises_dir)?;
 
     let exercise = match find_exercise_by_query(&exercises, exercise_query) {
         Some(ex) => ex,
