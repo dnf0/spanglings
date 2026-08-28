@@ -16,25 +16,41 @@ pub struct BlitzItem {
 
 impl BlitzItem {
     pub fn format_prompt(&self, remaining_secs: u64, streak: usize) -> String {
-        let topic_display = if self.topic.is_empty() {
-            String::new()
+        let concept_header =
+            if let Some(concept) = crate::core::reference::get_grammar_concept(self.topic) {
+                if !concept.gloss.is_empty() {
+                    format!("{} ({})", concept.title, concept.gloss)
+                } else {
+                    concept.title.to_string()
+                }
+            } else if self.topic.is_empty() {
+                String::new()
+            } else {
+                let parts: Vec<String> = self
+                    .topic
+                    .split('_')
+                    .map(|word| {
+                        let mut chars = word.chars();
+                        match chars.next() {
+                            None => String::new(),
+                            Some(f) => f.to_uppercase().collect::<String>() + chars.as_str(),
+                        }
+                    })
+                    .collect();
+                parts.join(" ")
+            };
+
+        let badge = if self.formula_cue.is_empty() {
+            format!("[{concept_header}]")
+        } else if concept_header.is_empty() {
+            format!("[{}]", self.formula_cue)
         } else {
-            let parts: Vec<String> = self
-                .topic
-                .split('_')
-                .map(|word| {
-                    let mut chars = word.chars();
-                    match chars.next() {
-                        None => String::new(),
-                        Some(f) => f.to_uppercase().collect::<String>() + chars.as_str(),
-                    }
-                })
-                .collect();
-            parts.join(" ")
+            format!("[{concept_header} | {}]", self.formula_cue)
         };
+
         format!(
-            "[{remaining_secs}s remaining | Streak: {streak}] [{topic_display} | {}]\nSentence: \"{}\" (verb: {} | subject: {}) > ",
-            self.formula_cue, self.trigger_sentence, self.target_verb, self.target_subject
+            "[{remaining_secs}s remaining | Streak: {streak}] {}\nSentence: \"{}\" (verb: {} | subject: {}) > ",
+            badge, self.trigger_sentence, self.target_verb, self.target_subject
         )
     }
 }

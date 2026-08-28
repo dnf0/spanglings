@@ -82,9 +82,38 @@ fn test_blitz_prompt_formatting() {
     };
     let formatted = item.format_prompt(45, 3);
     assert!(formatted
-        .contains("[45s remaining | Streak: 3] [Subjunctive | drop -o -> opposite vowel -a]"));
+        .contains("[45s remaining | Streak: 3] [Subjunctive (wishes, hypotheses, doubt, demands) | drop -o -> opposite vowel -a]"));
+    assert!(formatted.contains("Subjunctive (wishes, hypotheses, doubt, demands)"));
     assert!(formatted.contains("Sentence: \"Dudo que yo ____ los libros en la mesa.\""));
     assert!(formatted.contains("(verb: poner | subject: yo) > "));
+
+    // Fallback when no formula cue
+    let item_no_cue = BlitzItem {
+        topic: "subjunctive",
+        formula_cue: "",
+        trigger_sentence: "Dudo que yo ____.",
+        target_verb: "poner",
+        target_subject: "yo",
+        target: "ponga",
+        explanation: "yo pongo -> ponga",
+    };
+    let formatted_no_cue = item_no_cue.format_prompt(30, 0);
+    assert!(formatted_no_cue.contains(
+        "[30s remaining | Streak: 0] [Subjunctive (wishes, hypotheses, doubt, demands)]"
+    ));
+
+    // Fallback for unknown topic
+    let item_unknown = BlitzItem {
+        topic: "custom_topic",
+        formula_cue: "rule 1",
+        trigger_sentence: "Sentence ____",
+        target_verb: "v",
+        target_subject: "s",
+        target: "t",
+        explanation: "e",
+    };
+    let formatted_unknown = item_unknown.format_prompt(15, 1);
+    assert!(formatted_unknown.contains("[15s remaining | Streak: 1] [Custom Topic | rule 1]"));
 }
 
 #[test]
