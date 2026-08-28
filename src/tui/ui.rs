@@ -2871,7 +2871,8 @@ pub fn draw_arcade_modal(frame: &mut Frame, app: &App, area: Rect) {
         frame.render_widget(para1, opt_chunks[1]);
     } else {
         let opt_count = item.options.len();
-        let constraints = vec![Constraint::Ratio(1, opt_count as u32); opt_count];
+        let safe_count = (opt_count as u32).max(1);
+        let constraints = vec![Constraint::Ratio(1, safe_count); opt_count];
         let opt_chunks = Layout::default()
             .direction(Direction::Horizontal)
             .constraints(constraints)
