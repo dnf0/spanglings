@@ -1,8 +1,8 @@
 {
   "Cargo.toml": {
-    "mtime": 1787920232.3715808,
-    "seen": 1787921963.4291022,
-    "ast_hash": "e78fe58df3fc3ef01e4d3cfd9cd6f8c8",
+    "mtime": 1787927608.4427207,
+    "seen": 1787927738.5214138,
+    "ast_hash": "9771808d1ba8af6afef2cd9cc83e8c7c",
     "semantic_hash": ""
   },
   "src/main.rs": {
@@ -138,8 +138,8 @@
     "semantic_hash": ""
   },
   "src/cli/commands/drill.rs": {
-    "mtime": 1787925785.5489092,
-    "seen": 1787926603.857381,
+    "mtime": 1787927132.510188,
+    "seen": 1787927738.5214279,
     "ast_hash": "c2e9ad1ea4920d955213a0be166e335a",
     "semantic_hash": ""
   },
@@ -1206,14 +1206,14 @@
     "semantic_hash": ""
   },
   "src/cli/commands/blitz.rs": {
-    "mtime": 1787926182.0062292,
-    "seen": 1787926603.857377,
+    "mtime": 1787927132.5094993,
+    "seen": 1787927738.521425,
     "ast_hash": "d7567691bc1767b770e3b743bd58dc3e",
     "semantic_hash": ""
   },
   "tests/blitz_tests.rs": {
-    "mtime": 1787926182.0592034,
-    "seen": 1787926603.8574028,
+    "mtime": 1787927132.5105104,
+    "seen": 1787927738.521454,
     "ast_hash": "d58ce9fb7b8d1ce1127800dc36ca96f1",
     "semantic_hash": ""
   },
@@ -1518,9 +1518,9 @@
     "semantic_hash": ""
   },
   "editors/vscode/package.json": {
-    "mtime": 1787919455.9813354,
-    "seen": 1787919552.148896,
-    "ast_hash": "4dea249e0f750d42a8f45fac53fe9ece",
+    "mtime": 1787927612.302409,
+    "seen": 1787927738.521419,
+    "ast_hash": "31426afd3a00ff5651d919a9a19d22a7",
     "semantic_hash": ""
   },
   "editors/vscode/src/commands.ts": {
@@ -2784,9 +2784,9 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1787920232.3710213,
-    "seen": 1787921963.4291542,
-    "ast_hash": "3f6c91fe334416819626bd23c025c433",
+    "mtime": 1787927617.6483216,
+    "seen": 1787927738.52147,
+    "ast_hash": "c32b3fb2d72ae102c54db739f56664ae",
     "semantic_hash": ""
   },
   "assets/demo.svg": {
@@ -2826,20 +2826,20 @@
     "semantic_hash": ""
   },
   "tests/drill_tests.rs": {
-    "mtime": 1787925785.600932,
-    "seen": 1787926603.857406,
+    "mtime": 1787927132.5109308,
+    "seen": 1787927738.5214562,
     "ast_hash": "889a52fee14103637a903b39caa0f913",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-28-rich-drill-prompts-and-cheat-sheets.md": {
-    "mtime": 1787924659.7552323,
-    "seen": 1787926603.857439,
+    "mtime": 1787927132.4971855,
+    "seen": 1787927738.521487,
     "ast_hash": "27a2cfecf1f6e6a2e433465a01608998",
     "semantic_hash": ""
   },
   "docs/superpowers/specs/2026-08-28-rich-drill-prompts-and-cheat-sheets-design.md": {
-    "mtime": 1787924515.7297502,
-    "seen": 1787926603.8574421,
+    "mtime": 1787927132.4974792,
+    "seen": 1787927738.5214899,
     "ast_hash": "a97e847036451fdcb5ae139c44c103a5",
     "semantic_hash": ""
   }
