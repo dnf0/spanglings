@@ -15,10 +15,16 @@ fn test_cli_parsing_subcommands() {
     assert_eq!(
         cli.command,
         Some(Commands::Explain {
-            topic: "subjunctive".to_string()
+            topic: Some("subjunctive".to_string())
         })
     );
     assert!(!cli.strict_accents);
+
+    let cli_explain_none = Cli::parse_from(["spanglings", "explain"]);
+    assert_eq!(
+        cli_explain_none.command,
+        Some(Commands::Explain { topic: None })
+    );
 
     let cli_strict =
         Cli::parse_from(["spanglings", "--strict-accents", "run", "b1_subjunctive_01"]);
@@ -141,14 +147,25 @@ fn test_cli_tour_command_parsing() {
 
 #[test]
 fn test_explain_command_executes_cleanly() {
-    assert!(show_explanation("subjunctive").is_ok());
-    assert!(show_explanation("por-para").is_ok());
-    assert!(show_explanation("ser-estar").is_ok());
-    assert!(show_explanation("past").is_ok());
-    assert!(show_explanation("pronouns").is_ok());
-    assert!(show_explanation("prepositions").is_ok());
-    assert!(show_explanation("accidental-se").is_ok());
-    assert!(show_explanation("unknown_random_topic").is_ok());
+    assert!(show_explanation(Some("subjunctive")).is_ok());
+    assert!(show_explanation(Some("por-para")).is_ok());
+    assert!(show_explanation(Some("ser-estar")).is_ok());
+    assert!(show_explanation(Some("past")).is_ok());
+    assert!(show_explanation(Some("pronouns")).is_ok());
+    assert!(show_explanation(Some("prepositions")).is_ok());
+    assert!(show_explanation(Some("accidental-se")).is_ok());
+    assert!(show_explanation(Some("unknown_random_topic")).is_ok());
+    assert!(show_explanation(None).is_ok());
+    assert!(show_explanation(Some("")).is_ok());
+    assert!(show_explanation(Some("   ")).is_ok());
+}
+
+#[test]
+fn test_cli_explain_semantic_lookup_and_glosses() {
+    assert!(show_explanation(Some("wishes")).is_ok());
+    assert!(show_explanation(Some("unintentional")).is_ok());
+    assert!(show_explanation(Some("body parts")).is_ok());
+    assert!(show_explanation(Some("conjecture")).is_ok());
 }
 
 #[test]
