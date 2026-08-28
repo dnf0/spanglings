@@ -6,7 +6,12 @@
 ### Context
 English: "There is no one here who knows how to fix this machine."
 
+### Instructions
+**TODO**: Conjugate the verb *(saber)* in the 3rd-person singular present subjunctive using its irregular stem.
+**Why**: A negative indefinite antecedent (*nadie*) negates the existence of the referent, mandating the subjunctive mood in the relative clause.
+
 ### Exercise
+<!-- TODO: Conjugate (saber) in 3rd-person singular present subjunctive -->
 Aquí no hay nadie que (saber) ___ cómo arreglar esta máquina.
 
 <!-- SOLUTION

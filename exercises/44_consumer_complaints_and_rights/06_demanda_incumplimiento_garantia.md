@@ -6,12 +6,16 @@
 ### Context
 English: "The consumer filed a small-claims lawsuit without requiring a lawyer or court representative."
 
+### Instructions
+**TODO**: Formulate the civil procedural filing phrase designating an oral small-claims claim exempt from mandatory legal counsel and court representative.
+**Why**: Under Spanish Civil Procedure Law (LEC), low-value claims proceed via simplified oral hearings without requiring mandatory representation by legal counsel or court attorney.
+
 ### Exercise
+<!-- TODO: Translate the civil procedural term for an oral small-claims filing without mandatory representation -->
 Translate into Spanish civil procedural terminology:
 "The consumer filed a small-claims lawsuit without requiring a lawyer or court representative."
 
 El consumidor interpuso ___
-
 <!-- SOLUTION
 una demanda de juicio verbal sin preceptiva intervención de abogado ni procurador
 -->

@@ -7,9 +7,13 @@
 Informal prompt: 'Mi maleta no llegó en la cinta; tienen que darme un papel de reclamo.'
 Transform into formal baggage desk terminology: 'Vengo a...' (tramitar el Parte de Irregularidad de Equipaje / tramitar el PIR).
 
-### Exercise
-Vengo a ___ para abrir el expediente de extravío.
+### Instructions
+**TODO**: Select the administrative infinitive denoting official processing followed by the full title of the Property Irregularity Report.
+**Why**: International aviation protocol (IATA) designates the official baggage claim document specifically as the Property Irregularity Report (*P.I.R.*) governed by an administrative processing verb.
 
+### Exercise
+<!-- TODO: Choose the official technical infinitive phrase for filing a baggage irregularity report -->
+Vengo a ___ para abrir el expediente de extravío.
 <!-- SOLUTION
 tramitar el Parte de Irregularidad de Equipaje
 -->

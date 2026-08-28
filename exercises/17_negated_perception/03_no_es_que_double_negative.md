@@ -6,7 +6,12 @@
 ### Context
 English: "It's not that I don't want to go, it's that I don't have time."
 
+### Instructions
+**TODO**: Conjugate *(querer)* into the 1st-person singular present subjunctive (*presente de subjuntivo*).
+**Why**: The contrastive corrective formula *no es que... sino que...* rejects an alleged reason or false premise, syntactically requiring the subjunctive in the negated clause regardless of polarity.
+
 ### Exercise
+<!-- TODO: Conjugate (querer) in 1st-person present subjunctive governed by "no es que" -->
 No es que no (querer) ___ ir, es que no tengo tiempo libre.
 
 <!-- SOLUTION

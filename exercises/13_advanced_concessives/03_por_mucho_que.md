@@ -6,7 +6,12 @@
 ### Context
 English: "No matter how much it hurts, you have to keep moving forward."
 
+### Instructions
+**TODO**: Conjugate the verb *(doler)* in the 3rd-person singular present subjunctive with stem vowel diphthongization.
+**Why**: The concessive locution *por mucho que* governs the subjunctive mood when introducing an obstacle whose degree is treated hypothetically.
+
 ### Exercise
+<!-- TODO: Conjugate (doler) in 3rd-person singular present subjunctive for concessive clause -->
 Por mucho que te (doler) ___, tienes que seguir adelante.
 
 <!-- SOLUTION

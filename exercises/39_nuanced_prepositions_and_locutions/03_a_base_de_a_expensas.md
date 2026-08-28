@@ -6,7 +6,12 @@
 ### Context
 English: "The team achieved success through relentless dedication, but at the expense of their personal rest."
 
+### Instructions
+**TODO**: Construct the clause using the compound locution for sustained foundational effort and the locution for detrimental sacrifice.
+**Why**: Prepositional locutions distinguish the fundamental instrument through which an outcome is achieved from the collateral cost incurred.
+
 ### Exercise
+<!-- TODO: Combine the locution of sustained effort with the locution of detrimental sacrifice -->
 El equipo alcanzó el éxito (a base de perseverancia y disciplina, pero a expensas de / a base de constancia) ___ su descanso personal.
 
 <!-- SOLUTION

@@ -6,9 +6,13 @@
 ### Context
 English: "The architecture proposal that the chief engineer had presented two years ago laid the groundwork for the new protocol."
 
-### Exercise
-La propuesta de arquitectura que (presentara / presentaría) ___ el ingeniero jefe hace dos años sentó las bases del nuevo protocolo.
+### Instructions
+**TODO**: Conjugate the verb *(presentar)* in the 3rd-person singular *-ra* form functioning as a stylistic literary pluperfect indicative.
+**Why**: In elevated journalistic and literary prose, the *-ra* ending historically and stylistically alternates with the pluperfect indicative (*había presentado*).
 
+### Exercise
+<!-- TODO: Conjugate the verb in the literary 3rd-person singular -ra pluperfect variant -->
+La propuesta de arquitectura que (presentara / presentaría) ___ el ingeniero jefe hace dos años sentó las bases del nuevo protocolo.
 <!-- SOLUTION
 presentara
 -->

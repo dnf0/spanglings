@@ -6,7 +6,12 @@
 ### Context
 English: "Look at those dark clouds; it is about to rain."
 
+### Instructions
+**TODO**: Complete the verbal periphrasis indicating imminent action (*on the verge of / about to*).
+**Why**: The fixed verbal periphrasis *(estar + [preposición] + inf)* conveys immediate imminence when constructed with the teleological preposition.
+
 ### Exercise
+<!-- TODO: Insert preposition in verbal periphrasis for imminent action -->
 Mira esos nubarrones negros; el cielo está ___ llover.
 
 <!-- SOLUTION

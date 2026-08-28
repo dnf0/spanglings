@@ -6,9 +6,13 @@
 ### Context
 English: "Don't worry about access credentials; the administrator probably has a backup copy."
 
-### Exercise
-No te preocupes por las credenciales de acceso; a lo mejor el administrador (tiene / tenga) ___ una copia de respaldo.
+### Instructions
+**TODO**: Conjugate the verb *(tener)* in the 3rd-person singular present indicative following the epistemic locution.
+**Why**: In Spanish, the epistemic locution *a lo mejor* strictly and obligatorily takes the INDICATIVE mood, never the subjunctive.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the present indicative following the epistemic locution of probability -->
+No te preocupes por las credenciales de acceso; a lo mejor el administrador (tiene / tenga) ___ una copia de respaldo.
 <!-- SOLUTION
 tiene
 -->

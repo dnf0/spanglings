@@ -6,7 +6,12 @@
 ### Context
 English: "Apartments are sold in this new building."
 
+### Instructions
+**TODO**: Conjugate *(vender)* into the 3rd-person plural present indicative (*presente de indicativo*).
+**Why**: In the reflexive passive (*pasiva refleja* with inanimate noun phrases), the verb must agree in number with the patient subject (*pisos de lujo*), requiring plural inflection.
+
 ### Exercise
+<!-- TODO: Conjugate (vender) in 3rd-person plural present indicative agreeing with "pisos de lujo" -->
 Se (vender) ___ pisos de lujo en este edificio recién construido.
 
 <!-- SOLUTION

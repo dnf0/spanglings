@@ -6,7 +6,12 @@
 ### Context
 English: "We would buy the house if we had sufficient savings."
 
+### Instructions
+**TODO**: Conjugate the verb *(tener)* in the 1st-person plural (*nosotros*) imperfect subjunctive with the required written accent.
+**Why**: Even when the conditional consequence (*compraríamos*) precedes the condition, the subordinate *si* clause strictly requires the imperfect subjunctive.
+
 ### Exercise
+<!-- TODO: Conjugate (tener) in 1st-person plural imperfect subjunctive -->
 Compraríamos la casa si nosotros (tener) ___ ahorros suficientes.
 
 <!-- SOLUTION

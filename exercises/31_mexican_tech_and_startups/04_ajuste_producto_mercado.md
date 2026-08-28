@@ -6,7 +6,12 @@
 ### Context
 English: "Before scaling user acquisition campaigns, it is essential to achieve product-market fit in the target segment."
 
+### Instructions
+**TODO**: Insert the standard Spanish venture ecosystem term for commercial product-market alignment.
+**Why**: The foundational startup milestone is expressed by pairing the masculine noun with the hyphenated compound indicating market alignment.
+
 ### Exercise
+<!-- TODO: Insert the standard venture capital term for product-market alignment -->
 Antes de escalar las campañas de adquisición de usuarios, es indispensable alcanzar el (ajuste producto-mercado) ___ en el segmento objetivo.
 
 <!-- SOLUTION

@@ -6,9 +6,13 @@
 ### Context
 English: "The Supreme Court declared floor clauses in mortgage loan contracts null and void due to lack of transparency."
 
-### Exercise
-El Tribunal Supremo declaró nulas las (cláusulas suelo por falta de transparencia / estipulaciones limitativas del tipo de interés) ___ en los contratos de préstamo hipotecario.
+### Instructions
+**TODO**: Select the established legal jurisprudence noun phrase in the feminine plural designating minimum interest rate threshold stipulations invalidated for opacity.
+**Why**: Spanish consumer protection and mortgage case law specifically establishes the canonical legal term for interest rate floor provisions struck down for lack of clarity.
 
+### Exercise
+<!-- TODO: Select the canonical mortgage jurisprudence noun phrase for floor clauses invalidated for opacity -->
+El Tribunal Supremo declaró nulas las (cláusulas suelo por falta de transparencia / estipulaciones limitativas del tipo de interés) ___ en los contratos de préstamo hipotecario.
 <!-- SOLUTION
 cláusulas suelo por falta de transparencia
 -->

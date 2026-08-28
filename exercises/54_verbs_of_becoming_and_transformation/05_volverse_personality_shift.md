@@ -6,9 +6,13 @@
 ### Context
 English: "After suffering several data leaks, the founder became extremely distrustful."
 
-### Exercise
-Después de sufrir varias filtraciones de datos, el fundador (se volvió / se puso) ___ sumamente desconfiado.
+### Instructions
+**TODO**: Conjugate the pronominal verb *(volverse)* in the 3rd-person singular preterite indicative to express an involuntary, enduring shift in personality.
+**Why**: The verb *(volverse)* characterizes an involuntary, profound, and often negative psychological or personality transformation.
 
+### Exercise
+<!-- TODO: Conjugate the pronominal verb for an involuntary shift in character or personality -->
+Después de sufrir varias filtraciones de datos, el fundador (se volvió / se puso) ___ sumamente desconfiado.
 <!-- SOLUTION
 se volvió
 -->

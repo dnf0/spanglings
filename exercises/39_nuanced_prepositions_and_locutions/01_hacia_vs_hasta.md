@@ -6,7 +6,12 @@
 ### Context
 English: "We walked toward the mountains for two hours until we finally reached the edge of the lake."
 
+### Instructions
+**TODO**: Contrast directional approximation using 'hacia' with a definitive destination or boundary marked by 'hasta'.
+**Why**: 'Hacia' indicates movement or orientation in the general direction of a reference point without implying arrival, whereas 'hasta' marks the definitive spatial or temporal terminal limit.
+
 ### Exercise
+<!-- TODO: Differentiate approximate direction 'hacia' from definitive boundary 'hasta' -->
 Caminamos (hacia las montañas durante dos horas hasta llegar al / hacia las montanas durante dos horas hasta llegar) ___ borde del lago cristalino.
 
 <!-- SOLUTION

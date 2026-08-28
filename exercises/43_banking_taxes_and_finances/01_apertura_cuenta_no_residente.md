@@ -6,9 +6,13 @@
 ### Context
 English: "To open the account, you will need to provide the non-resident certificate issued by the authorities."
 
-### Exercise
-Para aperturar la cuenta, será indispensable aportar el (certificado de no residente expedido / comprobante de no residencia emitido) ___ por la autoridad competente.
+### Instructions
+**TODO**: Select the formal banking infinitive phrase *(aportar)* specifying the non-resident certificate and official proof of income documentation.
+**Why**: Financial compliance and anti-money laundering (KYC) regulations require elevated banking terminology rather than colloquial verbs.
 
+### Exercise
+<!-- TODO: Select the formal banking infinitive phrase for providing non-resident documentation and income proof -->
+Para aperturar la cuenta, será indispensable aportar el (certificado de no residente expedido / comprobante de no residencia emitido) ___ por la autoridad competente.
 <!-- SOLUTION
 certificado de no residente expedido
 -->

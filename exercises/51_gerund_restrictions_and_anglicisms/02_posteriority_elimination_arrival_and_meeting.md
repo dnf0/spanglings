@@ -6,9 +6,13 @@
 ### Context
 English: "The technical delegation arrived at the Madrid office on Monday and met the following day with the investors."
 
-### Exercise
-La comitiva técnica arribó a la sede de Madrid el lunes (y se reunió / reuniéndose) ___ al día siguiente con los inversores.
+### Instructions
+**TODO**: Insert the coordinating conjunction with the 3rd-person singular preterite pronominal verb *(reunirse)* for the chronologically subsequent meeting.
+**Why**: Chronologically separate narrative actions cannot be chained using gerunds; standard Spanish syntax requires finite coordinated verbs.
 
+### Exercise
+<!-- TODO: Insert the coordinated preterite verb phrase to express chronological succession -->
+La comitiva técnica arribó a la sede de Madrid el lunes (y se reunió / reuniéndose) ___ al día siguiente con los inversores.
 <!-- SOLUTION
 y se reunió
 -->

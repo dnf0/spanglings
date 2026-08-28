@@ -6,7 +6,12 @@
 ### Context
 English: "All citizens must comply with and respect judicial decisions."
 
+### Instructions
+**TODO**: Supply the formal institutional infinitive verb denoting dutiful compliance and submission to judicial rulings or laws.
+**Why**: Institutional and legal Spanish selects a precise Latinate verb of formal compliance when referring to obedience to court rulings (*resoluciones judiciales*), laws, or constitutional mandates.
+
 ### Exercise
+<!-- TODO: Supply the formal legal infinitive verb for complying with judicial rulings -->
 Todos los ciudadanos tienen el deber de ___ las resoluciones judiciales.
 
 <!-- SOLUTION

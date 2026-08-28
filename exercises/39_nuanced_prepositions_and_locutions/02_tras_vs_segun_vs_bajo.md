@@ -6,7 +6,12 @@
 ### Context
 English: "After several weeks of evaluation, and according to the official report, the project was approved under strict conditions."
 
+### Instructions
+**TODO**: Apply nuanced prepositions expressing posteriority for the timeline, conformity for the official report, and conditional subordination for the parameters.
+**Why**: Prepositional nuance distinguishes posteriority ('after / following'), conformity to standards ('in accordance with'), and state or constraint ('subject to').
+
 ### Exercise
+<!-- TODO: Apply nuanced prepositions for posteriority, conformity, and subordination -->
 (Tras varias semanas de evaluación, y según el informe oficial, se aprobó bajo / Tras varias semanas de evaluacion) ___ estrictas condiciones de seguridad.
 
 <!-- SOLUTION

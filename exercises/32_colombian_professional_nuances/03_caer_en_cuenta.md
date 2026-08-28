@@ -6,7 +6,12 @@
 ### Context
 English: "It was only after running the integration suite that the lead engineer realized that the token had expired."
 
+### Instructions
+**TODO**: Conjugate the Colombian realization idiom based on *(caer)* in the 3rd-person singular preterite indicative.
+**Why**: The regional verbal locution expressing sudden realization or awareness combines the falling verb with the prepositional ledger noun and subordinating 'que'.
+
 ### Exercise
+<!-- TODO: Conjugate the Colombian sudden realization idiom in 3rd-person singular preterite -->
 Fue solo tras ejecutar la suite de integración cuando el ingeniero principal (cayó en cuenta de que) ___ el token de autenticación había expirado.
 
 <!-- SOLUTION

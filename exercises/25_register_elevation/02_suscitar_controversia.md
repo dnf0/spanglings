@@ -6,7 +6,12 @@
 ### Context
 English: "The publication of the report aroused intense controversy among economic analysts."
 
+### Instructions
+**TODO**: Provide the elevated infinitive verb meaning "to arouse / spark / stir up debate or controversy" formed with prefix *sus-*.
+**Why**: Academic and journalistic Spanish favors Latinate verbs of elicitation over generic ones like *causar* or *provocar* when introducing reactions like *polémica*, *controversia*, or *interés*.
+
 ### Exercise
+<!-- TODO: Supply the elevated infinitive verb for stirring up intense debate or controversy -->
 La publicación del informe logró (suscitar) ___ una intensa polémica entre los analistas económicos.
 
 <!-- SOLUTION

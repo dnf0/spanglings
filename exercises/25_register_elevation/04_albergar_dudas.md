@@ -6,7 +6,12 @@
 ### Context
 English: "The magistrates still harbor doubts regarding the veracity of the testimony."
 
+### Instructions
+**TODO**: Conjugate *(albergar)* into the 3rd-person plural present indicative (*presente de indicativo*).
+**Why**: Elevated judicial prose replaces the basic verb *tener* with *albergar* when referring to harboring internal skepticism (*dudas*).
+
 ### Exercise
+<!-- TODO: Conjugate (albergar) in 3rd-person plural present indicative collocating with "dudas" -->
 Los magistrados aún (albergan) ___ dudas sobre la veracidad del testimonio presentado.
 
 <!-- SOLUTION

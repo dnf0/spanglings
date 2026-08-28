@@ -6,7 +6,12 @@
 ### Context
 English: "I accidentally dropped my keys."
 
+### Instructions
+**TODO**: Insert the 1st-person singular indirect pronoun (*me*) followed by the 3rd-person plural preterite indicative of *(caer)*.
+**Why**: The verb in the accidental *se* structure must agree in number with the plural grammatical subject (*las llaves*).
+
 ### Exercise
+<!-- TODO: Insert 1st-person dative clitic and plural preterite verb agreeing with subject -->
 Se ___ (caer) las llaves en la alcantarilla.
 
 <!-- SOLUTION

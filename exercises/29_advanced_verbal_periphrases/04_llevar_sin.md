@@ -6,7 +6,12 @@
 ### Context
 English: "The replica cluster has not synchronized for over two hours due to network congestion."
 
+### Instructions
+**TODO**: Conjugate the aspectual periphrasis *(llevar sin)* in the 3rd-person singular present indicative matching 'el clúster'.
+**Why**: The cumulative negative periphrasis *(llevar sin + infinitive)* expresses the duration of an uninterrupted period during which an action has ceased to take place.
+
 ### Exercise
+<!-- TODO: Conjugate (llevar sin) in 3rd-person singular present indicative -->
 El clúster de réplica (lleva sin) ___ sincronizar más de dos horas debido a la congestión de la red.
 
 <!-- SOLUTION

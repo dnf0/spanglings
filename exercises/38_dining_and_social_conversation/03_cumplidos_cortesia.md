@@ -6,7 +6,12 @@
 ### Context
 English: "Everyone complimented her on how well the jacket suited her, and told her not to worry about arriving late."
 
+### Instructions
+**TODO**: Form the social compliment using the neuter intensifier of appraisal, the imperfect of aesthetic fit, and the reported reassurance with imperfect subjunctive of *(preocuparse)*.
+**Why**: Neuter 'lo + adverb + que' introduces exclamative clauses of degree, while indirect polite reassurances require the imperfect subjunctive of the reflexive verb.
+
 ### Exercise
+<!-- TODO: Form the social compliment with neuter intensifier and subjunctive reassurance -->
 Todos le comentaron (lo bien que le quedaba la chaqueta y que no se preocupara / que bien le quedaba) ___ por el retraso.
 
 <!-- SOLUTION

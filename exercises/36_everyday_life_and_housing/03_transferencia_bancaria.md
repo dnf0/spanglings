@@ -6,7 +6,12 @@
 ### Context
 English: "The bank charged a ten euro transaction fee for making an international bank transfer."
 
+### Instructions
+**TODO**: Insert the banking noun phrase for the fee charged for executing an electronic bank remittance with correct tildes.
+**Why**: In Spanish financial terminology, institutional service charges use the accented banking noun accompanied by 'por' and the execution infinitive.
+
 ### Exercise
+<!-- TODO: Insert the banking phrase for electronic remittance execution fee -->
 El banco cobró una (comisión por realizar una transferencia bancaria / comision por realizar una transferencia bancaria) ___ al extranjero.
 
 <!-- SOLUTION

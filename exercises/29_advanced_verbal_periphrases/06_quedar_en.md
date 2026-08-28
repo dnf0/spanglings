@@ -6,7 +6,12 @@
 ### Context
 English: "During the sprint retrospective, we agreed to automate regression tests before next week."
 
+### Instructions
+**TODO**: Conjugate the contractual periphrasis *(quedar en)* in the 1st-person plural preterite indicative.
+**Why**: The construction *(quedar en + infinitive)* signifies arriving at a mutual agreement or formal commitment with others at a specific past point in time.
+
 ### Exercise
+<!-- TODO: Conjugate (quedar en) in 1st-person plural preterite indicative -->
 Durante la retrospectiva del sprint, (quedamos en) ___ automatizar las pruebas de regresión antes de la próxima semana.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "To migrate the legacy billing system without downtime, the platform engineers had to do meticulous work."
 
+### Instructions
+**TODO**: Insert the Rioplatense regional engineering idiom signifying executing high-precision, craftsmanship-grade software work.
+**Why**: In Argentine and Uruguayan tech slang, the lunfardo term for work is paired with the adjective for delicacy to describe intricate engineering.
+
 ### Exercise
+<!-- TODO: Supply the Rioplatense regional idiom for high-precision engineering work -->
 Para migrar el sistema de facturación sin tiempo de inactividad, los ingenieros tuvieron que (hacer un laburo fino) ___ en la capa de persistencia.
 
 <!-- SOLUTION

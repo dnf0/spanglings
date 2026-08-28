@@ -6,7 +6,12 @@
 ### Context
 English: "To reinforce cloud security resilience, leadership carried out a headcount reallocation across engineering divisions."
 
+### Instructions
+**TODO**: Insert the formal corporate term for organizational workforce restructuring avoiding unadapted English loanwords.
+**Why**: Human resources governance in Spanish-speaking enterprises refers to workforce restructuring through the action noun with acute accent on the suffix paired with 'de personal' (or equivalent staff noun).
+
 ### Exercise
+<!-- TODO: Supply the formal Spanish human resources term for workforce restructuring -->
 Para reforzar la seguridad en la nube, la dirección llevó a cabo una (reasignación de plantilla) ___ en los equipos de ingeniería.
 
 <!-- SOLUTION

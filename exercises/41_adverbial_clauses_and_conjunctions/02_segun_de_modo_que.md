@@ -6,7 +6,12 @@
 ### Context
 English: "We documented every process in detail so that any new engineer could onboard without blockers."
 
+### Instructions
+**TODO**: Construct the consecutive purpose clause using the finality connector, the indefinite subject noun phrase, the 3rd-person singular imperfect subjunctive of *(poder)*, and onboarding infinitive.
+**Why**: When consecutive connectors express projected intentionality or deliberate design rather than mere historical result, they mandate the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Form the consecutive purpose clause with intentional connector and imperfect subjunctive of (poder) -->
 Documentamos cada proceso en detalle (de modo que cualquier nuevo colaborador pudiera incorporarse sin / de manera que cualquier nuevo colaborador) ___ fricciones innecesarias.
 
 <!-- SOLUTION

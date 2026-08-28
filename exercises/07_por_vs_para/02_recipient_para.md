@@ -6,7 +6,12 @@
 ### Context
 English: "This birthday gift is for you."
 
+### Instructions
+**TODO**: Insert the preposition denoting the intended beneficiary or recipient of an object.
+**Why**: Marking the end receiver of a gift (*for you*) expresses terminal destination, selecting the target preposition.
+
 ### Exercise
+<!-- TODO: Insert preposition indicating intended recipient -->
 Este regalo de cumpleaños es ___ ti.
 
 <!-- SOLUTION

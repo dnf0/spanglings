@@ -6,9 +6,13 @@
 ### Context
 English: "You have a demanding meeting in five minutes; drink up all the hot herbal tea."
 
-### Exercise
-Tienes una reunión muy exigente en cinco minutos; (bébete / bebe te) ___ toda la taza de infusión caliente.
+### Instructions
+**TODO**: Conjugate the affirmative informal 2nd-person singular imperative of *(beberse)* with enclitic reflexive pronoun for telic consumption.
+**Why**: Verbs of consumption (*comerse, beberse, leerse*) use the aspectual/deliberative dative with an enclitic pronoun to emphasize complete, exhaustive consumption.
 
+### Exercise
+<!-- TODO: Conjugate the 2nd-person affirmative imperative with enclitic pronoun for exhaustive consumption -->
+Tienes una reunión muy exigente en cinco minutos; (bébete / bebe te) ___ toda la taza de infusión caliente.
 <!-- SOLUTION
 bébete
 -->

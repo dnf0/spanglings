@@ -6,7 +6,12 @@
 ### Context
 English: "We will go to the beach unless it rains tomorrow."
 
+### Instructions
+**TODO**: Conjugate the impersonal verb *(llover)* in the 3rd-person singular present subjunctive with stem diphthongization.
+**Why**: The conditional-exceptive connector *a menos que* introduces a hypothetical barrier and always governs the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Conjugate (llover) in 3rd-person singular present subjunctive -->
 Iremos a la playa a menos que (llover) ___ mañana.
 
 <!-- SOLUTION

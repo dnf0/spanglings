@@ -6,9 +6,13 @@
 ### Context
 English: "In order to cross the border, you are required to demonstrate proof of sufficient financial means for your stay."
 
-### Exercise
-Para cruzar el control fronterizo, es preceptivo aportar la (acreditación de medios económicos suficientes / prueba de solvencia económica) ___ durante toda la estancia.
+### Instructions
+**TODO**: Select the formal administrative nominal expression denoting official proof of financial self-sufficiency and round-trip transport documentation.
+**Why**: Border control authorities use specialized administrative phrasing rather than informal equivalents when specifying entry requirements.
 
+### Exercise
+<!-- TODO: Select the formal administrative phrase for demonstrating financial self-sufficiency and return ticket -->
+Para cruzar el control fronterizo, es preceptivo aportar la (acreditación de medios económicos suficientes / prueba de solvencia económica) ___ durante toda la estancia.
 <!-- SOLUTION
 acreditación de medios económicos suficientes
 -->

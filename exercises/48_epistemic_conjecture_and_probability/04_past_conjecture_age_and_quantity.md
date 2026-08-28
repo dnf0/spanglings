@@ -6,9 +6,13 @@
 ### Context
 English: "When he founded his first tech company, he was probably barely twenty-five years old."
 
-### Exercise
-Cuando fundó su primera empresa de tecnología, (tendría / tenía probablemente) ___ apenas veinticinco años.
+### Instructions
+**TODO**: Conjugate the verb *(tener)* in the 3rd-person singular simple conditional to speculate on an approximate past age.
+**Why**: Epistemic conjecture about numerical quantities or age in the past is systematically expressed via the simple conditional.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the 3rd-person singular conditional to express approximate past age -->
+Cuando fundó su primera empresa de tecnología, (tendría / tenía probablemente) ___ apenas veinticinco años.
 <!-- SOLUTION
 tendría
 -->

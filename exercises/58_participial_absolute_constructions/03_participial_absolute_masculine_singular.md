@@ -6,9 +6,13 @@
 ### Context
 English: "The cloud services agreement having been signed, the finance department released the first installment."
 
-### Exercise
-(Firmado / Firmando) ___ el contrato de prestación de servicios en la nube, el departamento de finanzas liberó el primer pago.
+### Instructions
+**TODO**: Select the past participle form of *(firmar)* in the masculine singular rather than a gerund to head the temporal absolute clause.
+**Why**: Temporal absolute clauses indicating prior completion require a past participle (*participio absoluto*) rather than a gerund.
 
+### Exercise
+<!-- TODO: Select the masculine singular past participle heading the absolute temporal clause -->
+(Firmado / Firmando) ___ el contrato de prestación de servicios en la nube, el departamento de finanzas liberó el primer pago.
 <!-- SOLUTION
 Firmado
 -->

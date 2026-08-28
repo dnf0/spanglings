@@ -6,7 +6,12 @@
 ### Context
 English: "The gateway is responsible for the intelligent routing of requests toward available worker nodes."
 
+### Instructions
+**TODO**: Supply the technical deverbal noun formed from *(enrutar)* denoting the traffic routing mechanism in computer networks.
+**Why**: Standard networking and software engineering in Spanish nominalizes the verb for directing traffic along a route using the suffix *-miento*, avoiding direct raw English nouns.
+
 ### Exercise
+<!-- TODO: Supply the deverbal noun for network traffic routing -->
 La pasarela de enlace se encarga del (enrutamiento) ___ inteligente de peticiones hacia los nodos disponibles.
 
 <!-- SOLUTION

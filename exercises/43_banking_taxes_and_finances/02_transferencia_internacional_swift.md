@@ -6,9 +6,13 @@
 ### Context
 English: "Please execute the international transfer with shared costs between the sender and beneficiary."
 
-### Exercise
-Por favor, ejecuten la transferencia internacional con (los gastos compartidos entre ordenante y beneficiario / comisiones compartidas) ___ conforme al código SWIFT facilitado.
+### Instructions
+**TODO**: Select the wire fee distribution clause with shared expenses between the ordering party and the recipient party.
+**Why**: Banking operations and international wire protocols designate SHA fee arrangements by explicitly naming the ordering entity and the payee.
 
+### Exercise
+<!-- TODO: Choose the technical banking phrase for shared wire fees between ordering party and payee -->
+Por favor, ejecuten la transferencia internacional con (los gastos compartidos entre ordenante y beneficiario / comisiones compartidas) ___ conforme al código SWIFT facilitado.
 <!-- SOLUTION
 los gastos compartidos entre ordenante y beneficiario
 -->

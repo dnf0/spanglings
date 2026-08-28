@@ -6,7 +6,12 @@
 ### Context
 English: "To preserve atomicity across distributed datastores, the engine coordinates a two-phase commit protocol."
 
+### Instructions
+**TODO**: Translate the distributed consensus protocol for dual-stage atomic transaction agreement using standard technical Spanish.
+**Why**: Formal computer systems literature renders dual-stage commit protocols as a prepositional phrase with the action noun 'confirmación' (or alternative agreement noun) followed by the prepositional numeric stage count.
+
 ### Exercise
+<!-- TODO: Insert the technical translation for dual-stage atomic transaction agreement -->
 Para preservar la atomicidad en almacenes distribuidos, el motor coordina un protocolo de (compromiso en dos fases) ___.
 
 <!-- SOLUTION

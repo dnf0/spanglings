@@ -6,9 +6,13 @@
 ### Context
 English: "The executive director undertook the complete restructuring of the system, even knowing full well that it was a gigantic technical challenge."
 
-### Exercise
-El director ejecutivo asumió la reestructuración completa del sistema, aun a sabiendas de que (era / fuera) ___ un reto técnico gigantesco.
+### Instructions
+**TODO**: Conjugate the verb *(ser)* in the 3rd-person singular imperfect indicative following the factual concessive locution.
+**Why**: The intensive concessive phrase *aun a sabiendas de que* ('even knowing full well that...') introduces an acknowledged factual certainty and obligatorily selects the INDICATIVE mood.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the imperfect indicative after the factual certainty concessive locution -->
+El director ejecutivo asumió la reestructuración completa del sistema, aun a sabiendas de que (era / fuera) ___ un reto técnico gigantesco.
 <!-- SOLUTION
 era
 -->

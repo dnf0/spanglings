@@ -6,7 +6,12 @@
 ### Context
 English: "(To an Argentine friend) Do you know where the keys to the apartment are?"
 
+### Instructions
+**TODO**: Conjugate *(saber)* into the 2nd-person singular present indicative with Rioplatense *voseo* morphology.
+**Why**: Rioplatense *voseo* in the present indicative retains the medieval monophthongized ending with final syllable stress (*-és* for *-er* verbs), written with an acute accent.
+
 ### Exercise
+<!-- TODO: Conjugate (saber) in 2nd-person singular present indicative with voseo morphology -->
 Che, ¿vos (saber) ___ dónde quedaron las llaves del departamento?
 
 <!-- SOLUTION

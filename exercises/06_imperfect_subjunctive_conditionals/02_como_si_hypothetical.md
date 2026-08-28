@@ -6,7 +6,12 @@
 ### Context
 English: "He talks with so much authority as if he were the owner of the company."
 
+### Instructions
+**TODO**: Conjugate the verb *(ser)* in the 3rd-person singular imperfect subjunctive (*-ra* form).
+**Why**: The comparative modal locution *como si* invariably establishes a counterfactual or hypothetical comparison requiring the imperfect subjunctive.
+
 ### Exercise
+<!-- TODO: Conjugate (ser) in 3rd-person singular imperfect subjunctive -->
 Habla con tanta autoridad como si (ser) ___ el dueño de la empresa.
 
 <!-- SOLUTION

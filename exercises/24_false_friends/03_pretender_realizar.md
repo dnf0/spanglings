@@ -6,7 +6,12 @@
 ### Context
 English: "The imposter tried to pretend that he was a doctor to enter the operating room."
 
+### Instructions
+**TODO**: Supply the infinitive verb meaning "to feign / simulate / pretend", distinguishing it from the false cognate *pretender*.
+**Why**: Spanish *pretender* means "to aspire to / intend", whereas English "to pretend" (feign) translates to verbs like *simular*, *aparentar*, or the 3rd-conjugation verb for faking an identity.
+
 ### Exercise
+<!-- TODO: Supply the infinitive verb for feigning without using the false friend "pretender" -->
 El impostor intentó (fingir) ___ que era médico para entrar en el quirófano.
 
 <!-- SOLUTION

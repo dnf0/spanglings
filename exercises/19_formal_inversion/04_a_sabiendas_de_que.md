@@ -6,7 +6,12 @@
 ### Context
 English: "He accepted the mission in the full knowledge that it was perilous."
 
+### Instructions
+**TODO**: Supply the feminine plural adverbial noun derived from *(saber)* that completes the formal locution meaning "in the full knowledge that / fully aware that".
+**Why**: Spanish high-register prose uses the lexicalized prepositional locution *a... de que* to express deliberate action taken with full awareness of consequences.
+
 ### Exercise
+<!-- TODO: Supply the adverbial noun completing the formal locution for "fully aware that" -->
 A ___ de que era peligroso, aceptó liderar la expedición.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "The legal department updated telemetry retention policies to mitigate regulatory exposure under European data laws."
 
+### Instructions
+**TODO**: Translate the verbal infinitive phrase 'to reduce / attenuate regulatory exposure' into formal compliance Spanish.
+**Why**: Enterprise risk management collocations pair the infinitive of reduction/attenuation with the feminine singular noun phrase reflecting compliance risk.
+
 ### Exercise
+<!-- TODO: Translate 'to reduce regulatory exposure' into formal compliance Spanish -->
 El departamento legal actualizó las políticas de retención para (mitigar la exposición regulatoria) ___ frente al marco normativo europeo.
 
 <!-- SOLUTION

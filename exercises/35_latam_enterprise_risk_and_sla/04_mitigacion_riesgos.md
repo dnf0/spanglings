@@ -6,7 +6,12 @@
 ### Context
 English: "The chief security officer presented a comprehensive risk mitigation plan to comply with regional financial regulations."
 
+### Instructions
+**TODO**: Insert the executive governance noun phrase for risk abatement strategy with proper tilde on the action noun.
+**Why**: Enterprise security governance pairs the strategy blueprint noun with the prepositional hazard abatement phrase.
+
 ### Exercise
+<!-- TODO: Supply the executive governance phrase for risk abatement strategy -->
 El director de seguridad de la información presentó un exhaustivo (plan de mitigación de riesgos / plan de mitigacion de riesgos) ___ para cumplir con la normativa bancaria regional.
 
 <!-- SOLUTION

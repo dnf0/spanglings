@@ -6,7 +6,12 @@
 ### Context
 English: "I met my best friend ten years ago at university."
 
+### Instructions
+**TODO**: Conjugate the verb *(conocer)* in the 1st-person singular (*yo*) preterite indicative with the required written accent.
+**Why**: The preterite aspect of *(conocer)* conveys the initial punctual meeting event (*hace diez años*), whereas the imperfect denotes an existing ongoing relationship.
+
 ### Exercise
+<!-- TODO: Conjugate (conocer) in 1st-person singular preterite indicative -->
 Hace diez años (conocer) ___ a mi mejor amigo en la universidad.
 
 <!-- SOLUTION

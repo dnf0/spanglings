@@ -6,7 +6,12 @@
 ### Context
 English: "He tried to strike up a conversation with the ambassador."
 
+### Instructions
+**TODO**: Provide the formal infinitive verb meaning "to initiate / strike up" that collocates naturally with *conversación*.
+**Why**: In formal and diplomatic Spanish, a specialized transitive verb derived from *tabla* is the standard lexical collocation used with *conversación*, *diálogo*, or *negociaciones* instead of generic verbs like *hacer* or *empezar*.
+
 ### Exercise
+<!-- TODO: Supply the formal infinitive verb collocating with "conversación" -->
 Intentó ___ conversación con el diplomático durante la recepción.
 
 <!-- SOLUTION

@@ -6,9 +6,13 @@
 ### Context
 English: "I am contacting customer service to dispute several unauthorized charges on my credit card."
 
-### Exercise
-Me pongo en contacto para (impugnar varios cargos no autorizados en mi tarjeta de crédito / desconocer transacciones no autorizadas) ___ y solicitar su inmediata retrocesión.
+### Instructions
+**TODO**: Choose the formal banking infinitive clause for disputing multiple fraudulent payment entries on a payment card.
+**Why**: Official financial dispute procedures require legal challenge verbs combined with descriptive qualifiers for fraudulent debits to formally request a chargeback (*retrocesión*).
 
+### Exercise
+<!-- TODO: Choose the formal infinitive phrase for disputing illicit card debits -->
+Me pongo en contacto para (impugnar varios cargos no autorizados en mi tarjeta de crédito / desconocer transacciones no autorizadas) ___ y solicitar su inmediata retrocesión.
 <!-- SOLUTION
 impugnar varios cargos no autorizados en mi tarjeta de crédito
 -->

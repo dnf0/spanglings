@@ -6,9 +6,13 @@
 ### Context
 English: "Because the product presented a manufacturing defect, the buyer has the right to demand repair or replacement."
 
-### Exercise
-Al presentar un vicio de origen, el comprador tiene derecho a (exigir la subsanación o sustitución del producto / solicitar el reemplazo o reparación del bien) ___ sin gasto alguno.
+### Instructions
+**TODO**: Choose the legal consumer warranty infinitive phrase for demanding lack-of-conformity remedy or item replacement.
+**Why**: Spanish General Law for the Protection of Consumers establishes specific statutory remedies for manufacturing defects, providing an alternation between repair and replacement.
 
+### Exercise
+<!-- TODO: Choose the statutory infinitive phrase for demanding defect remedy or item replacement -->
+Al presentar un vicio de origen, el comprador tiene derecho a (exigir la subsanación o sustitución del producto / solicitar el reemplazo o reparación del bien) ___ sin gasto alguno.
 <!-- SOLUTION
 exigir la subsanación o sustitución del producto
 -->

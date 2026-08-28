@@ -6,9 +6,13 @@
 ### Context
 English: "For the backend we did not choose a monolithic architecture, but rather a decoupled microservices pattern."
 
-### Exercise
-Para el backend no elegimos una arquitectura monolítica, (sino / pero) ___ un esquema desacoplado de microservicios.
+### Instructions
+**TODO**: Insert the exclusive adversative conjunction substituting a negated nominal element with an alternative noun phrase.
+**Why**: When replacing a negated premise (*no X*) with an exclusive alternative noun phrase (*Y*), Spanish requires the exclusive adversative conjunction rather than the restrictive counterpart.
 
+### Exercise
+<!-- TODO: Insert the exclusive adversative conjunction substituting a negated noun -->
+Para el backend no elegimos una arquitectura monolítica, (sino / pero) ___ un esquema desacoplado de microservicios.
 <!-- SOLUTION
 sino
 -->

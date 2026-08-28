@@ -6,9 +6,13 @@
 ### Context
 English: "If only one could debug concurrent distributed systems with such ease!"
 
-### Exercise
-¡(Quién pudiera / Quién puede) ___ depurar sistemas distribuidos concurrentes con tanta facilidad!
+### Instructions
+**TODO**: Select the optative exclamatory pronoun with accent followed by the 3rd-person singular imperfect subjunctive of *(poder)* to express an unattainable counterfactual wish.
+**Why**: The exclamatory construction with interrogative-style optative pronoun and imperfect subjunctive conveys an impossible or nostalgic wish referring to the speaker.
 
+### Exercise
+<!-- TODO: Select the optative exclamatory pronoun and imperfect subjunctive expressing unattainable longing -->
+¡(Quién pudiera / Quién puede) ___ depurar sistemas distribuidos concurrentes con tanta facilidad!
 <!-- SOLUTION
 Quién pudiera
 -->

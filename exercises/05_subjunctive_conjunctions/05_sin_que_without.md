@@ -6,7 +6,12 @@
 ### Context
 English: "He left the room without anyone noticing."
 
+### Instructions
+**TODO**: Conjugate the pronominal verb *(enterarse)* in the 3rd-person singular imperfect subjunctive (*-ra* form).
+**Why**: The modal-privative conjunction *sin que* introduces an unrealized or unperceived circumstance in past sequence, mandating the imperfect subjunctive.
+
 ### Exercise
+<!-- TODO: Conjugate (enterarse) in 3rd-person singular imperfect subjunctive -->
 Salió de la habitación sin que nadie se (enterar) ___.
 
 <!-- SOLUTION

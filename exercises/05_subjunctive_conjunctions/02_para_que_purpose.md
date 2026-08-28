@@ -6,7 +6,12 @@
 ### Context
 English: "I explain it to you so that you understand the situation."
 
+### Instructions
+**TODO**: Conjugate the verb *(entender)* in the 2nd-person singular (*tú*) present subjunctive with stem vowel diphthongization.
+**Why**: The final conjunction of purpose *para que* introduces an intended goal with a change of subject, mandatorily selecting the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Conjugate (entender) in 2nd-person singular present subjunctive -->
 Te lo explico para que (entender) ___ la situación.
 
 <!-- SOLUTION

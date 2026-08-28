@@ -6,7 +6,12 @@
 ### Context
 English: "As user demand increases in the coming months, the system will scale automatically."
 
+### Instructions
+**TODO**: Form the proportional clause with the progressive connector of correlation, the 3rd-person singular present subjunctive of *(aumentar)*, and the demand noun phrase.
+**Why**: Proportional subordinators expressing progressive correlation with future events mandate the subjunctive mood in the adverbial clause.
+
 ### Exercise
+<!-- TODO: Form the proportional progression clause using progressive correlation connector and subjunctive of (aumentar) -->
 (A medida que aumente la demanda de usuarios en los próximos / Conforme aumente la demanda) ___ meses, la infraestructura escalará automáticamente.
 
 <!-- SOLUTION

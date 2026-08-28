@@ -6,9 +6,13 @@
 ### Context
 English: "Well, let's see, to be completely frank, I'm not totally convinced by that proposal."
 
-### Exercise
-(Bueno, a ver, siendo totalmente francos / Pues, mira, para ser sinceros) ___, esa propuesta no termina de convencerme del todo.
+### Instructions
+**TODO**: Select the conversational epistemic softener combining hesitation discourse particles with an absolute gerund phrase expressing candid sincerity.
+**Why**: Pragmatic softening markers combined with absolute gerund clauses mitigate face-threatening acts when expressing disagreement in professional conversation.
 
+### Exercise
+<!-- TODO: Select the polite conversational softening phrase combining discourse markers with candid sincerity -->
+(Bueno, a ver, siendo totalmente francos / Pues, mira, para ser sinceros) ___, esa propuesta no termina de convencerme del todo.
 <!-- SOLUTION
 Bueno, a ver, siendo totalmente francos
 -->

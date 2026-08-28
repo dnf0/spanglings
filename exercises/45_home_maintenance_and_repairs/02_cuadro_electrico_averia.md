@@ -6,9 +6,13 @@
 ### Context
 English: "If you connect too many appliances simultaneously, the main circuit breaker trips due to electrical overload."
 
-### Exercise
-Si conectas demasiados electrodomésticos a la vez, (se dispara el interruptor diferencial por sobrecarga / salta el diferencial por exceso de potencia) ___ en el cuadro eléctrico.
+### Instructions
+**TODO**: Select the pronominal 3rd-person singular present indicative phrase denoting the safety circuit switch tripping from excess electrical load.
+**Why**: Technical descriptions of electrical panel failures use the reflexive/middle verb for tripping along with the device name and causal preposition.
 
+### Exercise
+<!-- TODO: Select the 3rd-person pronominal phrase for the safety trip switch tripping due to load -->
+Si conectas demasiados electrodomésticos a la vez, (se dispara el interruptor diferencial por sobrecarga / salta el diferencial por exceso de potencia) ___ en el cuadro eléctrico.
 <!-- SOLUTION
 se dispara el interruptor diferencial por sobrecarga
 -->

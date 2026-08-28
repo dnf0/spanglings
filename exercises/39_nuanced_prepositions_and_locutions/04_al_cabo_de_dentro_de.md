@@ -6,7 +6,12 @@
 ### Context
 English: "After several months of testing, the system stabilized, and in a few weeks the final rollout will begin."
 
+### Instructions
+**TODO**: Construct the dual temporal clause using the retrospective elapsed interval marker, the reflexive preterite of stabilization, and the prospective impending window.
+**Why**: Temporal locutions contrast the completion of an elapsed duration in past narrative with an impending prospective future window.
+
 ### Exercise
+<!-- TODO: Contrast retrospective elapsed duration with prospective future window -->
 (Al cabo de varios meses de pruebas, el sistema se estabilizó, y dentro de / Al cabo de varios meses) ___ pocas semanas comenzará el despliegue final.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "We implemented a circuit breaker pattern to prevent cascading timeouts when downstream services falter."
 
+### Instructions
+**TODO**: Insert the standard Spanish electrical-architectural noun for automated fault isolation switches.
+**Why**: Resilient systems engineering borrows the electrical safety term for automatic cutoff switches to designate automated fault-isolation mechanisms, avoiding raw English design pattern jargon.
+
 ### Exercise
+<!-- TODO: Supply the standard architectural noun for fault isolation cutoff switches -->
 Implementamos un patrón de (disyuntor) ___ para evitar tiempos de espera en cascada cuando los servicios dependientes fallan.
 
 <!-- SOLUTION

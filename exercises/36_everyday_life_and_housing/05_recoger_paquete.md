@@ -6,7 +6,12 @@
 ### Context
 English: "I went to the post office to pick up a parcel with the tracking number from my notification."
 
+### Instructions
+**TODO**: Form the courier pickup clause using the infinitive of retrieval, the shipment noun, and the identification code phrase with proper tildes.
+**Why**: Standard logistics and courier Spanish pairs the retrieval verb with the parcel noun and the prepositional phrase for tracking code.
+
 ### Exercise
+<!-- TODO: Form the courier retrieval phrase with shipment noun and tracking code -->
 Fui a la oficina de correos para (recoger un paquete con el número de seguimiento / recoger un paquete) ___ que aparecía en la notificación del repartidor.
 
 <!-- SOLUTION

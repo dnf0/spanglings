@@ -6,7 +6,12 @@
 ### Context
 English: "He was so exhausted that he fell asleep in the middle of the lecture without even realizing it."
 
+### Instructions
+**TODO**: Conjugate the inchoative transition using the 3rd-person singular preterite indicative of reflexive *(dormirse)* with stem-vowel change, the prepositional locution, and 'sin'.
+**Why**: While *(dormir)* expresses an ongoing durative state, the reflexive *(dormirse)* marks the inchoative aspectual boundary of transitioning into sleep.
+
 ### Exercise
+<!-- TODO: Conjugate reflexive inchoative (dormirse) in the preterite with stem mutation -->
 Estaba tan exhausto que (se durmió en plena conferencia sin / se durmio en plena conferencia) ___ siquiera darse cuenta.
 
 <!-- SOLUTION

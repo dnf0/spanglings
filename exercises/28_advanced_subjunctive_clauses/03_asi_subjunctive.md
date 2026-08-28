@@ -6,7 +6,12 @@
 ### Context
 English: "We must patch the zero-day exploit today, even if it costs us an entire night on on-call duty."
 
+### Instructions
+**TODO**: Conjugate the verb *(costar)* in the 3rd-person singular present subjunctive with an o->ue diphthong stem shift.
+**Why**: The particle 'así' functioning as an emphatic concessive conjunction ('even if / though it may') obligatorily governs the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Conjugate (costar) in 3rd-person singular present subjunctive with diphthong shift -->
 Debemos subsanar la vulnerabilidad hoy mismo, así nos (costar) ___ toda la noche de guardia.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "They are looking for the perpetrators of the crime."
 
+### Instructions
+**TODO**: Conjugate *(buscar)* into the 3rd-person singular present indicative (*presente de indicativo*).
+**Why**: When a transitive verb with *se* governs an animate human object marked with the preposition *a* (*a los responsables*), the structure is syntactically impersonal (*impersonal refleja*) and the verb must remain in the 3rd-person singular.
+
 ### Exercise
+<!-- TODO: Conjugate (buscar) in 3rd-person singular for the impersonal construction with personal "a" -->
 Se (buscar) ___ a los responsables del robo.
 
 <!-- SOLUTION

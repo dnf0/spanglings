@@ -6,7 +6,12 @@
 ### Context
 English: "The Mexican startup closed its seed round with an attractive pre-money valuation set by angel investors."
 
+### Instructions
+**TODO**: Insert the standard Latin American venture financing term for early-stage seed funding rounds.
+**Why**: In regional startup ecosystems, early-stage rounds use the botanical noun in apposition as an invariable modifier rather than a pluralized literal calque.
+
 ### Exercise
+<!-- TODO: Insert the standard Latin American VC term for early-stage funding rounds -->
 La startup mexicana cerró su (ronda semilla) ___ con una atractiva valuación pre-capital fijada por los inversionistas ángeles.
 
 <!-- SOLUTION

@@ -6,9 +6,13 @@
 ### Context
 English: "May you have great success in the presentation before the Silicon Valley investor committee!"
 
-### Exercise
-¡(Que tengas / Que tienes) ___ mucho éxito en la presentación ante el comité de inversores de Silicon Valley!
+### Instructions
+**TODO**: Choose the independent optative complementizer followed by the 2nd-person singular present subjunctive of *(tener)* for a benevolent wish.
+**Why**: Independent expressions of goodwill or wishes omit the main matrix verb (*Deseo que...*) and begin directly with *¡Que + subjuntivo!*.
 
+### Exercise
+<!-- TODO: Select the independent optative complementizer and 2nd-person present subjunctive for goodwill -->
+¡(Que tengas / Que tienes) ___ mucho éxito en la presentación ante el comité de inversores de Silicon Valley!
 <!-- SOLUTION
 Que tengas
 -->

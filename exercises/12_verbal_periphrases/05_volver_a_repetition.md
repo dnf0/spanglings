@@ -6,7 +6,12 @@
 ### Context
 English: "Don't do that again!"
 
+### Instructions
+**TODO**: Conjugate the auxiliary verb *(volver)* in the 2nd-person singular (*tú*) present subjunctive with diphthongization.
+**Why**: The iterative periphrasis *(volver a + inf)* expresses repeated action, governed here by the negative imperative marker *no* requiring the present subjunctive.
+
 ### Exercise
+<!-- TODO: Conjugate (volver) in 2nd-person singular present subjunctive for negative command iterative periphrasis -->
 ¡No (volver) ___ a hacer eso nunca más!
 
 <!-- SOLUTION

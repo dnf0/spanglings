@@ -6,7 +6,12 @@
 ### Context
 English: "I have the secret and I am going to tell it to him right now."
 
+### Instructions
+**TODO**: Form a single enclitic word by appending the 3rd-person indirect and direct pronouns to the infinitive *(decir)*, adding the orthographic accent.
+**Why**: Appending two clitic pronouns alters the stress contour to proparoxytone (*esdrújula*), requiring a written accent on the tonic root vowel.
+
 ### Exercise
+<!-- TODO: Form enclitic word attaching both pronouns to infinitive with accent -->
 Tengo la noticia y voy a (decir + se + lo) ___ ahora mismo.
 
 <!-- SOLUTION

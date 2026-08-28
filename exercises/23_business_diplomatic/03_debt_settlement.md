@@ -6,7 +6,12 @@
 ### Context
 English: "The company committed to settle the outstanding debt before the close of the fiscal quarter."
 
+### Instructions
+**TODO**: Supply the formal financial infinitive verb meaning "to fully settle / liquidate an outstanding debt".
+**Why**: Commercial and banking Spanish requires specialized verbs such as the derivative of *saldo* when referring to extinguishing liabilities or balancing accounts, replacing colloquial *pagar*.
+
 ### Exercise
+<!-- TODO: Supply the specialized commercial infinitive verb for settling an outstanding balance -->
 La empresa se comprometió a (saldar) ___ la deuda pendiente antes del cierre del trimestre fiscal.
 
 <!-- SOLUTION

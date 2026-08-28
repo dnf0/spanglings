@@ -6,9 +6,13 @@
 ### Context
 English: "The critical incidents on the payment gateway having been resolved, commercial transactions resumed normally."
 
-### Exercise
-(Resueltos / Resolvidos) ___ los incidentes críticos en la pasarela de pagos, se reanudaron las transacciones comerciales con total normalidad.
+### Instructions
+**TODO**: Inflect the irregular past participle of *(resolver)* in the masculine plural agreeing with the plural subject.
+**Why**: The verb *(resolver)* has an irregular participle that must inflect for masculine plural agreement in absolute clauses.
 
+### Exercise
+<!-- TODO: Inflect the irregular masculine plural participle for the absolute clause -->
+(Resueltos / Resolvidos) ___ los incidentes críticos en la pasarela de pagos, se reanudaron las transacciones comerciales con total normalidad.
 <!-- SOLUTION
 Resueltos
 -->

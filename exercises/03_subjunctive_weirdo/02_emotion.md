@@ -6,7 +6,12 @@
 ### Context
 English: "I am very glad that you are here today."
 
+### Instructions
+**TODO**: Conjugate the verb *(estar)* in the 2nd-person singular (*tú*) present subjunctive with the required written accent.
+**Why**: A matrix predicate expressing emotional reaction *(alegrarse de que)* requires the subjunctive mood in the noun complement clause.
+
 ### Exercise
+<!-- TODO: Conjugate (estar) in 2nd-person singular present subjunctive -->
 Me alegro mucho de que tú (estar) ___ aquí hoy.
 
 <!-- SOLUTION

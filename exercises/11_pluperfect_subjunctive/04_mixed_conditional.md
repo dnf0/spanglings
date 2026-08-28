@@ -6,7 +6,12 @@
 ### Context
 English: "If I had rested yesterday, I wouldn't be so exhausted right now."
 
+### Instructions
+**TODO**: Form the 1st-person singular (*yo*) pluperfect subjunctive of *(descansar)* using the auxiliary *(haber)* and past participle.
+**Why**: In mixed conditionals combining an unfulfilled past condition (*ayer*) with a present consequence (*ahora no estaría*), the protasis takes the pluperfect subjunctive.
+
 ### Exercise
+<!-- TODO: Form 1st-person singular pluperfect subjunctive for past condition in mixed conditional -->
 Si yo (haber descansar) ___ ayer, ahora no estaría tan agotado.
 
 <!-- SOLUTION

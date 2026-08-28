@@ -6,7 +6,12 @@
 ### Context
 English: 'Direct: "Tengo frío" -> Reported: He said that he was cold.'
 
+### Instructions
+**TODO**: Apply indirect speech sequence-of-tenses and shift *(tener)* accordingly.
+**Why**: When reporting direct speech introduced by a past verb (dijo que...), Present Indicative shifts to Imperfect Indicative.
+
 ### Exercise
+<!-- TODO: Apply indirect speech sequence-of-tenses and shift (tener) accordingly. -->
 Juan dijo: "Tengo frío" -> Juan dijo que (tener) ___ frío.
 
 <!-- SOLUTION

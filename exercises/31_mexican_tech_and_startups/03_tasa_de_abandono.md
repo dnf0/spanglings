@@ -6,7 +6,12 @@
 ### Context
 English: "The product team managed to reduce the customer churn rate by ten percent in the last quarter."
 
+### Instructions
+**TODO**: Insert the formal SaaS metric noun phrase corresponding to customer churn percentage.
+**Why**: Professional product management in Latin America translates user attrition using the ratio noun phrase combining proportion with user departure (or 'de cancelación'), avoiding unadapted Anglicisms.
+
 ### Exercise
+<!-- TODO: Supply the formal SaaS metric phrase for user attrition percentage -->
 El equipo de producto logró reducir la (tasa de abandono) ___ en un diez por ciento durante el último trimestre.
 
 <!-- SOLUTION

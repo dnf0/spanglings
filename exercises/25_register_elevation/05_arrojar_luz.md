@@ -6,7 +6,12 @@
 ### Context
 English: "The newly discovered archival documents shed light on the diplomatic pact."
 
+### Instructions
+**TODO**: Provide the formal infinitive verb meaning "to cast / hurl" that completes the metaphorical idiom meaning "to shed light on".
+**Why**: Elevated historiographical and journalistic discourse uses the metaphor of casting light over an object (*luz sobre*) or *esclarecer* instead of colloquial expressions like *dar luz* or *aclarar*.
+
 ### Exercise
+<!-- TODO: Supply the formal infinitive verb in the metaphor for shedding light -->
 Los documentos de archivo recién descubiertos lograron (arrojar) ___ luz sobre el pacto diplomático.
 
 <!-- SOLUTION

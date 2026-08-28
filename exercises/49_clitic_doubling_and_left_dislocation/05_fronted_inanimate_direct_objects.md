@@ -6,9 +6,13 @@
 ### Context
 English: "This technical report I wrote over the weekend for the board of directors."
 
-### Exercise
-(Este informe técnico lo redacté / Este informe técnico redacté) ___ durante el fin de semana para la junta directiva.
+### Instructions
+**TODO**: Choose the fronted demonstrative direct object phrase followed by its required masculine singular accusative clitic and 1st-person singular preterite verb *(redactar)*.
+**Why**: Topicalized, definite inanimate direct objects placed before the finite verb mandate accusative clitic resumption in standard Spanish.
 
+### Exercise
+<!-- TODO: Choose the fronted definite direct object with required accusative clitic resumption -->
+(Este informe técnico lo redacté / Este informe técnico redacté) ___ durante el fin de semana para la junta directiva.
 <!-- SOLUTION
 Este informe técnico lo redacté
 -->

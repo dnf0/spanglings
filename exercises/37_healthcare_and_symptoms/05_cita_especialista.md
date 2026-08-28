@@ -6,7 +6,12 @@
 ### Context
 English: "The general practitioner gave him a referral so that he could book an appointment with the cardiologist for a routine checkup."
 
+### Instructions
+**TODO**: Form the purpose clause introduced by 'para que' with the imperfect subjunctive of ability, scheduling a doctor visit, and undergoing a clinical checkup.
+**Why**: 'Para que' introduces a prospective purpose clause requiring the imperfect subjunctive of *(poder)*, followed by standard healthcare scheduling collocations.
+
 ### Exercise
+<!-- TODO: Form the healthcare purpose clause with subjunctive ability and doctor visit idioms -->
 El médico de cabecera le entregó un volante de derivación para que (pudiera pedir cita con el especialista y realizarse una revisión / pudiera sacar turno) ___ preventiva.
 
 <!-- SOLUTION

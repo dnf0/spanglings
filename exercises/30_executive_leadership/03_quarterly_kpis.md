@@ -6,7 +6,12 @@
 ### Context
 English: "The committee reviewed the key performance indicators for the fiscal quarter."
 
+### Instructions
+**TODO**: Insert the full, formal Spanish translation for Key Performance Indicators.
+**Why**: In board presentations and executive reporting, the acronym is expanded into a masculine plural noun phrase featuring the invariability of the appositive modifying noun.
+
 ### Exercise
+<!-- TODO: Insert the full formal Spanish noun phrase for Key Performance Indicators -->
 El comité evaluó los (indicadores clave de rendimiento) ___ correspondientes al último trimestre fiscal.
 
 <!-- SOLUTION

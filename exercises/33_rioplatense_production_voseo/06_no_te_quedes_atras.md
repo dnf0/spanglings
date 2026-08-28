@@ -6,7 +6,12 @@
 ### Context
 English: "Don't fall behind on the migration to Kubernetes; update the Helm charts this sprint."
 
+### Instructions
+**TODO**: Form the negative voseo command for reflexive *(quedarse)* using the present subjunctive form with Rioplatense tonic accentuation.
+**Why**: In Rioplatense voseo, negative commands employ the 2nd-person singular subjunctive bearing the distinctive regional stress and written tilde on the ending (-és).
+
 ### Exercise
+<!-- TODO: Form the negative voseo command with accented subjunctive of (quedarse) -->
 (No te quedés atrás con / No te quedes atrás con) ___ la migración a contenedores; actualizá los manifiestos de despliegue esta semana.
 
 <!-- SOLUTION

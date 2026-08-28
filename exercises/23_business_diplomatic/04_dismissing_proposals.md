@@ -6,7 +6,12 @@
 ### Context
 English: "The board of directors decided to dismiss the proposal submitted for failing to comply with statutory rules."
 
+### Instructions
+**TODO**: Provide the formal administrative infinitive verb meaning "to dismiss / reject a motion or proposal" formed with the prefix *des-*.
+**Why**: In corporate governance and legal proceedings, official rejection of an application or proposal is formally designated by the negative derivative of *estimar*.
+
 ### Exercise
+<!-- TODO: Provide the formal administrative infinitive verb for dismissing a proposal -->
 El comité directivo decidió (desestimar) ___ la propuesta presentada por no cumplir con las normas estatutarias.
 
 <!-- SOLUTION

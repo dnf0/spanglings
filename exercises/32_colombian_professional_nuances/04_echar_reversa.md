@@ -6,7 +6,12 @@
 ### Context
 English: "Faced with unexpected database lockups, the infrastructure director decided to backtrack on the migration."
 
+### Instructions
+**TODO**: Insert the Colombian executive idiom meaning to backtrack or undo a prior technical decision.
+**Why**: The idiomatic verbal expression combines the casting verb with the backing-up noun and directional preposition in Colombian professional registers to convey rolling back a prior decision.
+
 ### Exercise
+<!-- TODO: Supply the Colombian verbal idiom for backtracking on a decision -->
 Ante los bloqueos imprevistos en la base de datos, el director de infraestructura decidió (echar reversa a) ___ la migración nocturna.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "Tell the truth to me right now! (Tell it to me!)"
 
+### Instructions
+**TODO**: Form the affirmative informal imperative (*tú*) of *(decir)* combined with attached 1st-person indirect and 3rd-person feminine direct pronouns.
+**Why**: Affirmative imperatives strictly require enclitic pronoun attachment; suffixing two clitics produces an *esdrújula* needing a written accent on the command stem.
+
 ### Exercise
+<!-- TODO: Form affirmative imperative with attached pronouns and written accent -->
 ¡(Decir + me + la) ___ ahora mismo sin rodeos!
 
 <!-- SOLUTION

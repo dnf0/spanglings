@@ -6,9 +6,13 @@
 ### Context
 English: "Perhaps the auditors may find inconsistencies in the records if we do not normalize the schema."
 
-### Exercise
-Tal vez los auditores (encuentren / encuentran) ___ inconsistencias en los registros si no normalizamos el esquema.
+### Instructions
+**TODO**: Conjugate the verb *(encontrar)* in the 3rd-person plural present subjunctive following the preposed adverbial locution.
+**Why**: Fronted *tal vez* triggers the SUBJUNCTIVE mood when the speaker wishes to highlight possibility and uncertainty.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the 3rd-person plural present subjunctive after the fronted locution of doubt -->
+Tal vez los auditores (encuentren / encuentran) ___ inconsistencias en los registros si no normalizamos el esquema.
 <!-- SOLUTION
 encuentren
 -->

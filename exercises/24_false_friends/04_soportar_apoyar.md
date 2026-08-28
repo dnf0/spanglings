@@ -6,7 +6,12 @@
 ### Context
 English: "My parents always decided to support my career as a professional musician."
 
+### Instructions
+**TODO**: Supply the infinitive verb meaning "to back up / encourage / fund", contrasting with the false cognate *soportar*.
+**Why**: Spanish *soportar* denotes physical bearing of weight or enduring hardship ("to tolerate / endure"), whereas backing someone's career or decisions requires *respaldar* or the 1st-conjugation verb for providing backing.
+
 ### Exercise
+<!-- TODO: Supply the infinitive verb for backing a career without using the false friend "soportar" -->
 Mis padres siempre decidieron (apoyar) ___ mi carrera como músico profesional.
 
 <!-- SOLUTION

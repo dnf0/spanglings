@@ -6,9 +6,13 @@
 ### Context
 English: "Calm down, everything has a technical solution; don't cry on me and let's find an alternative!"
 
-### Exercise
-Tranquilo, todo tiene solución técnica; ¡no (me llores / llores a mí) ___ más y busquemos una alternativa!
+### Instructions
+**TODO**: Conjugate the negative imperative in the informal 2nd-person singular *(llorar)* preceded by the 1st-person singular ethic dative clitic.
+**Why**: The ethic dative (*dativo ético / afectivo*) inserts an unstressed 1st-person pronoun (*me*) to express emotional involvement, plea, or personal concern in spoken dialogue.
 
+### Exercise
+<!-- TODO: Conjugate the 2nd-person negative subjunctive with 1st-person ethic dative clitic -->
+Tranquilo, todo tiene solución técnica; ¡no (me llores / llores a mí) ___ más y busquemos una alternativa!
 <!-- SOLUTION
 me llores
 -->

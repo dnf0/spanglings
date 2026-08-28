@@ -6,7 +6,12 @@
 ### Context
 English: "The students are paying attention to the teacher's explanation."
 
+### Instructions
+**TODO**: Conjugate the verb *(estar)* in the 3rd-person plural (*ellos*) present indicative with the required written accent.
+**Why**: Describing active attentiveness or concentration on an ongoing explanation requires *(estar)* rather than polite disposition expressed by *(ser)*.
+
 ### Exercise
+<!-- TODO: Conjugate (estar) in 3rd-person plural present indicative -->
 Los alumnos (estar) ___ muy atentos a la explicación del profesor.
 
 <!-- SOLUTION

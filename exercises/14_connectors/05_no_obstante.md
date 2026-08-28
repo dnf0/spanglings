@@ -6,7 +6,12 @@
 ### Context
 English: "The weather was hostile; nevertheless, they climbed the summit."
 
+### Instructions
+**TODO**: Complete the formal adversative connective locution initiated by *no* that introduces a counter-argument or restriction.
+**Why**: High-register literary and journalistic discourse employs the adversative locution formed by *no + [participio de presente]* as a formal alternative to *sin embargo*.
+
 ### Exercise
+<!-- TODO: Complete the formal adversative connective locution -->
 Las condiciones eran hostiles; no ___, alcanzaron la cumbre.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "I doubt that they have enough money for that trip."
 
+### Instructions
+**TODO**: Conjugate the verb *(tener)* in the 3rd-person plural (*ellos*) present subjunctive.
+**Why**: Matrix verbs expressing epistemic doubt or disbelief *(dudar que)* negate certainty, requiring the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Conjugate (tener) in 3rd-person plural present subjunctive -->
 Dudo que ellos (tener) ___ suficiente dinero para ese viaje.
 
 <!-- SOLUTION

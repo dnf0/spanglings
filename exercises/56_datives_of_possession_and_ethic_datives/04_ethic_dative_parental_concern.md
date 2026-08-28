@@ -6,9 +6,13 @@
 ### Context
 English: "I am concerned about team well-being; this developer doesn't take a single break all day on me."
 
-### Exercise
-Estoy preocupado por el bienestar del equipo; este desarrollador no (me toma / toma para mí) ___ ni una sola pausa en todo el día.
+### Instructions
+**TODO**: Conjugate the verb *(tomar)* in the 3rd-person singular present indicative accompanied by the 1st-person singular affective/ethic dative pronoun.
+**Why**: The ethic dative construction (*me + verbo*) expresses emotional impact or distress experienced by the speaker regarding an action performed by someone else.
 
+### Exercise
+<!-- TODO: Conjugate the 3rd-person verb with the 1st-person affective dative pronoun -->
+Estoy preocupado por el bienestar del equipo; este desarrollador no (me toma / toma para mí) ___ ni una sola pausa en todo el día.
 <!-- SOLUTION
 me toma
 -->

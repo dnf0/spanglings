@@ -6,7 +6,12 @@
 ### Context
 English: "Don't believe him; he is pulling your leg."
 
+### Instructions
+**TODO**: Complete the idiomatic phrase with the correct vocabulary item.
+**Why**: 'Tomar el the required term a alguien' is an idiom meaning to tease or pull someone's leg.
+
 ### Exercise
+<!-- TODO: Complete the idiomatic phrase with the correct vocabulary item. -->
 No le hagas caso; te está tomando el ___.
 
 <!-- SOLUTION

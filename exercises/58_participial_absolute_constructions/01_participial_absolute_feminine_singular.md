@@ -6,9 +6,13 @@
 ### Context
 English: "The external cybersecurity audit having concluded, the executive committee proceeded to approve the renewal budget."
 
-### Exercise
-(Concluida / Concluido) ___ la auditoría externa de ciberseguridad, el comité directivo procedió a aprobar el presupuesto de renovación.
+### Instructions
+**TODO**: Inflect the past participle of *(concluir)* in the feminine singular to agree with the following postponed subject of the absolute clause.
+**Why**: In Spanish absolute participial clauses, the participle functions as a non-finite predicate and agrees in gender and number with its postposed subject.
 
+### Exercise
+<!-- TODO: Inflect the absolute participle in the feminine singular to match the postposed subject -->
+(Concluida / Concluido) ___ la auditoría externa de ciberseguridad, el comité directivo procedió a aprobar el presupuesto de renovación.
 <!-- SOLUTION
 Concluida
 -->

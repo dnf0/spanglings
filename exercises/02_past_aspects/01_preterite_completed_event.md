@@ -6,7 +6,12 @@
 ### Context
 English: "Last night I bought the train tickets."
 
+### Instructions
+**TODO**: Conjugate the verb *(comprar)* in the 1st-person singular (*yo*) preterite indicative with the correct written accent.
+**Why**: The time anchor *anoche* bounds the action to a specific completed past occurrence, requiring the preterite aspect rather than the imperfect.
+
 ### Exercise
+<!-- TODO: Conjugate (comprar) in 1st-person singular preterite indicative -->
 Anoche yo (comprar) ___ los billetes de tren.
 
 <!-- SOLUTION

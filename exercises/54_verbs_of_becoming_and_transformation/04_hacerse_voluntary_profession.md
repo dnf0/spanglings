@@ -6,9 +6,13 @@
 ### Context
 English: "After several years of intensive technical training, she became a cybersecurity specialist."
 
-### Exercise
-Tras varios años de formación técnica intensiva, ella (se hizo / se puso) ___ especialista en ciberseguridad.
+### Instructions
+**TODO**: Conjugate the pronominal verb *(hacerse)* in the 3rd-person singular preterite indicative denoting a voluntary transformation achieved through effort.
+**Why**: The verb *(hacerse)* expresses gradual change, professional maturation, or ideological adoption requiring personal will and effort.
 
+### Exercise
+<!-- TODO: Conjugate the pronominal verb for gradual voluntary transformation through effort -->
+Tras varios años de formación técnica intensiva, ella (se hizo / se puso) ___ especialista en ciberseguridad.
 <!-- SOLUTION
 se hizo
 -->

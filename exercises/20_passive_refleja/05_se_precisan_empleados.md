@@ -6,7 +6,12 @@
 ### Context
 English: "Experienced waiters needed for restaurant."
 
+### Instructions
+**TODO**: Conjugate *(precisar)* into the 3rd-person plural present indicative (*presente de indicativo*).
+**Why**: In standard job advertisements without personal *a*, non-specific plural human nouns (*camareros con experiencia*) serve as grammatical patient subjects requiring plural verb agreement in *pasiva refleja*.
+
 ### Exercise
+<!-- TODO: Conjugate (precisar) in 3rd-person plural present indicative agreeing with "camareros" -->
 Se (precisar) ___ camareros con experiencia para restaurante céntrico.
 
 <!-- SOLUTION

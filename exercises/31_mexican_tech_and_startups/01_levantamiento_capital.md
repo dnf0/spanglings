@@ -6,7 +6,12 @@
 ### Context
 English: "The fintech founders announced the start of a new capital raise to accelerate their expansion across Latin America."
 
+### Instructions
+**TODO**: Insert the standard Mexican venture financing phrase for a startup fundraising round.
+**Why**: In Mexican and Latin American startup ecosystems, fundraising rounds are formally referred to using the raising noun phrase with financial resources, avoiding literal English loanwords.
+
 ### Exercise
+<!-- TODO: Insert the Mexican venture finance term for a fundraising round -->
 Los fundadores de la fintech anunciaron el inicio de un (levantamiento de capital) ___ para acelerar su expansión por América Latina.
 
 <!-- SOLUTION

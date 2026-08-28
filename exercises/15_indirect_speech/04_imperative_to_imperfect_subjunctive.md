@@ -6,7 +6,12 @@
 ### Context
 English: 'Direct: "¡Ven aquí!" -> Reported: My mother told me to come.'
 
+### Instructions
+**TODO**: Apply indirect speech sequence-of-tenses and shift *(venir)* accordingly.
+**Why**: Commands/imperatives in direct speech shift to the Imperfect Subjunctive when reported after a past verb.
+
 ### Exercise
+<!-- TODO: Apply indirect speech sequence-of-tenses and shift (venir) accordingly. -->
 Mi madre me ordenó: "¡Ven inmediatamente!" -> Mi madre me ordenó que (venir) ___ inmediatamente.
 
 <!-- SOLUTION

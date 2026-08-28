@@ -6,7 +6,12 @@
 ### Context
 English: "If you could send me the invoice, I would appreciate it."
 
+### Instructions
+**TODO**: Conjugate the modal verb *(poder)* in the 3rd-person singular formal (*usted*) imperfect subjunctive (*-ra* form).
+**Why**: Formal polite requests introduced by *si usted* pair the imperfect subjunctive in the condition with a polite conditional consequence.
+
 ### Exercise
+<!-- TODO: Conjugate (poder) in 3rd-person singular formal imperfect subjunctive -->
 Si usted (poder) ___ enviarme la factura, se lo agradecería mucho.
 
 <!-- SOLUTION

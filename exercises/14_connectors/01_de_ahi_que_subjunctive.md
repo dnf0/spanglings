@@ -6,7 +6,12 @@
 ### Context
 English: "He worked all night; hence why he is so exhausted today."
 
+### Instructions
+**TODO**: Conjugate the verb *(estar)* in the 3rd-person singular present subjunctive with the required written accent.
+**Why**: The consecutive connector *de ahí que* introduces a consequence deduced from a prior fact and obligatorily governs the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Conjugate (estar) in 3rd-person singular present subjunctive after 'de ahí que' -->
 Trabajó toda la noche; de ahí que hoy (estar) ___ tan cansado.
 
 <!-- SOLUTION

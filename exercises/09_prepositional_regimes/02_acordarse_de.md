@@ -6,7 +6,12 @@
 ### Context
 English: "Do you remember the trip we took to Granada?"
 
+### Instructions
+**TODO**: Insert the preposition required by the pronominal verb *(acordarse)* before the noun phrase.
+**Why**: While transitive *(recordar)* takes a direct object without a preposition, pronominal *(acordarse)* obligatorily governs the preposition.
+
 ### Exercise
+<!-- TODO: Insert preposition required by pronominal 'acordarse' -->
 ¿Te acuerdas ___ aquel viaje inolvidable a Granada?
 
 <!-- SOLUTION

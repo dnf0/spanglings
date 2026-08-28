@@ -91,10 +91,15 @@ Every exercise is a clean Markdown file in `exercises/<track>/<id>.md`:
 - Prerequisites: present_indicative_irregular
 - Grammar Focus: "Main clause volition verb + que + subject change requires present subjunctive."
 
-## Prompt
-Fill in the correct present subjunctive form of the verb in parentheses.
-Context: Expressing a desire for someone else's action.
+### Context
+English: "My parents want me to study computer science at the university."
 
+### Instructions
+**TODO**: Conjugate the verb (estudiar) in the 1st person singular present subjunctive.
+**Why**: The matrix clause expresses volition (*quieren que*) with differing subjects, triggering the subjunctive mood.
+
+### Exercise
+<!-- TODO: Conjugate estudiar in present subjunctive for yo -->
 Mis padres quieren que yo ___ (estudiar) ingeniería informática en la universidad.
 
 ## Hints

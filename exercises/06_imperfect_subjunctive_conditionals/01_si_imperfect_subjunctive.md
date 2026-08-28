@@ -6,7 +6,12 @@
 ### Context
 English: "If I had more free time, I would travel around the world."
 
+### Instructions
+**TODO**: Conjugate the verb *(tener)* in the 1st-person singular (*yo*) imperfect subjunctive (*-ra* form).
+**Why**: In Type 2 hypothetical conditional sentences with a conditional apodosis (*viajaría*), the protasis introduced by *si* requires the imperfect subjunctive.
+
 ### Exercise
+<!-- TODO: Conjugate (tener) in 1st-person singular imperfect subjunctive -->
 Si yo (tener) ___ más tiempo libre, viajaría por todo el mundo.
 
 <!-- SOLUTION

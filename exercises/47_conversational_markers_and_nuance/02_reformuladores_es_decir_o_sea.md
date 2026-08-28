@@ -6,9 +6,13 @@
 ### Context
 English: "We need to optimize the database query; in other words, reduce execution latency by fifty percent."
 
-### Exercise
-Debemos optimizar la consulta de la base de datos; (es decir, reducir la latencia de ejecución en un cincuenta por ciento / dicho en otros términos, bajar la latencia a la mitad) ___.
+### Instructions
+**TODO**: Insert the formal conversational reformulation marker followed by an infinitive phrase for halving execution latency.
+**Why**: In semi-formal professional discussions, formal connective reformulation markers introduce an explanatory equivalence without sounding excessively casual or pedantic.
 
+### Exercise
+<!-- TODO: Insert the formal reformulation marker and infinitive clause for halving execution latency -->
+Debemos optimizar la consulta de la base de datos; (es decir, reducir la latencia de ejecución en un cincuenta por ciento / dicho en otros términos, bajar la latencia a la mitad) ___.
 <!-- SOLUTION
 es decir, reducir la latencia de ejecución en un cincuenta por ciento
 -->

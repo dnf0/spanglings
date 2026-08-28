@@ -6,9 +6,13 @@
 ### Context
 English: "When the deployment failed at midnight, the infrastructure director became furious."
 
-### Exercise
-Cuando el despliegue falló a medianoche, el director de infraestructura (se puso / se hizo) ___ furioso.
+### Instructions
+**TODO**: Conjugate the pronominal verb of becoming *(ponerse)* in the 3rd-person singular preterite indicative to express a sudden, temporary emotional change.
+**Why**: The verb *(ponerse)* expresses an involuntary, rapid, and temporary transformation of emotional state or physical appearance followed by an adjective.
 
+### Exercise
+<!-- TODO: Conjugate the pronominal verb of becoming for sudden temporary emotional change -->
+Cuando el despliegue falló a medianoche, el director de infraestructura (se puso / se hizo) ___ furioso.
 <!-- SOLUTION
 se puso
 -->

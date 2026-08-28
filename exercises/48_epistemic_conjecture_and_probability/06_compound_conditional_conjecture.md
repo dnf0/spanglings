@@ -6,9 +6,13 @@
 ### Context
 English: "When the datacenter alarm went off at 3 AM, the on-call technician had probably already left the building."
 
-### Exercise
-Cuando sonó la alarma del centro de datos a las tres de la madrugada, el técnico de guardia ya (habría salido / había salido probablemente) ___ del edificio.
+### Instructions
+**TODO**: Form the compound conditional tense (*condicional compuesto de probabilidad*) using the 3rd-person singular of *(haber)* with the past participle of *(salir)*.
+**Why**: The compound conditional expresses probability or hypothesis about an action completed prior to a reference point in the past.
 
+### Exercise
+<!-- TODO: Form the 3rd-person singular compound conditional to express past anterior conjecture -->
+Cuando sonó la alarma del centro de datos a las tres de la madrugada, el técnico de guardia ya (habría salido / había salido probablemente) ___ del edificio.
 <!-- SOLUTION
 habría salido
 -->

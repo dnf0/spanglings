@@ -6,7 +6,12 @@
 ### Context
 English: "I saw the movie yesterday and I really liked it (I saw it)."
 
+### Instructions
+**TODO**: Insert the 3rd-person feminine singular direct object pronoun referencing *la película*.
+**Why**: The direct object receiving the transitive action of *(ver)* requires an accusative clitic pronoun agreeing in gender and number with the antecedent.
+
 ### Exercise
+<!-- TODO: Insert 3rd-person feminine singular direct object pronoun -->
 La película era fantástica; ayer ___ vi en el cine.
 
 <!-- SOLUTION

@@ -7,9 +7,13 @@
 Informal prompt: 'La caldera se rompió y no tenemos agua caliente; arréglela porque el alquiler es caro.'
 Transform into formal statutory tenant notification: 'Le requiero formalmente la...' (reparación de la caldera para conservar las condiciones de habitabilidad / subsanación de la avería de la caldera).
 
-### Exercise
-Le requiero formalmente la ___ de conformidad con el artículo 21 de la Ley de Arrendamientos Urbanos.
+### Instructions
+**TODO**: Insert the formal tenancy maintenance request specifying boiler servicing required to preserve statutory living and dwelling standards.
+**Why**: Formal landlord-tenant communications under urban tenancy law (LAU art. 21) center on the lessor obligation to preserve minimum dwelling and living standards.
 
+### Exercise
+<!-- TODO: Formulate the tenancy law noun phrase for boiler repairs required to preserve living standards -->
+Le requiero formalmente la ___ de conformidad con el artículo 21 de la Ley de Arrendamientos Urbanos.
 <!-- SOLUTION
 reparación de la caldera para conservar las condiciones de habitabilidad
 -->

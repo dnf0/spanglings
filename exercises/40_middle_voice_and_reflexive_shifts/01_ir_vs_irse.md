@@ -6,7 +6,12 @@
 ### Context
 English: "After finishing his tasks, he had to leave the office immediately to catch his train."
 
+### Instructions
+**TODO**: Form the departure clause using the pronominal infinitive of *(ir)* with the separation preposition, the adverb of promptness, and the purpose infinitive for catching transit.
+**Why**: The pronominal shift with motion verbs emphasizes departure and detachment from the origin point rather than simple trajectory toward a goal.
+
 ### Exercise
+<!-- TODO: Form the departure clause using pronominal infinitive of (ir) with departure preposition -->
 En cuanto terminó sus tareas, tuvo que (irse de la oficina inmediatamente para alcanzar el / salir de la oficina) ___ tren de cercanías.
 
 <!-- SOLUTION

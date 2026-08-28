@@ -6,7 +6,12 @@
 ### Context
 English: "The thing is that I don't have sufficient information."
 
+### Instructions
+**TODO**: Conjugate *(pasar)* into the 3rd-person singular present indicative (*presente de indicativo*).
+**Why**: The pseudo-cleft construction *lo que [verbo] es que...* functions as a fixed pragmatic discourse formula used to introduce explanations or justifications for an issue.
+
 ### Exercise
+<!-- TODO: Conjugate (pasar) in 3rd-person present indicative in pseudo-cleft formula -->
 Lo que ___ es que no dispongo de la información necesaria.
 
 <!-- SOLUTION

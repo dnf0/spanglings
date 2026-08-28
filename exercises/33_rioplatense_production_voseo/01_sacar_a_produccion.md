@@ -6,7 +6,12 @@
 ### Context
 English: "Deploy the new microservice to production before the promotional campaign kicks off."
 
+### Instructions
+**TODO**: Form the affirmative voseo imperative of *(sacar)* with the deployment prepositional phrase.
+**Why**: In Rioplatense Spanish, the affirmative imperative of -ar verbs drops the -d and bears the tonic stress and graphic tilde on the final vowel (-á).
+
 ### Exercise
+<!-- TODO: Form the affirmative voseo imperative of (sacar) with graphic accent -->
 (Sacá a producción el / Saca a producción el) ___ nuevo microservicio antes de que comience la campaña de promoción.
 
 <!-- SOLUTION

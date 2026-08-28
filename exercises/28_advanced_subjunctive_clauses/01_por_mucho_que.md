@@ -6,7 +6,12 @@
 ### Context
 English: "No matter how much they try to optimize the query, the raw data volume will exhaust server memory."
 
+### Instructions
+**TODO**: Conjugate the verb *(intentar)* in the 3rd-person plural present subjunctive to complete the concessive clause.
+**Why**: The concessive conjunction 'por mucho que' governing an ineffective or counteracting action obligatorily requires the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Conjugate (intentar) in the present subjunctive for 'ellos' -->
 Por mucho que (intentar, ellos) ___ optimizar la consulta, el volumen bruto de datos agotará la memoria del servidor.
 
 <!-- SOLUTION

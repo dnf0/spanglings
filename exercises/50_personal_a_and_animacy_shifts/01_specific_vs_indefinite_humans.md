@@ -6,9 +6,13 @@
 ### Context
 English: "We are looking for the operations director who led the restructuring last year."
 
-### Exercise
-Estamos buscando (a la directora / la directora) ___ de operaciones que lideró la reestructuración el año pasado.
+### Instructions
+**TODO**: Insert the personal preposition before the definite feminine singular article and noun denoting the specific, identifiable person being sought.
+**Why**: Specific, individualized human direct objects require differential object marking (*a personal*) in Spanish when the referent is an identifiable individual.
 
+### Exercise
+<!-- TODO: Insert personal preposition and definite article with specific human direct object -->
+Estamos buscando (a la directora / la directora) ___ de operaciones que lideró la reestructuración el año pasado.
 <!-- SOLUTION
 a la directora
 -->

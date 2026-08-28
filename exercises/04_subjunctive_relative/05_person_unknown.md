@@ -6,7 +6,12 @@
 ### Context
 English: "We will hire whoever speaks fluent German."
 
+### Instructions
+**TODO**: Conjugate the verb *(hablar)* in the 3rd-person singular present subjunctive.
+**Why**: The relative pronoun *quien* referring to any hypothetical or unverified individual meeting a criterion selects the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Conjugate (hablar) in 3rd-person singular present subjunctive -->
 Contrataremos a quien (hablar) ___ alemán con fluidez.
 
 <!-- SOLUTION

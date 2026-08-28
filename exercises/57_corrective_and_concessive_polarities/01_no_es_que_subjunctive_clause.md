@@ -6,9 +6,13 @@
 ### Context
 English: "It's not that we don't want to collaborate on the API integration, but rather our schedule is saturated."
 
-### Exercise
-No es que nosotros no (queramos / queremos) ___ colaborar en la integración de la API, sino que nuestro cronograma está saturado.
+### Instructions
+**TODO**: Conjugate the verb *(querer)* in the 1st-person plural present subjunctive within the rejected premise clause.
+**Why**: The corrective negation formula *No es que...* introduces a rejected hypothesis and obligatorily governs the SUBJUNCTIVE mood.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the 1st-person plural present subjunctive after corrective negation -->
+No es que nosotros no (queramos / queremos) ___ colaborar en la integración de la API, sino que nuestro cronograma está saturado.
 <!-- SOLUTION
 queramos
 -->

@@ -6,7 +6,12 @@
 ### Context
 English: 'Direct: "Iré mañana" -> Reported: He promised that he would go.'
 
+### Instructions
+**TODO**: Apply indirect speech sequence-of-tenses and shift *(ir)* accordingly.
+**Why**: In reported speech introduced by past verb, Future Simple shifts to Conditional Simple.
+
 ### Exercise
+<!-- TODO: Apply indirect speech sequence-of-tenses and shift (ir) accordingly. -->
 Pedro prometió: "Iré al evento" -> Pedro prometió que (ir) ___ al evento.
 
 <!-- SOLUTION

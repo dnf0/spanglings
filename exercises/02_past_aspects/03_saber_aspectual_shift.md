@@ -6,7 +6,12 @@
 ### Context
 English: "At that exact moment I found out the truth."
 
+### Instructions
+**TODO**: Conjugate the verb *(saber)* in the 1st-person singular (*yo*) preterite indicative using its irregular stem.
+**Why**: In the preterite aspect, *(saber)* denotes the punctual discovery of information at a specific moment (*en ese preciso instante*), contrasting with continuous knowledge.
+
 ### Exercise
+<!-- TODO: Conjugate (saber) in 1st-person singular preterite indicative -->
 En ese preciso instante (saber) ___ la verdad.
 
 <!-- SOLUTION

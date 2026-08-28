@@ -6,7 +6,12 @@
 ### Context
 English: "It is for that reason that I decided to accept the offer."
 
+### Instructions
+**TODO**: Supply the neuter definite article completing the compound relative pronoun phrase (*por [artículo] que*).
+**Why**: In formal Spanish causal cleft sentences, the focalized prepositional phrase (*por ese motivo*) is properly linked to the presupposition using the full relative pronoun sequence with the neuter article (*por lo que*), avoiding the calqued *que galicado*.
+
 ### Exercise
+<!-- TODO: Supply the neuter article completing the prepositional relative link in the cleft sentence -->
 Es por ese motivo por ___ que decidí aceptar la oferta laboral.
 
 <!-- SOLUTION

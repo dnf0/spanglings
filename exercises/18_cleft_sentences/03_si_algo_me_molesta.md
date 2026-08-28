@@ -6,7 +6,12 @@
 ### Context
 English: "If there is one thing that bothers me, it is constant noise."
 
+### Instructions
+**TODO**: Conjugate *(ser)* into the 3rd-person singular present indicative (*presente de indicativo*).
+**Why**: In conditional pseudo-cleft structures (*si... es...*), the copular verb *ser* connects the protasis condition with the focalized noun phrase (*el ruido constante*), aligning in present indicative.
+
 ### Exercise
+<!-- TODO: Conjugate (ser) in 3rd-person present indicative for the conditional pseudo-cleft copula -->
 Si algo me molesta de este lugar, (ser) ___ el ruido constante.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "The service agreement explicitly excludes any liability for lost profits or indirect commercial damages."
 
+### Instructions
+**TODO**: Insert the statutory civil law binomial for lost prospective profits and collateral damages with correct orthographic accents.
+**Why**: In civil law and Latin American commercial jurisprudence, foregone earnings are formally designated by the Latinate legal pair along with coordinated harm nouns.
+
 ### Exercise
+<!-- TODO: Insert the statutory civil law phrase for foregone earnings and collateral harm -->
 El contrato de prestación de servicios excluye expresamente cualquier responsabilidad por (lucro cesante o daños indirectos / lucro cesante o danos indirectos) ___ derivados de interrupciones imprevistas.
 
 <!-- SOLUTION

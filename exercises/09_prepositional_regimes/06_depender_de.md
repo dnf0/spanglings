@@ -6,7 +6,12 @@
 ### Context
 English: "The success of the project depends on our team effort."
 
+### Instructions
+**TODO**: Insert the preposition governed by *(depender)* to indicate reliance or contingency.
+**Why**: In Spanish syntax, *(depender)* strictly governs the ablative preposition, avoiding the calque with other prepositions.
+
 ### Exercise
+<!-- TODO: Insert preposition governed by 'depender' -->
 El éxito del proyecto depende ___ nuestro esfuerzo colectivo.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "When the waiter brought dessert, we asked him if we could pay the bill separately."
 
+### Instructions
+**TODO**: Form the restaurant billing request for splitting the check individually and settling via electronic payment card.
+**Why**: In Hispanic dining etiquette, requesting individualized restaurant billing uses the standard bill-splitting locution followed by card payment prepositions.
+
 ### Exercise
+<!-- TODO: Form the restaurant request for split billing and electronic card payment -->
 Cuando el camarero trajo el postre, le preguntamos si podíamos (pedir la cuenta por separado y pagar con tarjeta / pagar por separado) ___.
 
 <!-- SOLUTION

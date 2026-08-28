@@ -6,9 +6,13 @@
 ### Context
 English: "The moisture in the bedroom ceiling is caused by water seepage from communal building elements."
 
-### Exercise
-El perito determinó que los daños en el techo corresponden a una (humedad por filtración derivada de elementos comunes / filtración de agua procedente de la fachada comunitaria) ___.
+### Instructions
+**TODO**: Choose the technical architectural insurance diagnosis noun phrase describing dampness from water ingress originating from shared building structures.
+**Why**: Property loss assessment reports categorize water damage specifically by ingress type and attribute origin to shared structural areas of the building.
 
+### Exercise
+<!-- TODO: Choose the technical insurance diagnosis phrase for water ingress stemming from shared property areas -->
+El perito determinó que los daños en el techo corresponden a una (humedad por filtración derivada de elementos comunes / filtración de agua procedente de la fachada comunitaria) ___.
 <!-- SOLUTION
 humedad por filtración derivada de elementos comunes
 -->

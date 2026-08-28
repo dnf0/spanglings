@@ -6,7 +6,12 @@
 ### Context
 English: "To improve server performance, we optimized the SQL queries and reduced network latency."
 
+### Instructions
+**TODO**: Supply the masculine technical noun derived from *(rendir)* denoting system performance and throughput.
+**Why**: Technical Spanish uses the noun derived from the verb for yielding or producing output to designate system throughput and speed, rather than borrowing the raw English loanword.
+
 ### Exercise
+<!-- TODO: Supply the masculine noun for server performance and throughput -->
 Para mejorar el (rendimiento) ___ del servidor, optimizamos las consultas SQL y redujimos la latencia.
 
 <!-- SOLUTION

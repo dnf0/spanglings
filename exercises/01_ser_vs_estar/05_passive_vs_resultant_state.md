@@ -6,7 +6,12 @@
 ### Context
 English: "When we arrived, the museum door was already closed."
 
+### Instructions
+**TODO**: Conjugate the verb *(estar)* in the 3rd-person singular imperfect indicative.
+**Why**: Describing a static resultant state observed at a past moment requires *(estar)* with the past participle rather than an active event with *(ser)*.
+
 ### Exercise
+<!-- TODO: Conjugate (estar) in 3rd-person singular imperfect indicative -->
 Cuando llegamos, la puerta del museo ya (estar) ___ cerrada.
 
 <!-- SOLUTION

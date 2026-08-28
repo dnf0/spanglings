@@ -6,9 +6,13 @@
 ### Context
 English: "Any constitutional reform requires securing a three-fifths qualified majority in both chambers."
 
-### Exercise
-Toda reforma de la Carta Magna exige (alcanzar una mayoría cualificada de tres quintos en ambas cámaras / recabar una mayoría de tres quintos en las Cortes Generales) ___ para prosperar.
+### Instructions
+**TODO**: Select the constitutional law infinitive phrase for securing a three-fifths supermajority in both legislative chambers.
+**Why**: Parliamentary procedural vocabulary requires the technical juridical phrase for enhanced threshold voting with fractional quantifiers for bicameral consent.
 
+### Exercise
+<!-- TODO: Select the constitutional law infinitive phrase for securing a three-fifths enhanced supermajority -->
+Toda reforma de la Carta Magna exige (alcanzar una mayoría cualificada de tres quintos en ambas cámaras / recabar una mayoría de tres quintos en las Cortes Generales) ___ para prosperar.
 <!-- SOLUTION
 alcanzar una mayoría cualificada de tres quintos en ambas cámaras
 -->

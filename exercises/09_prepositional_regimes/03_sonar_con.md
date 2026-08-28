@@ -6,7 +6,12 @@
 ### Context
 English: "Every night I dream about traveling to Japan."
 
+### Instructions
+**TODO**: Insert the preposition governed by the verb *(soñar)* when referring to the object of dreams or aspirations.
+**Why**: In Spanish syntax, *(soñar)* obligatorily governs the associative preposition for dream content and life aspirations.
+
 ### Exercise
+<!-- TODO: Insert preposition governed by 'soñar' -->
 Todas las noches sueño ___ viajar a Japón.
 
 <!-- SOLUTION

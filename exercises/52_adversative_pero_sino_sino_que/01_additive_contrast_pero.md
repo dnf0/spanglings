@@ -6,9 +6,13 @@
 ### Context
 English: "The new compression algorithm is mathematically complex, but it offers unmatched decompression speed."
 
-### Exercise
-El nuevo algoritmo de compresión es matemáticamente complejo, (pero / sino) ___ ofrece una velocidad de descompresión inigualable.
+### Instructions
+**TODO**: Insert the restrictive adversative conjunction of partial nuance connecting two affirmative, non-exclusive clauses.
+**Why**: The coordinating adversative connector introduces a qualifying reservation or contrast without negating or replacing the first affirmative proposition.
 
+### Exercise
+<!-- TODO: Insert the restrictive adversative conjunction connecting two affirmative clauses -->
+El nuevo algoritmo de compresión es matemáticamente complejo, (pero / sino) ___ ofrece una velocidad de descompresión inigualable.
 <!-- SOLUTION
 pero
 -->

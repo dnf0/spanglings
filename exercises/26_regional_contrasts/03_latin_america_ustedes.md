@@ -6,7 +6,12 @@
 ### Context
 English: "(Speaking to friends in Mexico City) What time are you all arriving at the party tonight?"
 
+### Instructions
+**TODO**: Conjugate *(llegar)* into the 3rd-person plural present indicative (*presente de indicativo*) agreeing with *ustedes*.
+**Why**: Throughout Latin America and the Canary Islands, the 2nd-person plural informal *vosotros* is entirely replaced by *ustedes*, governing standard 3rd-person plural verbal morphology.
+
 ### Exercise
+<!-- TODO: Conjugate (llegar) in 3rd-person plural present indicative agreeing with "ustedes" -->
 Amigos, ¿a qué hora (llegar) ___ ustedes a la fiesta esta noche?
 
 <!-- SOLUTION

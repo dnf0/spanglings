@@ -6,7 +6,12 @@
 ### Context
 English: "The database query performs significantly better after indexing foreign key columns."
 
+### Instructions
+**TODO**: Conjugate the native Spanish verb *(rendir)* in the 3rd-person singular present indicative followed by the comparative adverbial phrase denoting superior efficiency.
+**Why**: The pseudo-Anglicism 'performar' is non-standard in Spanish; use the 3rd-person singular with e->i vowel mutation of *(rendir)* followed by the comparative modifier.
+
 ### Exercise
+<!-- TODO: Conjugate (rendir) in 3rd-person singular present with comparative modifier -->
 La consulta a la base de datos (rinde significativamente mejor / performa significativamente mejor) ___ tras indexar las columnas de clave foránea.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "The ministry will undertake a structural reform of the healthcare system next year."
 
+### Instructions
+**TODO**: Supply the elevated infinitive verb meaning "to undertake / tackle a major project" formed with the prefix *a-* and root *(meter)*.
+**Why**: Formal administrative registers replace basic verbs (*hacer*, *comenzar*) with precise lexemes like *emprender* or the derivative of *meter* when referring to undertaking ambitious reforms or construction projects.
+
 ### Exercise
+<!-- TODO: Supply the elevated infinitive verb for undertaking a major structural reform -->
 El ministerio va a (acometer) ___ una reforma estructural del sistema sanitario el próximo año.
 
 <!-- SOLUTION

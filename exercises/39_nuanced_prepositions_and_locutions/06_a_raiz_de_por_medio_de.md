@@ -6,7 +6,12 @@
 ### Context
 English: "As a result of the audit findings, communication between services will be enforced through an encrypted gateway."
 
+### Instructions
+**TODO**: Form the causal origin and mediating channel sentence using the seminal cause locution, audit findings, passive reflexive future, and instrumental conduit.
+**Why**: Prepositional syntax employs seminal origin connectors to introduce audit consequences and instrumental locutions to establish communication channels.
+
 ### Exercise
+<!-- TODO: Combine seminal causal connector with instrumental channel locution -->
 (A raíz de los hallazgos de la auditoría, la comunicación se gestionará por medio de / A raiz de los hallazgos) ___ una pasarela cifrada.
 
 <!-- SOLUTION

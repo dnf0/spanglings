@@ -6,9 +6,13 @@
 ### Context
 English: "The central server experienced a memory overflow and caused the temporary downtime of the cluster."
 
-### Exercise
-El servidor central experimentó un desbordamiento de memoria (y provocó / provocando) ___ la caída temporal del clúster.
+### Instructions
+**TODO**: Select the coordinating conjunction and 3rd-person singular preterite indicative verb *(provocar)* to narrate consecutive events.
+**Why**: The Spanish gerund cannot denote an event occurring subsequent in time to the main verb (*gerundio de posterioridad*); sequential consequences require a coordinated finite preterite clause.
 
+### Exercise
+<!-- TODO: Choose the coordinate conjunction and preterite verb to avoid the gerund of posteriority -->
+El servidor central experimentó un desbordamiento de memoria (y provocó / provocando) ___ la caída temporal del clúster.
 <!-- SOLUTION
 y provocó
 -->

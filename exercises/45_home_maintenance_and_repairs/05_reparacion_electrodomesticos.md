@@ -6,9 +6,13 @@
 ### Context
 English: "Before sending the technician, please provide a written estimate including labor and travel expenses."
 
-### Exercise
-Antes de autorizar la visita, solicitamos (un presupuesto previo por escrito que incluya mano de obra y desplazamiento / una cotización detallada con mano de obra y desplazamiento) ___.
+### Instructions
+**TODO**: Insert the consumer protection phrase requesting an advance itemized quotation in writing with a relative clause detailing labor and travel fees.
+**Why**: Consumer repair service regulations entitle customers to advance binding price quotations in writing with subjunctive relative clause specifying mandatory line items.
 
+### Exercise
+<!-- TODO: Select the formal quote request phrase specifying itemized labor and travel fees -->
+Antes de autorizar la visita, solicitamos (un presupuesto previo por escrito que incluya mano de obra y desplazamiento / una cotización detallada con mano de obra y desplazamiento) ___.
 <!-- SOLUTION
 un presupuesto previo por escrito que incluya mano de obra y desplazamiento
 -->

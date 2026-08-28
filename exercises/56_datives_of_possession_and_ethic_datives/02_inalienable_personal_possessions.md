@@ -6,9 +6,13 @@
 ### Context
 English: "When tripping in the hallway, Carlos had the corporate tablet screen break on him."
 
-### Exercise
-Al tropezar en el pasillo, a Carlos (se le rompió / se rompió su) ___ la pantalla de la tableta corporativa.
+### Instructions
+**TODO**: Insert the accidental middle clitic sequence with the 3rd-person singular indirect object pronoun and preterite verb *(romperse)*.
+**Why**: Accidental damage to personal possessions uses the accidental pronominal construction combined with the dative of interest/possession (*se le + verbo*).
 
+### Exercise
+<!-- TODO: Insert the involuntary middle clitic sequence and preterite verb for accidental damage -->
+Al tropezar en el pasillo, a Carlos (se le rompió / se rompió su) ___ la pantalla de la tableta corporativa.
 <!-- SOLUTION
 se le rompió
 -->

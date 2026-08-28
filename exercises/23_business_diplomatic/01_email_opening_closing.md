@@ -6,7 +6,12 @@
 ### Context
 English: "Without further ado for now, I remain at your full disposal for any clarification."
 
+### Instructions
+**TODO**: Provide the formal closing phrase in the 1st-person singular expressing full availability for the addressee (*usted*).
+**Why**: Executive and diplomatic written correspondence in Spanish employs fixed courteous valedictions linking the 1st person of *(quedar)* with an elevated prepositional phrase indicating complete readiness to assist.
+
 ### Exercise
+<!-- TODO: Supply the formal executive closing formula expressing complete availability -->
 Sin otro particular por el momento, (quedo a su entera disposición) ___ para cualquier aclaración.
 
 <!-- SOLUTION

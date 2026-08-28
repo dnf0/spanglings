@@ -6,7 +6,12 @@
 ### Context
 English: "His time ran out during the exam."
 
+### Instructions
+**TODO**: Insert the 3rd-person singular indirect pronoun (*le*) followed by the 3rd-person singular preterite indicative of *(acabar)* with the required written accent.
+**Why**: Accidental *se* constructions depersonalize event agency while explicitly marking the affected party (*a Juan*) through a dative clitic agreeing with singular *el tiempo*.
+
 ### Exercise
+<!-- TODO: Insert 3rd-person dative clitic and singular preterite verb -->
 Durante el examen final, a Juan se ___ (acabar) el tiempo.
 
 <!-- SOLUTION

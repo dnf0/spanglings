@@ -6,9 +6,13 @@
 ### Context
 English: "It's not that the technical proposal is unviable, but rather executive management lacks budget for this quarter."
 
-### Exercise
-No es que la propuesta técnica sea inviable, sino que la dirección ejecutiva (carece / carezca) ___ de presupuesto para este trimestre.
+### Instructions
+**TODO**: Conjugate the verb *(carecer)* in the 3rd-person singular present indicative in the asserted reality clause following the conjunction.
+**Why**: While the rejected first clause (*no es que...*) takes the subjunctive, the subsequent adversative clause introduced by *sino que* asserts real fact and takes the INDICATIVE.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the present indicative for the asserted factual clause after adversative conjunction -->
+No es que la propuesta técnica sea inviable, sino que la dirección ejecutiva (carece / carezca) ___ de presupuesto para este trimestre.
 <!-- SOLUTION
 carece
 -->

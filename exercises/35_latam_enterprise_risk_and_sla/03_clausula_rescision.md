@@ -6,7 +6,12 @@
 ### Context
 English: "Repeated availability failures allow the client to trigger the termination clause for material breach."
 
+### Instructions
+**TODO**: Insert the contractual legal noun phrase for contract cancellation due to default, ensuring proper graphic tildes.
+**Why**: Commercial contracts designate contract termination provisions via the accented feminine noun phrase followed by the prepositional cause for contract violation.
+
 ### Exercise
+<!-- TODO: Supply the contractual phrase for contract cancellation due to default -->
 Las fallas reiteradas de disponibilidad facultan al cliente a activar la (cláusula de rescisión por incumplimiento / clausula de rescision por incumplimiento) ___ sin penalización financiera.
 
 <!-- SOLUTION

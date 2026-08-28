@@ -6,9 +6,13 @@
 ### Context
 English: "Out of the question! I won't accept an unfair contract that removes all our intellectual property rights."
 
-### Exercise
-(¡Ni hablar! No pienso aceptar / ¡Ni de broma voy a firmar) ___ un contrato leonino que suprima todos nuestros derechos de autor.
+### Instructions
+**TODO**: Select the idiomatic emphatic refusal interjection followed by the 1st-person singular present intention periphrasis.
+**Why**: Colloquial discourse formulas of absolute rejection convey categorical refusal, followed by intention verbs to express firm rejection of proposed conditions.
 
+### Exercise
+<!-- TODO: Select the emphatic refusal exclamation and 1st-person intention verb rejecting unfair terms -->
+(¡Ni hablar! No pienso aceptar / ¡Ni de broma voy a firmar) ___ un contrato leonino que suprima todos nuestros derechos de autor.
 <!-- SOLUTION
 ¡Ni hablar! No pienso aceptar
 -->

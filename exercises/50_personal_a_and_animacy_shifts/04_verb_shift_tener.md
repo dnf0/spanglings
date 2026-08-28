@@ -6,9 +6,13 @@
 ### Context
 English: "The founder has his business partner hospitalized following the traffic accident."
 
-### Exercise
-El fundador tiene (a su socia / su socia) ___ hospitalizada tras el accidente de tráfico.
+### Instructions
+**TODO**: Insert the personal preposition before the possessive determiner and feminine noun representing a person in a circumstantial temporary state.
+**Why**: While *(tener)* normally rejects personal *a*, it requires it when describing a person placed in a temporary physical or emotional situation (*tener a alguien + participio/adjetivo*).
 
+### Exercise
+<!-- TODO: Insert personal preposition with the verb denoting a person in a temporary condition -->
+El fundador tiene (a su socia / su socia) ___ hospitalizada tras el accidente de tráfico.
 <!-- SOLUTION
 a su socia
 -->

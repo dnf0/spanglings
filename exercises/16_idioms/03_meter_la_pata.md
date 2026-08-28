@@ -6,7 +6,12 @@
 ### Context
 English: "I made a huge blunder when mentioning the surprise party."
 
+### Instructions
+**TODO**: Complete the idiomatic phrase with the correct vocabulary item.
+**Why**: 'Meter la the required term' means to blunder, make a mistake, or put one's foot in one's mouth.
+
 ### Exercise
+<!-- TODO: Complete the idiomatic phrase with the correct vocabulary item. -->
 Metí la ___ al mencionar la fiesta sorpresa delante de Ana.
 
 <!-- SOLUTION

@@ -6,12 +6,16 @@
 ### Context
 English: "The manifesto questions not so much the form as the commodification of contemporary aesthetic expressions."
 
+### Instructions
+**TODO**: Formulate the correlative comparative structure using negative scalar markers with the abstract noun denoting commercialization.
+**Why**: Elevated philosophical and cultural critique uses correlative scalar comparative formulas to contrast surface aesthetics with structural commodification.
+
 ### Exercise
+<!-- TODO: Translate the correlative cultural critique structure contrasting outward form with commercialization -->
 Translate into high-register cultural critique Spanish:
 "The manifesto questions not so much the form as the commodification of contemporary aesthetic expressions."
 
 El manifiesto cuestiona ___
-
 <!-- SOLUTION
 no tanto la forma cuanto la mercantilización de las expresiones estéticas contemporáneas
 -->

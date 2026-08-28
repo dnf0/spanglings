@@ -6,7 +6,12 @@
 ### Context
 English: "Having examined all the evidence, the judge issued the verdict."
 
+### Instructions
+**TODO**: Form the capitalized simple gerund of the auxiliary *(haber)* to construct the compound gerund clause (*gerundio compuesto*).
+**Why**: Formal narrative and legal prose uses absolute compound gerund constructions (*[gerundio] + participio*) to establish anteriority relative to the main past event (*dictó sentencia*).
+
 ### Exercise
+<!-- TODO: Form the auxiliary gerund for the formal compound gerund clause -->
 (Haber) ___ examinado todas las pruebas, el juez dictó sentencia.
 
 <!-- SOLUTION

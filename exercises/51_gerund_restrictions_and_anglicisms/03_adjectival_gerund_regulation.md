@@ -6,9 +6,13 @@
 ### Context
 English: "Parliament passed a directive regulating privacy in artificial intelligence models."
 
-### Exercise
-El parlamento aprobó una directiva (que regula / regulando) ___ la privacidad en los modelos de inteligencia artificial.
+### Instructions
+**TODO**: Choose the restrictive relative pronoun followed by the 3rd-person singular present indicative verb *(regular)* modifying the feminine statutory noun.
+**Why**: Gerunds cannot function as adjectival noun modifiers (*gerundio especificativo*); standard Spanish grammar requires a restrictive relative clause (*que + indicativo*).
 
+### Exercise
+<!-- TODO: Select the relative clause to modify the noun instead of an ungrammatical adjectival gerund -->
+El parlamento aprobó una directiva (que regula / regulando) ___ la privacidad en los modelos de inteligencia artificial.
 <!-- SOLUTION
 que regula
 -->

@@ -6,9 +6,13 @@
 ### Context
 English: "By all means! Feel free to count on my full collaboration whenever you need it."
 
-### Exercise
-(¡Faltaría más! Cuente usted con mi plena colaboración / ¡No faltaba más! Tiene a su disposición mi apoyo) ___ siempre que lo estime oportuno.
+### Instructions
+**TODO**: Choose the exclamatory courtesy marker of enthusiastic assent followed by the formal imperative verb offering complete assistance.
+**Why**: Set exclamatory politeness formulas reinforce gracious consent and willingness, paired with respectful formal commands in professional etiquette.
 
+### Exercise
+<!-- TODO: Choose the courteous reassurance formula and formal imperative offering full collaboration -->
+(¡Faltaría más! Cuente usted con mi plena colaboración / ¡No faltaba más! Tiene a su disposición mi apoyo) ___ siempre que lo estime oportuno.
 <!-- SOLUTION
 ¡Faltaría más! Cuente usted con mi plena colaboración
 -->

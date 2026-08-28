@@ -6,7 +6,12 @@
 ### Context
 English: "Given the complexity of the circumstances, we proceeded with caution."
 
+### Instructions
+**TODO**: Supply the capitalized feminine singular past participle of *(dar)* functioning as a causal prepositional connector.
+**Why**: The participle *dado* functions as a causal preposition meaning "given / in view of", which in standard normative Spanish agrees in gender and number with the following nominal complement (*la complejidad*).
+
 ### Exercise
+<!-- TODO: Supply the capitalized feminine participle of (dar) agreeing with "la complejidad" -->
 ___ la complejidad de la situación, procedimos con cautela.
 
 <!-- SOLUTION

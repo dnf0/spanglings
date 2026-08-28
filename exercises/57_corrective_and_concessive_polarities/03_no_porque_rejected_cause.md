@@ -6,9 +6,13 @@
 ### Context
 English: "Just because a tool is novel does not mean that it should be blindly adopted across the company."
 
-### Exercise
-No porque una herramienta (sea / es) ___ novedosa significa que deba adoptarse ciegamente en toda la empresa.
+### Instructions
+**TODO**: Conjugate the verb *(ser)* in the 3rd-person singular present subjunctive within the rejected causal clause.
+**Why**: The conjunction *no porque* introduces a rejected cause or invalid justification, strictly requiring the SUBJUNCTIVE mood.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the present subjunctive following the rejected causal conjunction -->
+No porque una herramienta (sea / es) ___ novedosa significa que deba adoptarse ciegamente en toda la empresa.
 <!-- SOLUTION
 sea
 -->

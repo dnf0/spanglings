@@ -6,7 +6,12 @@
 ### Context
 English: "Leaving administrative credentials in plaintext inside the repository is needlessly exposing the system to attack."
 
+### Instructions
+**TODO**: Insert the famous Colombian cybersecurity and cultural idiom meaning to needlessly expose an exploitable opening.
+**Why**: The Colombian cultural rule of prudence based on the verb of granting and the tropical fruit noun extends naturally into operational security to describe providing an avoidable vulnerability.
+
 ### Exercise
+<!-- TODO: Insert the Colombian cultural security idiom for needlessly exposing a vulnerability -->
 Dejar credenciales administrativas en texto plano dentro del repositorio es (dar papaya a) ___ posibles ciberdelincuentes.
 
 <!-- SOLUTION

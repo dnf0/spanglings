@@ -6,9 +6,13 @@
 ### Context
 English: "With persistence and leadership, the small startup became a global benchmark in the sector."
 
-### Exercise
-Con persistencia y liderazgo, la pequeña empresa emergente (se convirtió / se puso) ___ en un referente global del sector.
+### Instructions
+**TODO**: Conjugate the pronominal verb *(convertirse)* in the 3rd-person singular preterite indicative followed by preposition *en* for radical change.
+**Why**: The verb *(convertirse en)* denotes a radical, substantial transformation into something new, governing the preposition *en*.
 
+### Exercise
+<!-- TODO: Conjugate the pronominal verb denoting radical transformation into a new entity -->
+Con persistencia y liderazgo, la pequeña empresa emergente (se convirtió / se puso) ___ en un referente global del sector.
 <!-- SOLUTION
 se convirtió
 -->

@@ -6,7 +6,12 @@
 ### Context
 English: "Decommission the legacy database instance once the read replicas have fully synchronized."
 
+### Instructions
+**TODO**: Form the affirmative voseo imperative of *(dar)* followed by the administrative decommissioning phrase and direct object.
+**Why**: The voseo imperative of *(dar)* is the monosyllabic form 'da' (written without tilde according to modern RAE orthography), paired with the idiomatic decommissioning locution.
+
 ### Exercise
+<!-- TODO: Form the affirmative voseo imperative of (dar) for decommissioning -->
 Una vez que las réplicas de lectura estén sincronizadas, (dá de baja la instancia / da de baja la instancia) ___ heredada de base de datos.
 
 <!-- SOLUTION

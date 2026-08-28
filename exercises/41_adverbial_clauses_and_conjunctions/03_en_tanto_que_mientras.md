@@ -6,7 +6,12 @@
 ### Context
 English: "As long as the regulatory investigation remains ongoing, all public statements must be reviewed by legal counsel."
 
+### Instructions
+**TODO**: Form the conditional duration clause with 'En tanto que', the 3rd-person singular present subjunctive of *(continuar)* with tilde, the predicate adjective, the subject, and the plural main subject.
+**Why**: 'En tanto que' and 'mientras' introducing a temporal condition spanning future or pending events demand the present subjunctive to denote contingent duration.
+
 ### Exercise
+<!-- TODO: Form the conditional duration clause using 'En tanto que' and present subjunctive of (continuar) -->
 (En tanto que continúe abierta la investigación regulatoria, todas las declaraciones / Mientras continue abierta la investigacion) ___ deberán ser aprobadas por el departamento legal.
 
 <!-- SOLUTION

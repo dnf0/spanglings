@@ -6,7 +6,12 @@
 ### Context
 English: "We have finished packing and now we are ready to leave."
 
+### Instructions
+**TODO**: Conjugate the verb *(estar)* in the 1st-person plural (*nosotros*) present indicative.
+**Why**: Expressing situational readiness or preparation for an activity is a temporary condition that requires *(estar)* rather than the inherent trait denoted by *(ser)*.
+
 ### Exercise
+<!-- TODO: Conjugate (estar) in 1st-person plural present indicative -->
 Ya hemos hecho las maletas y ahora (estar) ___ listos para salir.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "Before granting access to proprietary source code, both parties signed a strict non-disclosure agreement."
 
+### Instructions
+**TODO**: Insert the standard legal Spanish commercial term for a Non-Disclosure Agreement (NDA).
+**Why**: Corporate legal contracts in Latin America translate NDA as the formal noun phrase denoting mutual secrecy and non-disclosure rather than using English acronyms.
+
 ### Exercise
+<!-- TODO: Insert the formal Spanish legal term for an NDA -->
 Antes de conceder acceso al código fuente propietario, ambas partes suscribieron un estricto (acuerdo de confidencialidad / NDA) ___ con validez de cinco años.
 
 <!-- SOLUTION

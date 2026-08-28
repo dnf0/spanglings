@@ -6,7 +6,12 @@
 ### Context
 English: "By the way, the truth is that I hadn't thought about that perspective before."
 
+### Instructions
+**TODO**: Form the conversational transition combining the parenthetical digression marker, the pragmatic softening formula, and the 1st-person singular pluperfect auxiliary.
+**Why**: Natural spoken Spanish utilizes discourse markers for topic transitions and epistemic qualification before introducing retrospective reflections.
+
 ### Exercise
+<!-- TODO: Form the conversational transition using topic shift and epistemic softening markers -->
 (Por cierto, la verdad es que no me había / Por cierto, la verdad es que no habia) ___ planteado esa perspectiva hasta que lo mencionaste.
 
 <!-- SOLUTION

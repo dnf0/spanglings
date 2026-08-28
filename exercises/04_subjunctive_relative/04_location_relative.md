@@ -6,7 +6,12 @@
 ### Context
 English: "We will go wherever you want."
 
+### Instructions
+**TODO**: Conjugate the verb *(querer)* in the 2nd-person singular (*tú*) present subjunctive.
+**Why**: Relative locative clauses introduced by *adonde* referring to an undetermined or hypothetical destination require the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Conjugate (querer) in 2nd-person singular present subjunctive -->
 Iremos adonde tú (querer) ___ ir.
 
 <!-- SOLUTION

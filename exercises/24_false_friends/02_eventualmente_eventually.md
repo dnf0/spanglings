@@ -6,7 +6,12 @@
 ### Context
 English: "After months of hard work, they eventually managed to complete the satellite prototype."
 
+### Instructions
+**TODO**: Supply the standard adverb ending in *-mente* meaning "in the end / at last", avoiding the false cognate *eventualmente*.
+**Why**: In Spanish, *eventualmente* signifies possibility or contingency ("sporadically / conditionally"), so English "eventually" must be rendered with an adverb indicating definitive outcome (*al cabo*, *por fin*, or *-mente* attached to *final*).
+
 ### Exercise
+<!-- TODO: Supply the adverb for final culmination avoiding the false friend "eventualmente" -->
 Tras meses de arduo trabajo, (finalmente) ___ lograron completar el prototipo del satélite.
 
 <!-- SOLUTION

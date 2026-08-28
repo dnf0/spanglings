@@ -6,9 +6,13 @@
 ### Context
 English: "All affected users we notified via an urgent transactional email."
 
-### Exercise
-(A todos los usuarios afectados los notificamos / A todos los usuarios afectados notificamos) ___ mediante un correo transaccional urgente.
+### Instructions
+**TODO**: Insert the left-dislocated human direct object phrase featuring differential object marking and its mandatory masculine plural accusative resumptive clitic with the 1st-person plural preterite verb *(notificar)*.
+**Why**: Left-dislocated definite direct objects in Spanish obligatorily require an accusative resumptive clitic pronoun agreeing in gender and number.
 
+### Exercise
+<!-- TODO: Insert the topicalized direct object phrase with mandatory resumptive accusative clitic -->
+(A todos los usuarios afectados los notificamos / A todos los usuarios afectados notificamos) ___ mediante un correo transaccional urgente.
 <!-- SOLUTION
 A todos los usuarios afectados los notificamos
 -->

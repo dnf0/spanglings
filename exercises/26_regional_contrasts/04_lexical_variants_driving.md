@@ -6,7 +6,12 @@
 ### Context
 English: "(In Bogotá, Colombia) My brother doesn't know how to drive manual transmission cars."
 
+### Instructions
+**TODO**: Supply the infinitive verb representing the standard Latin American term for driving a motor vehicle.
+**Why**: While peninsular Spanish uses *conducir*, Latin American varieties overwhelmingly prefer the 1st-conjugation verb for handling/operating when referring to operating a car.
+
 ### Exercise
+<!-- TODO: Supply the Latin American infinitive verb for driving a vehicle -->
 En Bogotá, mi hermano todavía no sabe (manejar) ___ carros con transmisión manual.
 
 <!-- SOLUTION

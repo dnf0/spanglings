@@ -6,7 +6,12 @@
 ### Context
 English: "This homemade soup is so delicious!"
 
+### Instructions
+**TODO**: Conjugate the verb *(estar)* in the 3rd-person singular present indicative with the required written accent.
+**Why**: Evaluating the taste or deliciousness of food at the moment of consumption requires *(estar)* rather than financial wealth expressed by *(ser)*.
+
 ### Exercise
+<!-- TODO: Conjugate (estar) in 3rd-person singular present indicative -->
 ¡Esta sopa casera (estar) ___ riquísima!
 
 <!-- SOLUTION

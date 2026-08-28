@@ -6,9 +6,13 @@
 ### Context
 English: "We must ensure the cryptographic integrity of data at rest, whatever the cost may be."
 
-### Exercise
-Debemos asegurar la integridad criptográfica de los datos en reposo, (cueste lo que cueste / cuesta lo que cuesta) ___.
+### Instructions
+**TODO**: Choose the reduplicative concessive formula with the 3rd-person singular present subjunctive of *(costar)* surrounding the relative pronoun.
+**Why**: Reduplicative concessive formulas of indifference (*pase lo que pase, caiga quien caiga*) systematically require subjunctive mood in both verbal slots.
 
+### Exercise
+<!-- TODO: Choose the reduplicative concessive formula in the present subjunctive -->
+Debemos asegurar la integridad criptográfica de los datos en reposo, (cueste lo que cueste / cuesta lo que cuesta) ___.
 <!-- SOLUTION
 cueste lo que cueste
 -->

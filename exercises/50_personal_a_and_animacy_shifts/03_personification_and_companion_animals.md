@@ -6,9 +6,13 @@
 ### Context
 English: "Before starting my remote work day, I always take the dog out for a walk in the park."
 
-### Exercise
-Antes de iniciar mi jornada de trabajo remoto, siempre saco a pasear (al perro / el perro) ___ por el parque.
+### Instructions
+**TODO**: Select the contracted prepositional article *(a + el)* combined with the masculine domestic pet noun.
+**Why**: Companion animals treated with affection and individual animacy trigger differential object marking (*a personal*), which contracts with the masculine article.
 
+### Exercise
+<!-- TODO: Select the contracted prepositional article and noun for personified companion animals -->
+Antes de iniciar mi jornada de trabajo remoto, siempre saco a pasear (al perro / el perro) ___ por el parque.
 <!-- SOLUTION
 al perro
 -->

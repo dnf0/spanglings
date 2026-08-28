@@ -6,9 +6,13 @@
 ### Context
 English: "No matter how much security analysts investigated the network traces for days, they found no traces of external intrusion."
 
-### Exercise
-Por más que los analistas de seguridad (investigaran / investigaron) ___ las trazas de red durante días, no hallaron indicios de intrusión externa.
+### Instructions
+**TODO**: Conjugate the verb *(investigar)* in the 3rd-person plural imperfect subjunctive (*-ra/-se*) in a past scalar concessive clause.
+**Why**: In past narratives expressing unavailing efforts, *por más que* governs the imperfect subjunctive to convey concessive nuance.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the 3rd-person plural imperfect subjunctive after past scalar concession -->
+Por más que los analistas de seguridad (investigaran / investigaron) ___ las trazas de red durante días, no hallaron indicios de intrusión externa.
 <!-- SOLUTION
 investigaran
 -->

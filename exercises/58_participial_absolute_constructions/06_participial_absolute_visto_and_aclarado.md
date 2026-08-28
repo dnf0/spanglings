@@ -6,9 +6,13 @@
 ### Context
 English: "In light of the severity of the degradation in primary services, the crisis committee activated the contingency protocol."
 
-### Exercise
-(Vista / Visto) ___ la gravedad de la degradación en los servicios principales, el comité de crisis activó el protocolo de contingencia.
+### Instructions
+**TODO**: Inflect the participle of *(ver)* in the feminine singular to agree with the feminine abstract noun in the causal absolute clause.
+**Why**: In causal absolute formulas (*participio de ver + la gravedad...* = 'given the severity...'), the participle agrees in gender and number with the following nominal complement.
 
+### Exercise
+<!-- TODO: Inflect the causal absolute participle in the feminine singular matching the noun -->
+(Vista / Visto) ___ la gravedad de la degradación en los servicios principales, el comité de crisis activó el protocolo de contingencia.
 <!-- SOLUTION
 Vista
 -->

@@ -6,7 +6,12 @@
 ### Context
 English: "We put together a great plan for Saturday and had a wonderful time celebrating his promotion."
 
+### Instructions
+**TODO**: Form the social anecdote in the 1st-person plural preterite of initiative organization, coordinated with the Latin American leisure idiom and celebration gerund.
+**Why**: Narrating past social gatherings in Latin America frequently pairs the colloquial organizing idiom with the pronominal enjoyment formula and circumstance gerunds.
+
 ### Exercise
+<!-- TODO: Form the social anecdote with past organizing idiom and regional enjoyment formula -->
 El sábado (armamos un gran plan y nos la pasamos en grande celebrando / armamos un gran plan y la pasamos muy bien) ___ su ascenso laboral.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "I sent you the confidential document by email."
 
+### Instructions
+**TODO**: Insert the preposition expressing the means of transmission or communication channel.
+**Why**: Indicating the medium, route, or instrument through which an action occurs (*by email*) governs the traversal preposition.
+
 ### Exercise
+<!-- TODO: Insert preposition expressing medium/channel -->
 Te envié el documento confidencial ___ correo electrónico.
 
 <!-- SOLUTION

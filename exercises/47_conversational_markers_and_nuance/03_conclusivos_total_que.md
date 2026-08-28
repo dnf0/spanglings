@@ -7,9 +7,13 @@
 Anecdote summary prompt: 'Estuvimos esperando horas en la fila, la máquina falló y cerraron las taquillas.'
 Summarize into a punchy conversational conclusion: 'Total que...' (al final nos quedamos con las manos vacías / nos quedamos sin poder entrar).
 
-### Exercise
-Total que ___ y tuvimos que volver a casa.
+### Instructions
+**TODO**: Complete the conversational recap using the temporal locution with the 1st-person plural preterite reflexive verb *(quedarse)* and idiomatic prepositional phrase denoting coming away empty-handed.
+**Why**: The conversational narrative closer *total que* introduces the punchy bottom-line outcome of a narrative, requiring indicative past agreement.
 
+### Exercise
+<!-- TODO: Complete the narrative conclusion with the idiom for ending up empty-handed -->
+Total que ___ y tuvimos que volver a casa.
 <!-- SOLUTION
 al final nos quedamos con las manos vacías
 -->

@@ -6,7 +6,12 @@
 ### Context
 English: "My parents want me to study law."
 
+### Instructions
+**TODO**: Conjugate the verb *(estudiar)* in the 1st-person singular (*yo*) present subjunctive.
+**Why**: A matrix verb of volition *(querer que)* with a change of grammatical subject across clauses governs the subjunctive mood in the subordinate clause.
+
 ### Exercise
+<!-- TODO: Conjugate (estudiar) in 1st-person singular present subjunctive -->
 Mis padres quieren que yo (estudiar) ___ Derecho.
 
 <!-- SOLUTION

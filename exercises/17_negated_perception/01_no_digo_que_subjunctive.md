@@ -6,7 +6,12 @@
 ### Context
 English: "I am not saying that your idea is bad, but it is risky."
 
+### Instructions
+**TODO**: Conjugate *(ser)* in the required mood following the perception/belief verb.
+**Why**: Verbs of communication and opinion take indicative when affirmative ('digo que es...'), but SUBJUNCTIVE when negated ('no digo que the required term...').
+
 ### Exercise
+<!-- TODO: Conjugate (ser) in the required mood following the perception/belief verb. -->
 No digo que tu propuesta (ser) ___ mala, pero entraña riesgos.
 
 <!-- SOLUTION

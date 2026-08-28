@@ -6,9 +6,13 @@
 ### Context
 English: "You I saw at the cybersecurity conference last week."
 
-### Exercise
-(A ti te vi / A ti vi) ___ en la conferencia de ciberseguridad la semana pasada.
+### Instructions
+**TODO**: Select the fronted 2nd-person informal tonic direct object pronoun with its obligatory accusative clitic and 1st-person singular preterite verb *(ver)*.
+**Why**: Accusative tonic pronouns (*a ti*) cannot appear without the unstressed clitic pronoun adjacent to the verb.
 
+### Exercise
+<!-- TODO: Select the 2nd-person tonic direct object with mandatory clitic doubling and preterite verb -->
+(A ti te vi / A ti vi) ___ en la conferencia de ciberseguridad la semana pasada.
 <!-- SOLUTION
 A ti te vi
 -->

@@ -6,9 +6,13 @@
 ### Context
 English: "When the security breach occurred on the server, we found nobody in the control room."
 
-### Exercise
-Cuando se produjo la brecha de seguridad en el servidor, no encontramos (a nadie / nadie) ___ en la sala de control.
+### Instructions
+**TODO**: Select the personal preposition with the negative indefinite human pronoun functioning as direct object.
+**Why**: Negative and affirmative indefinite human pronouns invariably mandate differential object marking (*a*) when functioning as direct objects.
 
+### Exercise
+<!-- TODO: Select the negative indefinite human pronoun with mandatory personal preposition -->
+Cuando se produjo la brecha de seguridad en el servidor, no encontramos (a nadie / nadie) ___ en la sala de control.
 <!-- SOLUTION
 a nadie
 -->

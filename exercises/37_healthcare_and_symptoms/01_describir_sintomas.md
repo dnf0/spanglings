@@ -6,7 +6,12 @@
 ### Context
 English: "The patient explained to the doctor that she had been feeling sharp stabbing pains in her side and constant dizziness since yesterday."
 
+### Instructions
+**TODO**: Form the clinical symptom narrative with the imperfect indicative of *(tener)*, the vocabulary for sharp lancinating pains in the flank, and lightheadedness.
+**Why**: Describing ongoing past physical symptoms in clinical consultations uses the imperfect indicative paired with descriptive vocabulary for lancinating sensations and equilibrium loss.
+
 ### Exercise
+<!-- TODO: Form the symptom narrative using imperfect of (tener) and clinical sensations -->
 La paciente le explicó al médico que (tenía punzadas agudas en el costado y mareos / tenia punzadas agudas) ___ constantes desde el día anterior.
 
 <!-- SOLUTION

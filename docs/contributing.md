@@ -80,10 +80,15 @@ Exercises are structured Markdown files residing under `exercises/<track_name>/<
 - Grammar Focus: "Conocer in the preterite denotes first encounter or meeting."
 - Contrast Note: "Conocí (I met for the first time) vs Conocía (I knew for years)."
 
-## Prompt
-Fill in the correct form of the verb in parentheses.
-Context: Recounting when you first met a collaborator.
+### Context
+English: "Yesterday I met the new systems engineer at the standup."
 
+### Instructions
+**TODO**: Conjugate the verb (conocer) in the 1st person singular preterite.
+**Why**: The verb denotes a punctual initial encounter rather than ongoing background knowledge.
+
+### Exercise
+<!-- TODO: Conjugate conocer in preterite for yo -->
 Ayer ___ (conocer) a la nueva ingeniera de sistemas en el standup.
 
 ## Hints
@@ -94,6 +99,9 @@ Ayer ___ (conocer) a la nueva ingeniera de sistemas en el standup.
 
 ### Exercise Requirements Checklist
 - [x] **No Legacy Markers**: Never include `<!-- I AM NOT DONE -->` comments.
+- [x] **Structured Instructions**: Must include `### Instructions` with actionable `**TODO**:` and grammatical `**Why**:` explanations.
+- [x] **Inline Editor Comment**: Must include `<!-- TODO: ... -->` comment under `### Exercise`.
+- [x] **Zero Spoilers Policy**: Never leak the target solution token or inflected form in `TODO`, `Why`, or inline comments.
 - [x] **Ontology Tags**: Every `Concepts` and `Prerequisites` identifier must exist in `src/core/graph.rs`.
 - [x] **Progressive Hints**: Must contain exactly 3 tiers (`Tier 1: conceptual`, `Tier 2: morphological`, `Tier 3: solution`).
 - [x] **Accents**: Specify precise Spanish orthography and accents in Tier 3 solutions.

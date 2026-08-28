@@ -6,7 +6,12 @@
 ### Context
 English: "As soon as I arrive at the hotel, I will call you."
 
+### Instructions
+**TODO**: Conjugate the verb *(llegar)* in the 1st-person singular (*yo*) present subjunctive with the required orthographic adjustment.
+**Why**: The temporal conjunction *en cuanto* introduces an anticipated future event relative to the main clause (*te llamaré*), triggering the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Conjugate (llegar) in 1st-person singular present subjunctive -->
 En cuanto yo (llegar) ___ al hotel, te llamaré.
 
 <!-- SOLUTION

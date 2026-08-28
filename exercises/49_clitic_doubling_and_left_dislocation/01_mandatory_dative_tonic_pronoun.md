@@ -6,9 +6,13 @@
 ### Context
 English: "To me it seems that the migration to microservices will solve the latency bottlenecks."
 
-### Exercise
-(A mí me parece / A mí parece) ___ que la migración a microservicios resolverá los cuellos de botella de latencia.
+### Instructions
+**TODO**: Insert the prepositional tonic 1st-person pronoun combined with its mandatory unstressed dative clitic pronoun and 3rd-person singular present verb *(parecer)*.
+**Why**: Spanish syntax strictly requires clitic reduplication whenever a stressed prepositional personal pronoun (*a mí*) functions as indirect object.
 
+### Exercise
+<!-- TODO: Insert the duplicated 1st-person tonic and clitic pronouns with the verb of opinion -->
+(A mí me parece / A mí parece) ___ que la migración a microservicios resolverá los cuellos de botella de latencia.
 <!-- SOLUTION
 A mí me parece
 -->

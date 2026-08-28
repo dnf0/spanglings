@@ -6,7 +6,12 @@
 ### Context
 English: "I will be out of the office for one hour because I have to run an administrative errand at the tax agency."
 
+### Instructions
+**TODO**: Insert the ubiquitous Colombian professional idiom meaning to complete an administrative errand outside the office.
+**Why**: In Colombian workplace culture, everyday administrative errands or institutional procedures are colloquially and widely referred to using the primary verb of performance followed by the feminine tour noun.
+
 ### Exercise
+<!-- TODO: Supply the Colombian idiom for running an administrative errand -->
 Estaré fuera de la oficina durante una hora porque tengo que (hacer una vuelta) ___ en la entidad tributaria.
 
 <!-- SOLUTION

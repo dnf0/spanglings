@@ -6,7 +6,12 @@
 ### Context
 English: "The deployment will proceed tonight as planned, unless an unexpected blocking issue arises."
 
+### Instructions
+**TODO**: Form the exceptive subordinate clause with the negative contingency connector, followed by the 3rd-person singular present subjunctive of *(surgir)* and unexpected setback noun phrase.
+**Why**: Exceptive conjunctions introduce an exclusive hypothetical reservation and categorically govern the subjunctive mood in standard Spanish.
+
 ### Exercise
+<!-- TODO: Form the exceptive clause using negative contingency connector and present subjunctive of (surgir) -->
 El despliegue se llevará a cabo esta noche según lo previsto, (a menos que surja un contratiempo crítico imprevisto / salvo que surja un inconveniente) ___ durante las pruebas finales.
 
 <!-- SOLUTION

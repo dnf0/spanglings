@@ -6,9 +6,13 @@
 ### Context
 English: "Whoever in the exercise of public function should commit the crime of embezzlement shall be disqualified for life."
 
-### Exercise
-Quien en el ejercicio de su función pública (cometiere / cometerá) ___ delito de malversación de caudales será inhabilitado de por vida.
+### Instructions
+**TODO**: Conjugate the verb *(cometer)* in the 3rd-person singular future subjunctive for a statutory relative clause identifying an indefinite offender.
+**Why**: Penal and administrative codes utilize the future subjunctive (*-re*) in generalizing relative clauses referring to undetermined future offenders.
 
+### Exercise
+<!-- TODO: Conjugate the statutory verb in the 3rd-person singular future subjunctive -->
+Quien en el ejercicio de su función pública (cometiere / cometerá) ___ delito de malversación de caudales será inhabilitado de por vida.
 <!-- SOLUTION
 cometiere
 -->

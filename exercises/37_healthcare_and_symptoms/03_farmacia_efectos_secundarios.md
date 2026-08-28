@@ -6,7 +6,12 @@
 ### Context
 English: "The pharmacist recommended an over-the-counter medication and advised reading the leaflet for possible side effects."
 
+### Instructions
+**TODO**: Form the pharmacy guidance clause with the classification for non-prescription drugs, the preterite of *(aconsejar)*, and the infinitive for reviewing the package insert.
+**Why**: In Spanish pharmacology, over-the-counter pharmaceuticals are termed with the non-prescription commercial phrase, and the informational sheet inside is the package insert.
+
 ### Exercise
+<!-- TODO: Form the pharmacy guidance clause with non-prescription terms and package insert -->
 El farmacéutico recomendó un (medicamento de venta libre y aconsejó leer el prospecto / fármaco de venta libre) ___ para verificar los posibles efectos secundarios.
 
 <!-- SOLUTION

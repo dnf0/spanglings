@@ -6,7 +6,12 @@
 ### Context
 English: "With this final agreement, we settle the matter once and for all."
 
+### Instructions
+**TODO**: Provide the infinitive transitive verb meaning "to decisively settle / resolve" that collocates with *el asunto* or *una disputa*.
+**Why**: High-register Spanish pairs *asunto*, *debate*, or *polémica* with a specialized 1st-conjugation verb derived from *zanja* to indicate definitive, final resolution.
+
 ### Exercise
+<!-- TODO: Provide the high-register infinitive verb for definitively settling an issue -->
 Con este acuerdo definitivo logramos ___ el asunto de una vez por todas.
 
 <!-- SOLUTION

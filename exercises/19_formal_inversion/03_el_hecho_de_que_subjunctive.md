@@ -6,7 +6,12 @@
 ### Context
 English: "The fact that he did not respond on time does not justify your attitude."
 
+### Instructions
+**TODO**: Conjugate the compound past of *(responder)* into the 3rd-person singular present perfect subjunctive (*pretérito perfecto de subjuntivo*).
+**Why**: Noun phrases like *el hecho de que...* functioning as thematic subjects of evaluative predicates (*no justifica...*) trigger the subjunctive to present an action as a presupposed, appraised fact.
+
 ### Exercise
+<!-- TODO: Conjugate (haber + responder) in 3rd-person present perfect subjunctive after "el hecho de que" -->
 El hecho de que él no (responder) ___ a tiempo no justifica tu actitud.
 
 <!-- SOLUTION

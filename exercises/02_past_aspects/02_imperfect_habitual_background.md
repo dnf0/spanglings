@@ -6,7 +6,12 @@
 ### Context
 English: "As a child, I used to play in the street every afternoon."
 
+### Instructions
+**TODO**: Conjugate the verb *(jugar)* in the 1st-person singular (*yo*) imperfect indicative.
+**Why**: The temporal phrase *todas las tardes* establishes a repeated habitual routine in the past, mandating the imperfect aspect.
+
 ### Exercise
+<!-- TODO: Conjugate (jugar) in 1st-person singular imperfect indicative -->
 De niño, yo (jugar) ___ en la calle todas las tardes.
 
 <!-- SOLUTION

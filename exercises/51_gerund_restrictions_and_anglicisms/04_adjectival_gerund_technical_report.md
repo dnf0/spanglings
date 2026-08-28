@@ -6,9 +6,13 @@
 ### Context
 English: "The security team published a technical report detailing the zero-day vulnerabilities discovered."
 
-### Exercise
-El equipo de seguridad publicó un informe técnico (que detalla / detallando) ___ las vulnerabilidades de día cero encontradas.
+### Instructions
+**TODO**: Choose the relative pronoun and 3rd-person singular present indicative verb *(detallar)* modifying the technical masculine noun.
+**Why**: Modifying a noun with a gerund is an anglicism; standard technical Spanish mandates a relative clause introduced by *que*.
 
+### Exercise
+<!-- TODO: Choose the restrictive relative clause modifying the report noun -->
+El equipo de seguridad publicó un informe técnico (que detalla / detallando) ___ las vulnerabilidades de día cero encontradas.
 <!-- SOLUTION
 que detalla
 -->

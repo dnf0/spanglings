@@ -6,9 +6,13 @@
 ### Context
 English: "During the presentation before the executive board, I turned completely red from nervousness."
 
-### Exercise
-Durante la presentación ante el comité ejecutivo, yo (me puse / me volví) ___ completamente rojo de los nervios.
+### Instructions
+**TODO**: Conjugate the pronominal verb *(ponerse)* in the 1st-person singular preterite indicative denoting a sudden physical and emotional reaction.
+**Why**: Physical autonomic reactions (such as blushing) are expressed using *ponerse + adjetivo de color*.
 
+### Exercise
+<!-- TODO: Conjugate the 1st-person pronominal verb for an involuntary physical change in appearance -->
+Durante la presentación ante el comité ejecutivo, yo (me puse / me volví) ___ completamente rojo de los nervios.
 <!-- SOLUTION
 me puse
 -->

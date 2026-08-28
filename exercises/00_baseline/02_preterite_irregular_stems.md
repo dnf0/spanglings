@@ -6,7 +6,12 @@
 ### Context
 English: "Yesterday I did all the housework."
 
+### Instructions
+**TODO**: Conjugate the verb *(hacer)* in the 1st-person singular (*yo*) preterite indicative.
+**Why**: Verbs with irregular preterite roots like *(hacer)* use a modified root with the unaccented first-person singular ending *-e*.
+
 ### Exercise
+<!-- TODO: Conjugate (hacer) in 1st-person singular preterite indicative -->
 Ayer yo (hacer) ___ todas las tareas de la casa.
 
 <!-- SOLUTION

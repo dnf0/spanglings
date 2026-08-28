@@ -6,9 +6,13 @@
 ### Context
 English: "We will deploy the patch tonight, even at the risk that minor alerts arise in the monitoring dashboard."
 
-### Exercise
-Desplegaremos el parche esta misma noche, aun a riesgo de que (surjan / surgen) ___ alertas menores en el panel de monitorización.
+### Instructions
+**TODO**: Conjugate the verb *(surgir)* in the 3rd-person plural present subjunctive following the hypothetical concession locution.
+**Why**: The intensive concessive locution *aun a riesgo de que* ('even at the risk that...') introduces an uncertain contingency and strictly governs the SUBJUNCTIVE.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the 3rd-person plural present subjunctive after hypothetical risk locution -->
+Desplegaremos el parche esta misma noche, aun a riesgo de que (surjan / surgen) ___ alertas menores en el panel de monitorización.
 <!-- SOLUTION
 surjan
 -->

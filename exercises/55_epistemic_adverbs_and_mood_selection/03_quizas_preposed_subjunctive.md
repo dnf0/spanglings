@@ -6,9 +6,13 @@
 ### Context
 English: "Given the increase in latency, perhaps it might be advisable to optimize the database queries."
 
-### Exercise
-Dado el incremento en la latencia, quizás (sea / es) ___ conveniente optimizar las consultas a la base de datos.
+### Instructions
+**TODO**: Conjugate the verb *(ser)* in the 3rd-person singular present subjunctive following the preposed adverb of doubt.
+**Why**: When *quizás* precedes the verb, it licenses the SUBJUNCTIVE mood to signal doubt, uncertainty, or hypothetical probability.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the present subjunctive following a fronted adverb of doubt -->
+Dado el incremento en la latencia, quizás (sea / es) ___ conveniente optimizar las consultas a la base de datos.
 <!-- SOLUTION
 sea
 -->

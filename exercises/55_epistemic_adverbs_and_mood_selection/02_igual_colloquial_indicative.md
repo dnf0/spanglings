@@ -6,9 +6,13 @@
 ### Context
 English: "If they don't answer right away in the support channel, maybe they are busy with the deployment."
 
-### Exercise
-Si no responden de inmediato en el canal de soporte, igual (están / estén) ___ ocupados con el despliegue.
+### Instructions
+**TODO**: Conjugate the verb *(estar)* in the 3rd-person plural present indicative following the colloquial epistemic marker.
+**Why**: The colloquial epistemic marker *igual* ('maybe / perhaps') requires the INDICATIVE mood in contemporary Spanish.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the present indicative after the colloquial epistemic marker -->
+Si no responden de inmediato en el canal de soporte, igual (están / estén) ___ ocupados con el despliegue.
 <!-- SOLUTION
 están
 -->

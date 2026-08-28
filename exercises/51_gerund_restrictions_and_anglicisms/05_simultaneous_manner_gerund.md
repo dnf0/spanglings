@@ -6,9 +6,13 @@
 ### Context
 English: "The auditor examined the architecture by carefully reviewing the audit logs during the inspection."
 
-### Exercise
-El auditor examinó la arquitectura (revisando / y revisó) ___ detenidamente los registros de auditoría durante la inspección.
+### Instructions
+**TODO**: Select the simple gerund form of *(revisar)* expressing the simultaneous means and manner of the inspection.
+**Why**: The gerund is fully grammatical when denoting manner (*gerundio de modo*) or simultaneous execution accompanying the main verb.
 
+### Exercise
+<!-- TODO: Select the grammatical manner gerund expressing simultaneous execution -->
+El auditor examinó la arquitectura (revisando / y revisó) ___ detenidamente los registros de auditoría durante la inspección.
 <!-- SOLUTION
 revisando
 -->

@@ -6,7 +6,12 @@
 ### Context
 English: "I was studying quietly when suddenly the doorbell rang."
 
+### Instructions
+**TODO**: Conjugate the verb *(sonar)* in the 3rd-person singular preterite indicative with the appropriate written accent.
+**Why**: A punctual event (*de repente*) that interrupts an ongoing background imperfect action (*estudiaba tranquilamente*) requires the preterite aspect.
+
 ### Exercise
+<!-- TODO: Conjugate (sonar) in 3rd-person singular preterite indicative -->
 Yo estudiaba tranquilamente cuando de repente (sonar) ___ el timbre.
 
 <!-- SOLUTION

@@ -6,9 +6,13 @@
 ### Context
 English: "If either signatory party should breach the stipulated confidentiality obligations, it shall incur criminal penalties."
 
-### Exercise
-Si alguna de las partes firmantes (incumpliere / incumplirá) ___ las obligaciones de confidencialidad estipuladas, incurrirá en penalización penal.
+### Instructions
+**TODO**: Conjugate the verb *(incumplir)* in the 3rd-person singular future subjunctive (*futuro simple de subjuntivo*) for statutory hypothetical breach.
+**Why**: Archaic/legal future subjunctive forms ending in *-re* remain standard in Spanish contractual and statutory clauses for hypothetical conditionality.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the 3rd-person singular legal future subjunctive -->
+Si alguna de las partes firmantes (incumpliere / incumplirá) ___ las obligaciones de confidencialidad estipuladas, incurrirá en penalización penal.
 <!-- SOLUTION
 incumpliere
 -->

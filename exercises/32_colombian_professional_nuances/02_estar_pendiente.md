@@ -6,7 +6,12 @@
 ### Context
 English: "Please keep an eye on the release pipeline while the team completes the performance benchmarks."
 
+### Instructions
+**TODO**: Conjugate the polite formal imperative of vigilance/attentiveness matching the feminine direct object.
+**Why**: In Colombian professional environments, formal polite requests use the 'usted' imperative of *(estar)* combined with attentiveness locutions and the feminine definite article.
+
 ### Exercise
+<!-- TODO: Conjugate formal imperative of attentiveness matching feminine direct object -->
 Por favor, (está pendiente del / esté pendiente de la) ___ liberación mientras el equipo completa las pruebas de rendimiento.
 
 <!-- SOLUTION

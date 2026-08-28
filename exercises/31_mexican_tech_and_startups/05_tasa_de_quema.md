@@ -6,7 +6,12 @@
 ### Context
 English: "The chief financial officer warned that we must control the monthly burn rate to extend our financial runway until next year."
 
+### Instructions
+**TODO**: Insert the standard startup financial metric for monthly cash expenditure velocity.
+**Why**: Financial modeling across Latin American venture hubs renders capital depletion velocity using the direct metaphorical ratio noun phrase of combustion.
+
 ### Exercise
+<!-- TODO: Supply the standard startup finance metric for cash expenditure velocity -->
 El director de finanzas advirtió que debemos controlar la (tasa de quema) ___ mensual para extender nuestra pista financiera hasta el próximo año.
 
 <!-- SOLUTION

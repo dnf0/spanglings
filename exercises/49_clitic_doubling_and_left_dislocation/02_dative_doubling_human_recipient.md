@@ -6,9 +6,13 @@
 ### Context
 English: "To the client we delivered the contract renewal proposal before noon."
 
-### Exercise
-(A la clienta le entregamos / A la clienta entregamos) ___ la propuesta de renovación del contrato antes del mediodía.
+### Instructions
+**TODO**: Choose the left-dislocated feminine indirect object phrase accompanied by its required 3rd-person singular dative clitic and 1st-person plural preterite verb *(entregar)*.
+**Why**: Fronted (left-dislocated) indirect object noun phrases obligatorily require resumption by the unstressed dative clitic pronoun (*le*).
 
+### Exercise
+<!-- TODO: Choose the fronted indirect object phrase with mandatory resumptive dative clitic and verb -->
+(A la clienta le entregamos / A la clienta entregamos) ___ la propuesta de renovación del contrato antes del mediodía.
 <!-- SOLUTION
 A la clienta le entregamos
 -->

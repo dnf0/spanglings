@@ -6,9 +6,13 @@
 ### Context
 English: "The new European regulation demands quarterly privacy audits, hence why our company is investing more in observability."
 
-### Exercise
-El nuevo reglamento europeo exige auditorías de privacidad trimestrales, de ahí que nuestra compañía (invierta / invierte) ___ más en observabilidad.
+### Instructions
+**TODO**: Conjugate the verb *(invertir)* in the 3rd-person singular present subjunctive following the consecutive connector.
+**Why**: The consecutive marker *de ahí que* mandates the present SUBJUNCTIVE when expressing consequence in a present temporal frame.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the 3rd-person singular present subjunctive after the consecutive marker -->
+El nuevo reglamento europeo exige auditorías de privacidad trimestrales, de ahí que nuestra compañía (invierta / invierte) ___ más en observabilidad.
 <!-- SOLUTION
 invierta
 -->

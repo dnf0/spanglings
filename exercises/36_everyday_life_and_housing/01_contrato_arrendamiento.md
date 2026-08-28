@@ -6,7 +6,12 @@
 ### Context
 English: "Before signing the lease agreement, the tenant had to pay two months of security deposit."
 
+### Instructions
+**TODO**: Construct the formal tenancy clause specifying the lease document, the lessee subject, the preterite modal of past financial obligation, and the deposit guarantee.
+**Why**: Formal housing Spanish designates the lease document via legal terms for renting, the occupant as the lessee, and the statutory security deposit with the traditional Iberian noun.
+
 ### Exercise
+<!-- TODO: Construct the formal tenancy clause with lease terms and security deposit -->
 Antes de firmar el (contrato de arrendamiento, el arrendatario tuvo que pagar la fianza / contrato de alquiler) ___ correspondiente a dos meses de renta.
 
 <!-- SOLUTION

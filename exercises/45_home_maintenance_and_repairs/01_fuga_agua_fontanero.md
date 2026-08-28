@@ -6,9 +6,13 @@
 ### Context
 English: "As soon as you notice the leak under the sink, shut off the main water valve immediately."
 
-### Exercise
-En cuanto detectes el goteo debajo del fregadero, (cierra la llave de paso general / corta la llave general del agua) ___ para evitar inundaciones.
+### Instructions
+**TODO**: Conjugate the imperative in the informal 2nd-person singular *(cerrar)* followed by the standard technical plumbing term for the main shut-off valve.
+**Why**: Urgent practical maintenance instructions use direct affirmative imperative forms and the canonical domestic plumbing collocate for the main valve.
 
+### Exercise
+<!-- TODO: Conjugate the informal imperative for shutting off the main plumbing valve -->
+En cuanto detectes el goteo debajo del fregadero, (cierra la llave de paso general / corta la llave general del agua) ___ para evitar inundaciones.
 <!-- SOLUTION
 cierra la llave de paso general
 -->

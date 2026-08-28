@@ -6,7 +6,12 @@
 ### Context
 English: "Even if it rains tomorrow, we will carry out the outdoor event."
 
+### Instructions
+**TODO**: Conjugate the impersonal verb *(llover)* in the 3rd-person singular present subjunctive with stem diphthongization.
+**Why**: While *a pesar de que* takes the indicative for verified factual obstacles, it selects the subjunctive when the obstacle is hypothetical or future (*mañana*).
+
 ### Exercise
+<!-- TODO: Conjugate (llover) in 3rd-person singular present subjunctive for hypothetical concession -->
 A pesar de que mañana (llover) ___, celebraremos el acto al aire libre.
 
 <!-- SOLUTION

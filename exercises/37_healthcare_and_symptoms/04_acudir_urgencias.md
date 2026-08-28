@@ -6,7 +6,12 @@
 ### Context
 English: "After acute chest pains, he had to go to the emergency room, where they kept him under observation before giving him medical discharge."
 
+### Instructions
+**TODO**: Construct the hospital emergency narrative using the infinitive for going to the ER, the preterite of monitoring, and the locution for hospital discharge.
+**Why**: Clinical Spanish uses formal register verbs for seeking emergency care, and official medical release uses the feminine noun taking masculine 'el' due to tonic initial 'a'.
+
 ### Exercise
+<!-- TODO: Construct the emergency hospital narrative with ER terms and medical release -->
 Tras sufrir un dolor agudo, tuvo que (acudir a urgencias, donde permaneció en observación hasta recibir el alta médica / ir a urgencias) ___.
 
 <!-- SOLUTION

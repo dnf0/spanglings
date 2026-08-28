@@ -6,7 +6,12 @@
 ### Context
 English: "Although we agreed to meet downtown, he decided to stay at home because of the storm."
 
+### Instructions
+**TODO**: Form the past participle of appointment agreement *(quedar en)* with reflexive meeting infinitive, followed by the preterite of decision and pronominal physical staying.
+**Why**: Non-reflexive *(quedar en)* signifies agreeing on a meeting plan, whereas pronominal *(quedar)* with reflexive clitic expresses remaining physically in place.
+
 ### Exercise
+<!-- TODO: Contrast appointment agreement verb (quedar en) with physical staying verb -->
 Aunque habíamos (quedado en encontrarnos en el centro, decidió quedarse en casa / acordado encontrarnos) ___ debido a la fuerte tormenta.
 
 <!-- SOLUTION

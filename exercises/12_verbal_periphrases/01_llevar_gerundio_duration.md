@@ -6,7 +6,12 @@
 ### Context
 English: "I have been living in this city for five years."
 
+### Instructions
+**TODO**: Conjugate the auxiliary verb *(llevar)* in the 1st-person singular (*yo*) present indicative.
+**Why**: The durative periphrasis *(llevar + [duración] + gerundio)* expresses an action initiated in the past that continues into the present speech moment.
+
 ### Exercise
+<!-- TODO: Conjugate (llevar) in 1st-person singular present indicative for durative periphrasis -->
 Yo (llevar) ___ cinco años viviendo en esta maravillosa ciudad.
 
 <!-- SOLUTION

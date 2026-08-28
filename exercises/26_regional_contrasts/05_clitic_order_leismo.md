@@ -6,7 +6,12 @@
 ### Context
 English: "(To an Argentine colleague) Sit down here, please; we need to talk."
 
+### Instructions
+**TODO**: Form the capitalized affirmative 2nd-person singular imperative of *(sentarse)* with *voseo* morphology, appending the 2nd-person reflexive pronoun *(te)*.
+**Why**: In *voseo* reflexive commands, the imperative form drops the *-r* and attaches the 2nd-person reflexive pronoun, remaining non-diphthongized and behaving as a paroxytone word without an accent mark.
+
 ### Exercise
+<!-- TODO: Form the capitalized reflexive imperative of (sentarse) with voseo morphology -->
 (Sentarse + vos) ___, por favor; tenemos que hablar de un asunto importante.
 
 <!-- SOLUTION

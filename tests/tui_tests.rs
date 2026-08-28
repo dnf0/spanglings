@@ -696,3 +696,67 @@ fn test_tui_tour_events_delegation() {
     app.tour_current_station = 0;
     assert!(app.show_tour_modal);
 }
+
+#[test]
+fn test_tui_renders_exercise_instructions_block() {
+    let exercise = Exercise {
+        path: PathBuf::from("exercises/sample.md"),
+        id: "sample_01".to_string(),
+        level: Level::B1,
+        topic: "ser_vs_estar".to_string(),
+        exercise_type: ExerciseType::Cloze,
+        is_done: false,
+        title: "Ser vs Estar Test".to_string(),
+        solution: "estamos".to_string(),
+        alternatives: vec![],
+        diagnostic_rules: vec![],
+        hints: vec![],
+        raw_content: r#"> **Grammar Rule**: 'Estar' is used for readiness.
+
+### Context
+English: "We are ready."
+
+### Instructions
+**TODO**: Conjugate the verb (estar) in 1st person plural.
+**Why**: Readiness expresses a temporary resultant state.
+
+### Exercise
+<!-- TODO: Fill in the correct form of estar -->
+Nosotros (estar) ___ listos.
+"#
+        .to_string(),
+        concept_tags: vec![],
+        prerequisites: vec![],
+        grammar_focus: None,
+        contrast_note: None,
+    };
+
+    let app = App::new(vec![exercise], true);
+    let backend = TestBackend::new(100, 30);
+    let mut terminal = Terminal::new(backend).unwrap();
+
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+    let buffer = terminal.backend().buffer();
+    let rendered_text = buffer
+        .content()
+        .iter()
+        .map(|cell| cell.symbol())
+        .collect::<String>();
+
+    assert!(
+        rendered_text.contains("Instructions (TODO & Why):"),
+        "Buffer should render Instructions section header"
+    );
+    assert!(
+        rendered_text.contains("TODO:"),
+        "Buffer should render TODO label"
+    );
+    assert!(
+        rendered_text.contains("Why:"),
+        "Buffer should render Why label"
+    );
+    assert!(
+        rendered_text.contains("Sentence:"),
+        "Buffer should render Sentence section"
+    );
+}

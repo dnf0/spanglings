@@ -6,7 +6,12 @@
 ### Context
 English: "Step up and review the distributed tracing logs because the checkout service is down."
 
+### Instructions
+**TODO**: Form the coordinated affirmative voseo commands for the reflexive battery-energizing idiom and inspecting code.
+**Why**: With affirmative voseo imperatives, enclitic pronouns attach directly to the verb base without 'd' and subsequent coordinated imperatives carry final-syllable tonic stress with an acute accent.
+
 ### Exercise
+<!-- TODO: Form coordinated affirmative voseo commands with enclitic pronoun and accented imperative -->
 (Ponete las pilas y revisá / Ponte las pilas y revisa) ___ los registros de trazas porque el servicio de pagos está caído.
 
 <!-- SOLUTION

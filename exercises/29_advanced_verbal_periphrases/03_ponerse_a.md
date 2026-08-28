@@ -6,7 +6,12 @@
 ### Context
 English: "As soon as the telemetry alert fires, we must set about investigating the root cause."
 
+### Instructions
+**TODO**: Form the inchoative verbal periphrasis using the 1st-person plural reflexive infinitive of *(ponerse)* followed by the preposition 'a'.
+**Why**: The inchoative periphrasis *(ponerse a + infinitive)* marks the immediate initiation of an intentional action; the reflexive clitic must agree in person and number with 'debemos' (1st-person plural).
+
 ### Exercise
+<!-- TODO: Form the inchoative periphrasis (ponerse a) with 1st-person plural clitic -->
 En cuanto salte la alerta de telemetría, debemos (ponernos a) ___ investigar la causa raíz.
 
 <!-- SOLUTION

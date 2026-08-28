@@ -6,7 +6,12 @@
 ### Context
 English: "Despite the obstacles, they still harbor hopes of reaching an agreement."
 
+### Instructions
+**TODO**: Conjugate *(albergar)* into the 3rd-person plural present indicative (*presente de indicativo*).
+**Why**: The verb *albergar* forms an elevated stylistic collocation with abstract psychological nouns like *esperanzas*, *dudas*, or *temores*, expressing the harboring of an internal sentiment.
+
 ### Exercise
+<!-- TODO: Conjugate (albergar) in 3rd-person plural present indicative collocating with "esperanzas" -->
 A pesar de las dificultades, todavía (albergar) ___ esperanzas de éxito.
 
 <!-- SOLUTION

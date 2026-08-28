@@ -6,7 +6,12 @@
 ### Context
 English: "Finally I realized that it was too late."
 
+### Instructions
+**TODO**: Insert the preposition governed by the idiom *(darse cuenta)* before the subordinate clause connector.
+**Why**: The complex verbal locution *(darse cuenta)* strictly selects the genitive preposition before noun phrases and complement clauses (*régimen preposicional*).
+
 ### Exercise
+<!-- TODO: Insert preposition governed by 'darse cuenta' -->
 Por fin me di cuenta ___ que ya era demasiado tarde.
 
 <!-- SOLUTION

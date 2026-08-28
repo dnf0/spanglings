@@ -6,9 +6,13 @@
 ### Context
 English: "Before handling the hardware components, I always wash my hands with great care."
 
-### Exercise
-Antes de manipular los componentes del hardware, yo siempre (me lavo / lavo mis) ___ las manos con sumo cuidado.
+### Instructions
+**TODO**: Conjugate the pronominal verb *(lavarse)* in the 1st-person singular present indicative using a dative of inalienable possession with the definite article.
+**Why**: Inalienable possession of body parts in Spanish uses a reflexive/dative clitic pronoun combined with the definite article (*lavarse las manos*), avoiding possessive determiners.
 
+### Exercise
+<!-- TODO: Conjugate the 1st-person pronominal verb expressing inalienable possession of body parts -->
+Antes de manipular los componentes del hardware, yo siempre (me lavo / lavo mis) ___ las manos con sumo cuidado.
 <!-- SOLUTION
 me lavo
 -->

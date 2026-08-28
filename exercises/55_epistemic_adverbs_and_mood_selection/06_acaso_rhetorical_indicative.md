@@ -6,9 +6,13 @@
 ### Context
 English: "Do you really think that a complete cloud migration is accomplished without hitches?"
 
-### Exercise
-¿Acaso (pensáis / penséis) ___ vosotros que una migración completa a la nube se realiza sin contratiempos?
+### Instructions
+**TODO**: Conjugate the verb *(pensar)* in the 2nd-person plural present indicative (*vosotros*) in a rhetorical question introduced by the dubitative particle.
+**Why**: In rhetorical interrogative sentences expressing indignant skepticism, the particle *acaso* obligatorily selects the INDICATIVE mood.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the 2nd-person plural present indicative for a rhetorical question with doubt particle -->
+¿Acaso (pensáis / penséis) ___ vosotros que una migración completa a la nube se realiza sin contratiempos?
 <!-- SOLUTION
 pensáis
 -->

@@ -7,9 +7,13 @@
 Informal prompt: 'Quiero restar lo que gasté en el alquiler de mis impuestos.'
 Transform into formal tax advisor advice: 'Usted puede...' (desgravar los importes correspondientes al arrendamiento en la base imponible / aplicar las deducciones por alquiler).
 
-### Exercise
-En su declaración de la renta, usted puede ___ de conformidad con la normativa fiscal vigente.
+### Instructions
+**TODO**: Formulate the fiscal deduction expression using the infinitive for tax relief with the direct object phrase denoting rental payments applied to assessable income.
+**Why**: Tax advisory terminology requires the technical verb for deducting eligible expenses alongside statutory terms for assessable income.
 
+### Exercise
+<!-- TODO: Provide the formal tax advisory infinitive phrase for rental deduction on assessable income -->
+En su declaración de la renta, usted puede ___ de conformidad con la normativa fiscal vigente.
 <!-- SOLUTION
 desgravar los importes correspondientes al arrendamiento en la base imponible
 -->

@@ -6,9 +6,13 @@
 ### Context
 English: "The infrastructure team will resolve the technical incident today, perhaps before noon."
 
-### Exercise
-El equipo de infraestructura (resolverá / resuelva) ___ la incidencia técnica hoy mismo, quizás antes del mediodía.
+### Instructions
+**TODO**: Conjugate the future indicative form of *(resolver)* in the 3rd-person singular following an epistemic modifier framed as an external claim.
+**Why**: When an assertion is grounded in factual claims or when epistemic adverbs follow the subject with certainty, the INDICATIVE is selected.
 
+### Exercise
+<!-- TODO: Conjugate the verb in the 3rd-person singular future indicative for an externally supported expectation -->
+El equipo de infraestructura (resolverá / resuelva) ___ la incidencia técnica hoy mismo, quizás antes del mediodía.
 <!-- SOLUTION
 resolverá
 -->

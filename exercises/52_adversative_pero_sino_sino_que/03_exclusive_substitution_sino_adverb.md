@@ -6,9 +6,13 @@
 ### Context
 English: "The security audit will not take place on Tuesday, but rather next Friday after deployment."
 
-### Exercise
-La auditoría de seguridad no se llevará a cabo el martes, (sino / pero) ___ el próximo viernes tras el despliegue.
+### Instructions
+**TODO**: Insert the exclusive adversative conjunction correcting a negated temporal adverbial phrase.
+**Why**: Following a negative clause (*no el martes*), the exclusive adversative conjunction introduces the substituting temporal or prepositional element.
 
+### Exercise
+<!-- TODO: Insert the exclusive adversative conjunction correcting a negated time element -->
+La auditoría de seguridad no se llevará a cabo el martes, (sino / pero) ___ el próximo viernes tras el despliegue.
 <!-- SOLUTION
 sino
 -->
