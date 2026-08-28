@@ -71,8 +71,15 @@ pub struct App {
 
 impl App {
     pub fn new(exercises: Vec<Exercise>, strict_accents: bool) -> Self {
-        let state = AppState::load().unwrap_or_default();
-        Self::new_with_state(exercises, strict_accents, state)
+        let mut state = AppState::load().unwrap_or_default();
+        let show_tour_welcome = !state.tour_completed;
+        if show_tour_welcome {
+            state.mark_tour_completed();
+            let _ = state.save();
+        }
+        let mut app = Self::new_with_state(exercises, strict_accents, state);
+        app.show_tour_welcome = show_tour_welcome;
+        app
     }
 
     pub fn new_with_state(
@@ -669,9 +676,13 @@ impl App {
                     self.show_tour_welcome = false;
                     self.show_tour_modal = true;
                     self.tour_current_station = 0;
+                    self.state.mark_tour_completed();
+                    let _ = self.state.save();
                 }
                 KeyCode::Char('n') | KeyCode::Char('N') | KeyCode::Esc => {
                     self.show_tour_welcome = false;
+                    self.state.mark_tour_completed();
+                    let _ = self.state.save();
                 }
                 _ => {}
             }
@@ -698,6 +709,8 @@ impl App {
                 }
                 KeyCode::Esc | KeyCode::Char('q') | KeyCode::Char('Q') => {
                     self.show_tour_modal = false;
+                    self.state.mark_tour_completed();
+                    let _ = self.state.save();
                 }
                 _ => {}
             }
