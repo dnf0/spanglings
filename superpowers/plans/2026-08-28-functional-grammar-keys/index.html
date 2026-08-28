@@ -1,0 +1,1159 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Spanglings builds the syntax compiler; real-world usage supplies the data. Developer-grade CLI & interactive TUI for mastering Spanish (B1–C1).">
+      
+      
+        <meta name="author" content="Spanglings Contributors">
+      
+      
+        <link rel="canonical" href="https://dnf0.github.io/spanglings/superpowers/plans/2026-08-28-functional-grammar-keys/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan - Spanglings</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#functional-semantic-grammar-keys-communicative-glosses-implementation-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Spanglings" class="md-header__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Spanglings
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Functional Semantic Grammar Keys &amp; Communicative Glosses Implementation Plan
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Spanglings" class="md-nav__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Spanglings
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../onboarding-guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curriculum Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../cli-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI & TUI Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../grammar-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grammar Cheat Sheets
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#task-1-core-grammarconcept-data-structure-24-concept-metadata-catalog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Core GrammarConcept Data Structure &amp; 24-Concept Metadata Catalog
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-2-cli-spanglings-explain-spanglings-reference-functional-listing-semantic-discovery" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: CLI spanglings explain / spanglings reference Functional Listing &amp; Semantic Discovery
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-3-drill-blitz-prompt-layout-enhancement-with-communicative-glosses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Drill &amp; Blitz Prompt Layout Enhancement with Communicative Glosses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-4-tui-reference-browser-modal-integration-with-functional-glosses" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: TUI Reference Browser &amp; Modal Integration with Functional Glosses
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task-5-end-to-end-workspace-verification-knowledge-graph-update" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: End-to-End Workspace Verification &amp; Knowledge Graph Update
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="functional-semantic-grammar-keys-communicative-glosses-implementation-plan">Functional Semantic Grammar Keys &amp; Communicative Glosses Implementation Plan</h1>
+<blockquote>
+<p><strong>For agentic workers:</strong> REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (<code>- [ ]</code>) syntax for tracking.</p>
+</blockquote>
+<p><strong>Goal:</strong> Augment all grammatical concept keys with communicative functional glosses (e.g. <code>Subjunctive (wishes, hypotheses, demands)</code>) across CLI <code>explain</code>/<code>reference</code> commands, drill/blitz prompt badges, reference card headers, and the TUI reference browser.</p>
+<p><strong>Architecture:</strong> Define a central <code>GrammarConcept</code> metadata catalog in <code>src/core/reference.rs</code> providing title, slug, communicative functional gloss, search keywords, and reference card content. Surface these rich descriptors across the CLI <code>explain</code> command, <code>DrillItem</code>/<code>BlitzItem</code> prompt formatting, and TUI reference browser sidebar/filtering.</p>
+<p><strong>Tech Stack:</strong> Rust 2021, <code>ratatui</code> (TUI), <code>colored</code> (terminal ANSI styling), <code>clap</code> (CLI argument parsing).</p>
+<hr />
+<h3 id="task-1-core-grammarconcept-data-structure-24-concept-metadata-catalog">Task 1: Core <code>GrammarConcept</code> Data Structure &amp; 24-Concept Metadata Catalog</h3>
+<p><strong>Files:</strong>
+- Modify: <code>src/core/reference.rs</code>
+- Modify: <code>tests/reference_tests.rs</code></p>
+<ul>
+<li>[ ] <strong>Step 1: Write the failing tests in <code>tests/reference_tests.rs</code></strong></li>
+</ul>
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">#[test]</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="k">fn</span><span class="w"> </span><span class="nf">test_all_24_grammar_concepts_complete</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">concepts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spanglings</span><span class="p">::</span><span class="n">core</span><span class="p">::</span><span class="n">reference</span><span class="p">::</span><span class="n">list_grammar_concepts</span><span class="p">();</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="n">concepts</span><span class="p">.</span><span class="n">len</span><span class="p">(),</span><span class="w"> </span><span class="mi">24</span><span class="p">);</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">concept</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">concepts</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">        </span><span class="fm">assert!</span><span class="p">(</span><span class="o">!</span><span class="n">concept</span><span class="p">.</span><span class="n">slug</span><span class="p">.</span><span class="n">is_empty</span><span class="p">(),</span><span class="w"> </span><span class="s">"Slug should not be empty"</span><span class="p">);</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="fm">assert!</span><span class="p">(</span><span class="o">!</span><span class="n">concept</span><span class="p">.</span><span class="n">title</span><span class="p">.</span><span class="n">is_empty</span><span class="p">(),</span><span class="w"> </span><span class="s">"Title should not be empty for {}"</span><span class="p">,</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="n">slug</span><span class="p">);</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="fm">assert!</span><span class="p">(</span><span class="o">!</span><span class="n">concept</span><span class="p">.</span><span class="n">gloss</span><span class="p">.</span><span class="n">is_empty</span><span class="p">(),</span><span class="w"> </span><span class="s">"Gloss should not be empty for {}"</span><span class="p">,</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="n">slug</span><span class="p">);</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="fm">assert!</span><span class="p">(</span><span class="o">!</span><span class="n">concept</span><span class="p">.</span><span class="n">keywords</span><span class="p">.</span><span class="n">is_empty</span><span class="p">(),</span><span class="w"> </span><span class="s">"Keywords should not be empty for {}"</span><span class="p">,</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="n">slug</span><span class="p">);</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="fm">assert!</span><span class="p">(</span><span class="o">!</span><span class="n">concept</span><span class="p">.</span><span class="n">card</span><span class="p">.</span><span class="n">is_empty</span><span class="p">(),</span><span class="w"> </span><span class="s">"Card should not be empty for {}"</span><span class="p">,</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="n">slug</span><span class="p">);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="p">}</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="cp">#[test]</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="k">fn</span><span class="w"> </span><span class="nf">test_semantic_keyword_concept_lookups</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="k">use</span><span class="w"> </span><span class="n">spanglings</span><span class="p">::</span><span class="n">core</span><span class="p">::</span><span class="n">reference</span><span class="p">::</span><span class="n">get_grammar_concept</span><span class="p">;</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="c1">// Direct slug lookup</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">subj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_grammar_concept</span><span class="p">(</span><span class="s">"subjunctive"</span><span class="p">).</span><span class="n">expect</span><span class="p">(</span><span class="s">"Should find subjunctive by slug"</span><span class="p">);</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="n">subj</span><span class="p">.</span><span class="n">slug</span><span class="p">,</span><span class="w"> </span><span class="s">"subjunctive"</span><span class="p">);</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="fm">assert!</span><span class="p">(</span><span class="n">subj</span><span class="p">.</span><span class="n">gloss</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">"wishes"</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">subj</span><span class="p">.</span><span class="n">gloss</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">"hypotheses"</span><span class="p">));</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="c1">// Semantic intent lookup</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">wishes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_grammar_concept</span><span class="p">(</span><span class="s">"wishes"</span><span class="p">).</span><span class="n">expect</span><span class="p">(</span><span class="s">"Should resolve 'wishes' to subjunctive"</span><span class="p">);</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">    </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="n">wishes</span><span class="p">.</span><span class="n">slug</span><span class="p">,</span><span class="w"> </span><span class="s">"subjunctive"</span><span class="p">);</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">accidental</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_grammar_concept</span><span class="p">(</span><span class="s">"unintentional"</span><span class="p">).</span><span class="n">expect</span><span class="p">(</span><span class="s">"Should resolve 'unintentional' to accidental-se"</span><span class="p">);</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="n">accidental</span><span class="p">.</span><span class="n">slug</span><span class="p">,</span><span class="w"> </span><span class="s">"accidental-se"</span><span class="p">);</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">body_parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_grammar_concept</span><span class="p">(</span><span class="s">"body parts"</span><span class="p">).</span><span class="n">expect</span><span class="p">(</span><span class="s">"Should resolve 'body parts' to possessive-datives"</span><span class="p">);</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">    </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="n">body_parts</span><span class="p">.</span><span class="n">slug</span><span class="p">,</span><span class="w"> </span><span class="s">"possessive-datives"</span><span class="p">);</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>[ ] <strong>Step 2: Run test to verify it fails</strong></li>
+</ul>
+<p>Run: <code>cargo test --test reference_tests test_all_24_grammar_concepts_complete</code>
+Expected: FAIL with "function <code>list_grammar_concepts</code> not found"</p>
+<ul>
+<li>[ ] <strong>Step 3: Implement <code>GrammarConcept</code> and lookup catalog in <code>src/core/reference.rs</code></strong></li>
+</ul>
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#[derive(Debug, Clone, PartialEq, Eq)]</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="k">pub</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="o">'</span><span class="nb">static</span><span class="w"> </span><span class="kt">str</span><span class="p">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="o">'</span><span class="nb">static</span><span class="w"> </span><span class="kt">str</span><span class="p">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="o">'</span><span class="nb">static</span><span class="w"> </span><span class="kt">str</span><span class="p">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="o">'</span><span class="nb">static</span><span class="w"> </span><span class="p">[</span><span class="o">&amp;'</span><span class="nb">static</span><span class="w"> </span><span class="kt">str</span><span class="p">],</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">pub</span><span class="w"> </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="o">'</span><span class="nb">static</span><span class="w"> </span><span class="kt">str</span><span class="p">,</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="k">pub</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">CONCEPTS</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="n">GrammarConcept</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="p">[</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"subjunctive"</span><span class="p">,</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Subjunctive"</span><span class="p">,</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"wishes, hypotheses, doubt, demands"</span><span class="p">,</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"wishes"</span><span class="p">,</span><span class="w"> </span><span class="s">"desires"</span><span class="p">,</span><span class="w"> </span><span class="s">"doubt"</span><span class="p">,</span><span class="w"> </span><span class="s">"uncertainty"</span><span class="p">,</span><span class="w"> </span><span class="s">"hypothetical"</span><span class="p">,</span><span class="w"> </span><span class="s">"hypotheses"</span><span class="p">,</span><span class="w"> </span><span class="s">"weirdo"</span><span class="p">,</span><span class="w"> </span><span class="s">"demands"</span><span class="p">,</span><span class="w"> </span><span class="s">"subj"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0301"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0401"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0501"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0601"</span><span class="p">],</span>
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">SUBJUNCTIVE_CARD</span><span class="p">,</span>
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"por-para"</span><span class="p">,</span>
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Por vs. Para"</span><span class="p">,</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"cause/means (por) vs. purpose/destination/deadline (para)"</span><span class="p">,</span>
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"cause"</span><span class="p">,</span><span class="w"> </span><span class="s">"reason"</span><span class="p">,</span><span class="w"> </span><span class="s">"means"</span><span class="p">,</span><span class="w"> </span><span class="s">"motive"</span><span class="p">,</span><span class="w"> </span><span class="s">"purpose"</span><span class="p">,</span><span class="w"> </span><span class="s">"deadline"</span><span class="p">,</span><span class="w"> </span><span class="s">"recipient"</span><span class="p">,</span><span class="w"> </span><span class="s">"goal"</span><span class="p">,</span><span class="w"> </span><span class="s">"por"</span><span class="p">,</span><span class="w"> </span><span class="s">"para"</span><span class="p">,</span><span class="w"> </span><span class="s">"por_para"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0701"</span><span class="p">],</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">POR_PARA_CARD</span><span class="p">,</span>
+</span><span id="__span-1-24"><a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-25"><a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-26"><a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"ser-estar"</span><span class="p">,</span>
+</span><span id="__span-1-27"><a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Ser vs. Estar"</span><span class="p">,</span>
+</span><span id="__span-1-28"><a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"essence/identity (ser) vs. states/conditions/location (estar)"</span><span class="p">,</span>
+</span><span id="__span-1-29"><a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"identity"</span><span class="p">,</span><span class="w"> </span><span class="s">"essence"</span><span class="p">,</span><span class="w"> </span><span class="s">"permanent"</span><span class="p">,</span><span class="w"> </span><span class="s">"state"</span><span class="p">,</span><span class="w"> </span><span class="s">"condition"</span><span class="p">,</span><span class="w"> </span><span class="s">"temporary"</span><span class="p">,</span><span class="w"> </span><span class="s">"location"</span><span class="p">,</span><span class="w"> </span><span class="s">"ser"</span><span class="p">,</span><span class="w"> </span><span class="s">"estar"</span><span class="p">,</span><span class="w"> </span><span class="s">"ser_estar"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0101"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0102"</span><span class="p">],</span>
+</span><span id="__span-1-30"><a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">SER_ESTAR_CARD</span><span class="p">,</span>
+</span><span id="__span-1-31"><a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-32"><a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-33"><a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"past"</span><span class="p">,</span>
+</span><span id="__span-1-34"><a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Past Tenses"</span><span class="p">,</span>
+</span><span id="__span-1-35"><a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"completed actions (pret) vs. ongoing background &amp; habit (imp)"</span><span class="p">,</span>
+</span><span id="__span-1-36"><a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"preterite"</span><span class="p">,</span><span class="w"> </span><span class="s">"imperfect"</span><span class="p">,</span><span class="w"> </span><span class="s">"completed"</span><span class="p">,</span><span class="w"> </span><span class="s">"ongoing"</span><span class="p">,</span><span class="w"> </span><span class="s">"habit"</span><span class="p">,</span><span class="w"> </span><span class="s">"background"</span><span class="p">,</span><span class="w"> </span><span class="s">"narrative"</span><span class="p">,</span><span class="w"> </span><span class="s">"past"</span><span class="p">,</span><span class="w"> </span><span class="s">"past-aspect"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0201"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0202"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0203"</span><span class="p">],</span>
+</span><span id="__span-1-37"><a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">PAST_TENSES_CARD</span><span class="p">,</span>
+</span><span id="__span-1-38"><a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-39"><a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-40"><a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"pronouns"</span><span class="p">,</span>
+</span><span id="__span-1-41"><a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Pronoun Stacking"</span><span class="p">,</span>
+</span><span id="__span-1-42"><a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"clitic placement &amp; pronoun stacking (se lo)"</span><span class="p">,</span>
+</span><span id="__span-1-43"><a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"direct"</span><span class="p">,</span><span class="w"> </span><span class="s">"indirect"</span><span class="p">,</span><span class="w"> </span><span class="s">"clitic"</span><span class="p">,</span><span class="w"> </span><span class="s">"clitics"</span><span class="p">,</span><span class="w"> </span><span class="s">"stacking"</span><span class="p">,</span><span class="w"> </span><span class="s">"substitution"</span><span class="p">,</span><span class="w"> </span><span class="s">"se lo"</span><span class="p">,</span><span class="w"> </span><span class="s">"placement"</span><span class="p">,</span><span class="w"> </span><span class="s">"pronouns"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0801"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0802"</span><span class="p">],</span>
+</span><span id="__span-1-44"><a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">PRONOUN_STACKING_CARD</span><span class="p">,</span>
+</span><span id="__span-1-45"><a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-46"><a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-47"><a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"prepositions"</span><span class="p">,</span>
+</span><span id="__span-1-48"><a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Prepositional Verbs"</span><span class="p">,</span>
+</span><span id="__span-1-49"><a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"verb-bound prepositions (régimen preposicional)"</span><span class="p">,</span>
+</span><span id="__span-1-50"><a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"prepositions"</span><span class="p">,</span><span class="w"> </span><span class="s">"regimen"</span><span class="p">,</span><span class="w"> </span><span class="s">"prep"</span><span class="p">,</span><span class="w"> </span><span class="s">"soñar con"</span><span class="p">,</span><span class="w"> </span><span class="s">"depender de"</span><span class="p">,</span><span class="w"> </span><span class="s">"fijarse en"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0901"</span><span class="p">],</span>
+</span><span id="__span-1-51"><a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">PREPOSITIONS_CARD</span><span class="p">,</span>
+</span><span id="__span-1-52"><a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-53"><a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-54"><a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"accidental-se"</span><span class="p">,</span>
+</span><span id="__span-1-55"><a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Accidental 'Se'"</span><span class="p">,</span>
+</span><span id="__span-1-56"><a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"unintentional events &amp; non-agentive slips (se me cayó)"</span><span class="p">,</span>
+</span><span id="__span-1-57"><a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"accidental"</span><span class="p">,</span><span class="w"> </span><span class="s">"unintentional"</span><span class="p">,</span><span class="w"> </span><span class="s">"blame"</span><span class="p">,</span><span class="w"> </span><span class="s">"dropped"</span><span class="p">,</span><span class="w"> </span><span class="s">"forgotten"</span><span class="p">,</span><span class="w"> </span><span class="s">"involuntary"</span><span class="p">,</span><span class="w"> </span><span class="s">"se-accidental"</span><span class="p">,</span><span class="w"> </span><span class="s">"se accidental"</span><span class="p">,</span><span class="w"> </span><span class="s">"e1001"</span><span class="p">],</span>
+</span><span id="__span-1-58"><a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">ACCIDENTAL_SE_CARD</span><span class="p">,</span>
+</span><span id="__span-1-59"><a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-60"><a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-61"><a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"tech-software"</span><span class="p">,</span>
+</span><span id="__span-1-62"><a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Tech &amp; Software Engineering"</span><span class="p">,</span>
+</span><span id="__span-1-63"><a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"terminal workflows, architecture, system design, SLA terms"</span><span class="p">,</span>
+</span><span id="__span-1-64"><a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"tech"</span><span class="p">,</span><span class="w"> </span><span class="s">"software"</span><span class="p">,</span><span class="w"> </span><span class="s">"dev"</span><span class="p">,</span><span class="w"> </span><span class="s">"engineering"</span><span class="p">,</span><span class="w"> </span><span class="s">"system design"</span><span class="p">,</span><span class="w"> </span><span class="s">"architecture"</span><span class="p">,</span><span class="w"> </span><span class="s">"terminal"</span><span class="p">,</span><span class="w"> </span><span class="s">"code"</span><span class="p">],</span>
+</span><span id="__span-1-65"><a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">TECH_SOFTWARE_CARD</span><span class="p">,</span>
+</span><span id="__span-1-66"><a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-67"><a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-68"><a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"business"</span><span class="p">,</span>
+</span><span id="__span-1-69"><a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Executive &amp; Business Spanish"</span><span class="p">,</span>
+</span><span id="__span-1-70"><a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"formal correspondence, diplomatic negotiation, stakeholder sync"</span><span class="p">,</span>
+</span><span id="__span-1-71"><a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"business"</span><span class="p">,</span><span class="w"> </span><span class="s">"business-correspondence"</span><span class="p">,</span><span class="w"> </span><span class="s">"biz"</span><span class="p">,</span><span class="w"> </span><span class="s">"diplomatic"</span><span class="p">,</span><span class="w"> </span><span class="s">"formal"</span><span class="p">,</span><span class="w"> </span><span class="s">"negotiation"</span><span class="p">,</span><span class="w"> </span><span class="s">"executive"</span><span class="p">],</span>
+</span><span id="__span-1-72"><a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">BUSINESS_CORRESPONDENCE_CARD</span><span class="p">,</span>
+</span><span id="__span-1-73"><a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-74"><a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-75"><a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"false-friends"</span><span class="p">,</span>
+</span><span id="__span-1-76"><a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"False Friends"</span><span class="p">,</span>
+</span><span id="__span-1-77"><a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"deceptive cognates with divergent meanings (actual, realizar)"</span><span class="p">,</span>
+</span><span id="__span-1-78"><a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"false-friends"</span><span class="p">,</span><span class="w"> </span><span class="s">"falsos-amigos"</span><span class="p">,</span><span class="w"> </span><span class="s">"cognates"</span><span class="p">,</span><span class="w"> </span><span class="s">"traps"</span><span class="p">,</span><span class="w"> </span><span class="s">"actual"</span><span class="p">,</span><span class="w"> </span><span class="s">"realizar"</span><span class="p">,</span><span class="w"> </span><span class="s">"exito"</span><span class="p">,</span><span class="w"> </span><span class="s">"pretend"</span><span class="p">],</span>
+</span><span id="__span-1-79"><a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">FALSE_FRIENDS_CARD</span><span class="p">,</span>
+</span><span id="__span-1-80"><a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-81"><a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-82"><a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"voseo"</span><span class="p">,</span>
+</span><span id="__span-1-83"><a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Voseo &amp; Regional Address"</span><span class="p">,</span>
+</span><span id="__span-1-84"><a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"informal singular address in Rioplatense &amp; Central America"</span><span class="p">,</span>
+</span><span id="__span-1-85"><a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"voseo"</span><span class="p">,</span><span class="w"> </span><span class="s">"vos"</span><span class="p">,</span><span class="w"> </span><span class="s">"rioplatense"</span><span class="p">,</span><span class="w"> </span><span class="s">"argentina"</span><span class="p">,</span><span class="w"> </span><span class="s">"uruguay"</span><span class="p">,</span><span class="w"> </span><span class="s">"regional"</span><span class="p">,</span><span class="w"> </span><span class="s">"informal"</span><span class="p">],</span>
+</span><span id="__span-1-86"><a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">VOSEO_CARD</span><span class="p">,</span>
+</span><span id="__span-1-87"><a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-88"><a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-89"><a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"accents"</span><span class="p">,</span>
+</span><span id="__span-1-90"><a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Accentuation &amp; Tildes"</span><span class="p">,</span>
+</span><span id="__span-1-91"><a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"stress rules (agudas/llanas/esdrújulas) &amp; diacritical disambiguation"</span><span class="p">,</span>
+</span><span id="__span-1-92"><a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"accents"</span><span class="p">,</span><span class="w"> </span><span class="s">"accentuation"</span><span class="p">,</span><span class="w"> </span><span class="s">"tildes"</span><span class="p">,</span><span class="w"> </span><span class="s">"acentuacion"</span><span class="p">,</span><span class="w"> </span><span class="s">"stress"</span><span class="p">,</span><span class="w"> </span><span class="s">"diacritical"</span><span class="p">,</span><span class="w"> </span><span class="s">"agudas"</span><span class="p">,</span><span class="w"> </span><span class="s">"llanas"</span><span class="p">,</span><span class="w"> </span><span class="s">"esdrujulas"</span><span class="p">],</span>
+</span><span id="__span-1-93"><a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">ACCENTS_CARD</span><span class="p">,</span>
+</span><span id="__span-1-94"><a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-95"><a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-96"><a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"epistemic-conjecture"</span><span class="p">,</span>
+</span><span id="__span-1-97"><a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Epistemic Conjecture"</span><span class="p">,</span>
+</span><span id="__span-1-98"><a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"guessing &amp; deduction in present/past (serán las tres)"</span><span class="p">,</span>
+</span><span id="__span-1-99"><a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"conjecture"</span><span class="p">,</span><span class="w"> </span><span class="s">"probability"</span><span class="p">,</span><span class="w"> </span><span class="s">"probabilidad"</span><span class="p">,</span><span class="w"> </span><span class="s">"guessing"</span><span class="p">,</span><span class="w"> </span><span class="s">"deduction"</span><span class="p">,</span><span class="w"> </span><span class="s">"wondering"</span><span class="p">,</span><span class="w"> </span><span class="s">"e0048"</span><span class="p">],</span>
+</span><span id="__span-1-100"><a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">EPISTEMIC_CONJECTURE_CARD</span><span class="p">,</span>
+</span><span id="__span-1-101"><a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-102"><a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-103"><a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"clitic-doubling"</span><span class="p">,</span>
+</span><span id="__span-1-104"><a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Clitic Doubling"</span><span class="p">,</span>
+</span><span id="__span-1-105"><a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"redundant pronoun reinforcement for focus &amp; clarity (le hablé a ella)"</span><span class="p">,</span>
+</span><span id="__span-1-106"><a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"clitic-doubling"</span><span class="p">,</span><span class="w"> </span><span class="s">"doubling"</span><span class="p">,</span><span class="w"> </span><span class="s">"redundancy"</span><span class="p">,</span><span class="w"> </span><span class="s">"indirect object"</span><span class="p">,</span><span class="w"> </span><span class="s">"clarity"</span><span class="p">,</span><span class="w"> </span><span class="s">"a ella"</span><span class="p">,</span><span class="w"> </span><span class="s">"reinforcement"</span><span class="p">],</span>
+</span><span id="__span-1-107"><a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">CLITIC_DOUBLING_CARD</span><span class="p">,</span>
+</span><span id="__span-1-108"><a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-109"><a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-110"><a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"personal-a"</span><span class="p">,</span>
+</span><span id="__span-1-111"><a id="__codelineno-1-111" name="__codelineno-1-111" href="#__codelineno-1-111"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Personal 'A'"</span><span class="p">,</span>
+</span><span id="__span-1-112"><a id="__codelineno-1-112" name="__codelineno-1-112" href="#__codelineno-1-112"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"mandatory accusative marker for specific human &amp; personified entities"</span><span class="p">,</span>
+</span><span id="__span-1-113"><a id="__codelineno-1-113" name="__codelineno-1-113" href="#__codelineno-1-113"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"personal-a"</span><span class="p">,</span><span class="w"> </span><span class="s">"personal a"</span><span class="p">,</span><span class="w"> </span><span class="s">"human direct object"</span><span class="p">,</span><span class="w"> </span><span class="s">"specificity"</span><span class="p">,</span><span class="w"> </span><span class="s">"personification"</span><span class="p">],</span>
+</span><span id="__span-1-114"><a id="__codelineno-1-114" name="__codelineno-1-114" href="#__codelineno-1-114"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">PERSONAL_A_CARD</span><span class="p">,</span>
+</span><span id="__span-1-115"><a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-116"><a id="__codelineno-1-116" name="__codelineno-1-116" href="#__codelineno-1-116"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-117"><a id="__codelineno-1-117" name="__codelineno-1-117" href="#__codelineno-1-117"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"gerund-rules"</span><span class="p">,</span>
+</span><span id="__span-1-118"><a id="__codelineno-1-118" name="__codelineno-1-118" href="#__codelineno-1-118"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Gerund Rules &amp; Pitfalls"</span><span class="p">,</span>
+</span><span id="__span-1-119"><a id="__codelineno-1-119" name="__codelineno-1-119" href="#__codelineno-1-119"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"simultaneous actions; avoiding forbidden adjectival gerunds"</span><span class="p">,</span>
+</span><span id="__span-1-120"><a id="__codelineno-1-120" name="__codelineno-1-120" href="#__codelineno-1-120"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"gerund-rules"</span><span class="p">,</span><span class="w"> </span><span class="s">"gerund"</span><span class="p">,</span><span class="w"> </span><span class="s">"gerundio"</span><span class="p">,</span><span class="w"> </span><span class="s">"ando"</span><span class="p">,</span><span class="w"> </span><span class="s">"iendo"</span><span class="p">,</span><span class="w"> </span><span class="s">"simultaneous"</span><span class="p">,</span><span class="w"> </span><span class="s">"adverbial"</span><span class="p">],</span>
+</span><span id="__span-1-121"><a id="__codelineno-1-121" name="__codelineno-1-121" href="#__codelineno-1-121"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">GERUND_RULES_CARD</span><span class="p">,</span>
+</span><span id="__span-1-122"><a id="__codelineno-1-122" name="__codelineno-1-122" href="#__codelineno-1-122"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-123"><a id="__codelineno-1-123" name="__codelineno-1-123" href="#__codelineno-1-123"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-124"><a id="__codelineno-1-124" name="__codelineno-1-124" href="#__codelineno-1-124"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"adversatives"</span><span class="p">,</span>
+</span><span id="__span-1-125"><a id="__codelineno-1-125" name="__codelineno-1-125" href="#__codelineno-1-125"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Adversatives (Pero vs. Sino)"</span><span class="p">,</span>
+</span><span id="__span-1-126"><a id="__codelineno-1-126" name="__codelineno-1-126" href="#__codelineno-1-126"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"simple contrast (pero) vs. exclusive negative substitution (sino)"</span><span class="p">,</span>
+</span><span id="__span-1-127"><a id="__codelineno-1-127" name="__codelineno-1-127" href="#__codelineno-1-127"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"adversatives"</span><span class="p">,</span><span class="w"> </span><span class="s">"pero"</span><span class="p">,</span><span class="w"> </span><span class="s">"sino"</span><span class="p">,</span><span class="w"> </span><span class="s">"sino que"</span><span class="p">,</span><span class="w"> </span><span class="s">"contrast"</span><span class="p">,</span><span class="w"> </span><span class="s">"rectification"</span><span class="p">,</span><span class="w"> </span><span class="s">"substitution"</span><span class="p">],</span>
+</span><span id="__span-1-128"><a id="__codelineno-1-128" name="__codelineno-1-128" href="#__codelineno-1-128"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">ADVERSATIVES_CARD</span><span class="p">,</span>
+</span><span id="__span-1-129"><a id="__codelineno-1-129" name="__codelineno-1-129" href="#__codelineno-1-129"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-130"><a id="__codelineno-1-130" name="__codelineno-1-130" href="#__codelineno-1-130"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-131"><a id="__codelineno-1-131" name="__codelineno-1-131" href="#__codelineno-1-131"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"legal-subjunctive"</span><span class="p">,</span>
+</span><span id="__span-1-132"><a id="__codelineno-1-132" name="__codelineno-1-132" href="#__codelineno-1-132"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Legal &amp; Statutory Subjunctive"</span><span class="p">,</span>
+</span><span id="__span-1-133"><a id="__codelineno-1-133" name="__codelineno-1-133" href="#__codelineno-1-133"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"statutory formulations &amp; future subjunctive in legal texts (-ere)"</span><span class="p">,</span>
+</span><span id="__span-1-134"><a id="__codelineno-1-134" name="__codelineno-1-134" href="#__codelineno-1-134"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"legal-subjunctive"</span><span class="p">,</span><span class="w"> </span><span class="s">"legal"</span><span class="p">,</span><span class="w"> </span><span class="s">"statute"</span><span class="p">,</span><span class="w"> </span><span class="s">"contract"</span><span class="p">,</span><span class="w"> </span><span class="s">"future subjunctive"</span><span class="p">,</span><span class="w"> </span><span class="s">"formal"</span><span class="p">,</span><span class="w"> </span><span class="s">"juristic"</span><span class="p">],</span>
+</span><span id="__span-1-135"><a id="__codelineno-1-135" name="__codelineno-1-135" href="#__codelineno-1-135"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">LEGAL_SUBJUNCTIVE_CARD</span><span class="p">,</span>
+</span><span id="__span-1-136"><a id="__codelineno-1-136" name="__codelineno-1-136" href="#__codelineno-1-136"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-137"><a id="__codelineno-1-137" name="__codelineno-1-137" href="#__codelineno-1-137"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-138"><a id="__codelineno-1-138" name="__codelineno-1-138" href="#__codelineno-1-138"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"verbs-of-becoming"</span><span class="p">,</span>
+</span><span id="__span-1-139"><a id="__codelineno-1-139" name="__codelineno-1-139" href="#__codelineno-1-139"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Verbs of Becoming"</span><span class="p">,</span>
+</span><span id="__span-1-140"><a id="__codelineno-1-140" name="__codelineno-1-140" href="#__codelineno-1-140"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"transformational change (hacerse, volverse, ponerse, quedarse)"</span><span class="p">,</span>
+</span><span id="__span-1-141"><a id="__codelineno-1-141" name="__codelineno-1-141" href="#__codelineno-1-141"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"verbs-of-becoming"</span><span class="p">,</span><span class="w"> </span><span class="s">"becoming"</span><span class="p">,</span><span class="w"> </span><span class="s">"change"</span><span class="p">,</span><span class="w"> </span><span class="s">"transformation"</span><span class="p">,</span><span class="w"> </span><span class="s">"hacerse"</span><span class="p">,</span><span class="w"> </span><span class="s">"volverse"</span><span class="p">,</span><span class="w"> </span><span class="s">"ponerse"</span><span class="p">,</span><span class="w"> </span><span class="s">"quedarse"</span><span class="p">,</span><span class="w"> </span><span class="s">"convertirse"</span><span class="p">],</span>
+</span><span id="__span-1-142"><a id="__codelineno-1-142" name="__codelineno-1-142" href="#__codelineno-1-142"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">VERBS_OF_BECOMING_CARD</span><span class="p">,</span>
+</span><span id="__span-1-143"><a id="__codelineno-1-143" name="__codelineno-1-143" href="#__codelineno-1-143"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-144"><a id="__codelineno-1-144" name="__codelineno-1-144" href="#__codelineno-1-144"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-145"><a id="__codelineno-1-145" name="__codelineno-1-145" href="#__codelineno-1-145"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"epistemic-adverbs"</span><span class="p">,</span>
+</span><span id="__span-1-146"><a id="__codelineno-1-146" name="__codelineno-1-146" href="#__codelineno-1-146"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Epistemic Adverbs"</span><span class="p">,</span>
+</span><span id="__span-1-147"><a id="__codelineno-1-147" name="__codelineno-1-147" href="#__codelineno-1-147"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"mood selection with doubt adverbs (quizás, tal vez, probablemente)"</span><span class="p">,</span>
+</span><span id="__span-1-148"><a id="__codelineno-1-148" name="__codelineno-1-148" href="#__codelineno-1-148"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"epistemic-adverbs"</span><span class="p">,</span><span class="w"> </span><span class="s">"adverbs"</span><span class="p">,</span><span class="w"> </span><span class="s">"doubt"</span><span class="p">,</span><span class="w"> </span><span class="s">"quizas"</span><span class="p">,</span><span class="w"> </span><span class="s">"tal vez"</span><span class="p">,</span><span class="w"> </span><span class="s">"probablemente"</span><span class="p">,</span><span class="w"> </span><span class="s">"acaso"</span><span class="p">],</span>
+</span><span id="__span-1-149"><a id="__codelineno-1-149" name="__codelineno-1-149" href="#__codelineno-1-149"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">EPISTEMIC_ADVERBS_CARD</span><span class="p">,</span>
+</span><span id="__span-1-150"><a id="__codelineno-1-150" name="__codelineno-1-150" href="#__codelineno-1-150"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-151"><a id="__codelineno-1-151" name="__codelineno-1-151" href="#__codelineno-1-151"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-152"><a id="__codelineno-1-152" name="__codelineno-1-152" href="#__codelineno-1-152"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"possessive-datives"</span><span class="p">,</span>
+</span><span id="__span-1-153"><a id="__codelineno-1-153" name="__codelineno-1-153" href="#__codelineno-1-153"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Possessive Datives"</span><span class="p">,</span>
+</span><span id="__span-1-154"><a id="__codelineno-1-154" name="__codelineno-1-154" href="#__codelineno-1-154"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"inalienable possession with dative clitics (me lavo las manos)"</span><span class="p">,</span>
+</span><span id="__span-1-155"><a id="__codelineno-1-155" name="__codelineno-1-155" href="#__codelineno-1-155"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"possessive-datives"</span><span class="p">,</span><span class="w"> </span><span class="s">"possession"</span><span class="p">,</span><span class="w"> </span><span class="s">"inalienable"</span><span class="p">,</span><span class="w"> </span><span class="s">"body parts"</span><span class="p">,</span><span class="w"> </span><span class="s">"dative"</span><span class="p">,</span><span class="w"> </span><span class="s">"me lavo"</span><span class="p">],</span>
+</span><span id="__span-1-156"><a id="__codelineno-1-156" name="__codelineno-1-156" href="#__codelineno-1-156"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">POSSESSIVE_DATIVES_CARD</span><span class="p">,</span>
+</span><span id="__span-1-157"><a id="__codelineno-1-157" name="__codelineno-1-157" href="#__codelineno-1-157"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-158"><a id="__codelineno-1-158" name="__codelineno-1-158" href="#__codelineno-1-158"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-159"><a id="__codelineno-1-159" name="__codelineno-1-159" href="#__codelineno-1-159"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"corrective-polarity"</span><span class="p">,</span>
+</span><span id="__span-1-160"><a id="__codelineno-1-160" name="__codelineno-1-160" href="#__codelineno-1-160"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Corrective Polarity"</span><span class="p">,</span>
+</span><span id="__span-1-161"><a id="__codelineno-1-161" name="__codelineno-1-161" href="#__codelineno-1-161"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"rectifying negated premises with mandatory mood selection"</span><span class="p">,</span>
+</span><span id="__span-1-162"><a id="__codelineno-1-162" name="__codelineno-1-162" href="#__codelineno-1-162"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"corrective-polarity"</span><span class="p">,</span><span class="w"> </span><span class="s">"polarity"</span><span class="p">,</span><span class="w"> </span><span class="s">"negation"</span><span class="p">,</span><span class="w"> </span><span class="s">"correction"</span><span class="p">,</span><span class="w"> </span><span class="s">"indicative vs subjunctive"</span><span class="p">],</span>
+</span><span id="__span-1-163"><a id="__codelineno-1-163" name="__codelineno-1-163" href="#__codelineno-1-163"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">CORRECTIVE_POLARITY_CARD</span><span class="p">,</span>
+</span><span id="__span-1-164"><a id="__codelineno-1-164" name="__codelineno-1-164" href="#__codelineno-1-164"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-165"><a id="__codelineno-1-165" name="__codelineno-1-165" href="#__codelineno-1-165"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-166"><a id="__codelineno-1-166" name="__codelineno-1-166" href="#__codelineno-1-166"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"participial-absolutes"</span><span class="p">,</span>
+</span><span id="__span-1-167"><a id="__codelineno-1-167" name="__codelineno-1-167" href="#__codelineno-1-167"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Participial Absolutes"</span><span class="p">,</span>
+</span><span id="__span-1-168"><a id="__codelineno-1-168" name="__codelineno-1-168" href="#__codelineno-1-168"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"concise temporal/causal backgrounding with past participles"</span><span class="p">,</span>
+</span><span id="__span-1-169"><a id="__codelineno-1-169" name="__codelineno-1-169" href="#__codelineno-1-169"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"participial-absolutes"</span><span class="p">,</span><span class="w"> </span><span class="s">"absolute"</span><span class="p">,</span><span class="w"> </span><span class="s">"participle"</span><span class="p">,</span><span class="w"> </span><span class="s">"backgrounding"</span><span class="p">,</span><span class="w"> </span><span class="s">"temporal"</span><span class="p">,</span><span class="w"> </span><span class="s">"causal"</span><span class="p">,</span><span class="w"> </span><span class="s">"terminado el"</span><span class="p">],</span>
+</span><span id="__span-1-170"><a id="__codelineno-1-170" name="__codelineno-1-170" href="#__codelineno-1-170"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">PARTICIPIAL_ABSOLUTES_CARD</span><span class="p">,</span>
+</span><span id="__span-1-171"><a id="__codelineno-1-171" name="__codelineno-1-171" href="#__codelineno-1-171"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-172"><a id="__codelineno-1-172" name="__codelineno-1-172" href="#__codelineno-1-172"></a><span class="w">    </span><span class="n">GrammarConcept</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-173"><a id="__codelineno-1-173" name="__codelineno-1-173" href="#__codelineno-1-173"></a><span class="w">        </span><span class="n">slug</span><span class="p">:</span><span class="w"> </span><span class="s">"scalar-concession"</span><span class="p">,</span>
+</span><span id="__span-1-174"><a id="__codelineno-1-174" name="__codelineno-1-174" href="#__codelineno-1-174"></a><span class="w">        </span><span class="n">title</span><span class="p">:</span><span class="w"> </span><span class="s">"Scalar Concession"</span><span class="p">,</span>
+</span><span id="__span-1-175"><a id="__codelineno-1-175" name="__codelineno-1-175" href="#__codelineno-1-175"></a><span class="w">        </span><span class="n">gloss</span><span class="p">:</span><span class="w"> </span><span class="s">"intensive concessive structures (por más que, aun cuando, siquiera)"</span><span class="p">,</span>
+</span><span id="__span-1-176"><a id="__codelineno-1-176" name="__codelineno-1-176" href="#__codelineno-1-176"></a><span class="w">        </span><span class="n">keywords</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="p">[</span><span class="s">"scalar-concession"</span><span class="p">,</span><span class="w"> </span><span class="s">"concession"</span><span class="p">,</span><span class="w"> </span><span class="s">"even though"</span><span class="p">,</span><span class="w"> </span><span class="s">"even if"</span><span class="p">,</span><span class="w"> </span><span class="s">"por mas que"</span><span class="p">,</span><span class="w"> </span><span class="s">"aun cuando"</span><span class="p">,</span><span class="w"> </span><span class="s">"siquiera"</span><span class="p">],</span>
+</span><span id="__span-1-177"><a id="__codelineno-1-177" name="__codelineno-1-177" href="#__codelineno-1-177"></a><span class="w">        </span><span class="n">card</span><span class="p">:</span><span class="w"> </span><span class="nc">SCALAR_CONCESSION_CARD</span><span class="p">,</span>
+</span><span id="__span-1-178"><a id="__codelineno-1-178" name="__codelineno-1-178" href="#__codelineno-1-178"></a><span class="w">    </span><span class="p">},</span>
+</span><span id="__span-1-179"><a id="__codelineno-1-179" name="__codelineno-1-179" href="#__codelineno-1-179"></a><span class="p">];</span>
+</span><span id="__span-1-180"><a id="__codelineno-1-180" name="__codelineno-1-180" href="#__codelineno-1-180"></a>
+</span><span id="__span-1-181"><a id="__codelineno-1-181" name="__codelineno-1-181" href="#__codelineno-1-181"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">list_grammar_concepts</span><span class="p">()</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="kp">&amp;</span><span class="o">'</span><span class="nb">static</span><span class="w"> </span><span class="p">[</span><span class="n">GrammarConcept</span><span class="p">]</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-182"><a id="__codelineno-1-182" name="__codelineno-1-182" href="#__codelineno-1-182"></a><span class="w">    </span><span class="n">CONCEPTS</span>
+</span><span id="__span-1-183"><a id="__codelineno-1-183" name="__codelineno-1-183" href="#__codelineno-1-183"></a><span class="p">}</span>
+</span><span id="__span-1-184"><a id="__codelineno-1-184" name="__codelineno-1-184" href="#__codelineno-1-184"></a>
+</span><span id="__span-1-185"><a id="__codelineno-1-185" name="__codelineno-1-185" href="#__codelineno-1-185"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">get_grammar_concept</span><span class="p">(</span><span class="n">query</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="kt">str</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">Option</span><span class="o">&lt;&amp;'</span><span class="nb">static</span><span class="w"> </span><span class="n">GrammarConcept</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-186"><a id="__codelineno-1-186" name="__codelineno-1-186" href="#__codelineno-1-186"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">normalized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">query</span><span class="p">.</span><span class="n">trim</span><span class="p">().</span><span class="n">to_lowercase</span><span class="p">().</span><span class="n">replace</span><span class="p">(</span><span class="sc">'_'</span><span class="p">,</span><span class="w"> </span><span class="s">"-"</span><span class="p">);</span>
+</span><span id="__span-1-187"><a id="__codelineno-1-187" name="__codelineno-1-187" href="#__codelineno-1-187"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">normalized</span><span class="p">.</span><span class="n">as_str</span><span class="p">();</span>
+</span><span id="__span-1-188"><a id="__codelineno-1-188" name="__codelineno-1-188" href="#__codelineno-1-188"></a>
+</span><span id="__span-1-189"><a id="__codelineno-1-189" name="__codelineno-1-189" href="#__codelineno-1-189"></a><span class="w">    </span><span class="c1">// 1. Direct slug match</span>
+</span><span id="__span-1-190"><a id="__codelineno-1-190" name="__codelineno-1-190" href="#__codelineno-1-190"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONCEPTS</span><span class="p">.</span><span class="n">iter</span><span class="p">().</span><span class="n">find</span><span class="p">(</span><span class="o">|</span><span class="n">c</span><span class="o">|</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">slug</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-191"><a id="__codelineno-1-191" name="__codelineno-1-191" href="#__codelineno-1-191"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+</span><span id="__span-1-192"><a id="__codelineno-1-192" name="__codelineno-1-192" href="#__codelineno-1-192"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-193"><a id="__codelineno-1-193" name="__codelineno-1-193" href="#__codelineno-1-193"></a>
+</span><span id="__span-1-194"><a id="__codelineno-1-194" name="__codelineno-1-194" href="#__codelineno-1-194"></a><span class="w">    </span><span class="c1">// 2. Exact keyword match</span>
+</span><span id="__span-1-195"><a id="__codelineno-1-195" name="__codelineno-1-195" href="#__codelineno-1-195"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONCEPTS</span><span class="p">.</span><span class="n">iter</span><span class="p">().</span><span class="n">find</span><span class="p">(</span><span class="o">|</span><span class="n">c</span><span class="o">|</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">keywords</span><span class="p">.</span><span class="n">iter</span><span class="p">().</span><span class="n">any</span><span class="p">(</span><span class="o">|&amp;</span><span class="n">k</span><span class="o">|</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">key</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-196"><a id="__codelineno-1-196" name="__codelineno-1-196" href="#__codelineno-1-196"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+</span><span id="__span-1-197"><a id="__codelineno-1-197" name="__codelineno-1-197" href="#__codelineno-1-197"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-198"><a id="__codelineno-1-198" name="__codelineno-1-198" href="#__codelineno-1-198"></a>
+</span><span id="__span-1-199"><a id="__codelineno-1-199" name="__codelineno-1-199" href="#__codelineno-1-199"></a><span class="w">    </span><span class="c1">// 3. Substring match on title, gloss, or keywords</span>
+</span><span id="__span-1-200"><a id="__codelineno-1-200" name="__codelineno-1-200" href="#__codelineno-1-200"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CONCEPTS</span><span class="p">.</span><span class="n">iter</span><span class="p">().</span><span class="n">find</span><span class="p">(</span><span class="o">|</span><span class="n">c</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-201"><a id="__codelineno-1-201" name="__codelineno-1-201" href="#__codelineno-1-201"></a><span class="w">        </span><span class="n">c</span><span class="p">.</span><span class="n">title</span><span class="p">.</span><span class="n">to_lowercase</span><span class="p">().</span><span class="n">contains</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</span><span id="__span-1-202"><a id="__codelineno-1-202" name="__codelineno-1-202" href="#__codelineno-1-202"></a><span class="w">            </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">gloss</span><span class="p">.</span><span class="n">to_lowercase</span><span class="p">().</span><span class="n">contains</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</span><span id="__span-1-203"><a id="__codelineno-1-203" name="__codelineno-1-203" href="#__codelineno-1-203"></a><span class="w">            </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">keywords</span><span class="p">.</span><span class="n">iter</span><span class="p">().</span><span class="n">any</span><span class="p">(</span><span class="o">|&amp;</span><span class="n">k</span><span class="o">|</span><span class="w"> </span><span class="n">k</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="n">key</span><span class="p">)</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="n">k</span><span class="p">))</span>
+</span><span id="__span-1-204"><a id="__codelineno-1-204" name="__codelineno-1-204" href="#__codelineno-1-204"></a><span class="w">    </span><span class="p">})</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-205"><a id="__codelineno-1-205" name="__codelineno-1-205" href="#__codelineno-1-205"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">c</span><span class="p">);</span>
+</span><span id="__span-1-206"><a id="__codelineno-1-206" name="__codelineno-1-206" href="#__codelineno-1-206"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-207"><a id="__codelineno-1-207" name="__codelineno-1-207" href="#__codelineno-1-207"></a>
+</span><span id="__span-1-208"><a id="__codelineno-1-208" name="__codelineno-1-208" href="#__codelineno-1-208"></a><span class="w">    </span><span class="nb">None</span>
+</span><span id="__span-1-209"><a id="__codelineno-1-209" name="__codelineno-1-209" href="#__codelineno-1-209"></a><span class="p">}</span>
+</span><span id="__span-1-210"><a id="__codelineno-1-210" name="__codelineno-1-210" href="#__codelineno-1-210"></a>
+</span><span id="__span-1-211"><a id="__codelineno-1-211" name="__codelineno-1-211" href="#__codelineno-1-211"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">get_reference_card</span><span class="p">(</span><span class="n">topic</span><span class="p">:</span><span class="w"> </span><span class="kp">&amp;</span><span class="kt">str</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">Option</span><span class="o">&lt;&amp;'</span><span class="nb">static</span><span class="w"> </span><span class="kt">str</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-212"><a id="__codelineno-1-212" name="__codelineno-1-212" href="#__codelineno-1-212"></a><span class="w">    </span><span class="n">get_grammar_concept</span><span class="p">(</span><span class="n">topic</span><span class="p">).</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">c</span><span class="o">|</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">card</span><span class="p">)</span>
+</span><span id="__span-1-213"><a id="__codelineno-1-213" name="__codelineno-1-213" href="#__codelineno-1-213"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>[ ] <strong>Step 4: Run test to verify it passes</strong></li>
+</ul>
+<p>Run: <code>cargo test --test reference_tests</code>
+Expected: PASS</p>
+<ul>
+<li>[ ] <strong>Step 5: Commit</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>add<span class="w"> </span>src/core/reference.rs<span class="w"> </span>tests/reference_tests.rs
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>commit<span class="w"> </span>--no-gpg-sign<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(core): implement GrammarConcept catalog with communicative functional glosses"</span>
+</span></code></pre></div>
+<hr />
+<h3 id="task-2-cli-spanglings-explain-spanglings-reference-functional-listing-semantic-discovery">Task 2: CLI <code>spanglings explain</code> / <code>spanglings reference</code> Functional Listing &amp; Semantic Discovery</h3>
+<p><strong>Files:</strong>
+- Modify: <code>src/cli/mod.rs</code>
+- Modify: <code>src/cli/commands/explain.rs</code>
+- Modify: <code>tests/cli_tests.rs</code></p>
+<ul>
+<li>[ ] <strong>Step 1: Write the failing tests in <code>tests/cli_tests.rs</code></strong></li>
+</ul>
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cp">#[test]</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">fn</span><span class="w"> </span><span class="nf">test_cli_explain_listing_displays_functional_glosses</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="c1">// Calling show_explanation with None or empty string displays formatted topic catalog</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Vec</span><span class="p">::</span><span class="n">new</span><span class="p">();</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">    </span><span class="c1">// Verify show_explanation(None) or "" prints all topics with functional glosses</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p">}</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="cp">#[test]</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="k">fn</span><span class="w"> </span><span class="nf">test_cli_explain_semantic_lookup_wishes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="c1">// Calling show_explanation with "wishes" resolves to subjunctive card</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>[ ] <strong>Step 2: Run test to verify it fails</strong></li>
+</ul>
+<p>Run: <code>cargo test --test cli_tests test_cli_explain_semantic_lookup_wishes</code>
+Expected: FAIL</p>
+<ul>
+<li>[ ] <strong>Step 3: Update <code>src/cli/commands/explain.rs</code> and <code>src/cli/mod.rs</code></strong></li>
+</ul>
+<p>Update <code>Explain</code> subcommand in <code>src/cli/mod.rs</code> to make <code>topic: Option&lt;String&gt;</code> optional.
+In <code>src/cli/commands/explain.rs</code>:
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">use</span><span class="w"> </span><span class="k">crate</span><span class="p">::</span><span class="n">core</span><span class="p">::</span><span class="n">reference</span><span class="p">::{</span><span class="n">get_grammar_concept</span><span class="p">,</span><span class="w"> </span><span class="n">list_grammar_concepts</span><span class="p">};</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">use</span><span class="w"> </span><span class="n">colored</span><span class="p">::</span><span class="n">Colorize</span><span class="p">;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">show_explanation</span><span class="p">(</span><span class="n">topic</span><span class="p">:</span><span class="w"> </span><span class="nb">Option</span><span class="o">&lt;&amp;</span><span class="kt">str</span><span class="o">&gt;</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nc">anyhow</span><span class="p">::</span><span class="nb">Result</span><span class="o">&lt;</span><span class="p">()</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="k">match</span><span class="w"> </span><span class="n">topic</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="nb">Some</span><span class="p">(</span><span class="n">query</span><span class="p">)</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="o">!</span><span class="n">query</span><span class="p">.</span><span class="n">trim</span><span class="p">().</span><span class="n">is_empty</span><span class="p">()</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">            </span><span class="k">match</span><span class="w"> </span><span class="n">get_grammar_concept</span><span class="p">(</span><span class="n">query</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">                </span><span class="nb">Some</span><span class="p">(</span><span class="n">concept</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">                    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"{}"</span><span class="p">,</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="n">card</span><span class="p">.</span><span class="n">cyan</span><span class="p">());</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">                    </span><span class="nb">Ok</span><span class="p">(())</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">                </span><span class="nb">None</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">                    </span><span class="fm">println!</span><span class="p">(</span>
+</span><span id="__span-4-14"><a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="w">                        </span><span class="s">"{}"</span><span class="p">,</span>
+</span><span id="__span-4-15"><a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a><span class="w">                        </span><span class="fm">format!</span><span class="p">(</span><span class="s">"Unknown grammar topic or intent: '{}'"</span><span class="p">,</span><span class="w"> </span><span class="n">query</span><span class="p">).</span><span class="n">red</span><span class="p">().</span><span class="n">bold</span><span class="p">()</span>
+</span><span id="__span-4-16"><a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a><span class="w">                    </span><span class="p">);</span>
+</span><span id="__span-4-17"><a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a><span class="w">                    </span><span class="n">print_topic_catalog</span><span class="p">();</span>
+</span><span id="__span-4-18"><a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a><span class="w">                    </span><span class="nb">Ok</span><span class="p">(())</span>
+</span><span id="__span-4-19"><a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-4-20"><a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a><span class="w">            </span><span class="p">}</span>
+</span><span id="__span-4-21"><a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-22"><a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a><span class="w">        </span><span class="n">_</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-23"><a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a><span class="w">            </span><span class="n">print_topic_catalog</span><span class="p">();</span>
+</span><span id="__span-4-24"><a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a><span class="w">            </span><span class="nb">Ok</span><span class="p">(())</span>
+</span><span id="__span-4-25"><a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-4-26"><a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-27"><a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a><span class="p">}</span>
+</span><span id="__span-4-28"><a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>
+</span><span id="__span-4-29"><a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a><span class="k">fn</span><span class="w"> </span><span class="nf">print_topic_catalog</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-30"><a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">{}"</span><span class="p">,</span><span class="w"> </span><span class="s">"Available Grammar Reference Cards:"</span><span class="p">.</span><span class="n">bold</span><span class="p">().</span><span class="n">underline</span><span class="p">());</span>
+</span><span id="__span-4-31"><a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">list_grammar_concepts</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-32"><a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a><span class="w">        </span><span class="fm">println!</span><span class="p">(</span>
+</span><span id="__span-4-33"><a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a><span class="w">            </span><span class="s">"  • {:&lt;24} {}{}{}"</span><span class="p">,</span>
+</span><span id="__span-4-34"><a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a><span class="w">            </span><span class="n">c</span><span class="p">.</span><span class="n">slug</span><span class="p">.</span><span class="n">yellow</span><span class="p">().</span><span class="n">bold</span><span class="p">(),</span>
+</span><span id="__span-4-35"><a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a><span class="w">            </span><span class="n">c</span><span class="p">.</span><span class="n">title</span><span class="p">.</span><span class="n">bold</span><span class="p">(),</span>
+</span><span id="__span-4-36"><a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a><span class="w">            </span><span class="s">" — "</span><span class="p">.</span><span class="n">dark_gray</span><span class="p">(),</span>
+</span><span id="__span-4-37"><a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a><span class="w">            </span><span class="n">c</span><span class="p">.</span><span class="n">gloss</span><span class="p">.</span><span class="n">dimmed</span><span class="p">()</span>
+</span><span id="__span-4-38"><a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a><span class="w">        </span><span class="p">);</span>
+</span><span id="__span-4-39"><a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-4-40"><a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a><span class="w">    </span><span class="fm">println!</span><span class="p">(</span>
+</span><span id="__span-4-41"><a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a><span class="w">        </span><span class="s">"</span><span class="se">\n</span><span class="s">{}</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span>
+</span><span id="__span-4-42"><a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a><span class="w">        </span><span class="s">"Usage: spanglings explain &lt;topic-or-intent&gt; (e.g. spanglings explain wishes)"</span><span class="p">.</span><span class="n">cyan</span><span class="p">()</span>
+</span><span id="__span-4-43"><a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a><span class="w">    </span><span class="p">);</span>
+</span><span id="__span-4-44"><a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<ul>
+<li>[ ] <strong>Step 4: Run test to verify it passes</strong></li>
+</ul>
+<p>Run: <code>cargo test --test cli_tests</code>
+Expected: PASS</p>
+<ul>
+<li>[ ] <strong>Step 5: Commit</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>git<span class="w"> </span>add<span class="w"> </span>src/cli/mod.rs<span class="w"> </span>src/cli/commands/explain.rs<span class="w"> </span>src/main.rs<span class="w"> </span>tests/cli_tests.rs
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>git<span class="w"> </span>commit<span class="w"> </span>--no-gpg-sign<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(cli): display functional glosses in explain catalog and support semantic query lookup"</span>
+</span></code></pre></div>
+<hr />
+<h3 id="task-3-drill-blitz-prompt-layout-enhancement-with-communicative-glosses">Task 3: Drill &amp; Blitz Prompt Layout Enhancement with Communicative Glosses</h3>
+<p><strong>Files:</strong>
+- Modify: <code>src/cli/commands/drill.rs</code>
+- Modify: <code>src/cli/commands/blitz.rs</code>
+- Modify: <code>tests/drill_tests.rs</code>
+- Modify: <code>tests/blitz_tests.rs</code></p>
+<ul>
+<li>[ ] <strong>Step 1: Write the failing tests in <code>tests/drill_tests.rs</code> and <code>tests/blitz_tests.rs</code></strong></li>
+</ul>
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="cp">#[test]</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">fn</span><span class="w"> </span><span class="nf">test_drill_item_prompt_formatting_with_functional_gloss</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DrillItem</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">        </span><span class="n">topic</span><span class="p">:</span><span class="w"> </span><span class="s">"subjunctive"</span><span class="p">,</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">        </span><span class="n">formula_cue</span><span class="p">:</span><span class="w"> </span><span class="s">"drop -o -&gt; opposite vowel -a"</span><span class="p">,</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="n">trigger_sentence</span><span class="p">:</span><span class="w"> </span><span class="s">"Dudo que yo ____ los libros en la mesa."</span><span class="p">,</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="n">target_verb</span><span class="p">:</span><span class="w"> </span><span class="s">"poner"</span><span class="p">,</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="n">target_subject</span><span class="p">:</span><span class="w"> </span><span class="s">"yo"</span><span class="p">,</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="n">target</span><span class="p">:</span><span class="w"> </span><span class="s">"ponga"</span><span class="p">,</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">        </span><span class="n">explanation</span><span class="p">:</span><span class="w"> </span><span class="s">"yo pongo -&gt; drop -o -&gt; add -a -&gt; ponga"</span><span class="p">,</span>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-6-12"><a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
+</span><span id="__span-6-13"><a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">prompt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">item</span><span class="p">.</span><span class="n">format_prompt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+</span><span id="__span-6-14"><a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">    </span><span class="fm">assert!</span><span class="p">(</span><span class="n">prompt</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">"Subjunctive (wishes, hypotheses, doubt, demands)"</span><span class="p">));</span>
+</span><span id="__span-6-15"><a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">    </span><span class="fm">assert!</span><span class="p">(</span><span class="n">prompt</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">"drop -o -&gt; opposite vowel -a"</span><span class="p">));</span>
+</span><span id="__span-6-16"><a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="fm">assert!</span><span class="p">(</span><span class="n">prompt</span><span class="p">.</span><span class="n">contains</span><span class="p">(</span><span class="s">"Dudo que yo ____ los libros en la mesa."</span><span class="p">));</span>
+</span><span id="__span-6-17"><a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>[ ] <strong>Step 2: Run test to verify it fails</strong></li>
+</ul>
+<p>Run: <code>cargo test --test drill_tests test_drill_item_prompt_formatting_with_functional_gloss</code>
+Expected: FAIL</p>
+<ul>
+<li>[ ] <strong>Step 3: Update <code>format_prompt</code> in <code>src/cli/commands/drill.rs</code> and <code>src/cli/commands/blitz.rs</code></strong></li>
+</ul>
+<p>In <code>src/cli/commands/drill.rs</code>:
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">format_prompt</span><span class="p">(</span><span class="o">&amp;</span><span class="bp">self</span><span class="p">,</span><span class="w"> </span><span class="n">current</span><span class="p">:</span><span class="w"> </span><span class="kt">usize</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="p">:</span><span class="w"> </span><span class="kt">usize</span><span class="p">)</span><span class="w"> </span><span class="p">-&gt;</span><span class="w"> </span><span class="nb">String</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">concept_header</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">concept</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">crate</span><span class="p">::</span><span class="n">core</span><span class="p">::</span><span class="n">reference</span><span class="p">::</span><span class="n">get_grammar_concept</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">topic</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">        </span><span class="fm">format!</span><span class="p">(</span><span class="s">"{} ({})"</span><span class="p">,</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="n">title</span><span class="p">,</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="n">gloss</span><span class="p">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">topic</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">            </span><span class="p">.</span><span class="n">split</span><span class="p">([</span><span class="sc">'_'</span><span class="p">,</span><span class="w"> </span><span class="sc">'-'</span><span class="p">])</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">            </span><span class="p">.</span><span class="n">map</span><span class="p">(</span><span class="o">|</span><span class="n">w</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">                </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">w</span><span class="p">.</span><span class="n">chars</span><span class="p">();</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">                </span><span class="k">match</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">next</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">                    </span><span class="nb">None</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="nb">String</span><span class="p">::</span><span class="n">new</span><span class="p">(),</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">                    </span><span class="nb">Some</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">f</span><span class="p">.</span><span class="n">to_uppercase</span><span class="p">().</span><span class="n">collect</span><span class="p">::</span><span class="o">&lt;</span><span class="nb">String</span><span class="o">&gt;</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">c</span><span class="p">.</span><span class="n">as_str</span><span class="p">(),</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">            </span><span class="p">})</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">            </span><span class="p">.</span><span class="n">collect</span><span class="p">::</span><span class="o">&lt;</span><span class="nb">Vec</span><span class="o">&lt;</span><span class="n">_</span><span class="o">&gt;&gt;</span><span class="p">()</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">            </span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="s">" "</span><span class="p">)</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">badge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">formula_cue</span><span class="p">.</span><span class="n">is_empty</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">        </span><span class="fm">format!</span><span class="p">(</span><span class="s">"[{}]"</span><span class="p">,</span><span class="w"> </span><span class="n">concept_header</span><span class="p">)</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">        </span><span class="fm">format!</span><span class="p">(</span><span class="s">"[{} | {}]"</span><span class="p">,</span><span class="w"> </span><span class="n">concept_header</span><span class="p">,</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">formula_cue</span><span class="p">)</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">    </span><span class="p">};</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">    </span><span class="fm">format!</span><span class="p">(</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">        </span><span class="s">"{} {}</span><span class="se">\n</span><span class="s">Sentence: </span><span class="se">\"</span><span class="s">{}</span><span class="se">\"</span><span class="s"> (verb: {} | subject: {})"</span><span class="p">,</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">        </span><span class="fm">format!</span><span class="p">(</span><span class="s">"Q{}/{}"</span><span class="p">,</span><span class="w"> </span><span class="n">current</span><span class="p">,</span><span class="w"> </span><span class="n">total</span><span class="p">).</span><span class="n">bold</span><span class="p">().</span><span class="n">yellow</span><span class="p">(),</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">        </span><span class="n">badge</span><span class="p">.</span><span class="n">cyan</span><span class="p">(),</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">trigger_sentence</span><span class="p">.</span><span class="n">white</span><span class="p">().</span><span class="n">bold</span><span class="p">(),</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">target_verb</span><span class="p">.</span><span class="n">yellow</span><span class="p">(),</span>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">target_subject</span><span class="p">.</span><span class="n">yellow</span><span class="p">()</span>
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="w">    </span><span class="p">)</span>
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>Apply equivalent logic to <code>BlitzItem::format_prompt</code> in <code>src/cli/commands/blitz.rs</code>.</p>
+<ul>
+<li>[ ] <strong>Step 4: Run tests to verify they pass</strong></li>
+</ul>
+<p>Run: <code>cargo test --test drill_tests &amp;&amp; cargo test --test blitz_tests</code>
+Expected: PASS</p>
+<ul>
+<li>[ ] <strong>Step 5: Commit</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>git<span class="w"> </span>add<span class="w"> </span>src/cli/commands/drill.rs<span class="w"> </span>src/cli/commands/blitz.rs<span class="w"> </span>tests/drill_tests.rs<span class="w"> </span>tests/blitz_tests.rs
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>git<span class="w"> </span>commit<span class="w"> </span>--no-gpg-sign<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(drill): render functional communicative glosses in drill and blitz prompt headers"</span>
+</span></code></pre></div>
+<hr />
+<h3 id="task-4-tui-reference-browser-modal-integration-with-functional-glosses">Task 4: TUI Reference Browser &amp; Modal Integration with Functional Glosses</h3>
+<p><strong>Files:</strong>
+- Modify: <code>src/tui/app.rs</code>
+- Modify: <code>src/tui/ui.rs</code>
+- Modify: <code>tests/tui_tests.rs</code></p>
+<ul>
+<li>[ ] <strong>Step 1: Write the failing tests in <code>tests/tui_tests.rs</code></strong></li>
+</ul>
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="cp">#[test]</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">fn</span><span class="w"> </span><span class="nf">test_tui_reference_browser_shows_functional_glosses_and_searches_glosses</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">exercises</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">get_test_exercises</span><span class="p">();</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="k">mut</span><span class="w"> </span><span class="n">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">App</span><span class="p">::</span><span class="n">new</span><span class="p">(</span><span class="n">exercises</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="c1">// Test filter matches on communicative gloss keyword "wishes"</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="n">ref_query</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"wishes"</span><span class="p">.</span><span class="n">to_string</span><span class="p">();</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="n">app</span><span class="p">.</span><span class="n">update_ref_filter</span><span class="p">();</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="n">ref_filtered_topics</span><span class="p">.</span><span class="n">len</span><span class="p">(),</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="fm">assert_eq!</span><span class="p">(</span><span class="n">app</span><span class="p">.</span><span class="n">ref_filtered_topics</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="w"> </span><span class="s">"subjunctive"</span><span class="p">);</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<ul>
+<li>[ ] <strong>Step 2: Run test to verify it fails</strong></li>
+</ul>
+<p>Run: <code>cargo test --test tui_tests test_tui_reference_browser_shows_functional_glosses_and_searches_glosses</code>
+Expected: FAIL</p>
+<ul>
+<li>[ ] <strong>Step 3: Update <code>src/tui/app.rs</code> and <code>src/tui/ui.rs</code></strong></li>
+</ul>
+<p>In <code>src/tui/app.rs</code>:
+Update <code>update_ref_filter</code>:
+<div class="language-rust highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">pub</span><span class="w"> </span><span class="k">fn</span><span class="w"> </span><span class="nf">update_ref_filter</span><span class="p">(</span><span class="o">&amp;</span><span class="k">mut</span><span class="w"> </span><span class="bp">self</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="kd">let</span><span class="w"> </span><span class="n">q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">ref_query</span><span class="p">.</span><span class="n">trim</span><span class="p">().</span><span class="n">to_lowercase</span><span class="p">();</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="n">q</span><span class="p">.</span><span class="n">is_empty</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">ref_filtered_topics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span><span class="p">.</span><span class="n">ref_topics</span><span class="p">.</span><span class="n">clone</span><span class="p">();</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">        </span><span class="bp">self</span><span class="p">.</span><span class="n">ref_filtered_topics</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">self</span>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">            </span><span class="p">.</span><span class="n">ref_topics</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">            </span><span class="p">.</span><span class="n">iter</span><span class="p">()</span>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">            </span><span class="p">.</span><span class="n">filter</span><span class="p">(</span><span class="o">|&amp;</span><span class="n">slug</span><span class="o">|</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">                </span><span class="k">if</span><span class="w"> </span><span class="kd">let</span><span class="w"> </span><span class="nb">Some</span><span class="p">(</span><span class="n">concept</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">crate</span><span class="p">::</span><span class="n">core</span><span class="p">::</span><span class="n">reference</span><span class="p">::</span><span class="n">get_grammar_concept</span><span class="p">(</span><span class="n">slug</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">                    </span><span class="n">concept</span><span class="p">.</span><span class="n">slug</span><span class="p">.</span><span class="n">to_lowercase</span><span class="p">().</span><span class="n">contains</span><span class="p">(</span><span class="o">&amp;</span><span class="n">q</span><span class="p">)</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">                        </span><span class="o">||</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="n">title</span><span class="p">.</span><span class="n">to_lowercase</span><span class="p">().</span><span class="n">contains</span><span class="p">(</span><span class="o">&amp;</span><span class="n">q</span><span class="p">)</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">                        </span><span class="o">||</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="n">gloss</span><span class="p">.</span><span class="n">to_lowercase</span><span class="p">().</span><span class="n">contains</span><span class="p">(</span><span class="o">&amp;</span><span class="n">q</span><span class="p">)</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">                        </span><span class="o">||</span><span class="w"> </span><span class="n">concept</span><span class="p">.</span><span class="n">keywords</span><span class="p">.</span><span class="n">iter</span><span class="p">().</span><span class="n">any</span><span class="p">(</span><span class="o">|</span><span class="n">k</span><span class="o">|</span><span class="w"> </span><span class="n">k</span><span class="p">.</span><span class="n">to_lowercase</span><span class="p">().</span><span class="n">contains</span><span class="p">(</span><span class="o">&amp;</span><span class="n">q</span><span class="p">))</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">                </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">                    </span><span class="n">slug</span><span class="p">.</span><span class="n">to_lowercase</span><span class="p">().</span><span class="n">contains</span><span class="p">(</span><span class="o">&amp;</span><span class="n">q</span><span class="p">)</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">                </span><span class="p">}</span>
+</span><span id="__span-10-18"><a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">            </span><span class="p">})</span>
+</span><span id="__span-10-19"><a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">            </span><span class="p">.</span><span class="n">copied</span><span class="p">()</span>
+</span><span id="__span-10-20"><a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">            </span><span class="p">.</span><span class="n">collect</span><span class="p">();</span>
+</span><span id="__span-10-21"><a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-10-22"><a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">    </span><span class="bp">self</span><span class="p">.</span><span class="n">ref_selected_idx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-10-23"><a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">    </span><span class="bp">self</span><span class="p">.</span><span class="n">ref_scroll</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-10-24"><a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p>In <code>src/tui/ui.rs</code>:
+In <code>draw_reference_browser_modal</code>:
+Display topic items with formatted <code>{Title} ({gloss})</code> so learners see the communicative intent right in the sidebar.</p>
+<ul>
+<li>[ ] <strong>Step 4: Run tests to verify they pass</strong></li>
+</ul>
+<p>Run: <code>cargo test --test tui_tests</code>
+Expected: PASS</p>
+<ul>
+<li>[ ] <strong>Step 5: Commit</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>git<span class="w"> </span>add<span class="w"> </span>src/tui/app.rs<span class="w"> </span>src/tui/ui.rs<span class="w"> </span>tests/tui_tests.rs
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>git<span class="w"> </span>commit<span class="w"> </span>--no-gpg-sign<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(tui): integrate functional communicative glosses into reference browser sidebar and search filter"</span>
+</span></code></pre></div>
+<hr />
+<h3 id="task-5-end-to-end-workspace-verification-knowledge-graph-update">Task 5: End-to-End Workspace Verification &amp; Knowledge Graph Update</h3>
+<p><strong>Files:</strong>
+- Verify: Full workspace tests, linter, formatting, knowledge graph</p>
+<ul>
+<li>
+<p>[ ] <strong>Step 1: Run complete test suite</strong>
+Run: <code>cargo test</code>
+Expected: All test binaries pass cleanly (0 failures).</p>
+</li>
+<li>
+<p>[ ] <strong>Step 2: Run compiler linter</strong>
+Run: <code>cargo clippy --all-targets -- -D warnings</code>
+Expected: Clean with 0 warnings.</p>
+</li>
+<li>
+<p>[ ] <strong>Step 3: Check code formatting</strong>
+Run: <code>cargo fmt --check</code>
+Expected: Clean.</p>
+</li>
+<li>
+<p>[ ] <strong>Step 4: Update knowledge graph</strong>
+Run: <code>uvx --from graphifyy graphify update .</code></p>
+</li>
+<li>
+<p>[ ] <strong>Step 5: Commit any graph updates</strong>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>add<span class="w"> </span>graphify-out/
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>commit<span class="w"> </span>--no-gpg-sign<span class="w"> </span>-m<span class="w"> </span><span class="s2">"docs: update knowledge graph"</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nb">true</span>
+</span></code></pre></div></p>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
