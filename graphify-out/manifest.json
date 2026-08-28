@@ -984,9 +984,9 @@
     "semantic_hash": ""
   },
   ".github/workflows/release.yaml": {
-    "mtime": 1787817448.6716342,
-    "seen": 1787817456.262483,
-    "ast_hash": "7d333db2f5343aee1e14a64944f73950",
+    "mtime": 1787906324.7450972,
+    "seen": 1787906329.864505,
+    "ast_hash": "b83beb6be70658c32e59821a65120014",
     "semantic_hash": ""
   },
   "docs/BACKLOG.md": {
@@ -2286,9 +2286,9 @@
     "semantic_hash": ""
   },
   "docs/contributing.md": {
-    "mtime": 1787850695.2367744,
-    "seen": 1787863476.01188,
-    "ast_hash": "0a7cdb09f28afc779716e760b767f470",
+    "mtime": 1787905988.0100975,
+    "seen": 1787905999.617669,
+    "ast_hash": "34c4dee38c17385e7a90b58c092acc32",
     "semantic_hash": ""
   },
   "docs/getting-started.md": {
@@ -2310,9 +2310,9 @@
     "semantic_hash": ""
   },
   "docs/onboarding-guide.md": {
-    "mtime": 1787850695.2374842,
-    "seen": 1787863476.011882,
-    "ast_hash": "de7604181c9015ffcc3274744a9f7b1d",
+    "mtime": 1787905977.2513635,
+    "seen": 1787905999.617672,
+    "ast_hash": "76d8d9e41a35f6dd5607684dde2a805b",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-27-mkdocs-documentation-site.md": {

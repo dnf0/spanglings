@@ -731,7 +731,7 @@ Nosotros (estar) ___ listos.
         contrast_note: None,
     };
 
-    let app = App::new(vec![exercise], false);
+    let app = App::new(vec![exercise], true);
     let backend = TestBackend::new(100, 30);
     let mut terminal = Terminal::new(backend).unwrap();
 
