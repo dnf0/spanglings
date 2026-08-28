@@ -1098,72 +1098,6 @@
       "source_location": "L44"
     },
     {
-      "id": "tests_exercise_validity_tests",
-      "label": "exercise_validity_tests.rs",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "validate_submission",
-      "file_type": "code",
-      "norm_label": "exercise_validity_tests.rs",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_exercise_validity_tests_collect_md_paths",
-      "label": "collect_md_paths()",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "validate_submission",
-      "file_type": "code",
-      "norm_label": "collect_md_paths()",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L8"
-    },
-    {
-      "id": "tests_exercise_validity_tests_rs_path",
-      "label": "Path",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "validate_submission",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_exercise_validity_tests_rs_pathbuf",
-      "label": "PathBuf",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "validate_submission",
-      "file_type": "code",
-      "norm_label": "pathbuf",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_exercise_validity_tests_rs_vec",
-      "label": "Vec",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "validate_submission",
-      "file_type": "code",
-      "norm_label": "vec",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_exercise_validity_tests_test_all_curriculum_exercises_are_valid_and_solvable",
-      "label": "test_all_curriculum_exercises_are_valid_and_solvable()",
-      "_origin": "ast",
-      "community": 10,
-      "community_name": "validate_submission",
-      "file_type": "code",
-      "norm_label": "test_all_curriculum_exercises_are_valid_and_solvable()",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L27"
-    },
-    {
       "id": "exercises_14_connectors_04_por_consiguiente",
       "label": "04_por_consiguiente.md",
       "_origin": "ast",
@@ -4481,7 +4415,7 @@
       "file_type": "code",
       "norm_label": "blitzresult",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L43"
+      "source_location": "L59"
     },
     {
       "id": "src_cli_commands_blitz_evaluate_blitz_answer",
@@ -4492,7 +4426,7 @@
       "file_type": "code",
       "norm_label": "evaluate_blitz_answer()",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L68"
+      "source_location": "L84"
     },
     {
       "id": "src_cli_commands_blitz_get_blitz_items",
@@ -4503,7 +4437,7 @@
       "file_type": "code",
       "norm_label": "get_blitz_items()",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L53"
+      "source_location": "L69"
     },
     {
       "id": "src_cli_commands_blitz_rs_option",
@@ -4558,7 +4492,7 @@
       "file_type": "code",
       "norm_label": "run_blitz()",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L82"
+      "source_location": "L98"
     },
     {
       "id": "tests_blitz_tests",
@@ -4602,7 +4536,7 @@
       "file_type": "code",
       "norm_label": "test_evaluate_blitz_answer_case_and_whitespace()",
       "source_file": "tests/blitz_tests.rs",
-      "source_location": "L91"
+      "source_location": "L120"
     },
     {
       "id": "tests_blitz_tests_test_get_all_blitz_items",
@@ -5755,6 +5689,28 @@
       "source_location": "L1"
     },
     {
+      "id": "src_cli_commands_explain_print_topic_catalog",
+      "label": "print_topic_catalog()",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "print_topic_catalog()",
+      "source_file": "src/cli/commands/explain.rs",
+      "source_location": "L29"
+    },
+    {
+      "id": "src_cli_commands_explain_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_cli_commands_explain_rs_result",
       "label": "Result",
       "_origin": "ast",
@@ -5788,6 +5744,17 @@
       "source_location": "L1"
     },
     {
+      "id": "src_core_reference_get_grammar_concept",
+      "label": "get_grammar_concept()",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "get_grammar_concept()",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L510"
+    },
+    {
       "id": "src_core_reference_get_reference_card",
       "label": "get_reference_card()",
       "_origin": "ast",
@@ -5796,7 +5763,29 @@
       "file_type": "code",
       "norm_label": "get_reference_card()",
       "source_file": "src/core/reference.rs",
-      "source_location": "L32"
+      "source_location": "L556"
+    },
+    {
+      "id": "src_core_reference_grammarconcept",
+      "label": "GrammarConcept",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "grammarconcept",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L33"
+    },
+    {
+      "id": "src_core_reference_list_grammar_concepts",
+      "label": "list_grammar_concepts()",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "list_grammar_concepts()",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L506"
     },
     {
       "id": "src_core_reference_list_reference_topics",
@@ -5830,6 +5819,17 @@
       "norm_label": "reference_tests.rs",
       "source_file": "tests/reference_tests.rs",
       "source_location": "L1"
+    },
+    {
+      "id": "tests_reference_tests_test_all_24_grammar_concepts_complete",
+      "label": "test_all_24_grammar_concepts_complete()",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "test_all_24_grammar_concepts_complete()",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L232"
     },
     {
       "id": "tests_reference_tests_test_error_code_and_concept_lookup",
@@ -6116,6 +6116,17 @@
       "norm_label": "test_list_reference_topics()",
       "source_file": "tests/reference_tests.rs",
       "source_location": "L186"
+    },
+    {
+      "id": "tests_reference_tests_test_semantic_keyword_concept_lookups",
+      "label": "test_semantic_keyword_concept_lookups()",
+      "_origin": "ast",
+      "community": 15,
+      "community_name": "get_reference_card",
+      "file_type": "code",
+      "norm_label": "test_semantic_keyword_concept_lookups()",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L261"
     },
     {
       "id": "tests_reference_tests_test_unknown_topic_returns_none",
@@ -6748,7 +6759,7 @@
       "file_type": "code",
       "norm_label": "drillevaluation",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L52"
+      "source_location": "L62"
     },
     {
       "id": "src_cli_commands_drill_drillitem",
@@ -6770,7 +6781,7 @@
       "file_type": "code",
       "norm_label": ".format_hint()",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L46"
+      "source_location": "L56"
     },
     {
       "id": "src_cli_commands_drill_drillitem_format_prompt",
@@ -6792,7 +6803,7 @@
       "file_type": "code",
       "norm_label": "evaluate_drill_answer()",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L1010"
+      "source_location": "L1020"
     },
     {
       "id": "src_cli_commands_drill_get_drill_items",
@@ -6803,7 +6814,7 @@
       "file_type": "code",
       "norm_label": "get_drill_items()",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L101"
+      "source_location": "L111"
     },
     {
       "id": "src_cli_commands_drill_get_topic_cheat_sheet",
@@ -6814,7 +6825,7 @@
       "file_type": "code",
       "norm_label": "get_topic_cheat_sheet()",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L58"
+      "source_location": "L68"
     },
     {
       "id": "src_cli_commands_drill_rs_option",
@@ -6869,7 +6880,7 @@
       "file_type": "code",
       "norm_label": "run_drill()",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L1031"
+      "source_location": "L1041"
     },
     {
       "id": "tests_drill_tests",
@@ -6946,7 +6957,7 @@
       "file_type": "code",
       "norm_label": "test_drill_live_hint_generation()",
       "source_file": "tests/drill_tests.rs",
-      "source_location": "L296"
+      "source_location": "L325"
     },
     {
       "id": "tests_drill_tests_test_evaluate_drill_answer",
@@ -7634,7 +7645,7 @@
       "file_type": "code",
       "norm_label": "hookaction",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L156"
+      "source_location": "L159"
     },
     {
       "id": "src_cli_mod_packaction",
@@ -7645,7 +7656,7 @@
       "file_type": "code",
       "norm_label": "packaction",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L172"
+      "source_location": "L175"
     },
     {
       "id": "src_cli_mod_rs_option",
@@ -8175,17 +8186,6 @@
       "source_location": "L9"
     },
     {
-      "id": "src_core_curriculum_level_fmt",
-      "label": ".fmt()",
-      "_origin": "ast",
-      "community": 173,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": ".fmt()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L17"
-    },
-    {
       "id": "src_core_curriculum_rs_display",
       "label": "Display",
       "_origin": "ast",
@@ -8193,17 +8193,6 @@
       "community_name": "Level",
       "file_type": "code",
       "norm_label": "display",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_formatter",
-      "label": "Formatter",
-      "_origin": "ast",
-      "community": 173,
-      "community_name": "Level",
-      "file_type": "code",
-      "norm_label": "formatter",
       "source_file": "",
       "source_location": ""
     },
@@ -9020,6 +9009,17 @@
       "norm_label": "test_tui_reference_browser_modal()",
       "source_file": "tests/tui_tests.rs",
       "source_location": "L348"
+    },
+    {
+      "id": "tests_tui_tests_test_tui_reference_browser_shows_functional_glosses_and_searches_glosses",
+      "label": "test_tui_reference_browser_shows_functional_glosses_and_searches_glosses()",
+      "_origin": "ast",
+      "community": 174,
+      "community_name": "tui_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_tui_reference_browser_shows_functional_glosses_and_searches_glosses()",
+      "source_file": "tests/tui_tests.rs",
+      "source_location": "L865"
     },
     {
       "id": "tests_tui_tests_test_tui_renders_exercise_instructions_block",
@@ -11030,15 +11030,15 @@
       "source_location": "L1"
     },
     {
-      "id": "keyevent",
-      "label": "KeyEvent",
+      "id": "src_tui_app",
+      "label": "app.rs",
       "_origin": "ast",
       "community": 2,
       "community_name": "App",
       "file_type": "code",
-      "norm_label": "keyevent",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "app.rs",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L1"
     },
     {
       "id": "src_tui_app_app",
@@ -11082,7 +11082,7 @@
       "file_type": "code",
       "norm_label": ".delete_placement_char_backwards()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L658"
+      "source_location": "L670"
     },
     {
       "id": "src_tui_app_app_delete_ref_search_char_backwards",
@@ -11126,7 +11126,7 @@
       "file_type": "code",
       "norm_label": ".enter_help()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L556"
+      "source_location": "L568"
     },
     {
       "id": "src_tui_app_app_enter_placement_test",
@@ -11137,7 +11137,7 @@
       "file_type": "code",
       "norm_label": ".enter_placement_test()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L568"
+      "source_location": "L580"
     },
     {
       "id": "src_tui_app_app_enter_reference_browser",
@@ -11181,7 +11181,7 @@
       "file_type": "code",
       "norm_label": ".exit_help()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L562"
+      "source_location": "L574"
     },
     {
       "id": "src_tui_app_app_exit_placement_test",
@@ -11192,7 +11192,7 @@
       "file_type": "code",
       "norm_label": ".exit_placement_test()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L582"
+      "source_location": "L594"
     },
     {
       "id": "src_tui_app_app_exit_reference_browser",
@@ -11214,7 +11214,7 @@
       "file_type": "code",
       "norm_label": ".fast_track_placement_levels()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L622"
+      "source_location": "L634"
     },
     {
       "id": "src_tui_app_app_insert_char",
@@ -11236,7 +11236,7 @@
       "file_type": "code",
       "norm_label": ".insert_placement_char()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L644"
+      "source_location": "L656"
     },
     {
       "id": "src_tui_app_app_insert_ref_search_char",
@@ -11313,18 +11313,7 @@
       "file_type": "code",
       "norm_label": ".next_ref_topic()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L524"
-    },
-    {
-      "id": "src_tui_app_app_on_key",
-      "label": ".on_key()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".on_key()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L671"
+      "source_location": "L536"
     },
     {
       "id": "src_tui_app_app_prev_ref_topic",
@@ -11335,7 +11324,7 @@
       "file_type": "code",
       "norm_label": ".prev_ref_topic()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L532"
+      "source_location": "L544"
     },
     {
       "id": "src_tui_app_app_scroll_conjugator_down",
@@ -11368,7 +11357,7 @@
       "file_type": "code",
       "norm_label": ".scroll_ref_down()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L550"
+      "source_location": "L562"
     },
     {
       "id": "src_tui_app_app_scroll_ref_up",
@@ -11379,7 +11368,7 @@
       "file_type": "code",
       "norm_label": ".scroll_ref_up()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L544"
+      "source_location": "L556"
     },
     {
       "id": "src_tui_app_app_set_cursor_end",
@@ -11401,7 +11390,7 @@
       "file_type": "code",
       "norm_label": ".submit_placement_answer()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L586"
+      "source_location": "L598"
     },
     {
       "id": "src_tui_app_app_toggle_reference",
@@ -11437,15 +11426,15 @@
       "source_location": "L239"
     },
     {
-      "id": "src_tui_app_rs_into",
-      "label": "Into",
+      "id": "src_tui_app_appmode",
+      "label": "AppMode",
       "_origin": "ast",
       "community": 2,
       "community_name": "App",
       "file_type": "code",
-      "norm_label": "into",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": "appmode",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L14"
     },
     {
       "id": "src_tui_app_rs_self",
@@ -13166,40 +13155,18 @@
       "label": "B",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "b",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_tui_app",
-      "label": "app.rs",
-      "_origin": "ast",
-      "community": 214,
-      "community_name": "app.rs",
-      "file_type": "code",
-      "norm_label": "app.rs",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tui_app_appmode",
-      "label": "AppMode",
-      "_origin": "ast",
-      "community": 214,
-      "community_name": "app.rs",
-      "file_type": "code",
-      "norm_label": "appmode",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L14"
-    },
-    {
       "id": "src_tui_events",
       "label": "events.rs",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "events.rs",
       "source_file": "src/tui/events.rs",
@@ -13210,7 +13177,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -13221,7 +13188,7 @@
       "label": "run_tui_app()",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "run_tui_app()",
       "source_file": "src/tui/events.rs",
@@ -13232,7 +13199,7 @@
       "label": "tui/mod.rs",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "tui/mod.rs",
       "source_file": "src/tui/mod.rs",
@@ -13243,7 +13210,7 @@
       "label": "RawModeGuard",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "rawmodeguard",
       "source_file": "src/tui/mod.rs",
@@ -13254,7 +13221,7 @@
       "label": ".drop()",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": ".drop()",
       "source_file": "src/tui/mod.rs",
@@ -13265,7 +13232,7 @@
       "label": "Drop",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "drop",
       "source_file": "",
@@ -13276,7 +13243,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -13287,7 +13254,7 @@
       "label": "start_tui()",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "start_tui()",
       "source_file": "src/tui/mod.rs",
@@ -13298,7 +13265,7 @@
       "label": "Terminal",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "terminal",
       "source_file": "",
@@ -13390,7 +13357,7 @@
       "file_type": "code",
       "norm_label": "draw_help_modal()",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1308"
+      "source_location": "L1340"
     },
     {
       "id": "src_tui_ui_draw_left_pane",
@@ -13412,7 +13379,7 @@
       "file_type": "code",
       "norm_label": "draw_placement_test_modal()",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1517"
+      "source_location": "L1549"
     },
     {
       "id": "src_tui_ui_draw_reference_browser_modal",
@@ -13445,7 +13412,7 @@
       "file_type": "code",
       "norm_label": "draw_tour_station_modal()",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1926"
+      "source_location": "L1958"
     },
     {
       "id": "src_tui_ui_draw_tour_welcome_modal",
@@ -13456,7 +13423,7 @@
       "file_type": "code",
       "norm_label": "draw_tour_welcome_modal()",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1854"
+      "source_location": "L1886"
     },
     {
       "id": "src_tui_ui_draw_ui",
@@ -14329,6 +14296,17 @@
       "source_location": "L88"
     },
     {
+      "id": "src_core_curriculum_level_fmt",
+      "label": ".fmt()",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "find_all_exercises_or_embedded",
+      "file_type": "code",
+      "norm_label": ".fmt()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L17"
+    },
+    {
       "id": "src_core_curriculum_level_from_str",
       "label": ".from_str()",
       "_origin": "ast",
@@ -14358,6 +14336,17 @@
       "community_name": "find_all_exercises_or_embedded",
       "file_type": "code",
       "norm_label": "err",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_formatter",
+      "label": "Formatter",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "find_all_exercises_or_embedded",
+      "file_type": "code",
+      "norm_label": "formatter",
       "source_file": "",
       "source_location": ""
     },
@@ -14461,6 +14450,17 @@
       "source_location": "L1"
     },
     {
+      "id": "tests_cli_tests_test_cli_explain_semantic_lookup_and_glosses",
+      "label": "test_cli_explain_semantic_lookup_and_glosses()",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "find_all_exercises_or_embedded",
+      "file_type": "code",
+      "norm_label": "test_cli_explain_semantic_lookup_and_glosses()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L164"
+    },
+    {
       "id": "tests_cli_tests_test_cli_parsing_subcommands",
       "label": "test_cli_parsing_subcommands()",
       "_origin": "ast",
@@ -14480,7 +14480,7 @@
       "file_type": "code",
       "norm_label": "test_cli_tour_command_parsing()",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L125"
+      "source_location": "L131"
     },
     {
       "id": "tests_cli_tests_test_curriculum_discovery_and_query",
@@ -14491,7 +14491,7 @@
       "file_type": "code",
       "norm_label": "test_curriculum_discovery_and_query()",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L185"
+      "source_location": "L202"
     },
     {
       "id": "tests_cli_tests_test_explain_command_executes_cleanly",
@@ -14502,7 +14502,7 @@
       "file_type": "code",
       "norm_label": "test_explain_command_executes_cleanly()",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L143"
+      "source_location": "L149"
     },
     {
       "id": "tests_cli_tests_test_list_and_progress_execute_cleanly",
@@ -14513,7 +14513,7 @@
       "file_type": "code",
       "norm_label": "test_list_and_progress_execute_cleanly()",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L155"
+      "source_location": "L172"
     },
     {
       "id": "tests_cli_tests_test_run_exercise_with_file_path",
@@ -14524,7 +14524,7 @@
       "file_type": "code",
       "norm_label": "test_run_exercise_with_file_path()",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L165"
+      "source_location": "L182"
     },
     {
       "id": "editors_vscode_package_devdependencies",
@@ -19857,40 +19857,18 @@
       "label": "exercise.rs",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "exercise.rs",
       "source_file": "src/core/exercise.rs",
       "source_location": "L1"
     },
     {
-      "id": "src_core_exercise_diagnosticrule",
-      "label": "DiagnosticRule",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "diagnosticrule",
-      "source_file": "src/core/exercise.rs",
-      "source_location": "L47"
-    },
-    {
-      "id": "src_core_exercise_exercise",
-      "label": "Exercise",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "exercise",
-      "source_file": "src/core/exercise.rs",
-      "source_location": "L54"
-    },
-    {
       "id": "src_core_exercise_exercise_from_markdown",
       "label": ".from_markdown()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": ".from_markdown()",
       "source_file": "src/core/exercise.rs",
@@ -19901,7 +19879,7 @@
       "label": "ExerciseType",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "exercisetype",
       "source_file": "src/core/exercise.rs",
@@ -19912,7 +19890,7 @@
       "label": ".fmt()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": ".fmt()",
       "source_file": "src/core/exercise.rs",
@@ -19923,29 +19901,18 @@
       "label": ".from_str()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": ".from_str()",
       "source_file": "src/core/exercise.rs",
       "source_location": "L23"
     },
     {
-      "id": "src_core_exercise_parse_optional_string",
-      "label": "parse_optional_string()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "parse_optional_string()",
-      "source_file": "src/core/exercise.rs",
-      "source_location": "L134"
-    },
-    {
       "id": "src_core_exercise_parse_string_list",
       "label": "parse_string_list()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "parse_string_list()",
       "source_file": "src/core/exercise.rs",
@@ -19956,7 +19923,7 @@
       "label": "ParseExerciseTypeError",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "parseexercisetypeerror",
       "source_file": "src/core/exercise.rs",
@@ -19967,7 +19934,7 @@
       "label": "Display",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "display",
       "source_file": "",
@@ -19978,7 +19945,7 @@
       "label": "Err",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "err",
       "source_file": "",
@@ -19989,7 +19956,7 @@
       "label": "Formatter",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "formatter",
       "source_file": "",
@@ -20000,20 +19967,9 @@
       "label": "FromStr",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "fromstr",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_exercise_rs_option",
-      "label": "Option",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "option",
       "source_file": "",
       "source_location": ""
     },
@@ -20022,20 +19978,9 @@
       "label": "P",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "p",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_exercise_rs_pathbuf",
-      "label": "PathBuf",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "pathbuf",
       "source_file": "",
       "source_location": ""
     },
@@ -20044,7 +19989,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -20055,20 +20000,9 @@
       "label": "Self",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "self",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_exercise_rs_string",
-      "label": "String",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "string",
       "source_file": "",
       "source_location": ""
     },
@@ -20077,7 +20011,7 @@
       "label": "Vec",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "vec",
       "source_file": "",
@@ -20088,11 +20022,77 @@
       "label": "split_metadata_line()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "Exercise",
+      "community_name": "exercise.rs",
       "file_type": "code",
       "norm_label": "split_metadata_line()",
       "source_file": "src/core/exercise.rs",
       "source_location": "L79"
+    },
+    {
+      "id": "tests_exercise_validity_tests",
+      "label": "exercise_validity_tests.rs",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "exercise.rs",
+      "file_type": "code",
+      "norm_label": "exercise_validity_tests.rs",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_exercise_validity_tests_collect_md_paths",
+      "label": "collect_md_paths()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "exercise.rs",
+      "file_type": "code",
+      "norm_label": "collect_md_paths()",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L8"
+    },
+    {
+      "id": "tests_exercise_validity_tests_rs_path",
+      "label": "Path",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "exercise.rs",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_exercise_validity_tests_rs_pathbuf",
+      "label": "PathBuf",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "exercise.rs",
+      "file_type": "code",
+      "norm_label": "pathbuf",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_exercise_validity_tests_rs_vec",
+      "label": "Vec",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "exercise.rs",
+      "file_type": "code",
+      "norm_label": "vec",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_exercise_validity_tests_test_all_curriculum_exercises_are_valid_and_solvable",
+      "label": "test_all_curriculum_exercises_are_valid_and_solvable()",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "exercise.rs",
+      "file_type": "code",
+      "norm_label": "test_all_curriculum_exercises_are_valid_and_solvable()",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L27"
     },
     {
       "id": "exercises_01_ser_vs_estar_05_passive_vs_resultant_state",
@@ -22703,7 +22703,7 @@
       "label": "export.rs",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "export.rs",
       "source_file": "src/cli/commands/export.rs",
@@ -22714,7 +22714,7 @@
       "label": "generate_anki_tsv()",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "generate_anki_tsv()",
       "source_file": "src/cli/commands/export.rs",
@@ -22725,7 +22725,7 @@
       "label": "generate_json_export()",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "generate_json_export()",
       "source_file": "src/cli/commands/export.rs",
@@ -22736,7 +22736,7 @@
       "label": "generate_markdown_notes()",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "generate_markdown_notes()",
       "source_file": "src/cli/commands/export.rs",
@@ -22747,7 +22747,7 @@
       "label": "html_escape()",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "html_escape()",
       "source_file": "src/cli/commands/export.rs",
@@ -22758,7 +22758,7 @@
       "label": "Option",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "option",
       "source_file": "",
@@ -22769,7 +22769,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -22780,7 +22780,7 @@
       "label": "String",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "",
@@ -22791,18 +22791,84 @@
       "label": "run_export()",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "run_export()",
       "source_file": "src/cli/commands/export.rs",
       "source_location": "L188"
     },
     {
+      "id": "src_core_exercise_diagnosticrule",
+      "label": "DiagnosticRule",
+      "_origin": "ast",
+      "community": 338,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "diagnosticrule",
+      "source_file": "src/core/exercise.rs",
+      "source_location": "L47"
+    },
+    {
+      "id": "src_core_exercise_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 338,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "exercise",
+      "source_file": "src/core/exercise.rs",
+      "source_location": "L54"
+    },
+    {
+      "id": "src_core_exercise_parse_optional_string",
+      "label": "parse_optional_string()",
+      "_origin": "ast",
+      "community": 338,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "parse_optional_string()",
+      "source_file": "src/core/exercise.rs",
+      "source_location": "L134"
+    },
+    {
+      "id": "src_core_exercise_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 338,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_exercise_rs_pathbuf",
+      "label": "PathBuf",
+      "_origin": "ast",
+      "community": 338,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "pathbuf",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_exercise_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 338,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "tests_export_sync_tests",
       "label": "export_sync_tests.rs",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "export_sync_tests.rs",
       "source_file": "tests/export_sync_tests.rs",
@@ -22813,7 +22879,7 @@
       "label": "Vec",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "vec",
       "source_file": "",
@@ -22824,7 +22890,7 @@
       "label": "sample_exercises()",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "sample_exercises()",
       "source_file": "tests/export_sync_tests.rs",
@@ -22835,7 +22901,7 @@
       "label": "test_anki_tsv_export_generation()",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "test_anki_tsv_export_generation()",
       "source_file": "tests/export_sync_tests.rs",
@@ -22846,7 +22912,7 @@
       "label": "test_json_export_generation()",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "test_json_export_generation()",
       "source_file": "tests/export_sync_tests.rs",
@@ -22857,7 +22923,7 @@
       "label": "test_markdown_study_guide_export()",
       "_origin": "ast",
       "community": 338,
-      "community_name": "export.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "test_markdown_study_guide_export()",
       "source_file": "tests/export_sync_tests.rs",
@@ -22928,39 +22994,6 @@
       "norm_label": "string",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "tests_json_output_tests",
-      "label": "json_output_tests.rs",
-      "_origin": "ast",
-      "community": 339,
-      "community_name": "get_exercises_json",
-      "file_type": "code",
-      "norm_label": "json_output_tests.rs",
-      "source_file": "tests/json_output_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_json_output_tests_test_list_exercises_json_serialization",
-      "label": "test_list_exercises_json_serialization()",
-      "_origin": "ast",
-      "community": 339,
-      "community_name": "get_exercises_json",
-      "file_type": "code",
-      "norm_label": "test_list_exercises_json_serialization()",
-      "source_file": "tests/json_output_tests.rs",
-      "source_location": "L5"
-    },
-    {
-      "id": "tests_json_output_tests_test_progress_json_serialization",
-      "label": "test_progress_json_serialization()",
-      "_origin": "ast",
-      "community": 339,
-      "community_name": "get_exercises_json",
-      "file_type": "code",
-      "norm_label": "test_progress_json_serialization()",
-      "source_file": "tests/json_output_tests.rs",
-      "source_location": "L25"
     },
     {
       "id": "exercises_02_past_aspects_04_conocer_aspectual_shift",
@@ -28221,50 +28254,6 @@
       "source_location": ""
     },
     {
-      "id": "src_cli_commands_init",
-      "label": "init.rs",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "embedded.rs",
-      "file_type": "code",
-      "norm_label": "init.rs",
-      "source_file": "src/cli/commands/init.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_cli_commands_init_rs_option",
-      "label": "Option",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "embedded.rs",
-      "file_type": "code",
-      "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_init_rs_result",
-      "label": "Result",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "embedded.rs",
-      "file_type": "code",
-      "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_init_run_init",
-      "label": "run_init()",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "embedded.rs",
-      "file_type": "code",
-      "norm_label": "run_init()",
-      "source_file": "src/cli/commands/init.rs",
-      "source_location": "L5"
-    },
-    {
       "id": "src_core_embedded",
       "label": "embedded.rs",
       "_origin": "ast",
@@ -28406,39 +28395,6 @@
       "norm_label": "test_init_exercises_dir_writes_files()",
       "source_file": "tests/embedded_tests.rs",
       "source_location": "L20"
-    },
-    {
-      "id": "tests_init_tests",
-      "label": "init_tests.rs",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "embedded.rs",
-      "file_type": "code",
-      "norm_label": "init_tests.rs",
-      "source_file": "tests/init_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_init_tests_test_run_init_creates_exercise_workspace",
-      "label": "test_run_init_creates_exercise_workspace()",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "embedded.rs",
-      "file_type": "code",
-      "norm_label": "test_run_init_creates_exercise_workspace()",
-      "source_file": "tests/init_tests.rs",
-      "source_location": "L5"
-    },
-    {
-      "id": "tests_init_tests_test_run_init_force_flag",
-      "label": "test_run_init_force_flag()",
-      "_origin": "ast",
-      "community": 4,
-      "community_name": "embedded.rs",
-      "file_type": "code",
-      "norm_label": "test_run_init_force_flag()",
-      "source_file": "tests/init_tests.rs",
-      "source_location": "L16"
     },
     {
       "id": "exercises_03_subjunctive_weirdo_04_recommendations_influence",
@@ -30767,6 +30723,17 @@
       "source_location": ""
     },
     {
+      "id": "src_core_state_rs_path",
+      "label": "Path",
+      "_origin": "ast",
+      "community": 429,
+      "community_name": ".load_from_path",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_core_state_rs_pathbuf",
       "label": "PathBuf",
       "_origin": "ast",
@@ -31067,6 +31034,365 @@
       "norm_label": "test_weakness_profiler_detects_low_ease_and_lapses()",
       "source_file": "tests/weakness_profiler_tests.rs",
       "source_location": "L10"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design",
+      "label": "2026-08-28-functional-grammar-keys-design.md",
+      "_origin": "ast",
+      "community": 432,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-08-28-functional-grammar-keys-design.md",
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_1_drill_blitz_prompt_layout",
+      "label": "1. Drill & Blitz Prompt Layout",
+      "_origin": "ast",
+      "community": 432,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. drill & blitz prompt layout",
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L68"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_1_objective_motivation",
+      "label": "1. Objective & Motivation",
+      "_origin": "ast",
+      "community": 432,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. objective & motivation",
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L3"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_2_architecture_data_model",
+      "label": "2. Architecture & Data Model",
+      "_origin": "ast",
+      "community": 432,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. architecture & data model",
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_2_cli_spanglings_explain_spanglings_reference",
+      "label": "2. CLI `spanglings explain` / `spanglings reference`",
+      "_origin": "ast",
+      "community": 432,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. cli `spanglings explain` / `spanglings reference`",
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L82"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_3_surface_integrations",
+      "label": "3. Surface Integrations",
+      "_origin": "ast",
+      "community": 432,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. surface integrations",
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L66"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_3_tui_reference_browser_modal",
+      "label": "3. TUI Reference Browser Modal",
+      "_origin": "ast",
+      "community": 432,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. tui reference browser modal",
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L93"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_4_verification_testing",
+      "label": "4. Verification & Testing",
+      "_origin": "ast",
+      "community": 432,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. verification & testing",
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L100"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_central_metadata_definition_src_core_reference_rs",
+      "label": "Central Metadata Definition (`src/core/reference.rs`)",
+      "_origin": "ast",
+      "community": 432,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "central metadata definition (`src/core/reference.rs`)",
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_full_24_grammar_concept_catalog",
+      "label": "Full 24 Grammar Concept Catalog",
+      "_origin": "ast",
+      "community": 432,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "full 24 grammar concept catalog",
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_functional_semantic_grammar_keys_communicative_glosses_design_specification",
+      "label": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "_origin": "ast",
+      "community": 432,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "functional semantic grammar keys & communicative glosses design specification",
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_28_functional_grammar_keys",
+      "label": "2026-08-28-functional-grammar-keys.md",
+      "_origin": "ast",
+      "community": 433,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-08-28-functional-grammar-keys.md",
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_functional_semantic_grammar_keys_communicative_glosses_implementation_plan",
+      "label": "Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan",
+      "_origin": "ast",
+      "community": 433,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "functional semantic grammar keys & communicative glosses implementation plan",
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_task_1_core_grammarconcept_data_structure_24_concept_metadata_catalog",
+      "label": "Task 1: Core `GrammarConcept` Data Structure & 24-Concept Metadata Catalog",
+      "_origin": "ast",
+      "community": 433,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 1: core `grammarconcept` data structure & 24-concept metadata catalog",
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L13"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_task_2_cli_spanglings_explain_spanglings_reference_functional_listing_semantic_discovery",
+      "label": "Task 2: CLI `spanglings explain` / `spanglings reference` Functional Listing & Semantic Discovery",
+      "_origin": "ast",
+      "community": 433,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 2: cli `spanglings explain` / `spanglings reference` functional listing & semantic discovery",
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L293"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_task_3_drill_blitz_prompt_layout_enhancement_with_communicative_glosses",
+      "label": "Task 3: Drill & Blitz Prompt Layout Enhancement with Communicative Glosses",
+      "_origin": "ast",
+      "community": 433,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 3: drill & blitz prompt layout enhancement with communicative glosses",
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L386"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_task_4_tui_reference_browser_modal_integration_with_functional_glosses",
+      "label": "Task 4: TUI Reference Browser & Modal Integration with Functional Glosses",
+      "_origin": "ast",
+      "community": 433,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 4: tui reference browser & modal integration with functional glosses",
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L475"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_task_5_end_to_end_workspace_verification_knowledge_graph_update",
+      "label": "Task 5: End-to-End Workspace Verification & Knowledge Graph Update",
+      "_origin": "ast",
+      "community": 433,
+      "community_name": "Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 5: end-to-end workspace verification & knowledge graph update",
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L552"
+    },
+    {
+      "id": "src_cli_commands_init",
+      "label": "init.rs",
+      "_origin": "ast",
+      "community": 434,
+      "community_name": "run_init",
+      "file_type": "code",
+      "norm_label": "init.rs",
+      "source_file": "src/cli/commands/init.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_init_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 434,
+      "community_name": "run_init",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_init_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 434,
+      "community_name": "run_init",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_init_run_init",
+      "label": "run_init()",
+      "_origin": "ast",
+      "community": 434,
+      "community_name": "run_init",
+      "file_type": "code",
+      "norm_label": "run_init()",
+      "source_file": "src/cli/commands/init.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "tests_init_tests",
+      "label": "init_tests.rs",
+      "_origin": "ast",
+      "community": 434,
+      "community_name": "run_init",
+      "file_type": "code",
+      "norm_label": "init_tests.rs",
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_init_tests_test_run_init_creates_exercise_workspace",
+      "label": "test_run_init_creates_exercise_workspace()",
+      "_origin": "ast",
+      "community": 434,
+      "community_name": "run_init",
+      "file_type": "code",
+      "norm_label": "test_run_init_creates_exercise_workspace()",
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "tests_init_tests_test_run_init_force_flag",
+      "label": "test_run_init_force_flag()",
+      "_origin": "ast",
+      "community": 434,
+      "community_name": "run_init",
+      "file_type": "code",
+      "norm_label": "test_run_init_force_flag()",
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L16"
+    },
+    {
+      "id": "keyevent",
+      "label": "KeyEvent",
+      "_origin": "ast",
+      "community": 435,
+      "community_name": ".on_key",
+      "file_type": "code",
+      "norm_label": "keyevent",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_tui_app_app_on_key",
+      "label": ".on_key()",
+      "_origin": "ast",
+      "community": 435,
+      "community_name": ".on_key",
+      "file_type": "code",
+      "norm_label": ".on_key()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L683"
+    },
+    {
+      "id": "src_tui_app_rs_into",
+      "label": "Into",
+      "_origin": "ast",
+      "community": 435,
+      "community_name": ".on_key",
+      "file_type": "code",
+      "norm_label": "into",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_json_output_tests",
+      "label": "json_output_tests.rs",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "json_output_tests.rs",
+      "file_type": "code",
+      "norm_label": "json_output_tests.rs",
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_json_output_tests_test_list_exercises_json_serialization",
+      "label": "test_list_exercises_json_serialization()",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "json_output_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_list_exercises_json_serialization()",
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "tests_json_output_tests_test_progress_json_serialization",
+      "label": "test_progress_json_serialization()",
+      "_origin": "ast",
+      "community": 436,
+      "community_name": "json_output_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_progress_json_serialization()",
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L25"
     },
     {
       "id": "src_cli_commands_pack",
@@ -33013,17 +33339,6 @@
       "community_name": "AppState",
       "file_type": "code",
       "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_state_rs_path",
-      "label": "Path",
-      "_origin": "ast",
-      "community": 7,
-      "community_name": "AppState",
-      "file_type": "code",
-      "norm_label": "path",
       "source_file": "",
       "source_location": ""
     },
@@ -35162,18 +35477,6 @@
     },
     {
       "source": "src_cli_commands_blitz_run_blitz",
-      "target": "src_cli_commands_blitz_evaluate_blitz_answer",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L169",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_commands_blitz_run_blitz",
       "target": "src_cli_commands_blitz_get_blitz_items",
       "relation": "calls",
       "_origin": "ast",
@@ -35181,7 +35484,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L84",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz_run_blitz",
+      "target": "src_cli_commands_blitz_evaluate_blitz_answer",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L185",
       "weight": 1.0
     },
     {
@@ -35217,7 +35532,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L1038",
+      "source_location": "L1048",
       "weight": 1.0
     },
     {
@@ -35229,7 +35544,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L1070",
+      "source_location": "L1080",
       "weight": 1.0
     },
     {
@@ -35241,7 +35556,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L1104",
+      "source_location": "L1114",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_explain_show_explanation",
+      "target": "src_cli_commands_explain_print_topic_catalog",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/cli/commands/explain.rs",
+      "source_location": "L18",
       "weight": 1.0
     },
     {
@@ -35773,6 +36100,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_core_reference_get_reference_card",
+      "target": "src_core_reference_get_grammar_concept",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L557",
+      "weight": 1.0
+    },
+    {
       "source": "src_core_state_appstate_default",
       "target": "src_core_state_conceptmastery_new",
       "relation": "calls",
@@ -36033,7 +36372,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L573",
+      "source_location": "L585",
       "weight": 1.0
     },
     {
@@ -37189,6 +37528,30 @@
       "weight": 1.0
     },
     {
+      "source": "tests_tui_tests_test_tui_reference_browser_shows_functional_glosses_and_searches_glosses",
+      "target": "tests_tui_tests_create_sample_exercises",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/tui_tests.rs",
+      "source_location": "L866",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_tui_tests_test_tui_reference_browser_shows_functional_glosses_and_searches_glosses",
+      "target": "tests_tui_tests_new_test_app",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/tui_tests.rs",
+      "source_location": "L867",
+      "weight": 1.0
+    },
+    {
       "source": "tests_tui_tests_test_tui_renders_exercise_instructions_block",
       "target": "tests_tui_tests_new_test_app",
       "relation": "calls",
@@ -37269,7 +37632,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L54",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -37449,7 +37812,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L107",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -37461,7 +37824,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L112",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -37473,7 +37836,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L141",
+      "source_location": "L144",
       "weight": 1.0
     },
     {
@@ -37485,7 +37848,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L146",
+      "source_location": "L149",
       "weight": 1.0
     },
     {
@@ -37497,7 +37860,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L90",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -37509,7 +37872,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L167",
+      "source_location": "L170",
       "weight": 1.0
     },
     {
@@ -37521,7 +37884,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/cli/mod.rs",
-      "source_location": "L181",
+      "source_location": "L184",
       "weight": 1.0
     },
     {
@@ -38337,7 +38700,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L53",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -38349,7 +38712,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L82",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -38397,7 +38760,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L101",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -39181,6 +39544,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_core_reference_get_grammar_concept",
+      "target": "src_core_reference_grammarconcept",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L510",
+      "weight": 1.0
+    },
+    {
       "source": "src_core_srs_calculate_sm2_review",
       "target": "src_core_srs_rs_utc",
       "relation": "references",
@@ -39801,7 +40176,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L671",
+      "source_location": "L683",
       "weight": 1.0
     },
     {
@@ -40970,6 +41345,18 @@
     },
     {
       "source": "src_tui_app",
+      "target": "src_core_reference",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app",
       "target": "src_core_state",
       "relation": "imports_from",
       "_origin": "ast",
@@ -41062,6 +41449,18 @@
       "context": "import",
       "source_file": "src/tui/mod.rs",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_ui",
+      "target": "src_core_reference",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/tui/ui.rs",
+      "source_location": "L1",
       "weight": 1.0
     },
     {
@@ -41541,7 +41940,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L68",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -41553,7 +41952,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L53",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -41565,7 +41964,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L82",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -41673,7 +42072,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L1010",
+      "source_location": "L1020",
       "weight": 1.0
     },
     {
@@ -41685,7 +42084,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L101",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -41697,7 +42096,19 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L1031",
+      "source_location": "L1041",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_explain_show_explanation",
+      "target": "src_cli_commands_explain_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "src/cli/commands/explain.rs",
+      "source_location": "L4",
       "weight": 1.0
     },
     {
@@ -42729,7 +43140,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L671",
+      "source_location": "L683",
       "weight": 1.0
     },
     {
@@ -42873,7 +43284,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1308",
+      "source_location": "L1340",
       "weight": 1.0
     },
     {
@@ -42885,7 +43296,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1308",
+      "source_location": "L1340",
       "weight": 1.0
     },
     {
@@ -42897,7 +43308,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1308",
+      "source_location": "L1340",
       "weight": 1.0
     },
     {
@@ -42945,7 +43356,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1517",
+      "source_location": "L1549",
       "weight": 1.0
     },
     {
@@ -42957,7 +43368,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1517",
+      "source_location": "L1549",
       "weight": 1.0
     },
     {
@@ -42969,7 +43380,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1517",
+      "source_location": "L1549",
       "weight": 1.0
     },
     {
@@ -43053,7 +43464,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1926",
+      "source_location": "L1958",
       "weight": 1.0
     },
     {
@@ -43065,7 +43476,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1926",
+      "source_location": "L1958",
       "weight": 1.0
     },
     {
@@ -43077,7 +43488,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1926",
+      "source_location": "L1958",
       "weight": 1.0
     },
     {
@@ -43089,7 +43500,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1854",
+      "source_location": "L1886",
       "weight": 1.0
     },
     {
@@ -43101,7 +43512,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1854",
+      "source_location": "L1886",
       "weight": 1.0
     },
     {
@@ -43353,7 +43764,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L53",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -43365,7 +43776,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L82",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -43437,7 +43848,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L46",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -43461,7 +43872,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L1010",
+      "source_location": "L1020",
       "weight": 1.0
     },
     {
@@ -43473,7 +43884,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L101",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -43485,7 +43896,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L58",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -43497,7 +43908,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L1031",
+      "source_location": "L1041",
       "weight": 1.0
     },
     {
@@ -44353,6 +44764,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_core_reference_get_grammar_concept",
+      "target": "src_core_reference_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L510",
+      "weight": 1.0
+    },
+    {
       "source": "src_core_reference_get_reference_card",
       "target": "src_core_reference_rs_option",
       "relation": "references",
@@ -44361,7 +44784,19 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/reference.rs",
-      "source_location": "L32",
+      "source_location": "L556",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_reference_list_grammar_concepts",
+      "target": "src_core_reference_grammarconcept",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L506",
       "weight": 1.0
     },
     {
@@ -48229,6 +48664,72 @@
       "weight": 1.0
     },
     {
+      "source": "docs_superpowers_plans_2026_08_28_functional_grammar_keys",
+      "target": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_functional_semantic_grammar_keys_communicative_glosses_implementation_plan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_functional_semantic_grammar_keys_communicative_glosses_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_task_1_core_grammarconcept_data_structure_24_concept_metadata_catalog",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_functional_semantic_grammar_keys_communicative_glosses_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_task_2_cli_spanglings_explain_spanglings_reference_functional_listing_semantic_discovery",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L293",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_functional_semantic_grammar_keys_communicative_glosses_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_task_3_drill_blitz_prompt_layout_enhancement_with_communicative_glosses",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L386",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_functional_semantic_grammar_keys_communicative_glosses_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_task_4_tui_reference_browser_modal_integration_with_functional_glosses",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L475",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_functional_semantic_grammar_keys_communicative_glosses_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_28_functional_grammar_keys_task_5_end_to_end_workspace_verification_knowledge_graph_update",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md",
+      "source_location": "L552",
+      "weight": 1.0
+    },
+    {
       "source": "docs_superpowers_plans_2026_08_28_informative_non_spoiling_exercise_todos",
       "target": "docs_superpowers_plans_2026_08_28_informative_non_spoiling_exercise_todos_informative_non_spoiling_exercise_todos_implementation_plan",
       "relation": "contains",
@@ -48886,6 +49387,116 @@
       "confidence_score": 1.0,
       "source_file": "docs/superpowers/specs/2026-08-27-linguistic-knowledge-graph-and-practical-expansion-design.md",
       "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design",
+      "target": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_functional_semantic_grammar_keys_communicative_glosses_design_specification",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_2_architecture_data_model",
+      "target": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_central_metadata_definition_src_core_reference_rs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_2_architecture_data_model",
+      "target": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_full_24_grammar_concept_catalog",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_3_surface_integrations",
+      "target": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_1_drill_blitz_prompt_layout",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_3_surface_integrations",
+      "target": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_2_cli_spanglings_explain_spanglings_reference",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_3_surface_integrations",
+      "target": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_3_tui_reference_browser_modal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_functional_semantic_grammar_keys_communicative_glosses_design_specification",
+      "target": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_4_verification_testing",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_functional_semantic_grammar_keys_communicative_glosses_design_specification",
+      "target": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_2_architecture_data_model",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_functional_semantic_grammar_keys_communicative_glosses_design_specification",
+      "target": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_1_objective_motivation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_functional_semantic_grammar_keys_communicative_glosses_design_specification",
+      "target": "docs_superpowers_specs_2026_08_28_functional_grammar_keys_design_3_surface_integrations",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -65297,7 +65908,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L43",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -65308,18 +65919,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L53",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_commands_blitz",
-      "target": "src_cli_commands_blitz_evaluate_blitz_answer",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L68",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -65335,13 +65935,24 @@
     },
     {
       "source": "src_cli_commands_blitz",
+      "target": "src_cli_commands_blitz_evaluate_blitz_answer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/blitz.rs",
+      "source_location": "L84",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_blitz",
       "target": "src_cli_commands_blitz_run_blitz",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/blitz.rs",
-      "source_location": "L82",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -65434,24 +66045,13 @@
     },
     {
       "source": "src_cli_commands_drill",
-      "target": "src_cli_commands_drill_get_drill_items",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L101",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_commands_drill",
       "target": "src_cli_commands_drill_evaluate_drill_answer",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L1010",
+      "source_location": "L1020",
       "weight": 1.0
     },
     {
@@ -65462,29 +66062,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L1031",
+      "source_location": "L1041",
       "weight": 1.0
     },
     {
       "source": "src_cli_commands_drill",
-      "target": "src_cli_commands_drill_drillevaluation",
+      "target": "src_cli_commands_drill_get_drill_items",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L52",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_commands_drill",
-      "target": "src_cli_commands_drill_get_topic_cheat_sheet",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L58",
+      "source_location": "L111",
       "weight": 1.0
     },
     {
@@ -65496,6 +66085,39 @@
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/drill.rs",
       "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_drill",
+      "target": "src_cli_commands_drill_drillevaluation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/drill.rs",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_drill",
+      "target": "src_cli_commands_drill_get_topic_cheat_sheet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/drill.rs",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_explain",
+      "target": "src_cli_commands_explain_print_topic_catalog",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/explain.rs",
+      "source_location": "L29",
       "weight": 1.0
     },
     {
@@ -66023,7 +66645,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/mod.rs",
-      "source_location": "L156",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -66034,7 +66656,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/mod.rs",
-      "source_location": "L172",
+      "source_location": "L175",
       "weight": 1.0
     },
     {
@@ -66446,13 +67068,46 @@
     },
     {
       "source": "src_core_reference",
+      "target": "src_core_reference_grammarconcept",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/reference.rs",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_reference",
+      "target": "src_core_reference_list_grammar_concepts",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/reference.rs",
+      "source_location": "L506",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_reference",
+      "target": "src_core_reference_get_grammar_concept",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/reference.rs",
+      "source_location": "L510",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_reference",
       "target": "src_core_reference_get_reference_card",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/core/reference.rs",
-      "source_location": "L32",
+      "source_location": "L556",
       "weight": 1.0
     },
     {
@@ -66947,7 +67602,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1308",
+      "source_location": "L1340",
       "weight": 1.0
     },
     {
@@ -66958,7 +67613,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1517",
+      "source_location": "L1549",
       "weight": 1.0
     },
     {
@@ -66980,7 +67635,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1854",
+      "source_location": "L1886",
       "weight": 1.0
     },
     {
@@ -66991,7 +67646,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1926",
+      "source_location": "L1958",
       "weight": 1.0
     },
     {
@@ -67150,6 +67805,17 @@
     },
     {
       "source": "tests_blitz_tests",
+      "target": "tests_blitz_tests_test_evaluate_blitz_answer_case_and_whitespace",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/blitz_tests.rs",
+      "source_location": "L120",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_blitz_tests",
       "target": "tests_blitz_tests_test_get_blitz_items_topic_filter",
       "relation": "contains",
       "_origin": "ast",
@@ -67193,17 +67859,6 @@
       "weight": 1.0
     },
     {
-      "source": "tests_blitz_tests",
-      "target": "tests_blitz_tests_test_evaluate_blitz_answer_case_and_whitespace",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/blitz_tests.rs",
-      "source_location": "L91",
-      "weight": 1.0
-    },
-    {
       "source": "tests_check_tests",
       "target": "tests_check_tests_test_evaluate_exercise_for_check_failed_with_diagnostic",
       "relation": "contains",
@@ -67238,17 +67893,6 @@
     },
     {
       "source": "tests_cli_tests",
-      "target": "tests_cli_tests_test_cli_tour_command_parsing",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L125",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_cli_tests",
       "target": "tests_cli_tests_test_cli_parsing_subcommands",
       "relation": "contains",
       "_origin": "ast",
@@ -67260,13 +67904,35 @@
     },
     {
       "source": "tests_cli_tests",
+      "target": "tests_cli_tests_test_cli_tour_command_parsing",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_cli_tests",
       "target": "tests_cli_tests_test_explain_command_executes_cleanly",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L143",
+      "source_location": "L149",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_cli_tests",
+      "target": "tests_cli_tests_test_cli_explain_semantic_lookup_and_glosses",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L164",
       "weight": 1.0
     },
     {
@@ -67277,7 +67943,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L155",
+      "source_location": "L172",
       "weight": 1.0
     },
     {
@@ -67288,7 +67954,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L165",
+      "source_location": "L182",
       "weight": 1.0
     },
     {
@@ -67299,7 +67965,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L185",
+      "source_location": "L202",
       "weight": 1.0
     },
     {
@@ -67640,7 +68306,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/drill_tests.rs",
-      "source_location": "L296",
+      "source_location": "L325",
       "weight": 1.0
     },
     {
@@ -68404,6 +69070,28 @@
     },
     {
       "source": "tests_reference_tests",
+      "target": "tests_reference_tests_test_all_24_grammar_concepts_complete",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L232",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_reference_tests",
+      "target": "tests_reference_tests_test_semantic_keyword_concept_lookups",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L261",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_reference_tests",
       "target": "tests_reference_tests_test_get_past_tenses_reference_card",
       "relation": "contains",
       "_origin": "ast",
@@ -68987,6 +69675,17 @@
     },
     {
       "source": "tests_tui_tests",
+      "target": "tests_tui_tests_test_tui_reference_browser_shows_functional_glosses_and_searches_glosses",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/tui_tests.rs",
+      "source_location": "L865",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_tui_tests",
       "target": "tests_tui_tests_test_app_input_editing",
       "relation": "contains",
       "_origin": "ast",
@@ -69444,7 +70143,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/drill.rs",
-      "source_location": "L46",
+      "source_location": "L56",
       "weight": 1.0
     },
     {
@@ -70313,7 +71012,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L524",
+      "source_location": "L536",
       "weight": 1.0
     },
     {
@@ -70324,7 +71023,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L532",
+      "source_location": "L544",
       "weight": 1.0
     },
     {
@@ -70335,7 +71034,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L544",
+      "source_location": "L556",
       "weight": 1.0
     },
     {
@@ -70346,7 +71045,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L550",
+      "source_location": "L562",
       "weight": 1.0
     },
     {
@@ -70357,7 +71056,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L556",
+      "source_location": "L568",
       "weight": 1.0
     },
     {
@@ -70368,7 +71067,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L562",
+      "source_location": "L574",
       "weight": 1.0
     },
     {
@@ -70379,7 +71078,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L568",
+      "source_location": "L580",
       "weight": 1.0
     },
     {
@@ -70390,7 +71089,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L582",
+      "source_location": "L594",
       "weight": 1.0
     },
     {
@@ -70401,7 +71100,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L586",
+      "source_location": "L598",
       "weight": 1.0
     },
     {
@@ -70412,7 +71111,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L622",
+      "source_location": "L634",
       "weight": 1.0
     },
     {
@@ -70423,7 +71122,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L644",
+      "source_location": "L656",
       "weight": 1.0
     },
     {
@@ -70434,7 +71133,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L658",
+      "source_location": "L670",
       "weight": 1.0
     },
     {
@@ -70445,7 +71144,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L671",
+      "source_location": "L683",
       "weight": 1.0
     },
     {
@@ -70610,27 +71309,27 @@
       "weight": 1.0
     },
     {
-      "source": "src_cli_commands_explain_show_explanation",
-      "target": "src_core_reference_list_reference_topics",
+      "source": "src_cli_commands_explain_print_topic_catalog",
+      "target": "src_core_reference_list_grammar_concepts",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/cli/commands/explain.rs",
-      "source_location": "L16",
+      "source_location": "L34",
       "weight": 1.0
     },
     {
       "source": "src_cli_commands_explain_show_explanation",
-      "target": "src_core_reference_get_reference_card",
+      "target": "src_core_reference_get_grammar_concept",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "INFERRED",
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/cli/commands/explain.rs",
-      "source_location": "L5",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -71062,7 +71761,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L572",
+      "source_location": "L584",
       "weight": 1.0
     },
     {
@@ -71122,7 +71821,19 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L603",
+      "source_location": "L615",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_update_ref_filter",
+      "target": "src_core_reference_get_grammar_concept",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L517",
       "weight": 1.0
     },
     {
@@ -71163,6 +71874,18 @@
     },
     {
       "source": "src_tui_ui_draw_reference_browser_modal",
+      "target": "src_core_reference_get_grammar_concept",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/tui/ui.rs",
+      "source_location": "L1252",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_ui_draw_reference_browser_modal",
       "target": "src_core_reference_get_reference_card",
       "relation": "calls",
       "_origin": "ast",
@@ -71170,7 +71893,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/ui.rs",
-      "source_location": "L1288",
+      "source_location": "L1319",
       "weight": 1.0
     },
     {
@@ -71314,7 +72037,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L203",
+      "source_location": "L220",
       "weight": 1.0
     },
     {
@@ -71326,7 +72049,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L207",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -71338,7 +72061,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/cli_tests.rs",
-      "source_location": "L180",
+      "source_location": "L197",
       "weight": 1.0
     },
     {
@@ -72374,6 +73097,18 @@
       "weight": 1.0
     },
     {
+      "source": "tests_reference_tests_test_semantic_keyword_concept_lookups",
+      "target": "src_core_reference_get_grammar_concept",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L265",
+      "weight": 1.0
+    },
+    {
       "source": "tests_search_tests_test_search_by_id",
       "target": "src_cli_commands_search_search_exercises",
       "relation": "calls",
@@ -72542,6 +73277,18 @@
       "weight": 1.0
     },
     {
+      "source": "tests_tui_tests_test_tui_reference_browser_shows_functional_glosses_and_searches_glosses",
+      "target": "src_tui_ui_draw_ui",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/tui_tests.rs",
+      "source_location": "L890",
+      "weight": 1.0
+    },
+    {
       "source": "tests_tui_tests_test_tui_renders_exercise_instructions_block",
       "target": "src_tui_ui_draw_ui",
       "relation": "calls",
@@ -72651,5 +73398,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "c08e494ab7e0e42a7f234eee3066af8dac5d69d1"
+  "built_at_commit": "5d35eb8d623d56f57013b3f7210365407f4f62e0"
 }
