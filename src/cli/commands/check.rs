@@ -34,7 +34,9 @@ pub fn evaluate_exercise_for_check(
     file_content: &str,
     accent_mode: AccentMode,
 ) -> CheckReport {
-    let is_done = !file_content.contains("<!-- I AM NOT DONE -->");
+    let is_done = !file_content.contains("<!-- I AM NOT DONE -->")
+        && !file_content.contains("___")
+        && !file_content.contains("<!-- ANSWER -->");
     let user_answer = extract_user_answer(exercise, file_content);
     let result = validate_submission(exercise, &user_answer, accent_mode);
 

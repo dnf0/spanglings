@@ -39,12 +39,21 @@ Tier 3: Add -as -> 'vengas'.
     assert_eq!(exercise.id, "b1_subjunctive_01");
     assert_eq!(exercise.level, Level::B1);
     assert_eq!(exercise.exercise_type, ExerciseType::Cloze);
-    assert!(exercise.is_done);
+    assert!(!exercise.is_done); // Has unfilled blank ___
     assert_eq!(exercise.solution, "vengas");
     assert_eq!(exercise.alternatives, vec!["vengas tú"]);
     assert_eq!(exercise.hints.len(), 3);
     assert_eq!(exercise.diagnostic_rules.len(), 1);
     assert_eq!(exercise.diagnostic_rules[0].code, "E0301");
+
+    // Completed version without blank placeholder
+    let completed_content = content.replace("___", "vengas");
+    let completed_ex = Exercise::from_markdown(
+        "exercises/03_subjunctive/subjunctive_01.md",
+        &completed_content,
+    )
+    .expect("Failed to parse completed exercise");
+    assert!(completed_ex.is_done);
 }
 
 #[test]
@@ -112,7 +121,7 @@ En cuanto <!-- ANSWER -->, saldremos.
         Some("Contrast with indicative for habitual actions.")
     );
     assert_eq!(ex.title, "Test Concept Linking");
-    assert!(ex.is_done);
+    assert!(!ex.is_done);
 }
 
 #[test]
