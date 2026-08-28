@@ -431,6 +431,10 @@ fn test_tui_draw_all_modals_without_panicking() {
         app.submit_placement_answer();
     }
     terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+
+    // 6. Draw Mastery Dashboard modal
+    app.enter_mastery_dashboard();
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
 }
 
 #[test]
@@ -901,4 +905,115 @@ fn test_tui_reference_browser_shows_functional_glosses_and_searches_glosses() {
         rendered_text.contains("Cheat Sheet: Epistemic Conjecture"),
         "Buffer should render Cheat Sheet header with concept title"
     );
+}
+
+#[test]
+fn test_tui_concept_mastery_dashboard_modal_navigation_and_rendering() {
+    let exercises = create_sample_exercises();
+    let mut state = spanglings::core::state::AppState {
+        tour_completed: true,
+        ..Default::default()
+    };
+
+    let now = chrono::Utc::now();
+    // Seed some concept mastery data
+    state.update_concept_mastery("subjunctive", 5, now);
+    state.update_concept_mastery("subjunctive", 5, now);
+    state.update_concept_mastery("ser-vs-estar", 1, now);
+    state.update_concept_mastery("por-vs-para", 4, now);
+
+    let mut app = App::new_with_state(exercises, false, state);
+    assert!(!app.show_mastery_dashboard);
+
+    // 1. Toggle mastery dashboard open with 'm'
+    app.on_key(crossterm::event::KeyCode::Char('m'));
+    assert!(app.show_mastery_dashboard);
+    assert_eq!(app.mastery_selected_idx, 0);
+
+    // 2. Navigation with Down / 'j'
+    app.on_key(crossterm::event::KeyCode::Down);
+    assert_eq!(app.mastery_selected_idx, 1);
+    app.on_key(crossterm::event::KeyCode::Char('j'));
+    assert_eq!(app.mastery_selected_idx, 2);
+
+    // Navigation with Up / 'k'
+    app.on_key(crossterm::event::KeyCode::Up);
+    assert_eq!(app.mastery_selected_idx, 1);
+    app.on_key(crossterm::event::KeyCode::Char('k'));
+    assert_eq!(app.mastery_selected_idx, 0);
+
+    // Underflow / saturating sub
+    app.on_key(crossterm::event::KeyCode::Char('k'));
+    assert_eq!(app.mastery_selected_idx, 0);
+
+    // Clamping at maximum concepts
+    let total_concepts = spanglings::core::reference::list_grammar_concepts().len();
+    for _ in 0..total_concepts + 5 {
+        app.on_key(crossterm::event::KeyCode::Down);
+    }
+    assert_eq!(app.mastery_selected_idx, total_concepts - 1);
+
+    // 3. Close with 'q'
+    app.on_key(crossterm::event::KeyCode::Char('q'));
+    assert!(!app.show_mastery_dashboard);
+
+    // Re-open with 'm'
+    app.on_key(crossterm::event::KeyCode::Char('m'));
+    assert!(app.show_mastery_dashboard);
+
+    // Close with Esc
+    app.on_key(crossterm::event::KeyCode::Esc);
+    assert!(!app.show_mastery_dashboard);
+
+    // Re-open with toggle_mastery_dashboard
+    app.toggle_mastery_dashboard();
+    assert!(app.show_mastery_dashboard);
+
+    // 4. Switch to reference browser with Enter
+    app.mastery_selected_idx = 0;
+    app.on_key(crossterm::event::KeyCode::Enter);
+    assert!(!app.show_mastery_dashboard);
+    assert!(app.show_reference);
+    assert_eq!(app.mode, spanglings::tui::app::AppMode::BrowsingReference);
+
+    // 5. Test topic drill launch hotkey 'd'
+    app.enter_mastery_dashboard();
+    app.mastery_selected_idx = 0;
+    app.on_key(crossterm::event::KeyCode::Char('d'));
+    assert!(!app.show_mastery_dashboard);
+    assert!(app.status_message.as_ref().unwrap().contains("micro-drill"));
+
+    // 6. Test weakness drill launch hotkey 'w'
+    app.enter_mastery_dashboard();
+    app.on_key(crossterm::event::KeyCode::Char('w'));
+    assert!(!app.show_mastery_dashboard);
+    assert!(app
+        .status_message
+        .as_ref()
+        .unwrap()
+        .contains("weakness drill"));
+
+    // 7. Render on TestBackend without panics across various sizes
+    app.enter_mastery_dashboard();
+    let backend = TestBackend::new(120, 40);
+    let mut terminal = Terminal::new(backend).unwrap();
+    terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
+
+    let buffer = terminal.backend().buffer();
+    let rendered: String = buffer
+        .content()
+        .iter()
+        .map(|cell| cell.symbol())
+        .collect::<Vec<_>>()
+        .join("");
+    assert!(rendered.contains("Concept Mastery & Weakness Profiler"));
+    assert!(rendered.contains("Mastery:"));
+    assert!(rendered.contains("Mastered"));
+    assert!(rendered.contains("In Progress"));
+    assert!(rendered.contains("Needs Review"));
+
+    // Test narrow / compact terminal
+    let narrow_backend = TestBackend::new(75, 25);
+    let mut narrow_terminal = Terminal::new(narrow_backend).unwrap();
+    narrow_terminal.draw(|frame| draw_ui(frame, &app)).unwrap();
 }

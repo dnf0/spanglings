@@ -26,6 +26,12 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                     continue;
                 }
 
+                // --- Concept Mastery & Weakness Dashboard Modal Event Handling ---
+                if app.show_mastery_dashboard {
+                    app.on_key(key);
+                    continue;
+                }
+
                 // --- Searching Mode Event Handling ---
                 if app.mode == AppMode::Searching {
                     match (key.code, key.modifiers) {
@@ -204,6 +210,13 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                     | (KeyCode::Char('t'), KeyModifiers::CONTROL) => {
                         app.show_tour_modal = true;
                         app.tour_current_station = 0;
+                    }
+                    (KeyCode::F(7), _)
+                    | (KeyCode::Char('m'), KeyModifiers::ALT)
+                    | (KeyCode::Char('m'), KeyModifiers::CONTROL)
+                    | (KeyCode::Char('m'), KeyModifiers::NONE)
+                    | (KeyCode::Char('M'), _) => {
+                        app.toggle_mastery_dashboard();
                     }
                     (KeyCode::F(1), _) | (KeyCode::Char('h'), KeyModifiers::ALT) => {
                         app.enter_help();
