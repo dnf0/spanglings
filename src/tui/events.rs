@@ -20,6 +20,12 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                     continue;
                 }
 
+                // --- Arcade Arena Modal Event Handling ---
+                if app.show_arcade_modal {
+                    app.on_key(key);
+                    continue;
+                }
+
                 // --- Welcome & Tour Modal Event Handling ---
                 if app.show_tour_welcome || app.show_tour_modal {
                     app.on_key(key);
@@ -217,6 +223,15 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                     | (KeyCode::Char('m'), KeyModifiers::NONE)
                     | (KeyCode::Char('M'), _) => {
                         app.toggle_mastery_dashboard();
+                    }
+                    (KeyCode::F(8), _)
+                    | (KeyCode::Char('x'), KeyModifiers::ALT)
+                    | (KeyCode::Char('x'), KeyModifiers::CONTROL)
+                    | (KeyCode::Char('x'), KeyModifiers::NONE)
+                    | (KeyCode::Char('X'), _)
+                    | (KeyCode::Char('d'), KeyModifiers::ALT)
+                    | (KeyCode::Char('d'), KeyModifiers::CONTROL) => {
+                        app.enter_arcade_mode(None);
                     }
                     (KeyCode::F(1), _) | (KeyCode::Char('h'), KeyModifiers::ALT) => {
                         app.enter_help();
