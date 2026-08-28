@@ -42,4 +42,7 @@ graphify-out/
 # MkDocs build directory
 site/
 
-
+# Node & Extension build artifacts
+node_modules/
+editors/vscode/dist/
+editors/vscode/out/
