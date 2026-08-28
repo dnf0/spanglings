@@ -7,13 +7,12 @@
 English: "The persistence of core inflationary pressures forced the central bank to accelerate monetary tightening."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: Economic reporting uses precise terms like *endurecimiento de la the required term* and *the required term the required term*.
+**TODO**: Insert the macroeconomic analytical clause with core price pressure nominals governing monetary policy tightening.
+**Why**: Economic journalism pairs technical core price inflation nominalizations with transitive verb structures for central bank monetary policy actions.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Select the macroeconomic clause specifying core price upward dynamics and monetary tightening -->
 La persistencia de las (presiones inflacionarias subyacentes obligó al banco emisor a endurecer la política monetaria / tensiones inflacionistas forzó el endurecimiento monetario) ___ a lo largo del trimestre.
-
 <!-- SOLUTION
 presiones inflacionarias subyacentes obligó al banco emisor a endurecer la política monetaria
 -->

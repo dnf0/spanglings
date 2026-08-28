@@ -7,13 +7,12 @@
 English: "If only one could debug concurrent distributed systems with such ease!"
 
 ### Instructions
-**TODO**: Conjugate the verb in the independent optative or formal future subjunctive.
-**Why**: The exclamatory formula *¡the required term + imperfecto de subjuntivo!* expresses an impossible or unattainable personal wish (*¡the required term tuviera 20 años!* / *¡the required term...!*).
+**TODO**: Select the optative exclamatory pronoun with accent followed by the 3rd-person singular imperfect subjunctive of *(poder)* to express an unattainable counterfactual wish.
+**Why**: The exclamatory construction with interrogative-style optative pronoun and imperfect subjunctive conveys an impossible or nostalgic wish referring to the speaker.
 
 ### Exercise
-<!-- TODO: Conjugate the verb in the independent optative or formal future subjunctive. -->
+<!-- TODO: Select the optative exclamatory pronoun and imperfect subjunctive expressing unattainable longing -->
 ¡(Quién pudiera / Quién puede) ___ depurar sistemas distribuidos concurrentes con tanta facilidad!
-
 <!-- SOLUTION
 Quién pudiera
 -->

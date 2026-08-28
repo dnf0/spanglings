@@ -7,16 +7,15 @@
 English: "The invoice must detail the taxable base, the accrued VAT, and the personal income tax withholding."
 
 ### Instructions
-**TODO**: Complete the sentence with the grammatically required term or phrase.
-**Why**: Freelancers in Spain emit invoices with *the required term* and *the required term de the required term aplicable*.
+**TODO**: Translate the three statutory accounting noun phrases representing pre-tax taxable amount, accrued consumption tax, and personal earnings tax withholding.
+**Why**: Spanish invoicing legislation mandates explicit itemization of pre-tax amounts, accrued value-added tax, and personal income tax withholdings on independent contractor invoices.
 
 ### Exercise
-<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
+<!-- TODO: Translate the three canonical accounting terms for taxable amount, accrued tax, and income withholding -->
 Translate into professional Spanish accounting terms:
 "The invoice must detail the taxable base, the accrued VAT, and the personal income tax withholding."
 
 La factura emitida debe detallar ___
-
 <!-- SOLUTION
 la base imponible, el IVA devengado y la retención del IRPF
 -->

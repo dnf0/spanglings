@@ -7,13 +7,12 @@
 English: "As soon as you notice the leak under the sink, shut off the main water valve immediately."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: In plumbing incidents, instructions specify *cortar la the required term de the required term* and *purgar la tubería*.
+**TODO**: Conjugate the imperative in the informal 2nd-person singular *(cerrar)* followed by the standard technical plumbing term for the main shut-off valve.
+**Why**: Urgent practical maintenance instructions use direct affirmative imperative forms and the canonical domestic plumbing collocate for the main valve.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Conjugate the informal imperative for shutting off the main plumbing valve -->
 En cuanto detectes el goteo debajo del fregadero, (cierra la llave de paso general / corta la llave general del agua) ___ para evitar inundaciones.
-
 <!-- SOLUTION
 cierra la llave de paso general
 -->

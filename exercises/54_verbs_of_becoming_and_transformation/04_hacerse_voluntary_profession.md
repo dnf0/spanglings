@@ -7,13 +7,12 @@
 English: "After several years of intensive technical training, she became a cybersecurity specialist."
 
 ### Instructions
-**TODO**: Select and conjugate the appropriate verb of becoming (*ponerse*, *quedarse*, *volverse*, *hacerse*).
-**Why**: *Hacerse* + noun/adjective denotes an intentional transformation resulting from conscious effort, time, career evolution, or ideological alignment (*hacerse médico, hacerse vegetariano*).
+**TODO**: Conjugate the pronominal verb *(hacerse)* in the 3rd-person singular preterite indicative denoting a voluntary transformation achieved through effort.
+**Why**: The verb *(hacerse)* expresses gradual change, professional maturation, or ideological adoption requiring personal will and effort.
 
 ### Exercise
-<!-- TODO: Select and conjugate the appropriate verb of becoming (ponerse, quedarse, volverse, hacerse). -->
+<!-- TODO: Conjugate the pronominal verb for gradual voluntary transformation through effort -->
 Tras varios años de formación técnica intensiva, ella (se hizo / se puso) ___ especialista en ciberseguridad.
-
 <!-- SOLUTION
 se hizo
 -->

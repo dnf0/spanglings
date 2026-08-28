@@ -8,13 +8,12 @@ Informal prompt: 'Ya les pedí que cancelen mi línea tres veces y me siguen cob
 Transform into formal bureau/written complaint: 'Reitero mi solicitud de...' (tramitación de la baja sin penalización por incumplimiento contractual / cancelación inmediata del servicio).
 
 ### Instructions
-**TODO**: Complete the sentence with the grammatically required term or phrase.
-**Why**: Disputing telecom cancellation delays requires demanding *el número de referencia de la solicitud de the required term*.
+**TODO**: Complete the consumer dispute sentence with the feminine noun phrase specifying service unsubscription without early termination fees due to breach.
+**Why**: Contract dispute notices require precise statutory phrasing identifying the formal cancellation procedure exempt from early termination fees due to provider default.
 
 ### Exercise
-<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
+<!-- TODO: Insert the formal consumer noun phrase for fee-free contract unsubscription due to breach -->
 Reitero mi solicitud de ___ y exijo el cese inmediato de toda facturación indebida.
-
 <!-- SOLUTION
 tramitación de la baja sin penalización por incumplimiento contractual
 -->

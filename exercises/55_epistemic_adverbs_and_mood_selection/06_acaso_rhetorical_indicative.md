@@ -7,13 +7,12 @@
 English: "Do you really think that a complete cloud migration is accomplished without hitches?"
 
 ### Instructions
-**TODO**: Conjugate the verb in the mood dictated by the epistemic adverb.
-**Why**: In rhetorical questions expressing incredulity or challenging an assumption, *acaso* takes the indicative mood (*¿Acaso the required term que es fácil?*).
+**TODO**: Conjugate the verb *(pensar)* in the 2nd-person plural present indicative (*vosotros*) in a rhetorical question introduced by the dubitative particle.
+**Why**: In rhetorical interrogative sentences expressing indignant skepticism, the particle *acaso* obligatorily selects the INDICATIVE mood.
 
 ### Exercise
-<!-- TODO: Conjugate the verb in the mood dictated by the epistemic adverb. -->
+<!-- TODO: Conjugate the verb in the 2nd-person plural present indicative for a rhetorical question with doubt particle -->
 ¿Acaso (pensáis / penséis) ___ vosotros que una migración completa a la nube se realiza sin contratiempos?
-
 <!-- SOLUTION
 pensáis
 -->

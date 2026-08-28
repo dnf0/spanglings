@@ -7,13 +7,12 @@
 English: "No matter how sophisticated the distributed compression algorithm is, technical documentation must remain impeccable."
 
 ### Instructions
-**TODO**: Complete the scalar concessive formula or intensive connector.
-**Why**: *Por muy + [adjetivo/adverbio] + que* ('no matter how [adj]...') obligatorily governs the SUBJUNCTIVE mood (*Por muy difícil que the required term...*).
+**TODO**: Conjugate the verb *(ser)* in the 3rd-person singular present subjunctive within the intensive scalar concessive frame.
+**Why**: The concessive intensive structure *por muy + adjetivo + que* ('no matter how [adj]...') obligatorily requires the SUBJUNCTIVE mood.
 
 ### Exercise
-<!-- TODO: Complete the scalar concessive formula or intensive connector. -->
+<!-- TODO: Conjugate the verb in the present subjunctive following the intensive adjective concessive frame -->
 Por muy sofisticado que (sea / es) ___ el algoritmo de compresión distribuida, la documentación técnica debe ser impecable.
-
 <!-- SOLUTION
 sea
 -->

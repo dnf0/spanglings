@@ -7,13 +7,12 @@
 English: "Whoever in the exercise of public function should commit the crime of embezzlement shall be disqualified for life."
 
 ### Instructions
-**TODO**: Conjugate the verb in the independent optative or formal future subjunctive.
-**Why**: In legal codes, relative clauses referring to undetermined offenders use the future subjunctive: *Quien the required term delito...*.
+**TODO**: Conjugate the verb *(cometer)* in the 3rd-person singular future subjunctive for a statutory relative clause identifying an indefinite offender.
+**Why**: Penal and administrative codes utilize the future subjunctive (*-re*) in generalizing relative clauses referring to undetermined future offenders.
 
 ### Exercise
-<!-- TODO: Conjugate the verb in the independent optative or formal future subjunctive. -->
+<!-- TODO: Conjugate the statutory verb in the 3rd-person singular future subjunctive -->
 Quien en el ejercicio de su función pública (cometiere / cometerá) ___ delito de malversación de caudales será inhabilitado de por vida.
-
 <!-- SOLUTION
 cometiere
 -->

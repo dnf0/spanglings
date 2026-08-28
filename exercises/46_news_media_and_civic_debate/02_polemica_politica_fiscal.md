@@ -7,13 +7,12 @@
 English: "The regional tax reform has sparked a heated debate regarding interterritorial fiscal harmonisation."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: the required term debates employ sophisticated nominalizations: *the required term un the required term sobre la the required term tributaria*.
+**TODO**: Insert the elevated journalistic infinitive collocation for sparking a heated controversy and discussion regarding tax harmonization.
+**Why**: Formal civic discourse and editorial prose employs refined collocations with transitive verbs of emergence to denote the resurgence of institutional controversies.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Insert the elevated journalistic collocation for sparking intense public discussion around tax alignment -->
 La reforma impositiva regional ha vuelto a (suscitar un encendido debate en torno a la armonización fiscal / avivar la polémica sobre la armonización tributaria) ___ y la equidad redistributiva.
-
 <!-- SOLUTION
 suscitar un encendido debate en torno a la armonización fiscal
 -->

@@ -7,13 +7,12 @@
 English: "In order to cross the border, you are required to demonstrate proof of sufficient financial means for your stay."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: Immigration officers require non-EU visitors to provide *the required term de the required term the required term* and *justificante de alojamiento*.
+**TODO**: Select the formal administrative nominal expression denoting official proof of financial self-sufficiency and round-trip transport documentation.
+**Why**: Border control authorities use specialized administrative phrasing rather than informal equivalents when specifying entry requirements.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Select the formal administrative phrase for demonstrating financial self-sufficiency and return ticket -->
 Para cruzar el control fronterizo, es preceptivo aportar la (acreditación de medios económicos suficientes / prueba de solvencia económica) ___ durante toda la estancia.
-
 <!-- SOLUTION
 acreditación de medios económicos suficientes
 -->

@@ -7,13 +7,12 @@
 English: "Calm down, everything has a technical solution; don't cry on me and let's find an alternative!"
 
 ### Instructions
-**TODO**: Insert the dative clitic pronoun denoting inalienable possession or affectedness.
-**Why**: The ethic dative (*dativo ético/afectivo*) adds emotional stake, affection, or personal concern of the speaker (*¡No me the required term!*).
+**TODO**: Conjugate the negative imperative in the informal 2nd-person singular *(llorar)* preceded by the 1st-person singular ethic dative clitic.
+**Why**: The ethic dative (*dativo ético / afectivo*) inserts an unstressed 1st-person pronoun (*me*) to express emotional involvement, plea, or personal concern in spoken dialogue.
 
 ### Exercise
-<!-- TODO: Insert the dative clitic pronoun denoting inalienable possession or affectedness. -->
+<!-- TODO: Conjugate the 2nd-person negative subjunctive with 1st-person ethic dative clitic -->
 Tranquilo, todo tiene solución técnica; ¡no (me llores / llores a mí) ___ más y busquemos una alternativa!
-
 <!-- SOLUTION
 me llores
 -->

@@ -7,13 +7,12 @@
 English: "Following the salary dispute, the engineering team lost their best developer right in the middle of the launch phase."
 
 ### Instructions
-**TODO**: Apply Differential Object Marking (personal *a*) where syntactically required.
-**Why**: Verbs like *perder* take personal 'a' when referring to the departure, bereavement, or attrition of a human team member.
+**TODO**: Select the direct object phrase with the personal preposition preceding the possessive adjective, superlative modifier, and masculine human noun.
+**Why**: The verb *(perder)* requires personal *a* when it denotes the departure, resignation, or bereavement of a human team member rather than losing an inanimate object.
 
 ### Exercise
-<!-- TODO: Apply Differential Object Marking (personal a) where syntactically required. -->
+<!-- TODO: Select the direct object with personal preposition for the departure of a team member -->
 Tras la disputa salarial, el equipo de ingeniería perdió (a su mejor desarrollador / su mejor desarrollador) ___ en plena fase de lanzamiento.
-
 <!-- SOLUTION
 a su mejor desarrollador
 -->

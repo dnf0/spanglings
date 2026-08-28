@@ -7,13 +7,12 @@
 English: "Parliament passed a directive regulating privacy in artificial intelligence models."
 
 ### Instructions
-**TODO**: Supply the grammatically valid relative clause or finite form to replace improper gerund usage.
-**Why**: Gerunds cannot function as adjectival modifiers of nouns in Spanish (*una ley que the required term* NOT *\*una ley regulando*).
+**TODO**: Choose the restrictive relative pronoun followed by the 3rd-person singular present indicative verb *(regular)* modifying the feminine statutory noun.
+**Why**: Gerunds cannot function as adjectival noun modifiers (*gerundio especificativo*); standard Spanish grammar requires a restrictive relative clause (*que + indicativo*).
 
 ### Exercise
-<!-- TODO: Supply the grammatically valid relative clause or finite form to replace improper gerund usage. -->
+<!-- TODO: Select the relative clause to modify the noun instead of an ungrammatical adjectival gerund -->
 El parlamento aprobó una directiva (que regula / regulando) ___ la privacidad en los modelos de inteligencia artificial.
-
 <!-- SOLUTION
 que regula
 -->

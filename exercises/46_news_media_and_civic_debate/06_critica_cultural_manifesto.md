@@ -7,16 +7,15 @@
 English: "The manifesto questions not so much the form as the commodification of contemporary aesthetic expressions."
 
 ### Instructions
-**TODO**: Complete the sentence with the grammatically required term or phrase.
-**Why**: Literary cultural critique often deploys correlative structures: *no the required term... the required term / lejos de... reivindica*.
+**TODO**: Formulate the correlative comparative structure using negative scalar markers with the abstract noun denoting commercialization.
+**Why**: Elevated philosophical and cultural critique uses correlative scalar comparative formulas to contrast surface aesthetics with structural commodification.
 
 ### Exercise
-<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
+<!-- TODO: Translate the correlative cultural critique structure contrasting outward form with commercialization -->
 Translate into high-register cultural critique Spanish:
 "The manifesto questions not so much the form as the commodification of contemporary aesthetic expressions."
 
 El manifiesto cuestiona ___
-
 <!-- SOLUTION
 no tanto la forma cuanto la mercantilización de las expresiones estéticas contemporáneas
 -->

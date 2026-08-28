@@ -7,13 +7,12 @@
 English: "The external cybersecurity audit having concluded, the executive committee proceeded to approve the renewal budget."
 
 ### Instructions
-**TODO**: Form the absolute participle construction for the verb with proper agreement.
-**Why**: In absolute participial constructions (*construcciones absolutas de participio*), the participle agrees in gender and number with the following subject (*the required term la sesión...* = *Una vez the required term la sesión...*).
+**TODO**: Inflect the past participle of *(concluir)* in the feminine singular to agree with the following postponed subject of the absolute clause.
+**Why**: In Spanish absolute participial clauses, the participle functions as a non-finite predicate and agrees in gender and number with its postposed subject.
 
 ### Exercise
-<!-- TODO: Form the absolute participle construction for the verb with proper agreement. -->
+<!-- TODO: Inflect the absolute participle in the feminine singular to match the postposed subject -->
 (Concluida / Concluido) ___ la auditoría externa de ciberseguridad, el comité directivo procedió a aprobar el presupuesto de renovación.
-
 <!-- SOLUTION
 Concluida
 -->

@@ -8,13 +8,12 @@ Simple proposition: 'La falta de diálogo daña las instituciones democráticas.
 Transform into an elevated cleft focus sentence: 'Es en...' (la erosión del diálogo constructivo donde reside la mayor vulnerabilidad institucional / el debilitamiento de los consensos donde radica el peligro).
 
 ### Instructions
-**TODO**: Complete the sentence with the grammatically required term or phrase.
-**Why**: Cleft focus for societal critique: *Es en la the required term del consenso the required term donde radica la the required term amenaza democrática*.
+**TODO**: Construct the cleft focus complement with a definite feminine noun phrase for dialogue degradation followed by the relative adverb and verb indicating vulnerability.
+**Why**: Cleft emphasis structures with prepositional focus (*Es en X donde Y*) spotlight the precise locus of societal and political risks in formal essayistic prose.
 
 ### Exercise
-<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
+<!-- TODO: Formulate the cleft focus clause identifying constructive dialogue degradation as the source of vulnerability -->
 Es en ___ de nuestras democracias contemporáneas.
-
 <!-- SOLUTION
 la erosión del diálogo constructivo donde reside la mayor vulnerabilidad institucional
 -->

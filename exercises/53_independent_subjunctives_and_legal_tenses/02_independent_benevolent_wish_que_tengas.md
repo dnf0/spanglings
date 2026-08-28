@@ -7,13 +7,12 @@
 English: "May you have great success in the presentation before the Silicon Valley investor committee!"
 
 ### Instructions
-**TODO**: Conjugate *(Que)* in the independent optative or formal future subjunctive.
-**Why**: Independent expressions of desire and goodwill omit the main verb (*Deseo que...*) and begin directly with *¡Que + subjuntivo!*.
+**TODO**: Choose the independent optative complementizer followed by the 2nd-person singular present subjunctive of *(tener)* for a benevolent wish.
+**Why**: Independent expressions of goodwill or wishes omit the main matrix verb (*Deseo que...*) and begin directly with *¡Que + subjuntivo!*.
 
 ### Exercise
-<!-- TODO: Conjugate (Que) in the independent optative or formal future subjunctive. -->
+<!-- TODO: Select the independent optative complementizer and 2nd-person present subjunctive for goodwill -->
 ¡(Que tengas / Que tienes) ___ mucho éxito en la presentación ante el comité de inversores de Silicon Valley!
-
 <!-- SOLUTION
 Que tengas
 -->

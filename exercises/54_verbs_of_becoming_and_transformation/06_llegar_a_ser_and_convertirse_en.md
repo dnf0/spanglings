@@ -7,13 +7,12 @@
 English: "With persistence and leadership, the small startup became a global benchmark in the sector."
 
 ### Instructions
-**TODO**: Select and conjugate the appropriate verb of becoming (*ponerse*, *quedarse*, *volverse*, *hacerse*).
-**Why**: *Convertirse en* + noun represents a complete transformation or metamorphosis into a new ontological category (*convertirse en un líder del sector*).
+**TODO**: Conjugate the pronominal verb *(convertirse)* in the 3rd-person singular preterite indicative followed by preposition *en* for radical change.
+**Why**: The verb *(convertirse en)* denotes a radical, substantial transformation into something new, governing the preposition *en*.
 
 ### Exercise
-<!-- TODO: Select and conjugate the appropriate verb of becoming (ponerse, quedarse, volverse, hacerse). -->
+<!-- TODO: Conjugate the pronominal verb denoting radical transformation into a new entity -->
 Con persistencia y liderazgo, la pequeña empresa emergente (se convirtió / se puso) ___ en un referente global del sector.
-
 <!-- SOLUTION
 se convirtió
 -->

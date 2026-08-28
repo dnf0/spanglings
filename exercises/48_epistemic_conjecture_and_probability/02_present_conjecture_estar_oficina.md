@@ -7,13 +7,12 @@
 English: "Where is the principal architect? He's not answering; he's probably in the infrastructure meeting."
 
 ### Instructions
-**TODO**: Conjugate the verb to express epistemic conjecture or probability.
-**Why**: The future of *estar* (*the required term*) expresses a hypothesis about someone's current location or activity.
+**TODO**: Conjugate the verb *(estar)* in the 3rd-person singular simple future tense to express current epistemic probability about location.
+**Why**: The simple future tense morphologically encodes epistemic hypothesis about a 3rd person's present whereabouts.
 
 ### Exercise
-<!-- TODO: Conjugate the verb to express epistemic conjecture or probability. -->
+<!-- TODO: Conjugate the verb in the 3rd-person singular simple future to hypothesize present location -->
 ¿Dónde está el arquitecto principal? No responde; (estará / está probablemente) ___ en la reunión de infraestructura.
-
 <!-- SOLUTION
 estará
 -->

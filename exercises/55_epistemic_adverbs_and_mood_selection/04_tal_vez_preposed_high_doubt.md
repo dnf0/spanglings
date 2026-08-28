@@ -7,13 +7,12 @@
 English: "Perhaps the auditors may find inconsistencies in the records if we do not normalize the schema."
 
 ### Instructions
-**TODO**: Conjugate the verb in the mood dictated by the epistemic adverb.
-**Why**: Pre-verbal *tal vez* introduces hypothetical doubt and takes the present subjunctive (*Tal vez the required term fallos*).
+**TODO**: Conjugate the verb *(encontrar)* in the 3rd-person plural present subjunctive following the preposed adverbial locution.
+**Why**: Fronted *tal vez* triggers the SUBJUNCTIVE mood when the speaker wishes to highlight possibility and uncertainty.
 
 ### Exercise
-<!-- TODO: Conjugate the verb in the mood dictated by the epistemic adverb. -->
+<!-- TODO: Conjugate the verb in the 3rd-person plural present subjunctive after the fronted locution of doubt -->
 Tal vez los auditores (encuentren / encuentran) ___ inconsistencias en los registros si no normalizamos el esquema.
-
 <!-- SOLUTION
 encuentren
 -->

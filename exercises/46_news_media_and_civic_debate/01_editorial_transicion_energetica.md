@@ -7,13 +7,12 @@
 English: "Far from constituting an insurmountable obstacle, the green transition presents a strategic industrial opportunity."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: Journalistic editorials deploy fronted participial or adverbial locutions like *the required term de the required term un the required term*.
+**TODO**: Select the fronted adverbial locution expressing distance and non-hindrance followed by an infinitive phrase for posing an insurmountable barrier.
+**Why**: High-register journalistic editorials use preposed adverbial distance structures with infinitives to frame rhetorical counter-arguments and emphasize transformative potential.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Select the fronted editorial locution denoting an impediment that is not insurmountable -->
 (Lejos de constituir un obstáculo insalvable / Distante de suponer un freno insuperable) ___, la transición ecológica se erige como una oportunidad industrial sin parangón.
-
 <!-- SOLUTION
 Lejos de constituir un obstáculo insalvable
 -->

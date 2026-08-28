@@ -7,13 +7,12 @@
 English: "By all means! Feel free to count on my full collaboration whenever you need it."
 
 ### Instructions
-**TODO**: Insert the courteous formulaic expression conveying enthusiastic consent and professional support.
-**Why**: High-register courtesy formulas reinforce gracious agreement and reassurance in formal interpersonal exchanges.
+**TODO**: Choose the exclamatory courtesy marker of enthusiastic assent followed by the formal imperative verb offering complete assistance.
+**Why**: Set exclamatory politeness formulas reinforce gracious consent and willingness, paired with respectful formal commands in professional etiquette.
 
 ### Exercise
-<!-- TODO: Insert the courteous formulaic expression conveying enthusiastic consent -->
+<!-- TODO: Choose the courteous reassurance formula and formal imperative offering full collaboration -->
 (¡Faltaría más! Cuente usted con mi plena colaboración / ¡No faltaba más! Tiene a su disposición mi apoyo) ___ siempre que lo estime oportuno.
-
 <!-- SOLUTION
 ¡Faltaría más! Cuente usted con mi plena colaboración
 -->

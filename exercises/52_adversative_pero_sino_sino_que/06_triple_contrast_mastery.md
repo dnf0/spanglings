@@ -7,13 +7,12 @@
 English: "We didn't increase the advertising budget, but rather optimized the existing conversion channels."
 
 ### Instructions
-**TODO**: Insert the correct adversative connector (*pero*, *the required term*, or *the required term que*).
-**Why**: Pattern: *No + verbo, the required term que + verbo conjugado*.
+**TODO**: Choose the exclusive adversative conjunction and complementizer followed by the 1st-person plural preterite verb *(optimizar)*.
+**Why**: Replacing a negated verb predicate (*No aumentamos...*) with an affirmed replacement verb requires the formula with compound adversative connector and conjugated verb.
 
 ### Exercise
-<!-- TODO: Insert the correct adversative connector (pero, the required term, or the required term que). -->
+<!-- TODO: Choose the exclusive adversative compound conjunction and 1st-person plural preterite verb -->
 No aumentamos el presupuesto publicitario, (sino que optimizamos / pero optimizamos) ___ los canales de conversión existentes.
-
 <!-- SOLUTION
 sino que optimizamos
 -->

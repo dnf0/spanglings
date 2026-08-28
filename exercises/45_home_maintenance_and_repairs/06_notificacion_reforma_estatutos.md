@@ -7,16 +7,15 @@
 English: "I hereby notify the property administration of the start of interior minor renovation works."
 
 ### Instructions
-**TODO**: Complete the sentence with the grammatically required term or phrase.
-**Why**: Notifying the homeowners board of structural or cosmetic the required term renovations uses phrases like *comunicar el the required term de the required term conforme a los estatutos de la comunidad*.
+**TODO**: Formulate the formal 1st-person notice addressed to property management regarding the commencement of non-structural indoor alterations.
+**Why**: Formal community of owners correspondence uses performative 1st-person present indicative verbs followed by statutory minor alteration categories.
 
 ### Exercise
-<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
+<!-- TODO: Translate the formal property management notice for commencing non-structural alterations -->
 Translate into formal property management Spanish:
 "I hereby notify the property administration of the start of interior minor renovation works."
 
 Por la presente, ___
-
 <!-- SOLUTION
 comunico a la administración de fincas el inicio de obras menores en el interior de la vivienda
 -->

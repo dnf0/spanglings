@@ -7,13 +7,12 @@
 English: "The board of directors didn't veto the acquisition of the startup, but rather requested an extension of the due diligence process."
 
 ### Instructions
-**TODO**: Insert the correct adversative connector (*pero*, *the required term*, or *the required term que*).
-**Why**: *the required term que* must always precede a conjugated verb when replacing a negated predicate.
+**TODO**: Select the exclusive adversative conjunction and complementizer followed by the 3rd-person singular preterite verb *(solicitar)*.
+**Why**: The exclusive conjunction cannot immediately precede a conjugated finite verb; it must take the complementizer *que* (*sino que + verbo*).
 
 ### Exercise
-<!-- TODO: Insert the correct adversative connector (pero, the required term, or the required term que). -->
+<!-- TODO: Select the compound adversative connector and preterite verb replacing a negated predicate -->
 La junta directiva no vetó la adquisición de la startup, (sino que solicitó / sino solicitó) ___ una extensión del proceso de diligencia debida.
-
 <!-- SOLUTION
 sino que solicitó
 -->

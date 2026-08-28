@@ -7,13 +7,12 @@
 English: "Because we missed our connection in Madrid, the agent rebooked us on the next available flight."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: When missing a connecting flight due to operational delays, airline agents *reubican a los pasajeros en el the required term the required term*.
+**TODO**: Insert the formal periphrastic infinitive verb phrase *(reubicar)* with personal preposition and direct object designating passenger rerouting on the nearest subsequent flight.
+**Why**: The periphrasis *proceder a + infinitivo* demands high-register administrative terminology and standard differential object marking for human groups.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Insert the formal infinitive phrase for rerouting passengers to the next available flight -->
 Al perder el vuelo de conexión en Madrid, el agente nos (reubicó en el siguiente vuelo disponible / recolocó en el próximo vuelo disponible) ___ sin coste adicional.
-
 <!-- SOLUTION
 reubicó en el siguiente vuelo disponible
 -->

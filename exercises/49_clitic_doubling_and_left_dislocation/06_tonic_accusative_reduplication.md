@@ -7,13 +7,12 @@
 English: "You I saw at the cybersecurity conference last week."
 
 ### Instructions
-**TODO**: Insert the required resumptive clitic pronoun for the fronted topic.
-**Why**: Direct object tonic pronouns (*a ti, a mí, a nosotros*) require the unstressed clitic (*te, me, nos*) immediately adjacent to the verb.
+**TODO**: Select the fronted 2nd-person informal tonic direct object pronoun with its obligatory accusative clitic and 1st-person singular preterite verb *(ver)*.
+**Why**: Accusative tonic pronouns (*a ti*) cannot appear without the unstressed clitic pronoun adjacent to the verb.
 
 ### Exercise
-<!-- TODO: Insert the required resumptive clitic pronoun for the fronted topic. -->
+<!-- TODO: Select the 2nd-person tonic direct object with mandatory clitic doubling and preterite verb -->
 (A ti te vi / A ti vi) ___ en la conferencia de ciberseguridad la semana pasada.
-
 <!-- SOLUTION
 A ti te vi
 -->

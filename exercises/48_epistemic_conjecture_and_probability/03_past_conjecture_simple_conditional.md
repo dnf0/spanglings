@@ -7,13 +7,12 @@
 English: "Yesterday he didn't connect to the morning standup; he was probably preparing the emergency deployment."
 
 ### Instructions
-**TODO**: Conjugate the verb to express epistemic conjecture or probability.
-**Why**: The simple conditional tense (*condicional simple*) acts as the past counterpart to the future of probability, expressing speculation about a past event or circumstance (*Ayer no vino; the required term enfermo*).
+**TODO**: Conjugate the verb *(estar)* in the 3rd-person singular simple conditional tense (*condicional de probabilidad*) to express conjecture about a past ongoing state.
+**Why**: The simple conditional acts as the past equivalent of the future of conjecture, speculating about past events or states.
 
 ### Exercise
-<!-- TODO: Conjugate the verb to express epistemic conjecture or probability. -->
+<!-- TODO: Conjugate the verb in the 3rd-person singular conditional of probability for past speculation -->
 Ayer no se conectó al standup matutino; (estaría / estaba probablemente) ___ preparando el despliegue de emergencia.
-
 <!-- SOLUTION
 estaría
 -->

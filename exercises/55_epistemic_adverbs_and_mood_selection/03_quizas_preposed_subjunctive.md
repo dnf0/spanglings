@@ -7,13 +7,12 @@
 English: "Given the increase in latency, perhaps it might be advisable to optimize the database queries."
 
 ### Instructions
-**TODO**: Conjugate the verb in the mood dictated by the epistemic adverb.
-**Why**: When *quizás* or *tal vez* precedes the verb, the SUBJUNCTIVE is used when the speaker intends to emphasize uncertainty or doubt (*Quizás the required term conveniente*).
+**TODO**: Conjugate the verb *(ser)* in the 3rd-person singular present subjunctive following the preposed adverb of doubt.
+**Why**: When *quizás* precedes the verb, it licenses the SUBJUNCTIVE mood to signal doubt, uncertainty, or hypothetical probability.
 
 ### Exercise
-<!-- TODO: Conjugate the verb in the mood dictated by the epistemic adverb. -->
+<!-- TODO: Conjugate the verb in the present subjunctive following a fronted adverb of doubt -->
 Dado el incremento en la latencia, quizás (sea / es) ___ conveniente optimizar las consultas a la base de datos.
-
 <!-- SOLUTION
 sea
 -->

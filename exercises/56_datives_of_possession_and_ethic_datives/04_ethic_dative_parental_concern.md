@@ -7,13 +7,12 @@
 English: "I am concerned about team well-being; this developer doesn't take a single break all day on me."
 
 ### Instructions
-**TODO**: Insert the dative clitic pronoun denoting inalienable possession or affectedness.
-**Why**: In everyday speech, *me* indicates that the subject's action affects the speaker emotionally (*Este chico no me come / no me descansa*).
+**TODO**: Conjugate the verb *(tomar)* in the 3rd-person singular present indicative accompanied by the 1st-person singular affective/ethic dative pronoun.
+**Why**: The ethic dative construction (*me + verbo*) expresses emotional impact or distress experienced by the speaker regarding an action performed by someone else.
 
 ### Exercise
-<!-- TODO: Insert the dative clitic pronoun denoting inalienable possession or affectedness. -->
+<!-- TODO: Conjugate the 3rd-person verb with the 1st-person affective dative pronoun -->
 Estoy preocupado por el bienestar del equipo; este desarrollador no (me toma / toma para mí) ___ ni una sola pausa en todo el día.
-
 <!-- SOLUTION
 me toma
 -->

@@ -7,13 +7,12 @@
 English: "Upon seeing the unexpected drop in performance metrics, we were left stunned."
 
 ### Instructions
-**TODO**: Select and conjugate the appropriate verb of becoming (*ponerse*, *quedarse*, *volverse*, *hacerse*).
-**Why**: *Quedarse* + adjective emphasizes the resulting aftermath, shock, or state of loss/deprivation caused by an external catalyst (*quedarse atónito, quedarse sin batería, quedarse ciego*).
+**TODO**: Conjugate the pronominal verb *(quedarse)* in the 1st-person plural preterite indicative to convey the resultant state of lasting surprise.
+**Why**: The verb *(quedarse)* denotes a resultant state or condition produced by an external impact or shocking event.
 
 ### Exercise
-<!-- TODO: Select and conjugate the appropriate verb of becoming (ponerse, quedarse, volverse, hacerse). -->
+<!-- TODO: Conjugate the 1st-person plural pronominal verb for resultant state after shock -->
 Al ver la caída inesperada de las métricas de rendimiento, nosotros (nos quedamos / nos hicimos) ___ atónitos.
-
 <!-- SOLUTION
 nos quedamos
 -->

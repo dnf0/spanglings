@@ -8,13 +8,12 @@ Anecdote summary prompt: 'Estuvimos esperando horas en la fila, la máquina fall
 Summarize into a punchy conversational conclusion: 'Total que...' (al final nos quedamos con las manos vacías / nos quedamos sin poder entrar).
 
 ### Instructions
-**TODO**: Insert the authentic pragmatic discourse marker or conversational hedge.
-**Why**: *Total que* brings a long story to its immediate bottom line: *Total que, al the required term nos the required term sin entradas*.
+**TODO**: Complete the conversational recap using the temporal locution with the 1st-person plural preterite reflexive verb *(quedarse)* and idiomatic prepositional phrase denoting coming away empty-handed.
+**Why**: The conversational narrative closer *total que* introduces the punchy bottom-line outcome of a narrative, requiring indicative past agreement.
 
 ### Exercise
-<!-- TODO: Insert the authentic pragmatic discourse marker or conversational hedge. -->
+<!-- TODO: Complete the narrative conclusion with the idiom for ending up empty-handed -->
 Total que ___ y tuvimos que volver a casa.
-
 <!-- SOLUTION
 al final nos quedamos con las manos vacías
 -->

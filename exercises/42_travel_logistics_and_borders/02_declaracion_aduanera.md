@@ -7,13 +7,12 @@
 English: "All passengers transporting merchandise whose value exceeds the duty-free allowance must declare it at customs."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: At customs checkpoints, items exceeding duty-free allowances must be declared using *declarar bienes sujetos a aranceles* or *superar el límite the required term*.
+**TODO**: Insert the relative clause with the 3rd-person singular present subjunctive *(superar)* governing the formal customs phrase for duty-free tax exemption limits.
+**Why**: Relative clauses with indefinite or hypothetical antecedents trigger the subjunctive mood in legal and customs regulations, combined with the technical term for tariff thresholds.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Select the 3rd-person singular subjunctive phrase denoting customs threshold excess -->
 Todos los pasajeros que transporten mercancías cuyo valor (supere la franquicia arancelaria / sobrepase el límite permitido) ___ deberán declararlas en la aduana.
-
 <!-- SOLUTION
 supere la franquicia arancelaria
 -->

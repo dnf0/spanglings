@@ -7,13 +7,12 @@
 English: "The security audit will not take place on Tuesday, but rather next Friday after deployment."
 
 ### Instructions
-**TODO**: Insert the correct adversative connector (*pero*, *the required term*, or *the required term que*).
-**Why**: Negative statements followed by prepositional or temporal alternatives require *the required term* (*no el martes, the required term el viernes*).
+**TODO**: Insert the exclusive adversative conjunction correcting a negated temporal adverbial phrase.
+**Why**: Following a negative clause (*no el martes*), the exclusive adversative conjunction introduces the substituting temporal or prepositional element.
 
 ### Exercise
-<!-- TODO: Insert the correct adversative connector (pero, the required term, or the required term que). -->
+<!-- TODO: Insert the exclusive adversative conjunction correcting a negated time element -->
 La auditoría de seguridad no se llevará a cabo el martes, (sino / pero) ___ el próximo viernes tras el despliegue.
-
 <!-- SOLUTION
 sino
 -->

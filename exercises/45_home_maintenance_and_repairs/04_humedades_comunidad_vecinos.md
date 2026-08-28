@@ -7,13 +7,12 @@
 English: "The moisture in the bedroom ceiling is caused by water seepage from communal building elements."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: Moisture seepage caused by facade or roof degradation is legally described as *the required term por the required term de the required term de la finca*.
+**TODO**: Choose the technical architectural insurance diagnosis noun phrase describing dampness from water ingress originating from shared building structures.
+**Why**: Property loss assessment reports categorize water damage specifically by ingress type and attribute origin to shared structural areas of the building.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Choose the technical insurance diagnosis phrase for water ingress stemming from shared property areas -->
 El perito determinó que los daños en el techo corresponden a una (humedad por filtración derivada de elementos comunes / filtración de agua procedente de la fachada comunitaria) ___.
-
 <!-- SOLUTION
 humedad por filtración derivada de elementos comunes
 -->

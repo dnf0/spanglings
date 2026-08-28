@@ -7,13 +7,12 @@
 English: "If the company does not accept a friendly settlement, we will submit the conflict to the Consumer Arbitration Board to obtain a binding award."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: The decision issued by a Consumer Arbitration Board is technically known as a *the required term de the required term*.
+**TODO**: Choose the formal consumer dispute resolution noun phrase modified by coordinating adjectives denoting mandatory legal enforceability.
+**Why**: Decisions issued by Consumer Boards are legally termed resolution awards and characterized in statutory texts as strictly binding and enforceable.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Choose the technical legal noun phrase for a binding and enforceable resolution award -->
 Si la empresa no se aviene a un acuerdo amistoso, someteremos la controversia al Sistema Arbitral de Consumo para que dicte un (laudo arbitral vinculante y de obligado cumplimiento / fallo arbitral definitivo) ___.
-
 <!-- SOLUTION
 laudo arbitral vinculante y de obligado cumplimiento
 -->

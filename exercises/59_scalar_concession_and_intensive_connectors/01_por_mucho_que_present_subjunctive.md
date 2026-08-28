@@ -7,13 +7,12 @@
 English: "No matter how much competitors try to accelerate their deadlines, we will not compromise code security."
 
 ### Instructions
-**TODO**: Complete the scalar concessive formula or intensive connector.
-**Why**: *Por mucho que* expresses scalar concession ('no matter how much...') and strictly governs the SUBJUNCTIVE mood (*Por mucho que the required term convencerme...*).
+**TODO**: Conjugate the verb *(intentar)* in the 3rd-person plural present subjunctive following the scalar concessive connector.
+**Why**: The scalar concessive connector *por mucho que* ('no matter how much...') obligatorily governs the SUBJUNCTIVE mood.
 
 ### Exercise
-<!-- TODO: Complete the scalar concessive formula or intensive connector. -->
+<!-- TODO: Conjugate the verb in the 3rd-person plural present subjunctive after scalar concessive connector -->
 Por mucho que los competidores (intenten / intentan) ___ acelerar sus plazos, no comprometeremos la seguridad del código.
-
 <!-- SOLUTION
 intenten
 -->

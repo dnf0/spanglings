@@ -7,13 +7,12 @@
 English: "After suffering several data leaks, the founder became extremely distrustful."
 
 ### Instructions
-**TODO**: Select and conjugate the appropriate verb of becoming (*ponerse*, *quedarse*, *volverse*, *hacerse*).
-**Why**: *Volverse* + adjective expresses a fundamental, enduring, and involuntary shift in a person's character, personality, or psychological nature (*volverse desconfiado, volverse loco*).
+**TODO**: Conjugate the pronominal verb *(volverse)* in the 3rd-person singular preterite indicative to express an involuntary, enduring shift in personality.
+**Why**: The verb *(volverse)* characterizes an involuntary, profound, and often negative psychological or personality transformation.
 
 ### Exercise
-<!-- TODO: Select and conjugate the appropriate verb of becoming (ponerse, quedarse, volverse, hacerse). -->
+<!-- TODO: Conjugate the pronominal verb for an involuntary shift in character or personality -->
 Después de sufrir varias filtraciones de datos, el fundador (se volvió / se puso) ___ sumamente desconfiado.
-
 <!-- SOLUTION
 se volvió
 -->

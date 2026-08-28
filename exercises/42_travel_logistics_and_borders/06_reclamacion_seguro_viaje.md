@@ -7,16 +7,15 @@
 English: "The insurance policy covers trip cancellation provided it is due to duly certified force majeure."
 
 ### Instructions
-**TODO**: Complete the sentence with the grammatically required term or phrase.
-**Why**: Insurance disputes use phrases like *motivos de the required term the required term acreditados* to validate claims.
+**TODO**: Formulate the standard insurance locution using the infinitive *(hacer)* with adjective and feminine direct object for activating medical coverage and repatriation benefits.
+**Why**: Insurance contract execution formally uses the set legal locution *hacer efectiva la póliza* followed by the prepositional phrase specifying the precise coverage areas.
 
 ### Exercise
-<!-- TODO: Complete the sentence with the grammatically required term or phrase. -->
+<!-- TODO: Provide the formal insurance locution for executing medical coverage and repatriation -->
 Translate into high-register administrative Spanish:
 "The insurance policy covers trip cancellation provided it is due to duly certified force majeure."
 
 La póliza de seguro cubre la cancelación del viaje ___
-
 <!-- SOLUTION
 siempre que obedezca a causas de fuerza mayor debidamente acreditadas
 -->

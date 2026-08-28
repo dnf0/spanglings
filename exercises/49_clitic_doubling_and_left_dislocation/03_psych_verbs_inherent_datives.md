@@ -7,13 +7,12 @@
 English: "The engineers find it hard to adapt to the syntax of the new functional language."
 
 ### Instructions
-**TODO**: Insert the required resumptive clitic pronoun for the fronted topic.
-**Why**: With verbs of psychological effect (gustar, costar, molestar, encantar), the dative clitic (*the required term*) is mandatory even when the full noun phrase is present.
+**TODO**: Select the plural experiencer noun phrase accompanied by the mandatory 3rd-person plural dative clitic and 3rd-person singular present verb of difficulty *(costar)*.
+**Why**: Psychological verbs (*costar, gustar, molestar*) require the dative clitic even when the lexical experiencer noun phrase is overtly present.
 
 ### Exercise
-<!-- TODO: Insert the required resumptive clitic pronoun for the fronted topic. -->
+<!-- TODO: Select the experiencer noun phrase with mandatory dative clitic for a psychological verb -->
 (A los ingenieros les cuesta / A los ingenieros cuesta) ___ adaptarse a la sintaxis del nuevo lenguaje funcional.
-
 <!-- SOLUTION
 A los ingenieros les cuesta
 -->

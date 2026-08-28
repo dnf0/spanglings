@@ -7,13 +7,12 @@
 English: "All affected users we notified via an urgent transactional email."
 
 ### Instructions
-**TODO**: Insert the required resumptive clitic pronoun for the fronted topic.
-**Why**: In Spanish, whenever a direct object is fronted (left-dislocated) before the verb, it MUST be resumed by an accusative clitic pronoun (*los, las, lo, la*).
+**TODO**: Insert the left-dislocated human direct object phrase featuring differential object marking and its mandatory masculine plural accusative resumptive clitic with the 1st-person plural preterite verb *(notificar)*.
+**Why**: Left-dislocated definite direct objects in Spanish obligatorily require an accusative resumptive clitic pronoun agreeing in gender and number.
 
 ### Exercise
-<!-- TODO: Insert the required resumptive clitic pronoun for the fronted topic. -->
+<!-- TODO: Insert the topicalized direct object phrase with mandatory resumptive accusative clitic -->
 (A todos los usuarios afectados los notificamos / A todos los usuarios afectados notificamos) ___ mediante un correo transaccional urgente.
-
 <!-- SOLUTION
 A todos los usuarios afectados los notificamos
 -->

@@ -7,13 +7,12 @@
 English: "In light of the severity of the degradation in primary services, the crisis committee activated the contingency protocol."
 
 ### Instructions
-**TODO**: Form the absolute participle construction for the verb with proper agreement.
-**Why**: *Visto / the required term / Vistos / Vistas* functions as a causal absolute clause meaning 'In light of / Given' and agrees with the noun (*the required term la gravedad de la situación...*).
+**TODO**: Inflect the participle of *(ver)* in the feminine singular to agree with the feminine abstract noun in the causal absolute clause.
+**Why**: In causal absolute formulas (*participio de ver + la gravedad...* = 'given the severity...'), the participle agrees in gender and number with the following nominal complement.
 
 ### Exercise
-<!-- TODO: Form the absolute participle construction for the verb with proper agreement. -->
+<!-- TODO: Inflect the causal absolute participle in the feminine singular matching the noun -->
 (Vista / Visto) ___ la gravedad de la degradación en los servicios principales, el comité de crisis activó el protocolo de contingencia.
-
 <!-- SOLUTION
 Vista
 -->

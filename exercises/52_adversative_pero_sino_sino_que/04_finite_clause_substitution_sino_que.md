@@ -7,13 +7,12 @@
 English: "The team didn't just fix the error in production, but rather redesigned the entire authentication subsystem."
 
 ### Instructions
-**TODO**: Insert the correct adversative connector (*pero*, *the required term*, or *the required term que*).
-**Why**: When substituting a negative premise with a full finite verb clause, *the required term que* is grammatically required (*No solo corregimos... the required term que rediseñamos...*).
+**TODO**: Choose the compound exclusive adversative conjunction followed by the 3rd-person singular preterite verb for layout alteration.
+**Why**: When correcting a negated premise with a complete finite verb clause (*no solo X, sino que Y*), Spanish syntax obligatorily requires the compound conjunction with complementizer.
 
 ### Exercise
-<!-- TODO: Insert the correct adversative connector (pero, the required term, or the required term que). -->
+<!-- TODO: Select the exclusive conjunction with complementizer and preterite verb -->
 El equipo no solo corrigió el error en producción, (sino que rediseñó / pero rediseñó) ___ todo el subsistema de autenticación.
-
 <!-- SOLUTION
 sino que rediseñó
 -->

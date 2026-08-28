@@ -7,13 +7,12 @@
 English: "Before handling the hardware components, I always wash my hands with great care."
 
 ### Instructions
-**TODO**: Insert the dative clitic pronoun denoting inalienable possession or affectedness.
-**Why**: Spanish replaces possessive determiners (*mi, su*) with reflexive/dative pronouns and definite articles when referring to body parts (*Me the required term las manos*, not *the required term mis manos*).
+**TODO**: Conjugate the pronominal verb *(lavarse)* in the 1st-person singular present indicative using a dative of inalienable possession with the definite article.
+**Why**: Inalienable possession of body parts in Spanish uses a reflexive/dative clitic pronoun combined with the definite article (*lavarse las manos*), avoiding possessive determiners.
 
 ### Exercise
-<!-- TODO: Insert the dative clitic pronoun denoting inalienable possession or affectedness. -->
+<!-- TODO: Conjugate the 1st-person pronominal verb expressing inalienable possession of body parts -->
 Antes de manipular los componentes del hardware, yo siempre (me lavo / lavo mis) ___ las manos con sumo cuidado.
-
 <!-- SOLUTION
 me lavo
 -->

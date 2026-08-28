@@ -7,13 +7,12 @@
 English: "You have a demanding meeting in five minutes; drink up all the hot herbal tea."
 
 ### Instructions
-**TODO**: Insert the dative clitic pronoun denoting inalienable possession or affectedness.
-**Why**: Pronominal clitics on ingestion verbs (*comerse, beberse, tomarse*) denote telic completion—consuming the entire quantity (*the required term todo el café*).
+**TODO**: Conjugate the affirmative informal 2nd-person singular imperative of *(beberse)* with enclitic reflexive pronoun for telic consumption.
+**Why**: Verbs of consumption (*comerse, beberse, leerse*) use the aspectual/deliberative dative with an enclitic pronoun to emphasize complete, exhaustive consumption.
 
 ### Exercise
-<!-- TODO: Insert the dative clitic pronoun denoting inalienable possession or affectedness. -->
+<!-- TODO: Conjugate the 2nd-person affirmative imperative with enclitic pronoun for exhaustive consumption -->
 Tienes una reunión muy exigente en cinco minutos; (bébete / bebe te) ___ toda la taza de infusión caliente.
-
 <!-- SOLUTION
 bébete
 -->

@@ -7,13 +7,12 @@
 English: "If they don't answer right away in the support channel, maybe they are busy with the deployment."
 
 ### Instructions
-**TODO**: Conjugate the verb in the mood dictated by the epistemic adverb.
-**Why**: Colloquial *igual* (meaning 'maybe / perhaps') strictly governs the INDICATIVE mood (*Igual the required term ocupados*).
+**TODO**: Conjugate the verb *(estar)* in the 3rd-person plural present indicative following the colloquial epistemic marker.
+**Why**: The colloquial epistemic marker *igual* ('maybe / perhaps') requires the INDICATIVE mood in contemporary Spanish.
 
 ### Exercise
-<!-- TODO: Conjugate the verb in the mood dictated by the epistemic adverb. -->
+<!-- TODO: Conjugate the verb in the present indicative after the colloquial epistemic marker -->
 Si no responden de inmediato en el canal de soporte, igual (están / estén) ___ ocupados con el despliegue.
-
 <!-- SOLUTION
 están
 -->

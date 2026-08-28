@@ -7,13 +7,12 @@
 English: "That being said, let us move on to reviewing the priority user stories for the next development iteration."
 
 ### Instructions
-**TODO**: Form the absolute participle construction for the verb with proper agreement.
-**Why**: *the required term esto* functions as an absolute participial discourse transition meaning 'That being said' (*the required term esto, continuemos*).
+**TODO**: Select the irregular masculine singular participle of *(decir)* forming the fixed discourse transition formula with the neuter pronoun.
+**Why**: The fixed conversational transition formula with the neuter demonstrative pronoun (*participio de decir + esto*) marks discourse advancement.
 
 ### Exercise
-<!-- TODO: Form the absolute participle construction for the verb with proper agreement. -->
+<!-- TODO: Select the irregular participle forming the absolute discourse transition locution -->
 (Dicho / Diciendo) ___ esto, pasemos a revisar las historias de usuario prioritarias para la próxima iteración del desarrollo.
-
 <!-- SOLUTION
 Dicho
 -->

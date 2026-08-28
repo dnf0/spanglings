@@ -7,13 +7,12 @@
 English: "We are challenging the electricity bill because it was issued based on disproportionate estimated consumption rather than actual meter readings."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of the verb to complete the sentence.
-**Why**: Overbilling based on estimates rather than meter readings is challenged as *facturación basada en the required term desproporcionados*.
+**TODO**: Insert the technical utility dispute noun phrase with a restrictive relative clause describing estimated consumption failing to match actual meter readings.
+**Why**: Disputing utility overcharges before regulatory bodies requires articulating that the billed amounts derive from unverified estimates rather than verified physical meter data.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of the verb to complete the sentence. -->
+<!-- TODO: Select the utility dispute noun phrase specifying estimated consumption versus actual meter readings -->
 Impugnamos la factura eléctrica por haber sido emitida con base en (consumos estimados que no reflejan la lectura real del contador / lecturas estimadas desproporcionadas) ___.
-
 <!-- SOLUTION
 consumos estimados que no reflejan la lectura real del contador
 -->

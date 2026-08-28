@@ -7,13 +7,12 @@
 English: "A critical vulnerability was detected in the auth library, hence why the engineers patched the cluster immediately."
 
 ### Instructions
-**TODO**: Conjugate the verb or supply the connector indicating corrective polarity.
-**Why**: *De ahí que* introduces a formal consequence and obligatorily governs the SUBJUNCTIVE mood (*De ahí que decidiéramos actuar*).
+**TODO**: Conjugate the verb *(parchear)* in the 3rd-person plural imperfect subjunctive (*-ra/-se*) following the formal consecutive connector.
+**Why**: The formal consecutive link *de ahí que* obligatorily triggers the SUBJUNCTIVE mood (imperfect subjunctive in past contexts).
 
 ### Exercise
-<!-- TODO: Conjugate the verb or supply the connector indicating corrective polarity. -->
+<!-- TODO: Conjugate the verb in the 3rd-person plural imperfect subjunctive after the formal consecutive connector -->
 Se detectó una vulnerabilidad crítica en la librería de autenticación, de ahí que los ingenieros (parchearan / parchearon) ___ el clúster de inmediato.
-
 <!-- SOLUTION
 parchearan
 -->

@@ -7,13 +7,12 @@
 English: "The founder has his business partner hospitalized following the traffic accident."
 
 ### Instructions
-**TODO**: Apply Differential Object Marking (personal *a*) where syntactically required.
-**Why**: While *tener* normally excludes personal 'a' (*Tengo dos hermanos*), it REQUIRES personal 'a' when describing a human object in a temporary condition, state, or location (*Tiene a su the required term hospitalizada*).
+**TODO**: Insert the personal preposition before the possessive determiner and feminine noun representing a person in a circumstantial temporary state.
+**Why**: While *(tener)* normally rejects personal *a*, it requires it when describing a person placed in a temporary physical or emotional situation (*tener a alguien + participio/adjetivo*).
 
 ### Exercise
-<!-- TODO: Apply Differential Object Marking (personal a) where syntactically required. -->
+<!-- TODO: Insert personal preposition with the verb denoting a person in a temporary condition -->
 El fundador tiene (a su socia / su socia) ___ hospitalizada tras el accidente de tráfico.
-
 <!-- SOLUTION
 a su socia
 -->

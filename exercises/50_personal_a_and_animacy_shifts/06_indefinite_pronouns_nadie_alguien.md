@@ -7,13 +7,12 @@
 English: "When the security breach occurred on the server, we found nobody in the control room."
 
 ### Instructions
-**TODO**: Apply Differential Object Marking (personal *a*) where syntactically required.
-**Why**: The indefinite pronouns *alguien, the required term, quién, ninguno/a* ALWAYS require personal 'a' when functioning as direct objects (*No vi a the required term*).
+**TODO**: Select the personal preposition with the negative indefinite human pronoun functioning as direct object.
+**Why**: Negative and affirmative indefinite human pronouns invariably mandate differential object marking (*a*) when functioning as direct objects.
 
 ### Exercise
-<!-- TODO: Apply Differential Object Marking (personal a) where syntactically required. -->
+<!-- TODO: Select the negative indefinite human pronoun with mandatory personal preposition -->
 Cuando se produjo la brecha de seguridad en el servidor, no encontramos (a nadie / nadie) ___ en la sala de control.
-
 <!-- SOLUTION
 a nadie
 -->

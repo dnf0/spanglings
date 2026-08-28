@@ -7,13 +7,12 @@
 English: "The auditor examined the architecture by carefully reviewing the audit logs during the inspection."
 
 ### Instructions
-**TODO**: Supply the grammatically valid relative clause or finite form to replace improper gerund usage.
-**Why**: Gerunds are fully grammatical when denoting how an action occurs simultaneously with the main verb (*examinó the required term los registros*).
+**TODO**: Select the simple gerund form of *(revisar)* expressing the simultaneous means and manner of the inspection.
+**Why**: The gerund is fully grammatical when denoting manner (*gerundio de modo*) or simultaneous execution accompanying the main verb.
 
 ### Exercise
-<!-- TODO: Supply the grammatically valid relative clause or finite form to replace improper gerund usage. -->
+<!-- TODO: Select the grammatical manner gerund expressing simultaneous execution -->
 El auditor examinó la arquitectura (revisando / y revisó) ___ detenidamente los registros de auditoría durante la inspección.
-
 <!-- SOLUTION
 revisando
 -->

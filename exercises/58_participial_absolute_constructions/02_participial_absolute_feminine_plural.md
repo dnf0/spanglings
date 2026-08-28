@@ -7,13 +7,12 @@
 English: "The new personal data protection policies having been approved, the legal team initiated the training sessions."
 
 ### Instructions
-**TODO**: Form the absolute participle construction for the verb with proper agreement.
-**Why**: Absolute participles modifying feminine plural nouns take the feminine plural ending (*the required term las propuestas...*).
+**TODO**: Inflect the past participle of *(aprobar)* in the feminine plural agreeing with the postposed subject noun phrase.
+**Why**: Absolute participial constructions require morphological agreement in gender and number (*femenino plural*) with the following noun phrase.
 
 ### Exercise
-<!-- TODO: Form the absolute participle construction for the verb with proper agreement. -->
+<!-- TODO: Inflect the absolute participle in the feminine plural for subject agreement -->
 (Aprobadas / Aprobado) ___ las nuevas políticas de protección de datos personales, el equipo legal inició las sesiones de capacitación.
-
 <!-- SOLUTION
 Aprobadas
 -->

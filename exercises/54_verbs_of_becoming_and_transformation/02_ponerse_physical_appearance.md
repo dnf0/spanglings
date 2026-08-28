@@ -7,13 +7,12 @@
 English: "During the presentation before the executive board, I turned completely red from nervousness."
 
 ### Instructions
-**TODO**: Select and conjugate the appropriate verb of becoming (*ponerse*, *quedarse*, *volverse*, *hacerse*).
-**Why**: Bodily and physiological changes outside voluntary control (blushing, turning pale, falling ill) use *ponerse* (e.g. *ponerse rojo, ponerse pálido, ponerse enfermo*).
+**TODO**: Conjugate the pronominal verb *(ponerse)* in the 1st-person singular preterite indicative denoting a sudden physical and emotional reaction.
+**Why**: Physical autonomic reactions (such as blushing) are expressed using *ponerse + adjetivo de color*.
 
 ### Exercise
-<!-- TODO: Select and conjugate the appropriate verb of becoming (ponerse, quedarse, volverse, hacerse). -->
+<!-- TODO: Conjugate the 1st-person pronominal verb for an involuntary physical change in appearance -->
 Durante la presentación ante el comité ejecutivo, yo (me puse / me volví) ___ completamente rojo de los nervios.
-
 <!-- SOLUTION
 me puse
 -->

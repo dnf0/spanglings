@@ -7,13 +7,12 @@
 English: "Don't worry about the CI pipeline; by this hour it has probably already finished running the test suite."
 
 ### Instructions
-**TODO**: Conjugate the verb to express epistemic conjecture or probability.
-**Why**: The compound future (*futuro compuesto: the required term + participio*) conveys conjecture about an action completed prior to the present moment.
+**TODO**: Form the compound future perfect tense (*futuro compuesto de probabilidad*) using the 3rd-person singular of *(haber)* with the past participle of *(terminar)*.
+**Why**: The future perfect conveys conjecture or assumption regarding an event completed prior to the present moment.
 
 ### Exercise
-<!-- TODO: Conjugate the verb to express epistemic conjecture or probability. -->
+<!-- TODO: Form the 3rd-person singular compound future perfect to conjecture prior completion -->
 No te preocupes por el pipeline; a estas horas ya (habrá terminado / ha terminado probablemente) ___ la ejecución de pruebas.
-
 <!-- SOLUTION
 habrá terminado
 -->

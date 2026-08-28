@@ -7,13 +7,12 @@
 English: "No matter how much security analysts investigated the network traces for days, they found no traces of external intrusion."
 
 ### Instructions
-**TODO**: Complete the scalar concessive formula or intensive connector.
-**Why**: In past narratives where efforts yielded no result, *por más que* governs the imperfect subjunctive (*Por más que the required term, no hallaron nada*).
+**TODO**: Conjugate the verb *(investigar)* in the 3rd-person plural imperfect subjunctive (*-ra/-se*) in a past scalar concessive clause.
+**Why**: In past narratives expressing unavailing efforts, *por más que* governs the imperfect subjunctive to convey concessive nuance.
 
 ### Exercise
-<!-- TODO: Complete the scalar concessive formula or intensive connector. -->
+<!-- TODO: Conjugate the verb in the 3rd-person plural imperfect subjunctive after past scalar concession -->
 Por más que los analistas de seguridad (investigaran / investigaron) ___ las trazas de red durante días, no hallaron indicios de intrusión externa.
-
 <!-- SOLUTION
 investigaran
 -->

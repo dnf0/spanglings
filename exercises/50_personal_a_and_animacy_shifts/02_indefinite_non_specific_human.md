@@ -7,13 +7,12 @@
 English: "The company urgently needs to hire an offensive cybersecurity specialist."
 
 ### Instructions
-**TODO**: Apply Differential Object Marking (personal *a*) where syntactically required.
-**Why**: When seeking or hiring an unidentifiable, generic representative of a profession or category, personal 'a' is typically omitted (*Necesitamos contratar programador / un the required term*).
+**TODO**: Select the indefinite masculine singular noun phrase without the personal preposition for an undetermined, generic professional role.
+**Why**: When seeking or hiring a non-specific, generic candidate representing a job category rather than an individual, personal *a* is omitted after *contratar* or *buscar*.
 
 ### Exercise
-<!-- TODO: Apply Differential Object Marking (personal a) where syntactically required. -->
+<!-- TODO: Select the non-specific human direct object without personal preposition -->
 La empresa necesita contratar urgente (un especialista / a un especialista) ___ en ciberseguridad ofensiva.
-
 <!-- SOLUTION
 un especialista
 -->

@@ -7,13 +7,12 @@
 English: "Just minutes before the customer demo, the entire Kubernetes cluster went down on us."
 
 ### Instructions
-**TODO**: Insert the dative clitic pronoun denoting inalienable possession or affectedness.
-**Why**: *Se nos + verbo* expresses accidental misfortune that collectively affects the speaker's group or organization (*Se nos the required term la base de datos*).
+**TODO**: Insert the accidental pronominal sequence with the 1st-person plural dative clitic and 3rd-person singular preterite verb *(caerse)*.
+**Why**: Involuntary technical outages affecting a team employ the accidental middle construction with the 1st-person plural dative (*se nos + verbo en pretérito*).
 
 ### Exercise
-<!-- TODO: Insert the dative clitic pronoun denoting inalienable possession or affectedness. -->
+<!-- TODO: Insert the accidental middle clitics and preterite verb denoting collective technical outage -->
 A escasos minutos de la demostración para clientes, (se nos cayó / se cayó a nosotros) ___ todo el clúster de Kubernetes.
-
 <!-- SOLUTION
 se nos cayó
 -->

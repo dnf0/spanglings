@@ -7,13 +7,12 @@
 English: "When tripping in the hallway, Carlos had the corporate tablet screen break on him."
 
 ### Instructions
-**TODO**: Insert the dative clitic pronoun denoting inalienable possession or affectedness.
-**Why**: Accidental damage or loss of personal property is expressed with accidental *se* + dative clitic (*se le the required term la pantalla*).
+**TODO**: Insert the accidental middle clitic sequence with the 3rd-person singular indirect object pronoun and preterite verb *(romperse)*.
+**Why**: Accidental damage to personal possessions uses the accidental pronominal construction combined with the dative of interest/possession (*se le + verbo*).
 
 ### Exercise
-<!-- TODO: Insert the dative clitic pronoun denoting inalienable possession or affectedness. -->
+<!-- TODO: Insert the involuntary middle clitic sequence and preterite verb for accidental damage -->
 Al tropezar en el pasillo, a Carlos (se le rompió / se rompió su) ___ la pantalla de la tableta corporativa.
-
 <!-- SOLUTION
 se le rompió
 -->

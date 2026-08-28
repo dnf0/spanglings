@@ -7,13 +7,12 @@
 English: "The critical incidents on the payment gateway having been resolved, commercial transactions resumed normally."
 
 ### Instructions
-**TODO**: Form the absolute participle construction for the verb with proper agreement.
-**Why**: Irregular participles (*resuelto, abierto, escrito*) inflect for number and gender in absolute clauses (*the required term los problemas...*).
+**TODO**: Inflect the irregular past participle of *(resolver)* in the masculine plural agreeing with the plural subject.
+**Why**: The verb *(resolver)* has an irregular participle that must inflect for masculine plural agreement in absolute clauses.
 
 ### Exercise
-<!-- TODO: Form the absolute participle construction for the verb with proper agreement. -->
+<!-- TODO: Inflect the irregular masculine plural participle for the absolute clause -->
 (Resueltos / Resolvidos) ___ los incidentes críticos en la pasarela de pagos, se reanudaron las transacciones comerciales con total normalidad.
-
 <!-- SOLUTION
 Resueltos
 -->

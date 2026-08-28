@@ -7,13 +7,12 @@
 English: "This technical report I wrote over the weekend for the board of directors."
 
 ### Instructions
-**TODO**: Insert the required resumptive clitic pronoun for the fronted topic.
-**Why**: When a specific, definite inanimate direct object is placed before the verb for topical emphasis, standard Spanish requires clitic resumption with *lo/la/los/las*.
+**TODO**: Choose the fronted demonstrative direct object phrase followed by its required masculine singular accusative clitic and 1st-person singular preterite verb *(redactar)*.
+**Why**: Topicalized, definite inanimate direct objects placed before the finite verb mandate accusative clitic resumption in standard Spanish.
 
 ### Exercise
-<!-- TODO: Insert the required resumptive clitic pronoun for the fronted topic. -->
+<!-- TODO: Choose the fronted definite direct object with required accusative clitic resumption -->
 (Este informe técnico lo redacté / Este informe técnico redacté) ___ durante el fin de semana para la junta directiva.
-
 <!-- SOLUTION
 Este informe técnico lo redacté
 -->

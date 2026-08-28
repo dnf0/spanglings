@@ -7,13 +7,12 @@
 English: "We need to optimize the database query; in other words, reduce execution latency by fifty percent."
 
 ### Instructions
-**TODO**: Insert the authentic reformulating connector of equivalence and technical specification.
-**Why**: When clarifying complex metrics in professional contexts, speakers use explanatory reformulating connectors meaning 'in other words'.
+**TODO**: Insert the formal conversational reformulation marker followed by an infinitive phrase for halving execution latency.
+**Why**: In semi-formal professional discussions, formal connective reformulation markers introduce an explanatory equivalence without sounding excessively casual or pedantic.
 
 ### Exercise
-<!-- TODO: Insert the authentic reformulating connector for technical specification -->
+<!-- TODO: Insert the formal reformulation marker and infinitive clause for halving execution latency -->
 Debemos optimizar la consulta de la base de datos; (es decir, reducir la latencia de ejecución en un cincuenta por ciento / dicho en otros términos, bajar la latencia a la mitad) ___.
-
 <!-- SOLUTION
 es decir, reducir la latencia de ejecución en un cincuenta por ciento
 -->
