@@ -1,6 +1,7 @@
-use crate::core::reference::{get_grammar_concept, get_reference_card};
+use crate::core::reference::{get_grammar_concept, get_reference_card, list_grammar_concepts};
 use crate::engine::validator::ValidationResult;
 use crate::tui::app::App;
+use chrono::Utc;
 use ratatui::{
     layout::{Alignment, Constraint, Direction, Layout, Rect},
     style::{Color, Modifier, Style},
@@ -8,6 +9,10 @@ use ratatui::{
     widgets::{Block, BorderType, Borders, Clear, Paragraph, Wrap},
     Frame,
 };
+
+pub fn draw(frame: &mut Frame, app: &App) {
+    draw_ui(frame, app);
+}
 
 pub fn draw_ui(frame: &mut Frame, app: &App) {
     let size = frame.area();
@@ -35,6 +40,12 @@ pub fn draw_ui(frame: &mut Frame, app: &App) {
     if app.show_tour_modal {
         let modal_area = centered_rect(75, 75, size);
         draw_tour_station_modal(frame, app, modal_area);
+        return;
+    }
+
+    if app.show_mastery_dashboard {
+        let modal_area = centered_rect(90, 85, size);
+        draw_mastery_dashboard_modal(frame, app, modal_area);
         return;
     }
 
@@ -830,6 +841,14 @@ fn draw_footer(frame: &mut Frame, app: &App, area: Rect) {
             ),
             Span::styled(" Ref ", Style::default().fg(Color::White)),
             Span::styled(
+                " [m] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Mastery ", Style::default().fg(Color::White)),
+            Span::styled(
                 " [T] ",
                 Style::default()
                     .fg(Color::Black)
@@ -1417,6 +1436,18 @@ fn draw_help_modal(frame: &mut Frame, _app: &App, area: Rect) {
             ),
             Span::styled(
                 "Open full Grammar Reference Browser & Cheat Sheets",
+                Style::default().fg(Color::White),
+            ),
+        ]),
+        Line::from(vec![
+            Span::styled(
+                "  [m] / [F7]            ",
+                Style::default()
+                    .fg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(
+                "Open Concept Mastery & Weakness Dashboard Profiler",
                 Style::default().fg(Color::White),
             ),
         ]),
@@ -2157,4 +2188,329 @@ fn draw_tour_station_modal(frame: &mut Frame, app: &App, area: Rect) {
             .alignment(Alignment::Center);
         frame.render_widget(footer_para, chunks[2]);
     }
+}
+
+pub fn draw_mastery_dashboard_modal(frame: &mut Frame, app: &App, area: Rect) {
+    frame.render_widget(Clear, area);
+
+    let modal_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(" 🧠 Spanglings Concept Mastery & Weakness Profiler [m] ")
+        .border_style(Style::default().fg(Color::Cyan));
+    frame.render_widget(modal_block.clone(), area);
+
+    let inner_area = modal_block.inner(area);
+    let chunks = Layout::default()
+        .direction(Direction::Vertical)
+        .constraints([
+            Constraint::Length(3), // Header: Overall Mastery Gauge & Category Counts
+            Constraint::Min(5),    // Concepts List / Table
+            Constraint::Length(3), // Footer: Keybindings
+        ])
+        .split(inner_area);
+
+    // --- 1. Header Area: Overall Competence & Gauges ---
+    let concepts = list_grammar_concepts();
+    let total_concepts = concepts.len();
+    let mut total_mastery = 0.0f32;
+    let mut mastered_count = 0usize;
+    let mut in_progress_count = 0usize;
+    let mut needs_review_count = 0usize;
+
+    for c in concepts {
+        let score = app
+            .state
+            .concept_mastery
+            .get(c.slug)
+            .map(|m| m.mastery_score)
+            .unwrap_or(0.0);
+        total_mastery += score;
+        if score >= 0.75 {
+            mastered_count += 1;
+        } else if score >= 0.40 {
+            in_progress_count += 1;
+        } else {
+            needs_review_count += 1;
+        }
+    }
+
+    let avg_pct = if total_concepts > 0 {
+        (total_mastery / total_concepts as f32 * 100.0).round() as u32
+    } else {
+        0
+    };
+
+    let gauge_blocks = 14;
+    let filled_gauge =
+        ((avg_pct as f32 / 100.0 * gauge_blocks as f32).round() as usize).min(gauge_blocks);
+    let empty_gauge = gauge_blocks - filled_gauge;
+    let gauge_str = format!("[{}{}]", "█".repeat(filled_gauge), "░".repeat(empty_gauge));
+    let gauge_color = if avg_pct >= 75 {
+        Color::Green
+    } else if avg_pct >= 40 {
+        Color::Yellow
+    } else {
+        Color::Red
+    };
+
+    let header_spans = vec![
+        Span::styled(
+            " Mastery: ",
+            Style::default()
+                .fg(Color::White)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(
+            format!("{} ", gauge_str),
+            Style::default()
+                .fg(gauge_color)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(
+            format!("{}% ", avg_pct),
+            Style::default()
+                .fg(gauge_color)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled("│ ", Style::default().fg(Color::DarkGray)),
+        Span::styled(
+            format!("{} Mastered", mastered_count),
+            Style::default()
+                .fg(Color::Green)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(" (≥75%) │ ", Style::default().fg(Color::DarkGray)),
+        Span::styled(
+            format!("{} In Progress", in_progress_count),
+            Style::default()
+                .fg(Color::Yellow)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(" (40–74%) │ ", Style::default().fg(Color::DarkGray)),
+        Span::styled(
+            format!("{} Needs Review", needs_review_count),
+            Style::default().fg(Color::Red).add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(" (<40%)", Style::default().fg(Color::DarkGray)),
+    ];
+
+    let header_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(" Overall Competence ")
+        .border_style(Style::default().fg(Color::Yellow));
+    let header_para = Paragraph::new(Line::from(header_spans))
+        .block(header_block)
+        .alignment(Alignment::Center);
+    frame.render_widget(header_para, chunks[0]);
+
+    // --- 2. Concept List Table ---
+    let table_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(format!(" Grammar Concepts ({}) ", total_concepts))
+        .border_style(Style::default().fg(Color::Cyan));
+
+    let now = Utc::now();
+    let rows: Vec<Line> = concepts
+        .iter()
+        .enumerate()
+        .map(|(idx, concept)| {
+            let is_selected = idx == app.mastery_selected_idx;
+            let mastery = app.state.concept_mastery.get(concept.slug);
+            let score = mastery.map(|m| m.mastery_score).unwrap_or(0.0);
+            let score_pct = (score * 100.0).round() as u32;
+            let reviews = mastery.map(|m| m.total_reviews).unwrap_or(0);
+            let lapses = mastery.map(|m| m.lapses).unwrap_or(0);
+            let last_practiced = mastery.and_then(|m| m.last_practiced);
+
+            let bar_blocks = 14;
+            let filled = ((score * bar_blocks as f32).round() as usize).min(bar_blocks);
+            let empty = bar_blocks - filled;
+            let bar_str = format!(
+                "[{}{}] {:>3}%",
+                "█".repeat(filled),
+                "░".repeat(empty),
+                score_pct
+            );
+            let bar_color = if score >= 0.75 {
+                Color::Green
+            } else if score >= 0.40 {
+                Color::Yellow
+            } else {
+                Color::Red
+            };
+
+            let last_str = match last_practiced {
+                None => "never".to_string(),
+                Some(dt) => {
+                    let diff = now.signed_duration_since(dt);
+                    if diff.num_days() == 0 {
+                        if diff.num_hours() == 0 {
+                            if diff.num_minutes() <= 1 {
+                                "just now".to_string()
+                            } else {
+                                format!("{}m ago", diff.num_minutes())
+                            }
+                        } else {
+                            format!("{}h ago", diff.num_hours())
+                        }
+                    } else if diff.num_days() == 1 {
+                        "yesterday".to_string()
+                    } else if diff.num_days() < 30 {
+                        format!("{}d ago", diff.num_days())
+                    } else {
+                        format!("{}mo ago", diff.num_days() / 30)
+                    }
+                }
+            };
+
+            let title_gloss = format!("{} — {}", concept.title, concept.gloss);
+            let title_col_width = 44;
+            let title_display = if title_gloss.chars().count() > title_col_width {
+                let s: String = title_gloss.chars().take(title_col_width - 3).collect();
+                format!("{}...", s)
+            } else {
+                format!("{:<width$}", title_gloss, width = title_col_width)
+            };
+
+            if is_selected {
+                Line::from(vec![
+                    Span::styled(
+                        format!(" ▶ {:02}. ", idx + 1),
+                        Style::default()
+                            .fg(Color::Black)
+                            .bg(Color::Cyan)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        title_display,
+                        Style::default()
+                            .fg(Color::Black)
+                            .bg(Color::Cyan)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        format!("  {}  ", bar_str),
+                        Style::default()
+                            .fg(bar_color)
+                            .bg(Color::Black)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        format!(" rev: {:<3} ", reviews),
+                        Style::default()
+                            .fg(Color::Black)
+                            .bg(Color::Cyan)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        format!(" lapses: {:<2} ", lapses),
+                        Style::default()
+                            .fg(if lapses > 0 { Color::Red } else { Color::Black })
+                            .bg(Color::Cyan)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        format!(" last: {:<9}", last_str),
+                        Style::default().fg(Color::Black).bg(Color::Cyan),
+                    ),
+                ])
+            } else {
+                Line::from(vec![
+                    Span::styled(
+                        format!("   {:02}. ", idx + 1),
+                        Style::default().fg(Color::DarkGray),
+                    ),
+                    Span::styled(title_display, Style::default().fg(Color::White)),
+                    Span::styled(
+                        format!("  {}  ", bar_str),
+                        Style::default().fg(bar_color).add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        format!(" rev: {:<3} ", reviews),
+                        Style::default().fg(Color::Gray),
+                    ),
+                    Span::styled(
+                        format!(" lapses: {:<2} ", lapses),
+                        Style::default().fg(if lapses > 0 {
+                            Color::LightRed
+                        } else {
+                            Color::DarkGray
+                        }),
+                    ),
+                    Span::styled(
+                        format!(" last: {:<9}", last_str),
+                        Style::default().fg(Color::DarkGray),
+                    ),
+                ])
+            }
+        })
+        .collect();
+
+    let list_inner_height = chunks[1].height.saturating_sub(2) as usize;
+    let scroll_offset = if list_inner_height > 0 && app.mastery_selected_idx >= list_inner_height {
+        (app.mastery_selected_idx + 1 - list_inner_height) as u16
+    } else {
+        0
+    };
+
+    let table_para = Paragraph::new(rows)
+        .block(table_block)
+        .scroll((scroll_offset, 0));
+    frame.render_widget(table_para, chunks[1]);
+
+    // --- 3. Footer: Hotkey Actions ---
+    let footer_spans = vec![
+        Span::styled(
+            " [↑/↓ j/k] ",
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Blue)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(" Navigate  ", Style::default().fg(Color::White)),
+        Span::styled(
+            " [Enter/r] ",
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Cyan)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(" Reference Sheet  ", Style::default().fg(Color::White)),
+        Span::styled(
+            " [d] ",
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Green)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(" Topic Drill  ", Style::default().fg(Color::White)),
+        Span::styled(
+            " [w] ",
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Yellow)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(" Weakness Drill  ", Style::default().fg(Color::White)),
+        Span::styled(
+            " [Esc/q] ",
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Red)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(" Close ", Style::default().fg(Color::White)),
+    ];
+
+    let footer_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .border_style(Style::default().fg(Color::DarkGray));
+    let footer_para = Paragraph::new(Line::from(footer_spans))
+        .block(footer_block)
+        .alignment(Alignment::Center);
+    frame.render_widget(footer_para, chunks[2]);
 }

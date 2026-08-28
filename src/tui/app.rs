@@ -67,6 +67,10 @@ pub struct App {
     pub show_tour_welcome: bool,
     pub show_tour_modal: bool,
     pub tour_current_station: usize,
+
+    // Mastery Dashboard state
+    pub show_mastery_dashboard: bool,
+    pub mastery_selected_idx: usize,
 }
 
 impl App {
@@ -144,6 +148,8 @@ impl App {
             show_tour_welcome,
             show_tour_modal: false,
             tour_current_station: 0,
+            show_mastery_dashboard: false,
+            mastery_selected_idx: 0,
         }
     }
 
@@ -678,7 +684,46 @@ impl App {
         }
     }
 
+    // --- Mastery Dashboard Modal Methods ---
+
+    pub fn enter_mastery_dashboard(&mut self) {
+        self.show_mastery_dashboard = true;
+        self.show_tour_welcome = false;
+        self.show_tour_modal = false;
+        self.show_reference = false;
+        if self.mode != AppMode::Editing {
+            self.mode = AppMode::Editing;
+        }
+    }
+
+    pub fn exit_mastery_dashboard(&mut self) {
+        self.show_mastery_dashboard = false;
+    }
+
+    pub fn toggle_mastery_dashboard(&mut self) {
+        if self.show_mastery_dashboard {
+            self.exit_mastery_dashboard();
+        } else {
+            self.enter_mastery_dashboard();
+        }
+    }
+
+    pub fn next_mastery_concept(&mut self) {
+        let total = crate::core::reference::list_grammar_concepts().len();
+        if total > 0 {
+            self.mastery_selected_idx = (self.mastery_selected_idx + 1).min(total - 1);
+        }
+    }
+
+    pub fn prev_mastery_concept(&mut self) {
+        self.mastery_selected_idx = self.mastery_selected_idx.saturating_sub(1);
+    }
+
     // --- Key Event Handling ---
+
+    pub fn handle_key(&mut self, key: impl Into<KeyEvent>) {
+        self.on_key(key);
+    }
 
     pub fn on_key(&mut self, key: impl Into<KeyEvent>) {
         let key = key.into();
@@ -727,6 +772,65 @@ impl App {
                 _ => {}
             }
             return;
+        }
+
+        if self.show_mastery_dashboard {
+            let concepts = crate::core::reference::list_grammar_concepts();
+            match key.code {
+                KeyCode::Esc
+                | KeyCode::Char('q')
+                | KeyCode::Char('Q')
+                | KeyCode::Char('m')
+                | KeyCode::Char('M') => {
+                    self.show_mastery_dashboard = false;
+                }
+                KeyCode::Up | KeyCode::Char('k') | KeyCode::Char('K') => {
+                    self.prev_mastery_concept();
+                }
+                KeyCode::Down | KeyCode::Char('j') | KeyCode::Char('J') => {
+                    self.next_mastery_concept();
+                }
+                KeyCode::Enter | KeyCode::Char('r') | KeyCode::Char('R') => {
+                    self.show_mastery_dashboard = false;
+                    self.show_reference = true;
+                    if let Some(c) = concepts.get(self.mastery_selected_idx) {
+                        self.enter_reference_browser();
+                        if let Some(pos) =
+                            self.ref_filtered_topics.iter().position(|&s| s == c.slug)
+                        {
+                            self.ref_selected_idx = pos;
+                        }
+                    }
+                }
+                KeyCode::Char('d') | KeyCode::Char('D') => {
+                    self.show_mastery_dashboard = false;
+                    if let Some(c) = concepts.get(self.mastery_selected_idx) {
+                        self.status_message = Some(format!(
+                            "💡 Launched 5-question micro-drill for {}! Run 'spanglings drill {} -n 5' in your terminal.",
+                            c.title, c.slug
+                        ));
+                    }
+                }
+                KeyCode::Char('w') | KeyCode::Char('W') => {
+                    self.show_mastery_dashboard = false;
+                    self.status_message = Some(
+                        "🔥 Starting adaptive weakness drill! Run 'spanglings drill --weak' in your terminal."
+                            .to_string(),
+                    );
+                }
+                _ => {}
+            }
+            return;
+        }
+
+        if self.mode != AppMode::Searching && self.mode != AppMode::PlacementTest {
+            match key.code {
+                KeyCode::Char('m') | KeyCode::Char('M') => {
+                    self.toggle_mastery_dashboard();
+                    return;
+                }
+                _ => {}
+            }
         }
 
         if self.mode == AppMode::Editing {

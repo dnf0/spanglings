@@ -173,13 +173,13 @@ fn test_drill_items_topic_filtering() {
 #[test]
 fn test_evaluate_drill_answer() {
     let item = DrillItem {
-        topic: "preterite",
-        formula_cue: "stem tuv- + unaccented endings",
-        trigger_sentence: "Anoche yo ____ un problema con el coche.",
-        target_verb: "tener",
-        target_subject: "yo",
-        target: "tuv",
-        explanation: "tener -> tuv-",
+        topic: "preterite".to_string(),
+        formula_cue: "stem tuv- + unaccented endings".to_string(),
+        trigger_sentence: "Anoche yo ____ un problema con el coche.".to_string(),
+        target_verb: "tener".to_string(),
+        target_subject: "yo".to_string(),
+        target: "tuv".to_string(),
+        explanation: "tener -> tuv-".to_string(),
     };
 
     assert_eq!(
@@ -203,13 +203,13 @@ fn test_evaluate_drill_answer() {
 #[test]
 fn test_evaluate_drill_answer_accents() {
     let item = DrillItem {
-        topic: "subjunctive",
-        formula_cue: "irregular subjunctive yo form",
-        trigger_sentence: "Espero que ella me ____ una oportunidad.",
-        target_verb: "dar",
-        target_subject: "ella",
-        target: "dé",
-        explanation: "dar -> dé",
+        topic: "subjunctive".to_string(),
+        formula_cue: "irregular subjunctive yo form".to_string(),
+        trigger_sentence: "Espero que ella me ____ una oportunidad.".to_string(),
+        target_verb: "dar".to_string(),
+        target_subject: "ella".to_string(),
+        target: "dé".to_string(),
+        explanation: "dar -> dé".to_string(),
     };
 
     // Exact accent match
@@ -242,6 +242,9 @@ fn test_cli_drill_count_parsing() {
             topic: None,
             concept: None,
             count: Some(10),
+            weak: false,
+            level: None,
+            track: None,
         })
     );
 
@@ -252,6 +255,32 @@ fn test_cli_drill_count_parsing() {
             topic: Some("subjunctive".to_string()),
             concept: None,
             count: Some(15),
+            weak: false,
+            level: None,
+            track: None,
+        })
+    );
+
+    let cli_flags = Cli::parse_from([
+        "spanglings",
+        "drill",
+        "-w",
+        "-l",
+        "b1",
+        "-t",
+        "2",
+        "--count",
+        "8",
+    ]);
+    assert_eq!(
+        cli_flags.command,
+        Some(Commands::Drill {
+            topic: None,
+            concept: None,
+            count: Some(8),
+            weak: true,
+            level: Some("b1".to_string()),
+            track: Some(2),
         })
     );
 }
@@ -267,8 +296,16 @@ fn test_drill_items_shuffling_randomization() {
     pool2.shuffle(&mut rng);
 
     // With 70+ items, the probability of two independent random 5-sample slices being identical is infinitesimal (< 1 in 10^7)
-    let sample1: Vec<&str> = pool1.iter().take(5).map(|i| i.trigger_sentence).collect();
-    let sample2: Vec<&str> = pool2.iter().take(5).map(|i| i.trigger_sentence).collect();
+    let sample1: Vec<&str> = pool1
+        .iter()
+        .take(5)
+        .map(|i| i.trigger_sentence.as_str())
+        .collect();
+    let sample2: Vec<&str> = pool2
+        .iter()
+        .take(5)
+        .map(|i| i.trigger_sentence.as_str())
+        .collect();
 
     // Verify sample contains valid questions and is non-empty
     assert_eq!(sample1.len(), 5);
@@ -278,13 +315,13 @@ fn test_drill_items_shuffling_randomization() {
 #[test]
 fn test_drill_item_prompt_formatting() {
     let item = DrillItem {
-        topic: "subjunctive",
-        formula_cue: "drop -o -> opposite vowel -a",
-        trigger_sentence: "Dudo que yo ____ los libros en la mesa.",
-        target_verb: "poner",
-        target_subject: "yo",
-        target: "ponga",
-        explanation: "yo pongo -> drop -o -> add -a -> ponga",
+        topic: "subjunctive".to_string(),
+        formula_cue: "drop -o -> opposite vowel -a".to_string(),
+        trigger_sentence: "Dudo que yo ____ los libros en la mesa.".to_string(),
+        target_verb: "poner".to_string(),
+        target_subject: "yo".to_string(),
+        target: "ponga".to_string(),
+        explanation: "yo pongo -> drop -o -> add -a -> ponga".to_string(),
     };
     let formatted = item.format_prompt(1, 5);
     assert!(formatted.contains(
@@ -296,26 +333,26 @@ fn test_drill_item_prompt_formatting() {
 
     // Fallback when no formula cue
     let item_no_cue = DrillItem {
-        topic: "subjunctive",
-        formula_cue: "",
-        trigger_sentence: "Dudo que yo ____.",
-        target_verb: "poner",
-        target_subject: "yo",
-        target: "ponga",
-        explanation: "yo pongo -> ponga",
+        topic: "subjunctive".to_string(),
+        formula_cue: "".to_string(),
+        trigger_sentence: "Dudo que yo ____.".to_string(),
+        target_verb: "poner".to_string(),
+        target_subject: "yo".to_string(),
+        target: "ponga".to_string(),
+        explanation: "yo pongo -> ponga".to_string(),
     };
     let formatted_no_cue = item_no_cue.format_prompt(2, 5);
     assert!(formatted_no_cue.contains("Q2/5 [Subjunctive (wishes, hypotheses, doubt, demands)]"));
 
     // Fallback for unknown topic
     let item_unknown = DrillItem {
-        topic: "custom_topic",
-        formula_cue: "rule 1",
-        trigger_sentence: "Sentence ____",
-        target_verb: "v",
-        target_subject: "s",
-        target: "t",
-        explanation: "e",
+        topic: "custom_topic".to_string(),
+        formula_cue: "rule 1".to_string(),
+        trigger_sentence: "Sentence ____".to_string(),
+        target_verb: "v".to_string(),
+        target_subject: "s".to_string(),
+        target: "t".to_string(),
+        explanation: "e".to_string(),
     };
     let formatted_unknown = item_unknown.format_prompt(3, 5);
     assert!(formatted_unknown.contains("Q3/5 [Custom Topic | rule 1]"));
@@ -324,15 +361,98 @@ fn test_drill_item_prompt_formatting() {
 #[test]
 fn test_drill_live_hint_generation() {
     let item = DrillItem {
-        topic: "subjunctive",
-        formula_cue: "drop -o -> opposite vowel -a",
-        trigger_sentence: "Dudo que yo ____ los libros en la mesa.",
-        target_verb: "poner",
-        target_subject: "yo",
-        target: "ponga",
-        explanation: "yo pongo -> drop -o -> add -a -> ponga",
+        topic: "subjunctive".to_string(),
+        formula_cue: "drop -o -> opposite vowel -a".to_string(),
+        trigger_sentence: "Dudo que yo ____ los libros en la mesa.".to_string(),
+        target_verb: "poner".to_string(),
+        target_subject: "yo".to_string(),
+        target: "ponga".to_string(),
+        explanation: "yo pongo -> drop -o -> add -a -> ponga".to_string(),
     };
     let hint = item.format_hint();
     assert!(hint.contains("💡 Hint:"));
     assert!(hint.contains("yo pongo -> drop -o -> add -a -> ponga"));
+}
+
+#[test]
+fn test_adaptive_weakness_drill_selection() {
+    use spanglings::cli::commands::drill::{select_drill_items, DrillFilter};
+    use spanglings::core::state::AppState;
+
+    let mut state = AppState::default();
+    let now = chrono::Utc::now();
+    // Simulate high failure rate on por_para and subjunctive
+    state.update_concept_mastery("por_para", 1, now);
+    state.update_concept_mastery("por_para", 1, now);
+    state.update_concept_mastery("subjunctive", 1, now);
+
+    let filter = DrillFilter {
+        weak_only: true,
+        topic: None,
+        level: None,
+        track: None,
+        count: 6,
+    };
+
+    let items = select_drill_items(&state, filter);
+    assert_eq!(items.len(), 6);
+    let weak_count = items
+        .iter()
+        .filter(|i| i.topic == "por_para" || i.topic == "subjunctive")
+        .count();
+    assert!(
+        weak_count > 0,
+        "Adaptive drill selection should sample weak concepts"
+    );
+}
+
+#[test]
+fn test_drill_level_and_track_filtering() {
+    use spanglings::cli::commands::drill::{select_drill_items, DrillFilter};
+    use spanglings::core::curriculum::Level;
+    use spanglings::core::state::AppState;
+
+    let state = AppState::default();
+    let filter = DrillFilter {
+        weak_only: false,
+        topic: None,
+        level: Some(Level::B1),
+        track: Some(1),
+        count: 5,
+    };
+
+    let items = select_drill_items(&state, filter);
+    assert_eq!(items.len(), 5);
+}
+
+#[test]
+fn test_drill_concept_mastery_update_live() {
+    use spanglings::core::state::AppState;
+
+    let mut state = AppState::default();
+    let now = chrono::Utc::now();
+
+    // Direct correct answer (quality 5)
+    state.update_concept_mastery("preterite", 5, now);
+    let score1 = state
+        .concept_mastery
+        .get("preterite")
+        .unwrap()
+        .mastery_score;
+    assert!(score1 > 0.0);
+
+    // Second correct answer boosts score further
+    state.update_concept_mastery("preterite", 5, now);
+    let score2 = state
+        .concept_mastery
+        .get("preterite")
+        .unwrap()
+        .mastery_score;
+    assert!(score2 > score1);
+
+    // Incorrect answer (quality 1) decreases score and adds lapse
+    state.update_concept_mastery("preterite", 1, now);
+    let mastery = state.concept_mastery.get("preterite").unwrap();
+    assert!(mastery.mastery_score < score2);
+    assert_eq!(mastery.lapses, 1);
 }

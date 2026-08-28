@@ -72,13 +72,13 @@ fn test_blitz_items_rich_fields() {
 #[test]
 fn test_blitz_prompt_formatting() {
     let item = BlitzItem {
-        topic: "subjunctive",
-        formula_cue: "drop -o -> opposite vowel -a",
-        trigger_sentence: "Dudo que yo ____ los libros en la mesa.",
-        target_verb: "poner",
-        target_subject: "yo",
-        target: "ponga",
-        explanation: "yo pongo -> drop -o -> add -a -> ponga",
+        topic: "subjunctive".to_string(),
+        formula_cue: "drop -o -> opposite vowel -a".to_string(),
+        trigger_sentence: "Dudo que yo ____ los libros en la mesa.".to_string(),
+        target_verb: "poner".to_string(),
+        target_subject: "yo".to_string(),
+        target: "ponga".to_string(),
+        explanation: "yo pongo -> drop -o -> add -a -> ponga".to_string(),
     };
     let formatted = item.format_prompt(45, 3);
     assert!(formatted
@@ -89,13 +89,13 @@ fn test_blitz_prompt_formatting() {
 
     // Fallback when no formula cue
     let item_no_cue = BlitzItem {
-        topic: "subjunctive",
-        formula_cue: "",
-        trigger_sentence: "Dudo que yo ____.",
-        target_verb: "poner",
-        target_subject: "yo",
-        target: "ponga",
-        explanation: "yo pongo -> ponga",
+        topic: "subjunctive".to_string(),
+        formula_cue: "".to_string(),
+        trigger_sentence: "Dudo que yo ____.".to_string(),
+        target_verb: "poner".to_string(),
+        target_subject: "yo".to_string(),
+        target: "ponga".to_string(),
+        explanation: "yo pongo -> ponga".to_string(),
     };
     let formatted_no_cue = item_no_cue.format_prompt(30, 0);
     assert!(formatted_no_cue.contains(
@@ -104,13 +104,13 @@ fn test_blitz_prompt_formatting() {
 
     // Fallback for unknown topic
     let item_unknown = BlitzItem {
-        topic: "custom_topic",
-        formula_cue: "rule 1",
-        trigger_sentence: "Sentence ____",
-        target_verb: "v",
-        target_subject: "s",
-        target: "t",
-        explanation: "e",
+        topic: "custom_topic".to_string(),
+        formula_cue: "rule 1".to_string(),
+        trigger_sentence: "Sentence ____".to_string(),
+        target_verb: "v".to_string(),
+        target_subject: "s".to_string(),
+        target: "t".to_string(),
+        explanation: "e".to_string(),
     };
     let formatted_unknown = item_unknown.format_prompt(15, 1);
     assert!(formatted_unknown.contains("[15s remaining | Streak: 1] [Custom Topic | rule 1]"));
@@ -119,17 +119,45 @@ fn test_blitz_prompt_formatting() {
 #[test]
 fn test_evaluate_blitz_answer_case_and_whitespace() {
     let item = BlitzItem {
-        topic: "preterite",
-        formula_cue: "stem tuv- + unaccented endings",
-        trigger_sentence: "Anoche yo ____ una reunión urgente.",
-        target_verb: "tener",
-        target_subject: "yo",
-        target: "tuv",
-        explanation: "tener -> tuv",
+        topic: "preterite".to_string(),
+        formula_cue: "stem tuv- + unaccented endings".to_string(),
+        trigger_sentence: "Anoche yo ____ una reunión urgente.".to_string(),
+        target_verb: "tener".to_string(),
+        target_subject: "yo".to_string(),
+        target: "tuv".to_string(),
+        explanation: "tener -> tuv".to_string(),
     };
 
     assert!(evaluate_blitz_answer(&item, "tuv"));
     assert!(evaluate_blitz_answer(&item, "TUV"));
     assert!(evaluate_blitz_answer(&item, "  tuv  \n"));
     assert!(!evaluate_blitz_answer(&item, "ten"));
+}
+
+#[test]
+fn test_cli_blitz_flag_parsing() {
+    use clap::Parser;
+    use spanglings::cli::{Cli, Commands};
+
+    let cli = Cli::parse_from([
+        "spanglings",
+        "blitz",
+        "-t",
+        "1",
+        "-w",
+        "-l",
+        "b1",
+        "-s",
+        "45",
+    ]);
+    assert_eq!(
+        cli.command,
+        Some(Commands::Blitz {
+            seconds: Some(45),
+            topic: None,
+            weak: true,
+            level: Some("b1".to_string()),
+            track: Some(1),
+        })
+    );
 }

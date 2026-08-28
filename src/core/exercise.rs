@@ -1,4 +1,5 @@
 use crate::core::curriculum::Level;
+use crate::core::generator::DrillItem;
 use serde::{Deserialize, Serialize};
 use std::fmt;
 use std::path::{Path, PathBuf};
@@ -332,5 +333,184 @@ impl Exercise {
             grammar_focus,
             contrast_note,
         })
+    }
+
+    pub fn to_drill_items(&self) -> Vec<DrillItem> {
+        let topic = if let Some(concept) = crate::core::reference::get_grammar_concept(&self.topic)
+        {
+            concept.slug.to_string()
+        } else if let Some(concept) = self
+            .concept_tags
+            .iter()
+            .find_map(|t| crate::core::reference::get_grammar_concept(t))
+        {
+            concept.slug.to_string()
+        } else if !self.topic.is_empty() {
+            self.topic.clone()
+        } else {
+            "general".to_string()
+        };
+
+        // Find the trigger sentence containing cloze blank ___
+        let mut trigger_sentence = String::new();
+        for line in self.raw_content.lines() {
+            let trimmed = line.trim();
+            if trimmed.contains("___") {
+                trigger_sentence = trimmed.to_string();
+                break;
+            }
+        }
+        if trigger_sentence.is_empty() {
+            let mut in_exercise = false;
+            for line in self.raw_content.lines() {
+                let trimmed = line.trim();
+                if trimmed.starts_with("### Exercise") {
+                    in_exercise = true;
+                    continue;
+                }
+                if in_exercise {
+                    if trimmed.starts_with("<!--") || trimmed.is_empty() || trimmed.starts_with('#')
+                    {
+                        continue;
+                    }
+                    trigger_sentence = trimmed.to_string();
+                    break;
+                }
+            }
+        }
+        if trigger_sentence.is_empty() {
+            trigger_sentence = format!("{} ____", self.title);
+        }
+
+        // Extract target verb from prompt/parentheses or instructions if available
+        let mut target_verb = String::new();
+        if let Some(paren_start) = trigger_sentence.find('(') {
+            if let Some(paren_end) = trigger_sentence[paren_start..].find(')') {
+                let inside = &trigger_sentence[paren_start + 1..paren_start + paren_end];
+                if !inside.contains("___") && inside.len() < 30 {
+                    target_verb = inside.trim().to_string();
+                }
+            }
+        }
+        if target_verb.is_empty() {
+            for line in self.raw_content.lines() {
+                let trimmed = line.trim();
+                if trimmed.contains("Conjugate the verb *(")
+                    || trimmed.contains("Conjugate the verb (")
+                    || trimmed.contains("Conjugate *(")
+                    || trimmed.contains("Conjugate (")
+                {
+                    if let Some(start) = trimmed.find('(') {
+                        if let Some(end) = trimmed[start..].find(')') {
+                            let candidate = &trimmed[start + 1..start + end];
+                            let cleaned = candidate.trim_matches(|c| c == '*' || c == ' ');
+                            if !cleaned.is_empty() && cleaned.len() < 30 {
+                                target_verb = cleaned.to_string();
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        if target_verb.is_empty() {
+            target_verb = "n/a".to_string();
+        }
+
+        // Extract target subject
+        let mut target_subject = String::new();
+        let common_subjects = [
+            "nosotras", "nosotros", "vosotras", "vosotros", "ustedes", "ellos", "ellas", "usted",
+            "ella", "vos", "él", "tú", "yo",
+        ];
+        for line in self.raw_content.lines() {
+            let lower = line.to_lowercase();
+            if lower.contains("person")
+                || lower.contains("singular")
+                || lower.contains("plural")
+                || lower.contains("subject")
+            {
+                for &subj in &common_subjects {
+                    let needle1 = format!("(*{subj}*)");
+                    let needle2 = format!("({subj})");
+                    let needle3 = format!("*{subj}*");
+                    if lower.contains(&needle1)
+                        || lower.contains(&needle2)
+                        || lower.contains(&needle3)
+                    {
+                        target_subject = subj.to_string();
+                        break;
+                    }
+                }
+                if !target_subject.is_empty() {
+                    break;
+                }
+            }
+        }
+        if target_subject.is_empty() {
+            let lower_sentence = trigger_sentence.to_lowercase();
+            for &subj in &common_subjects {
+                if lower_sentence.starts_with(subj) {
+                    target_subject = subj.to_string();
+                    break;
+                }
+            }
+        }
+        if target_subject.is_empty() {
+            target_subject = "n/a".to_string();
+        }
+
+        let target = if !self.solution.is_empty() {
+            self.solution.clone()
+        } else {
+            "n/a".to_string()
+        };
+
+        let formula_cue = if let Some(ref contrast) = self.contrast_note {
+            contrast.clone()
+        } else if let Some(ref focus) = self.grammar_focus {
+            focus.clone()
+        } else if let Some(hint) = self.hints.first() {
+            hint.clone()
+        } else {
+            self.title.clone()
+        };
+
+        let explanation = if let Some(ref focus) = self.grammar_focus {
+            if let Some(ref contrast) = self.contrast_note {
+                format!("{} ({})", focus, contrast)
+            } else if let Some(hint) = self.hints.first() {
+                let clean_hint = hint.strip_prefix("Tier 1:").unwrap_or(hint).trim();
+                format!("{}. {}", focus, clean_hint)
+            } else {
+                focus.clone()
+            }
+        } else if let Some(hint) = self.hints.get(1).or_else(|| self.hints.first()) {
+            hint.strip_prefix("Tier 1:")
+                .or_else(|| hint.strip_prefix("Tier 2:"))
+                .unwrap_or(hint)
+                .trim()
+                .to_string()
+        } else if let Some(rule) = self.diagnostic_rules.first() {
+            rule.message.clone()
+        } else {
+            format!("{}: {}", self.id, self.title)
+        };
+
+        let explanation = if explanation.is_empty() {
+            format!("{}: {}", self.id, self.title)
+        } else {
+            explanation
+        };
+
+        vec![DrillItem {
+            topic,
+            formula_cue,
+            trigger_sentence,
+            target_verb,
+            target_subject,
+            target,
+            explanation,
+        }]
     }
 }
