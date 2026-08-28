@@ -334,8 +334,8 @@ pub fn run_blitz(
             println!(
                 "  • {:<16} {:>3}% ➔ {:>3}% {}",
                 format!("{}:", title),
-                format!("{}%", old_pct),
-                format!("{}%", new_pct),
+                old_pct,
+                new_pct,
                 delta_str
             );
         }
