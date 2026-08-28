@@ -43,6 +43,6 @@ graphify-out/
 site/
 
 # Node & Extension build artifacts
-node_modules/
+**/node_modules/
 editors/vscode/dist/
 editors/vscode/out/
