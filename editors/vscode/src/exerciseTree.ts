@@ -2,7 +2,7 @@ import * as vscode from 'vscode';
 import { execFile } from 'child_process';
 import { promisify } from 'util';
 import * as path from 'path';
-import { resolveExercisePath } from './pathUtils';
+import { resolveExercisePath, getEffectiveWorkspaceRoot } from './pathUtils';
 
 const execFileAsync = promisify(execFile);
 
@@ -72,7 +72,7 @@ export class SpanglingsTreeProvider implements vscode.TreeDataProvider<TreeItemN
   private async loadExercises(): Promise<void> {
     const config = vscode.workspace.getConfiguration('spanglings');
     const executablePath = config.get<string>('executablePath', 'spanglings');
-    const workspaceRoot = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
+    const workspaceRoot = getEffectiveWorkspaceRoot();
 
     try {
       const { stdout } = await execFileAsync(executablePath, ['list', '--json'], {
@@ -94,8 +94,7 @@ export class SpanglingsTreeProvider implements vscode.TreeDataProvider<TreeItemN
       await this.loadExercises();
     }
 
-    const workspaceRoot =
-      vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || process.cwd();
+    const workspaceRoot = getEffectiveWorkspaceRoot();
 
     if (!element) {
       // Root level: Group exercises by topic/track

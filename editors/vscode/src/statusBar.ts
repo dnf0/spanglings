@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import { execFile } from 'child_process';
 import { promisify } from 'util';
+import { getEffectiveWorkspaceRoot } from './pathUtils';
 
 const execFileAsync = promisify(execFile);
 
@@ -51,7 +52,7 @@ export class SpanglingsStatusBar implements vscode.Disposable {
 
     const config = vscode.workspace.getConfiguration('spanglings');
     const executablePath = config.get<string>('executablePath', 'spanglings');
-    const cwd = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
+    const cwd = getEffectiveWorkspaceRoot();
 
     try {
       const { stdout } = await execFileAsync(executablePath, ['progress', '--json'], {

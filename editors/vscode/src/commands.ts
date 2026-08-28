@@ -2,9 +2,11 @@ import * as vscode from 'vscode';
 import { execFile } from 'child_process';
 import { promisify } from 'util';
 import * as fs from 'fs';
+import * as path from 'path';
+import * as os from 'os';
 import { SpanglingsTreeProvider, RawExercise } from './exerciseTree';
 import { SpanglingsStatusBar } from './statusBar';
-import { resolveExercisePath } from './pathUtils';
+import { resolveExercisePath, getEffectiveWorkspaceRoot } from './pathUtils';
 
 const execFileAsync = promisify(execFile);
 
@@ -18,27 +20,30 @@ export function registerCommands(
     vscode.commands.registerCommand('spanglings.openExerciseFile', async (relPath: string) => {
       const config = vscode.workspace.getConfiguration('spanglings');
       const executablePath = config.get<string>('executablePath', 'spanglings');
-      const workspaceRoot =
-        vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || process.cwd();
+      const workspaceRoot = getEffectiveWorkspaceRoot();
 
       let resolved = resolveExercisePath(relPath, workspaceRoot);
 
       if (!fs.existsSync(resolved)) {
+        const targetDir = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || path.join(os.homedir(), 'spanglings');
         const choice = await vscode.window.showInformationMessage(
-          'Exercise file was not found locally. Would you like to initialize the Spanglings exercise workspace here?',
+          `Spanglings exercises were not found on disk. Would you like to initialize them in "${targetDir}"?`,
           'Initialize Exercises',
           'Cancel'
         );
 
         if (choice === 'Initialize Exercises') {
           try {
-            await execFileAsync(executablePath, ['init'], { cwd: workspaceRoot });
+            if (!fs.existsSync(targetDir)) {
+              fs.mkdirSync(targetDir, { recursive: true });
+            }
+            await execFileAsync(executablePath, ['init'], { cwd: targetDir });
             vscode.window.showInformationMessage('Spanglings exercises initialized successfully! 🎉');
             await Promise.all([
               treeProvider?.refresh(),
               statusBar?.update()
             ]);
-            resolved = resolveExercisePath(relPath, workspaceRoot);
+            resolved = resolveExercisePath(relPath, targetDir);
           } catch (e) {
             vscode.window.showErrorMessage(
               `Failed to initialize exercises: ${e instanceof Error ? e.message : String(e)}`
@@ -70,12 +75,14 @@ export function registerCommands(
     vscode.commands.registerCommand('spanglings.initExercises', async () => {
       const config = vscode.workspace.getConfiguration('spanglings');
       const executablePath = config.get<string>('executablePath', 'spanglings');
-      const workspaceRoot =
-        vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || process.cwd();
+      const targetDir = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || path.join(os.homedir(), 'spanglings');
 
       try {
-        await execFileAsync(executablePath, ['init'], { cwd: workspaceRoot });
-        vscode.window.showInformationMessage('Spanglings exercises initialized successfully! 🎉');
+        if (!fs.existsSync(targetDir)) {
+          fs.mkdirSync(targetDir, { recursive: true });
+        }
+        await execFileAsync(executablePath, ['init'], { cwd: targetDir });
+        vscode.window.showInformationMessage(`Spanglings exercises initialized successfully in ${targetDir}! 🎉`);
         await Promise.all([
           treeProvider?.refresh(),
           statusBar?.update()
@@ -93,8 +100,7 @@ export function registerCommands(
     vscode.commands.registerCommand('spanglings.openNextExercise', async () => {
       const config = vscode.workspace.getConfiguration('spanglings');
       const executablePath = config.get<string>('executablePath', 'spanglings');
-      const workspaceRoot =
-        vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || process.cwd();
+      const workspaceRoot = getEffectiveWorkspaceRoot();
 
       try {
         const { stdout } = await execFileAsync(executablePath, ['list', '--json'], {
@@ -135,8 +141,7 @@ export function registerCommands(
 
       const config = vscode.workspace.getConfiguration('spanglings');
       const executablePath = config.get<string>('executablePath', 'spanglings');
-      const workspaceRoot =
-        vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || process.cwd();
+      const workspaceRoot = getEffectiveWorkspaceRoot();
 
       try {
         const { stdout } = await execFileAsync(
@@ -186,8 +191,7 @@ export function registerCommands(
 
       const config = vscode.workspace.getConfiguration('spanglings');
       const executablePath = config.get<string>('executablePath', 'spanglings');
-      const workspaceRoot =
-        vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || process.cwd();
+      const workspaceRoot = getEffectiveWorkspaceRoot();
 
       try {
         const { stdout } = await execFileAsync(

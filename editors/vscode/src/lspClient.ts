@@ -4,6 +4,7 @@ import {
   LanguageClientOptions,
   ServerOptions
 } from 'vscode-languageclient/node';
+import { getEffectiveWorkspaceRoot } from './pathUtils';
 
 export class SpanglingsLspClient {
   private client: LanguageClient | undefined;
@@ -35,12 +36,12 @@ export class SpanglingsLspClient {
         args.push('--strict-accents');
       }
 
-      const cwd = vscode.workspace.workspaceFolders?.[0]?.uri.fsPath;
+      const cwd = getEffectiveWorkspaceRoot();
 
       const serverOptions: ServerOptions = {
         command: executablePath,
         args,
-        options: cwd ? { cwd } : undefined
+        options: { cwd }
       };
 
       const clientOptions: LanguageClientOptions = {
