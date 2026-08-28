@@ -1,3 +1,4 @@
+pub mod arcade;
 pub mod conjugator;
 pub mod curriculum;
 pub mod embedded;
