@@ -94,6 +94,27 @@ fn test_cli_parsing_subcommands() {
         })
     );
 
+    let cli_arcade = Cli::parse_from([
+        "spanglings",
+        "arcade",
+        "por-para",
+        "--weak",
+        "-n",
+        "10",
+        "--sound",
+    ]);
+    assert_eq!(
+        cli_arcade.command,
+        Some(Commands::Arcade {
+            topic: Some("por-para".to_string()),
+            showdown: None,
+            concept: None,
+            weak: true,
+            count: Some(10),
+            sound: true,
+        })
+    );
+
     let cli_check = Cli::parse_from(["spanglings", "check", "b1_subj_01"]);
     assert_eq!(
         cli_check.command,
