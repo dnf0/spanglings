@@ -4,7 +4,7 @@ use crate::core::placement::{
     evaluate_placement_test, get_placement_battery, PlacementQuestion, PlacementResult,
 };
 use crate::core::reference::list_reference_topics;
-use crate::core::state::{AppState, EvaluatedLevel};
+use crate::core::state::{AppState, EvaluatedLevel, ExerciseStat};
 use crate::engine::accents::AccentMode;
 use crate::engine::validator::{validate_submission, ValidationResult};
 use chrono::Utc;
@@ -75,15 +75,34 @@ impl App {
         Self::new_with_state(exercises, strict_accents, state)
     }
 
-    pub fn new_with_state(exercises: Vec<Exercise>, strict_accents: bool, state: AppState) -> Self {
+    pub fn new_with_state(
+        mut exercises: Vec<Exercise>,
+        strict_accents: bool,
+        state: AppState,
+    ) -> Self {
+        for ex in &mut exercises {
+            if state.is_completed(&ex.id) {
+                ex.is_done = true;
+            }
+        }
         let count = exercises.len();
         let filtered_indices = (0..count).collect();
         let ref_topics: Vec<&'static str> = list_reference_topics().to_vec();
         let ref_filtered_topics = ref_topics.clone();
         let show_tour_welcome = !state.tour_completed;
+
+        let start_index = if let Some(ref curr_id) = state.current_exercise {
+            exercises
+                .iter()
+                .position(|e| &e.id == curr_id)
+                .unwrap_or_else(|| exercises.iter().position(|e| !e.is_done).unwrap_or(0))
+        } else {
+            exercises.iter().position(|e| !e.is_done).unwrap_or(0)
+        };
+
         Self {
             exercises,
-            current_index: 0,
+            current_index: start_index,
             input_buffer: String::new(),
             cursor_position: 0,
             mode: AppMode::Editing,
@@ -150,6 +169,11 @@ impl App {
         }
         self.current_index = (self.current_index + 1) % len;
         self.reset_current_state();
+        let ex_id = self.current_exercise().map(|e| e.id.clone());
+        if let Some(id) = ex_id {
+            self.state.current_exercise = Some(id);
+            let _ = self.state.save();
+        }
     }
 
     pub fn prev_exercise(&mut self) {
@@ -163,6 +187,11 @@ impl App {
             self.current_index -= 1;
         }
         self.reset_current_state();
+        let ex_id = self.current_exercise().map(|e| e.id.clone());
+        if let Some(id) = ex_id {
+            self.state.current_exercise = Some(id);
+            let _ = self.state.save();
+        }
     }
 
     fn active_list_len(&self) -> usize {
@@ -193,6 +222,11 @@ impl App {
         }
         self.mode = AppMode::Editing;
         self.reset_current_state();
+        let ex_id = self.current_exercise().map(|e| e.id.clone());
+        if let Some(id) = ex_id {
+            self.state.current_exercise = Some(id);
+            let _ = self.state.save();
+        }
     }
 
     pub fn update_search_filter(&mut self) {
@@ -287,6 +321,7 @@ impl App {
         let Some(ex) = self.current_exercise() else {
             return;
         };
+        let exercise_id = ex.id.clone();
         let accent_mode = if self.strict_accents {
             AccentMode::Strict
         } else {
@@ -298,8 +333,24 @@ impl App {
             if let Some(e) = self.current_exercise_mut() {
                 e.is_done = true;
             }
+            let quality = if self.show_hint { 4 } else { 5 };
+            self.state.mark_completed(&exercise_id);
+            self.state.update_srs(&exercise_id, quality, Utc::now());
+            self.state.current_exercise = Some(exercise_id);
+            let _ = self.state.save();
             self.status_message = Some("Correct!".to_string());
         } else {
+            let stat = self
+                .state
+                .stats
+                .entry(exercise_id)
+                .or_insert_with(|| ExerciseStat {
+                    attempts: 0,
+                    completed_at: None,
+                    hints_used: 0,
+                });
+            stat.attempts += 1;
+            let _ = self.state.save();
             self.status_message = Some("Incorrect. Check diagnostics.".to_string());
         }
         self.last_result = Some(result);
@@ -309,6 +360,16 @@ impl App {
         self.show_hint = !self.show_hint;
         if self.show_hint {
             self.show_reference = false;
+            let ex_id = self.current_exercise().map(|e| e.id.clone());
+            if let Some(id) = ex_id {
+                let stat = self.state.stats.entry(id).or_insert_with(|| ExerciseStat {
+                    attempts: 0,
+                    completed_at: None,
+                    hints_used: 0,
+                });
+                stat.hints_used += 1;
+                let _ = self.state.save();
+            }
         }
     }
 
@@ -322,6 +383,11 @@ impl App {
     pub fn reset(&mut self) {
         if let Some(e) = self.current_exercise_mut() {
             e.is_done = false;
+        }
+        let ex_id = self.current_exercise().map(|e| e.id.clone());
+        if let Some(id) = ex_id {
+            self.state.unmark_completed(&id);
+            let _ = self.state.save();
         }
         self.reset_current_state();
     }
@@ -551,6 +617,11 @@ impl App {
             let mut total_marked = 0;
             for &lvl in &res.passed_levels {
                 total_marked += self.state.fast_track_level(lvl, &self.exercises);
+            }
+            for ex in &mut self.exercises {
+                if self.state.is_completed(&ex.id) {
+                    ex.is_done = true;
+                }
             }
             let _ = self.state.save();
             self.placement_fast_tracked = true;

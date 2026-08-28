@@ -5,6 +5,15 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.3] - 2026-08-28
+
+### Fixed
+- **TUI Progress Persistence & State Synchronization**:
+  - Connected `spanglings tui` to `AppState` persistence engine (`state.json`), ensuring exercise completions, attempts, hints used, and SM-2 spaced repetition (SRS) schedules are immediately saved on answer evaluation.
+  - Automatically restores completed exercise indicators (`✓ DONE`) across all views and resumes the cursor at the last active or next uncompleted exercise on startup.
+  - Synchronized interactive placement test fast-tracking so passed levels instantly update both persistent state and active in-memory exercise models.
+  - Added full test coverage for TUI session restore and persistence roundtrips.
+
 ## [0.4.2] - 2026-08-28
 
 ### Fixed

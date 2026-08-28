@@ -145,7 +145,9 @@ fn draw_header(frame: &mut Frame, app: &App, area: Rect) {
             Span::styled(" EMPTY ", Style::default().fg(Color::DarkGray)),
         )
     } else {
-        let is_done = app.current_exercise().is_some_and(|e| e.is_done);
+        let is_done = app
+            .current_exercise()
+            .is_some_and(|e| e.is_done || app.state.is_completed(&e.id));
         let status = if is_done {
             Span::styled(
                 " ✓ DONE ",
