@@ -5,19 +5,33 @@ use std::time::{Duration, Instant};
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct BlitzItem {
-    pub topic: &'static str,
-    pub formula_cue: &'static str,
-    pub trigger_sentence: &'static str,
-    pub target_verb: &'static str,
-    pub target_subject: &'static str,
-    pub target: &'static str,
-    pub explanation: &'static str,
+    pub topic: String,
+    pub formula_cue: String,
+    pub trigger_sentence: String,
+    pub target_verb: String,
+    pub target_subject: String,
+    pub target: String,
+    pub explanation: String,
+}
+
+impl From<crate::core::generator::DrillItem> for BlitzItem {
+    fn from(item: crate::core::generator::DrillItem) -> Self {
+        Self {
+            topic: item.topic,
+            formula_cue: item.formula_cue,
+            trigger_sentence: item.trigger_sentence,
+            target_verb: item.target_verb,
+            target_subject: item.target_subject,
+            target: item.target,
+            explanation: item.explanation,
+        }
+    }
 }
 
 impl BlitzItem {
     pub fn format_prompt(&self, remaining_secs: u64, streak: usize) -> String {
         let concept_header =
-            if let Some(concept) = crate::core::reference::get_grammar_concept(self.topic) {
+            if let Some(concept) = crate::core::reference::get_grammar_concept(&self.topic) {
                 if !concept.gloss.is_empty() {
                     format!("{} ({})", concept.title, concept.gloss)
                 } else {
@@ -69,15 +83,7 @@ pub struct BlitzResult {
 pub fn get_blitz_items(topic_filter: Option<&str>) -> Vec<BlitzItem> {
     crate::cli::commands::drill::get_drill_items(topic_filter)
         .into_iter()
-        .map(|item| BlitzItem {
-            topic: item.topic,
-            formula_cue: item.formula_cue,
-            trigger_sentence: item.trigger_sentence,
-            target_verb: item.target_verb,
-            target_subject: item.target_subject,
-            target: item.target,
-            explanation: item.explanation,
-        })
+        .map(BlitzItem::from)
         .collect()
 }
 
@@ -95,16 +101,54 @@ pub fn evaluate_blitz_answer(item: &BlitzItem, user_input: &str) -> bool {
         == crate::engine::accents::strip_accents(&clean_target)
 }
 
-pub fn run_blitz(duration_secs: Option<u64>, topic: Option<&str>) -> anyhow::Result<BlitzResult> {
+pub fn run_blitz(
+    duration_secs: Option<u64>,
+    topic: Option<&str>,
+    weak: bool,
+    level: Option<&str>,
+    track: Option<usize>,
+) -> anyhow::Result<BlitzResult> {
+    let parsed_level = level
+        .map(|l| l.parse::<crate::core::curriculum::Level>())
+        .transpose()?;
+    let mut state = crate::core::state::AppState::load().unwrap_or_default();
+    let initial_masteries = state.get_concept_mastery_scores();
+
     let duration_limit = Duration::from_secs(duration_secs.unwrap_or(60));
-    let mut items = get_blitz_items(topic);
+    let filter = crate::cli::commands::drill::DrillFilter {
+        weak_only: weak,
+        topic: topic.map(|s| s.to_string()),
+        level: parsed_level,
+        track,
+        count: 100,
+    };
+
+    let drill_items = crate::cli::commands::drill::select_drill_items(&state, filter);
+    let mut items: Vec<BlitzItem> = if !drill_items.is_empty() {
+        drill_items.into_iter().map(BlitzItem::from).collect()
+    } else {
+        get_blitz_items(topic)
+    };
+
     if items.is_empty() {
-        anyhow::bail!("No blitz items found for topic: {:?}", topic);
+        anyhow::bail!("No blitz items found for the given criteria");
     }
 
     // Shuffle items randomly so each blitz run is fresh
     let mut rng = rand::thread_rng();
     items.shuffle(&mut rng);
+
+    let topic_display = if weak {
+        "Weakest Concepts (Adaptive)".to_string()
+    } else if let Some(t) = topic {
+        t.to_string()
+    } else if let Some(ref lvl) = parsed_level {
+        format!("Level {}", lvl)
+    } else if let Some(tr) = track {
+        format!("Track {}", tr)
+    } else {
+        "All Mixed Topics".to_string()
+    };
 
     println!(
         "{}",
@@ -121,15 +165,16 @@ pub fn run_blitz(duration_secs: Option<u64>, topic: Option<&str>) -> anyhow::Res
     println!(
         "Time limit: {} seconds | Topic: {}",
         duration_limit.as_secs().to_string().yellow().bold(),
-        topic.unwrap_or("All Mixed Topics").cyan().bold()
+        topic_display.cyan().bold()
     );
     println!("Answer as many as you can before the timer expires! Press Ctrl+C to abort.\n");
 
-    if let Some(sheet) = crate::cli::commands::drill::get_topic_cheat_sheet(topic.unwrap_or("all"))
-    {
-        println!("{}", "--- [TOPIC CHEAT SHEET] ---".yellow().bold());
-        println!("{}\n", sheet.cyan());
-        println!("{}", "---------------------------".yellow());
+    if let Some(t) = topic {
+        if let Some(sheet) = crate::cli::commands::drill::get_topic_cheat_sheet(t) {
+            println!("{}", "--- [TOPIC CHEAT SHEET] ---".yellow().bold());
+            println!("{}\n", sheet.cyan());
+            println!("{}", "---------------------------".yellow());
+        }
     }
 
     let stdin = io::stdin();
@@ -140,11 +185,13 @@ pub fn run_blitz(duration_secs: Option<u64>, topic: Option<&str>) -> anyhow::Res
     let mut correct: usize = 0;
     let mut current_streak: usize = 0;
     let mut max_streak: usize = 0;
+    let mut attempted_topics = Vec::new();
 
     let mut index = 0;
     'blitz: while start_time.elapsed() < duration_limit {
         let item = &items[index % items.len()];
         index += 1;
+        let mut hint_used = false;
 
         loop {
             let remaining = duration_limit.saturating_sub(start_time.elapsed());
@@ -177,20 +224,29 @@ pub fn run_blitz(duration_secs: Option<u64>, topic: Option<&str>) -> anyhow::Res
             }
 
             if trimmed.eq_ignore_ascii_case("?") || trimmed.eq_ignore_ascii_case("hint") {
+                hint_used = true;
                 println!("  💡 Hint: {}\n", item.explanation.yellow());
                 continue;
             }
 
+            let now = chrono::Utc::now();
+            attempted_topics.push(item.topic.clone());
             total_answered += 1;
+
             if evaluate_blitz_answer(item, trimmed) {
                 current_streak += 1;
                 if current_streak > max_streak {
                     max_streak = current_streak;
                 }
                 correct += 1;
+                let quality = if hint_used { 3 } else { 5 };
+                state.update_concept_mastery(&item.topic, quality, now);
+                let _ = state.save();
                 println!("  {} Correct!\n", "✓".green().bold());
             } else {
                 current_streak = 0;
+                state.update_concept_mastery(&item.topic, 1, now);
+                let _ = state.save();
                 println!(
                     "  {} Incorrect. Expected: '{}' ({})\n",
                     "✗".red().bold(),
@@ -242,6 +298,48 @@ pub fn run_blitz(duration_secs: Option<u64>, topic: Option<&str>) -> anyhow::Res
         "{}",
         "==========================================================".blue()
     );
+
+    let final_masteries = state.get_concept_mastery_scores();
+    let touched_topics: std::collections::BTreeSet<String> = attempted_topics.into_iter().collect();
+    if !touched_topics.is_empty() {
+        println!("\n📊 Concept Mastery Progress:");
+        for topic in &touched_topics {
+            let old_score = initial_masteries.get(topic).copied().unwrap_or(0.0);
+            let new_score = final_masteries.get(topic).copied().unwrap_or(0.0);
+            let old_pct = (old_score * 100.0).round() as i32;
+            let new_pct = (new_score * 100.0).round() as i32;
+            let delta = new_pct - old_pct;
+            let title = if let Some(concept) = crate::core::reference::get_grammar_concept(topic) {
+                concept.title.to_string()
+            } else {
+                let parts: Vec<String> = topic
+                    .split(['_', '-'])
+                    .map(|word| {
+                        let mut chars = word.chars();
+                        match chars.next() {
+                            None => String::new(),
+                            Some(f) => f.to_uppercase().collect::<String>() + chars.as_str(),
+                        }
+                    })
+                    .collect();
+                parts.join(" ")
+            };
+            let delta_str = if delta > 0 {
+                format!("(+{}%)", delta).green().bold()
+            } else if delta < 0 {
+                format!("({}%)", delta).red().bold()
+            } else {
+                "(±0%)".dimmed()
+            };
+            println!(
+                "  • {:<16} {:>3}% ➔ {:>3}% {}",
+                format!("{}:", title),
+                format!("{}%", old_pct),
+                format!("{}%", new_pct),
+                delta_str
+            );
+        }
+    }
 
     Ok(BlitzResult {
         total_answered,

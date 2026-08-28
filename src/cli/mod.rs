@@ -53,6 +53,15 @@ pub enum Commands {
         /// Number of drill questions to ask (default: 5)
         #[arg(short = 'n', long)]
         count: Option<usize>,
+        /// Focus drill on user's weakest concepts based on mastery scores
+        #[arg(short = 'w', long)]
+        weak: bool,
+        /// Filter by CEFR level (e.g. B1, B2, C1)
+        #[arg(short, long)]
+        level: Option<String>,
+        /// Filter by track index (e.g. 1..=6)
+        #[arg(short, long)]
+        track: Option<usize>,
     },
     /// Launch 60-second rapid-fire blitz speed drill
     Blitz {
@@ -60,8 +69,17 @@ pub enum Commands {
         #[arg(short, long)]
         seconds: Option<u64>,
         /// Filter blitz drills by topic
-        #[arg(short, long)]
+        #[arg(long)]
         topic: Option<String>,
+        /// Focus blitz on user's weakest concepts based on mastery scores
+        #[arg(short = 'w', long)]
+        weak: bool,
+        /// Filter by CEFR level (e.g. B1, B2, C1)
+        #[arg(short, long)]
+        level: Option<String>,
+        /// Filter by track index (e.g. 1..=6)
+        #[arg(short, long)]
+        track: Option<usize>,
     },
     /// Launch an SM-2 spaced repetition review session
     Review,

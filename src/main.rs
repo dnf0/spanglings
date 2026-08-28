@@ -23,16 +23,34 @@ fn main() -> anyhow::Result<()> {
             topic,
             concept,
             count,
+            weak,
+            level,
+            track,
         }) => {
             spanglings::cli::commands::drill::run_drill(
                 topic.as_deref(),
                 concept.as_deref(),
                 count,
+                weak,
+                level.as_deref(),
+                track,
                 cli.strict_accents,
             )?;
         }
-        Some(Commands::Blitz { seconds, topic }) => {
-            spanglings::cli::commands::blitz::run_blitz(seconds, topic.as_deref())?;
+        Some(Commands::Blitz {
+            seconds,
+            topic,
+            weak,
+            level,
+            track,
+        }) => {
+            spanglings::cli::commands::blitz::run_blitz(
+                seconds,
+                topic.as_deref(),
+                weak,
+                level.as_deref(),
+                track,
+            )?;
         }
         Some(Commands::Review) => {
             spanglings::cli::commands::review::run_review_session()?;

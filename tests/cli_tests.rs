@@ -51,6 +51,9 @@ fn test_cli_parsing_subcommands() {
             topic: Some("preterite".to_string()),
             concept: None,
             count: None,
+            weak: false,
+            level: None,
+            track: None,
         })
     );
 
@@ -66,6 +69,9 @@ fn test_cli_parsing_subcommands() {
             topic: None,
             concept: Some("subjunctive_wishes_desires".to_string()),
             count: None,
+            weak: false,
+            level: None,
+            track: None,
         })
     );
 
@@ -82,6 +88,9 @@ fn test_cli_parsing_subcommands() {
         Some(Commands::Blitz {
             seconds: Some(30),
             topic: Some("subjunctive".to_string()),
+            weak: false,
+            level: None,
+            track: None,
         })
     );
 
