@@ -5,6 +5,20 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.5] - 2026-08-28
+
+### Added
+- **Rich Context Drill & Blitz Prompts**:
+  - Upgraded question formatting in `spanglings drill` and `spanglings blitz` with authentic sentence context containing `____` blanks, target base infinitive verb, and grammatical subject cues.
+- **Pre-Session Grammar Topic Cheat Sheets**:
+  - Added fast rule summary cheat sheets displayed before starting drills across 12 grammatical domains (`subjunctive`, `preterite`, `por_para`, `ser_estar`, `pronouns`, `prepositions`, `accidental_se`, `imperative`, `future`, `false_friends`, `idioms`, and mixed).
+- **In-Drill & In-Blitz Interactive Live Hints**:
+  - Added on-demand step-by-step derivation assistance by typing `?` or `hint` during interactive prompt loops without penalizing streaks or scores.
+
+### Fixed
+- **TUI First-Run Tour Persistence**:
+  - Fixed issue where the onboarding welcome tour modal was shown repeatedly on subsequent launches by persisting `tour_completed = true` immediately upon presentation and handling modal dismissals cleanly.
+
 ## [0.4.4] - 2026-08-28
 
 ### Fixed

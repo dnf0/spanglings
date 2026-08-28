@@ -2,7 +2,7 @@
   "name": "spanglings-vscode",
   "displayName": "Spanglings: Developer Spanish Learning",
   "description": "VS Code and Cursor extension for Spanglings: learn Spanish through compiler diagnostics, LSP feedback, and interactive exercises",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "license": "Apache-2.0",
   "publisher": "dnf0",
   "repository": {
