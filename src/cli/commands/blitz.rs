@@ -26,7 +26,7 @@ pub fn get_blitz_items(topic_filter: Option<&str>) -> Vec<BlitzItem> {
     crate::cli::commands::drill::get_drill_items(topic_filter)
         .into_iter()
         .map(|item| BlitzItem {
-            prompt: item.prompt,
+            prompt: item.trigger_sentence,
             target: item.target,
             topic: item.topic,
             explanation: item.explanation,
