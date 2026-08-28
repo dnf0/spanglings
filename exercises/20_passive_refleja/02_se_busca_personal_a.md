@@ -7,11 +7,11 @@
 English: "They are looking for the perpetrators of the crime."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of *(the designated verb)* to complete the sentence.
-**Why**: When referring to human direct objects introduced by personal 'a', the construction is strictly IMPERSONAL and the verb is ALWAYS singular (e.g. 'Se the required term a los culpables', never 'se buscan a los culpables').
+**TODO**: Conjugate *(buscar)* into the 3rd-person singular present indicative (*presente de indicativo*).
+**Why**: When a transitive verb with *se* governs an animate human object marked with the preposition *a* (*a los responsables*), the structure is syntactically impersonal (*impersonal refleja*) and the verb must remain in the 3rd-person singular.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of (the designated verb) to complete the sentence. -->
+<!-- TODO: Conjugate (buscar) in 3rd-person singular for the impersonal construction with personal "a" -->
 Se (buscar) ___ a los responsables del robo.
 
 <!-- SOLUTION

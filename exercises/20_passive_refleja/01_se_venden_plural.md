@@ -7,11 +7,11 @@
 English: "Apartments are sold in this new building."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of *(vender)* to complete the sentence.
-**Why**: In Pasiva Refleja ('se + verbo + sujeto paciente inanimado'), the verb MUST agree in number with the plural subject (e.g. 'Se the required term pisos', never 'se vende pisos').
+**TODO**: Conjugate *(vender)* into the 3rd-person plural present indicative (*presente de indicativo*).
+**Why**: In the reflexive passive (*pasiva refleja* with inanimate noun phrases), the verb must agree in number with the patient subject (*pisos de lujo*), requiring plural inflection.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of (vender) to complete the sentence. -->
+<!-- TODO: Conjugate (vender) in 3rd-person plural present indicative agreeing with "pisos de lujo" -->
 Se (vender) ___ pisos de lujo en este edificio recién construido.
 
 <!-- SOLUTION

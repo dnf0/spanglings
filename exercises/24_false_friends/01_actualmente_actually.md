@@ -7,11 +7,11 @@
 English: "She is not unemployed; currently she works as a lead engineer in Madrid."
 
 ### Instructions
-**TODO**: Insert the correct Spanish term, avoiding deceptive English false cognates.
-**Why**: **the required term** means *currently / at present* (not *actually*). To say *actually / in fact*, use **en realidad** or **de hecho**.
+**TODO**: Supply the temporal adverb ending in *-mente* that correctly translates "at present / in the current period", avoiding the false cognate with English "actually".
+**Why**: Spanish uses an adverb based on *actual* to express present temporal currency ("at present / right now"), whereas English "actually" translates to *en realidad* or *de hecho*.
 
 ### Exercise
-<!-- TODO: Insert the correct Spanish term, avoiding deceptive English false cognates. -->
+<!-- TODO: Supply the temporal adverb ending in -mente for "at present" -->
 Ella no está en paro; (actualmente) ___ trabaja como ingeniera principal en Madrid.
 
 <!-- SOLUTION

@@ -7,11 +7,11 @@
 English: "The security team has managed to remediate the critical vulnerability detected in authentication."
 
 ### Instructions
-**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
-**Why**: To remediate a flaw or fix a vulnerability in professional contexts, use **the required term** or **corregir**. To debug code, use **depurar**. Avoid *fixear* or *debuggear*.
+**TODO**: Provide the formal technical infinitive verb meaning "to remediate / fix a flaw or vulnerability", avoiding anglicisms.
+**Why**: Formal technical and security registers prefer precise Latinate verbs of remediation (formed with *sub-* + *sanar*) or *corregir* over conversational anglicisms (*fixear* or *debuggear*) when describing the repair of software vulnerabilities.
 
 ### Exercise
-<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
+<!-- TODO: Provide the formal infinitive verb for remediating a critical vulnerability -->
 El equipo de seguridad ha logrado (subsanar) ___ la vulnerabilidad crítica detectada en la autenticación.
 
 <!-- SOLUTION

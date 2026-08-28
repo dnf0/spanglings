@@ -7,11 +7,11 @@
 English: "(Argentine Spanish) Tell me the truth about what happened at the office."
 
 ### Instructions
-**TODO**: Conjugate *(decir + me)* applying standard Rioplatense voseo morphology.
-**Why**: The affirmative imperative in *voseo* drops the final *-r* of the infinitive and adds an accent: *hablá* (habla), *comé* (come), *decí* (di). With clitic pronouns, the accent remains on the stem syllable: *the required term* (dime).
+**TODO**: Form the affirmative 2nd-person singular imperative of *(decir)* with *voseo* morphology, appending the 1st-person enclitic pronoun *(me)*.
+**Why**: The affirmative imperative in *voseo* forms by dropping the infinitive *-r* and maintaining final stress (*decí*), which when encliticized with the object pronoun becomes a paroxytone (*palabra llana*) ending in a vowel, thus shedding the accent mark.
 
 ### Exercise
-<!-- TODO: Conjugate (decir + me) applying standard Rioplatense voseo morphology. -->
+<!-- TODO: Form the affirmative imperative of (decir + me) with Rioplatense voseo morphology -->
 Por favor, (decir + me) ___ la verdad sobre lo que pasó en la oficina.
 
 <!-- SOLUTION

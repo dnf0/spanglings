@@ -7,11 +7,11 @@
 English: "Before launching the new version, we have to deploy the microservices to the production environment."
 
 ### Instructions
-**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
-**Why**: In software engineering, avoid Spanglish calques like *deployar*. Use the standard verb **the required term** (to deploy) and **solicitud de extracción** (pull request).
+**TODO**: Provide the authentic Spanish technical infinitive verb meaning "to deploy", avoiding Spanglish calques.
+**Why**: In professional software engineering in Spanish, the compound verb formed from *des-* + *plegar* is the normative, standardized term for releasing code into an environment, rejecting barbarisms like *deployar*.
 
 ### Exercise
-<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
+<!-- TODO: Supply the standard technical infinitive verb for deploying software to an environment -->
 Antes de lanzar la nueva versión, tenemos que (desplegar) ___ los microservicios en el entorno de producción.
 
 <!-- SOLUTION

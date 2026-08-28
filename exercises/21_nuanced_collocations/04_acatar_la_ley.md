@@ -7,11 +7,11 @@
 English: "All citizens must comply with and respect judicial decisions."
 
 ### Instructions
-**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
-**Why**: 'the required term' is the formal legal/institutional collocation for complying with and respecting laws, court rulings, and orders.
+**TODO**: Supply the formal institutional infinitive verb denoting dutiful compliance and submission to judicial rulings or laws.
+**Why**: Institutional and legal Spanish selects a precise Latinate verb of formal compliance when referring to obedience to court rulings (*resoluciones judiciales*), laws, or constitutional mandates.
 
 ### Exercise
-<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
+<!-- TODO: Supply the formal legal infinitive verb for complying with judicial rulings -->
 Todos los ciudadanos tienen el deber de ___ las resoluciones judiciales.
 
 <!-- SOLUTION

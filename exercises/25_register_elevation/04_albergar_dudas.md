@@ -7,11 +7,11 @@
 English: "The magistrates still harbor doubts regarding the veracity of the testimony."
 
 ### Instructions
-**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
-**Why**: To elevate *tener dudas* or *tener esperanzas*, use **albergar dudas** / **albergar esperanzas** (to harbor/shelter within oneself).
+**TODO**: Conjugate *(albergar)* into the 3rd-person plural present indicative (*presente de indicativo*).
+**Why**: Elevated judicial prose replaces the basic verb *tener* with *albergar* when referring to harboring internal skepticism (*dudas*).
 
 ### Exercise
-<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
+<!-- TODO: Conjugate (albergar) in 3rd-person plural present indicative collocating with "dudas" -->
 Los magistrados aún (albergan) ___ dudas sobre la veracidad del testimonio presentado.
 
 <!-- SOLUTION

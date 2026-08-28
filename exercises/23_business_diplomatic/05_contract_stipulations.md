@@ -7,11 +7,11 @@
 English: "As stipulated in the seventh clause, any dispute shall be resolved through arbitration."
 
 ### Instructions
-**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
-**Why**: In contracts and legal frameworks, terms are **estipulados** or **dispuestos** in clauses, not merely *escritos*.
+**TODO**: Supply the masculine singular past participle of *(estipular)* functioning as an adjective with the passive state (*encontrarse...*).
+**Why**: Contractual jurisprudence characterizes terms established in legal clauses with precise participial modifiers derived from *estipular* or *disponer*, rather than informal descriptors like *escrito*.
 
 ### Exercise
-<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
+<!-- TODO: Supply the masculine singular past participle of (estipular) used in contractual clauses -->
 Tal como se encuentra (estipulado) ___ en la cláusula séptima, cualquier controversia será resuelta mediante arbitraje.
 
 <!-- SOLUTION

@@ -7,11 +7,11 @@
 English: "Room for rent in the center of Madrid."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of *(the designated verb)* to complete the sentence.
-**Why**: With a singular patient subject, the verb is 3rd person singular.
+**TODO**: Conjugate *(alquilar)* into the 3rd-person singular present indicative (*presente de indicativo*).
+**Why**: In reflexive passive announcements (*pasiva refleja*), the verb agrees in number and person with the postverbal patient subject (*habitación luminosa*), requiring the singular form.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of (the designated verb) to complete the sentence. -->
+<!-- TODO: Conjugate (alquilar) in 3rd-person singular present indicative agreeing with "habitación" -->
 Se (alquilar) ___ habitación luminosa en el centro de Madrid.
 
 <!-- SOLUTION

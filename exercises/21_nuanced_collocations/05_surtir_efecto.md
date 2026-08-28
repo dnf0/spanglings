@@ -7,11 +7,11 @@
 English: "The economic measures began to take effect after six months."
 
 ### Instructions
-**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
-**Why**: 'the required term efecto' is the fixed idiomatic collocation meaning to produce the desired effect or result (e.g. medicine, measure).
+**TODO**: Supply the formal 3rd-conjugation (-ir) infinitive verb governed by the aspectual verbal periphrasis *comenzaron a...*.
+**Why**: The formal Spanish collocation for producing an intended consequence or taking effect pairs *efecto* with a verb meaning to supply or yield, contrasting with the colloquial *hacer efecto*.
 
 ### Exercise
-<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
+<!-- TODO: Supply the 3rd-conjugation infinitive following "comenzaron a" to complete the formal collocation -->
 Las medidas implementadas comenzaron a (surtir) ___ efecto tras seis meses.
 
 <!-- SOLUTION

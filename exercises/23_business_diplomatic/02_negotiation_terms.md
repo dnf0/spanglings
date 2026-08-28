@@ -7,11 +7,11 @@
 English: "As regards what was agreed in the last meeting, we will proceed with the signing of the agreement."
 
 ### Instructions
-**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
-**Why**: In formal negotiations, use elevated connectors like **en lo que the required term a** / **en lo que concierne a** (as regards / concerning) instead of conversational *sobre* or *en cuanto a*.
+**TODO**: Conjugate the defective verb *(atañer)* into the 3rd-person singular present indicative followed by its mandatory preposition *a*.
+**Why**: Formal negotiations and legal drafting employ the elevated discourse connector *en lo que [verbo] a* to delimit the topical domain ("as regards / concerning") instead of conversational phrases.
 
 ### Exercise
-<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
+<!-- TODO: Conjugate (atañer) in 3rd-person with preposition "a" for the formal topic-linking connector -->
 En lo que (atañe a) ___ lo acordado en la última reunión, procederemos con la firma del acuerdo.
 
 <!-- SOLUTION

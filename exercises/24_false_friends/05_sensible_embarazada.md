@@ -7,11 +7,11 @@
 English: "In times of economic crisis, making prudent decisions is the most sensible thing a leader can do."
 
 ### Instructions
-**TODO**: Insert the correct Spanish term, avoiding deceptive English false cognates.
-**Why**: **Sensible** in Spanish means *sensitive / emotional / perceptive*. To translate English *sensible (prudent / reasonable)*, use **the required term** or **prudente**.
+**TODO**: Supply the masculine singular adjective meaning "judicious / showing good sense / prudent", resolving the false cognate with Spanish *sensible*.
+**Why**: Spanish *sensible* means "sensitive / emotional", while English "sensible" (judicious, demonstrating sound judgement) corresponds to *prudente*, *juicioso*, or the adjective derived from *sensatez*.
 
 ### Exercise
-<!-- TODO: Insert the correct Spanish term, avoiding deceptive English false cognates. -->
+<!-- TODO: Supply the adjective for judicious/prudent avoiding the false friend "sensible" -->
 En situaciones de crisis económica, tomar decisiones prudentes es lo más (sensato) ___ que un líder puede hacer.
 
 <!-- SOLUTION

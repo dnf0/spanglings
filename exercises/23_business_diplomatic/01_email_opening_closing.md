@@ -7,11 +7,11 @@
 English: "Without further ado for now, I remain at your full disposal for any clarification."
 
 ### Instructions
-**TODO**: Insert the formal executive expression or verb form appropriate for professional correspondence.
-**Why**: In executive and formal Spanish correspondence, standard closings include **the required term a su the required term** (I remain at your full disposal) or **Agradeciendo de antemano su atención** (Thanking you in advance).
+**TODO**: Provide the formal closing phrase in the 1st-person singular expressing full availability for the addressee (*usted*).
+**Why**: Executive and diplomatic written correspondence in Spanish employs fixed courteous valedictions linking the 1st person of *(quedar)* with an elevated prepositional phrase indicating complete readiness to assist.
 
 ### Exercise
-<!-- TODO: Insert the formal executive expression or verb form appropriate for professional correspondence. -->
+<!-- TODO: Supply the formal executive closing formula expressing complete availability -->
 Sin otro particular por el momento, (quedo a su entera disposición) ___ para cualquier aclaración.
 
 <!-- SOLUTION

@@ -7,11 +7,11 @@
 English: "Despite the obstacles, they still harbor hopes of reaching an agreement."
 
 ### Instructions
-**TODO**: Select the elevated, precise Spanish verb or collocation matching formal register.
-**Why**: 'Albergar' collocates with abstract feelings/expectations: 'albergar esperanzas', 'albergar dudas'.
+**TODO**: Conjugate *(albergar)* into the 3rd-person plural present indicative (*presente de indicativo*).
+**Why**: The verb *albergar* forms an elevated stylistic collocation with abstract psychological nouns like *esperanzas*, *dudas*, or *temores*, expressing the harboring of an internal sentiment.
 
 ### Exercise
-<!-- TODO: Select the elevated, precise Spanish verb or collocation matching formal register. -->
+<!-- TODO: Conjugate (albergar) in 3rd-person plural present indicative collocating with "esperanzas" -->
 A pesar de las dificultades, todavía (albergar) ___ esperanzas de éxito.
 
 <!-- SOLUTION

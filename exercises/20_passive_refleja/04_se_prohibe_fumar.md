@@ -7,11 +7,11 @@
 English: "Smoking is strictly prohibited inside the premises."
 
 ### Instructions
-**TODO**: Provide the appropriate conjugation or form of *(prohibir)* to complete the sentence.
-**Why**: When the subject of a passive refleja sentence is an infinitive or subordinate clause, the verb is always singular.
+**TODO**: Conjugate *(prohibir)* into the 3rd-person singular present indicative (*presente de indicativo*), noting the accent mark on the tonic vowel.
+**Why**: When the patient subject of a reflexive passive sentence is an infinitive clause (*fumar dentro del recinto*), the verb agrees in 3rd-person singular, with hiatal stress requiring an acute accent over the tonic vowel.
 
 ### Exercise
-<!-- TODO: Provide the appropriate conjugation or form of (prohibir) to complete the sentence. -->
+<!-- TODO: Conjugate (prohibir) in 3rd-person singular present indicative with hiatal accent -->
 Se (prohibir) ___ fumar dentro del recinto.
 
 <!-- SOLUTION

@@ -7,11 +7,11 @@
 English: "(In Bogotá, Colombia) My brother doesn't know how to drive manual transmission cars."
 
 ### Instructions
-**TODO**: Conjugate *(the designated verb)* applying standard Rioplatense voseo morphology.
-**Why**: Many high-frequency verbs and nouns differ systematically between Spain and Latin America: *conducir* (ES) vs **the required term** (LA) for driving; *ordenador* (ES) vs **computadora** (LA); *móvil* (ES) vs **celular** (LA).
+**TODO**: Supply the infinitive verb representing the standard Latin American term for driving a motor vehicle.
+**Why**: While peninsular Spanish uses *conducir*, Latin American varieties overwhelmingly prefer the 1st-conjugation verb for handling/operating when referring to operating a car.
 
 ### Exercise
-<!-- TODO: Conjugate (the designated verb) applying standard Rioplatense voseo morphology. -->
+<!-- TODO: Supply the Latin American infinitive verb for driving a vehicle -->
 En Bogotá, mi hermano todavía no sabe (manejar) ___ carros con transmisión manual.
 
 <!-- SOLUTION

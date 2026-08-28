@@ -7,11 +7,11 @@
 English: "When two threads attempt to acquire the same resources in reverse order, a deadlock occurs that halts execution."
 
 ### Instructions
-**TODO**: Provide the standard Spanish technical term or verb in the correct inflection.
-**Why**: In systems programming, "deadlock" translates to **the required term** or **interbloqueo**, while "race condition" is **condición de carrera**.
+**TODO**: Supply the standard Spanish computer science two-word noun phrase representing a concurrent deadlock condition.
+**Why**: Systems programming terminology standardizes "deadlock" as a nominal phrase consisting of a noun for locking accompanied by an adjective denoting reciprocity, replacing direct borrowings.
 
 ### Exercise
-<!-- TODO: Provide the standard Spanish technical term or verb in the correct inflection. -->
+<!-- TODO: Supply the Spanish technical noun phrase translating concurrent "deadlock" -->
 Cuando dos hilos intentan adquirir los mismos recursos en orden inverso, se produce un (bloqueo mutuo) ___ que detiene la ejecución.
 
 <!-- SOLUTION
