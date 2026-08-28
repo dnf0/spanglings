@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 import { execFile } from 'child_process';
 import { promisify } from 'util';
 import * as path from 'path';
+import { resolveExercisePath } from './pathUtils';
 
 const execFileAsync = promisify(execFile);
 
@@ -153,15 +154,10 @@ export class SpanglingsTreeProvider implements vscode.TreeDataProvider<TreeItemN
           ? new vscode.ThemeIcon('pass')
           : new vscode.ThemeIcon('circle-outline');
 
-        const absPath = path.isAbsolute(ex.path)
-          ? ex.path
-          : path.resolve(workspaceRoot, ex.path);
-        const fileUri = vscode.Uri.file(absPath);
-
         node.command = {
-          command: 'vscode.open',
+          command: 'spanglings.openExerciseFile',
           title: 'Open Exercise',
-          arguments: [fileUri]
+          arguments: [ex.path]
         };
 
         const statusText = isCompleted ? 'Completed ✓' : 'Incomplete ⏳';
