@@ -1,8 +1,8 @@
 {
   "Cargo.toml": {
-    "mtime": 1787863510.8468447,
-    "seen": 1787904129.888473,
-    "ast_hash": "039e1ed76c39c4164c2780dd7265b7e1",
+    "mtime": 1787905792.1703231,
+    "seen": 1787905866.8292742,
+    "ast_hash": "fd2e674adf97ff90d193943047628634",
     "semantic_hash": ""
   },
   "src/main.rs": {
@@ -876,87 +876,87 @@
     "semantic_hash": ""
   },
   "exercises/19_formal_inversion/02_llegado_el_momento.md": {
-    "mtime": 1787904547.6705596,
-    "seen": 1787904721.701041,
-    "ast_hash": "ffd4aaee9e389e5b5f4e25b6de0711b8",
+    "mtime": 1787904726.5700786,
+    "seen": 1787905866.82939,
+    "ast_hash": "7e985d63dfddf5dc41f65c239fe531e0",
     "semantic_hash": ""
   },
   "exercises/19_formal_inversion/03_el_hecho_de_que_subjunctive.md": {
-    "mtime": 1787904547.6709518,
-    "seen": 1787904721.701041,
-    "ast_hash": "beeec4ab1d11bc120cb1354a45b0b681",
+    "mtime": 1787904742.6918156,
+    "seen": 1787905866.829391,
+    "ast_hash": "6e84a63621a24921617e1a172616ed12",
     "semantic_hash": ""
   },
   "exercises/19_formal_inversion/04_a_sabiendas_de_que.md": {
-    "mtime": 1787904547.671285,
-    "seen": 1787904721.701041,
-    "ast_hash": "af46f3c5974f3601014df3a03caf48d3",
+    "mtime": 1787904751.563064,
+    "seen": 1787905866.829391,
+    "ast_hash": "307361ffc7a8048ac19b8e4f724bace4",
     "semantic_hash": ""
   },
   "exercises/19_formal_inversion/05_dada_la_situacion.md": {
-    "mtime": 1787904547.671551,
-    "seen": 1787904721.701042,
-    "ast_hash": "f42f4f44a90f7d7ada6c17cb69eb94fa",
+    "mtime": 1787904759.772533,
+    "seen": 1787905866.829392,
+    "ast_hash": "6d525628f553b3a5fef7be62b78eb3f0",
     "semantic_hash": ""
   },
   "exercises/20_passive_refleja/01_se_venden_plural.md": {
-    "mtime": 1787904547.671796,
-    "seen": 1787904721.701042,
-    "ast_hash": "8ae9b69c253b538c950eff49f1ac4872",
+    "mtime": 1787904776.8128254,
+    "seen": 1787905866.829392,
+    "ast_hash": "6c3f9e397d40b4ccdd7ff673b3d6baac",
     "semantic_hash": ""
   },
   "exercises/20_passive_refleja/02_se_busca_personal_a.md": {
-    "mtime": 1787904547.6721427,
-    "seen": 1787904721.701042,
-    "ast_hash": "34b8c661f28a4cd989c0fc3876de6767",
+    "mtime": 1787904785.1051261,
+    "seen": 1787905866.829392,
+    "ast_hash": "ae35f9be6bb495eba171187c6124f86e",
     "semantic_hash": ""
   },
   "exercises/20_passive_refleja/03_se_alquila_singular.md": {
-    "mtime": 1787904547.6723807,
-    "seen": 1787904721.701043,
-    "ast_hash": "75f5fe7cebd10bf40d30961eaec4dd72",
+    "mtime": 1787904793.3252163,
+    "seen": 1787905866.829393,
+    "ast_hash": "8cc264cba27d7ec7c0d7e5087fb93742",
     "semantic_hash": ""
   },
   "exercises/20_passive_refleja/04_se_prohibe_fumar.md": {
-    "mtime": 1787904547.6726317,
-    "seen": 1787904721.701043,
-    "ast_hash": "80bd4305cf09226f7983d4ac30fbde17",
+    "mtime": 1787905481.4411051,
+    "seen": 1787905866.829393,
+    "ast_hash": "369bbf87d88d9b0f1f257c247673f36a",
     "semantic_hash": ""
   },
   "exercises/20_passive_refleja/05_se_precisan_empleados.md": {
-    "mtime": 1787904547.6728954,
-    "seen": 1787904721.701043,
-    "ast_hash": "7c4f3e76dc332fdea5a6f318624f940d",
+    "mtime": 1787904814.178914,
+    "seen": 1787905866.829393,
+    "ast_hash": "f1835e447a885a64a2827bab8b0c5e5d",
     "semantic_hash": ""
   },
   "exercises/21_nuanced_collocations/01_entablar_conversacion.md": {
-    "mtime": 1787904547.6731305,
-    "seen": 1787904721.701044,
-    "ast_hash": "edc28d78305157db64bc7c739f852598",
+    "mtime": 1787905493.0120447,
+    "seen": 1787905866.8293939,
+    "ast_hash": "c779a38418dbd1767a405bd2411bccb0",
     "semantic_hash": ""
   },
   "exercises/21_nuanced_collocations/02_zanjar_el_asunto.md": {
-    "mtime": 1787904547.6734889,
-    "seen": 1787904721.701044,
-    "ast_hash": "186f46af5236f5dc1815062bf99ee3d2",
+    "mtime": 1787905500.5730765,
+    "seen": 1787905866.8293939,
+    "ast_hash": "2b0aa2c9d9ecf28e4b0fcd46bb655dad",
     "semantic_hash": ""
   },
   "exercises/21_nuanced_collocations/03_albergar_esperanzas.md": {
-    "mtime": 1787904547.673848,
-    "seen": 1787904721.701044,
-    "ast_hash": "9d94dbeb5ea5a70fdfdd478e780d1fcd",
+    "mtime": 1787904847.5554008,
+    "seen": 1787905866.8293939,
+    "ast_hash": "9ea7162a194137670efc3abe9b5f17fc",
     "semantic_hash": ""
   },
   "exercises/21_nuanced_collocations/04_acatar_la_ley.md": {
-    "mtime": 1787904547.6741238,
-    "seen": 1787904721.701045,
-    "ast_hash": "87a9ede204a44d1a09e024d657285d07",
+    "mtime": 1787905509.1213756,
+    "seen": 1787905866.829395,
+    "ast_hash": "87242c51214f2071709edfca37caebaf",
     "semantic_hash": ""
   },
   "exercises/21_nuanced_collocations/05_surtir_efecto.md": {
-    "mtime": 1787904547.6745346,
-    "seen": 1787904721.701045,
-    "ast_hash": "b4db4ea0a1bb10ecedc77c2e7347aaa9",
+    "mtime": 1787905518.5396154,
+    "seen": 1787905866.829395,
+    "ast_hash": "87e3eace6a496d0bad7aa7bb5fb77d88",
     "semantic_hash": ""
   },
   "src/core/embedded.rs": {
@@ -1056,153 +1056,153 @@
     "semantic_hash": ""
   },
   "exercises/22_tech_software/01_deployment_git.md": {
-    "mtime": 1787904547.674854,
-    "seen": 1787904721.701045,
-    "ast_hash": "c8bccaef30582f944f96223b9f6de979",
+    "mtime": 1787905528.2549841,
+    "seen": 1787905866.829396,
+    "ast_hash": "2a5a3f1e803cf09ecdb105630abf45b4",
     "semantic_hash": ""
   },
   "exercises/22_tech_software/02_debugging_fixes.md": {
-    "mtime": 1787904547.675238,
-    "seen": 1787904721.701046,
-    "ast_hash": "b4cfbe9982bbb7fe9e081daf14436d06",
+    "mtime": 1787905536.2590885,
+    "seen": 1787905866.829396,
+    "ast_hash": "62ef2cb36dc67a6e20c51060c04cb28a",
     "semantic_hash": ""
   },
   "exercises/22_tech_software/03_concurrency_deadlocks.md": {
-    "mtime": 1787904547.675652,
-    "seen": 1787904721.701046,
-    "ast_hash": "fa4b0dd54d529dbf05765d359dc1cd5f",
+    "mtime": 1787904886.7691891,
+    "seen": 1787905866.829396,
+    "ast_hash": "a32264e65653a2b10984dc83077b676d",
     "semantic_hash": ""
   },
   "exercises/22_tech_software/04_performance_latency.md": {
-    "mtime": 1787904547.6760135,
-    "seen": 1787904721.701047,
-    "ast_hash": "4cb1459efab70570824e08e795c30788",
+    "mtime": 1787904895.625382,
+    "seen": 1787905866.829397,
+    "ast_hash": "4fe2adc555567e14fbe6074941af6872",
     "semantic_hash": ""
   },
   "exercises/22_tech_software/05_api_routing.md": {
-    "mtime": 1787904547.67636,
-    "seen": 1787904721.701047,
-    "ast_hash": "802bfd54b93cc929ee73f0cb83000787",
+    "mtime": 1787904903.3309977,
+    "seen": 1787905866.829397,
+    "ast_hash": "d2b49bbef699327406da2036cd64179b",
     "semantic_hash": ""
   },
   "exercises/23_business_diplomatic/01_email_opening_closing.md": {
-    "mtime": 1787904547.6769881,
-    "seen": 1787904721.701047,
-    "ast_hash": "4ef8bb9269f078e867e6e75fe4fa8157",
+    "mtime": 1787904911.8569264,
+    "seen": 1787905866.829397,
+    "ast_hash": "e4be83971ca601b25918b201817117d6",
     "semantic_hash": ""
   },
   "exercises/23_business_diplomatic/02_negotiation_terms.md": {
-    "mtime": 1787904547.677367,
-    "seen": 1787904721.7010481,
-    "ast_hash": "3db91631cfbe01d4cf9f541bacea1500",
+    "mtime": 1787904968.671392,
+    "seen": 1787905866.829398,
+    "ast_hash": "da38b75faf95aeaf739d0c9c31181c25",
     "semantic_hash": ""
   },
   "exercises/23_business_diplomatic/03_debt_settlement.md": {
-    "mtime": 1787904547.6777086,
-    "seen": 1787904721.7010481,
-    "ast_hash": "6bda95690c548495948ae79963ef6f43",
+    "mtime": 1787905544.9799001,
+    "seen": 1787905866.829398,
+    "ast_hash": "2ab5aeefae697b543acd97512573a0ce",
     "semantic_hash": ""
   },
   "exercises/23_business_diplomatic/04_dismissing_proposals.md": {
-    "mtime": 1787904547.6780062,
-    "seen": 1787904721.7010481,
-    "ast_hash": "f3d8373ea6fe211a44c99b2196c432e0",
+    "mtime": 1787905555.5817645,
+    "seen": 1787905866.829399,
+    "ast_hash": "48604777164831ca7201793eed8722ab",
     "semantic_hash": ""
   },
   "exercises/23_business_diplomatic/05_contract_stipulations.md": {
-    "mtime": 1787904547.6782444,
-    "seen": 1787904721.701049,
-    "ast_hash": "ed6c9e75b68a887a95dc39d11d97f042",
+    "mtime": 1787905563.8139317,
+    "seen": 1787905866.829399,
+    "ast_hash": "bbe66d1ec54491413b9fbc6e73d41bf9",
     "semantic_hash": ""
   },
   "exercises/24_false_friends/01_actualmente_actually.md": {
-    "mtime": 1787904547.6784816,
-    "seen": 1787904721.701049,
-    "ast_hash": "c349e20aa66834dc0516a4bf50b32eda",
+    "mtime": 1787905363.9791842,
+    "seen": 1787905866.829399,
+    "ast_hash": "25358c812d72335e7e251ee75fc49075",
     "semantic_hash": ""
   },
   "exercises/24_false_friends/02_eventualmente_eventually.md": {
-    "mtime": 1787904547.6787078,
-    "seen": 1787904721.701049,
-    "ast_hash": "3a8bedc1f75e4972aa91902729466e04",
+    "mtime": 1787905368.019282,
+    "seen": 1787905866.8294,
+    "ast_hash": "034f610fcbefb991fba0e8713ad0583a",
     "semantic_hash": ""
   },
   "exercises/24_false_friends/03_pretender_realizar.md": {
-    "mtime": 1787904547.67893,
-    "seen": 1787904721.70105,
-    "ast_hash": "16e7e94b19f1f197b3275517a41d6e93",
+    "mtime": 1787905371.9639158,
+    "seen": 1787905866.8294,
+    "ast_hash": "af47af71d2616fd49dab151030bc96b5",
     "semantic_hash": ""
   },
   "exercises/24_false_friends/04_soportar_apoyar.md": {
-    "mtime": 1787904547.67915,
-    "seen": 1787904721.70105,
-    "ast_hash": "b68bdf35432f23c916cdaeccc3ee6a54",
+    "mtime": 1787905406.976637,
+    "seen": 1787905866.8294,
+    "ast_hash": "53e5b6019011048bb0028c8cbed74830",
     "semantic_hash": ""
   },
   "exercises/24_false_friends/05_sensible_embarazada.md": {
-    "mtime": 1787904547.6793725,
-    "seen": 1787904721.701051,
-    "ast_hash": "90612ad77eeb297df9904333dd1f7ee5",
+    "mtime": 1787905412.4806092,
+    "seen": 1787905866.829401,
+    "ast_hash": "7e80db546cbcabd8d3d4e3b5e6aabfb1",
     "semantic_hash": ""
   },
   "exercises/25_register_elevation/01_acometer_proyectos.md": {
-    "mtime": 1787904547.679599,
-    "seen": 1787904721.701051,
-    "ast_hash": "3fad4595732e98f71b3ccace263828de",
+    "mtime": 1787905416.9431932,
+    "seen": 1787905866.829401,
+    "ast_hash": "78feb4fe336cee5182932873571c5559",
     "semantic_hash": ""
   },
   "exercises/25_register_elevation/02_suscitar_controversia.md": {
-    "mtime": 1787904547.6800425,
-    "seen": 1787904721.701051,
-    "ast_hash": "f3f1325cad870c58218f0978d9ddac15",
+    "mtime": 1787905426.5341682,
+    "seen": 1787905866.8294022,
+    "ast_hash": "84054bc0062fa862a4445e60e9309692",
     "semantic_hash": ""
   },
   "exercises/25_register_elevation/03_surtir_efecto.md": {
-    "mtime": 1787904547.6803536,
-    "seen": 1787904721.701052,
-    "ast_hash": "bc9798369aaad50ab90adb8c3343094e",
+    "mtime": 1787905430.3577213,
+    "seen": 1787905866.8294022,
+    "ast_hash": "0850bfb73998b9c281088ec6aed3bb77",
     "semantic_hash": ""
   },
   "exercises/25_register_elevation/04_albergar_dudas.md": {
-    "mtime": 1787904547.6807203,
-    "seen": 1787904721.701052,
-    "ast_hash": "119155a2fede113dbc49d4e7d728b7f5",
+    "mtime": 1787905435.8696716,
+    "seen": 1787905866.8294022,
+    "ast_hash": "75a0af06e49d4fd86c654e0db2efe6e7",
     "semantic_hash": ""
   },
   "exercises/25_register_elevation/05_arrojar_luz.md": {
-    "mtime": 1787904547.6810493,
-    "seen": 1787904721.701053,
-    "ast_hash": "569ecdb8eb9be0d1ed43e3743490f5eb",
+    "mtime": 1787905439.356754,
+    "seen": 1787905866.829403,
+    "ast_hash": "c292698706615b9c6ab5cdc8320f5dc1",
     "semantic_hash": ""
   },
   "exercises/26_regional_contrasts/01_voseo_present.md": {
-    "mtime": 1787904547.6813908,
-    "seen": 1787904721.701053,
-    "ast_hash": "d683580dacd531beb4618c256f32acea",
+    "mtime": 1787905443.2151408,
+    "seen": 1787905866.829403,
+    "ast_hash": "c0de75a79168e29d3809a0d4bb53b3e6",
     "semantic_hash": ""
   },
   "exercises/26_regional_contrasts/02_voseo_imperative.md": {
-    "mtime": 1787904547.681743,
-    "seen": 1787904721.701053,
-    "ast_hash": "b20a6c735f86e137939dbb1ae7099817",
+    "mtime": 1787905449.2388177,
+    "seen": 1787905866.829403,
+    "ast_hash": "f0b2982b707105ac2e5534d9239419a4",
     "semantic_hash": ""
   },
   "exercises/26_regional_contrasts/03_latin_america_ustedes.md": {
-    "mtime": 1787904547.6820076,
-    "seen": 1787904721.7010539,
-    "ast_hash": "0ea7eb8a466a3e9c21160600e7cb4991",
+    "mtime": 1787905290.1888194,
+    "seen": 1787905866.8294039,
+    "ast_hash": "922c75c185f35f44b8e97adb1716e294",
     "semantic_hash": ""
   },
   "exercises/26_regional_contrasts/04_lexical_variants_driving.md": {
-    "mtime": 1787904547.6823626,
-    "seen": 1787904721.7010539,
-    "ast_hash": "748947b512d784dd209fa5839c73b8ed",
+    "mtime": 1787905453.2271621,
+    "seen": 1787905866.8294039,
+    "ast_hash": "874312c48df04358ddc486fac5a24529",
     "semantic_hash": ""
   },
   "exercises/26_regional_contrasts/05_clitic_order_leismo.md": {
-    "mtime": 1787904547.6826797,
-    "seen": 1787904721.7010539,
-    "ast_hash": "cf757df659aea0f8139cca5756255003",
+    "mtime": 1787905458.1940005,
+    "seen": 1787905866.8294048,
+    "ast_hash": "343d9c9302099e88a49d06caa292f7eb",
     "semantic_hash": ""
   },
   "src/cli/commands/blitz.rs": {
@@ -1368,147 +1368,147 @@
     "semantic_hash": ""
   },
   "exercises/27_system_design/01_distributed_failover.md": {
-    "mtime": 1787904547.6831536,
-    "seen": 1787904721.701055,
-    "ast_hash": "d50d697655ef4366f59968a8f37c8ce4",
+    "mtime": 1787905132.1053681,
+    "seen": 1787905866.8294048,
+    "ast_hash": "1e7d3c7910ff6d7c391a5c043dc96c4c",
     "semantic_hash": ""
   },
   "exercises/27_system_design/02_distributed_transactions.md": {
-    "mtime": 1787904547.6834533,
-    "seen": 1787904721.701055,
-    "ast_hash": "c583d27697ef51f75dddeea1c91b86c5",
+    "mtime": 1787905132.1054852,
+    "seen": 1787905866.8294048,
+    "ast_hash": "e70ca419ba24498d2b961d588795ba34",
     "semantic_hash": ""
   },
   "exercises/27_system_design/03_circuit_breaker.md": {
-    "mtime": 1787904547.6837325,
-    "seen": 1787904721.701056,
-    "ast_hash": "4d5854b149b628b4328e8aedb738b9e9",
+    "mtime": 1787905132.1055768,
+    "seen": 1787905866.829406,
+    "ast_hash": "44ab7e8207473425df8e67bbd0b9b66e",
     "semantic_hash": ""
   },
   "exercises/27_system_design/04_cache_invalidation.md": {
-    "mtime": 1787904547.6840942,
-    "seen": 1787904721.701056,
-    "ast_hash": "c2e8183c1b5514daa6eca48204891fb4",
+    "mtime": 1787905132.1056669,
+    "seen": 1787905866.829406,
+    "ast_hash": "207177567c4d7c76a64ed92477db6e0f",
     "semantic_hash": ""
   },
   "exercises/27_system_design/05_database_sharding.md": {
-    "mtime": 1787904547.6845028,
-    "seen": 1787904721.701056,
-    "ast_hash": "31a56fab25fe2b2c1ef461c8ddf57203",
+    "mtime": 1787905132.1057556,
+    "seen": 1787905866.829407,
+    "ast_hash": "e733ba03facd498497b3fac43d0945e3",
     "semantic_hash": ""
   },
   "exercises/27_system_design/06_latency_slas.md": {
-    "mtime": 1787904547.684782,
-    "seen": 1787904721.701057,
-    "ast_hash": "aef37bd7047bd819230eb24a9bd9f19b",
+    "mtime": 1787905132.1058395,
+    "seen": 1787905866.829407,
+    "ast_hash": "2eec2894d725e8c6b3aa4a98d1186402",
     "semantic_hash": ""
   },
   "exercises/28_advanced_subjunctive_clauses/01_por_mucho_que.md": {
-    "mtime": 1787904547.6850138,
-    "seen": 1787904721.701057,
-    "ast_hash": "00aaae0df081eac7ab97b760eb675a34",
+    "mtime": 1787905132.1059241,
+    "seen": 1787905866.829407,
+    "ast_hash": "485c9d5ceba74dd491f4be63e9664833",
     "semantic_hash": ""
   },
   "exercises/28_advanced_subjunctive_clauses/02_aun_a_riesgo_de_que.md": {
-    "mtime": 1787904547.6852348,
-    "seen": 1787904721.701057,
-    "ast_hash": "4609183d72c71346c75569ce3ee1297f",
+    "mtime": 1787905132.1060116,
+    "seen": 1787905866.829408,
+    "ast_hash": "17c2d45d61b58f2b1431fb007ce41e66",
     "semantic_hash": ""
   },
   "exercises/28_advanced_subjunctive_clauses/03_asi_subjunctive.md": {
-    "mtime": 1787904547.68545,
-    "seen": 1787904721.7010581,
-    "ast_hash": "b3b8baea4039b6f2207b9a31b9eadb42",
+    "mtime": 1787905132.106132,
+    "seen": 1787905866.829408,
+    "ast_hash": "45a1a57fd005979e90a454318ce442c5",
     "semantic_hash": ""
   },
   "exercises/28_advanced_subjunctive_clauses/04_reduplicative_subjunctive.md": {
-    "mtime": 1787904547.6856623,
-    "seen": 1787904721.7010581,
-    "ast_hash": "92609a465316bc6bbfe5fe99a8051bc3",
+    "mtime": 1787905132.1062238,
+    "seen": 1787905866.829408,
+    "ast_hash": "237098018b12c5dcc7c3501d94ebbaf4",
     "semantic_hash": ""
   },
   "exercises/28_advanced_subjunctive_clauses/05_pase_lo_que_pase.md": {
-    "mtime": 1787904547.6858811,
-    "seen": 1787904721.701059,
-    "ast_hash": "a55f92d2929a5929e20f8d6b3760c951",
+    "mtime": 1787905132.106299,
+    "seen": 1787905866.8294091,
+    "ast_hash": "fe42d6def960b3c03231f3d675e6fc54",
     "semantic_hash": ""
   },
   "exercises/28_advanced_subjunctive_clauses/06_a_pesar_de_que_hypothetical.md": {
-    "mtime": 1787904547.686143,
-    "seen": 1787904721.701059,
-    "ast_hash": "8020e65d50bcee3e5daa17c65f8e1f61",
+    "mtime": 1787905132.1063733,
+    "seen": 1787905866.8294091,
+    "ast_hash": "253a5ec42dfecfda7c7ff0a9fd14e1e7",
     "semantic_hash": ""
   },
   "exercises/29_advanced_verbal_periphrases/01_dar_por_sentado.md": {
-    "mtime": 1787904547.6865132,
-    "seen": 1787904721.70106,
-    "ast_hash": "323944702f3f52d9d488503fb0e48eaa",
+    "mtime": 1787905132.1064558,
+    "seen": 1787905866.82941,
+    "ast_hash": "386f5125dd71283855700364abb78912",
     "semantic_hash": ""
   },
   "exercises/29_advanced_verbal_periphrases/02_echar_a_perder.md": {
-    "mtime": 1787904547.686839,
-    "seen": 1787904721.70106,
-    "ast_hash": "6fc1bba465fa165606e9b9a1fe46f773",
+    "mtime": 1787905132.1065395,
+    "seen": 1787905866.82941,
+    "ast_hash": "4cc99c5ba5d89c1957a8ea6e02773ba6",
     "semantic_hash": ""
   },
   "exercises/29_advanced_verbal_periphrases/03_ponerse_a.md": {
-    "mtime": 1787904547.687193,
-    "seen": 1787904721.70106,
-    "ast_hash": "a9b16e704d1140519a24313db74b5c77",
+    "mtime": 1787905132.1066372,
+    "seen": 1787905866.82941,
+    "ast_hash": "c20fac23c267950769002119b1169e1a",
     "semantic_hash": ""
   },
   "exercises/29_advanced_verbal_periphrases/04_llevar_sin.md": {
-    "mtime": 1787904547.6875253,
-    "seen": 1787904721.701061,
-    "ast_hash": "adc56cdb46240b5628a438a185f38702",
+    "mtime": 1787905132.1067352,
+    "seen": 1787905866.829411,
+    "ast_hash": "6c9d395a1d37d0a65ceecbf9e3fe6bb2",
     "semantic_hash": ""
   },
   "exercises/29_advanced_verbal_periphrases/05_venir_a_decir.md": {
-    "mtime": 1787904547.6878874,
-    "seen": 1787904721.701061,
-    "ast_hash": "26aa30a9de4b1f96222c9d6ebc09908a",
+    "mtime": 1787905132.1068494,
+    "seen": 1787905866.829411,
+    "ast_hash": "bfac638bbf1ee9a085152d822de1d04f",
     "semantic_hash": ""
   },
   "exercises/29_advanced_verbal_periphrases/06_quedar_en.md": {
-    "mtime": 1787904547.6881917,
-    "seen": 1787904721.701062,
-    "ast_hash": "a6b801cae27e656207994283a22f700c",
+    "mtime": 1787905132.1069381,
+    "seen": 1787905866.829411,
+    "ast_hash": "87ad6c8078d24129db8c779fa3aefa90",
     "semantic_hash": ""
   },
   "exercises/30_executive_leadership/01_stakeholder_diplomacy.md": {
-    "mtime": 1787904547.6885526,
-    "seen": 1787904721.701062,
-    "ast_hash": "af8d88a0c1d90b13132f10aeab7e1b67",
+    "mtime": 1787905132.1070187,
+    "seen": 1787905866.829412,
+    "ast_hash": "8f2bab83aaad1d0d3a220671cd4d53fc",
     "semantic_hash": ""
   },
   "exercises/30_executive_leadership/02_strategic_pivot.md": {
-    "mtime": 1787904547.688892,
-    "seen": 1787904721.701062,
-    "ast_hash": "e2f1f10a87bdf113d0f2fe8465db1426",
+    "mtime": 1787905132.1070955,
+    "seen": 1787905866.829412,
+    "ast_hash": "1a5ebc81e8bae8dcfbc9dd294ce6c942",
     "semantic_hash": ""
   },
   "exercises/30_executive_leadership/03_quarterly_kpis.md": {
-    "mtime": 1787904547.689267,
-    "seen": 1787904721.701063,
-    "ast_hash": "3a31e3942504d6c7646d74e426a9ebb8",
+    "mtime": 1787905132.1071713,
+    "seen": 1787905866.8294132,
+    "ast_hash": "06e083ba217db4f8288196cff648dcac",
     "semantic_hash": ""
   },
   "exercises/30_executive_leadership/04_headcount_reallocation.md": {
-    "mtime": 1787904547.689698,
-    "seen": 1787904721.701063,
-    "ast_hash": "387026f89c7e96672d8420e3a3d9ea07",
+    "mtime": 1787905132.1072404,
+    "seen": 1787905866.8294132,
+    "ast_hash": "c3d330dd1b7ea76fb6d483b42fb13180",
     "semantic_hash": ""
   },
   "exercises/30_executive_leadership/05_regulatory_exposure.md": {
-    "mtime": 1787904547.690095,
-    "seen": 1787904721.701063,
-    "ast_hash": "6a0dd556eff9c5a43c9cae7ed75dafbd",
+    "mtime": 1787905132.1073139,
+    "seen": 1787905866.829414,
+    "ast_hash": "9b4c830709849a060d64dc6540919c50",
     "semantic_hash": ""
   },
   "exercises/30_executive_leadership/06_board_resolutions.md": {
-    "mtime": 1787904547.6903825,
-    "seen": 1787904721.7010639,
-    "ast_hash": "01d945b2d6a89352987693b7469ddc96",
+    "mtime": 1787905132.1074142,
+    "seen": 1787905866.829414,
+    "ast_hash": "d3bd8e7d382db19502dbb715ae276f36",
     "semantic_hash": ""
   },
   "editors/vscode/esbuild.config.js": {
@@ -1572,183 +1572,183 @@
     "semantic_hash": ""
   },
   "exercises/31_mexican_tech_and_startups/01_levantamiento_capital.md": {
-    "mtime": 1787904547.6906798,
-    "seen": 1787904721.7010639,
-    "ast_hash": "a1dc2ed615143ef0f674f5a6947138ac",
+    "mtime": 1787905132.1074986,
+    "seen": 1787905866.829414,
+    "ast_hash": "8fea4316c866b5f4f13026409bb2c533",
     "semantic_hash": ""
   },
   "exercises/31_mexican_tech_and_startups/02_ronda_semilla_valuacion.md": {
-    "mtime": 1787904547.690946,
-    "seen": 1787904721.7010639,
-    "ast_hash": "1822d3be95590dc66924c79453528c75",
+    "mtime": 1787905132.107579,
+    "seen": 1787905866.8294148,
+    "ast_hash": "9635049dc40d1b1165e74e1ff49fd379",
     "semantic_hash": ""
   },
   "exercises/31_mexican_tech_and_startups/03_tasa_de_abandono.md": {
-    "mtime": 1787904547.6912148,
-    "seen": 1787904721.701065,
-    "ast_hash": "355fdac062a0d9017af2447127e9ed0b",
+    "mtime": 1787905132.1076648,
+    "seen": 1787905866.8294148,
+    "ast_hash": "182bd82f792680be6f24043c2a26cdb9",
     "semantic_hash": ""
   },
   "exercises/31_mexican_tech_and_startups/04_ajuste_producto_mercado.md": {
-    "mtime": 1787904547.6914957,
-    "seen": 1787904721.701065,
-    "ast_hash": "b9aa4ee54c4ebfabd26860102c771b23",
+    "mtime": 1787905132.1077468,
+    "seen": 1787905866.829416,
+    "ast_hash": "3b04767936a275b8d2e85c82c0dbf506",
     "semantic_hash": ""
   },
   "exercises/31_mexican_tech_and_startups/05_tasa_de_quema.md": {
-    "mtime": 1787904547.6917486,
-    "seen": 1787904721.701066,
-    "ast_hash": "a77a5296649d8189a3382c83f421bb8e",
+    "mtime": 1787905132.1078277,
+    "seen": 1787905866.829416,
+    "ast_hash": "ba09b7ab08d3fb5a06e168300380de1a",
     "semantic_hash": ""
   },
   "exercises/31_mexican_tech_and_startups/06_ronda_de_inversion_serie_a.md": {
-    "mtime": 1787904547.692138,
-    "seen": 1787904721.701066,
-    "ast_hash": "f25f0044345108183efb114d729223ee",
+    "mtime": 1787905132.107915,
+    "seen": 1787905866.829416,
+    "ast_hash": "e27a5fe50ac918281625d1bf814e4352",
     "semantic_hash": ""
   },
   "exercises/32_colombian_professional_nuances/01_hacer_una_vuelta.md": {
-    "mtime": 1787904547.6924238,
-    "seen": 1787904721.701066,
-    "ast_hash": "f4398d8aa7ed7aa417318c0647862f07",
+    "mtime": 1787905132.107998,
+    "seen": 1787905866.829417,
+    "ast_hash": "0c85518240a94b3ded7368b339bfa351",
     "semantic_hash": ""
   },
   "exercises/32_colombian_professional_nuances/02_estar_pendiente.md": {
-    "mtime": 1787904547.692854,
-    "seen": 1787904721.701067,
-    "ast_hash": "27152f0f4744344b43069ed21d957b55",
+    "mtime": 1787905132.1080806,
+    "seen": 1787905866.829417,
+    "ast_hash": "240a33b8e613658df4587d8f029ae71e",
     "semantic_hash": ""
   },
   "exercises/32_colombian_professional_nuances/03_caer_en_cuenta.md": {
-    "mtime": 1787904547.693322,
-    "seen": 1787904721.701067,
-    "ast_hash": "173eb1b78f64f361c4a60cdbdbad4716",
+    "mtime": 1787905132.1082773,
+    "seen": 1787905866.829418,
+    "ast_hash": "2dc3305103aad7b901359a13d326b534",
     "semantic_hash": ""
   },
   "exercises/32_colombian_professional_nuances/04_echar_reversa.md": {
-    "mtime": 1787904547.6935787,
-    "seen": 1787904721.701067,
-    "ast_hash": "4119953bd292901a5ef4aa815ae3048c",
+    "mtime": 1787905132.108361,
+    "seen": 1787905866.829418,
+    "ast_hash": "580d259724224eb1a0a08b06c9394ed8",
     "semantic_hash": ""
   },
   "exercises/32_colombian_professional_nuances/05_poner_la_lupa.md": {
-    "mtime": 1787904547.6939254,
-    "seen": 1787904721.701068,
-    "ast_hash": "4af4c3b8bb0b4cb631159f5675db5d03",
+    "mtime": 1787905132.1084473,
+    "seen": 1787905866.829418,
+    "ast_hash": "e6bf8a375d960fe05a6d9fb7b2326572",
     "semantic_hash": ""
   },
   "exercises/32_colombian_professional_nuances/06_dar_papaya_security.md": {
-    "mtime": 1787904547.694223,
-    "seen": 1787904721.701068,
-    "ast_hash": "a36414e347e510945e187528fa1accc6",
+    "mtime": 1787905132.1085196,
+    "seen": 1787905866.829419,
+    "ast_hash": "61b8444e541a8d8ad70ab31add9baaba",
     "semantic_hash": ""
   },
   "exercises/33_rioplatense_production_voseo/01_sacar_a_produccion.md": {
-    "mtime": 1787904547.6946776,
-    "seen": 1787904721.701068,
-    "ast_hash": "1e6b6dc9952e4859592f85f986cd2a81",
+    "mtime": 1787905132.1085908,
+    "seen": 1787905866.829419,
+    "ast_hash": "fed4e05a76a60a1fa01178f6a338a129",
     "semantic_hash": ""
   },
   "exercises/33_rioplatense_production_voseo/02_bancarse_la_carga.md": {
-    "mtime": 1787904547.6951149,
-    "seen": 1787904721.701069,
-    "ast_hash": "8cbcce4385dccd8df450556a8c43fc49",
+    "mtime": 1787905132.108667,
+    "seen": 1787905866.829419,
+    "ast_hash": "1e658628f8d1b23f7dd37388df13dcfb",
     "semantic_hash": ""
   },
   "exercises/33_rioplatense_production_voseo/03_ponerse_las_pilas_oncall.md": {
-    "mtime": 1787904547.6955094,
-    "seen": 1787904721.701069,
-    "ast_hash": "75adbd6bef5c777a8bd1d6adf11177fd",
+    "mtime": 1787905132.1087427,
+    "seen": 1787905866.82942,
+    "ast_hash": "5e18c2d838f64bcf9430ff70806830d4",
     "semantic_hash": ""
   },
   "exercises/33_rioplatense_production_voseo/04_dar_de_baja_servidor.md": {
-    "mtime": 1787904547.6958468,
-    "seen": 1787904721.70107,
-    "ast_hash": "83baee8918b205516004b6541759c12f",
+    "mtime": 1787905132.1088178,
+    "seen": 1787905866.82942,
+    "ast_hash": "f5df7f1787cc6bdad9179b91a5d66c5c",
     "semantic_hash": ""
   },
   "exercises/33_rioplatense_production_voseo/05_hacer_un_laburo_fino.md": {
-    "mtime": 1787904547.6962028,
-    "seen": 1787904721.70107,
-    "ast_hash": "fa1fb95b925e8c7d72d40ed2b4a3060a",
+    "mtime": 1787905132.1088958,
+    "seen": 1787905866.829421,
+    "ast_hash": "334ffcbd58e1c8bc0d8af1c61c9d809a",
     "semantic_hash": ""
   },
   "exercises/33_rioplatense_production_voseo/06_no_te_quedes_atras.md": {
-    "mtime": 1787904547.6965868,
-    "seen": 1787904721.70107,
-    "ast_hash": "8b094fb087ebcdddc28c04c99f48aef2",
+    "mtime": 1787905132.1089716,
+    "seen": 1787905866.829421,
+    "ast_hash": "02bf851b9ba1d5bb88812b6e13f85ba2",
     "semantic_hash": ""
   },
   "exercises/34_latam_anglicism_elimination/01_rastrear_vs_trackear.md": {
-    "mtime": 1787904547.6969724,
-    "seen": 1787904721.701071,
-    "ast_hash": "bd5d252b4abdd68bd620230aba1a4d81",
+    "mtime": 1787905132.1090426,
+    "seen": 1787905866.829421,
+    "ast_hash": "97754fb190ad18433d0cdf87dd776925",
     "semantic_hash": ""
   },
   "exercises/34_latam_anglicism_elimination/02_personalizar_vs_customizar.md": {
-    "mtime": 1787904547.6972866,
-    "seen": 1787904721.701071,
-    "ast_hash": "96a5b1c0b16dffae3456be226af27af0",
+    "mtime": 1787905132.1092083,
+    "seen": 1787905866.829422,
+    "ast_hash": "9108d1797ddec2227a3dc5a6db913c6f",
     "semantic_hash": ""
   },
   "exercises/34_latam_anglicism_elimination/03_rendir_vs_performar.md": {
-    "mtime": 1787904547.6975896,
-    "seen": 1787904721.701072,
-    "ast_hash": "f84a07417d42baf740d045d2e673f6b9",
+    "mtime": 1787905132.1092923,
+    "seen": 1787905866.829422,
+    "ast_hash": "9454cc1d1b9d43a0383b920762d57f3b",
     "semantic_hash": ""
   },
   "exercises/34_latam_anglicism_elimination/04_descartar_vs_deprecar.md": {
-    "mtime": 1787904547.6978807,
-    "seen": 1787904721.701072,
-    "ast_hash": "23957282d19e3336d8859caad28765ca",
+    "mtime": 1787905132.1093798,
+    "seen": 1787905866.8294232,
+    "ast_hash": "25689ece6b9b0691fcb28cb1bfd2c045",
     "semantic_hash": ""
   },
   "exercises/34_latam_anglicism_elimination/05_redireccionar_vs_forwardear.md": {
-    "mtime": 1787904547.6982036,
-    "seen": 1787904721.701073,
-    "ast_hash": "f1c7ef0247a14c2b09b4cd513c48ea67",
+    "mtime": 1787905132.1094575,
+    "seen": 1787905866.8294232,
+    "ast_hash": "6492d680e99218a408da36bc4d134f3f",
     "semantic_hash": ""
   },
   "exercises/34_latam_anglicism_elimination/06_restablecer_vs_resetear.md": {
-    "mtime": 1787904547.6984963,
-    "seen": 1787904721.701073,
-    "ast_hash": "9a7760cfe998ad94ec8beb1385dbfcfe",
+    "mtime": 1787905132.1095328,
+    "seen": 1787905866.8294232,
+    "ast_hash": "e585af98bbb800da2fb81ceee48ca924",
     "semantic_hash": ""
   },
   "exercises/35_latam_enterprise_risk_and_sla/01_acuerdo_confidencialidad.md": {
-    "mtime": 1787904547.6987698,
-    "seen": 1787904721.701074,
-    "ast_hash": "70c673bdecc14426736d213fd32005ba",
+    "mtime": 1787905132.1096132,
+    "seen": 1787905866.8294241,
+    "ast_hash": "9bec6a02d676a488dad4467efb52d6ef",
     "semantic_hash": ""
   },
   "exercises/35_latam_enterprise_risk_and_sla/02_lucro_cesante.md": {
-    "mtime": 1787904547.6991103,
-    "seen": 1787904721.701074,
-    "ast_hash": "9b16579b37b3bc19c1cc9b1032eada40",
+    "mtime": 1787905132.1096935,
+    "seen": 1787905866.8294241,
+    "ast_hash": "11b616a0625198181a18c743452e5140",
     "semantic_hash": ""
   },
   "exercises/35_latam_enterprise_risk_and_sla/03_clausula_rescision.md": {
-    "mtime": 1787904547.6995013,
-    "seen": 1787904721.701074,
-    "ast_hash": "55f6fc83811223c5e94dc63309c0ed25",
+    "mtime": 1787905132.1097717,
+    "seen": 1787905866.8294241,
+    "ast_hash": "899661a03c275489e8fef150097046be",
     "semantic_hash": ""
   },
   "exercises/35_latam_enterprise_risk_and_sla/04_mitigacion_riesgos.md": {
-    "mtime": 1787904547.6999865,
-    "seen": 1787904721.7010748,
-    "ast_hash": "318f89e6ff97a4c0d7a85859cf89861a",
+    "mtime": 1787905132.1098506,
+    "seen": 1787905866.8294249,
+    "ast_hash": "2000cfee612190711a60000da1adb1da",
     "semantic_hash": ""
   },
   "exercises/35_latam_enterprise_risk_and_sla/05_indemnidad_legal.md": {
-    "mtime": 1787904547.7003806,
-    "seen": 1787904721.7010748,
-    "ast_hash": "c06e0a4bbcbda6e25ed022f4a6854022",
+    "mtime": 1787905132.1099305,
+    "seen": 1787905866.8294249,
+    "ast_hash": "08f8a4ecbc9097cebcea97cc483237d5",
     "semantic_hash": ""
   },
   "exercises/35_latam_enterprise_risk_and_sla/06_penalizaciones_sla.md": {
-    "mtime": 1787904547.700737,
-    "seen": 1787904721.7010748,
-    "ast_hash": "2a85433eeb1d5700890fcbaf721b5420",
+    "mtime": 1787905132.110008,
+    "seen": 1787905866.8294258,
+    "ast_hash": "69a5398cfb4552861c607a6fedd93b56",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-27-standard-language-and-general-conversation-curriculum.md": {
@@ -1758,219 +1758,219 @@
     "semantic_hash": ""
   },
   "exercises/36_everyday_life_and_housing/01_contrato_arrendamiento.md": {
-    "mtime": 1787904547.7011752,
-    "seen": 1787904721.701076,
-    "ast_hash": "9343d53c26edc5c911d07a54c1125b1e",
+    "mtime": 1787905132.1100807,
+    "seen": 1787905866.8294258,
+    "ast_hash": "9f7da8f5dbc41a190fd7e278b2a6418d",
     "semantic_hash": ""
   },
   "exercises/36_everyday_life_and_housing/02_alta_servicios_hogar.md": {
-    "mtime": 1787904547.7016048,
-    "seen": 1787904721.701076,
-    "ast_hash": "6b752dc57a9e5753e60228bba1eaeec3",
+    "mtime": 1787905132.110162,
+    "seen": 1787905866.8294258,
+    "ast_hash": "8ee513488d9fb14a359b9a54b288d36c",
     "semantic_hash": ""
   },
   "exercises/36_everyday_life_and_housing/03_transferencia_bancaria.md": {
-    "mtime": 1787904547.7019882,
-    "seen": 1787904721.701076,
-    "ast_hash": "08ec4a9a2028875a038d7edd36f92d6a",
+    "mtime": 1787905132.110239,
+    "seen": 1787905866.829427,
+    "ast_hash": "3395e17f68b9dbe3363c1a4d5dd1f374",
     "semantic_hash": ""
   },
   "exercises/36_everyday_life_and_housing/04_solicitar_reembolso.md": {
-    "mtime": 1787904547.7024949,
-    "seen": 1787904721.701077,
-    "ast_hash": "450cd12e4fba4816d3007b8db70fc9ec",
+    "mtime": 1787905132.110315,
+    "seen": 1787905866.829427,
+    "ast_hash": "5bb419b57a3d8f6af79d335d9d0d01dd",
     "semantic_hash": ""
   },
   "exercises/36_everyday_life_and_housing/05_recoger_paquete.md": {
-    "mtime": 1787904547.702931,
-    "seen": 1787904721.701077,
-    "ast_hash": "c216c16605d1be9917711db7ca7652a8",
+    "mtime": 1787905132.1103911,
+    "seen": 1787905866.829427,
+    "ast_hash": "c3378b4431de346b4d710121a64e6aba",
     "semantic_hash": ""
   },
   "exercises/36_everyday_life_and_housing/06_hacer_transbordo.md": {
-    "mtime": 1787904547.703227,
-    "seen": 1787904721.701078,
-    "ast_hash": "b4450f255c1fcbe0c09add6f114e3132",
+    "mtime": 1787905132.1104631,
+    "seen": 1787905866.829428,
+    "ast_hash": "714b9732793c13fb1236fcbb4cd87ce1",
     "semantic_hash": ""
   },
   "exercises/37_healthcare_and_symptoms/01_describir_sintomas.md": {
-    "mtime": 1787904547.7036498,
-    "seen": 1787904721.701078,
-    "ast_hash": "db9c451eee528c468133a5909dbb0566",
+    "mtime": 1787905132.1105332,
+    "seen": 1787905866.829428,
+    "ast_hash": "ff26c2178134dda835273292c22d5ab3",
     "semantic_hash": ""
   },
   "exercises/37_healthcare_and_symptoms/02_consulta_receta_medica.md": {
-    "mtime": 1787904547.7041645,
-    "seen": 1787904721.701078,
-    "ast_hash": "a534b55a00563eed9d59d4d252212960",
+    "mtime": 1787905132.1106093,
+    "seen": 1787905866.829428,
+    "ast_hash": "7611f954bc394504dd5213d74c3e7326",
     "semantic_hash": ""
   },
   "exercises/37_healthcare_and_symptoms/03_farmacia_efectos_secundarios.md": {
-    "mtime": 1787904547.70457,
-    "seen": 1787904721.701078,
-    "ast_hash": "cf9db47df50c47cb8537baf20d52a610",
+    "mtime": 1787905132.1106899,
+    "seen": 1787905866.829429,
+    "ast_hash": "8469de4ad7c87f9d3f3fa6a1a91472ad",
     "semantic_hash": ""
   },
   "exercises/37_healthcare_and_symptoms/04_acudir_urgencias.md": {
-    "mtime": 1787904547.705031,
-    "seen": 1787904721.7010791,
-    "ast_hash": "e68905c9ab1cdcc05878e164316caee4",
+    "mtime": 1787905132.1107643,
+    "seen": 1787905866.829429,
+    "ast_hash": "d74ebb8b85ff1187bdd63855033af46f",
     "semantic_hash": ""
   },
   "exercises/37_healthcare_and_symptoms/05_cita_especialista.md": {
-    "mtime": 1787904547.7054317,
-    "seen": 1787904721.7010791,
-    "ast_hash": "8b6d1df1000e6398cde9442ed76df597",
+    "mtime": 1787905132.1108468,
+    "seen": 1787905866.82943,
+    "ast_hash": "d34c249f7c0d0d619d9506033fd41231",
     "semantic_hash": ""
   },
   "exercises/37_healthcare_and_symptoms/06_alergias_alimentarias.md": {
-    "mtime": 1787904547.705882,
-    "seen": 1787904721.70108,
-    "ast_hash": "0bb641cb7d34265df0c1599ad01b7e82",
+    "mtime": 1787905132.110925,
+    "seen": 1787905866.82943,
+    "ast_hash": "2e13cb2f9ac0c33fac2b2603ca965ad8",
     "semantic_hash": ""
   },
   "exercises/38_dining_and_social_conversation/01_pedir_cuenta_separado.md": {
-    "mtime": 1787904547.7061977,
-    "seen": 1787904721.70108,
-    "ast_hash": "e5cb74ad8e0d8dbe2b05938d77664b83",
+    "mtime": 1787905132.1110008,
+    "seen": 1787905866.829431,
+    "ast_hash": "ac5bd822f075d0c039878edd82d4f459",
     "semantic_hash": ""
   },
   "exercises/38_dining_and_social_conversation/02_hacer_planes_quedar.md": {
-    "mtime": 1787904547.7068214,
-    "seen": 1787904721.70108,
-    "ast_hash": "9730dd13c9c04a2bf854cac534ded127",
+    "mtime": 1787905132.111081,
+    "seen": 1787905866.829431,
+    "ast_hash": "115e274a02ddc7a807c272b5a9d4c2a0",
     "semantic_hash": ""
   },
   "exercises/38_dining_and_social_conversation/03_cumplidos_cortesia.md": {
-    "mtime": 1787904547.7071538,
-    "seen": 1787904721.701081,
-    "ast_hash": "f94dc17adb9ae7441b0e75519ae56085",
+    "mtime": 1787905132.11116,
+    "seen": 1787905866.829431,
+    "ast_hash": "91eab6ddce61d35b360cd4d2bcdc3002",
     "semantic_hash": ""
   },
   "exercises/38_dining_and_social_conversation/04_muletillas_conversacionales.md": {
-    "mtime": 1787904554.278036,
-    "seen": 1787904721.701081,
-    "ast_hash": "faa1a98811d5889c7689616edcf03d9b",
+    "mtime": 1787905132.1112423,
+    "seen": 1787905866.829432,
+    "ast_hash": "ed05604d412af37bc2ca66f04d7eedc4",
     "semantic_hash": ""
   },
   "exercises/38_dining_and_social_conversation/05_anecdotas_pasarla_bien.md": {
-    "mtime": 1787904547.707893,
-    "seen": 1787904721.701081,
-    "ast_hash": "5b87a80ce53030e7e6e7aeceaba0c27a",
+    "mtime": 1787905132.1113431,
+    "seen": 1787905866.829432,
+    "ast_hash": "5cbeccee02cc9baa09e9723c2a425a21",
     "semantic_hash": ""
   },
   "exercises/38_dining_and_social_conversation/06_despedidas_seguimiento.md": {
-    "mtime": 1787904547.708402,
-    "seen": 1787904721.7010822,
-    "ast_hash": "e4dd64b8712f76b46ca0542be3016b0d",
+    "mtime": 1787905132.1114452,
+    "seen": 1787905866.8294332,
+    "ast_hash": "0cb732bb39a1143921ac8062fa7b15b1",
     "semantic_hash": ""
   },
   "exercises/39_nuanced_prepositions_and_locutions/01_hacia_vs_hasta.md": {
-    "mtime": 1787904547.7088716,
-    "seen": 1787904721.7010822,
-    "ast_hash": "ee9225e279ca2f2cd8db2bdc9c0727cb",
+    "mtime": 1787905132.1115253,
+    "seen": 1787905866.8294332,
+    "ast_hash": "545a896ab192ab61b88e5b66d3562d4e",
     "semantic_hash": ""
   },
   "exercises/39_nuanced_prepositions_and_locutions/02_tras_vs_segun_vs_bajo.md": {
-    "mtime": 1787904547.7095873,
-    "seen": 1787904721.701083,
-    "ast_hash": "931c74bb78e96522f4a41640f8d964ac",
+    "mtime": 1787905132.111611,
+    "seen": 1787905866.8294342,
+    "ast_hash": "1e59552309835e57b149edfa7f7623d1",
     "semantic_hash": ""
   },
   "exercises/39_nuanced_prepositions_and_locutions/03_a_base_de_a_expensas.md": {
-    "mtime": 1787904547.710089,
-    "seen": 1787904721.701083,
-    "ast_hash": "ef5873fe7cdbec28480d4d157dc11d25",
+    "mtime": 1787905132.1116908,
+    "seen": 1787905866.8294342,
+    "ast_hash": "e1370ba36e3941b49c59a68c698a0fc2",
     "semantic_hash": ""
   },
   "exercises/39_nuanced_prepositions_and_locutions/04_al_cabo_de_dentro_de.md": {
-    "mtime": 1787904547.7105763,
-    "seen": 1787904721.701083,
-    "ast_hash": "df736c4fcfc155e80b4e47a20dce8cc2",
+    "mtime": 1787905132.1117673,
+    "seen": 1787905866.8294349,
+    "ast_hash": "c539b9b0f53d46a4f6b1470c839d5764",
     "semantic_hash": ""
   },
   "exercises/39_nuanced_prepositions_and_locutions/05_a_lo_largo_de_alrededor.md": {
-    "mtime": 1787904547.711057,
-    "seen": 1787904721.701084,
-    "ast_hash": "50b820a85e9d6a9e52c08aca9e447b3a",
+    "mtime": 1787905132.1118438,
+    "seen": 1787905866.8294349,
+    "ast_hash": "efed471dc7057acbd508b94e995ba8f1",
     "semantic_hash": ""
   },
   "exercises/39_nuanced_prepositions_and_locutions/06_a_raiz_de_por_medio_de.md": {
-    "mtime": 1787904547.7115843,
-    "seen": 1787904721.701084,
-    "ast_hash": "922e024f651b62f31908ad6f08ccdc43",
+    "mtime": 1787905132.1119225,
+    "seen": 1787905866.8294358,
+    "ast_hash": "d9d198cca53127ba0121f5a7d5fe2d76",
     "semantic_hash": ""
   },
   "exercises/40_middle_voice_and_reflexive_shifts/01_ir_vs_irse.md": {
-    "mtime": 1787904547.7120073,
-    "seen": 1787904721.701084,
-    "ast_hash": "d4b31f9527c1f9dfcd47d946a3c281cb",
+    "mtime": 1787905132.1120007,
+    "seen": 1787905866.8294358,
+    "ast_hash": "50c8867a5c74032c6abe719463488924",
     "semantic_hash": ""
   },
   "exercises/40_middle_voice_and_reflexive_shifts/02_dormir_vs_dormirse.md": {
-    "mtime": 1787904547.7123857,
-    "seen": 1787904721.7010849,
-    "ast_hash": "855eb684493057f78ac88665a9ff3a91",
+    "mtime": 1787905132.1120856,
+    "seen": 1787905866.8294358,
+    "ast_hash": "0c7ac9601d006ce8b508888652dd5ded",
     "semantic_hash": ""
   },
   "exercises/40_middle_voice_and_reflexive_shifts/03_comer_vs_comerse.md": {
-    "mtime": 1787904547.7127087,
-    "seen": 1787904721.7010849,
-    "ast_hash": "4653b04ebc2cbe3d19e0fa235fa4ffa1",
+    "mtime": 1787905132.1121633,
+    "seen": 1787905866.829437,
+    "ast_hash": "3a904a651fc71c4f1677e0ed9700a75b",
     "semantic_hash": ""
   },
   "exercises/40_middle_voice_and_reflexive_shifts/04_llevar_vs_llevarse.md": {
-    "mtime": 1787904569.2243605,
-    "seen": 1787904721.701086,
-    "ast_hash": "efa1b0fc68d35e25f28482647f9febdd",
+    "mtime": 1787905132.112244,
+    "seen": 1787905866.829437,
+    "ast_hash": "ae1d638a0aa921dd8d4e75bfb46392f9",
     "semantic_hash": ""
   },
   "exercises/40_middle_voice_and_reflexive_shifts/05_quedar_vs_quedarse.md": {
-    "mtime": 1787904547.7135513,
-    "seen": 1787904721.701086,
-    "ast_hash": "5a0e8802a88277cb65d1882cb3dad2dc",
+    "mtime": 1787905132.1123233,
+    "seen": 1787905866.829438,
+    "ast_hash": "b1100f653974067742cefbe1448cef5f",
     "semantic_hash": ""
   },
   "exercises/40_middle_voice_and_reflexive_shifts/06_volver_vs_volverse.md": {
-    "mtime": 1787904547.713921,
-    "seen": 1787904721.701086,
-    "ast_hash": "6203c889c0dabff289a559192eab034f",
+    "mtime": 1787905132.112406,
+    "seen": 1787905866.829438,
+    "ast_hash": "2d3b987c4b8670dbe79668f5e47382e4",
     "semantic_hash": ""
   },
   "exercises/41_adverbial_clauses_and_conjunctions/01_a_medida_que_conforme.md": {
-    "mtime": 1787904547.7143443,
-    "seen": 1787904721.701087,
-    "ast_hash": "3395ae2ca4490e70d53700dba659c563",
+    "mtime": 1787905132.1124947,
+    "seen": 1787905866.829439,
+    "ast_hash": "2249b6b238ca9118aa9de84f3d27b40d",
     "semantic_hash": ""
   },
   "exercises/41_adverbial_clauses_and_conjunctions/02_segun_de_modo_que.md": {
-    "mtime": 1787904547.7147264,
-    "seen": 1787904721.701087,
-    "ast_hash": "1f2d0cbc813b26f27093b8bc5601e43d",
+    "mtime": 1787905132.1125782,
+    "seen": 1787905866.829439,
+    "ast_hash": "fed0f15593062f704ac6496dcdfa2096",
     "semantic_hash": ""
   },
   "exercises/41_adverbial_clauses_and_conjunctions/03_en_tanto_que_mientras.md": {
-    "mtime": 1787904547.7151558,
-    "seen": 1787904721.701088,
-    "ast_hash": "ee8f87c8d4e4172e0f9b7b7b9b375e2b",
+    "mtime": 1787905132.1126602,
+    "seen": 1787905866.82944,
+    "ast_hash": "0f839a2055ca3ec6752affc97c0572c7",
     "semantic_hash": ""
   },
   "exercises/41_adverbial_clauses_and_conjunctions/04_tan_pronto_como_apenas.md": {
-    "mtime": 1787904547.7155528,
-    "seen": 1787904721.701088,
-    "ast_hash": "da36c14f1328445e5c40dcc42a2dc886",
+    "mtime": 1787905132.112744,
+    "seen": 1787905866.82944,
+    "ast_hash": "feb453f48fd3fa80880ceb0885e2eed2",
     "semantic_hash": ""
   },
   "exercises/41_adverbial_clauses_and_conjunctions/05_salvo_que_a_menos_que.md": {
-    "mtime": 1787904547.715986,
-    "seen": 1787904721.701088,
-    "ast_hash": "75b742ad34b2d7e882f7911967cd830c",
+    "mtime": 1787905132.1128306,
+    "seen": 1787905866.82944,
+    "ast_hash": "78faefccc29db9329d5e3289b4830513",
     "semantic_hash": ""
   },
   "exercises/41_adverbial_clauses_and_conjunctions/06_siempre_y_cuando.md": {
-    "mtime": 1787904547.7163706,
-    "seen": 1787904721.701089,
-    "ast_hash": "eedf92751ec9b68fefbf8c12b36b91b8",
+    "mtime": 1787905132.1129127,
+    "seen": 1787905866.829441,
+    "ast_hash": "9a18489a4e7a7bcb65aa671d953b904b",
     "semantic_hash": ""
   },
   "src/cli/commands/test.rs": {
@@ -2028,219 +2028,219 @@
     "semantic_hash": ""
   },
   "exercises/42_travel_logistics_and_borders/01_vuelo_cancelado_reclamacion.md": {
-    "mtime": 1787904547.71675,
-    "seen": 1787904721.701089,
-    "ast_hash": "2795de726e32443e69fe9af936613814",
+    "mtime": 1787905043.0617146,
+    "seen": 1787905866.829441,
+    "ast_hash": "b4a0c54c665d6654e409960d999a24c5",
     "semantic_hash": ""
   },
   "exercises/42_travel_logistics_and_borders/02_declaracion_aduanera.md": {
-    "mtime": 1787904547.7173944,
-    "seen": 1787904721.701089,
-    "ast_hash": "82a8f46abb1d38f6301001a47ecd65d5",
+    "mtime": 1787905043.061899,
+    "seen": 1787905866.829442,
+    "ast_hash": "6bfb9395e277fb6296a01e1fbb2b83d4",
     "semantic_hash": ""
   },
   "exercises/42_travel_logistics_and_borders/03_perdida_equipaje_indemnizacion.md": {
-    "mtime": 1787904547.7184403,
-    "seen": 1787904721.70109,
-    "ast_hash": "21a5b02beffdb7f15b62db24d3b02084",
+    "mtime": 1787905043.0622942,
+    "seen": 1787905866.829442,
+    "ast_hash": "19946f36eceb455ae296ea7b3159e6cb",
     "semantic_hash": ""
   },
   "exercises/42_travel_logistics_and_borders/04_cambio_itinerario_emergencia.md": {
-    "mtime": 1787904547.7189844,
-    "seen": 1787904721.70109,
-    "ast_hash": "a1d166600da6ce5a1fa19032acff0100",
+    "mtime": 1787905043.0624053,
+    "seen": 1787905866.829442,
+    "ast_hash": "d6c2129d44c95ecb7b795031e326ac7d",
     "semantic_hash": ""
   },
   "exercises/42_travel_logistics_and_borders/05_control_migratorio_visado.md": {
-    "mtime": 1787904547.719543,
-    "seen": 1787904721.70109,
-    "ast_hash": "f1850ce7a4ed544105fb9d38b73aa397",
+    "mtime": 1787905043.0625257,
+    "seen": 1787905866.829443,
+    "ast_hash": "5f9e6517af7b862db6f20565414c9070",
     "semantic_hash": ""
   },
   "exercises/42_travel_logistics_and_borders/06_reclamacion_seguro_viaje.md": {
-    "mtime": 1787904547.7204368,
-    "seen": 1787904721.701091,
-    "ast_hash": "ce7e809446d39637a68fa661e5023e95",
+    "mtime": 1787905043.062635,
+    "seen": 1787905866.829443,
+    "ast_hash": "ede58fd92eab8a5372a22b35a70f7dec",
     "semantic_hash": ""
   },
   "exercises/43_banking_taxes_and_finances/01_apertura_cuenta_no_residente.md": {
-    "mtime": 1787904547.7211003,
-    "seen": 1787904721.701091,
-    "ast_hash": "6a049ad1dd628a5a11991c027392d8c9",
+    "mtime": 1787905043.062753,
+    "seen": 1787905866.829443,
+    "ast_hash": "e4f5c445f797c3476d4b7ecc11a31ecf",
     "semantic_hash": ""
   },
   "exercises/43_banking_taxes_and_finances/02_transferencia_internacional_swift.md": {
-    "mtime": 1787904547.7216372,
-    "seen": 1787904721.701092,
-    "ast_hash": "4d5b6cff8793f073a70b0940d7295ed0",
+    "mtime": 1787905059.1345873,
+    "seen": 1787905866.8294442,
+    "ast_hash": "f7a9d17dbdbfdfcd636884a4f6b97d08",
     "semantic_hash": ""
   },
   "exercises/43_banking_taxes_and_finances/03_declaracion_renta_deducciones.md": {
-    "mtime": 1787904547.7221751,
-    "seen": 1787904721.701092,
-    "ast_hash": "7075e5038b51871b95f2a25ca407d38e",
+    "mtime": 1787905043.0629795,
+    "seen": 1787905866.8294442,
+    "ast_hash": "131dfff283d8c01dea769903a95cdb84",
     "semantic_hash": ""
   },
   "exercises/43_banking_taxes_and_finances/04_hipoteca_clausulas_suelo.md": {
-    "mtime": 1787904547.7227142,
-    "seen": 1787904721.7010932,
-    "ast_hash": "124b55644026911d9bb14ad9e9f32dbb",
+    "mtime": 1787905043.0630825,
+    "seen": 1787905866.8294451,
+    "ast_hash": "ec4ca5b2a065f50a7354d61508dabd52",
     "semantic_hash": ""
   },
   "exercises/43_banking_taxes_and_finances/05_reporte_fraude_bancario.md": {
-    "mtime": 1787904547.7232053,
-    "seen": 1787904721.7010958,
-    "ast_hash": "1b849d33a11094446ec99651278389d5",
+    "mtime": 1787905043.0631843,
+    "seen": 1787905866.8294451,
+    "ast_hash": "cd8c56e9c913661174a24d3fe411abca",
     "semantic_hash": ""
   },
   "exercises/43_banking_taxes_and_finances/06_facturacion_retenciones_autonomo.md": {
-    "mtime": 1787904547.7235868,
-    "seen": 1787904721.7010958,
-    "ast_hash": "4c6c8fd57ea5cccc09a2782d915629eb",
+    "mtime": 1787905043.0632915,
+    "seen": 1787905866.8294451,
+    "ast_hash": "2dd7cc57383d1d77ff06ac92954b6b7d",
     "semantic_hash": ""
   },
   "exercises/44_consumer_complaints_and_rights/01_hoja_reclamaciones_formal.md": {
-    "mtime": 1787904547.724107,
-    "seen": 1787904721.7010958,
-    "ast_hash": "6dd6a1f4535344039e0c2b7280810230",
+    "mtime": 1787905043.063396,
+    "seen": 1787905866.8294458,
+    "ast_hash": "c48ea33c42b55e3837f376bf42674233",
     "semantic_hash": ""
   },
   "exercises/44_consumer_complaints_and_rights/02_garantia_devolucion_producto.md": {
-    "mtime": 1787904547.7245145,
-    "seen": 1787904721.701097,
-    "ast_hash": "f64643f91e92e769392ee88ad23b97e2",
+    "mtime": 1787905043.0634966,
+    "seen": 1787905866.8294458,
+    "ast_hash": "2833420dba0919da9316320615276bd7",
     "semantic_hash": ""
   },
   "exercises/44_consumer_complaints_and_rights/03_baja_servicio_telecomunicaciones.md": {
-    "mtime": 1787904547.7249382,
-    "seen": 1787904721.701097,
-    "ast_hash": "4e62ae59d9a306bdf72815d6901250e6",
+    "mtime": 1787905043.0635993,
+    "seen": 1787905866.829447,
+    "ast_hash": "d56f2da7ca5d19dbf6b768d6bf9ee835",
     "semantic_hash": ""
   },
   "exercises/44_consumer_complaints_and_rights/04_cobro_indebido_suministros.md": {
-    "mtime": 1787904547.7253153,
-    "seen": 1787904721.701098,
-    "ast_hash": "f34b4c4b1dcd7cd07db5e96fc080bac3",
+    "mtime": 1787905043.063707,
+    "seen": 1787905866.829447,
+    "ast_hash": "c0aea867efb8bb9622d9bed5eb679541",
     "semantic_hash": ""
   },
   "exercises/44_consumer_complaints_and_rights/05_arbitraje_consumo.md": {
-    "mtime": 1787904547.7256486,
-    "seen": 1787904721.701098,
-    "ast_hash": "30aff4d74cc2a4d52e2faa899381106e",
+    "mtime": 1787905059.1348484,
+    "seen": 1787905866.829447,
+    "ast_hash": "f7a84ee9bd26d3164032b2471230e060",
     "semantic_hash": ""
   },
   "exercises/44_consumer_complaints_and_rights/06_demanda_incumplimiento_garantia.md": {
-    "mtime": 1787904547.7261097,
-    "seen": 1787904721.701098,
-    "ast_hash": "6ea6fef6e8adc9c21c5659189ddecf4a",
+    "mtime": 1787905043.064004,
+    "seen": 1787905866.829448,
+    "ast_hash": "8a8cc73dea854bff56ac2abc40e9ce79",
     "semantic_hash": ""
   },
   "exercises/45_home_maintenance_and_repairs/01_fuga_agua_fontanero.md": {
-    "mtime": 1787904547.7264388,
-    "seen": 1787904721.701099,
-    "ast_hash": "842dd0ee582fd0dbc8edfd45488da9d2",
+    "mtime": 1787905043.0641322,
+    "seen": 1787905866.829448,
+    "ast_hash": "ea124dc34b014f941e05ccf553afb5f4",
     "semantic_hash": ""
   },
   "exercises/45_home_maintenance_and_repairs/02_cuadro_electrico_averia.md": {
-    "mtime": 1787904547.7267554,
-    "seen": 1787904721.701099,
-    "ast_hash": "73573f9011f145598cb6dd603e270f43",
+    "mtime": 1787905043.0642533,
+    "seen": 1787905866.829449,
+    "ast_hash": "811724649194efd05f984b22a4b95ab1",
     "semantic_hash": ""
   },
   "exercises/45_home_maintenance_and_repairs/03_comunicacion_arrendador_desperfectos.md": {
-    "mtime": 1787904547.7272882,
-    "seen": 1787904721.701099,
-    "ast_hash": "711f1c318fdaeb993209b148d59ce75a",
+    "mtime": 1787905043.0643735,
+    "seen": 1787905866.829449,
+    "ast_hash": "0538d13763f4a3b7dba6f6b8ca2d2480",
     "semantic_hash": ""
   },
   "exercises/45_home_maintenance_and_repairs/04_humedades_comunidad_vecinos.md": {
-    "mtime": 1787904547.727795,
-    "seen": 1787904721.7011,
-    "ast_hash": "a11bfadae5c69d75300f9aa0ea937a97",
+    "mtime": 1787905043.0644934,
+    "seen": 1787905866.829449,
+    "ast_hash": "4d449164b6b2c515fe1d6f873a4611cf",
     "semantic_hash": ""
   },
   "exercises/45_home_maintenance_and_repairs/05_reparacion_electrodomesticos.md": {
-    "mtime": 1787904547.7283165,
-    "seen": 1787904721.7011,
-    "ast_hash": "c2c153748fa0f4ee6f57f864a21006de",
+    "mtime": 1787905043.0646107,
+    "seen": 1787905866.82945,
+    "ast_hash": "3f0403f93b03ec29ef2f3bd1afb6e3f5",
     "semantic_hash": ""
   },
   "exercises/45_home_maintenance_and_repairs/06_notificacion_reforma_estatutos.md": {
-    "mtime": 1787904547.728816,
-    "seen": 1787904721.701101,
-    "ast_hash": "5da86251d4878dac8e108344f31b29be",
+    "mtime": 1787905059.1350572,
+    "seen": 1787905866.82945,
+    "ast_hash": "67b11eacd9bb564f37b103be2b161838",
     "semantic_hash": ""
   },
   "exercises/46_news_media_and_civic_debate/01_editorial_transicion_energetica.md": {
-    "mtime": 1787904547.7293,
-    "seen": 1787904721.701101,
-    "ast_hash": "2f76b0555b13ff7e939f1e5a91ec86fb",
+    "mtime": 1787905043.064864,
+    "seen": 1787905866.829451,
+    "ast_hash": "e2d607c880e0ab83d3188b6231448ae1",
     "semantic_hash": ""
   },
   "exercises/46_news_media_and_civic_debate/02_polemica_politica_fiscal.md": {
-    "mtime": 1787904547.7298846,
-    "seen": 1787904721.701101,
-    "ast_hash": "5a1cd9b7163f6f9450c5af75d5771e24",
+    "mtime": 1787905059.1352644,
+    "seen": 1787905866.829451,
+    "ast_hash": "166a922fb18feb10defc11edb823812d",
     "semantic_hash": ""
   },
   "exercises/46_news_media_and_civic_debate/03_articulo_opinion_polarizacion.md": {
-    "mtime": 1787904547.730764,
-    "seen": 1787904721.701102,
-    "ast_hash": "ee266a95ca552265b3c635e1763db8bb",
+    "mtime": 1787905043.0651073,
+    "seen": 1787905866.829451,
+    "ast_hash": "5c049c417bf1073af40669c650788ca5",
     "semantic_hash": ""
   },
   "exercises/46_news_media_and_civic_debate/04_informe_macroeconomico_inflacion.md": {
-    "mtime": 1787904547.731554,
-    "seen": 1787904721.701102,
-    "ast_hash": "1170084c893d3718e0b76e2cce4bedb0",
+    "mtime": 1787905043.0652246,
+    "seen": 1787905866.829452,
+    "ast_hash": "024ee97d14416deee253328509c1c479",
     "semantic_hash": ""
   },
   "exercises/46_news_media_and_civic_debate/05_reforma_constitucional_debate.md": {
-    "mtime": 1787904547.7321348,
-    "seen": 1787904721.701102,
-    "ast_hash": "e2496659c21b34edc840957f84e5a0f5",
+    "mtime": 1787905043.06534,
+    "seen": 1787905866.829452,
+    "ast_hash": "2ec18ce117f86604e7f44a1e60cde3ea",
     "semantic_hash": ""
   },
   "exercises/46_news_media_and_civic_debate/06_critica_cultural_manifesto.md": {
-    "mtime": 1787904547.7327054,
-    "seen": 1787904721.7011032,
-    "ast_hash": "76ca7da7fc87f3bec01429f43d3cf797",
+    "mtime": 1787905043.0655215,
+    "seen": 1787905866.829453,
+    "ast_hash": "3fa43d9dc41cf055989f0ad8a061e17f",
     "semantic_hash": ""
   },
   "exercises/47_conversational_markers_and_nuance/01_matizadores_conversacionales_pues.md": {
-    "mtime": 1787904582.9621983,
-    "seen": 1787904721.7011032,
-    "ast_hash": "211292c03880d48648723f5826fdba93",
+    "mtime": 1787905043.0656931,
+    "seen": 1787905866.829453,
+    "ast_hash": "03003912c592cd5b198c36c8e717931c",
     "semantic_hash": ""
   },
   "exercises/47_conversational_markers_and_nuance/02_reformuladores_es_decir_o_sea.md": {
-    "mtime": 1787904592.993257,
-    "seen": 1787904721.7011042,
-    "ast_hash": "a528360ecb89f0c5b31318bd7ff9820a",
+    "mtime": 1787905043.0661361,
+    "seen": 1787905866.829453,
+    "ast_hash": "05a3408c235c3ae934f0e2450fd35ce4",
     "semantic_hash": ""
   },
   "exercises/47_conversational_markers_and_nuance/03_conclusivos_total_que.md": {
-    "mtime": 1787904547.7345185,
-    "seen": 1787904721.7011042,
-    "ast_hash": "724bb365731e220a93b3d8eff24d0f4a",
+    "mtime": 1787905043.06627,
+    "seen": 1787905866.8294542,
+    "ast_hash": "f9b1eca6f7f057d15cffac00b2d7dc6c",
     "semantic_hash": ""
   },
   "exercises/47_conversational_markers_and_nuance/04_rechazo_enfatico_ni_hablar.md": {
-    "mtime": 1787904635.7220266,
-    "seen": 1787904721.7011049,
-    "ast_hash": "cf49f5386bd5fa220f79598f54500cc2",
+    "mtime": 1787905043.066389,
+    "seen": 1787905866.8294542,
+    "ast_hash": "6d2bca62e711f226015e905502d9bb89",
     "semantic_hash": ""
   },
   "exercises/47_conversational_markers_and_nuance/05_cortesia_faltaria_mas.md": {
-    "mtime": 1787904644.8860397,
-    "seen": 1787904721.7011049,
-    "ast_hash": "bfa70718ea32bc045298609ed91d1218",
+    "mtime": 1787905043.0665095,
+    "seen": 1787905866.8294542,
+    "ast_hash": "b6431aa3df6f80cdcdbd9560da128d29",
     "semantic_hash": ""
   },
   "exercises/47_conversational_markers_and_nuance/06_digresores_a_proposito_por_cierto.md": {
-    "mtime": 1787904654.3630526,
-    "seen": 1787904721.7011049,
-    "ast_hash": "c522fb01688130704d62c35b514c1226",
+    "mtime": 1787905043.0666294,
+    "seen": 1787905866.8294551,
+    "ast_hash": "2e553eae8e70dbece492affa5f6a0060",
     "semantic_hash": ""
   },
   "src/cli/commands/tour.rs": {
@@ -2346,219 +2346,219 @@
     "semantic_hash": ""
   },
   "exercises/48_epistemic_conjecture_and_probability/01_present_conjecture_ser_estar.md": {
-    "mtime": 1787904547.7372243,
-    "seen": 1787904721.7011058,
-    "ast_hash": "4a258ddf2bfc2414dcaa6fb0c178209a",
+    "mtime": 1787905043.0667455,
+    "seen": 1787905866.8294551,
+    "ast_hash": "5874718bb909dc131596a2428b3505f4",
     "semantic_hash": ""
   },
   "exercises/48_epistemic_conjecture_and_probability/02_present_conjecture_estar_oficina.md": {
-    "mtime": 1787904547.7375607,
-    "seen": 1787904721.7011058,
-    "ast_hash": "58dc03000cdc2da482484585eedcde23",
+    "mtime": 1787905043.0668578,
+    "seen": 1787905866.8294559,
+    "ast_hash": "c9337d2f88d652ad59e3357b0da128a4",
     "semantic_hash": ""
   },
   "exercises/48_epistemic_conjecture_and_probability/03_past_conjecture_simple_conditional.md": {
-    "mtime": 1787904547.7378695,
-    "seen": 1787904721.7011058,
-    "ast_hash": "2b73d9daf02a2d028d212fa1822f89cd",
+    "mtime": 1787905043.0669742,
+    "seen": 1787905866.8294559,
+    "ast_hash": "ddb58a6558a705e298fc1ecb895e9ca0",
     "semantic_hash": ""
   },
   "exercises/48_epistemic_conjecture_and_probability/04_past_conjecture_age_and_quantity.md": {
-    "mtime": 1787904547.7381535,
-    "seen": 1787904721.701107,
-    "ast_hash": "54f4d6bcdedb68099d68ecd8cb8e6de2",
+    "mtime": 1787905043.0670836,
+    "seen": 1787905866.8294559,
+    "ast_hash": "657ce16cd7739f07c9dd55d59a367335",
     "semantic_hash": ""
   },
   "exercises/48_epistemic_conjecture_and_probability/05_compound_future_perfect_conjecture.md": {
-    "mtime": 1787904547.7384622,
-    "seen": 1787904721.701107,
-    "ast_hash": "a027132e4d0d448d0b4f38127daff534",
+    "mtime": 1787905043.0671942,
+    "seen": 1787905866.8294568,
+    "ast_hash": "82e617aa1b989c46050d5110b680d447",
     "semantic_hash": ""
   },
   "exercises/48_epistemic_conjecture_and_probability/06_compound_conditional_conjecture.md": {
-    "mtime": 1787904547.7388093,
-    "seen": 1787904721.701108,
-    "ast_hash": "cb49c2381de91c0afae71c9df95b2192",
+    "mtime": 1787905043.0673048,
+    "seen": 1787905866.8294568,
+    "ast_hash": "8286db44d6de43aa9dcbed5d7b44f0ae",
     "semantic_hash": ""
   },
   "exercises/49_clitic_doubling_and_left_dislocation/01_mandatory_dative_tonic_pronoun.md": {
-    "mtime": 1787904547.7390993,
-    "seen": 1787904721.701108,
-    "ast_hash": "ea686c55744460210c779f0a981f925d",
+    "mtime": 1787905043.0674086,
+    "seen": 1787905866.8294568,
+    "ast_hash": "b82d537b24eaaf9d29a85d4dc638c1e2",
     "semantic_hash": ""
   },
   "exercises/49_clitic_doubling_and_left_dislocation/02_dative_doubling_human_recipient.md": {
-    "mtime": 1787904547.7394023,
-    "seen": 1787904721.701108,
-    "ast_hash": "fd98f420cb4dbbeea88ecce9ea8934a3",
+    "mtime": 1787905043.0675128,
+    "seen": 1787905866.829458,
+    "ast_hash": "264b61b1683b11babc20af49860e7a9f",
     "semantic_hash": ""
   },
   "exercises/49_clitic_doubling_and_left_dislocation/03_psych_verbs_inherent_datives.md": {
-    "mtime": 1787904547.739702,
-    "seen": 1787904721.701109,
-    "ast_hash": "3aa84ae044b851fd4a8be1704c117cc9",
+    "mtime": 1787905043.0676148,
+    "seen": 1787905866.829458,
+    "ast_hash": "c03a6ec8a9a6a2bd95d014a3a5588ab1",
     "semantic_hash": ""
   },
   "exercises/49_clitic_doubling_and_left_dislocation/04_fronted_direct_objects_left_dislocation.md": {
-    "mtime": 1787904547.7400403,
-    "seen": 1787904721.701109,
-    "ast_hash": "e447d259d4445ae4af86fcb8ced14ea3",
+    "mtime": 1787905043.0677164,
+    "seen": 1787905866.829458,
+    "ast_hash": "9e52b3738d41c1154914299bd6ecc784",
     "semantic_hash": ""
   },
   "exercises/49_clitic_doubling_and_left_dislocation/05_fronted_inanimate_direct_objects.md": {
-    "mtime": 1787904547.7403936,
-    "seen": 1787904721.7011101,
-    "ast_hash": "b9441cd6e2939288e195325f48792ef4",
+    "mtime": 1787905043.0678418,
+    "seen": 1787905866.829459,
+    "ast_hash": "3c32704e34a0dd83f4aecb1f27a7e1ab",
     "semantic_hash": ""
   },
   "exercises/49_clitic_doubling_and_left_dislocation/06_tonic_accusative_reduplication.md": {
-    "mtime": 1787904547.7405996,
-    "seen": 1787904721.7011101,
-    "ast_hash": "6376ef60fe72f1f569608566395f5855",
+    "mtime": 1787905043.067941,
+    "seen": 1787905866.829459,
+    "ast_hash": "151b210922437ac8e446c0460b5b78b9",
     "semantic_hash": ""
   },
   "exercises/50_personal_a_and_animacy_shifts/01_specific_vs_indefinite_humans.md": {
-    "mtime": 1787904547.7408612,
-    "seen": 1787904721.7011101,
-    "ast_hash": "1c64c310ea16548511d51a3e59802081",
+    "mtime": 1787905043.0680418,
+    "seen": 1787905866.82946,
+    "ast_hash": "0481a9b4b398d5eb4989dfdb0b4d9e7a",
     "semantic_hash": ""
   },
   "exercises/50_personal_a_and_animacy_shifts/02_indefinite_non_specific_human.md": {
-    "mtime": 1787904547.7410965,
-    "seen": 1787904721.701111,
-    "ast_hash": "7324a73435fa3d8866225d5fa4ef46e4",
+    "mtime": 1787905043.0681384,
+    "seen": 1787905866.82946,
+    "ast_hash": "c5e6f61f634d18d5189c40f3e25f3d02",
     "semantic_hash": ""
   },
   "exercises/50_personal_a_and_animacy_shifts/03_personification_and_companion_animals.md": {
-    "mtime": 1787904547.7413926,
-    "seen": 1787904721.701111,
-    "ast_hash": "39b42c341193f3c42cccd609c064b08b",
+    "mtime": 1787905043.0682375,
+    "seen": 1787905866.82946,
+    "ast_hash": "e4611810486961fc6bb3812f82de438f",
     "semantic_hash": ""
   },
   "exercises/50_personal_a_and_animacy_shifts/04_verb_shift_tener.md": {
-    "mtime": 1787904547.741793,
-    "seen": 1787904721.701112,
-    "ast_hash": "e4f4622b8b92cd352fa3445eaf3a8c79",
+    "mtime": 1787905043.0683374,
+    "seen": 1787905866.829461,
+    "ast_hash": "d3dfd979b431457b7b61e87d89bfa440",
     "semantic_hash": ""
   },
   "exercises/50_personal_a_and_animacy_shifts/05_verb_shift_perder.md": {
-    "mtime": 1787904547.7420871,
-    "seen": 1787904721.701112,
-    "ast_hash": "329a92834e49e9156d3c0066762dd2d3",
+    "mtime": 1787905043.0684428,
+    "seen": 1787905866.829461,
+    "ast_hash": "fbfef6f6ae4628432bd96ec245657aae",
     "semantic_hash": ""
   },
   "exercises/50_personal_a_and_animacy_shifts/06_indefinite_pronouns_nadie_alguien.md": {
-    "mtime": 1787904547.7424471,
-    "seen": 1787904721.701112,
-    "ast_hash": "4030956068f409222a42dd70f8614fae",
+    "mtime": 1787905043.0685406,
+    "seen": 1787905866.829462,
+    "ast_hash": "45a7febeb83d5cf27b1bd248ff5bb8d9",
     "semantic_hash": ""
   },
   "exercises/51_gerund_restrictions_and_anglicisms/01_posteriority_elimination_server_crash.md": {
-    "mtime": 1787904547.7428448,
-    "seen": 1787904721.701113,
-    "ast_hash": "391389c623b588153c85363e6dd58d9c",
+    "mtime": 1787905043.0686684,
+    "seen": 1787905866.829462,
+    "ast_hash": "8ab093eb5dc23a90893d8837b2339b6f",
     "semantic_hash": ""
   },
   "exercises/51_gerund_restrictions_and_anglicisms/02_posteriority_elimination_arrival_and_meeting.md": {
-    "mtime": 1787904547.7433426,
-    "seen": 1787904721.701113,
-    "ast_hash": "081ae3cc8d43f5f77d24ee5ca957f634",
+    "mtime": 1787905043.0687969,
+    "seen": 1787905866.829463,
+    "ast_hash": "af22a0b6e913268e06f35dc4c3fa86da",
     "semantic_hash": ""
   },
   "exercises/51_gerund_restrictions_and_anglicisms/03_adjectival_gerund_regulation.md": {
-    "mtime": 1787904547.7438314,
-    "seen": 1787904721.7011142,
-    "ast_hash": "f00ca5ab26504fb032987fb6142a2ca7",
+    "mtime": 1787905043.0691755,
+    "seen": 1787905866.829463,
+    "ast_hash": "8174060d54007d4664237d2290278cc5",
     "semantic_hash": ""
   },
   "exercises/51_gerund_restrictions_and_anglicisms/04_adjectival_gerund_technical_report.md": {
-    "mtime": 1787904547.744153,
-    "seen": 1787904721.7011142,
-    "ast_hash": "44388da94f01722a580309993c38faef",
+    "mtime": 1787905043.0692775,
+    "seen": 1787905866.829463,
+    "ast_hash": "50354453bfbea86c654a16af37c07150",
     "semantic_hash": ""
   },
   "exercises/51_gerund_restrictions_and_anglicisms/05_simultaneous_manner_gerund.md": {
-    "mtime": 1787904547.7445164,
-    "seen": 1787904721.701115,
-    "ast_hash": "682d16667a78903639ecdfd8bb82269c",
+    "mtime": 1787905043.0693789,
+    "seen": 1787905866.829464,
+    "ast_hash": "09002b5466149b0d9d345cf443a8edf8",
     "semantic_hash": ""
   },
   "exercises/51_gerund_restrictions_and_anglicisms/06_idiomatic_exception_boiling_water.md": {
-    "mtime": 1787904547.7449615,
-    "seen": 1787904721.701115,
-    "ast_hash": "10264a6dcd09195033541fbdc74e28c6",
+    "mtime": 1787905043.0694788,
+    "seen": 1787905866.829464,
+    "ast_hash": "38bfbe17d80875537cd8867dcf936932",
     "semantic_hash": ""
   },
   "exercises/52_adversative_pero_sino_sino_que/01_additive_contrast_pero.md": {
-    "mtime": 1787904547.7453701,
-    "seen": 1787904721.701115,
-    "ast_hash": "ecdece7b16411da59e412fda74cef2ec",
+    "mtime": 1787905043.0695858,
+    "seen": 1787905866.829464,
+    "ast_hash": "4886055e1525cea6eee933df54538d43",
     "semantic_hash": ""
   },
   "exercises/52_adversative_pero_sino_sino_que/02_exclusive_substitution_sino_noun.md": {
-    "mtime": 1787904547.745875,
-    "seen": 1787904721.7011158,
-    "ast_hash": "976872260fd0e2f687ac0fc0d7fa651f",
+    "mtime": 1787905043.0696883,
+    "seen": 1787905866.8294652,
+    "ast_hash": "83f5a777cd40b161d8e6563c8ed9af28",
     "semantic_hash": ""
   },
   "exercises/52_adversative_pero_sino_sino_que/03_exclusive_substitution_sino_adverb.md": {
-    "mtime": 1787904547.7462084,
-    "seen": 1787904721.7011158,
-    "ast_hash": "2808e05a9eb939fd139a66c6f3f536f0",
+    "mtime": 1787905043.0697887,
+    "seen": 1787905866.8294652,
+    "ast_hash": "a0c4c1dd65fd07d8406b3512a49b1ff0",
     "semantic_hash": ""
   },
   "exercises/52_adversative_pero_sino_sino_que/04_finite_clause_substitution_sino_que.md": {
-    "mtime": 1787904547.7466233,
-    "seen": 1787904721.7011158,
-    "ast_hash": "caa4f8145d4a3f8aaa23afbe2e586f7b",
+    "mtime": 1787905043.0698946,
+    "seen": 1787905866.829466,
+    "ast_hash": "9bae033f578a45bd3ba8eae9f14bae01",
     "semantic_hash": ""
   },
   "exercises/52_adversative_pero_sino_sino_que/05_finite_clause_rejection_sino_que.md": {
-    "mtime": 1787904547.7469318,
-    "seen": 1787904721.701117,
-    "ast_hash": "01cb354b48ada86d3b39b3c4aee95397",
+    "mtime": 1787905043.0700145,
+    "seen": 1787905866.829466,
+    "ast_hash": "4fc3da69f8fba463825771c12f663090",
     "semantic_hash": ""
   },
   "exercises/52_adversative_pero_sino_sino_que/06_triple_contrast_mastery.md": {
-    "mtime": 1787904547.7472184,
-    "seen": 1787904721.701117,
-    "ast_hash": "c52c003e6d7fc8354ccbc6a8ba8c8152",
+    "mtime": 1787905043.0701256,
+    "seen": 1787905866.829466,
+    "ast_hash": "01dc2e30361781ce1a180cffcb5cfaf0",
     "semantic_hash": ""
   },
   "exercises/53_independent_subjunctives_and_legal_tenses/01_counterfactual_longing_quien_pudiera.md": {
-    "mtime": 1787904547.7475264,
-    "seen": 1787904721.701118,
-    "ast_hash": "47ab40b487b1e07afa20658bcd89e536",
+    "mtime": 1787905043.0702431,
+    "seen": 1787905866.8294668,
+    "ast_hash": "177ccba5885995d2a2fc16523a821249",
     "semantic_hash": ""
   },
   "exercises/53_independent_subjunctives_and_legal_tenses/02_independent_benevolent_wish_que_tengas.md": {
-    "mtime": 1787904547.7478104,
-    "seen": 1787904721.701118,
-    "ast_hash": "f2b9f793cb546ef50b1f567b8c21f337",
+    "mtime": 1787905043.0703564,
+    "seen": 1787905866.8294668,
+    "ast_hash": "034c17a9e33168d566658ff7171104f1",
     "semantic_hash": ""
   },
   "exercises/53_independent_subjunctives_and_legal_tenses/03_fixed_idiomatic_subjunctive_cueste.md": {
-    "mtime": 1787904547.7480798,
-    "seen": 1787904721.701119,
-    "ast_hash": "95cc037cbb9d79912b32aa532a0bbf60",
+    "mtime": 1787905043.0704725,
+    "seen": 1787905866.829468,
+    "ast_hash": "af602e5351e3656ea484a72d429987c4",
     "semantic_hash": ""
   },
   "exercises/53_independent_subjunctives_and_legal_tenses/04_legal_future_subjunctive_incumpliere.md": {
-    "mtime": 1787904547.74848,
-    "seen": 1787904721.701119,
-    "ast_hash": "5873f863e09a6c7a460fcf377b9c8041",
+    "mtime": 1787905043.0705864,
+    "seen": 1787905866.829468,
+    "ast_hash": "9b6131b737f6b98868efb6641204f971",
     "semantic_hash": ""
   },
   "exercises/53_independent_subjunctives_and_legal_tenses/05_legal_future_subjunctive_cometiere.md": {
-    "mtime": 1787904547.7489107,
-    "seen": 1787904721.701119,
-    "ast_hash": "1011f9a898ea55e65683f2431ebb1ec3",
+    "mtime": 1787905043.0707026,
+    "seen": 1787905866.829469,
+    "ast_hash": "7c9023cb47facc5675dbe63ad90f0f4c",
     "semantic_hash": ""
   },
   "exercises/53_independent_subjunctives_and_legal_tenses/06_literary_past_ra_form.md": {
-    "mtime": 1787904547.7492669,
-    "seen": 1787904721.70112,
-    "ast_hash": "7fbe627a9889f5b2f3ca109505054962",
+    "mtime": 1787905043.0708153,
+    "seen": 1787905866.829469,
+    "ast_hash": "566f8fba065f21caced97d8b4c04a6f9",
     "semantic_hash": ""
   },
   "docs/adr/0004-full-spectrum-c1-c2-linguistic-completeness.md": {
@@ -2568,225 +2568,225 @@
     "semantic_hash": ""
   },
   "exercises/54_verbs_of_becoming_and_transformation/01_ponerse_temporary_emotion.md": {
-    "mtime": 1787904547.7498052,
-    "seen": 1787904721.70112,
-    "ast_hash": "f51f393418faee4d6deb36f82640df24",
+    "mtime": 1787905043.070929,
+    "seen": 1787905866.829469,
+    "ast_hash": "c825077001219efd7b420fcf255abfe4",
     "semantic_hash": ""
   },
   "exercises/54_verbs_of_becoming_and_transformation/02_ponerse_physical_appearance.md": {
-    "mtime": 1787904547.7501864,
-    "seen": 1787904721.70112,
-    "ast_hash": "f36a2e2abcbee65e9ac8bce13c141060",
+    "mtime": 1787905043.0710378,
+    "seen": 1787905866.82947,
+    "ast_hash": "56c1f052f40cabe51ac204182cee66a9",
     "semantic_hash": ""
   },
   "exercises/54_verbs_of_becoming_and_transformation/03_quedarse_resulting_shock.md": {
-    "mtime": 1787904547.7505877,
-    "seen": 1787904721.701121,
-    "ast_hash": "983337ba843c711ba0fab1f456bfc6ec",
+    "mtime": 1787905043.0711474,
+    "seen": 1787905866.82947,
+    "ast_hash": "efd227f372936ab1eaec9155072f8bbd",
     "semantic_hash": ""
   },
   "exercises/54_verbs_of_becoming_and_transformation/04_hacerse_voluntary_profession.md": {
-    "mtime": 1787904547.7508883,
-    "seen": 1787904721.701121,
-    "ast_hash": "9e8f2440053c587c6de1231eb31955b1",
+    "mtime": 1787905043.071263,
+    "seen": 1787905866.8294709,
+    "ast_hash": "1aab03e924bc58ddb04e6de5b660cc26",
     "semantic_hash": ""
   },
   "exercises/54_verbs_of_becoming_and_transformation/05_volverse_personality_shift.md": {
-    "mtime": 1787904547.751194,
-    "seen": 1787904721.701122,
-    "ast_hash": "0a21d315dffbbcde11c7fbf062ca9fa0",
+    "mtime": 1787905043.0713964,
+    "seen": 1787905866.8294709,
+    "ast_hash": "9468c0443b603adec6e013694599806f",
     "semantic_hash": ""
   },
   "exercises/54_verbs_of_becoming_and_transformation/06_llegar_a_ser_and_convertirse_en.md": {
-    "mtime": 1787904547.7515879,
-    "seen": 1787904721.701122,
-    "ast_hash": "44b58e38a0e6e5804145d94c22496046",
+    "mtime": 1787905043.071528,
+    "seen": 1787905866.8294709,
+    "ast_hash": "54445836b67b2a8f93db3efd0cf002f4",
     "semantic_hash": ""
   },
   "exercises/55_epistemic_adverbs_and_mood_selection/01_a_lo_mejor_indicative.md": {
-    "mtime": 1787904547.7518773,
-    "seen": 1787904721.701122,
-    "ast_hash": "db8c0c59de2c223d1c14a6309132276e",
+    "mtime": 1787905043.0716531,
+    "seen": 1787905866.829472,
+    "ast_hash": "0ce459f8fa2029cb967c6339b5e3deec",
     "semantic_hash": ""
   },
   "exercises/55_epistemic_adverbs_and_mood_selection/02_igual_colloquial_indicative.md": {
-    "mtime": 1787904547.7522385,
-    "seen": 1787904721.701123,
-    "ast_hash": "4d6f302162cab98c4bfe49b3418a65dd",
+    "mtime": 1787905043.071778,
+    "seen": 1787905866.829472,
+    "ast_hash": "26cb60dbf5e073dba5e6d6f4535208c2",
     "semantic_hash": ""
   },
   "exercises/55_epistemic_adverbs_and_mood_selection/03_quizas_preposed_subjunctive.md": {
-    "mtime": 1787904547.7525055,
-    "seen": 1787904721.701123,
-    "ast_hash": "498710a296228db3a60542850ac411e0",
+    "mtime": 1787905043.0719004,
+    "seen": 1787905866.829473,
+    "ast_hash": "205d8295d89b2fbfae025af384ce7a45",
     "semantic_hash": ""
   },
   "exercises/55_epistemic_adverbs_and_mood_selection/04_tal_vez_preposed_high_doubt.md": {
-    "mtime": 1787904547.7528212,
-    "seen": 1787904721.7011242,
-    "ast_hash": "fda42c61f73f1e69c197333e67842a28",
+    "mtime": 1787905043.0720694,
+    "seen": 1787905866.829473,
+    "ast_hash": "871f150049b48f26b67c1eadf0b492ee",
     "semantic_hash": ""
   },
   "exercises/55_epistemic_adverbs_and_mood_selection/05_postposed_epistemic_adverb_indicative.md": {
-    "mtime": 1787904547.7531679,
-    "seen": 1787904721.7011242,
-    "ast_hash": "5c607a9fb60dfca49b7271461c9163a4",
+    "mtime": 1787905043.0722463,
+    "seen": 1787905866.829473,
+    "ast_hash": "1b7c6ef91caf269439596739b4e6e613",
     "semantic_hash": ""
   },
   "exercises/55_epistemic_adverbs_and_mood_selection/06_acaso_rhetorical_indicative.md": {
-    "mtime": 1787904547.7534335,
-    "seen": 1787904721.7011242,
-    "ast_hash": "528f2cb61508cf4dd12d450b92893cf9",
+    "mtime": 1787905043.0725842,
+    "seen": 1787905866.829474,
+    "ast_hash": "0bf130d3eeb50fb5aba5a6f9c708e535",
     "semantic_hash": ""
   },
   "exercises/56_datives_of_possession_and_ethic_datives/01_inalienable_body_parts.md": {
-    "mtime": 1787904547.7536962,
-    "seen": 1787904721.7011251,
-    "ast_hash": "aed85c59d635fa78ed7d7e741ee504c7",
+    "mtime": 1787905043.072703,
+    "seen": 1787905866.829474,
+    "ast_hash": "f03daae544e33f343e242d4bf5afc2e2",
     "semantic_hash": ""
   },
   "exercises/56_datives_of_possession_and_ethic_datives/02_inalienable_personal_possessions.md": {
-    "mtime": 1787904547.7539752,
-    "seen": 1787904721.7011251,
-    "ast_hash": "4d6764d581af8afcb69734a8cbe78d9b",
+    "mtime": 1787905043.072825,
+    "seen": 1787905866.8294752,
+    "ast_hash": "231167de4da280352aaa350318ef62ad",
     "semantic_hash": ""
   },
   "exercises/56_datives_of_possession_and_ethic_datives/03_ethic_dative_affective_plea.md": {
-    "mtime": 1787904547.7542734,
-    "seen": 1787904721.7011251,
-    "ast_hash": "7e68343da704978b55192fba932a82ab",
+    "mtime": 1787905043.072947,
+    "seen": 1787905866.8294752,
+    "ast_hash": "20a153b9fffaaaed5087cd2c27bdfc1e",
     "semantic_hash": ""
   },
   "exercises/56_datives_of_possession_and_ethic_datives/04_ethic_dative_parental_concern.md": {
-    "mtime": 1787904547.7545362,
-    "seen": 1787904721.7011259,
-    "ast_hash": "0bec86a18812f4644bafc0e6f538ff69",
+    "mtime": 1787905043.07311,
+    "seen": 1787905866.8294752,
+    "ast_hash": "75a8ce47b8f73e76769ef97f5eaafe75",
     "semantic_hash": ""
   },
   "exercises/56_datives_of_possession_and_ethic_datives/05_sympathetic_dative_collective_impact.md": {
-    "mtime": 1787904547.7548027,
-    "seen": 1787904721.7011259,
-    "ast_hash": "a75775adcae081bbfa6038602f001c9c",
+    "mtime": 1787905043.0732837,
+    "seen": 1787905866.829476,
+    "ast_hash": "9d10b01ec859dd6da1add0f60513c32c",
     "semantic_hash": ""
   },
   "exercises/56_datives_of_possession_and_ethic_datives/06_deliberative_consumption_dative.md": {
-    "mtime": 1787904547.7551486,
-    "seen": 1787904721.7011268,
-    "ast_hash": "929efb0e88fc7714e602b4b29977b34a",
+    "mtime": 1787905043.0736067,
+    "seen": 1787905866.829476,
+    "ast_hash": "4c2c8df95fa9216f4b6b7879d1466288",
     "semantic_hash": ""
   },
   "exercises/57_corrective_and_concessive_polarities/01_no_es_que_subjunctive_clause.md": {
-    "mtime": 1787904547.7554994,
-    "seen": 1787904721.7011268,
-    "ast_hash": "909517cd68435709bc3c4603ccf1602c",
+    "mtime": 1787905043.073712,
+    "seen": 1787905866.829476,
+    "ast_hash": "1bb876c90c2a49fa86565070c832da1a",
     "semantic_hash": ""
   },
   "exercises/57_corrective_and_concessive_polarities/02_no_es_que_indicative_second_clause.md": {
-    "mtime": 1787904547.755799,
-    "seen": 1787904721.7011268,
-    "ast_hash": "11b6c033aead5506bd9ec09d86fa4a9f",
+    "mtime": 1787905043.0738306,
+    "seen": 1787905866.829477,
+    "ast_hash": "cc9c989c060d1edf1d3a49c5385f964b",
     "semantic_hash": ""
   },
   "exercises/57_corrective_and_concessive_polarities/03_no_porque_rejected_cause.md": {
-    "mtime": 1787904547.756117,
-    "seen": 1787904721.701128,
-    "ast_hash": "ed1640f622947795673ddb8faa56d9b5",
+    "mtime": 1787905043.0739446,
+    "seen": 1787905866.829477,
+    "ast_hash": "604b12cf60c751e240b802f7c917268d",
     "semantic_hash": ""
   },
   "exercises/57_corrective_and_concessive_polarities/04_no_porque_past_subjunctive.md": {
-    "mtime": 1787904547.7565255,
-    "seen": 1787904721.701128,
-    "ast_hash": "493c572593d887d4f7f11cc02766779d",
+    "mtime": 1787905043.074057,
+    "seen": 1787905866.8294778,
+    "ast_hash": "ad33b315cc39f72c6477c8c6a0a9a08b",
     "semantic_hash": ""
   },
   "exercises/57_corrective_and_concessive_polarities/05_de_ahi_que_consecutive_subjunctive.md": {
-    "mtime": 1787904547.7568173,
-    "seen": 1787904721.701129,
-    "ast_hash": "d096f728374845ebedcedd99ebd61a35",
+    "mtime": 1787905043.0741842,
+    "seen": 1787905866.8294778,
+    "ast_hash": "21babba05119a695dea0248236b4f251",
     "semantic_hash": ""
   },
   "exercises/57_corrective_and_concessive_polarities/06_de_ahi_que_present_subjunctive.md": {
-    "mtime": 1787904547.7571528,
-    "seen": 1787904721.701129,
-    "ast_hash": "e28b24212bb1f6b6285f7c7d8f29df76",
+    "mtime": 1787905043.0743127,
+    "seen": 1787905866.8294778,
+    "ast_hash": "0bc8938c25f05a6da9e11d8f8c641516",
     "semantic_hash": ""
   },
   "exercises/58_participial_absolute_constructions/01_participial_absolute_feminine_singular.md": {
-    "mtime": 1787904547.7575338,
-    "seen": 1787904721.70113,
-    "ast_hash": "2d001380d23cb1255d7dbd0d0bb2bced",
+    "mtime": 1787905043.0746374,
+    "seen": 1787905866.829479,
+    "ast_hash": "17dac49ee3f86173fb1280a01a5986c0",
     "semantic_hash": ""
   },
   "exercises/58_participial_absolute_constructions/02_participial_absolute_feminine_plural.md": {
-    "mtime": 1787904547.7578616,
-    "seen": 1787904721.70113,
-    "ast_hash": "24d5c785c5fca88f723f9407d578cacb",
+    "mtime": 1787905043.0747442,
+    "seen": 1787905866.829479,
+    "ast_hash": "1fc7b20453de55ecd5a4807fceb2f3af",
     "semantic_hash": ""
   },
   "exercises/58_participial_absolute_constructions/03_participial_absolute_masculine_singular.md": {
-    "mtime": 1787904547.758203,
-    "seen": 1787904721.70113,
-    "ast_hash": "a0b6837aaaa76669ad954ee7a4a56c7d",
+    "mtime": 1787905043.0748456,
+    "seen": 1787905866.82948,
+    "ast_hash": "94165a3e9bd3141b9e4b370225312d9b",
     "semantic_hash": ""
   },
   "exercises/58_participial_absolute_constructions/04_participial_absolute_masculine_plural.md": {
-    "mtime": 1787904547.7586088,
-    "seen": 1787904721.701131,
-    "ast_hash": "60c30d1fd335c0dfb27d4dea818e6e00",
+    "mtime": 1787905043.0749524,
+    "seen": 1787905866.82948,
+    "ast_hash": "198cc608807531ec7986132e324ccbe0",
     "semantic_hash": ""
   },
   "exercises/58_participial_absolute_constructions/05_participial_absolute_fixed_locutions.md": {
-    "mtime": 1787904547.7589297,
-    "seen": 1787904721.701131,
-    "ast_hash": "54ee019ec55c168c0230559f15806bd7",
+    "mtime": 1787905043.0750682,
+    "seen": 1787905866.82948,
+    "ast_hash": "b3c0b51f9f6bf218af19363514a9ec85",
     "semantic_hash": ""
   },
   "exercises/58_participial_absolute_constructions/06_participial_absolute_visto_and_aclarado.md": {
-    "mtime": 1787904547.761543,
-    "seen": 1787904721.701132,
-    "ast_hash": "55ec6c3dfbbf41db444c1ab1e4a746b7",
+    "mtime": 1787905043.0752304,
+    "seen": 1787905866.829481,
+    "ast_hash": "5602e0574a6195cb9e1dfd2aabb0278b",
     "semantic_hash": ""
   },
   "exercises/59_scalar_concession_and_intensive_connectors/01_por_mucho_que_present_subjunctive.md": {
-    "mtime": 1787904547.762064,
-    "seen": 1787904721.701132,
-    "ast_hash": "c9e6d95bf72a18350c694e0d40d55e91",
+    "mtime": 1787905043.075367,
+    "seen": 1787905866.829481,
+    "ast_hash": "1398f7cf7ad4a1c16717e14739a542f2",
     "semantic_hash": ""
   },
   "exercises/59_scalar_concession_and_intensive_connectors/02_por_mas_que_past_subjunctive.md": {
-    "mtime": 1787904547.7624156,
-    "seen": 1787904721.701132,
-    "ast_hash": "4fb792e1bf07fa6f998dd437cf136c44",
+    "mtime": 1787905043.075728,
+    "seen": 1787905866.829482,
+    "ast_hash": "7e5e3afc54c93d910907ad0d3e961b1b",
     "semantic_hash": ""
   },
   "exercises/59_scalar_concession_and_intensive_connectors/03_por_muy_adjective_que.md": {
-    "mtime": 1787904547.7626657,
-    "seen": 1787904721.701133,
-    "ast_hash": "7678dc44cddf75f4f4d38f5ae745f496",
+    "mtime": 1787905043.0758317,
+    "seen": 1787905866.829482,
+    "ast_hash": "4066e6fb2715c4f98f313dc87a9b95dd",
     "semantic_hash": ""
   },
   "exercises/59_scalar_concession_and_intensive_connectors/04_aun_a_riesgo_de_que_subjunctive.md": {
-    "mtime": 1787904547.7629266,
-    "seen": 1787904721.701133,
-    "ast_hash": "c67b3f496374811f4f678da8b769a39f",
+    "mtime": 1787905043.0759406,
+    "seen": 1787905866.829483,
+    "ast_hash": "1e889fdbdebb051d681ec8d16dd444c3",
     "semantic_hash": ""
   },
   "exercises/59_scalar_concession_and_intensive_connectors/05_aun_a_sabiendas_de_que_indicative.md": {
-    "mtime": 1787904547.7632346,
-    "seen": 1787904721.701134,
-    "ast_hash": "fde115bb04cae2883159a803eb29221e",
+    "mtime": 1787905043.0760586,
+    "seen": 1787905866.829483,
+    "ast_hash": "44c7b0ad71a6d58a47a2b058d586f93d",
     "semantic_hash": ""
   },
   "exercises/59_scalar_concession_and_intensive_connectors/06_asi_y_todo_discourse_connector.md": {
-    "mtime": 1787904547.763537,
-    "seen": 1787904721.701134,
-    "ast_hash": "6b57bfdc09e3cfb58d918410b08722b6",
+    "mtime": 1787905043.076166,
+    "seen": 1787905866.829484,
+    "ast_hash": "c1bba5eba363616d3e0e6edeb33eddaf",
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1787863510.8463664,
-    "seen": 1787904129.8885279,
-    "ast_hash": "c790c04bbdd156fc80672de505bdb42a",
+    "mtime": 1787905798.1291828,
+    "seen": 1787905866.829325,
+    "ast_hash": "fe0184fdc641ac3d7acc3c57d62d1563",
     "semantic_hash": ""
   },
   "assets/demo.svg": {

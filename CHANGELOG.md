@@ -5,6 +5,26 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.0] - 2026-08-28
+
+### Added
+- **Informative & Non-Spoiling Exercise Instructions Architecture**:
+  - Enriched all **339 exercises** across all **60 tracks** with a standardized `### Instructions` block containing explicit `**TODO**:` prompts and grammatical `**Why**:` explanations.
+  - Added in-editor `<!-- TODO: ... -->` comments directly under `### Exercise` in every markdown file for frictionless external editor watch mode.
+  - Implemented strict anti-leak policy ensuring zero solution words or inflection spoilers are revealed in instruction prompts.
+- **TUI Instructions & Prompt Card Rendering**:
+  - Enhanced the interactive TUI prompt card (`src/tui/ui.rs`) to parse and display structured instructions (`Instructions (TODO & Why):`) with custom terminal styling (Yellow bold `TODO:` and Cyan bold `Why:`).
+- **Automated Anti-Spoiler & Structural Test Suite**:
+  - Added `tests/exercise_todo_tests.rs` with automated validation of markdown instruction structures, minimum character thresholds, and a tokenized diacritic-normalized zero-leakage detector across all 339 exercises.
+- **Engine Validator Hardening**:
+  - Hardened fallback answer extraction in `src/engine/validator.rs` to ignore `**TODO**:` and `**Why**:` lines, preventing instruction text from being parsed as student submissions.
+
+### Changed
+- Refactored exercise parser and watcher stream to preserve and format inline comments and instruction blocks cleanly.
+- Updated ontological knowledge graph to 2,910 nodes, 3,219 edges, and 433 communities.
+
+---
+
 ## [0.3.0] - 2026-08-27
 
 ### Added
