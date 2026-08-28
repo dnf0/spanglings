@@ -29,117 +29,532 @@ pub fn list_reference_topics() -> &'static [&'static str] {
     TOPICS
 }
 
-pub fn get_reference_card(topic: &str) -> Option<&'static str> {
-    let normalized = topic.to_lowercase().replace('_', "-");
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct GrammarConcept {
+    pub slug: &'static str,
+    pub title: &'static str,
+    pub gloss: &'static str,
+    pub keywords: &'static [&'static str],
+    pub card: &'static str,
+}
+
+pub const CONCEPTS: &[GrammarConcept] = &[
+    GrammarConcept {
+        slug: "subjunctive",
+        title: "Subjunctive",
+        gloss: "wishes, hypotheses, doubt, demands",
+        keywords: &[
+            "wishes",
+            "desires",
+            "doubt",
+            "uncertainty",
+            "hypothetical",
+            "hypotheses",
+            "weirdo",
+            "demands",
+            "subj",
+            "subjunctive",
+            "e0301",
+            "e0401",
+            "e0501",
+            "e0601",
+        ],
+        card: SUBJUNCTIVE_CARD,
+    },
+    GrammarConcept {
+        slug: "por-para",
+        title: "Por vs. Para",
+        gloss: "cause/means (por) vs. purpose/destination/deadline (para)",
+        keywords: &[
+            "cause",
+            "reason",
+            "means",
+            "motive",
+            "purpose",
+            "deadline",
+            "recipient",
+            "goal",
+            "por",
+            "para",
+            "por-para",
+            "por_para",
+            "por-vs-para",
+            "e0701",
+        ],
+        card: POR_PARA_CARD,
+    },
+    GrammarConcept {
+        slug: "ser-estar",
+        title: "Ser vs. Estar",
+        gloss: "essence/identity (ser) vs. states/conditions/location (estar)",
+        keywords: &[
+            "identity",
+            "essence",
+            "permanent",
+            "state",
+            "condition",
+            "temporary",
+            "location",
+            "ser",
+            "estar",
+            "ser-estar",
+            "ser_estar",
+            "ser-vs-estar",
+            "e0101",
+            "e0102",
+        ],
+        card: SER_ESTAR_CARD,
+    },
+    GrammarConcept {
+        slug: "past",
+        title: "Past Tenses",
+        gloss: "completed actions (pret) vs. ongoing background & habit (imp)",
+        keywords: &[
+            "preterite",
+            "imperfect",
+            "completed",
+            "ongoing",
+            "habit",
+            "background",
+            "narrative",
+            "past",
+            "past-aspect",
+            "past-tenses",
+            "e0201",
+            "e0202",
+            "e0203",
+        ],
+        card: PAST_TENSES_CARD,
+    },
+    GrammarConcept {
+        slug: "pronouns",
+        title: "Pronoun Stacking",
+        gloss: "clitic placement & pronoun stacking (se lo)",
+        keywords: &[
+            "direct",
+            "indirect",
+            "clitic",
+            "clitics",
+            "stacking",
+            "substitution",
+            "se lo",
+            "se-lo",
+            "placement",
+            "pronouns",
+            "direct-indirect",
+            "e0801",
+            "e0802",
+        ],
+        card: PRONOUN_STACKING_CARD,
+    },
+    GrammarConcept {
+        slug: "prepositions",
+        title: "Prepositional Verbs",
+        gloss: "verb-bound prepositions (régimen preposicional)",
+        keywords: &[
+            "prepositions",
+            "regimen",
+            "régimen",
+            "prep",
+            "soñar con",
+            "depender de",
+            "fijarse en",
+            "e0901",
+        ],
+        card: PREPOSITIONS_CARD,
+    },
+    GrammarConcept {
+        slug: "accidental-se",
+        title: "Accidental 'Se'",
+        gloss: "unintentional events & non-agentive slips (se me cayó)",
+        keywords: &[
+            "accidental",
+            "unintentional",
+            "blame",
+            "dropped",
+            "forgotten",
+            "involuntary",
+            "se-accidental",
+            "se accidental",
+            "accidental-se",
+            "e1001",
+        ],
+        card: ACCIDENTAL_SE_CARD,
+    },
+    GrammarConcept {
+        slug: "tech-software",
+        title: "Tech & Software Engineering",
+        gloss: "terminal workflows, architecture, system design, SLA terms",
+        keywords: &[
+            "tech",
+            "software",
+            "dev",
+            "engineering",
+            "system design",
+            "architecture",
+            "terminal",
+            "code",
+            "tech-software",
+        ],
+        card: TECH_SOFTWARE_CARD,
+    },
+    GrammarConcept {
+        slug: "business",
+        title: "Executive & Business Spanish",
+        gloss: "formal correspondence, diplomatic negotiation, stakeholder sync",
+        keywords: &[
+            "business",
+            "business-correspondence",
+            "biz",
+            "diplomatic",
+            "formal",
+            "negotiation",
+            "executive",
+        ],
+        card: BUSINESS_CORRESPONDENCE_CARD,
+    },
+    GrammarConcept {
+        slug: "false-friends",
+        title: "False Friends",
+        gloss: "deceptive cognates with divergent meanings (actual, realizar)",
+        keywords: &[
+            "false-friends",
+            "falsos-amigos",
+            "falsos amigos",
+            "cognates",
+            "traps",
+            "actual",
+            "realizar",
+            "exito",
+            "éxito",
+            "pretend",
+            "pretender",
+        ],
+        card: FALSE_FRIENDS_CARD,
+    },
+    GrammarConcept {
+        slug: "voseo",
+        title: "Voseo & Regional Address",
+        gloss: "informal singular address in Rioplatense & Central America",
+        keywords: &[
+            "voseo",
+            "vos",
+            "rioplatense",
+            "argentina",
+            "uruguay",
+            "regional",
+            "informal",
+        ],
+        card: VOSEO_CARD,
+    },
+    GrammarConcept {
+        slug: "accents",
+        title: "Accentuation & Tildes",
+        gloss: "stress rules (agudas/llanas/esdrújulas) & diacritical disambiguation",
+        keywords: &[
+            "accents",
+            "accentuation",
+            "tildes",
+            "acentuacion",
+            "acentuación",
+            "stress",
+            "diacritical",
+            "agudas",
+            "llanas",
+            "esdrujulas",
+            "esdrújulas",
+        ],
+        card: ACCENTS_CARD,
+    },
+    GrammarConcept {
+        slug: "epistemic-conjecture",
+        title: "Epistemic Conjecture",
+        gloss: "guessing & deduction in present/past (serán las tres)",
+        keywords: &[
+            "conjecture",
+            "probability",
+            "probabilidad",
+            "guessing",
+            "deduction",
+            "wondering",
+            "e0048",
+            "epistemic-conjecture",
+        ],
+        card: EPISTEMIC_CONJECTURE_CARD,
+    },
+    GrammarConcept {
+        slug: "clitic-doubling",
+        title: "Clitic Doubling",
+        gloss: "redundant pronoun reinforcement for focus & clarity (le hablé a ella)",
+        keywords: &[
+            "clitic-doubling",
+            "doubling",
+            "redundancy",
+            "indirect object",
+            "clarity",
+            "a ella",
+            "reinforcement",
+            "duplicacion",
+            "duplicación",
+            "left-dislocation",
+            "reduplicacion",
+            "reduplicación",
+            "e0049",
+        ],
+        card: CLITIC_DOUBLING_CARD,
+    },
+    GrammarConcept {
+        slug: "personal-a",
+        title: "Personal 'A'",
+        gloss: "mandatory accusative marker for specific human & personified entities",
+        keywords: &[
+            "personal-a",
+            "personal a",
+            "human direct object",
+            "specificity",
+            "personification",
+            "a-personal",
+            "dom",
+            "animacy",
+            "e0050",
+        ],
+        card: PERSONAL_A_CARD,
+    },
+    GrammarConcept {
+        slug: "gerund-rules",
+        title: "Gerund Rules & Pitfalls",
+        gloss: "simultaneous actions; avoiding forbidden adjectival gerunds",
+        keywords: &[
+            "gerund-rules",
+            "gerund",
+            "gerundio",
+            "gerunds",
+            "posteriority",
+            "ando",
+            "iendo",
+            "simultaneous",
+            "adverbial",
+            "e0051",
+        ],
+        card: GERUND_RULES_CARD,
+    },
+    GrammarConcept {
+        slug: "adversatives",
+        title: "Adversatives (Pero vs. Sino)",
+        gloss: "simple contrast (pero) vs. exclusive negative substitution (sino)",
+        keywords: &[
+            "adversatives",
+            "pero",
+            "sino",
+            "sino que",
+            "sino-que",
+            "pero-sino",
+            "contrast",
+            "rectification",
+            "substitution",
+            "e0052",
+        ],
+        card: ADVERSATIVES_CARD,
+    },
+    GrammarConcept {
+        slug: "legal-subjunctive",
+        title: "Legal & Statutory Subjunctive",
+        gloss: "statutory formulations & future subjunctive in legal texts (-ere)",
+        keywords: &[
+            "legal-subjunctive",
+            "legal",
+            "statute",
+            "contract",
+            "future subjunctive",
+            "formal",
+            "juristic",
+            "optatives",
+            "futuro-subjuntivo",
+            "archaic-subjunctive",
+            "e0053",
+        ],
+        card: LEGAL_SUBJUNCTIVE_CARD,
+    },
+    GrammarConcept {
+        slug: "verbs-of-becoming",
+        title: "Verbs of Becoming",
+        gloss: "transformational change (hacerse, volverse, ponerse, quedarse)",
+        keywords: &[
+            "verbs-of-becoming",
+            "becoming",
+            "change",
+            "transformation",
+            "cambio",
+            "devenir",
+            "hacerse",
+            "volverse",
+            "ponerse",
+            "quedarse",
+            "convertirse",
+            "e0054",
+        ],
+        card: VERBS_OF_BECOMING_CARD,
+    },
+    GrammarConcept {
+        slug: "epistemic-adverbs",
+        title: "Epistemic Adverbs",
+        gloss: "mood selection with doubt adverbs (quizás, tal vez, probablemente)",
+        keywords: &[
+            "epistemic-adverbs",
+            "adverbs",
+            "doubt",
+            "duda",
+            "a-lo-mejor",
+            "a lo mejor",
+            "quizas",
+            "quizás",
+            "tal-vez",
+            "tal vez",
+            "igual",
+            "probablemente",
+            "acaso",
+            "e0055",
+        ],
+        card: EPISTEMIC_ADVERBS_CARD,
+    },
+    GrammarConcept {
+        slug: "possessive-datives",
+        title: "Possessive Datives",
+        gloss: "inalienable possession with dative clitics (me lavo las manos)",
+        keywords: &[
+            "possessive-datives",
+            "possession",
+            "inalienable",
+            "body parts",
+            "body-parts",
+            "dative",
+            "datives",
+            "dativo-posesivo",
+            "dativo-etico",
+            "posesion-inalienable",
+            "me lavo",
+            "inalienable-possession",
+            "ethic-dative",
+            "e0056",
+        ],
+        card: POSSESSIVE_DATIVES_CARD,
+    },
+    GrammarConcept {
+        slug: "corrective-polarity",
+        title: "Corrective Polarity",
+        gloss: "rectifying negated premises with mandatory mood selection",
+        keywords: &[
+            "corrective-polarity",
+            "polarity",
+            "polaridad",
+            "negation",
+            "correction",
+            "no-es-que",
+            "de-ahi-que",
+            "no-porque",
+            "rejected-cause",
+            "consecutive-subjunctive",
+            "indicative vs subjunctive",
+            "e0057",
+        ],
+        card: CORRECTIVE_POLARITY_CARD,
+    },
+    GrammarConcept {
+        slug: "participial-absolutes",
+        title: "Participial Absolutes",
+        gloss: "concise temporal/causal backgrounding with past participles",
+        keywords: &[
+            "participial-absolutes",
+            "absolute",
+            "participle",
+            "participles",
+            "participio-absoluto",
+            "absolutas",
+            "backgrounding",
+            "temporal",
+            "causal",
+            "terminado el",
+            "e0058",
+        ],
+        card: PARTICIPIAL_ABSOLUTES_CARD,
+    },
+    GrammarConcept {
+        slug: "scalar-concession",
+        title: "Scalar Concession",
+        gloss: "intensive concessive structures (por más que, aun cuando, siquiera)",
+        keywords: &[
+            "scalar-concession",
+            "concession",
+            "concesivas-intensivas",
+            "por-mucho-que",
+            "por mucho que",
+            "a-riesgo-de-que",
+            "a riesgo de que",
+            "even though",
+            "even if",
+            "por mas que",
+            "por más que",
+            "por-mas-que",
+            "aun cuando",
+            "siquiera",
+            "e0059",
+        ],
+        card: SCALAR_CONCESSION_CARD,
+    },
+];
+
+pub fn list_grammar_concepts() -> &'static [GrammarConcept] {
+    CONCEPTS
+}
+
+pub fn get_grammar_concept(query: &str) -> Option<&'static GrammarConcept> {
+    let normalized = query.trim().to_lowercase().replace('_', "-");
     let key = normalized.as_str();
 
-    // 1. Exact or alias match
-    match key {
-        "subjunctive" | "subj" | "weirdo" | "e0301" | "e0401" | "e0501" | "e0601" => {
-            Some(SUBJUNCTIVE_CARD)
-        }
-        "por-para" | "por_para" | "por" | "para" | "e0701" => Some(POR_PARA_CARD),
-        "ser-estar" | "ser_estar" | "ser" | "estar" | "e0101" | "e0102" => Some(SER_ESTAR_CARD),
-        "past" | "preterite" | "imperfect" | "past-aspect" | "e0201" | "e0202" | "e0203" => {
-            Some(PAST_TENSES_CARD)
-        }
-        "pronouns" | "clitics" | "stacking" | "direct-indirect" | "e0801" | "e0802" => {
-            Some(PRONOUN_STACKING_CARD)
-        }
-        "prepositions" | "regimen" | "prep" | "e0901" => Some(PREPOSITIONS_CARD),
-        "accidental-se" | "se-accidental" | "accidental" | "e1001" => Some(ACCIDENTAL_SE_CARD),
-        "tech-software" | "tech" | "software" | "dev" => Some(TECH_SOFTWARE_CARD),
-        "business" | "business-correspondence" | "biz" | "diplomatic" => {
-            Some(BUSINESS_CORRESPONDENCE_CARD)
-        }
-        "false-friends" | "falsos-amigos" | "cognates" | "traps" => Some(FALSE_FRIENDS_CARD),
-        "voseo" | "regional" | "rioplatense" => Some(VOSEO_CARD),
-        "accents" | "accentuation" | "tildes" | "acentuacion" | "stress" => Some(ACCENTS_CARD),
-        "epistemic-conjecture" | "conjecture" | "probability" | "probabilidad" | "e0048" => {
-            Some(EPISTEMIC_CONJECTURE_CARD)
-        }
-        "clitic-doubling" | "duplicacion" | "left-dislocation" | "reduplicacion" | "e0049" => {
-            Some(CLITIC_DOUBLING_CARD)
-        }
-        "personal-a" | "a-personal" | "dom" | "animacy" | "e0050" => Some(PERSONAL_A_CARD),
-        "gerund-rules" | "gerundio" | "gerunds" | "posteriority" | "e0051" => {
-            Some(GERUND_RULES_CARD)
-        }
-        "adversatives" | "pero-sino" | "sino-que" | "sino" | "e0052" => Some(ADVERSATIVES_CARD),
-        "legal-subjunctive"
-        | "optatives"
-        | "futuro-subjuntivo"
-        | "archaic-subjunctive"
-        | "e0053" => Some(LEGAL_SUBJUNCTIVE_CARD),
-        "verbs-of-becoming" | "cambio" | "devenir" | "hacerse" | "ponerse" | "quedarse"
-        | "volverse" | "e0054" => Some(VERBS_OF_BECOMING_CARD),
-        "epistemic-adverbs" | "duda" | "a-lo-mejor" | "quizas" | "tal-vez" | "igual" | "e0055" => {
-            Some(EPISTEMIC_ADVERBS_CARD)
-        }
-        "possessive-datives"
-        | "dativo-posesivo"
-        | "dativo-etico"
-        | "posesion-inalienable"
-        | "datives"
-        | "e0056" => Some(POSSESSIVE_DATIVES_CARD),
-        "corrective-polarity"
-        | "polaridad"
-        | "no-es-que"
-        | "de-ahi-que"
-        | "no-porque"
-        | "e0057" => Some(CORRECTIVE_POLARITY_CARD),
-        "participial-absolutes" | "participio-absoluto" | "absolutas" | "participles" | "e0058" => {
-            Some(PARTICIPIAL_ABSOLUTES_CARD)
-        }
-        "scalar-concession"
-        | "concesivas-intensivas"
-        | "por-mucho-que"
-        | "a-riesgo-de-que"
-        | "concession"
-        | "e0059" => Some(SCALAR_CONCESSION_CARD),
-        _ => {
-            // 2. Fallback: Prefix matching for concept IDs
-            if key.starts_with("subjunctive") {
-                Some(SUBJUNCTIVE_CARD)
-            } else if key.starts_with("por-vs-para") || key.starts_with("por-para") {
-                Some(POR_PARA_CARD)
-            } else if key.starts_with("ser-vs-estar") || key.starts_with("ser-estar") {
-                Some(SER_ESTAR_CARD)
-            } else if key.starts_with("past-")
-                || key.starts_with("preterite")
-                || key.starts_with("imperfect")
-            {
-                Some(PAST_TENSES_CARD)
-            } else if key.starts_with("verbs-of-becoming") {
-                Some(VERBS_OF_BECOMING_CARD)
-            } else if key.starts_with("epistemic-adverb") {
-                Some(EPISTEMIC_ADVERBS_CARD)
-            } else if key.starts_with("epistemic-conjecture") {
-                Some(EPISTEMIC_CONJECTURE_CARD)
-            } else if key.starts_with("clitic-doubling") {
-                Some(CLITIC_DOUBLING_CARD)
-            } else if key.starts_with("personal-a") {
-                Some(PERSONAL_A_CARD)
-            } else if key.starts_with("gerund-") {
-                Some(GERUND_RULES_CARD)
-            } else if key.starts_with("adversative") {
-                Some(ADVERSATIVES_CARD)
-            } else if key.starts_with("corrective-")
-                || key.starts_with("rejected-cause")
-                || key.starts_with("consecutive-subjunctive")
-            {
-                Some(CORRECTIVE_POLARITY_CARD)
-            } else if key.starts_with("participial-") {
-                Some(PARTICIPIAL_ABSOLUTES_CARD)
-            } else if key.starts_with("scalar-concession") {
-                Some(SCALAR_CONCESSION_CARD)
-            } else if key.starts_with("inalienable-") || key.starts_with("ethic-dative") {
-                Some(POSSESSIVE_DATIVES_CARD)
-            } else {
-                None
-            }
-        }
+    if key.is_empty() {
+        return None;
     }
+
+    // 1. Direct slug match
+    if let Some(c) = CONCEPTS.iter().find(|c| c.slug == key) {
+        return Some(c);
+    }
+
+    // 2. Exact keyword match
+    if let Some(c) = CONCEPTS.iter().find(|c| {
+        c.keywords
+            .iter()
+            .any(|&k| k == key || k.replace(' ', "-") == key)
+    }) {
+        return Some(c);
+    }
+
+    // 3. Prefix matching on slug or keyword
+    if let Some(c) = CONCEPTS.iter().find(|c| {
+        key.starts_with(c.slug)
+            || c.keywords
+                .iter()
+                .any(|&k| key.starts_with(k) || key.starts_with(&k.replace(' ', "-")))
+    }) {
+        return Some(c);
+    }
+
+    // 4. Substring match on title, gloss, or keywords
+    if let Some(c) = CONCEPTS.iter().find(|c| {
+        c.title.to_lowercase().contains(key)
+            || c.gloss.to_lowercase().contains(key)
+            || c.keywords
+                .iter()
+                .any(|&k| k.contains(key) || key.contains(k))
+    }) {
+        return Some(c);
+    }
+
+    None
+}
+
+pub fn get_reference_card(topic: &str) -> Option<&'static str> {
+    get_grammar_concept(topic).map(|c| c.card)
 }
 
 pub const SUBJUNCTIVE_CARD: &str = r#"

@@ -227,3 +227,54 @@ fn test_error_code_and_concept_lookup() {
     assert!(get_reference_card("subjunctive_volition_influence").is_some());
     assert!(get_reference_card("por_vs_para_purpose_cause").is_some());
 }
+
+#[test]
+fn test_all_24_grammar_concepts_complete() {
+    let concepts = spanglings::core::reference::list_grammar_concepts();
+    assert_eq!(concepts.len(), 24);
+    for concept in concepts {
+        assert!(!concept.slug.is_empty(), "Slug should not be empty");
+        assert!(
+            !concept.title.is_empty(),
+            "Title should not be empty for {}",
+            concept.slug
+        );
+        assert!(
+            !concept.gloss.is_empty(),
+            "Gloss should not be empty for {}",
+            concept.slug
+        );
+        assert!(
+            !concept.keywords.is_empty(),
+            "Keywords should not be empty for {}",
+            concept.slug
+        );
+        assert!(
+            !concept.card.is_empty(),
+            "Card should not be empty for {}",
+            concept.slug
+        );
+    }
+}
+
+#[test]
+fn test_semantic_keyword_concept_lookups() {
+    use spanglings::core::reference::get_grammar_concept;
+
+    // Direct slug lookup
+    let subj = get_grammar_concept("subjunctive").expect("Should find subjunctive by slug");
+    assert_eq!(subj.slug, "subjunctive");
+    assert!(subj.gloss.contains("wishes") || subj.gloss.contains("hypotheses"));
+
+    // Semantic intent lookup
+    let wishes = get_grammar_concept("wishes").expect("Should resolve 'wishes' to subjunctive");
+    assert_eq!(wishes.slug, "subjunctive");
+
+    let accidental = get_grammar_concept("unintentional")
+        .expect("Should resolve 'unintentional' to accidental-se");
+    assert_eq!(accidental.slug, "accidental-se");
+
+    let body_parts = get_grammar_concept("body parts")
+        .expect("Should resolve 'body parts' to possessive-datives");
+    assert_eq!(body_parts.slug, "possessive-datives");
+}
