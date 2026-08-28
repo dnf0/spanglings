@@ -13,6 +13,41 @@ pub struct DrillItem {
     pub explanation: &'static str,
 }
 
+impl DrillItem {
+    pub fn format_prompt(&self, current: usize, total: usize) -> String {
+        let topic_display = if self.topic.is_empty() {
+            String::new()
+        } else {
+            let parts: Vec<String> = self
+                .topic
+                .split('_')
+                .map(|word| {
+                    let mut chars = word.chars();
+                    match chars.next() {
+                        None => String::new(),
+                        Some(f) => f.to_uppercase().collect::<String>() + chars.as_str(),
+                    }
+                })
+                .collect();
+            parts.join(" ")
+        };
+        format!(
+            "Q{}/{} [{} | {}]\nSentence: \"{}\" (verb: {} | subject: {})",
+            current,
+            total,
+            topic_display,
+            self.formula_cue,
+            self.trigger_sentence,
+            self.target_verb,
+            self.target_subject
+        )
+    }
+
+    pub fn format_hint(&self) -> String {
+        format!("💡 Hint: {}", self.explanation)
+    }
+}
+
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum DrillEvaluation {
     Correct,
@@ -284,7 +319,7 @@ pub fn get_drill_items(topic_filter: Option<&str>) -> Vec<DrillItem> {
         DrillItem {
             topic: "subjunctive",
             formula_cue: "irregular subjunctive: sep- + -a",
-            trigger_sentence: "Es impossible que yo ____ todas las respuestas de memoria.",
+            trigger_sentence: "Es imposible que yo ____ todas las respuestas de memoria.",
             target_verb: "saber",
             target_subject: "yo",
             target: "sepa",
@@ -1027,53 +1062,69 @@ pub fn run_drill(
         "==========================================================".blue()
     );
     println!(
-        "Topic: {} ({} questions). Type your answer and press Enter.\n",
+        "Topic: {} ({} questions). Type your answer and press Enter. (Type '?' or 'hint' for live hint)\n",
         t.cyan().bold(),
         num_questions.to_string().yellow().bold()
     );
+
+    if let Some(sheet) = get_topic_cheat_sheet(&t) {
+        println!("{}", "--- [TOPIC CHEAT SHEET] ---".yellow().bold());
+        println!("{}\n", sheet.cyan());
+        println!("{}", "---------------------------".yellow());
+    }
 
     let stdin = io::stdin();
     let mut reader = stdin.lock();
     let mut score = 0;
 
-    for (i, item) in selected_items.iter().enumerate() {
-        print!(
-            "Q{}/{}: {} > ",
-            i + 1,
-            num_questions,
-            item.trigger_sentence.bright_white()
-        );
-        io::stdout().flush()?;
+    'questions: for (i, item) in selected_items.iter().enumerate() {
+        println!("{}", item.format_prompt(i + 1, num_questions));
 
-        let mut line = String::new();
-        if reader.read_line(&mut line)? == 0 {
-            // EOF reached (e.g. non-interactive pipeline or Ctrl+D)
-            println!();
+        loop {
+            print!("Answer > ");
+            io::stdout().flush()?;
+
+            let mut line = String::new();
+            if reader.read_line(&mut line)? == 0 {
+                // EOF reached (e.g. non-interactive pipeline or Ctrl+D)
+                println!();
+                break 'questions;
+            }
+
+            let trimmed = line.trim();
+            if trimmed.is_empty() {
+                continue;
+            }
+
+            if trimmed.eq_ignore_ascii_case("?") || trimmed.eq_ignore_ascii_case("hint") {
+                println!("  {}\n", item.format_hint().yellow());
+                continue;
+            }
+
+            match evaluate_drill_answer(item, trimmed, strict_accents) {
+                DrillEvaluation::Correct => {
+                    println!("  {} Correct!\n", "✓".green().bold());
+                    score += 1;
+                }
+                DrillEvaluation::Forgiven { expected, tip } => {
+                    println!(
+                        "  {} Correct! ({}) [Target: {}]\n",
+                        "✓".green().bold(),
+                        tip.yellow(),
+                        expected.green().bold()
+                    );
+                    score += 1;
+                }
+                DrillEvaluation::Incorrect => {
+                    println!(
+                        "  {} Incorrect. Expected: '{}' ({})\n",
+                        "✗".red().bold(),
+                        item.target.green().bold(),
+                        item.explanation.dimmed()
+                    );
+                }
+            }
             break;
-        }
-
-        match evaluate_drill_answer(item, &line, strict_accents) {
-            DrillEvaluation::Correct => {
-                println!("  {} Correct!\n", "✓".green().bold());
-                score += 1;
-            }
-            DrillEvaluation::Forgiven { expected, tip } => {
-                println!(
-                    "  {} Correct! ({}) [Target: {}]\n",
-                    "✓".green().bold(),
-                    tip.yellow(),
-                    expected.green().bold()
-                );
-                score += 1;
-            }
-            DrillEvaluation::Incorrect => {
-                println!(
-                    "  {} Incorrect. Expected: '{}' ({})\n",
-                    "✗".red().bold(),
-                    item.target.green().bold(),
-                    item.explanation.dimmed()
-                );
-            }
         }
     }
 

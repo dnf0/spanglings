@@ -274,3 +274,36 @@ fn test_drill_items_shuffling_randomization() {
     assert_eq!(sample1.len(), 5);
     assert_eq!(sample2.len(), 5);
 }
+
+#[test]
+fn test_drill_item_prompt_formatting() {
+    let item = DrillItem {
+        topic: "subjunctive",
+        formula_cue: "drop -o -> opposite vowel -a",
+        trigger_sentence: "Dudo que yo ____ los libros en la mesa.",
+        target_verb: "poner",
+        target_subject: "yo",
+        target: "ponga",
+        explanation: "yo pongo -> drop -o -> add -a -> ponga",
+    };
+    let formatted = item.format_prompt(1, 5);
+    assert!(formatted.contains("Q1/5 [Subjunctive | drop -o -> opposite vowel -a]"));
+    assert!(formatted.contains("Sentence: \"Dudo que yo ____ los libros en la mesa.\""));
+    assert!(formatted.contains("(verb: poner | subject: yo)"));
+}
+
+#[test]
+fn test_drill_live_hint_generation() {
+    let item = DrillItem {
+        topic: "subjunctive",
+        formula_cue: "drop -o -> opposite vowel -a",
+        trigger_sentence: "Dudo que yo ____ los libros en la mesa.",
+        target_verb: "poner",
+        target_subject: "yo",
+        target: "ponga",
+        explanation: "yo pongo -> drop -o -> add -a -> ponga",
+    };
+    let hint = item.format_hint();
+    assert!(hint.contains("💡 Hint:"));
+    assert!(hint.contains("yo pongo -> drop -o -> add -a -> ponga"));
+}
