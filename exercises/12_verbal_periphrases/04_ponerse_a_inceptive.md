@@ -6,7 +6,12 @@
 ### Context
 English: "As soon as we stepped outside, it started to rain heavily."
 
+### Instructions
+**TODO**: Conjugate the pronominal auxiliary verb *(ponerse)* in the 3rd-person singular preterite indicative.
+**Why**: The inceptive periphrasis *(ponerse a + inf)* expresses the sudden initiation of an event, which in a past narrative sequence selects the preterite aspect.
+
 ### Exercise
+<!-- TODO: Conjugate (ponerse) in 3rd-person singular preterite indicative for inceptive periphrasis -->
 En cuanto salimos a la calle, se (poner) ___ a llover a cántaros.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "I would like to ask a question about the contract."
 
+### Instructions
+**TODO**: Conjugate the modal verb *(querer)* in the 1st-person singular (*yo*) imperfect subjunctive (*-ra* form).
+**Why**: The imperfect subjunctive of *(querer)* functions as a standard courtesy formula to soften inquiries and express deferential politeness.
+
 ### Exercise
+<!-- TODO: Conjugate (querer) in 1st-person singular imperfect subjunctive -->
 (Querer) ___ hacer una pregunta sobre las condiciones del contrato.
 
 <!-- SOLUTION

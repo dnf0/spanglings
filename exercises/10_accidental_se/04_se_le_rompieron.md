@@ -6,7 +6,12 @@
 ### Context
 English: "Carlos accidentally broke his glasses when playing basketball."
 
+### Instructions
+**TODO**: Insert the 3rd-person singular indirect pronoun (*le*) followed by the 3rd-person plural preterite indicative of *(romper)*.
+**Why**: The dative clitic references the affected individual (*a Carlos*), while the verb pluralizes in agreement with the plural grammatical subject (*las gafas*).
+
 ### Exercise
+<!-- TODO: Insert 3rd-person dative clitic and plural preterite verb agreeing with subject -->
 A Carlos se ___ (romper) las gafas jugando al baloncesto.
 
 <!-- SOLUTION

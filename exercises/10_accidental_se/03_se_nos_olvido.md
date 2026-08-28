@@ -6,7 +6,12 @@
 ### Context
 English: "We accidentally forgot the house keys."
 
+### Instructions
+**TODO**: Insert the 1st-person plural indirect pronoun (*nos*) followed by the 3rd-person singular preterite indicative of *(olvidar)* with the appropriate written accent.
+**Why**: Involuntary forgetting uses accidental *se* with a 1st-person plural dative experiencer clitic and singular verb agreement with *la cartera*.
+
 ### Exercise
+<!-- TODO: Insert 1st-person plural dative clitic and singular preterite verb -->
 Se ___ (olvidar) la cartera en el restaurante.
 
 <!-- SOLUTION

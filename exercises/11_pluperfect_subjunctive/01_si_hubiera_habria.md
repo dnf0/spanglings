@@ -6,7 +6,12 @@
 ### Context
 English: "If you had warned me earlier, I would have accompanied you."
 
+### Instructions
+**TODO**: Form the 2nd-person singular (*tú*) pluperfect subjunctive of *(avisar)* using the auxiliary *(haber)* and the past participle.
+**Why**: In a Type 3 past counterfactual conditional with a compound conditional apodosis (*te habría acompañado*), the protasis requires the pluperfect subjunctive.
+
 ### Exercise
+<!-- TODO: Form 2nd-person singular pluperfect subjunctive with auxiliary and participle -->
 Si tú me (haber avisar) ___ antes, te habría acompañado.
 
 <!-- SOLUTION

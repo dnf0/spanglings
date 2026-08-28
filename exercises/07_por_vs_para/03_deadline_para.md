@@ -6,7 +6,12 @@
 ### Context
 English: "I must deliver the report by Friday."
 
+### Instructions
+**TODO**: Insert the preposition used to set a specific future deadline or target time.
+**Why**: Establishing a temporal terminus or due date (*by Friday morning*) requires the goal-oriented preposition.
+
 ### Exercise
+<!-- TODO: Insert preposition for a specific future deadline -->
 Tengo que entregar el informe ___ el viernes por la mañana.
 
 <!-- SOLUTION

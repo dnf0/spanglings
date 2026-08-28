@@ -6,7 +6,12 @@
 ### Context
 English: "She insisted on paying the bill for dinner."
 
+### Instructions
+**TODO**: Insert the preposition governed by the verb *(insistir)* before the infinitive complement.
+**Why**: The verb *(insistir)* persistently governs the preposition before nominal, infinitival, or clausal complements.
+
 ### Exercise
+<!-- TODO: Insert preposition governed by 'insistir' -->
 Ella insistió ___ pagar la cuenta de la cena.
 
 <!-- SOLUTION

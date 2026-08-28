@@ -6,7 +6,12 @@
 ### Context
 English: "I don't fit in this small car."
 
+### Instructions
+**TODO**: Conjugate the verb *(caber)* in the 1st-person singular (*yo*) present indicative.
+**Why**: The verb *(caber)* undergoes a radical stem mutation in the first-person singular present indicative rather than following regular *-er* morphology.
+
 ### Exercise
+<!-- TODO: Conjugate (caber) in 1st-person singular present indicative -->
 Yo no (caber) ___ en este coche tan pequeño.
 
 <!-- SOLUTION

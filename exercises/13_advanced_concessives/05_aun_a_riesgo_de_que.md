@@ -6,7 +6,12 @@
 ### Context
 English: "I will tell the truth even at the risk of them getting angry."
 
+### Instructions
+**TODO**: Conjugate the pronominal verb *(enfadarse)* in the 3rd-person plural (*ellos*) present subjunctive.
+**Why**: The concessive-conditional locution *aun a riesgo de que* strictly governs the subjunctive mood as it introduces a potential adverse contingency.
+
 ### Exercise
+<!-- TODO: Conjugate (enfadarse) in 3rd-person plural present subjunctive -->
 Diré la verdad aun a riesgo de que ellos se (enfadar) ___ conmigo.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "Whatever you do, don't sign the document."
 
+### Instructions
+**TODO**: Conjugate the verb *(hacer)* in the capitalized 2nd-person singular (*tú*) present subjunctive to complete the initial position of the reduplicative concessive formula.
+**Why**: Reduplicative concessive formulas (*[subjuntivo] + lo que + [subjuntivo]*) express indifference or generalization (*whatever you do*), requiring the subjunctive mood in both verbal slots.
+
 ### Exercise
+<!-- TODO: Conjugate (hacer) in 2nd-person singular present subjunctive for reduplicative concessive formula -->
 (Hacer) ___ lo que hagas, no firmes ese documento.
 
 <!-- SOLUTION

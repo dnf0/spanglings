@@ -6,7 +6,12 @@
 ### Context
 English: "Do not tell it to him under any circumstances!"
 
+### Instructions
+**TODO**: Insert the proclitic double pronouns (indirect + direct) followed by the informal (*tú*) negative imperative / subjunctive conjugation of *(decir)*.
+**Why**: In negative commands, object clitics precede the subjunctive verb (*proclisis*) as separate words rather than attaching to the verb.
+
 ### Exercise
+<!-- TODO: Insert proclitic double pronouns and negative subjunctive verb -->
 ¡No ___ (decir) bajo ninguna circunstancia!
 
 <!-- SOLUTION

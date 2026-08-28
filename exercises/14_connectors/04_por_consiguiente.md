@@ -6,7 +6,12 @@
 ### Context
 English: "The company suffered heavy losses; consequently, it had to restructure."
 
+### Instructions
+**TODO**: Complete the formal two-word consecutive connector beginning with *por* that expresses logical consequence.
+**Why**: Formal register discourse markers like *por [adjetivo sustantivado]* introduce a deductive result or consequence in academic and professional prose.
+
 ### Exercise
+<!-- TODO: Complete the formal consecutive discourse connector -->
 La empresa sufrió pérdidas; por ___, tuvo que reestructurarse.
 
 <!-- SOLUTION

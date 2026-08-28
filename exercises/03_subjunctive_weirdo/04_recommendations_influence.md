@@ -6,7 +6,12 @@
 ### Context
 English: "The doctor recommends that you drink more water every day."
 
+### Instructions
+**TODO**: Conjugate the verb *(beber)* in the 2nd-person singular (*tú*) present subjunctive.
+**Why**: Verbs of advice, recommendation, and influence *(recomendar que)* require the subjunctive mood in the subordinate clause.
+
 ### Exercise
+<!-- TODO: Conjugate (beber) in 2nd-person singular present subjunctive -->
 El médico te recomienda que (beber) ___ más agua todos los días.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "No matter how much you try, you will not convince him."
 
+### Instructions
+**TODO**: Conjugate the verb *(intentar)* in the 2nd-person singular (*tú*) present subjunctive.
+**Why**: The concessive connector *por más que* selects the subjunctive mood when referring to hypothetical, unfulfilled, or future efforts.
+
 ### Exercise
+<!-- TODO: Conjugate (intentar) in 2nd-person singular present subjunctive for concessive clause -->
 Por más que lo (intentar) ___, no lograrás convencerlo.
 
 <!-- SOLUTION

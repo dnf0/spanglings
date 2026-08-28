@@ -6,7 +6,12 @@
 ### Context
 English: "I accidentally dropped the cup on the floor."
 
+### Instructions
+**TODO**: Insert the 1st-person singular indirect pronoun (*me*) followed by the 3rd-person singular preterite indicative of *(caer)* with the required written accent.
+**Why**: In accidental or involuntary *se* constructions, the affected participant is marked via a dative clitic, while the verb agrees with the grammatical subject (*la taza*).
+
 ### Exercise
+<!-- TODO: Insert 1st-person dative clitic and singular preterite verb agreeing with subject -->
 Se ___ (caer) la taza al suelo.
 
 <!-- SOLUTION

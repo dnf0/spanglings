@@ -6,7 +6,12 @@
 ### Context
 English: "If you had listened to my advice, everything would have turned out well."
 
+### Instructions
+**TODO**: Form the 2nd-person singular (*tú*) pluperfect subjunctive of *(escuchar)* with the auxiliary *(haber)* and past participle.
+**Why**: Counterfactual past conditions introduced by *si* require the pluperfect subjunctive to express an unrealized past hypothesis.
+
 ### Exercise
+<!-- TODO: Form 2nd-person singular pluperfect subjunctive with auxiliary and participle -->
 Si tú (haber escuchar) ___ mis advertencias, todo habría salido bien.
 
 <!-- SOLUTION

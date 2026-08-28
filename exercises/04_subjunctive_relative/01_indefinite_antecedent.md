@@ -6,7 +6,12 @@
 ### Context
 English: "I am looking for an apartment that has three bedrooms."
 
+### Instructions
+**TODO**: Conjugate the verb *(tener)* in the 3rd-person singular present subjunctive.
+**Why**: When the antecedent noun in a relative clause (*un piso*) is unspecific, non-existent, or sought after, the clause requires the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Conjugate (tener) in 3rd-person singular present subjunctive -->
 Busco un piso que (tener) ___ tres dormitorios.
 
 <!-- SOLUTION

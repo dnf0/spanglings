@@ -6,7 +6,12 @@
 ### Context
 English: "I hope tomorrow the weather is good during our hike."
 
+### Instructions
+**TODO**: Conjugate the verb *(hacer)* in the 3rd-person singular present subjunctive.
+**Why**: The optative particle *¡ojalá!* invariably governs the subjunctive mood when expressing realizable desires for future situations.
+
 ### Exercise
+<!-- TODO: Conjugate (hacer) in 3rd-person singular present subjunctive -->
 ¡Ojalá mañana (hacer) ___ buen tiempo durante nuestra excursión!
 
 <!-- SOLUTION

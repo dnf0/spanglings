@@ -6,7 +6,12 @@
 ### Context
 English: "To them, they really like Spanish novels."
 
+### Instructions
+**TODO**: Insert the 3rd-person plural indirect object pronoun that corresponds to the prepositional phrase *a ellos*.
+**Why**: Psychological verbs of preference like *(gustar)* require a dative clitic pronoun agreeing in person and number with the experiencer.
+
 ### Exercise
+<!-- TODO: Insert 3rd-person plural indirect object pronoun for 'a ellos' -->
 A ellos ___ gustan mucho las novelas en español.
 
 <!-- SOLUTION

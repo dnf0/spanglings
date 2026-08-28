@@ -6,7 +6,12 @@
 ### Context
 English: "I cannot stop thinking about the job interview tomorrow."
 
+### Instructions
+**TODO**: Insert the preposition required by *(pensar)* to indicate what occupies one's thoughts.
+**Why**: Directing one's mental attention or contemplation toward a topic requires *(pensar)* to govern the locative/inward preposition.
+
 ### Exercise
+<!-- TODO: Insert preposition governed by 'pensar' for mental focus -->
 No puedo dejar de pensar ___ la entrevista de trabajo de mañana.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "He works hard in order to buy a new laptop."
 
+### Instructions
+**TODO**: Insert the appropriate preposition of purpose before the infinitive verb phrase.
+**Why**: Expressing a goal, objective, or intended consequence (*in order to*) requires the teleological preposition rather than the causal preposition.
+
 ### Exercise
+<!-- TODO: Insert preposition of purpose before infinitive -->
 Trabaja duro ___ comprarse un portátil nuevo.
 
 <!-- SOLUTION

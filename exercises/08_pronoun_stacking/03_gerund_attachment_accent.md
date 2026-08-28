@@ -6,7 +6,12 @@
 ### Context
 English: "The teacher is explaining the grammar rule to me (explaining it to me)."
 
+### Instructions
+**TODO**: Form the enclitic gerund structure by attaching the 1st-person indirect and 3rd-person feminine direct pronouns to the gerund of *(explicar)* with the written accent.
+**Why**: Clitics appended to a gerund shift the stress position, requiring a written accent on the vowel of the gerund ending (*-ando / -iendo*).
+
 ### Exercise
+<!-- TODO: Form enclitic gerund attaching indirect and direct pronouns with accent -->
 El profesor está (explicar + me + la) ___ paso a paso.
 
 <!-- SOLUTION

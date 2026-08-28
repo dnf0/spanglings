@@ -6,7 +6,12 @@
 ### Context
 English: "Had I known the truth, I wouldn't have come."
 
+### Instructions
+**TODO**: Form the compound infinitive combining the auxiliary verb with the past participle of the prompt verbs.
+**Why**: The prepositional locution *de + [compound infinitive]* functions as a concise, elevated equivalent to a past counterfactual *si* clause.
+
 ### Exercise
+<!-- TODO: Form the compound infinitive using auxiliary and past participle -->
 De (haber saber) ___ la verdad, no habría venido.
 
 <!-- SOLUTION

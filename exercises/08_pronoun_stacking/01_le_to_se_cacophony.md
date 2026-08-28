@@ -6,7 +6,12 @@
 ### Context
 English: "I gave the book to Juan yesterday -> I gave it to him yesterday."
 
+### Instructions
+**TODO**: Insert the spurious 3rd-person indirect object pronoun required before the direct object pronoun *lo*.
+**Why**: When a 3rd-person indirect pronoun immediately precedes a 3rd-person direct object pronoun, phonotactic constraints convert it to prevent cacophony.
+
 ### Exercise
+<!-- TODO: Insert modified 3rd-person indirect pronoun before direct pronoun -->
 Ayer compré el libro y ___ lo entregué a Juan en mano.
 
 <!-- SOLUTION

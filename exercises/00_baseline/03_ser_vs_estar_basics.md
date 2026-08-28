@@ -6,7 +6,12 @@
 ### Context
 English: "I am from Madrid, but right now I am in Barcelona."
 
+### Instructions
+**TODO**: Conjugate the verb *(ser)* in the 1st-person singular (*yo*) present indicative.
+**Why**: Expressing geographical provenance or origin (*de Madrid*) denotes inherent identity and birthplace, requiring *(ser)* rather than *(estar)*.
+
 ### Exercise
+<!-- TODO: Conjugate (ser) in 1st-person singular present indicative -->
 Yo (ser) ___ de Madrid, pero ahora mismo (estar) estoy en Barcelona.
 
 <!-- SOLUTION

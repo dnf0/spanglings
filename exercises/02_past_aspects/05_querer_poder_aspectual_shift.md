@@ -6,7 +6,12 @@
 ### Context
 English: "I tried to open the door, but it was completely locked."
 
+### Instructions
+**TODO**: Conjugate the verb *(querer)* in the 1st-person singular (*yo*) preterite indicative using its irregular stem.
+**Why**: In the preterite aspect, *(querer)* denotes a concrete physical attempt or effort, contrasting with ongoing mental intention in the imperfect.
+
 ### Exercise
+<!-- TODO: Conjugate (querer) in 1st-person singular preterite indicative -->
 Yo (querer) ___ abrir la puerta, pero estaba atrancada.
 
 <!-- SOLUTION

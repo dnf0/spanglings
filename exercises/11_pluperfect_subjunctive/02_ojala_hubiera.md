@@ -6,7 +6,12 @@
 ### Context
 English: "I wish I had studied more for this exam!"
 
+### Instructions
+**TODO**: Form the 1st-person singular (*yo*) pluperfect subjunctive of *(estudiar)* with the auxiliary *(haber)* and past participle.
+**Why**: Expressing unfulfilled counterfactual regrets or wishes about past events after *¡ojalá!* mandates the pluperfect subjunctive.
+
 ### Exercise
+<!-- TODO: Form 1st-person singular pluperfect subjunctive for past regret -->
 ¡Ojalá yo (haber estudiar) ___ más para este examen!
 
 <!-- SOLUTION

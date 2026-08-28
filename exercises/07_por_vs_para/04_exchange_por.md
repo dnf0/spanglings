@@ -6,7 +6,12 @@
 ### Context
 English: "I bought this vintage book for twenty euros."
 
+### Instructions
+**TODO**: Insert the preposition expressing price, monetary cost, or economic exchange.
+**Why**: Specifying a sum paid in exchange for an item (*for twenty euros*) requires the transactional/substitutive preposition.
+
 ### Exercise
+<!-- TODO: Insert preposition expressing price/exchange -->
 Compré este libro antiguo ___ veinte euros en el mercadillo.
 
 <!-- SOLUTION

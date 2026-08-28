@@ -6,7 +6,12 @@
 ### Context
 English: "Since everyone agrees, let's sign the contract."
 
+### Instructions
+**TODO**: Conjugate the verb *(estar)* in the 3rd-person plural present indicative with the appropriate written accent.
+**Why**: The explanatory causal connector *puesto que* presents shared or presupposed background information, requiring the indicative mood.
+
 ### Exercise
+<!-- TODO: Conjugate (estar) in 3rd-person plural present indicative after 'puesto que' -->
 Puesto que todos (estar) ___ de acuerdo, firmemos el contrato.
 
 <!-- SOLUTION

@@ -6,7 +6,12 @@
 ### Context
 English: "He quit smoking two years ago."
 
+### Instructions
+**TODO**: Conjugate the auxiliary verb *(dejar)* in the 3rd-person singular preterite indicative with the required written accent.
+**Why**: The aspectual periphrasis *(dejar de + inf)* indicates cessation of a habit, anchored as a completed past event by the temporal marker *hace dos años*.
+
 ### Exercise
+<!-- TODO: Conjugate (dejar) in 3rd-person singular preterite indicative for cessation periphrasis -->
 Él (dejar) ___ de fumar hace dos años.
 
 <!-- SOLUTION

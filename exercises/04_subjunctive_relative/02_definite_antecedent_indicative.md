@@ -6,7 +6,12 @@
 ### Context
 English: "I bought the apartment that has views of the sea."
 
+### Instructions
+**TODO**: Conjugate the verb *(tener)* in the 3rd-person singular present indicative.
+**Why**: When the antecedent (*el piso*) is an identifiable, specific entity confirmed to exist, the relative clause selects the indicative mood.
+
 ### Exercise
+<!-- TODO: Conjugate (tener) in 3rd-person singular present indicative -->
 Compré el piso que (tener) ___ vistas al mar.
 
 <!-- SOLUTION

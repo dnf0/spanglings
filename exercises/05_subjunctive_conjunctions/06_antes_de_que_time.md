@@ -6,7 +6,12 @@
 ### Context
 English: "Let's finish the project before the director arrives."
 
+### Instructions
+**TODO**: Conjugate the verb *(llegar)* in the 3rd-person singular present subjunctive with the appropriate spelling change.
+**Why**: The temporal conjunction *antes de que* always governs the subjunctive mood because the subordinated event is temporally posterior to the main clause.
+
 ### Exercise
+<!-- TODO: Conjugate (llegar) in 3rd-person singular present subjunctive -->
 Terminemos el proyecto antes de que (llegar) ___ el director.
 
 <!-- SOLUTION

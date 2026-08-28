@@ -6,7 +6,12 @@
 ### Context
 English: "Don't eat those bananas yet; they are still unripe."
 
+### Instructions
+**TODO**: Conjugate the verb *(estar)* in the 3rd-person plural (*ellos*) present indicative with the required written accent.
+**Why**: Referring to the physical state of unripeness in fruit requires *(estar)* rather than intrinsic color denoted by *(ser)*.
+
 ### Exercise
+<!-- TODO: Conjugate (estar) in 3rd-person plural present indicative -->
 No comas esos plátanos todavía; todavía (estar) ___ verdes.
 
 <!-- SOLUTION

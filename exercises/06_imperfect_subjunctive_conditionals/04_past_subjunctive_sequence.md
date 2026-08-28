@@ -6,7 +6,12 @@
 ### Context
 English: "The professor asked us to deliver the essay on Friday."
 
+### Instructions
+**TODO**: Conjugate the verb *(entregar)* in the 1st-person plural (*nosotros*) imperfect subjunctive with the appropriate written accent.
+**Why**: Under the sequence of tenses rule, a past tense matrix verb of petition (*pidió que*) governs the imperfect subjunctive in the subordinate clause.
+
 ### Exercise
+<!-- TODO: Conjugate (entregar) in 1st-person plural imperfect subjunctive -->
 El profesor nos pidió que (entregar) ___ el ensayo el viernes.
 
 <!-- SOLUTION

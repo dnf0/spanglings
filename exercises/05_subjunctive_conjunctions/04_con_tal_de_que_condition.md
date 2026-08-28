@@ -6,7 +6,12 @@
 ### Context
 English: "I will lend you the car provided that you return it on Monday."
 
+### Instructions
+**TODO**: Conjugate the verb *(devolver)* in the 2nd-person singular (*tú*) present subjunctive with stem diphthongization.
+**Why**: The conditional conjunction *con tal de que* establishes a necessary prerequisite condition, requiring the subjunctive mood.
+
 ### Exercise
+<!-- TODO: Conjugate (devolver) in 2nd-person singular present subjunctive -->
 Te prestaré el coche con tal de que me lo (devolver) ___ el lunes.
 
 <!-- SOLUTION

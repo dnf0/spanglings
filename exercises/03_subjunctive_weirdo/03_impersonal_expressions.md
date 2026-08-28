@@ -6,7 +6,12 @@
 ### Context
 English: "It is necessary that we speak with the manager."
 
+### Instructions
+**TODO**: Conjugate the verb *(hablar)* in the 1st-person plural (*nosotros*) present subjunctive.
+**Why**: Impersonal expressions of necessity and value judgment *(es necesario que)* trigger the subjunctive mood in the dependent clause.
+
 ### Exercise
+<!-- TODO: Conjugate (hablar) in 1st-person plural present subjunctive -->
 Es necesario que nosotros (hablar) ___ con el gerente.
 
 <!-- SOLUTION

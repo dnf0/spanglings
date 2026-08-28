@@ -6,7 +6,12 @@
 ### Context
 English: "We have just arrived at the airport."
 
+### Instructions
+**TODO**: Conjugate the auxiliary verb *(acabar)* in the 1st-person plural (*nosotros*) present indicative.
+**Why**: The terminative/retrospective periphrasis *(acabar de + inf)* uses present indicative morphology to denote an immediately completed preceding event.
+
 ### Exercise
+<!-- TODO: Conjugate (acabar) in 1st-person plural present indicative for immediate past periphrasis -->
 Nosotros (acabar) ___ de llegar al aeropuerto.
 
 <!-- SOLUTION
