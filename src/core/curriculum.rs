@@ -103,3 +103,13 @@ pub fn find_exercise_by_query<'a>(exercises: &'a [Exercise], query: &str) -> Opt
         .iter()
         .find(|e| e.topic.to_lowercase().contains(&q) || e.title.to_lowercase().contains(&q))
 }
+
+#[derive(Debug, Clone, Serialize, Deserialize)]
+pub struct Curriculum {
+    pub exercises: Vec<Exercise>,
+}
+
+pub fn load_curriculum() -> anyhow::Result<Curriculum> {
+    let exercises = find_all_exercises_or_embedded("exercises")?;
+    Ok(Curriculum { exercises })
+}
