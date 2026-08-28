@@ -146,7 +146,7 @@ impl Exercise {
         let comment_re =
             COMMENT_RE.get_or_init(|| regex::Regex::new(r"(?s)<!--([\s\S]*?)-->").unwrap());
 
-        let mut is_done = true;
+        let mut has_not_done_comment = false;
         let mut metadata_str = None;
         let mut solution_str = None;
         let mut alternatives_str = None;
@@ -157,7 +157,7 @@ impl Exercise {
             if let Some(m) = cap.get(1) {
                 let comment_body = m.as_str().trim();
                 if comment_body == "I AM NOT DONE" {
-                    is_done = false;
+                    has_not_done_comment = true;
                 } else if let Some(stripped) = comment_body.strip_prefix("SOLUTION") {
                     solution_str = Some(stripped.trim_start_matches(':').trim());
                 } else if let Some(stripped) = comment_body.strip_prefix("ALTERNATIVES") {
@@ -171,6 +171,10 @@ impl Exercise {
                 }
             }
         }
+
+        let is_done = !has_not_done_comment
+            && !content.contains("___")
+            && !content.contains("<!-- ANSWER -->");
 
         let mut id = None;
         let mut level = None;
