@@ -1,9 +1,10 @@
 import * as vscode from 'vscode';
 import { execFile } from 'child_process';
 import { promisify } from 'util';
-import * as path from 'path';
+import * as fs from 'fs';
 import { SpanglingsTreeProvider, RawExercise } from './exerciseTree';
 import { SpanglingsStatusBar } from './statusBar';
+import { resolveExercisePath } from './pathUtils';
 
 const execFileAsync = promisify(execFile);
 
@@ -12,6 +13,81 @@ export function registerCommands(
   treeProvider?: SpanglingsTreeProvider,
   statusBar?: SpanglingsStatusBar
 ): void {
+  // Command: Open Specific Exercise File
+  context.subscriptions.push(
+    vscode.commands.registerCommand('spanglings.openExerciseFile', async (relPath: string) => {
+      const config = vscode.workspace.getConfiguration('spanglings');
+      const executablePath = config.get<string>('executablePath', 'spanglings');
+      const workspaceRoot =
+        vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || process.cwd();
+
+      let resolved = resolveExercisePath(relPath, workspaceRoot);
+
+      if (!fs.existsSync(resolved)) {
+        const choice = await vscode.window.showInformationMessage(
+          'Exercise file was not found locally. Would you like to initialize the Spanglings exercise workspace here?',
+          'Initialize Exercises',
+          'Cancel'
+        );
+
+        if (choice === 'Initialize Exercises') {
+          try {
+            await execFileAsync(executablePath, ['init'], { cwd: workspaceRoot });
+            vscode.window.showInformationMessage('Spanglings exercises initialized successfully! 🎉');
+            await Promise.all([
+              treeProvider?.refresh(),
+              statusBar?.update()
+            ]);
+            resolved = resolveExercisePath(relPath, workspaceRoot);
+          } catch (e) {
+            vscode.window.showErrorMessage(
+              `Failed to initialize exercises: ${e instanceof Error ? e.message : String(e)}`
+            );
+            return;
+          }
+        } else {
+          return;
+        }
+      }
+
+      if (fs.existsSync(resolved)) {
+        try {
+          const doc = await vscode.workspace.openTextDocument(vscode.Uri.file(resolved));
+          await vscode.window.showTextDocument(doc);
+        } catch (err) {
+          vscode.window.showErrorMessage(
+            `Failed to open exercise file: ${err instanceof Error ? err.message : String(err)}`
+          );
+        }
+      } else {
+        vscode.window.showErrorMessage(`Exercise file still not found at: ${resolved}`);
+      }
+    })
+  );
+
+  // Command: Initialize Exercises
+  context.subscriptions.push(
+    vscode.commands.registerCommand('spanglings.initExercises', async () => {
+      const config = vscode.workspace.getConfiguration('spanglings');
+      const executablePath = config.get<string>('executablePath', 'spanglings');
+      const workspaceRoot =
+        vscode.workspace.workspaceFolders?.[0]?.uri.fsPath || process.cwd();
+
+      try {
+        await execFileAsync(executablePath, ['init'], { cwd: workspaceRoot });
+        vscode.window.showInformationMessage('Spanglings exercises initialized successfully! 🎉');
+        await Promise.all([
+          treeProvider?.refresh(),
+          statusBar?.update()
+        ]);
+      } catch (err) {
+        vscode.window.showErrorMessage(
+          `Failed to initialize exercises: ${err instanceof Error ? err.message : String(err)}`
+        );
+      }
+    })
+  );
+
   // Command: Open Next Exercise
   context.subscriptions.push(
     vscode.commands.registerCommand('spanglings.openNextExercise', async () => {
@@ -36,12 +112,7 @@ export function registerCommands(
           return;
         }
 
-        const absPath = path.isAbsolute(nextExercise.path)
-          ? nextExercise.path
-          : path.resolve(workspaceRoot, nextExercise.path);
-        const fileUri = vscode.Uri.file(absPath);
-
-        await vscode.commands.executeCommand('vscode.open', fileUri);
+        await vscode.commands.executeCommand('spanglings.openExerciseFile', nextExercise.path);
       } catch (err) {
         vscode.window.showErrorMessage(
           `Failed to open next exercise: ${err instanceof Error ? err.message : String(err)}`
