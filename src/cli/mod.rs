@@ -40,13 +40,16 @@ pub enum Commands {
     Hint { exercise: Option<String> },
     /// Display an in-terminal grammar reference card
     Explain { topic: String },
-    /// Launch quick-fire irregular stem conjugation drills
+    /// Launch quick-fire irregular stem conjugation and grammar drills
     Drill {
-        /// Topic or concept to drill (e.g. preterite, subjunctive)
+        /// Topic or concept to drill (e.g. preterite, subjunctive, por-para, ser-estar, pronouns, false-friends, prepositions, idioms)
         topic: Option<String>,
         /// Filter drill items by specific linguistic concept
         #[arg(short, long)]
         concept: Option<String>,
+        /// Number of drill questions to ask (default: 5)
+        #[arg(short = 'n', long)]
+        count: Option<usize>,
     },
     /// Launch 60-second rapid-fire blitz speed drill
     Blitz {
