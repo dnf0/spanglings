@@ -4,19 +4,66 @@ on:
   push:
     tags:
       - "v*"
+    branches:
+      - main
   workflow_dispatch:
     inputs:
       tag_name:
-        description: "Release tag name (e.g. v0.1.0)"
-        required: true
-        default: "v0.1.0"
+        description: "Release tag name (e.g. v0.4.0)"
+        required: false
+        default: ""
 
 permissions:
   contents: write
 
 jobs:
+  check-version:
+    name: Check Release Version
+    runs-on: ubuntu-latest
+    outputs:
+      should_release: ${{ steps.check.outputs.should_release }}
+      tag_name: ${{ steps.check.outputs.tag_name }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check version and tags
+        id: check
+        run: |
+          if [ "${{ github.ref_type }}" = "tag" ]; then
+            echo "Triggered by tag: ${{ github.ref_name }}"
+            echo "should_release=true" >> $GITHUB_OUTPUT
+            echo "tag_name=${{ github.ref_name }}" >> $GITHUB_OUTPUT
+          elif [ -n "${{ inputs.tag_name }}" ]; then
+            echo "Triggered manually with tag: ${{ inputs.tag_name }}"
+            echo "should_release=true" >> $GITHUB_OUTPUT
+            echo "tag_name=${{ inputs.tag_name }}" >> $GITHUB_OUTPUT
+          else
+            VERSION=$(grep '^version =' Cargo.toml | head -1 | cut -d '"' -f 2)
+            TAG="v$VERSION"
+            echo "Cargo.toml version is $VERSION (tag: $TAG)"
+            
+            if git rev-parse "$TAG" >/dev/null 2>&1; then
+              echo "Tag $TAG already exists on repository. Skipping release."
+              echo "should_release=false" >> $GITHUB_OUTPUT
+            else
+              echo "New version detected ($TAG). Tagging and creating release!"
+              echo "should_release=true" >> $GITHUB_OUTPUT
+              echo "tag_name=$TAG" >> $GITHUB_OUTPUT
+              
+              git config user.name "github-actions[bot]"
+              git config user.email "github-actions[bot]@users.noreply.github.com"
+              git tag -a "$TAG" -m "Release $TAG"
+              git push origin "$TAG"
+            fi
+          fi
+
   build-release:
     name: Build Binary (${{ matrix.target }})
+    needs: check-version
+    if: needs.check-version.outputs.should_release == 'true'
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -90,7 +137,7 @@ jobs:
 
   publish-release:
     name: Create GitHub Release
-    needs: build-release
+    needs: [check-version, build-release]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -114,11 +161,11 @@ jobs:
           files: |
             release-assets/*
           generate_release_notes: true
-          tag_name: ${{ github.ref_name || inputs.tag_name }}
+          tag_name: ${{ needs.check-version.outputs.tag_name }}
 
   publish-crates-io:
     name: Publish to Crates.io
-    needs: publish-release
+    needs: [check-version, publish-release]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
