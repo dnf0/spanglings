@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.4.1] - 2026-08-28
+
+### Fixed
+- **Initial Exercise Completion State Evaluation**:
+  - Corrected `is_done` detection in exercise parser and evaluation engine to recognize unfilled blanks (`___`, `<!-- ANSWER -->`) as incomplete (`is_done = false`).
+  - Fixed `spanglings list` and `spanglings progress` reporting `0/339 (0.0%)` on clean setups rather than falsely marking 100% completed out of the box.
+- **VS Code Extension & Path Resolution**:
+  - Added resilient workspace root detection preventing read-only file system errors (`os error 30`) when no workspace folder is open.
+  - Implemented multi-depth exercise path resolution across root, subfolders, and parent directories.
+
 ## [0.4.0] - 2026-08-28
 
 ### Added
