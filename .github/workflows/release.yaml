@@ -149,6 +149,19 @@ jobs:
           path: release-assets
           merge-multiple: true
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Package VS Code extension
+        run: |
+          cd editors/vscode
+          npm ci
+          npm run package
+          cp spanglings-vscode-*.vsix ../../release-assets/
+          cd ../..
+
       - name: Generate Checksums
         run: |
           cd release-assets
