@@ -287,9 +287,38 @@ fn test_drill_item_prompt_formatting() {
         explanation: "yo pongo -> drop -o -> add -a -> ponga",
     };
     let formatted = item.format_prompt(1, 5);
-    assert!(formatted.contains("Q1/5 [Subjunctive | drop -o -> opposite vowel -a]"));
+    assert!(formatted.contains(
+        "Q1/5 [Subjunctive (wishes, hypotheses, doubt, demands) | drop -o -> opposite vowel -a]"
+    ));
+    assert!(formatted.contains("Subjunctive (wishes, hypotheses, doubt, demands)"));
     assert!(formatted.contains("Sentence: \"Dudo que yo ____ los libros en la mesa.\""));
     assert!(formatted.contains("(verb: poner | subject: yo)"));
+
+    // Fallback when no formula cue
+    let item_no_cue = DrillItem {
+        topic: "subjunctive",
+        formula_cue: "",
+        trigger_sentence: "Dudo que yo ____.",
+        target_verb: "poner",
+        target_subject: "yo",
+        target: "ponga",
+        explanation: "yo pongo -> ponga",
+    };
+    let formatted_no_cue = item_no_cue.format_prompt(2, 5);
+    assert!(formatted_no_cue.contains("Q2/5 [Subjunctive (wishes, hypotheses, doubt, demands)]"));
+
+    // Fallback for unknown topic
+    let item_unknown = DrillItem {
+        topic: "custom_topic",
+        formula_cue: "rule 1",
+        trigger_sentence: "Sentence ____",
+        target_verb: "v",
+        target_subject: "s",
+        target: "t",
+        explanation: "e",
+    };
+    let formatted_unknown = item_unknown.format_prompt(3, 5);
+    assert!(formatted_unknown.contains("Q3/5 [Custom Topic | rule 1]"));
 }
 
 #[test]

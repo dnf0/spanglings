@@ -15,31 +15,41 @@ pub struct DrillItem {
 
 impl DrillItem {
     pub fn format_prompt(&self, current: usize, total: usize) -> String {
-        let topic_display = if self.topic.is_empty() {
-            String::new()
+        let concept_header =
+            if let Some(concept) = crate::core::reference::get_grammar_concept(self.topic) {
+                if !concept.gloss.is_empty() {
+                    format!("{} ({})", concept.title, concept.gloss)
+                } else {
+                    concept.title.to_string()
+                }
+            } else if self.topic.is_empty() {
+                String::new()
+            } else {
+                let parts: Vec<String> = self
+                    .topic
+                    .split('_')
+                    .map(|word| {
+                        let mut chars = word.chars();
+                        match chars.next() {
+                            None => String::new(),
+                            Some(f) => f.to_uppercase().collect::<String>() + chars.as_str(),
+                        }
+                    })
+                    .collect();
+                parts.join(" ")
+            };
+
+        let badge = if self.formula_cue.is_empty() {
+            format!("[{concept_header}]")
+        } else if concept_header.is_empty() {
+            format!("[{}]", self.formula_cue)
         } else {
-            let parts: Vec<String> = self
-                .topic
-                .split('_')
-                .map(|word| {
-                    let mut chars = word.chars();
-                    match chars.next() {
-                        None => String::new(),
-                        Some(f) => f.to_uppercase().collect::<String>() + chars.as_str(),
-                    }
-                })
-                .collect();
-            parts.join(" ")
+            format!("[{concept_header} | {}]", self.formula_cue)
         };
+
         format!(
-            "Q{}/{} [{} | {}]\nSentence: \"{}\" (verb: {} | subject: {})",
-            current,
-            total,
-            topic_display,
-            self.formula_cue,
-            self.trigger_sentence,
-            self.target_verb,
-            self.target_subject
+            "Q{}/{} {}\nSentence: \"{}\" (verb: {} | subject: {})",
+            current, total, badge, self.trigger_sentence, self.target_verb, self.target_subject
         )
     }
 

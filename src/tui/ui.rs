@@ -1,4 +1,4 @@
-use crate::core::reference::get_reference_card;
+use crate::core::reference::{get_grammar_concept, get_reference_card};
 use crate::engine::validator::ValidationResult;
 use crate::tui::app::App;
 use ratatui::{
@@ -1230,7 +1230,7 @@ fn draw_reference_browser_modal(frame: &mut Frame, app: &App, area: Rect) {
 
     let browser_chunks = Layout::default()
         .direction(Direction::Horizontal)
-        .constraints([Constraint::Length(26), Constraint::Min(30)])
+        .constraints([Constraint::Length(36), Constraint::Min(30)])
         .split(chunks[1]);
 
     let topics_block = Block::default()
@@ -1249,7 +1249,19 @@ fn draw_reference_browser_modal(frame: &mut Frame, app: &App, area: Rect) {
             .iter()
             .enumerate()
             .map(|(idx, topic)| {
+                let concept = get_grammar_concept(topic);
+                let (title, gloss) = if let Some(c) = concept {
+                    (c.title, Some(c.gloss))
+                } else {
+                    (*topic, None)
+                };
+
                 if idx == app.ref_selected_idx {
+                    let text = if let Some(g) = gloss {
+                        format!("{} ({})", title, g)
+                    } else {
+                        title.to_string()
+                    };
                     Line::from(vec![
                         Span::styled(
                             " ▶ ",
@@ -1259,7 +1271,7 @@ fn draw_reference_browser_modal(frame: &mut Frame, app: &App, area: Rect) {
                                 .add_modifier(Modifier::BOLD),
                         ),
                         Span::styled(
-                            format!("{:<18}", topic),
+                            text,
                             Style::default()
                                 .fg(Color::Black)
                                 .bg(Color::Cyan)
@@ -1267,10 +1279,22 @@ fn draw_reference_browser_modal(frame: &mut Frame, app: &App, area: Rect) {
                         ),
                     ])
                 } else {
-                    Line::from(vec![
+                    let mut spans = vec![
                         Span::styled("   ", Style::default().fg(Color::DarkGray)),
-                        Span::styled(*topic, Style::default().fg(Color::White)),
-                    ])
+                        Span::styled(
+                            title,
+                            Style::default()
+                                .fg(Color::White)
+                                .add_modifier(Modifier::BOLD),
+                        ),
+                    ];
+                    if let Some(g) = gloss {
+                        spans.push(Span::styled(
+                            format!(" ({})", g),
+                            Style::default().fg(Color::DarkGray),
+                        ));
+                    }
+                    Line::from(spans)
                 }
             })
             .collect()
@@ -1284,13 +1308,21 @@ fn draw_reference_browser_modal(frame: &mut Frame, app: &App, area: Rect) {
         .get(app.ref_selected_idx)
         .copied()
         .unwrap_or("subjunctive");
-    let card_content =
-        get_reference_card(selected_topic).unwrap_or("No reference content found for this topic.");
+    let concept = get_grammar_concept(selected_topic);
+    let card_title = if let Some(c) = concept {
+        format!(" Cheat Sheet: {} ({}) ", c.title, c.gloss)
+    } else {
+        format!(" Cheat Sheet: {} ", selected_topic)
+    };
+    let card_content = concept
+        .map(|c| c.card)
+        .or_else(|| get_reference_card(selected_topic))
+        .unwrap_or("No reference content found for this topic.");
 
     let card_block = Block::default()
         .borders(Borders::ALL)
         .border_type(BorderType::Rounded)
-        .title(format!(" Cheat Sheet: {} ", selected_topic))
+        .title(card_title)
         .border_style(Style::default().fg(Color::Cyan));
 
     let card_lines: Vec<Line> = card_content

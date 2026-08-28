@@ -39,7 +39,10 @@ pub enum Commands {
     /// Show grammatical hints for the current or specified exercise
     Hint { exercise: Option<String> },
     /// Display an in-terminal grammar reference card
-    Explain { topic: String },
+    Explain {
+        /// Grammar topic or communicative intent (e.g. subjunctive, wishes, por-para, ser-estar)
+        topic: Option<String>,
+    },
     /// Launch quick-fire irregular stem conjugation and grammar drills
     Drill {
         /// Topic or concept to drill (e.g. preterite, subjunctive, por-para, ser-estar, pronouns, false-friends, prepositions, idioms)

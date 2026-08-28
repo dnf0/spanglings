@@ -17,7 +17,7 @@ fn main() -> anyhow::Result<()> {
             spanglings::cli::commands::hint::show_hint(exercise.as_deref())?;
         }
         Some(Commands::Explain { topic }) => {
-            spanglings::cli::commands::explain::show_explanation(&topic)?;
+            spanglings::cli::commands::explain::show_explanation(topic.as_deref())?;
         }
         Some(Commands::Drill {
             topic,

@@ -3,7 +3,7 @@ use crate::core::exercise::Exercise;
 use crate::core::placement::{
     evaluate_placement_test, get_placement_battery, PlacementQuestion, PlacementResult,
 };
-use crate::core::reference::list_reference_topics;
+use crate::core::reference::{get_grammar_concept, list_reference_topics};
 use crate::core::state::{AppState, EvaluatedLevel, ExerciseStat};
 use crate::engine::accents::AccentMode;
 use crate::engine::validator::{validate_submission, ValidationResult};
@@ -513,7 +513,19 @@ impl App {
             self.ref_filtered_topics = self
                 .ref_topics
                 .iter()
-                .filter(|topic| topic.to_lowercase().contains(&q))
+                .filter(|&slug| {
+                    if let Some(concept) = get_grammar_concept(slug) {
+                        concept.slug.to_lowercase().contains(&q)
+                            || concept.title.to_lowercase().contains(&q)
+                            || concept.gloss.to_lowercase().contains(&q)
+                            || concept
+                                .keywords
+                                .iter()
+                                .any(|k| k.to_lowercase().contains(&q))
+                    } else {
+                        slug.to_lowercase().contains(&q)
+                    }
+                })
                 .copied()
                 .collect();
         }
