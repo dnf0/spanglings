@@ -444,5 +444,6 @@
   "442": "pack.rs",
   "443": "Design Specification: Expanded 16-Pair Spanish Binary Contrast Showdowns",
   "444": "Implementation Plan: Expanded 16-Pair Spanish Binary Contrast Showdowns",
-  "445": "json_output_tests.rs"
+  "445": "run_init",
+  "446": "exercise_validity_tests.rs"
 }

@@ -8502,7 +8502,7 @@
       "file_type": "code",
       "norm_label": ".delete_conjugator_char_backwards()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L465"
+      "source_location": "L470"
     },
     {
       "id": "src_tui_app_app_insert_conjugator_char",
@@ -8513,7 +8513,7 @@
       "file_type": "code",
       "norm_label": ".insert_conjugator_char()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L453"
+      "source_location": "L458"
     },
     {
       "id": "src_tui_app_app_submit_conjugation",
@@ -8524,7 +8524,7 @@
       "file_type": "code",
       "norm_label": ".submit_conjugation()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L480"
+      "source_location": "L485"
     },
     {
       "id": "tests_conjugator_tests",
@@ -8920,7 +8920,7 @@
       "file_type": "code",
       "norm_label": ".submit_placement_answer()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L624"
+      "source_location": "L629"
     },
     {
       "id": "tests_placement_tests",
@@ -11319,6 +11319,17 @@
       "source_location": ""
     },
     {
+      "id": "keyevent",
+      "label": "KeyEvent",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": "keyevent",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_tui_app_app",
       "label": "App",
       "_origin": "ast",
@@ -11327,40 +11338,7 @@
       "file_type": "code",
       "norm_label": "app",
       "source_file": "src/tui/app.rs",
-      "source_location": "L27"
-    },
-    {
-      "id": "src_tui_app_app_active_list_len",
-      "label": ".active_list_len()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".active_list_len()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L230"
-    },
-    {
-      "id": "src_tui_app_app_current_exercise",
-      "label": ".current_exercise()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".current_exercise()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L176"
-    },
-    {
-      "id": "src_tui_app_app_current_exercise_mut",
-      "label": ".current_exercise_mut()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".current_exercise_mut()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L186"
+      "source_location": "L30"
     },
     {
       "id": "src_tui_app_app_delete_char_backwards",
@@ -11371,7 +11349,7 @@
       "file_type": "code",
       "norm_label": ".delete_char_backwards()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L321"
+      "source_location": "L326"
     },
     {
       "id": "src_tui_app_app_delete_char_forwards",
@@ -11382,7 +11360,7 @@
       "file_type": "code",
       "norm_label": ".delete_char_forwards()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L331"
+      "source_location": "L336"
     },
     {
       "id": "src_tui_app_app_delete_placement_char_backwards",
@@ -11393,7 +11371,7 @@
       "file_type": "code",
       "norm_label": ".delete_placement_char_backwards()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L696"
+      "source_location": "L701"
     },
     {
       "id": "src_tui_app_app_delete_ref_search_char_backwards",
@@ -11404,7 +11382,7 @@
       "file_type": "code",
       "norm_label": ".delete_ref_search_char_backwards()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L523"
+      "source_location": "L528"
     },
     {
       "id": "src_tui_app_app_delete_search_char_backwards",
@@ -11415,7 +11393,7 @@
       "file_type": "code",
       "norm_label": ".delete_search_char_backwards()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L299"
+      "source_location": "L304"
     },
     {
       "id": "src_tui_app_app_enter_conjugator",
@@ -11426,7 +11404,7 @@
       "file_type": "code",
       "norm_label": ".enter_conjugator()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L439"
+      "source_location": "L444"
     },
     {
       "id": "src_tui_app_app_enter_help",
@@ -11437,7 +11415,7 @@
       "file_type": "code",
       "norm_label": ".enter_help()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L594"
+      "source_location": "L599"
     },
     {
       "id": "src_tui_app_app_enter_mastery_dashboard",
@@ -11448,7 +11426,7 @@
       "file_type": "code",
       "norm_label": ".enter_mastery_dashboard()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L709"
+      "source_location": "L714"
     },
     {
       "id": "src_tui_app_app_enter_placement_test",
@@ -11459,7 +11437,18 @@
       "file_type": "code",
       "norm_label": ".enter_placement_test()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L606"
+      "source_location": "L611"
+    },
+    {
+      "id": "src_tui_app_app_enter_reference_browser",
+      "label": ".enter_reference_browser()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".enter_reference_browser()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L501"
     },
     {
       "id": "src_tui_app_app_enter_search",
@@ -11470,7 +11459,7 @@
       "file_type": "code",
       "norm_label": ".enter_search()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L238"
+      "source_location": "L243"
     },
     {
       "id": "src_tui_app_app_exit_conjugator",
@@ -11481,7 +11470,7 @@
       "file_type": "code",
       "norm_label": ".exit_conjugator()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L449"
+      "source_location": "L454"
     },
     {
       "id": "src_tui_app_app_exit_help",
@@ -11492,7 +11481,7 @@
       "file_type": "code",
       "norm_label": ".exit_help()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L600"
+      "source_location": "L605"
     },
     {
       "id": "src_tui_app_app_exit_mastery_dashboard",
@@ -11503,7 +11492,7 @@
       "file_type": "code",
       "norm_label": ".exit_mastery_dashboard()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L719"
+      "source_location": "L724"
     },
     {
       "id": "src_tui_app_app_exit_placement_test",
@@ -11514,7 +11503,7 @@
       "file_type": "code",
       "norm_label": ".exit_placement_test()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L620"
+      "source_location": "L625"
     },
     {
       "id": "src_tui_app_app_exit_reference_browser",
@@ -11525,18 +11514,7 @@
       "file_type": "code",
       "norm_label": ".exit_reference_browser()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L507"
-    },
-    {
-      "id": "src_tui_app_app_exit_search",
-      "label": ".exit_search()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".exit_search()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L247"
+      "source_location": "L512"
     },
     {
       "id": "src_tui_app_app_fast_track_placement_levels",
@@ -11547,7 +11525,18 @@
       "file_type": "code",
       "norm_label": ".fast_track_placement_levels()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L660"
+      "source_location": "L665"
+    },
+    {
+      "id": "src_tui_app_app_handle_key",
+      "label": ".handle_key()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".handle_key()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L984"
     },
     {
       "id": "src_tui_app_app_insert_char",
@@ -11558,7 +11547,7 @@
       "file_type": "code",
       "norm_label": ".insert_char()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L310"
+      "source_location": "L315"
     },
     {
       "id": "src_tui_app_app_insert_placement_char",
@@ -11569,7 +11558,7 @@
       "file_type": "code",
       "norm_label": ".insert_placement_char()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L682"
+      "source_location": "L687"
     },
     {
       "id": "src_tui_app_app_insert_ref_search_char",
@@ -11580,7 +11569,7 @@
       "file_type": "code",
       "norm_label": ".insert_ref_search_char()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L511"
+      "source_location": "L516"
     },
     {
       "id": "src_tui_app_app_insert_search_char",
@@ -11591,7 +11580,7 @@
       "file_type": "code",
       "norm_label": ".insert_search_char()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L287"
+      "source_location": "L292"
     },
     {
       "id": "src_tui_app_app_move_cursor_left",
@@ -11602,7 +11591,7 @@
       "file_type": "code",
       "norm_label": ".move_cursor_left()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L337"
+      "source_location": "L342"
     },
     {
       "id": "src_tui_app_app_move_cursor_right",
@@ -11613,7 +11602,7 @@
       "file_type": "code",
       "norm_label": ".move_cursor_right()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L343"
+      "source_location": "L348"
     },
     {
       "id": "src_tui_app_app_new",
@@ -11624,7 +11613,7 @@
       "file_type": "code",
       "norm_label": ".new()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L90"
+      "source_location": "L94"
     },
     {
       "id": "src_tui_app_app_new_with_state",
@@ -11635,18 +11624,18 @@
       "file_type": "code",
       "norm_label": ".new_with_state()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L102"
+      "source_location": "L106"
     },
     {
-      "id": "src_tui_app_app_next_exercise",
-      "label": ".next_exercise()",
+      "id": "src_tui_app_app_next_mastery_concept",
+      "label": ".next_mastery_concept()",
       "_origin": "ast",
       "community": 2,
       "community_name": "App",
       "file_type": "code",
-      "norm_label": ".next_exercise()",
+      "norm_label": ".next_mastery_concept()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L198"
+      "source_location": "L736"
     },
     {
       "id": "src_tui_app_app_next_ref_topic",
@@ -11657,18 +11646,29 @@
       "file_type": "code",
       "norm_label": ".next_ref_topic()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L562"
+      "source_location": "L567"
     },
     {
-      "id": "src_tui_app_app_prev_exercise",
-      "label": ".prev_exercise()",
+      "id": "src_tui_app_app_on_key",
+      "label": ".on_key()",
       "_origin": "ast",
       "community": 2,
       "community_name": "App",
       "file_type": "code",
-      "norm_label": ".prev_exercise()",
+      "norm_label": ".on_key()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L212"
+      "source_location": "L988"
+    },
+    {
+      "id": "src_tui_app_app_prev_mastery_concept",
+      "label": ".prev_mastery_concept()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".prev_mastery_concept()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L743"
     },
     {
       "id": "src_tui_app_app_prev_ref_topic",
@@ -11679,29 +11679,7 @@
       "file_type": "code",
       "norm_label": ".prev_ref_topic()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L570"
-    },
-    {
-      "id": "src_tui_app_app_reset",
-      "label": ".reset()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".reset()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L416"
-    },
-    {
-      "id": "src_tui_app_app_reset_current_state",
-      "label": ".reset_current_state()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".reset_current_state()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L428"
+      "source_location": "L575"
     },
     {
       "id": "src_tui_app_app_scroll_conjugator_down",
@@ -11712,7 +11690,7 @@
       "file_type": "code",
       "norm_label": ".scroll_conjugator_down()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L490"
+      "source_location": "L495"
     },
     {
       "id": "src_tui_app_app_scroll_conjugator_up",
@@ -11723,7 +11701,7 @@
       "file_type": "code",
       "norm_label": ".scroll_conjugator_up()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L484"
+      "source_location": "L489"
     },
     {
       "id": "src_tui_app_app_scroll_ref_down",
@@ -11734,7 +11712,7 @@
       "file_type": "code",
       "norm_label": ".scroll_ref_down()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L588"
+      "source_location": "L593"
     },
     {
       "id": "src_tui_app_app_scroll_ref_up",
@@ -11745,7 +11723,7 @@
       "file_type": "code",
       "norm_label": ".scroll_ref_up()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L582"
+      "source_location": "L587"
     },
     {
       "id": "src_tui_app_app_set_cursor_end",
@@ -11756,29 +11734,7 @@
       "file_type": "code",
       "norm_label": ".set_cursor_end()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L349"
-    },
-    {
-      "id": "src_tui_app_app_submit_current_answer",
-      "label": ".submit_current_answer()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".submit_current_answer()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L353"
-    },
-    {
-      "id": "src_tui_app_app_toggle_hint",
-      "label": ".toggle_hint()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".toggle_hint()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L392"
+      "source_location": "L354"
     },
     {
       "id": "src_tui_app_app_toggle_mastery_dashboard",
@@ -11789,7 +11745,7 @@
       "file_type": "code",
       "norm_label": ".toggle_mastery_dashboard()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L723"
+      "source_location": "L728"
     },
     {
       "id": "src_tui_app_app_toggle_reference",
@@ -11800,7 +11756,7 @@
       "file_type": "code",
       "norm_label": ".toggle_reference()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L409"
+      "source_location": "L414"
     },
     {
       "id": "src_tui_app_app_update_ref_filter",
@@ -11811,7 +11767,7 @@
       "file_type": "code",
       "norm_label": ".update_ref_filter()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L534"
+      "source_location": "L539"
     },
     {
       "id": "src_tui_app_app_update_search_filter",
@@ -11822,16 +11778,16 @@
       "file_type": "code",
       "norm_label": ".update_search_filter()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L265"
+      "source_location": "L270"
     },
     {
-      "id": "src_tui_app_rs_option",
-      "label": "Option",
+      "id": "src_tui_app_rs_into",
+      "label": "Into",
       "_origin": "ast",
       "community": 2,
       "community_name": "App",
       "file_type": "code",
-      "norm_label": "option",
+      "norm_label": "into",
       "source_file": "",
       "source_location": ""
     },
@@ -13561,17 +13517,6 @@
       "source_location": ""
     },
     {
-      "id": "keycode",
-      "label": "KeyCode",
-      "_origin": "ast",
-      "community": 214,
-      "community_name": "app.rs",
-      "file_type": "code",
-      "norm_label": "keycode",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_tui_app",
       "label": "app.rs",
       "_origin": "ast",
@@ -13591,7 +13536,7 @@
       "file_type": "code",
       "norm_label": "appmode",
       "source_file": "src/tui/app.rs",
-      "source_location": "L18"
+      "source_location": "L21"
     },
     {
       "id": "src_tui_events",
@@ -13702,61 +13647,6 @@
       "norm_label": "terminal",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "tests_tui_arcade_tests",
-      "label": "tui_arcade_tests.rs",
-      "_origin": "ast",
-      "community": 214,
-      "community_name": "app.rs",
-      "file_type": "code",
-      "norm_label": "tui_arcade_tests.rs",
-      "source_file": "tests/tui_arcade_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_tui_arcade_tests_test_tui_all_16_showdown_pairs_lifecycle_and_rendering",
-      "label": "test_tui_all_16_showdown_pairs_lifecycle_and_rendering()",
-      "_origin": "ast",
-      "community": 214,
-      "community_name": "app.rs",
-      "file_type": "code",
-      "norm_label": "test_tui_all_16_showdown_pairs_lifecycle_and_rendering()",
-      "source_file": "tests/tui_arcade_tests.rs",
-      "source_location": "L51"
-    },
-    {
-      "id": "tests_tui_arcade_tests_test_tui_arcade_modal_lifecycle_and_single_key_navigation",
-      "label": "test_tui_arcade_modal_lifecycle_and_single_key_navigation()",
-      "_origin": "ast",
-      "community": 214,
-      "community_name": "app.rs",
-      "file_type": "code",
-      "norm_label": "test_tui_arcade_modal_lifecycle_and_single_key_navigation()",
-      "source_file": "tests/tui_arcade_tests.rs",
-      "source_location": "L8"
-    },
-    {
-      "id": "tests_tui_arcade_tests_test_tui_arcade_showdown_cycling_navigation",
-      "label": "test_tui_arcade_showdown_cycling_navigation()",
-      "_origin": "ast",
-      "community": 214,
-      "community_name": "app.rs",
-      "file_type": "code",
-      "norm_label": "test_tui_arcade_showdown_cycling_navigation()",
-      "source_file": "tests/tui_arcade_tests.rs",
-      "source_location": "L120"
-    },
-    {
-      "id": "tests_tui_arcade_tests_test_tui_arcade_showdown_mode_navigation",
-      "label": "test_tui_arcade_showdown_mode_navigation()",
-      "_origin": "ast",
-      "community": 214,
-      "community_name": "app.rs",
-      "file_type": "code",
-      "norm_label": "test_tui_arcade_showdown_mode_navigation()",
-      "source_file": "tests/tui_arcade_tests.rs",
-      "source_location": "L37"
     },
     {
       "id": "frame",
@@ -14827,6 +14717,17 @@
       "source_location": "L88"
     },
     {
+      "id": "src_core_curriculum_level_from_str",
+      "label": ".from_str()",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "find_all_exercises_or_embedded",
+      "file_type": "code",
+      "norm_label": ".from_str()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L35"
+    },
+    {
       "id": "src_core_curriculum_load_curriculum",
       "label": "load_curriculum()",
       "_origin": "ast",
@@ -14836,6 +14737,28 @@
       "norm_label": "load_curriculum()",
       "source_file": "src/core/curriculum.rs",
       "source_location": "L112"
+    },
+    {
+      "id": "src_core_curriculum_parselevelerror",
+      "label": "ParseLevelError",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "find_all_exercises_or_embedded",
+      "file_type": "code",
+      "norm_label": "parselevelerror",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_core_curriculum_rs_err",
+      "label": "Err",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "find_all_exercises_or_embedded",
+      "file_type": "code",
+      "norm_label": "err",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "src_core_curriculum_rs_option",
@@ -14878,6 +14801,28 @@
       "community_name": "find_all_exercises_or_embedded",
       "file_type": "code",
       "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_self",
+      "label": "Self",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "find_all_exercises_or_embedded",
+      "file_type": "code",
+      "norm_label": "self",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 221,
+      "community_name": "find_all_exercises_or_embedded",
+      "file_type": "code",
+      "norm_label": "string",
       "source_file": "",
       "source_location": ""
     },
@@ -20355,7 +20300,7 @@
       "label": "exercise.rs",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "exercise.rs",
       "source_file": "src/core/exercise.rs",
@@ -20366,18 +20311,29 @@
       "label": "DiagnosticRule",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "diagnosticrule",
       "source_file": "src/core/exercise.rs",
       "source_location": "L48"
     },
     {
+      "id": "src_core_exercise_exercise",
+      "label": "Exercise",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "exercise",
+      "source_file": "src/core/exercise.rs",
+      "source_location": "L55"
+    },
+    {
       "id": "src_core_exercise_exercise_from_markdown",
       "label": ".from_markdown()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": ".from_markdown()",
       "source_file": "src/core/exercise.rs",
@@ -20388,7 +20344,7 @@
       "label": ".to_drill_items()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": ".to_drill_items()",
       "source_file": "src/core/exercise.rs",
@@ -20399,7 +20355,7 @@
       "label": "ExerciseType",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "exercisetype",
       "source_file": "src/core/exercise.rs",
@@ -20410,7 +20366,7 @@
       "label": ".fmt()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": ".fmt()",
       "source_file": "src/core/exercise.rs",
@@ -20421,7 +20377,7 @@
       "label": ".from_str()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": ".from_str()",
       "source_file": "src/core/exercise.rs",
@@ -20432,7 +20388,7 @@
       "label": "parse_optional_string()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "parse_optional_string()",
       "source_file": "src/core/exercise.rs",
@@ -20443,7 +20399,7 @@
       "label": "parse_string_list()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "parse_string_list()",
       "source_file": "src/core/exercise.rs",
@@ -20454,7 +20410,7 @@
       "label": "ParseExerciseTypeError",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "parseexercisetypeerror",
       "source_file": "src/core/exercise.rs",
@@ -20465,7 +20421,7 @@
       "label": "Display",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "display",
       "source_file": "",
@@ -20476,7 +20432,7 @@
       "label": "Err",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "err",
       "source_file": "",
@@ -20487,7 +20443,7 @@
       "label": "Formatter",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "formatter",
       "source_file": "",
@@ -20498,7 +20454,7 @@
       "label": "FromStr",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "fromstr",
       "source_file": "",
@@ -20509,7 +20465,7 @@
       "label": "Option",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "option",
       "source_file": "",
@@ -20520,9 +20476,20 @@
       "label": "P",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "p",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_exercise_rs_pathbuf",
+      "label": "PathBuf",
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "Exercise",
+      "file_type": "code",
+      "norm_label": "pathbuf",
       "source_file": "",
       "source_location": ""
     },
@@ -20531,7 +20498,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -20542,7 +20509,7 @@
       "label": "Self",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "self",
       "source_file": "",
@@ -20553,7 +20520,7 @@
       "label": "String",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "",
@@ -20564,7 +20531,7 @@
       "label": "Vec",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "vec",
       "source_file": "",
@@ -20575,7 +20542,7 @@
       "label": "split_metadata_line()",
       "_origin": "ast",
       "community": 3,
-      "community_name": "exercise.rs",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "split_metadata_line()",
       "source_file": "src/core/exercise.rs",
@@ -30836,70 +30803,125 @@
       "source_location": "L1"
     },
     {
-      "id": "tests_exercise_validity_tests",
-      "label": "exercise_validity_tests.rs",
+      "id": "src_tui_app_app_active_list_len",
+      "label": ".active_list_len()",
       "_origin": "ast",
       "community": 425,
-      "community_name": "exercise_validity_tests.rs",
+      "community_name": ".current_exercise",
       "file_type": "code",
-      "norm_label": "exercise_validity_tests.rs",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L1"
+      "norm_label": ".active_list_len()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L235"
     },
     {
-      "id": "tests_exercise_validity_tests_collect_md_paths",
-      "label": "collect_md_paths()",
+      "id": "src_tui_app_app_current_exercise",
+      "label": ".current_exercise()",
       "_origin": "ast",
       "community": 425,
-      "community_name": "exercise_validity_tests.rs",
+      "community_name": ".current_exercise",
       "file_type": "code",
-      "norm_label": "collect_md_paths()",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L8"
+      "norm_label": ".current_exercise()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L181"
     },
     {
-      "id": "tests_exercise_validity_tests_rs_path",
-      "label": "Path",
+      "id": "src_tui_app_app_current_exercise_mut",
+      "label": ".current_exercise_mut()",
       "_origin": "ast",
       "community": 425,
-      "community_name": "exercise_validity_tests.rs",
+      "community_name": ".current_exercise",
       "file_type": "code",
-      "norm_label": "path",
+      "norm_label": ".current_exercise_mut()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L191"
+    },
+    {
+      "id": "src_tui_app_app_exit_search",
+      "label": ".exit_search()",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": ".current_exercise",
+      "file_type": "code",
+      "norm_label": ".exit_search()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L252"
+    },
+    {
+      "id": "src_tui_app_app_next_exercise",
+      "label": ".next_exercise()",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": ".current_exercise",
+      "file_type": "code",
+      "norm_label": ".next_exercise()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L203"
+    },
+    {
+      "id": "src_tui_app_app_prev_exercise",
+      "label": ".prev_exercise()",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": ".current_exercise",
+      "file_type": "code",
+      "norm_label": ".prev_exercise()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L217"
+    },
+    {
+      "id": "src_tui_app_app_reset",
+      "label": ".reset()",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": ".current_exercise",
+      "file_type": "code",
+      "norm_label": ".reset()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L421"
+    },
+    {
+      "id": "src_tui_app_app_reset_current_state",
+      "label": ".reset_current_state()",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": ".current_exercise",
+      "file_type": "code",
+      "norm_label": ".reset_current_state()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L433"
+    },
+    {
+      "id": "src_tui_app_app_submit_current_answer",
+      "label": ".submit_current_answer()",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": ".current_exercise",
+      "file_type": "code",
+      "norm_label": ".submit_current_answer()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L358"
+    },
+    {
+      "id": "src_tui_app_app_toggle_hint",
+      "label": ".toggle_hint()",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": ".current_exercise",
+      "file_type": "code",
+      "norm_label": ".toggle_hint()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L397"
+    },
+    {
+      "id": "src_tui_app_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": ".current_exercise",
+      "file_type": "code",
+      "norm_label": "option",
       "source_file": "",
       "source_location": ""
-    },
-    {
-      "id": "tests_exercise_validity_tests_rs_pathbuf",
-      "label": "PathBuf",
-      "_origin": "ast",
-      "community": 425,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "pathbuf",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_exercise_validity_tests_rs_vec",
-      "label": "Vec",
-      "_origin": "ast",
-      "community": 425,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "vec",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_exercise_validity_tests_test_all_curriculum_exercises_are_valid_and_solvable",
-      "label": "test_all_curriculum_exercises_are_valid_and_solvable()",
-      "_origin": "ast",
-      "community": 425,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "test_all_curriculum_exercises_are_valid_and_solvable()",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L27"
     },
     {
       "id": "docs_superpowers_plans_2026_08_28_informative_non_spoiling_exercise_todos",
@@ -31015,6 +31037,72 @@
       "source_location": "L5"
     },
     {
+      "id": "tests_exercise_validity_tests",
+      "label": "exercise_validity_tests.rs",
+      "_origin": "ast",
+      "community": 427,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "exercise_validity_tests.rs",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_exercise_validity_tests_collect_md_paths",
+      "label": "collect_md_paths()",
+      "_origin": "ast",
+      "community": 427,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "collect_md_paths()",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L8"
+    },
+    {
+      "id": "tests_exercise_validity_tests_rs_path",
+      "label": "Path",
+      "_origin": "ast",
+      "community": 427,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_exercise_validity_tests_rs_pathbuf",
+      "label": "PathBuf",
+      "_origin": "ast",
+      "community": 427,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "pathbuf",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_exercise_validity_tests_rs_vec",
+      "label": "Vec",
+      "_origin": "ast",
+      "community": 427,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "vec",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_exercise_validity_tests_test_all_curriculum_exercises_are_valid_and_solvable",
+      "label": "test_all_curriculum_exercises_are_valid_and_solvable()",
+      "_origin": "ast",
+      "community": 427,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_all_curriculum_exercises_are_valid_and_solvable()",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L27"
+    },
+    {
       "id": "docs_superpowers_plans_2026_08_28_rich_drill_prompts_and_cheat_sheets",
       "label": "2026-08-28-rich-drill-prompts-and-cheat-sheets.md",
       "_origin": "ast",
@@ -31075,59 +31163,76 @@
       "source_location": "L160"
     },
     {
-      "id": "src_core_curriculum_level_from_str",
-      "label": ".from_str()",
+      "id": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design",
+      "label": "2026-08-29-high-yield-arcade-drill-engines-design.md",
       "_origin": "ast",
       "community": 429,
-      "community_name": ".from_str",
-      "file_type": "code",
-      "norm_label": ".from_str()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L35"
+      "community_name": "Design Specification: 5 High-Yield Advanced Drill Engines",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-08-29-high-yield-arcade-drill-engines-design.md",
+      "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
+      "source_location": "L1"
     },
     {
-      "id": "src_core_curriculum_parselevelerror",
-      "label": "ParseLevelError",
+      "id": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_1_motivation_overview",
+      "label": "1. Motivation & Overview",
       "_origin": "ast",
       "community": 429,
-      "community_name": ".from_str",
-      "file_type": "code",
-      "norm_label": "parselevelerror",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L30"
+      "community_name": "Design Specification: 5 High-Yield Advanced Drill Engines",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. motivation & overview",
+      "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
+      "source_location": "L9"
     },
     {
-      "id": "src_core_curriculum_rs_err",
-      "label": "Err",
+      "id": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_2_1_engine_details",
+      "label": "2.1 Engine Details",
       "_origin": "ast",
       "community": 429,
-      "community_name": ".from_str",
-      "file_type": "code",
-      "norm_label": "err",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "Design Specification: 5 High-Yield Advanced Drill Engines",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2.1 engine details",
+      "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
+      "source_location": "L25"
     },
     {
-      "id": "src_core_curriculum_rs_self",
-      "label": "Self",
+      "id": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_2_engine_architecture_topic_definitions",
+      "label": "2. Engine Architecture & Topic Definitions",
       "_origin": "ast",
       "community": 429,
-      "community_name": ".from_str",
-      "file_type": "code",
-      "norm_label": "self",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "Design Specification: 5 High-Yield Advanced Drill Engines",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. engine architecture & topic definitions",
+      "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
+      "source_location": "L21"
     },
     {
-      "id": "src_core_curriculum_rs_string",
-      "label": "String",
+      "id": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_3_integration_points",
+      "label": "3. Integration Points",
       "_origin": "ast",
       "community": 429,
-      "community_name": ".from_str",
-      "file_type": "code",
-      "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "Design Specification: 5 High-Yield Advanced Drill Engines",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. integration points",
+      "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
+      "source_location": "L37"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_design_specification_5_high_yield_advanced_drill_engines",
+      "label": "Design Specification: 5 High-Yield Advanced Drill Engines",
+      "_origin": "ast",
+      "community": 429,
+      "community_name": "Design Specification: 5 High-Yield Advanced Drill Engines",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "design specification: 5 high-yield advanced drill engines",
+      "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
+      "source_location": "L1"
     },
     {
       "id": "exercises_04_subjunctive_relative_01_indefinite_antecedent",
@@ -31190,6 +31295,17 @@
       "source_location": "L1"
     },
     {
+      "id": "keycode",
+      "label": "KeyCode",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "keycode",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_cli_commands_arcade",
       "label": "commands/arcade.rs",
       "_origin": "ast",
@@ -31209,7 +31325,7 @@
       "file_type": "code",
       "norm_label": "arcadechoiceresult",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L29"
+      "source_location": "L31"
     },
     {
       "id": "src_cli_commands_arcade_arcadesessionstats",
@@ -31220,7 +31336,7 @@
       "file_type": "code",
       "norm_label": "arcadesessionstats",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L17"
+      "source_location": "L19"
     },
     {
       "id": "src_cli_commands_arcade_evaluate_arcade_choice",
@@ -31231,7 +31347,7 @@
       "file_type": "code",
       "norm_label": "evaluate_arcade_choice()",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L38"
+      "source_location": "L40"
     },
     {
       "id": "src_cli_commands_arcade_get_combo_rank",
@@ -31242,7 +31358,7 @@
       "file_type": "code",
       "norm_label": "get_combo_rank()",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L99"
+      "source_location": "L101"
     },
     {
       "id": "src_cli_commands_arcade_play_arcade_sound",
@@ -31253,7 +31369,7 @@
       "file_type": "code",
       "norm_label": "play_arcade_sound()",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L110"
+      "source_location": "L112"
     },
     {
       "id": "src_cli_commands_arcade_print_arcade_summary",
@@ -31264,7 +31380,7 @@
       "file_type": "code",
       "norm_label": "print_arcade_summary()",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L492"
+      "source_location": "L531"
     },
     {
       "id": "src_cli_commands_arcade_rawmodeguard",
@@ -31275,7 +31391,7 @@
       "file_type": "code",
       "norm_label": "rawmodeguard",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L243"
+      "source_location": "L268"
     },
     {
       "id": "src_cli_commands_arcade_rawmodeguard_drop",
@@ -31286,7 +31402,7 @@
       "file_type": "code",
       "norm_label": ".drop()",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L246"
+      "source_location": "L271"
     },
     {
       "id": "src_cli_commands_arcade_rs_drop",
@@ -31363,7 +31479,7 @@
       "file_type": "code",
       "norm_label": "run_arcade()",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L252"
+      "source_location": "L277"
     },
     {
       "id": "src_cli_commands_arcade_select_arcade_items",
@@ -31374,7 +31490,7 @@
       "file_type": "code",
       "norm_label": "select_arcade_items()",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L141"
+      "source_location": "L143"
     },
     {
       "id": "src_core_arcade",
@@ -31421,6 +31537,17 @@
       "source_location": "L249"
     },
     {
+      "id": "src_core_arcade_canonicalize_engine_slug",
+      "label": "canonicalize_engine_slug()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "canonicalize_engine_slug()",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2664"
+    },
+    {
       "id": "src_core_arcade_canonicalize_topic",
       "label": "canonicalize_topic()",
       "_origin": "ast",
@@ -31451,7 +31578,7 @@
       "file_type": "code",
       "norm_label": "generate_4choice_items()",
       "source_file": "src/core/arcade.rs",
-      "source_location": "L2124"
+      "source_location": "L2752"
     },
     {
       "id": "src_core_arcade_generate_showdown_items",
@@ -31463,6 +31590,28 @@
       "norm_label": "generate_showdown_items()",
       "source_file": "src/core/arcade.rs",
       "source_location": "L1461"
+    },
+    {
+      "id": "src_core_arcade_generate_specialized_engine_items",
+      "label": "generate_specialized_engine_items()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "generate_specialized_engine_items()",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2706"
+    },
+    {
+      "id": "src_core_arcade_get_engine_title",
+      "label": "get_engine_title()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "get_engine_title()",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2652"
     },
     {
       "id": "src_core_arcade_get_showdown_pool",
@@ -31485,6 +31634,17 @@
       "norm_label": "list_showdown_pairs()",
       "source_file": "src/core/arcade.rs",
       "source_location": "L215"
+    },
+    {
+      "id": "src_core_arcade_list_specialized_engines",
+      "label": "list_specialized_engines()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "list_specialized_engines()",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2641"
     },
     {
       "id": "src_core_arcade_rs_err",
@@ -31652,6 +31812,17 @@
       "source_location": "L260"
     },
     {
+      "id": "src_core_arcade_specializedenginesentence",
+      "label": "SpecializedEngineSentence",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "specializedenginesentence",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2124"
+    },
+    {
       "id": "src_core_arcade_synthesize_distractors",
       "label": "synthesize_distractors()",
       "_origin": "ast",
@@ -31661,6 +31832,72 @@
       "norm_label": "synthesize_distractors()",
       "source_file": "src/core/arcade.rs",
       "source_location": "L2081"
+    },
+    {
+      "id": "src_tui_app_app_cycle_arcade_showdown",
+      "label": ".cycle_arcade_showdown()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": ".cycle_arcade_showdown()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L825"
+    },
+    {
+      "id": "src_tui_app_app_enter_arcade_mode",
+      "label": ".enter_arcade_mode()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": ".enter_arcade_mode()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L749"
+    },
+    {
+      "id": "src_tui_app_app_enter_arcade_with_topic",
+      "label": ".enter_arcade_with_topic()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": ".enter_arcade_with_topic()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L775"
+    },
+    {
+      "id": "src_tui_app_app_exit_arcade_mode",
+      "label": ".exit_arcade_mode()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": ".exit_arcade_mode()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L856"
+    },
+    {
+      "id": "src_tui_app_app_handle_arcade_key_char",
+      "label": ".handle_arcade_key_char()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": ".handle_arcade_key_char()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L885"
+    },
+    {
+      "id": "src_tui_app_app_handle_arcade_key_code",
+      "label": ".handle_arcade_key_code()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": ".handle_arcade_key_code()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L861"
     },
     {
       "id": "tests_arcade_tests",
@@ -31674,6 +31911,17 @@
       "source_location": "L1"
     },
     {
+      "id": "tests_arcade_tests_test_4choice_delegation_to_specialized_engines",
+      "label": "test_4choice_delegation_to_specialized_engines()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "test_4choice_delegation_to_specialized_engines()",
+      "source_file": "tests/arcade_tests.rs",
+      "source_location": "L367"
+    },
+    {
       "id": "tests_arcade_tests_test_4choice_generator_across_all_24_concepts",
       "label": "test_4choice_generator_across_all_24_concepts()",
       "_origin": "ast",
@@ -31682,7 +31930,7 @@
       "file_type": "code",
       "norm_label": "test_4choice_generator_across_all_24_concepts()",
       "source_file": "tests/arcade_tests.rs",
-      "source_location": "L49"
+      "source_location": "L50"
     },
     {
       "id": "tests_arcade_tests_test_all_16_showdown_pairs_generate_valid_items",
@@ -31693,7 +31941,18 @@
       "file_type": "code",
       "norm_label": "test_all_16_showdown_pairs_generate_valid_items()",
       "source_file": "tests/arcade_tests.rs",
-      "source_location": "L8"
+      "source_location": "L9"
+    },
+    {
+      "id": "tests_arcade_tests_test_all_5_specialized_engines_generate_valid_items",
+      "label": "test_all_5_specialized_engines_generate_valid_items()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "test_all_5_specialized_engines_generate_valid_items()",
+      "source_file": "tests/arcade_tests.rs",
+      "source_location": "L302"
     },
     {
       "id": "tests_arcade_tests_test_arcade_item_methods",
@@ -31704,7 +31963,7 @@
       "file_type": "code",
       "norm_label": "test_arcade_item_methods()",
       "source_file": "tests/arcade_tests.rs",
-      "source_location": "L286"
+      "source_location": "L287"
     },
     {
       "id": "tests_arcade_tests_test_showdown_pair_parsing",
@@ -31715,7 +31974,7 @@
       "file_type": "code",
       "norm_label": "test_showdown_pair_parsing()",
       "source_file": "tests/arcade_tests.rs",
-      "source_location": "L89"
+      "source_location": "L90"
     },
     {
       "id": "tests_cli_arcade_tests",
@@ -31793,6 +32052,94 @@
       "norm_label": "test_select_arcade_items_modes()",
       "source_file": "tests/cli_arcade_tests.rs",
       "source_location": "L48"
+    },
+    {
+      "id": "tests_cli_arcade_tests_test_select_arcade_items_specialized_engines",
+      "label": "test_select_arcade_items_specialized_engines()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "test_select_arcade_items_specialized_engines()",
+      "source_file": "tests/cli_arcade_tests.rs",
+      "source_location": "L347"
+    },
+    {
+      "id": "tests_tui_arcade_tests",
+      "label": "tui_arcade_tests.rs",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "tui_arcade_tests.rs",
+      "source_file": "tests/tui_arcade_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_tui_arcade_tests_test_tui_all_16_showdown_pairs_lifecycle_and_rendering",
+      "label": "test_tui_all_16_showdown_pairs_lifecycle_and_rendering()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "test_tui_all_16_showdown_pairs_lifecycle_and_rendering()",
+      "source_file": "tests/tui_arcade_tests.rs",
+      "source_location": "L51"
+    },
+    {
+      "id": "tests_tui_arcade_tests_test_tui_all_5_specialized_engines_lifecycle_and_rendering",
+      "label": "test_tui_all_5_specialized_engines_lifecycle_and_rendering()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "test_tui_all_5_specialized_engines_lifecycle_and_rendering()",
+      "source_file": "tests/tui_arcade_tests.rs",
+      "source_location": "L161"
+    },
+    {
+      "id": "tests_tui_arcade_tests_test_tui_arcade_modal_lifecycle_and_single_key_navigation",
+      "label": "test_tui_arcade_modal_lifecycle_and_single_key_navigation()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "test_tui_arcade_modal_lifecycle_and_single_key_navigation()",
+      "source_file": "tests/tui_arcade_tests.rs",
+      "source_location": "L8"
+    },
+    {
+      "id": "tests_tui_arcade_tests_test_tui_arcade_showdown_cycling_navigation",
+      "label": "test_tui_arcade_showdown_cycling_navigation()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "test_tui_arcade_showdown_cycling_navigation()",
+      "source_file": "tests/tui_arcade_tests.rs",
+      "source_location": "L120"
+    },
+    {
+      "id": "tests_tui_arcade_tests_test_tui_arcade_showdown_mode_navigation",
+      "label": "test_tui_arcade_showdown_mode_navigation()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "test_tui_arcade_showdown_mode_navigation()",
+      "source_file": "tests/tui_arcade_tests.rs",
+      "source_location": "L37"
+    },
+    {
+      "id": "tests_tui_arcade_tests_test_tui_enter_arcade_with_topic_aliases_and_showdowns",
+      "label": "test_tui_enter_arcade_with_topic_aliases_and_showdowns()",
+      "_origin": "ast",
+      "community": 430,
+      "community_name": "select_arcade_items",
+      "file_type": "code",
+      "norm_label": "test_tui_enter_arcade_with_topic_aliases_and_showdowns()",
+      "source_file": "tests/tui_arcade_tests.rs",
+      "source_location": "L262"
     },
     {
       "id": "docs_superpowers_specs_2026_08_28_rapid_arcade_single_key_drills_design",
@@ -32219,7 +32566,7 @@
       "label": "export.rs",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "export.rs",
       "source_file": "src/cli/commands/export.rs",
@@ -32230,7 +32577,7 @@
       "label": "generate_anki_tsv()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "generate_anki_tsv()",
       "source_file": "src/cli/commands/export.rs",
@@ -32241,7 +32588,7 @@
       "label": "generate_json_export()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "generate_json_export()",
       "source_file": "src/cli/commands/export.rs",
@@ -32252,7 +32599,7 @@
       "label": "generate_markdown_notes()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "generate_markdown_notes()",
       "source_file": "src/cli/commands/export.rs",
@@ -32263,7 +32610,7 @@
       "label": "html_escape()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "html_escape()",
       "source_file": "src/cli/commands/export.rs",
@@ -32274,7 +32621,7 @@
       "label": "Option",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "option",
       "source_file": "",
@@ -32285,7 +32632,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -32296,7 +32643,7 @@
       "label": "String",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "",
@@ -32307,40 +32654,18 @@
       "label": "run_export()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "run_export()",
       "source_file": "src/cli/commands/export.rs",
       "source_location": "L188"
     },
     {
-      "id": "src_core_exercise_exercise",
-      "label": "Exercise",
-      "_origin": "ast",
-      "community": 434,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "exercise",
-      "source_file": "src/core/exercise.rs",
-      "source_location": "L55"
-    },
-    {
-      "id": "src_core_exercise_rs_pathbuf",
-      "label": "PathBuf",
-      "_origin": "ast",
-      "community": 434,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "pathbuf",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "tests_export_sync_tests",
       "label": "export_sync_tests.rs",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "export_sync_tests.rs",
       "source_file": "tests/export_sync_tests.rs",
@@ -32351,7 +32676,7 @@
       "label": "Vec",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "vec",
       "source_file": "",
@@ -32362,7 +32687,7 @@
       "label": "sample_exercises()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "sample_exercises()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32373,7 +32698,7 @@
       "label": "test_anki_tsv_export_generation()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "test_anki_tsv_export_generation()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32384,7 +32709,7 @@
       "label": "test_json_export_generation()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "test_json_export_generation()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32395,7 +32720,7 @@
       "label": "test_markdown_study_guide_export()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "test_markdown_study_guide_export()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32908,39 +33233,6 @@
       "source_location": ""
     },
     {
-      "id": "tests_json_output_tests",
-      "label": "json_output_tests.rs",
-      "_origin": "ast",
-      "community": 438,
-      "community_name": "get_exercises_json",
-      "file_type": "code",
-      "norm_label": "json_output_tests.rs",
-      "source_file": "tests/json_output_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_json_output_tests_test_list_exercises_json_serialization",
-      "label": "test_list_exercises_json_serialization()",
-      "_origin": "ast",
-      "community": 438,
-      "community_name": "get_exercises_json",
-      "file_type": "code",
-      "norm_label": "test_list_exercises_json_serialization()",
-      "source_file": "tests/json_output_tests.rs",
-      "source_location": "L5"
-    },
-    {
-      "id": "tests_json_output_tests_test_progress_json_serialization",
-      "label": "test_progress_json_serialization()",
-      "_origin": "ast",
-      "community": 438,
-      "community_name": "get_exercises_json",
-      "file_type": "code",
-      "norm_label": "test_progress_json_serialization()",
-      "source_file": "tests/json_output_tests.rs",
-      "source_location": "L25"
-    },
-    {
       "id": "tests_weakness_profiler_tests",
       "label": "weakness_profiler_tests.rs",
       "_origin": "ast",
@@ -33089,136 +33381,40 @@
       "source_location": "L1"
     },
     {
-      "id": "keyevent",
-      "label": "KeyEvent",
+      "id": "docs_superpowers_plans_2026_08_29_high_yield_arcade_drill_engines",
+      "label": "2026-08-29-high-yield-arcade-drill-engines.md",
       "_origin": "ast",
       "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": "keyevent",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "Implementation Plan: 5 High-Yield Advanced Drill Engines",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-08-29-high-yield-arcade-drill-engines.md",
+      "source_file": "docs/superpowers/plans/2026-08-29-high-yield-arcade-drill-engines.md",
+      "source_location": "L1"
     },
     {
-      "id": "src_tui_app_app_cycle_arcade_showdown",
-      "label": ".cycle_arcade_showdown()",
+      "id": "docs_superpowers_plans_2026_08_29_high_yield_arcade_drill_engines_implementation_plan_5_high_yield_advanced_drill_engines",
+      "label": "Implementation Plan: 5 High-Yield Advanced Drill Engines",
       "_origin": "ast",
       "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": ".cycle_arcade_showdown()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L769"
+      "community_name": "Implementation Plan: 5 High-Yield Advanced Drill Engines",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "implementation plan: 5 high-yield advanced drill engines",
+      "source_file": "docs/superpowers/plans/2026-08-29-high-yield-arcade-drill-engines.md",
+      "source_location": "L1"
     },
     {
-      "id": "src_tui_app_app_enter_arcade_mode",
-      "label": ".enter_arcade_mode()",
+      "id": "docs_superpowers_plans_2026_08_29_high_yield_arcade_drill_engines_tasks_overview",
+      "label": "Tasks Overview",
       "_origin": "ast",
       "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": ".enter_arcade_mode()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L744"
-    },
-    {
-      "id": "src_tui_app_app_enter_reference_browser",
-      "label": ".enter_reference_browser()",
-      "_origin": "ast",
-      "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": ".enter_reference_browser()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L496"
-    },
-    {
-      "id": "src_tui_app_app_exit_arcade_mode",
-      "label": ".exit_arcade_mode()",
-      "_origin": "ast",
-      "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": ".exit_arcade_mode()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L799"
-    },
-    {
-      "id": "src_tui_app_app_handle_arcade_key_char",
-      "label": ".handle_arcade_key_char()",
-      "_origin": "ast",
-      "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": ".handle_arcade_key_char()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L828"
-    },
-    {
-      "id": "src_tui_app_app_handle_arcade_key_code",
-      "label": ".handle_arcade_key_code()",
-      "_origin": "ast",
-      "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": ".handle_arcade_key_code()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L804"
-    },
-    {
-      "id": "src_tui_app_app_handle_key",
-      "label": ".handle_key()",
-      "_origin": "ast",
-      "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": ".handle_key()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L923"
-    },
-    {
-      "id": "src_tui_app_app_next_mastery_concept",
-      "label": ".next_mastery_concept()",
-      "_origin": "ast",
-      "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": ".next_mastery_concept()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L731"
-    },
-    {
-      "id": "src_tui_app_app_on_key",
-      "label": ".on_key()",
-      "_origin": "ast",
-      "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": ".on_key()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L927"
-    },
-    {
-      "id": "src_tui_app_app_prev_mastery_concept",
-      "label": ".prev_mastery_concept()",
-      "_origin": "ast",
-      "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": ".prev_mastery_concept()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L738"
-    },
-    {
-      "id": "src_tui_app_rs_into",
-      "label": "Into",
-      "_origin": "ast",
-      "community": 440,
-      "community_name": ".on_key",
-      "file_type": "code",
-      "norm_label": "into",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "Implementation Plan: 5 High-Yield Advanced Drill Engines",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "tasks overview",
+      "source_file": "docs/superpowers/plans/2026-08-29-high-yield-arcade-drill-engines.md",
+      "source_location": "L8"
     },
     {
       "id": "docs_superpowers_plans_2026_08_28_rapid_arcade_single_key_drills",
@@ -33545,6 +33741,39 @@
       "norm_label": "tasks overview",
       "source_file": "docs/superpowers/plans/2026-08-29-expanded-binary-showdowns.md",
       "source_location": "L8"
+    },
+    {
+      "id": "tests_json_output_tests",
+      "label": "json_output_tests.rs",
+      "_origin": "ast",
+      "community": 445,
+      "community_name": "json_output_tests.rs",
+      "file_type": "code",
+      "norm_label": "json_output_tests.rs",
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_json_output_tests_test_list_exercises_json_serialization",
+      "label": "test_list_exercises_json_serialization()",
+      "_origin": "ast",
+      "community": 445,
+      "community_name": "json_output_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_list_exercises_json_serialization()",
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "tests_json_output_tests_test_progress_json_serialization",
+      "label": "test_progress_json_serialization()",
+      "_origin": "ast",
+      "community": 445,
+      "community_name": "json_output_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_progress_json_serialization()",
+      "source_file": "tests/json_output_tests.rs",
+      "source_location": "L25"
     },
     {
       "id": "exercises_04_subjunctive_relative_03_negative_antecedent",
@@ -37466,7 +37695,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L524",
+      "source_location": "L563",
       "weight": 1.0
     },
     {
@@ -37478,7 +37707,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L264",
+      "source_location": "L289",
       "weight": 1.0
     },
     {
@@ -37490,7 +37719,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L304",
+      "source_location": "L343",
       "weight": 1.0
     },
     {
@@ -37502,7 +37731,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L428",
+      "source_location": "L467",
       "weight": 1.0
     },
     {
@@ -37514,7 +37743,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L446",
+      "source_location": "L485",
       "weight": 1.0
     },
     {
@@ -37526,7 +37755,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L486",
+      "source_location": "L525",
       "weight": 1.0
     },
     {
@@ -37903,6 +38132,30 @@
     },
     {
       "source": "src_core_arcade_generate_4choice_items",
+      "target": "src_core_arcade_canonicalize_engine_slug",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2758",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade_generate_4choice_items",
+      "target": "src_core_arcade_generate_specialized_engine_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2759",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade_generate_4choice_items",
       "target": "src_core_arcade_canonicalize_topic",
       "relation": "calls",
       "_origin": "ast",
@@ -37910,7 +38163,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/arcade.rs",
-      "source_location": "L2129",
+      "source_location": "L2762",
       "weight": 1.0
     },
     {
@@ -37922,7 +38175,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/arcade.rs",
-      "source_location": "L2146",
+      "source_location": "L2779",
       "weight": 1.0
     },
     {
@@ -37947,6 +38200,30 @@
       "context": "call",
       "source_file": "src/core/arcade.rs",
       "source_location": "L1499",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade_generate_specialized_engine_items",
+      "target": "src_core_arcade_canonicalize_engine_slug",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2711",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade_get_engine_title",
+      "target": "src_core_arcade_canonicalize_engine_slug",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2653",
       "weight": 1.0
     },
     {
@@ -38522,7 +38799,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L796",
+      "source_location": "L853",
       "weight": 1.0
     },
     {
@@ -38534,7 +38811,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L529",
+      "source_location": "L534",
       "weight": 1.0
     },
     {
@@ -38546,7 +38823,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L305",
+      "source_location": "L310",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_enter_arcade_with_topic",
+      "target": "src_tui_app_app_enter_arcade_mode",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L777",
       "weight": 1.0
     },
     {
@@ -38558,7 +38847,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L611",
+      "source_location": "L616",
       "weight": 1.0
     },
     {
@@ -38570,7 +38859,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L244",
+      "source_location": "L249",
       "weight": 1.0
     },
     {
@@ -38582,7 +38871,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L257",
+      "source_location": "L262",
       "weight": 1.0
     },
     {
@@ -38594,7 +38883,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L258",
+      "source_location": "L263",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_handle_arcade_key_char",
+      "target": "src_tui_app_app_enter_arcade_with_topic",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L895",
       "weight": 1.0
     },
     {
@@ -38606,7 +38907,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L844",
+      "source_location": "L904",
       "weight": 1.0
     },
     {
@@ -38618,7 +38919,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L847",
+      "source_location": "L908",
       "weight": 1.0
     },
     {
@@ -38630,7 +38931,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L850",
+      "source_location": "L911",
       "weight": 1.0
     },
     {
@@ -38642,7 +38943,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L807",
+      "source_location": "L864",
       "weight": 1.0
     },
     {
@@ -38654,7 +38955,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L810",
+      "source_location": "L867",
       "weight": 1.0
     },
     {
@@ -38666,7 +38967,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L816",
+      "source_location": "L873",
       "weight": 1.0
     },
     {
@@ -38678,7 +38979,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L924",
+      "source_location": "L985",
       "weight": 1.0
     },
     {
@@ -38690,7 +38991,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L520",
+      "source_location": "L525",
       "weight": 1.0
     },
     {
@@ -38702,7 +39003,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L296",
+      "source_location": "L301",
       "weight": 1.0
     },
     {
@@ -38714,24 +39015,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L97",
+      "source_location": "L101",
       "weight": 1.0
     },
     {
       "source": "src_tui_app_app_next_exercise",
       "target": "src_tui_app_app_active_list_len",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L199",
-      "weight": 1.0
-    },
-    {
-      "source": "src_tui_app_app_next_exercise",
-      "target": "src_tui_app_app_reset_current_state",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -38743,6 +39032,18 @@
     },
     {
       "source": "src_tui_app_app_next_exercise",
+      "target": "src_tui_app_app_reset_current_state",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L209",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_next_exercise",
       "target": "src_tui_app_app_current_exercise",
       "relation": "calls",
       "_origin": "ast",
@@ -38750,55 +39051,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L205",
-      "weight": 1.0
-    },
-    {
-      "source": "src_tui_app_app_on_key",
-      "target": "src_tui_app_app_enter_reference_browser",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L1002",
-      "weight": 1.0
-    },
-    {
-      "source": "src_tui_app_app_on_key",
-      "target": "src_tui_app_app_enter_arcade_mode",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L1031",
-      "weight": 1.0
-    },
-    {
-      "source": "src_tui_app_app_on_key",
-      "target": "src_tui_app_app_toggle_mastery_dashboard",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L1041",
-      "weight": 1.0
-    },
-    {
-      "source": "src_tui_app_app_on_key",
-      "target": "src_tui_app_app_handle_arcade_key_code",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L931",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -38810,7 +39063,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L993",
+      "source_location": "L1054",
       "weight": 1.0
     },
     {
@@ -38822,7 +39075,55 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L996",
+      "source_location": "L1057",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_on_key",
+      "target": "src_tui_app_app_enter_reference_browser",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L1063",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_on_key",
+      "target": "src_tui_app_app_enter_arcade_mode",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L1092",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_on_key",
+      "target": "src_tui_app_app_toggle_mastery_dashboard",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L1102",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_on_key",
+      "target": "src_tui_app_app_handle_arcade_key_code",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L992",
       "weight": 1.0
     },
     {
@@ -38834,7 +39135,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L213",
+      "source_location": "L218",
       "weight": 1.0
     },
     {
@@ -38846,7 +39147,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L222",
+      "source_location": "L227",
       "weight": 1.0
     },
     {
@@ -38858,7 +39159,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L223",
+      "source_location": "L228",
       "weight": 1.0
     },
     {
@@ -38870,24 +39171,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L417",
+      "source_location": "L422",
       "weight": 1.0
     },
     {
       "source": "src_tui_app_app_reset",
       "target": "src_tui_app_app_current_exercise",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L420",
-      "weight": 1.0
-    },
-    {
-      "source": "src_tui_app_app_reset",
-      "target": "src_tui_app_app_reset_current_state",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -38898,6 +39187,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_tui_app_app_reset",
+      "target": "src_tui_app_app_reset_current_state",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L430",
+      "weight": 1.0
+    },
+    {
       "source": "src_tui_app_app_submit_current_answer",
       "target": "src_tui_app_app_current_exercise",
       "relation": "calls",
@@ -38906,7 +39207,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L354",
+      "source_location": "L359",
       "weight": 1.0
     },
     {
@@ -38918,7 +39219,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L366",
+      "source_location": "L371",
       "weight": 1.0
     },
     {
@@ -38930,7 +39231,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L396",
+      "source_location": "L401",
       "weight": 1.0
     },
     {
@@ -38942,7 +39243,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L725",
+      "source_location": "L730",
       "weight": 1.0
     },
     {
@@ -38954,7 +39255,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L727",
+      "source_location": "L732",
       "weight": 1.0
     },
     {
@@ -41114,7 +41415,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/tui/app.rs",
-      "source_location": "L32",
+      "source_location": "L35",
       "weight": 1.0
     },
     {
@@ -41126,7 +41427,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/tui/app.rs",
-      "source_location": "L39",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -41138,7 +41439,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/tui/app.rs",
-      "source_location": "L82",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -41150,7 +41451,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/tui/app.rs",
-      "source_location": "L84",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -41162,7 +41463,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/tui/app.rs",
-      "source_location": "L85",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -41174,7 +41475,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/tui/app.rs",
-      "source_location": "L86",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -41198,7 +41499,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L492",
+      "source_location": "L531",
       "weight": 1.0
     },
     {
@@ -41210,7 +41511,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L252",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -41222,7 +41523,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L141",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -41658,6 +41959,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_core_arcade_canonicalize_engine_slug",
+      "target": "src_core_arcade_specializedenginesentence",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2664",
+      "weight": 1.0
+    },
+    {
       "source": "src_core_arcade_collect_distractor_candidates",
       "target": "src_core_arcade_rs_string",
       "relation": "references",
@@ -41678,7 +41991,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/arcade.rs",
-      "source_location": "L2124",
+      "source_location": "L2752",
       "weight": 1.0
     },
     {
@@ -41691,6 +42004,18 @@
       "context": "generic_arg",
       "source_file": "src/core/arcade.rs",
       "source_location": "L1461",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade_generate_specialized_engine_items",
+      "target": "src_core_arcade_arcadeitem",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "generic_arg",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2706",
       "weight": 1.0
     },
     {
@@ -42794,7 +43119,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L28",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -42806,7 +43131,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L36",
+      "source_location": "L39",
       "weight": 1.0
     },
     {
@@ -42818,7 +43143,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L49",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -42830,7 +43155,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L61",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -42842,7 +43167,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L66",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
@@ -42854,7 +43179,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L81",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -42866,7 +43191,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L82",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -42878,7 +43203,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L85",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -42890,7 +43215,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L176",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -42902,7 +43227,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L186",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -42914,7 +43239,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L744",
+      "source_location": "L749",
       "weight": 1.0
     },
     {
@@ -42926,7 +43251,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L923",
+      "source_location": "L984",
       "weight": 1.0
     },
     {
@@ -42938,7 +43263,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L90",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -42950,7 +43275,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L102",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -42962,7 +43287,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/tui/app.rs",
-      "source_location": "L927",
+      "source_location": "L988",
       "weight": 1.0
     },
     {
@@ -43490,7 +43815,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0
     },
     {
@@ -44155,7 +44480,7 @@
     },
     {
       "source": "src_tui_app",
-      "target": "src_core_reference",
+      "target": "src_core_placement",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -44167,19 +44492,7 @@
     },
     {
       "source": "src_tui_app",
-      "target": "src_core_state",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L11",
-      "weight": 1.0
-    },
-    {
-      "source": "src_tui_app",
-      "target": "src_engine_validator",
+      "target": "src_core_reference",
       "relation": "imports_from",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -44191,6 +44504,30 @@
     },
     {
       "source": "src_tui_app",
+      "target": "src_core_state",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app",
+      "target": "src_engine_validator",
+      "relation": "imports_from",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app",
       "target": "src_core_conjugator",
       "relation": "imports_from",
       "_origin": "ast",
@@ -44198,7 +44535,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/tui/app.rs",
-      "source_location": "L5",
+      "source_location": "L8",
       "weight": 1.0
     },
     {
@@ -44210,19 +44547,7 @@
       "confidence_score": 1.0,
       "context": "import",
       "source_file": "src/tui/app.rs",
-      "source_location": "L6",
-      "weight": 1.0
-    },
-    {
-      "source": "src_tui_app",
-      "target": "src_core_placement",
-      "relation": "imports_from",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "import",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L7",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -44846,7 +45171,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L38",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -44858,7 +45183,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L38",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -44870,7 +45195,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L492",
+      "source_location": "L531",
       "weight": 1.0
     },
     {
@@ -44882,7 +45207,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L492",
+      "source_location": "L531",
       "weight": 1.0
     },
     {
@@ -44894,7 +45219,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L492",
+      "source_location": "L531",
       "weight": 1.0
     },
     {
@@ -44906,7 +45231,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L252",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -44918,7 +45243,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L141",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -44930,7 +45255,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L141",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -46214,7 +46539,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L744",
+      "source_location": "L749",
       "weight": 1.0
     },
     {
@@ -46226,7 +46551,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L804",
+      "source_location": "L861",
       "weight": 1.0
     },
     {
@@ -46238,7 +46563,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L923",
+      "source_location": "L984",
       "weight": 1.0
     },
     {
@@ -46250,7 +46575,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L90",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -46262,7 +46587,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L102",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -46274,7 +46599,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L102",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -46286,7 +46611,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L927",
+      "source_location": "L988",
       "weight": 1.0
     },
     {
@@ -46994,7 +47319,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L38",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -47006,7 +47331,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L252",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -47018,7 +47343,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L141",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -47634,6 +47959,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_core_arcade_canonicalize_engine_slug",
+      "target": "src_core_arcade_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2664",
+      "weight": 1.0
+    },
+    {
       "source": "src_core_arcade_canonicalize_topic",
       "target": "src_core_arcade_rs_string",
       "relation": "references",
@@ -47666,7 +48003,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/arcade.rs",
-      "source_location": "L2124",
+      "source_location": "L2752",
       "weight": 1.0
     },
     {
@@ -47679,6 +48016,30 @@
       "context": "return_type",
       "source_file": "src/core/arcade.rs",
       "source_location": "L1461",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade_generate_specialized_engine_items",
+      "target": "src_core_arcade_rs_vec",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2706",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade_get_engine_title",
+      "target": "src_core_arcade_rs_option",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2652",
       "weight": 1.0
     },
     {
@@ -48638,7 +48999,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L176",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -48650,7 +49011,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L186",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -48662,7 +49023,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L90",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -48674,7 +49035,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/tui/app.rs",
-      "source_location": "L102",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -52421,6 +52782,28 @@
       "weight": 1.0
     },
     {
+      "source": "docs_superpowers_plans_2026_08_29_high_yield_arcade_drill_engines",
+      "target": "docs_superpowers_plans_2026_08_29_high_yield_arcade_drill_engines_implementation_plan_5_high_yield_advanced_drill_engines",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-29-high-yield-arcade-drill-engines.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_29_high_yield_arcade_drill_engines_implementation_plan_5_high_yield_advanced_drill_engines",
+      "target": "docs_superpowers_plans_2026_08_29_high_yield_arcade_drill_engines_tasks_overview",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-29-high-yield-arcade-drill-engines.md",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
       "source": "docs_superpowers_specs_2026_08_26_spanglings_design",
       "target": "docs_superpowers_specs_2026_08_26_spanglings_design_spanglings_design_specification",
       "relation": "contains",
@@ -53825,6 +54208,61 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "docs/superpowers/specs/2026-08-29-expanded-binary-showdowns-design.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design",
+      "target": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_design_specification_5_high_yield_advanced_drill_engines",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_2_engine_architecture_topic_definitions",
+      "target": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_2_1_engine_details",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_design_specification_5_high_yield_advanced_drill_engines",
+      "target": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_2_engine_architecture_topic_definitions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_design_specification_5_high_yield_advanced_drill_engines",
+      "target": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_3_integration_points",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_design_specification_5_high_yield_advanced_drill_engines",
+      "target": "docs_superpowers_specs_2026_08_29_high_yield_arcade_drill_engines_design_1_motivation_overview",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
       "source_location": "L9",
       "weight": 1.0
     },
@@ -70055,13 +70493,24 @@
     },
     {
       "source": "src_cli_commands_arcade",
+      "target": "src_cli_commands_arcade_get_combo_rank",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/cli/commands/arcade.rs",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_arcade",
       "target": "src_cli_commands_arcade_play_arcade_sound",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L110",
+      "source_location": "L112",
       "weight": 1.0
     },
     {
@@ -70072,7 +70521,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L141",
+      "source_location": "L143",
       "weight": 1.0
     },
     {
@@ -70083,7 +70532,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L17",
+      "source_location": "L19",
       "weight": 1.0
     },
     {
@@ -70094,7 +70543,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L243",
+      "source_location": "L268",
       "weight": 1.0
     },
     {
@@ -70105,7 +70554,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L252",
+      "source_location": "L277",
       "weight": 1.0
     },
     {
@@ -70116,7 +70565,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L29",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -70127,7 +70576,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L38",
+      "source_location": "L40",
       "weight": 1.0
     },
     {
@@ -70138,18 +70587,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L492",
-      "weight": 1.0
-    },
-    {
-      "source": "src_cli_commands_arcade",
-      "target": "src_cli_commands_arcade_get_combo_rank",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L99",
+      "source_location": "L531",
       "weight": 1.0
     },
     {
@@ -71012,7 +71450,7 @@
     },
     {
       "source": "src_core_arcade",
-      "target": "src_core_arcade_generate_4choice_items",
+      "target": "src_core_arcade_specializedenginesentence",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -71052,6 +71490,61 @@
       "confidence_score": 1.0,
       "source_file": "src/core/arcade.rs",
       "source_location": "L260",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade",
+      "target": "src_core_arcade_list_specialized_engines",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2641",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade",
+      "target": "src_core_arcade_get_engine_title",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2652",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade",
+      "target": "src_core_arcade_canonicalize_engine_slug",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2664",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade",
+      "target": "src_core_arcade_generate_specialized_engine_items",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2706",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_arcade",
+      "target": "src_core_arcade_generate_4choice_items",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/arcade.rs",
+      "source_location": "L2752",
       "weight": 1.0
     },
     {
@@ -71986,7 +72479,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L18",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -71997,7 +72490,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L27",
+      "source_location": "L30",
       "weight": 1.0
     },
     {
@@ -72305,7 +72798,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/arcade_tests.rs",
-      "source_location": "L286",
+      "source_location": "L287",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_arcade_tests",
+      "target": "tests_arcade_tests_test_all_5_specialized_engines_generate_valid_items",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/arcade_tests.rs",
+      "source_location": "L302",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_arcade_tests",
+      "target": "tests_arcade_tests_test_4choice_delegation_to_specialized_engines",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/arcade_tests.rs",
+      "source_location": "L367",
       "weight": 1.0
     },
     {
@@ -72316,7 +72831,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/arcade_tests.rs",
-      "source_location": "L49",
+      "source_location": "L50",
       "weight": 1.0
     },
     {
@@ -72327,7 +72842,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/arcade_tests.rs",
-      "source_location": "L8",
+      "source_location": "L9",
       "weight": 1.0
     },
     {
@@ -72338,7 +72853,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/arcade_tests.rs",
-      "source_location": "L89",
+      "source_location": "L90",
       "weight": 1.0
     },
     {
@@ -72460,6 +72975,17 @@
       "confidence_score": 1.0,
       "source_file": "tests/cli_arcade_tests.rs",
       "source_location": "L187",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_cli_arcade_tests",
+      "target": "tests_cli_arcade_tests_test_select_arcade_items_specialized_engines",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/cli_arcade_tests.rs",
+      "source_location": "L347",
       "weight": 1.0
     },
     {
@@ -74103,6 +74629,28 @@
     },
     {
       "source": "tests_tui_arcade_tests",
+      "target": "tests_tui_arcade_tests_test_tui_all_5_specialized_engines_lifecycle_and_rendering",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/tui_arcade_tests.rs",
+      "source_location": "L161",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_tui_arcade_tests",
+      "target": "tests_tui_arcade_tests_test_tui_enter_arcade_with_topic_aliases_and_showdowns",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/tui_arcade_tests.rs",
+      "source_location": "L262",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_tui_arcade_tests",
       "target": "tests_tui_arcade_tests_test_tui_arcade_showdown_mode_navigation",
       "relation": "contains",
       "_origin": "ast",
@@ -74593,7 +75141,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L245",
+      "source_location": "L270",
       "weight": 1.0
     },
     {
@@ -74912,7 +75460,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L246",
+      "source_location": "L271",
       "weight": 1.0
     },
     {
@@ -75561,7 +76109,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L102",
+      "source_location": "L106",
       "weight": 1.0
     },
     {
@@ -75572,7 +76120,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L176",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -75583,7 +76131,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L186",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -75594,7 +76142,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L198",
+      "source_location": "L203",
       "weight": 1.0
     },
     {
@@ -75605,7 +76153,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L212",
+      "source_location": "L217",
       "weight": 1.0
     },
     {
@@ -75616,7 +76164,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L230",
+      "source_location": "L235",
       "weight": 1.0
     },
     {
@@ -75627,7 +76175,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L238",
+      "source_location": "L243",
       "weight": 1.0
     },
     {
@@ -75638,7 +76186,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L247",
+      "source_location": "L252",
       "weight": 1.0
     },
     {
@@ -75649,7 +76197,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L265",
+      "source_location": "L270",
       "weight": 1.0
     },
     {
@@ -75660,7 +76208,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L287",
+      "source_location": "L292",
       "weight": 1.0
     },
     {
@@ -75671,7 +76219,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L299",
+      "source_location": "L304",
       "weight": 1.0
     },
     {
@@ -75682,7 +76230,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L310",
+      "source_location": "L315",
       "weight": 1.0
     },
     {
@@ -75693,7 +76241,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L321",
+      "source_location": "L326",
       "weight": 1.0
     },
     {
@@ -75704,7 +76252,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L331",
+      "source_location": "L336",
       "weight": 1.0
     },
     {
@@ -75715,7 +76263,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L337",
+      "source_location": "L342",
       "weight": 1.0
     },
     {
@@ -75726,7 +76274,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L343",
+      "source_location": "L348",
       "weight": 1.0
     },
     {
@@ -75737,7 +76285,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L349",
+      "source_location": "L354",
       "weight": 1.0
     },
     {
@@ -75748,7 +76296,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L353",
+      "source_location": "L358",
       "weight": 1.0
     },
     {
@@ -75759,7 +76307,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L392",
+      "source_location": "L397",
       "weight": 1.0
     },
     {
@@ -75770,7 +76318,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L409",
+      "source_location": "L414",
       "weight": 1.0
     },
     {
@@ -75781,7 +76329,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L416",
+      "source_location": "L421",
       "weight": 1.0
     },
     {
@@ -75792,7 +76340,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L428",
+      "source_location": "L433",
       "weight": 1.0
     },
     {
@@ -75803,7 +76351,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L439",
+      "source_location": "L444",
       "weight": 1.0
     },
     {
@@ -75814,7 +76362,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L449",
+      "source_location": "L454",
       "weight": 1.0
     },
     {
@@ -75825,7 +76373,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L453",
+      "source_location": "L458",
       "weight": 1.0
     },
     {
@@ -75836,7 +76384,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L465",
+      "source_location": "L470",
       "weight": 1.0
     },
     {
@@ -75847,7 +76395,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L480",
+      "source_location": "L485",
       "weight": 1.0
     },
     {
@@ -75858,7 +76406,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L484",
+      "source_location": "L489",
       "weight": 1.0
     },
     {
@@ -75869,7 +76417,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L490",
+      "source_location": "L495",
       "weight": 1.0
     },
     {
@@ -75880,7 +76428,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L496",
+      "source_location": "L501",
       "weight": 1.0
     },
     {
@@ -75891,7 +76439,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L507",
+      "source_location": "L512",
       "weight": 1.0
     },
     {
@@ -75902,7 +76450,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L511",
+      "source_location": "L516",
       "weight": 1.0
     },
     {
@@ -75913,7 +76461,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L523",
+      "source_location": "L528",
       "weight": 1.0
     },
     {
@@ -75924,7 +76472,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L534",
+      "source_location": "L539",
       "weight": 1.0
     },
     {
@@ -75935,7 +76483,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L562",
+      "source_location": "L567",
       "weight": 1.0
     },
     {
@@ -75946,7 +76494,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L570",
+      "source_location": "L575",
       "weight": 1.0
     },
     {
@@ -75957,7 +76505,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L582",
+      "source_location": "L587",
       "weight": 1.0
     },
     {
@@ -75968,7 +76516,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L588",
+      "source_location": "L593",
       "weight": 1.0
     },
     {
@@ -75979,7 +76527,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L594",
+      "source_location": "L599",
       "weight": 1.0
     },
     {
@@ -75990,7 +76538,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L600",
+      "source_location": "L605",
       "weight": 1.0
     },
     {
@@ -76001,7 +76549,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L606",
+      "source_location": "L611",
       "weight": 1.0
     },
     {
@@ -76012,7 +76560,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L620",
+      "source_location": "L625",
       "weight": 1.0
     },
     {
@@ -76023,7 +76571,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L624",
+      "source_location": "L629",
       "weight": 1.0
     },
     {
@@ -76034,7 +76582,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L660",
+      "source_location": "L665",
       "weight": 1.0
     },
     {
@@ -76045,7 +76593,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L682",
+      "source_location": "L687",
       "weight": 1.0
     },
     {
@@ -76056,7 +76604,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L696",
+      "source_location": "L701",
       "weight": 1.0
     },
     {
@@ -76067,7 +76615,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L709",
+      "source_location": "L714",
       "weight": 1.0
     },
     {
@@ -76078,7 +76626,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L719",
+      "source_location": "L724",
       "weight": 1.0
     },
     {
@@ -76089,7 +76637,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L723",
+      "source_location": "L728",
       "weight": 1.0
     },
     {
@@ -76100,7 +76648,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L731",
+      "source_location": "L736",
       "weight": 1.0
     },
     {
@@ -76111,7 +76659,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L738",
+      "source_location": "L743",
       "weight": 1.0
     },
     {
@@ -76122,7 +76670,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L744",
+      "source_location": "L749",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app",
+      "target": "src_tui_app_app_enter_arcade_with_topic",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/tui/app.rs",
+      "source_location": "L775",
       "weight": 1.0
     },
     {
@@ -76133,7 +76692,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L769",
+      "source_location": "L825",
       "weight": 1.0
     },
     {
@@ -76144,7 +76703,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L799",
+      "source_location": "L856",
       "weight": 1.0
     },
     {
@@ -76155,7 +76714,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L804",
+      "source_location": "L861",
       "weight": 1.0
     },
     {
@@ -76166,7 +76725,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L828",
+      "source_location": "L885",
       "weight": 1.0
     },
     {
@@ -76177,7 +76736,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L90",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
@@ -76188,7 +76747,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L923",
+      "source_location": "L984",
       "weight": 1.0
     },
     {
@@ -76199,7 +76758,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/tui/app.rs",
-      "source_location": "L927",
+      "source_location": "L988",
       "weight": 1.0
     },
     {
@@ -76282,6 +76841,18 @@
       "weight": 1.0
     },
     {
+      "source": "src_cli_commands_arcade_run_arcade",
+      "target": "src_core_arcade_get_engine_title",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/cli/commands/arcade.rs",
+      "source_location": "L304",
+      "weight": 1.0
+    },
+    {
       "source": "src_cli_commands_arcade_select_arcade_items",
       "target": "src_core_arcade_generate_showdown_items",
       "relation": "calls",
@@ -76290,7 +76861,31 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L155",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_arcade_select_arcade_items",
+      "target": "src_core_arcade_canonicalize_engine_slug",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/cli/commands/arcade.rs",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_arcade_select_arcade_items",
+      "target": "src_core_arcade_generate_specialized_engine_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/cli/commands/arcade.rs",
+      "source_location": "L160",
       "weight": 1.0
     },
     {
@@ -76302,7 +76897,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L161",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
@@ -76314,7 +76909,19 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/cli/commands/arcade.rs",
-      "source_location": "L205",
+      "source_location": "L218",
+      "weight": 1.0
+    },
+    {
+      "source": "src_cli_commands_arcade_select_arcade_items",
+      "target": "src_core_arcade_list_specialized_engines",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/cli/commands/arcade.rs",
+      "source_location": "L219",
       "weight": 1.0
     },
     {
@@ -76830,7 +77437,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L770",
+      "source_location": "L827",
       "weight": 1.0
     },
     {
@@ -76842,7 +77449,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L474",
+      "source_location": "L479",
       "weight": 1.0
     },
     {
@@ -76854,7 +77461,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L753",
+      "source_location": "L759",
       "weight": 1.0
     },
     {
@@ -76866,7 +77473,55 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L755",
+      "source_location": "L761",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_enter_arcade_with_topic",
+      "target": "src_core_arcade_canonicalize_engine_slug",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L781",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_enter_arcade_with_topic",
+      "target": "src_core_arcade_generate_specialized_engine_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L789",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_enter_arcade_with_topic",
+      "target": "src_core_arcade_generate_showdown_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L792",
+      "weight": 1.0
+    },
+    {
+      "source": "src_tui_app_app_enter_arcade_with_topic",
+      "target": "src_core_arcade_generate_4choice_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L811",
       "weight": 1.0
     },
     {
@@ -76878,7 +77533,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L610",
+      "source_location": "L615",
       "weight": 1.0
     },
     {
@@ -76890,7 +77545,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L880",
+      "source_location": "L941",
       "weight": 1.0
     },
     {
@@ -76902,7 +77557,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L899",
+      "source_location": "L960",
       "weight": 1.0
     },
     {
@@ -76914,7 +77569,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L462",
+      "source_location": "L467",
       "weight": 1.0
     },
     {
@@ -76926,7 +77581,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L114",
+      "source_location": "L118",
       "weight": 1.0
     },
     {
@@ -76938,7 +77593,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L481",
+      "source_location": "L486",
       "weight": 1.0
     },
     {
@@ -76950,7 +77605,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L363",
+      "source_location": "L368",
       "weight": 1.0
     },
     {
@@ -76962,7 +77617,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L641",
+      "source_location": "L646",
       "weight": 1.0
     },
     {
@@ -76974,7 +77629,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/tui/app.rs",
-      "source_location": "L543",
+      "source_location": "L548",
       "weight": 1.0
     },
     {
@@ -77110,6 +77765,18 @@
       "weight": 1.0
     },
     {
+      "source": "tests_arcade_tests_test_4choice_delegation_to_specialized_engines",
+      "target": "src_core_arcade_generate_4choice_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/arcade_tests.rs",
+      "source_location": "L382",
+      "weight": 1.0
+    },
+    {
       "source": "tests_arcade_tests_test_4choice_generator_across_all_24_concepts",
       "target": "src_core_reference_list_grammar_concepts",
       "relation": "calls",
@@ -77118,7 +77785,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/arcade_tests.rs",
-      "source_location": "L50",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -77130,19 +77797,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/arcade_tests.rs",
-      "source_location": "L52",
-      "weight": 1.0
-    },
-    {
-      "source": "tests_arcade_tests_test_all_16_showdown_pairs_generate_valid_items",
-      "target": "src_core_arcade_generate_showdown_items",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "context": "call",
-      "source_file": "tests/arcade_tests.rs",
-      "source_location": "L21",
+      "source_location": "L53",
       "weight": 1.0
     },
     {
@@ -77154,7 +77809,31 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "tests/arcade_tests.rs",
-      "source_location": "L9",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_arcade_tests_test_all_16_showdown_pairs_generate_valid_items",
+      "target": "src_core_arcade_generate_showdown_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/arcade_tests.rs",
+      "source_location": "L22",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_arcade_tests_test_all_5_specialized_engines_generate_valid_items",
+      "target": "src_core_arcade_generate_specialized_engine_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/arcade_tests.rs",
+      "source_location": "L312",
       "weight": 1.0
     },
     {
@@ -77287,6 +77966,30 @@
       "context": "call",
       "source_file": "tests/cli_arcade_tests.rs",
       "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_cli_arcade_tests_test_select_arcade_items_specialized_engines",
+      "target": "src_core_arcade_list_specialized_engines",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/cli_arcade_tests.rs",
+      "source_location": "L355",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_cli_arcade_tests_test_select_arcade_items_specialized_engines",
+      "target": "src_cli_commands_arcade_select_arcade_items",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/cli_arcade_tests.rs",
+      "source_location": "L425",
       "weight": 1.0
     },
     {
@@ -78574,6 +79277,18 @@
       "weight": 1.0
     },
     {
+      "source": "tests_tui_arcade_tests_test_tui_all_5_specialized_engines_lifecycle_and_rendering",
+      "target": "src_core_arcade_get_engine_title",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "tests/tui_arcade_tests.rs",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
       "source": "tests_tui_arcade_tests_test_tui_arcade_showdown_cycling_navigation",
       "target": "src_core_arcade_list_showdown_pairs",
       "relation": "calls",
@@ -78779,5 +79494,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4a43c120358a41c868c0280dbf8cd18edce3aa5b"
+  "built_at_commit": "cb53348d1ab453825da22f51688179c15573c769"
 }
