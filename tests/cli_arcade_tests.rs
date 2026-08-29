@@ -67,6 +67,55 @@ fn test_arcade_choice_records_mistakes() {
 }
 
 #[test]
+fn test_arcade_session_stats_json_serialization_and_deserialization_compatibility() {
+    let stats = ArcadeSessionStats {
+        total_answered: 2,
+        correct_count: 1,
+        incorrect_count: 1,
+        current_streak: 0,
+        best_streak: 1,
+        score: 150,
+        total_time_ms: 1200,
+        mistakes: vec![spanglings::cli::commands::arcade::ArcadeMistake {
+            topic: "se-matrix".to_string(),
+            trigger_sentence: "Se ____ olvidaron las llaves.".to_string(),
+            user_answer: "me".to_string(),
+            correct_answer: "le".to_string(),
+            prompt_cue: "involuntary dative -> le".to_string(),
+            explanation: "Involuntary dative requires 'le' for 3rd person.".to_string(),
+        }],
+    };
+
+    // Serialize to JSON and verify contents
+    let json_str = serde_json::to_string(&stats).unwrap();
+    assert!(json_str.contains("\"mistakes\""));
+    assert!(json_str.contains("se-matrix"));
+    assert!(json_str.contains("Involuntary dative requires 'le' for 3rd person."));
+
+    // Deserialize back from JSON
+    let deserialized: ArcadeSessionStats = serde_json::from_str(&json_str).unwrap();
+    assert_eq!(deserialized, stats);
+    assert_eq!(deserialized.mistakes.len(), 1);
+    assert_eq!(deserialized.mistakes[0].correct_answer, "le");
+
+    // Test backward compatibility: JSON without "mistakes" field deserializes with empty mistakes vec
+    let old_json = r#"{
+        "total_answered": 10,
+        "correct_count": 8,
+        "incorrect_count": 2,
+        "current_streak": 3,
+        "best_streak": 5,
+        "score": 1200,
+        "total_time_ms": 5000
+    }"#;
+    let old_stats: ArcadeSessionStats = serde_json::from_str(old_json).unwrap();
+    assert_eq!(old_stats.total_answered, 10);
+    assert_eq!(old_stats.correct_count, 8);
+    assert_eq!(old_stats.incorrect_count, 2);
+    assert!(old_stats.mistakes.is_empty());
+}
+
+#[test]
 fn test_arcade_combo_rank_titles() {
     assert_eq!(get_combo_rank(1), "✨ Good");
     assert!(get_combo_rank(3).contains("Quick"));
@@ -108,7 +157,9 @@ fn test_select_arcade_items_modes() {
 
 #[test]
 fn test_arcade_summary_and_sound_helpers() {
-    use spanglings::cli::commands::arcade::{play_arcade_sound, print_arcade_summary};
+    use spanglings::cli::commands::arcade::{
+        play_arcade_sound, print_arcade_summary, ArcadeMistake,
+    };
     use spanglings::core::state::AppState;
     use std::collections::HashMap;
 
@@ -116,7 +167,7 @@ fn test_arcade_summary_and_sound_helpers() {
     play_arcade_sound(true, false);
     play_arcade_sound(false, false);
 
-    let stats = ArcadeSessionStats {
+    let stats_with_mistakes = ArcadeSessionStats {
         total_answered: 5,
         correct_count: 4,
         incorrect_count: 1,
@@ -124,7 +175,14 @@ fn test_arcade_summary_and_sound_helpers() {
         best_streak: 4,
         score: 1250,
         total_time_ms: 2500,
-        mistakes: Vec::new(),
+        mistakes: vec![ArcadeMistake {
+            topic: "por-para".to_string(),
+            trigger_sentence: "Trabajo ____ ganar dinero.".to_string(),
+            user_answer: "por".to_string(),
+            correct_answer: "para".to_string(),
+            prompt_cue: "purpose/goal -> para".to_string(),
+            explanation: "Para indicates purpose or goal.".to_string(),
+        }],
     };
 
     let mut initial = HashMap::new();
@@ -132,8 +190,25 @@ fn test_arcade_summary_and_sound_helpers() {
     let mut state = AppState::default();
     state.update_concept_mastery("por-para", 5, chrono::Utc::now());
 
-    // Verify summary formatter runs cleanly
-    print_arcade_summary(&stats, &initial, &state);
+    // Verify summary formatter runs cleanly with mistakes review
+    print_arcade_summary(&stats_with_mistakes, &initial, &state);
+
+    // Verify summary formatter runs cleanly on a perfect run
+    let perfect_stats = ArcadeSessionStats {
+        total_answered: 5,
+        correct_count: 5,
+        incorrect_count: 0,
+        current_streak: 5,
+        best_streak: 5,
+        score: 2500,
+        total_time_ms: 2000,
+        mistakes: Vec::new(),
+    };
+    print_arcade_summary(&perfect_stats, &initial, &state);
+
+    // Verify summary formatter runs cleanly on empty session
+    let empty_stats = ArcadeSessionStats::default();
+    print_arcade_summary(&empty_stats, &initial, &state);
 }
 
 #[test]

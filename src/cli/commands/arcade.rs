@@ -643,6 +643,54 @@ pub fn print_arcade_summary(
         }
     }
 
+    // Missed questions review
+    if !stats.mistakes.is_empty() {
+        println!(
+            "\n{}",
+            format!("❌ Review Missed Questions ({}):", stats.mistakes.len())
+                .bold()
+                .red()
+        );
+        println!(
+            "{}",
+            "─────────────────────────────────────────────────────────────".dimmed()
+        );
+        for (i, m) in stats.mistakes.iter().enumerate() {
+            println!(
+                "  {}. [{}] {}",
+                (i + 1).to_string().bold(),
+                m.topic.cyan(),
+                m.trigger_sentence.white().bold()
+            );
+            println!(
+                "     {} {}",
+                "✗ Your answer:   ".red(),
+                m.user_answer.red().bold()
+            );
+            println!(
+                "     {} {}",
+                "✓ Correct answer:".green(),
+                m.correct_answer.green().bold()
+            );
+            println!(
+                "     {} {}\n",
+                "💡 Rule / Why:  ".yellow(),
+                m.explanation.dimmed()
+            );
+        }
+        println!(
+            "{}",
+            "─────────────────────────────────────────────────────────────".dimmed()
+        );
+    } else if stats.total_answered > 0 {
+        println!(
+            "\n{}",
+            "✨ Perfect Run! 100% Accuracy — No mistakes to review! ✨"
+                .bold()
+                .green()
+        );
+    }
+
     println!(
         "\n{}",
         "═══════════════════════════════════════════════════════════════".dimmed()
