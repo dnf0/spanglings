@@ -36,6 +36,37 @@ fn test_arcade_choice_evaluation_and_scoring() {
 }
 
 #[test]
+fn test_arcade_choice_records_mistakes() {
+    let item = ArcadeItem {
+        topic: "por-para".to_string(),
+        trigger_sentence: "Estudio ____ aprender español.".to_string(),
+        prompt_cue: "purpose/goal -> para".to_string(),
+        options: vec!["por".to_string(), "para".to_string()],
+        correct_index: 1,
+        explanation: "Para indicates purpose or goal.".to_string(),
+    };
+
+    let mut stats = ArcadeSessionStats::default();
+
+    // Correct choice: no mistake recorded
+    let result = evaluate_arcade_choice(&item, 1, 400, &mut stats);
+    assert!(result.is_correct);
+    assert!(stats.mistakes.is_empty());
+
+    // Incorrect choice: mistake recorded with all details
+    let result_fail = evaluate_arcade_choice(&item, 0, 700, &mut stats);
+    assert!(!result_fail.is_correct);
+    assert_eq!(stats.mistakes.len(), 1);
+    let mistake = &stats.mistakes[0];
+    assert_eq!(mistake.topic, "por-para");
+    assert_eq!(mistake.trigger_sentence, "Estudio ____ aprender español.");
+    assert_eq!(mistake.user_answer, "por");
+    assert_eq!(mistake.correct_answer, "para");
+    assert_eq!(mistake.prompt_cue, "purpose/goal -> para");
+    assert_eq!(mistake.explanation, "Para indicates purpose or goal.");
+}
+
+#[test]
 fn test_arcade_combo_rank_titles() {
     assert_eq!(get_combo_rank(1), "✨ Good");
     assert!(get_combo_rank(3).contains("Quick"));
@@ -93,6 +124,7 @@ fn test_arcade_summary_and_sound_helpers() {
         best_streak: 4,
         score: 1250,
         total_time_ms: 2500,
+        mistakes: Vec::new(),
     };
 
     let mut initial = HashMap::new();
