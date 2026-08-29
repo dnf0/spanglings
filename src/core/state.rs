@@ -23,10 +23,20 @@ pub struct ExerciseStat {
     pub hints_used: u32,
 }
 
+fn default_ease_factor() -> f32 {
+    2.5
+}
+
 #[derive(Debug, Clone, PartialEq, Serialize, Deserialize)]
 pub struct ConceptMastery {
     pub concept_id: String,
     pub mastery_score: f32, // 0.0 to 1.0
+    #[serde(default)]
+    pub repetitions: u32,
+    #[serde(default)]
+    pub interval_days: u32,
+    #[serde(default = "default_ease_factor")]
+    pub ease_factor: f32,
     pub total_reviews: u32,
     pub lapses: u32,
     pub last_practiced: Option<DateTime<Utc>>,
@@ -37,6 +47,9 @@ impl ConceptMastery {
         Self {
             concept_id: concept_id.into(),
             mastery_score: 0.0,
+            repetitions: 0,
+            interval_days: 0,
+            ease_factor: 2.5,
             total_reviews: 0,
             lapses: 0,
             last_practiced: None,
@@ -208,21 +221,40 @@ impl AppState {
         let entry = self
             .concept_mastery
             .entry(concept_id.to_string())
-            .or_insert_with(|| ConceptMastery {
-                concept_id: concept_id.to_string(),
-                mastery_score: 0.0,
-                total_reviews: 0,
-                lapses: 0,
-                last_practiced: None,
-            });
+            .or_insert_with(|| ConceptMastery::new(concept_id));
 
         entry.last_practiced = Some(now);
-        if quality >= 3 {
-            entry.total_reviews += 1;
-            entry.mastery_score = (entry.mastery_score * 0.7 + 0.3).min(1.0);
-        } else {
+        entry.total_reviews += 1;
+
+        let q = quality.clamp(0, 5);
+        let q_f32 = q as f32;
+        let mut new_ef = entry.ease_factor + (0.1 - (5.0 - q_f32) * (0.08 + (5.0 - q_f32) * 0.02));
+        if new_ef < 1.3 {
+            new_ef = 1.3;
+        }
+        entry.ease_factor = new_ef;
+
+        if q < 3 {
             entry.lapses += 1;
-            entry.mastery_score = (entry.mastery_score * 0.5).max(0.0);
+            entry.repetitions = 0;
+            entry.interval_days = 1;
+            entry.mastery_score = 0.0;
+        } else {
+            entry.repetitions += 1;
+            entry.interval_days = match entry.repetitions {
+                1 => 1,
+                2 => 6,
+                _ => ((entry.interval_days as f32) * new_ef).round() as u32,
+            }
+            .clamp(1, 3650);
+
+            const MAX_STABILITY_LN: f32 = 4.110874; // ln(61.0)
+            let rep_factor = (entry.repetitions as f32 / 6.0).min(1.0);
+            let stability_factor =
+                ((1.0 + entry.interval_days as f32).ln() / MAX_STABILITY_LN).min(1.0);
+            let ease_scale = entry.ease_factor / 2.5;
+
+            entry.mastery_score = (rep_factor * stability_factor * ease_scale).clamp(0.0, 1.0);
         }
     }
 

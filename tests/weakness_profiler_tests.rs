@@ -79,8 +79,10 @@ fn test_concept_mastery_initialization_and_success_updates() {
 
     assert_eq!(mastery.concept_id, "subjunctive_temporal_future");
     assert_eq!(mastery.total_reviews, 1);
+    assert_eq!(mastery.repetitions, 1);
+    assert_eq!(mastery.interval_days, 1);
     assert_eq!(mastery.lapses, 0);
-    assert!((mastery.mastery_score - 0.3).abs() < 1e-4);
+    assert!(mastery.mastery_score > 0.02 && mastery.mastery_score < 0.05);
     assert_eq!(mastery.last_practiced, Some(now));
 
     // 2nd success review (quality 4 >= 3)
@@ -91,9 +93,10 @@ fn test_concept_mastery_initialization_and_success_updates() {
         .get("subjunctive_temporal_future")
         .unwrap();
     assert_eq!(mastery2.total_reviews, 2);
+    assert_eq!(mastery2.repetitions, 2);
+    assert_eq!(mastery2.interval_days, 6);
     assert_eq!(mastery2.lapses, 0);
-    // 0.3 * 0.7 + 0.3 = 0.51
-    assert!((mastery2.mastery_score - 0.51).abs() < 1e-4);
+    assert!(mastery2.mastery_score > 0.14 && mastery2.mastery_score < 0.20);
     assert_eq!(mastery2.last_practiced, Some(t2));
 
     // Multiple successes should asymptotically approach and cap at 1.0
@@ -113,7 +116,7 @@ fn test_concept_mastery_lapse_penalization_and_recovery() {
     let mut state = AppState::default();
     let now = Utc::now();
 
-    // Establish initial mastery ~0.51
+    // Establish initial mastery (2 successful reviews)
     state.update_concept_mastery("accidental_se", 5, now);
     state.update_concept_mastery("accidental_se", 5, now + Duration::days(1));
     let score_before = state
@@ -121,31 +124,34 @@ fn test_concept_mastery_lapse_penalization_and_recovery() {
         .get("accidental_se")
         .unwrap()
         .mastery_score;
-    assert!((score_before - 0.51).abs() < 1e-4);
+    assert!(score_before > 0.14 && score_before < 0.20);
 
     // Lapse (quality 2 < 3)
     let lapse_time = now + Duration::days(2);
     state.update_concept_mastery("accidental_se", 2, lapse_time);
     let lapsed = state.concept_mastery.get("accidental_se").unwrap();
     assert_eq!(lapsed.lapses, 1);
-    assert_eq!(lapsed.total_reviews, 2); // total_reviews not incremented on lapse
-                                         // 0.51 * 0.5 = 0.255
-    assert!((lapsed.mastery_score - 0.255).abs() < 1e-4);
+    assert_eq!(lapsed.repetitions, 0);
+    assert_eq!(lapsed.interval_days, 1);
+    assert_eq!(lapsed.total_reviews, 3);
+    assert_eq!(lapsed.mastery_score, 0.0);
     assert_eq!(lapsed.last_practiced, Some(lapse_time));
 
     // Subsequent lapse (quality 1 < 3)
     state.update_concept_mastery("accidental_se", 1, lapse_time + Duration::hours(1));
     let lapsed2 = state.concept_mastery.get("accidental_se").unwrap();
     assert_eq!(lapsed2.lapses, 2);
-    assert!((lapsed2.mastery_score - 0.1275).abs() < 1e-4);
+    assert_eq!(lapsed2.repetitions, 0);
+    assert_eq!(lapsed2.interval_days, 1);
+    assert_eq!(lapsed2.mastery_score, 0.0);
 
     // Recovery on success (quality 5 >= 3)
     state.update_concept_mastery("accidental_se", 5, lapse_time + Duration::days(1));
     let recovered = state.concept_mastery.get("accidental_se").unwrap();
     assert_eq!(recovered.lapses, 2);
-    assert_eq!(recovered.total_reviews, 3);
-    // 0.1275 * 0.7 + 0.3 = 0.38925
-    assert!((recovered.mastery_score - 0.38925).abs() < 1e-4);
+    assert_eq!(recovered.repetitions, 1);
+    assert_eq!(recovered.total_reviews, 5);
+    assert!(recovered.mastery_score > 0.02 && recovered.mastery_score < 0.05);
 }
 
 #[test]
@@ -153,15 +159,15 @@ fn test_get_weakest_concepts_sorting_and_limiting() {
     let mut state = AppState::default();
     let now = Utc::now();
 
-    state.update_concept_mastery("concept_a", 5, now); // score = 0.3
+    state.update_concept_mastery("concept_a", 5, now);
     state.update_concept_mastery("concept_b", 5, now);
-    state.update_concept_mastery("concept_b", 5, now); // score = 0.51
-    state.update_concept_mastery("concept_c", 1, now); // score = 0.0
+    state.update_concept_mastery("concept_b", 5, now);
+    state.update_concept_mastery("concept_c", 1, now);
 
     let weakest_2 = state.get_weakest_concepts(2);
     assert_eq!(weakest_2.len(), 2);
-    assert_eq!(weakest_2[0].0, "concept_c"); // 0.0
-    assert_eq!(weakest_2[1].0, "concept_a"); // 0.3
+    assert_eq!(weakest_2[0].0, "concept_c");
+    assert_eq!(weakest_2[1].0, "concept_a");
 
     let all_weakest = state.get_weakest_concepts(10);
     assert_eq!(all_weakest.len(), 3);
@@ -181,8 +187,10 @@ fn test_get_concept_mastery_scores() {
 
     let scores = state.get_concept_mastery_scores();
     assert_eq!(scores.len(), 2);
-    assert!((scores.get("por_vs_para_foundations").unwrap() - 0.3).abs() < 1e-4);
-    assert!((scores.get("irregular_preterite_stems").unwrap() - 0.51).abs() < 1e-4);
+    let por_para_score = *scores.get("por_vs_para_foundations").unwrap();
+    let pret_score = *scores.get("irregular_preterite_stems").unwrap();
+    assert!(por_para_score > 0.02 && por_para_score < 0.05);
+    assert!(pret_score > 0.14 && pret_score < 0.20);
 }
 
 #[test]
@@ -201,4 +209,38 @@ fn test_state_backwards_compatibility_without_concept_mastery() {
     assert!(state.concept_mastery.is_empty());
     assert!(state.get_weakest_concepts(5).is_empty());
     assert!(state.get_concept_mastery_scores().is_empty());
+}
+
+#[test]
+fn test_scientific_sm2_concept_mastery_progression() {
+    let mut state = AppState::default();
+    let now = Utc::now();
+
+    // 1st review (fast, quality 5): ~3%
+    state.update_concept_mastery("por-para", 5, now);
+    let m1 = state.concept_mastery.get("por-para").unwrap();
+    assert_eq!(m1.repetitions, 1);
+    assert_eq!(m1.interval_days, 1);
+    assert!(m1.mastery_score > 0.02 && m1.mastery_score < 0.05);
+
+    // 2nd review (quality 5): ~17%
+    state.update_concept_mastery("por-para", 5, now);
+    let m2 = state.concept_mastery.get("por-para").unwrap();
+    assert_eq!(m2.repetitions, 2);
+    assert_eq!(m2.interval_days, 6);
+    assert!(m2.mastery_score > 0.14 && m2.mastery_score < 0.20);
+
+    // 3rd review (quality 5): ~38%
+    state.update_concept_mastery("por-para", 5, now);
+    let m3 = state.concept_mastery.get("por-para").unwrap();
+    assert_eq!(m3.repetitions, 3);
+    assert!(m3.mastery_score > 0.30 && m3.mastery_score < 0.45);
+
+    // Lapse on mistake (quality 1): resets score to 0 and increments lapse count
+    state.update_concept_mastery("por-para", 1, now);
+    let m_lapse = state.concept_mastery.get("por-para").unwrap();
+    assert_eq!(m_lapse.repetitions, 0);
+    assert_eq!(m_lapse.interval_days, 1);
+    assert_eq!(m_lapse.lapses, 1);
+    assert_eq!(m_lapse.mastery_score, 0.0);
 }
