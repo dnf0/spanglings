@@ -114,9 +114,9 @@
     "semantic_hash": ""
   },
   "src/core/state.rs": {
-    "mtime": 1788006302.7549374,
-    "seen": 1788006359.0716548,
-    "ast_hash": "97e89565ac10e256630ea8cc1e33af33",
+    "mtime": 1788006766.2276912,
+    "seen": 1788007010.7078059,
+    "ast_hash": "55938c7fca8a50990dee0f6d964a0618",
     "semantic_hash": ""
   },
   "tests/srs_tests.rs": {
@@ -1218,9 +1218,9 @@
     "semantic_hash": ""
   },
   "tests/weakness_profiler_tests.rs": {
-    "mtime": 1788006067.6408675,
-    "seen": 1788006359.0716832,
-    "ast_hash": "b31e1640de59f3a25844ad03481063d0",
+    "mtime": 1788006740.6049995,
+    "seen": 1788007010.707829,
+    "ast_hash": "957b80ade4f264c608324cc603d3f5a6",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md": {
@@ -2892,8 +2892,8 @@
     "semantic_hash": ""
   },
   "src/cli/commands/arcade.rs": {
-    "mtime": 1788004352.4200277,
-    "seen": 1788006359.0716338,
+    "mtime": 1788006429.2066994,
+    "seen": 1788007010.707787,
     "ast_hash": "0b4ac2979c60261bee9d79b3028b2738",
     "semantic_hash": ""
   },
@@ -2970,15 +2970,27 @@
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery.md": {
-    "mtime": 1788005836.9009173,
-    "seen": 1788006359.071709,
+    "mtime": 1788006388.9947746,
+    "seen": 1788007010.707853,
     "ast_hash": "b033043776e5955266e142534f24b589",
     "semantic_hash": ""
   },
   "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md": {
-    "mtime": 1788005793.460749,
-    "seen": 1788006359.071717,
+    "mtime": 1788006388.9949617,
+    "seen": 1788007010.707861,
     "ast_hash": "39c5eb5560baa415caf38f5d970bed1e",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-29-symmetric-ladder-concept-mastery.md": {
+    "mtime": 1788006669.985119,
+    "seen": 1788007010.707854,
+    "ast_hash": "945d18284f8288abeb51c0ff8f142499",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-29-symmetric-ladder-concept-mastery-design.md": {
+    "mtime": 1788006653.0837224,
+    "seen": 1788007010.707861,
+    "ast_hash": "f9c3066fcfd671852753fd8751c8a410",
     "semantic_hash": ""
   }
 }

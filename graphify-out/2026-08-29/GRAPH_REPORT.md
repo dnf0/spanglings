@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-08-29)
 
 ## Corpus Check
-- 488 files · ~221,980 words
+- 490 files · ~223,464 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3216 nodes · 3741 edges · 454 communities (445 shown, 9 thin omitted)
+- 3232 nodes · 3756 edges · 457 communities (447 shown, 10 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 224 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a5147fb8`
+- Built from commit: `cc56d6b2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -229,7 +229,7 @@
 - VS Code Extension & Latin American Spanish Curriculum Expansion Implementation Plan
 - properties
 - package.json
-- find_all_exercises_or_embedded
+- Exercise
 - devDependencies
 - ADR-0003: Language Completeness, Advanced Syntactic Contrasts & Expanded Ontology
 - Spanglings: Developer Spanish Learning (VS Code / Cursor Extension)
@@ -442,7 +442,7 @@
 - Design Specification: Spanglings Rapid Single-Key ADHD Arcade & Showdown Engine
 - Functional Semantic Grammar Keys & Communicative Glosses Design Specification
 - Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan
-- Exercise
+- export.rs
 - SrsItem
 - .load_from_path
 - sync.rs
@@ -453,8 +453,8 @@
 - pack.rs
 - Design Specification: Expanded 16-Pair Spanish Binary Contrast Showdowns
 - Implementation Plan: Expanded 16-Pair Spanish Binary Contrast Showdowns
-- run_init
-- exercise_validity_tests.rs
+- Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model
+- cli_tests.rs
 - commands/arcade.rs
 - ShowdownPair
 - Design Specification: Arcade Mode End-of-Session Mistakes Explanation & Review
@@ -462,6 +462,8 @@
 - Arcade Mistakes Explanation & Review Implementation Plan
 - .from_str
 - RawModeGuard
+- Scientific SM-2 Interval & Stability Concept Mastery Implementation Plan
+- .from_str
 
 ## God Nodes (most connected - your core abstractions)
 1. `App` - 94 edges
@@ -480,17 +482,17 @@
   tests/json_output_tests.rs → src/cli/commands/progress.rs
 - `test_progress_json_includes_weak_topics_and_recommendations()` --calls--> `get_progress_json()`  [INFERRED]
   tests/weakness_profiler_tests.rs → src/cli/commands/progress.rs
+- `test_run_exercise_with_file_path()` --calls--> `run_exercise()`  [INFERRED]
+  tests/cli_tests.rs → src/cli/commands/run.rs
 - `test_tui_all_5_specialized_engines_lifecycle_and_rendering()` --calls--> `get_engine_title()`  [INFERRED]
   tests/tui_arcade_tests.rs → src/core/arcade.rs
 - `test_all_5_specialized_engines_generate_valid_items()` --calls--> `generate_specialized_engine_items()`  [INFERRED]
-  tests/arcade_tests.rs → src/core/arcade.rs
-- `test_4choice_delegation_to_specialized_engines()` --calls--> `generate_4choice_items()`  [INFERRED]
   tests/arcade_tests.rs → src/core/arcade.rs
 
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (454 total, 9 thin omitted)
+## Communities (457 total, 10 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -505,16 +507,16 @@ Cohesion: 0.06
 Nodes (7): Instant, KeyEvent, App, Into, Self, String, Vec
 
 ### Community 3 - "exercise.rs"
-Cohesion: 0.10
-Nodes (16): DiagnosticRule, ExerciseType, parse_optional_string(), parse_string_list(), ParseExerciseTypeError, Display, Err, Formatter (+8 more)
+Cohesion: 0.11
+Nodes (21): DiagnosticRule, ExerciseType, parse_optional_string(), parse_string_list(), ParseExerciseTypeError, Display, Err, Formatter (+13 more)
 
 ### Community 4 - "embedded.rs"
-Cohesion: 0.25
-Nodes (12): Dir, collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir(), P, Path, Result (+4 more)
+Cohesion: 0.14
+Nodes (18): Dir, Option, Result, run_init(), collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir() (+10 more)
 
 ### Community 7 - "AppState"
-Cohesion: 0.17
-Nodes (12): AppState, ConceptMastery, EvaluatedLevel, ExerciseStat, DateTime, Default, HashMap, HashSet (+4 more)
+Cohesion: 0.15
+Nodes (13): AppState, ConceptMastery, EvaluatedLevel, ExerciseStat, DateTime, Default, HashMap, HashSet (+5 more)
 
 ### Community 10 - "validate_submission"
 Cohesion: 0.10
@@ -1158,7 +1160,7 @@ Nodes (19): print_conjugation_summary(), Option, Result, run_conjugate(), conjug
 
 ### Community 173 - "Level"
 Cohesion: 0.12
-Nodes (27): Option, R, Result, String, run_test(), run_test_with_io(), Level, Display (+19 more)
+Nodes (28): Option, R, Result, String, run_test(), run_test_with_io(), Level, Display (+20 more)
 
 ### Community 174 - "tui_tests.rs"
 Cohesion: 0.16
@@ -1336,9 +1338,9 @@ Nodes (11): properties, title, configuration, spanglings.enableLsp, spanglings.s
 Cohesion: 0.18
 Nodes (10): activationEvents, description, displayName, engines, vscode, license, main, name (+2 more)
 
-### Community 221 - "find_all_exercises_or_embedded"
-Cohesion: 0.09
-Nodes (26): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), collect_md_files(), Curriculum (+18 more)
+### Community 221 - "Exercise"
+Cohesion: 0.15
+Nodes (22): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), collect_md_files(), Curriculum (+14 more)
 
 ### Community 222 - "devDependencies"
 Cohesion: 0.22
@@ -2180,17 +2182,17 @@ Nodes (10): 1. Drill & Blitz Prompt Layout, 1. Objective & Motivation, 2. Archit
 Cohesion: 0.29
 Nodes (6): Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan, Task 1: Core `GrammarConcept` Data Structure & 24-Concept Metadata Catalog, Task 2: CLI `spanglings explain` / `spanglings reference` Functional Listing & Semantic Discovery, Task 3: Drill & Blitz Prompt Layout Enhancement with Communicative Glosses, Task 4: TUI Reference Browser & Modal Integration with Functional Glosses, Task 5: End-to-End Workspace Verification & Knowledge Graph Update
 
-### Community 434 - "Exercise"
-Cohesion: 0.27
-Nodes (15): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+7 more)
+### Community 434 - "export.rs"
+Cohesion: 0.29
+Nodes (13): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+5 more)
 
 ### Community 435 - "SrsItem"
-Cohesion: 0.17
-Nodes (9): calculate_sm2_review(), DateTime, Default, Option, Self, Utc, SrsItem, test_sm2_repetition_intervals() (+1 more)
+Cohesion: 0.18
+Nodes (8): calculate_sm2_review(), DateTime, Default, Option, Self, Utc, SrsItem, test_sm2_repetition_intervals()
 
 ### Community 436 - ".load_from_path"
-Cohesion: 0.27
-Nodes (5): Into, Path, PathBuf, Result, Self
+Cohesion: 0.33
+Nodes (4): Path, PathBuf, Result, Self
 
 ### Community 437 - "sync.rs"
 Cohesion: 0.29
@@ -2212,13 +2214,9 @@ Nodes (8): collect_markdown_files(), Path, PathBuf, Result, Vec, run_pack_create
 Cohesion: 0.22
 Nodes (8): 1. Motivation & Linguistic Scope, 2. The 16 Binary Showdown Pairs, 3.1 Enum Definition Update, 3.2 High-Yield Sentence Pools, 3. Core Engine Architecture (`src/core/arcade.rs`), 4. CLI & TUI Updates, 5. Verification Plan, Design Specification: Expanded 16-Pair Spanish Binary Contrast Showdowns
 
-### Community 445 - "run_init"
-Cohesion: 0.33
-Nodes (5): Option, Result, run_init(), test_run_init_creates_exercise_workspace(), test_run_init_force_flag()
-
-### Community 446 - "exercise_validity_tests.rs"
-Cohesion: 0.47
-Nodes (5): collect_md_paths(), Path, PathBuf, Vec, test_all_curriculum_exercises_are_valid_and_solvable()
+### Community 445 - "Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model"
+Cohesion: 0.22
+Nodes (8): 1. Problem Statement & Motivation, 2. Scientific Foundations (SM-2 & Spacing Effect), 3. Data Model Architecture (`src/core/state.rs`), 4. Expected Progression Rates, 5. Verification & Backward Compatibility, `ConceptMastery` Struct, Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model, SM-2 Mastery Calculation Logic (`update_concept_mastery`)
 
 ### Community 447 - "commands/arcade.rs"
 Cohesion: 0.26
@@ -2244,24 +2242,32 @@ Nodes (5): Arcade Mistakes Explanation & Review Implementation Plan, Task 1: Cor
 Cohesion: 0.50
 Nodes (3): Err, Result, Self
 
+### Community 455 - "Scientific SM-2 Interval & Stability Concept Mastery Implementation Plan"
+Cohesion: 0.40
+Nodes (4): Scientific SM-2 Interval & Stability Concept Mastery Implementation Plan, Task 1: Core SM-2 Data Model & Scientific Mastery Engine (`src/core/state.rs`, `tests/weakness_profiler_tests.rs`), Task 2: Update Existing Tests & Verify End-to-End (`tests/weakness_profiler_tests.rs`, `tests/cli_arcade_tests.rs`), Task 3: Complete Verification, Formatting & Release Polish
+
+### Community 456 - ".from_str"
+Cohesion: 0.40
+Nodes (4): ParseLevelError, Err, Self, String
+
 ## Knowledge Gaps
-- **1469 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+1464 more)
+- **1478 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+1473 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **10 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Exercise` connect `Exercise` to `App`, `exercise.rs`, `embedded.rs`, `AppState`, `.current_exercise`, `validate_submission`, `progress.rs`, `Level`, `check.rs`, `evaluate_current_exercise_in`, `tui_tests.rs`, `app.rs`, `search_exercises`, `find_all_exercises_or_embedded`?**
+- **Why does `Exercise` connect `Exercise` to `App`, `exercise.rs`, `embedded.rs`, `AppState`, `.current_exercise`, `validate_submission`, `progress.rs`, `Level`, `check.rs`, `evaluate_current_exercise_in`, `tui_tests.rs`, `export.rs`, `app.rs`, `search_exercises`?**
   _High betweenness centrality (0.024) - this node is a cross-community bridge._
-- **Why does `App` connect `App` to `ShowdownPair`, `AppState`, `.current_exercise`, `validate_submission`, `core/arcade.rs`, `conjugate_verb`, `Level`, `tui_tests.rs`, `Exercise`, `app.rs`, `draw_ui`, `commands/arcade.rs`?**
-  _High betweenness centrality (0.024) - this node is a cross-community bridge._
-- **Why does `AppState` connect `AppState` to `select_arcade_items`, `App`, `progress.rs`, `evaluate_current_exercise_in`, `DrillItem`, `Exercise`, `SrsItem`, `.load_from_path`, `sync.rs`, `commands/arcade.rs`?**
+- **Why does `App` connect `App` to `ShowdownPair`, `AppState`, `.current_exercise`, `validate_submission`, `core/arcade.rs`, `conjugate_verb`, `Level`, `tui_tests.rs`, `app.rs`, `draw_ui`, `Exercise`, `commands/arcade.rs`?**
+  _High betweenness centrality (0.023) - this node is a cross-community bridge._
+- **Why does `AppState` connect `AppState` to `select_arcade_items`, `App`, `progress.rs`, `evaluate_current_exercise_in`, `DrillItem`, `export.rs`, `SrsItem`, `.load_from_path`, `sync.rs`, `commands/arcade.rs`?**
   _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **Are the 27 inferred relationships involving `get_reference_card()` (e.g. with `compute_hover()` and `draw_reference_browser_modal()`) actually correct?**
   _`get_reference_card()` has 27 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `esbuild`, `minify` to the rest of the system?**
-  _1469 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1478 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `App` be split into smaller, more focused modules?**
