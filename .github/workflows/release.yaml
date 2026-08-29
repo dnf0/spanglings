@@ -156,7 +156,10 @@ jobs:
 
       - name: Package VS Code extension
         run: |
+          TAG="${{ needs.check-version.outputs.tag_name }}"
+          VERSION="${TAG#v}"
           cd editors/vscode
+          npm version --no-git-tag-version "$VERSION" || true
           npm ci
           npm run package
           cp spanglings-vscode-*.vsix ../../release-assets/
@@ -188,7 +191,7 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: Publish to Crates.io
-        run: cargo publish --token ${{ secrets.CARGO_REGISTRY_TOKEN }}
+        run: cargo publish --allow-dirty --token ${{ secrets.CARGO_REGISTRY_TOKEN }}
         env:
           CARGO_REGISTRY_TOKEN: ${{ secrets.CARGO_REGISTRY_TOKEN }}
 
@@ -207,7 +210,10 @@ jobs:
 
       - name: Publish to Marketplace
         run: |
+          TAG="${{ needs.check-version.outputs.tag_name }}"
+          VERSION="${TAG#v}"
           cd editors/vscode
+          npm version --no-git-tag-version "$VERSION" || true
           npm ci
           npm run package
           npx @vscode/vsce publish --packagePath spanglings-vscode-*.vsix --pat "${{ secrets.VSCE_PAT }}"
