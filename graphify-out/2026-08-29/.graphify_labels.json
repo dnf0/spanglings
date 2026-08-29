@@ -429,7 +429,7 @@
   "427": "exercise_parser_tests.rs",
   "428": "Rich Context Drill Prompts & Topic Cheat Sheets Implementation Plan",
   "429": ".from_str",
-  "430": "commands/arcade.rs",
+  "430": "select_arcade_items",
   "431": "Design Specification: Spanglings Rapid Single-Key ADHD Arcade & Showdown Engine",
   "432": "Functional Semantic Grammar Keys & Communicative Glosses Design Specification",
   "433": "Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan",
@@ -440,5 +440,8 @@
   "438": "get_exercises_json",
   "439": "weakness_profiler_tests.rs",
   "440": ".on_key",
-  "441": "Rapid Single-Key ADHD Arcade & Showdown Engine Implementation Plan"
+  "441": "Rapid Single-Key ADHD Arcade & Showdown Engine Implementation Plan",
+  "442": "pack.rs",
+  "443": "Design Specification: Expanded 16-Pair Spanish Binary Contrast Showdowns",
+  "444": "Implementation Plan: Expanded 16-Pair Spanish Binary Contrast Showdowns"
 }

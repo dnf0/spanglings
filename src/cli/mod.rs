@@ -43,14 +43,14 @@ pub enum Commands {
         /// Grammar topic or communicative intent (e.g. subjunctive, wishes, por-para, ser-estar)
         topic: Option<String>,
     },
-    /// Launch rapid single-key ADHD arcade & showdown drills (no Enter required)
+    /// Launch rapid single-key ADHD arcade, showdown duels, & specialized drill engines (no Enter required)
     Arcade {
-        /// Grammar showdown duel pair or concept topic (e.g. por-para, ser-estar, tener-haber, saber-conocer, muy-mucho, pedir-preguntar, subjunctive)
+        /// Grammar showdown duel pair, specialized engine, or concept topic (e.g. regimen, irregulars, false-friends, se-matrix, connectors, por-para, ser-estar, subjunctive)
         topic: Option<String>,
         /// Grammar showdown duel pair (e.g. por-para, ser-estar, tener-haber, saber-conocer, muy-mucho, pedir-preguntar, llevar-traer, haber-estar, ir-irse, bien-bueno)
         #[arg(long)]
         showdown: Option<String>,
-        /// Filter arcade items by specific linguistic concept
+        /// Filter arcade items by specific linguistic concept or specialized engine (e.g. regimen, irregulars, false-friends, se-matrix, connectors)
         #[arg(short, long)]
         concept: Option<String>,
         /// Focus arcade drills on user's weakest concepts based on mastery scores

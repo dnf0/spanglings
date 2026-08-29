@@ -33,8 +33,12 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
                                 app.cycle_arcade_showdown(false);
                             }
                             (KeyCode::Char('r'), _) | (KeyCode::Char('R'), _) => {
-                                let showdown = app.arcade_selected_showdown;
-                                app.enter_arcade_mode(showdown);
+                                if let Some(ref topic) = app.arcade_selected_topic.clone() {
+                                    app.enter_arcade_with_topic(topic);
+                                } else {
+                                    let showdown = app.arcade_selected_showdown;
+                                    app.enter_arcade_mode(showdown);
+                                }
                             }
                             (KeyCode::Esc, _)
                             | (KeyCode::Char('q'), _)

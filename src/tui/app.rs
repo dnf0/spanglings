@@ -1,7 +1,10 @@
 use crate::cli::commands::arcade::{
     evaluate_arcade_choice, play_arcade_sound, select_arcade_items, ArcadeSessionStats,
 };
-use crate::core::arcade::{generate_showdown_items, list_showdown_pairs, ArcadeItem, ShowdownPair};
+use crate::core::arcade::{
+    canonicalize_engine_slug, generate_4choice_items, generate_showdown_items,
+    generate_specialized_engine_items, list_showdown_pairs, ArcadeItem, ShowdownPair,
+};
 use crate::core::conjugator::{conjugate_verb, VerbTable};
 use crate::core::exercise::Exercise;
 use crate::core::placement::{
@@ -79,6 +82,7 @@ pub struct App {
     // Arcade Arena modal state
     pub show_arcade_modal: bool,
     pub arcade_selected_showdown: Option<ShowdownPair>,
+    pub arcade_selected_topic: Option<String>,
     pub arcade_items: Vec<ArcadeItem>,
     pub arcade_item_idx: usize,
     pub arcade_stats: ArcadeSessionStats,
@@ -165,6 +169,7 @@ impl App {
             mastery_selected_idx: 0,
             show_arcade_modal: false,
             arcade_selected_showdown: None,
+            arcade_selected_topic: None,
             arcade_items: Vec::new(),
             arcade_item_idx: 0,
             arcade_stats: ArcadeSessionStats::default(),
@@ -748,6 +753,7 @@ impl App {
         self.show_reference = false;
         self.show_arcade_modal = true;
         self.arcade_selected_showdown = showdown;
+        self.arcade_selected_topic = None;
 
         if let Some(pair) = showdown {
             self.arcade_items = generate_showdown_items(pair, 10);
@@ -766,7 +772,58 @@ impl App {
         self.arcade_item_start_time = std::time::Instant::now();
     }
 
+    pub fn enter_arcade_with_topic(&mut self, topic: &str) {
+        if let Some(pair) = ShowdownPair::from_str(topic) {
+            self.enter_arcade_mode(Some(pair));
+            return;
+        }
+
+        if let Some((canonical_slug, _, _)) = canonicalize_engine_slug(topic) {
+            self.show_tour_welcome = false;
+            self.show_tour_modal = false;
+            self.show_mastery_dashboard = false;
+            self.show_reference = false;
+            self.show_arcade_modal = true;
+            self.arcade_selected_showdown = None;
+            self.arcade_selected_topic = Some(canonical_slug.to_string());
+            self.arcade_items = generate_specialized_engine_items(canonical_slug, 15);
+
+            if self.arcade_items.is_empty() {
+                self.arcade_items = generate_showdown_items(ShowdownPair::PorPara, 10);
+                self.arcade_selected_showdown = Some(ShowdownPair::PorPara);
+                self.arcade_selected_topic = None;
+            }
+
+            self.arcade_item_idx = 0;
+            self.arcade_stats = ArcadeSessionStats::default();
+            self.arcade_flash = None;
+            self.arcade_item_start_time = std::time::Instant::now();
+            return;
+        }
+
+        self.show_tour_welcome = false;
+        self.show_tour_modal = false;
+        self.show_mastery_dashboard = false;
+        self.show_reference = false;
+        self.show_arcade_modal = true;
+        self.arcade_selected_showdown = None;
+        self.arcade_selected_topic = Some(topic.to_string());
+        self.arcade_items = generate_4choice_items(topic, 15);
+
+        if self.arcade_items.is_empty() {
+            self.arcade_items = generate_showdown_items(ShowdownPair::PorPara, 10);
+            self.arcade_selected_showdown = Some(ShowdownPair::PorPara);
+            self.arcade_selected_topic = None;
+        }
+
+        self.arcade_item_idx = 0;
+        self.arcade_stats = ArcadeSessionStats::default();
+        self.arcade_flash = None;
+        self.arcade_item_start_time = std::time::Instant::now();
+    }
+
     pub fn cycle_arcade_showdown(&mut self, next: bool) {
+        self.arcade_selected_topic = None;
         let pairs = list_showdown_pairs();
         if pairs.is_empty() {
             return;
@@ -834,14 +891,18 @@ impl App {
         if self.arcade_item_idx >= self.arcade_items.len() {
             match c {
                 'r' | 'R' => {
-                    let showdown = self.arcade_selected_showdown.or_else(|| {
-                        if self.arcade_items.first().map(|it| it.options.len()) == Some(2) {
-                            ShowdownPair::from_str(&self.arcade_items[0].topic)
-                        } else {
-                            None
-                        }
-                    });
-                    self.enter_arcade_mode(showdown);
+                    if let Some(ref topic) = self.arcade_selected_topic.clone() {
+                        self.enter_arcade_with_topic(topic);
+                    } else {
+                        let showdown = self.arcade_selected_showdown.or_else(|| {
+                            if self.arcade_items.first().map(|it| it.options.len()) == Some(2) {
+                                ShowdownPair::from_str(&self.arcade_items[0].topic)
+                            } else {
+                                None
+                            }
+                        });
+                        self.enter_arcade_mode(showdown);
+                    }
                 }
                 's' | 'S' => {
                     self.cycle_arcade_showdown(true);
