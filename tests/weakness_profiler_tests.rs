@@ -126,23 +126,23 @@ fn test_concept_mastery_lapse_penalization_and_recovery() {
         .mastery_score;
     assert!(score_before > 0.14 && score_before < 0.20);
 
-    // Lapse (quality 2 < 3)
+    // Lapse (quality 2 < 3): steps back from rep 2 to rep 1
     let lapse_time = now + Duration::days(2);
     state.update_concept_mastery("accidental_se", 2, lapse_time);
     let lapsed = state.concept_mastery.get("accidental_se").unwrap();
     assert_eq!(lapsed.lapses, 1);
-    assert_eq!(lapsed.repetitions, 0);
+    assert_eq!(lapsed.repetitions, 1);
     assert_eq!(lapsed.interval_days, 1);
     assert_eq!(lapsed.total_reviews, 3);
-    assert_eq!(lapsed.mastery_score, 0.0);
+    assert!(lapsed.mastery_score > 0.01 && lapsed.mastery_score < 0.05);
     assert_eq!(lapsed.last_practiced, Some(lapse_time));
 
-    // Subsequent lapse (quality 1 < 3)
+    // Subsequent lapse (quality 1 < 3): steps back from rep 1 to rep 0
     state.update_concept_mastery("accidental_se", 1, lapse_time + Duration::hours(1));
     let lapsed2 = state.concept_mastery.get("accidental_se").unwrap();
     assert_eq!(lapsed2.lapses, 2);
     assert_eq!(lapsed2.repetitions, 0);
-    assert_eq!(lapsed2.interval_days, 1);
+    assert_eq!(lapsed2.interval_days, 0);
     assert_eq!(lapsed2.mastery_score, 0.0);
 
     // Recovery on success (quality 5 >= 3)
@@ -212,35 +212,48 @@ fn test_state_backwards_compatibility_without_concept_mastery() {
 }
 
 #[test]
-fn test_scientific_sm2_concept_mastery_progression() {
+fn test_symmetric_ladder_progression_and_step_rollback() {
     let mut state = AppState::default();
     let now = Utc::now();
 
-    // 1st review (fast, quality 5): ~3%
+    // 1st review (q=5): Step 1 (~3%)
     state.update_concept_mastery("por-para", 5, now);
     let m1 = state.concept_mastery.get("por-para").unwrap();
     assert_eq!(m1.repetitions, 1);
     assert_eq!(m1.interval_days, 1);
     assert!(m1.mastery_score > 0.02 && m1.mastery_score < 0.05);
 
-    // 2nd review (quality 5): ~17%
+    // 2nd review (q=5): Step 2 (~17%)
     state.update_concept_mastery("por-para", 5, now);
     let m2 = state.concept_mastery.get("por-para").unwrap();
     assert_eq!(m2.repetitions, 2);
     assert_eq!(m2.interval_days, 6);
     assert!(m2.mastery_score > 0.14 && m2.mastery_score < 0.20);
 
-    // 3rd review (quality 5): ~38%
+    // 3rd review (q=5): Step 3 (~38%)
     state.update_concept_mastery("por-para", 5, now);
     let m3 = state.concept_mastery.get("por-para").unwrap();
     assert_eq!(m3.repetitions, 3);
     assert!(m3.mastery_score > 0.30 && m3.mastery_score < 0.45);
 
-    // Lapse on mistake (quality 1): resets score to 0 and increments lapse count
+    // 1st lapse (q=1): Steps back to Step 2 (~17%), NOT 0%
     state.update_concept_mastery("por-para", 1, now);
-    let m_lapse = state.concept_mastery.get("por-para").unwrap();
-    assert_eq!(m_lapse.repetitions, 0);
-    assert_eq!(m_lapse.interval_days, 1);
-    assert_eq!(m_lapse.lapses, 1);
-    assert_eq!(m_lapse.mastery_score, 0.0);
+    let m_lapse1 = state.concept_mastery.get("por-para").unwrap();
+    assert_eq!(m_lapse1.repetitions, 2);
+    assert_eq!(m_lapse1.lapses, 1);
+    assert!(m_lapse1.mastery_score > 0.10 && m_lapse1.mastery_score < 0.20);
+
+    // 2nd lapse (q=1): Steps back to Step 1 (~3%)
+    state.update_concept_mastery("por-para", 1, now);
+    let m_lapse2 = state.concept_mastery.get("por-para").unwrap();
+    assert_eq!(m_lapse2.repetitions, 1);
+    assert_eq!(m_lapse2.lapses, 2);
+    assert!(m_lapse2.mastery_score > 0.01 && m_lapse2.mastery_score < 0.05);
+
+    // 3rd lapse (q=1): Steps back to Step 0 (0%)
+    state.update_concept_mastery("por-para", 1, now);
+    let m_lapse3 = state.concept_mastery.get("por-para").unwrap();
+    assert_eq!(m_lapse3.repetitions, 0);
+    assert_eq!(m_lapse3.lapses, 3);
+    assert_eq!(m_lapse3.mastery_score, 0.0);
 }
