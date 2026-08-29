@@ -105,6 +105,85 @@ fn test_arcade_summary_and_sound_helpers() {
 }
 
 #[test]
+fn test_select_arcade_items_expanded_showdowns() {
+    use spanglings::cli::commands::arcade::select_arcade_items;
+    use spanglings::core::state::AppState;
+
+    let state = AppState::default();
+
+    let test_cases = [
+        // (input_slug_or_alias, expected_topic)
+        ("tener-haber", "tener-haber"),
+        ("have", "tener-haber"),
+        ("tener", "tener-haber"),
+        ("haber", "tener-haber"),
+        ("saber-conocer", "saber-conocer"),
+        ("know", "saber-conocer"),
+        ("saber", "saber-conocer"),
+        ("conocer", "saber-conocer"),
+        ("muy-mucho", "muy-mucho"),
+        ("very", "muy-mucho"),
+        ("much", "muy-mucho"),
+        ("pedir-preguntar", "pedir-preguntar"),
+        ("ask", "pedir-preguntar"),
+        ("pedir", "pedir-preguntar"),
+        ("llevar-traer", "llevar-traer"),
+        ("take-bring", "llevar-traer"),
+        ("llevar", "llevar-traer"),
+        ("haber-estar", "haber-estar"),
+        ("exist-locate", "haber-estar"),
+        ("hay-esta", "haber-estar"),
+        ("ir-irse", "ir-irse"),
+        ("go-leave", "ir-irse"),
+        ("ir", "ir-irse"),
+        ("bien-bueno", "bien-bueno"),
+        ("well-good", "bien-bueno"),
+        ("buen", "bien-bueno"),
+    ];
+
+    for (input, expected_topic) in test_cases {
+        let items = select_arcade_items(Some(input), None, false, 6, &state);
+        assert_eq!(
+            items.len(),
+            6,
+            "Expected 6 items for input '{}', got {}",
+            input,
+            items.len()
+        );
+        for item in &items {
+            assert_eq!(
+                item.options.len(),
+                2,
+                "Expected 2 options for binary showdown '{}', got {}",
+                input,
+                item.options.len()
+            );
+            assert_eq!(
+                item.topic, expected_topic,
+                "Expected topic '{}' for input '{}', got '{}'",
+                expected_topic, input, item.topic
+            );
+            assert!(
+                item.correct_index < item.options.len(),
+                "Correct index {} out of bounds for input '{}'",
+                item.correct_index,
+                input
+            );
+            assert!(
+                !item.trigger_sentence.is_empty(),
+                "Empty sentence for input '{}'",
+                input
+            );
+            assert!(
+                !item.explanation.is_empty(),
+                "Empty explanation for input '{}'",
+                input
+            );
+        }
+    }
+}
+
+#[test]
 fn test_arcade_cli_argument_parsing() {
     use clap::Parser;
     use spanglings::cli::{Cli, Commands};
@@ -137,6 +216,38 @@ fn test_arcade_cli_argument_parsing() {
         })
     );
 
+    // Positional new showdown pairs & aliases
+    let pairs_to_test = [
+        ("tener-haber", "tener-haber"),
+        ("have", "have"),
+        ("saber-conocer", "saber-conocer"),
+        ("know", "know"),
+        ("muy-mucho", "muy-mucho"),
+        ("very", "very"),
+        ("pedir-preguntar", "pedir-preguntar"),
+        ("ask", "ask"),
+        ("llevar-traer", "llevar-traer"),
+        ("take-bring", "take-bring"),
+        ("haber-estar", "haber-estar"),
+        ("ir-irse", "ir-irse"),
+        ("bien-bueno", "bien-bueno"),
+    ];
+
+    for (arg, expected_str) in pairs_to_test {
+        let parsed = Cli::parse_from(["spanglings", "arcade", arg]);
+        assert_eq!(
+            parsed.command,
+            Some(Commands::Arcade {
+                topic: Some(expected_str.to_string()),
+                showdown: None,
+                concept: None,
+                weak: false,
+                count: None,
+                sound: false,
+            })
+        );
+    }
+
     // Explicit showdown flag
     let cli_flag = Cli::parse_from([
         "spanglings",
@@ -154,6 +265,34 @@ fn test_arcade_cli_argument_parsing() {
             concept: None,
             weak: false,
             count: Some(20),
+            sound: false,
+        })
+    );
+
+    // Explicit showdown flag with new pairs & aliases
+    let cli_flag_have = Cli::parse_from(["spanglings", "arcade", "--showdown", "have"]);
+    assert_eq!(
+        cli_flag_have.command,
+        Some(Commands::Arcade {
+            topic: None,
+            showdown: Some("have".to_string()),
+            concept: None,
+            weak: false,
+            count: None,
+            sound: false,
+        })
+    );
+
+    let cli_flag_tener_haber =
+        Cli::parse_from(["spanglings", "arcade", "--showdown", "tener-haber"]);
+    assert_eq!(
+        cli_flag_tener_haber.command,
+        Some(Commands::Arcade {
+            topic: None,
+            showdown: Some("tener-haber".to_string()),
+            concept: None,
+            weak: false,
+            count: None,
             sound: false,
         })
     );
