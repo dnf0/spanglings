@@ -2545,6 +2545,9 @@ pub fn draw_arcade_modal(frame: &mut Frame, app: &App, area: Rect) {
             " ⚡ ARCADE ARENA: {} ⚡ (Esc or [q] to exit) ",
             showdown.title()
         )
+    } else if let Some(ref topic) = app.arcade_selected_topic {
+        let title = crate::core::arcade::get_engine_title(topic).unwrap_or(topic.as_str());
+        format!(" ⚡ ARCADE ARENA: {} ⚡ (Esc or [q] to exit) ", title)
     } else {
         " ⚡ SPANGLINGS ARCADE ARENA ⚡ (Esc or [q] to exit) ".to_string()
     };

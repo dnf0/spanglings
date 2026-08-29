@@ -156,3 +156,137 @@ fn test_tui_arcade_showdown_cycling_navigation() {
     assert_eq!(app.arcade_selected_showdown, Some(ShowdownPair::PorPara));
     assert_eq!(app.arcade_item_idx, 0);
 }
+
+#[test]
+fn test_tui_all_5_specialized_engines_lifecycle_and_rendering() {
+    use spanglings::core::arcade::get_engine_title;
+
+    let engines = [
+        "regimen",
+        "irregulars",
+        "false-friends",
+        "se-matrix",
+        "connectors",
+    ];
+
+    let mut app = App::new_with_state(vec![], false, AppState::default());
+    let backend = TestBackend::new(140, 40);
+    let mut terminal = Terminal::new(backend).unwrap();
+
+    for engine in engines {
+        // 1. Enter specialized drill engine
+        app.enter_arcade_with_topic(engine);
+        assert!(app.show_arcade_modal);
+        assert_eq!(app.arcade_selected_topic.as_deref(), Some(engine));
+        assert_eq!(app.arcade_selected_showdown, None);
+        assert_eq!(app.arcade_items.len(), 15);
+        assert_eq!(app.arcade_item_idx, 0);
+
+        for item in &app.arcade_items {
+            assert_eq!(item.options.len(), 4);
+            assert_eq!(item.topic, engine);
+            assert!(!item.trigger_sentence.is_empty());
+            assert!(!item.explanation.is_empty());
+            assert!(item.correct_index < 4);
+        }
+
+        // 2. Render active question screen and verify header title
+        terminal
+            .draw(|f| spanglings::tui::ui::draw_ui(f, &app))
+            .unwrap();
+
+        let buffer = terminal.backend().buffer();
+        let rendered_text: String = buffer
+            .content()
+            .iter()
+            .map(|cell| cell.symbol())
+            .collect::<Vec<_>>()
+            .join("");
+
+        let expected_title = get_engine_title(engine).expect("Engine title must exist");
+        assert!(
+            rendered_text.contains(expected_title),
+            "Modal title must contain specialized engine title '{}', found buffer: {}",
+            expected_title,
+            rendered_text
+        );
+
+        // 3. Answer first question with single key ('1', '2', '3', '4')
+        let correct_idx = app.arcade_items[0].correct_index;
+        let answer_key = match correct_idx {
+            0 => '1',
+            1 => '2',
+            2 => '3',
+            _ => '4',
+        };
+        app.handle_arcade_key_char(answer_key);
+
+        assert_eq!(app.arcade_item_idx, 1);
+        assert_eq!(app.arcade_stats.total_answered, 1);
+        assert_eq!(app.arcade_stats.correct_count, 1);
+
+        // 4. Answer remaining 14 questions to complete session
+        while app.arcade_item_idx < app.arcade_items.len() {
+            let idx = app.arcade_items[app.arcade_item_idx].correct_index;
+            let key = match idx {
+                0 => '1',
+                1 => '2',
+                2 => '3',
+                _ => '4',
+            };
+            app.handle_arcade_key_char(key);
+        }
+
+        // 5. Verify completion recap screen
+        assert_eq!(app.arcade_item_idx, 15);
+        assert_eq!(app.arcade_stats.total_answered, 15);
+        assert_eq!(app.arcade_stats.correct_count, 15);
+
+        terminal
+            .draw(|f| spanglings::tui::ui::draw_ui(f, &app))
+            .unwrap();
+
+        // 6. Test restart with 'r'
+        app.handle_arcade_key_char('r');
+        assert_eq!(app.arcade_item_idx, 0);
+        assert_eq!(app.arcade_selected_topic.as_deref(), Some(engine));
+        assert_eq!(app.arcade_stats.total_answered, 0);
+
+        // Exit before next iteration
+        app.exit_arcade_mode();
+        assert!(!app.show_arcade_modal);
+    }
+}
+
+#[test]
+fn test_tui_enter_arcade_with_topic_aliases_and_showdowns() {
+    use spanglings::core::arcade::ShowdownPair;
+
+    let mut app = App::new_with_state(vec![], false, AppState::default());
+
+    // Matching a showdown pair
+    app.enter_arcade_with_topic("por-para");
+    assert!(app.show_arcade_modal);
+    assert_eq!(app.arcade_selected_showdown, Some(ShowdownPair::PorPara));
+    assert_eq!(app.arcade_selected_topic, None);
+    assert_eq!(app.arcade_items.len(), 10);
+    app.exit_arcade_mode();
+
+    // Matching aliases of specialized engines
+    let aliases = [
+        ("prepositions", "regimen"),
+        ("irregular-verbs", "irregulars"),
+        ("cognates", "false-friends"),
+        ("valores-de-se", "se-matrix"),
+        ("transitions", "connectors"),
+    ];
+
+    for (alias, canonical) in aliases {
+        app.enter_arcade_with_topic(alias);
+        assert!(app.show_arcade_modal);
+        assert_eq!(app.arcade_selected_showdown, None);
+        assert_eq!(app.arcade_selected_topic.as_deref(), Some(canonical));
+        assert_eq!(app.arcade_items.len(), 15);
+        app.exit_arcade_mode();
+    }
+}
