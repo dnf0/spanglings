@@ -1,7 +1,7 @@
 use crate::cli::commands::arcade::{
     evaluate_arcade_choice, play_arcade_sound, select_arcade_items, ArcadeSessionStats,
 };
-use crate::core::arcade::{generate_showdown_items, ArcadeItem, ShowdownPair};
+use crate::core::arcade::{generate_showdown_items, list_showdown_pairs, ArcadeItem, ShowdownPair};
 use crate::core::conjugator::{conjugate_verb, VerbTable};
 use crate::core::exercise::Exercise;
 use crate::core::placement::{
@@ -78,6 +78,7 @@ pub struct App {
 
     // Arcade Arena modal state
     pub show_arcade_modal: bool,
+    pub arcade_selected_showdown: Option<ShowdownPair>,
     pub arcade_items: Vec<ArcadeItem>,
     pub arcade_item_idx: usize,
     pub arcade_stats: ArcadeSessionStats,
@@ -163,6 +164,7 @@ impl App {
             show_mastery_dashboard: false,
             mastery_selected_idx: 0,
             show_arcade_modal: false,
+            arcade_selected_showdown: None,
             arcade_items: Vec::new(),
             arcade_item_idx: 0,
             arcade_stats: ArcadeSessionStats::default(),
@@ -745,6 +747,7 @@ impl App {
         self.show_mastery_dashboard = false;
         self.show_reference = false;
         self.show_arcade_modal = true;
+        self.arcade_selected_showdown = showdown;
 
         if let Some(pair) = showdown {
             self.arcade_items = generate_showdown_items(pair, 10);
@@ -754,12 +757,43 @@ impl App {
 
         if self.arcade_items.is_empty() {
             self.arcade_items = generate_showdown_items(ShowdownPair::PorPara, 10);
+            self.arcade_selected_showdown = Some(ShowdownPair::PorPara);
         }
 
         self.arcade_item_idx = 0;
         self.arcade_stats = ArcadeSessionStats::default();
         self.arcade_flash = None;
         self.arcade_item_start_time = std::time::Instant::now();
+    }
+
+    pub fn cycle_arcade_showdown(&mut self, next: bool) {
+        let pairs = list_showdown_pairs();
+        if pairs.is_empty() {
+            return;
+        }
+
+        let next_pair = match self.arcade_selected_showdown {
+            Some(current) => {
+                if let Some(idx) = pairs.iter().position(|&p| p == current) {
+                    if next {
+                        pairs[(idx + 1) % pairs.len()]
+                    } else {
+                        pairs[(idx + pairs.len() - 1) % pairs.len()]
+                    }
+                } else {
+                    pairs[0]
+                }
+            }
+            None => {
+                if next {
+                    pairs[0]
+                } else {
+                    pairs[pairs.len() - 1]
+                }
+            }
+        };
+
+        self.enter_arcade_mode(Some(next_pair));
     }
 
     pub fn exit_arcade_mode(&mut self) {
@@ -771,6 +805,12 @@ impl App {
         match key {
             KeyCode::Esc | KeyCode::Char('q') | KeyCode::Char('Q') => {
                 self.exit_arcade_mode();
+            }
+            KeyCode::Tab => {
+                self.cycle_arcade_showdown(true);
+            }
+            KeyCode::BackTab => {
+                self.cycle_arcade_showdown(false);
             }
             KeyCode::Left => {
                 self.handle_arcade_key_char('j');
@@ -790,17 +830,21 @@ impl App {
             return;
         }
 
-        // If completed all items, any key or 'r'/'q' exits/restarts
+        // If completed all items, handle restart, cycle, or exit
         if self.arcade_item_idx >= self.arcade_items.len() {
             match c {
                 'r' | 'R' => {
-                    let showdown =
+                    let showdown = self.arcade_selected_showdown.or_else(|| {
                         if self.arcade_items.first().map(|it| it.options.len()) == Some(2) {
                             ShowdownPair::from_str(&self.arcade_items[0].topic)
                         } else {
                             None
-                        };
+                        }
+                    });
                     self.enter_arcade_mode(showdown);
+                }
+                's' | 'S' => {
+                    self.cycle_arcade_showdown(true);
                 }
                 _ => {
                     self.exit_arcade_mode();
@@ -811,6 +855,11 @@ impl App {
 
         if c == 'q' || c == 'Q' {
             self.exit_arcade_mode();
+            return;
+        }
+
+        if c == 's' || c == 'S' {
+            self.cycle_arcade_showdown(true);
             return;
         }
 
