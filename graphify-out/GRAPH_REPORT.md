@@ -1,16 +1,16 @@
-# Graph Report - spanglings  (2026-08-28)
+# Graph Report - spanglings  (2026-08-29)
 
 ## Corpus Check
-- 469 files · ~183,943 words
+- 484 files · ~214,018 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2999 nodes · 3379 edges · 438 communities (430 shown, 8 thin omitted)
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 181 edges (avg confidence: 0.85)
+- 3173 nodes · 3674 edges · 445 communities (438 shown, 7 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 210 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5d35eb8d`
+- Built from commit: `4a43c120`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -28,7 +28,7 @@
 - progress.rs
 - Spanglings 🇪🇸 🦀
 - get_reference_card
-- drill_tests.rs
+- DrillItem
 - Commands
 - File Structure
 - Baseline 01: Present Irregular 'Yo' Forms
@@ -150,7 +150,7 @@
 - Discoverability, Portability & Zero-Setup CLI Implementation Plan
 - Spanglings Product & Engineering Backlog
 - Spanglings Init Subcommand Implementation Plan
-- get_blitz_items
+- exercise_todo_tests.rs
 - Smart Diagnostics & Pedagogical Enhancements Implementation Plan
 - generate_completions_string
 - check.rs
@@ -191,7 +191,7 @@
 - hook.rs
 - Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs Implementation Plan
 - Spanglings Next-Gen Capabilities Implementation Plan
-- SrsItem
+- Adaptive Weakness-Driven Drills, Dynamic Question Bank & TUI Concept Mastery Dashboard Design
 - Diagnostic
 - System Design 01: Distributed Failover
 - System Design 02: Distributed Transactions
@@ -222,7 +222,7 @@
 - compilerOptions
 - Standard Spanish & General Conversational Curriculum Expansion Implementation Plan
 - ConceptId
-- run_tui_app
+- app.rs
 - draw_ui
 - TourStation
 - Diagnostic Placement Test & Level Fast-Track Implementation Plan
@@ -346,8 +346,8 @@
 - Conversational Markers 04: Emphatic Refusal: Ni hablar & Ni de broma
 - Conversational Markers 05: Courteous Formulas: Faltaría más
 - Conversational Markers 06: Digressive Markers: Por cierto & A propósito
-- Exercise
-- get_exercises_json
+- Combinatorial Grammar Question Engine, Adaptive Weakness Drills & TUI Mastery Dashboard Design
+- Combinatorial Grammar Question Engine, Adaptive Weakness Drills & TUI Mastery Dashboard Implementation Plan
 - Spanglings Onboarding & Learner's Guide 🇪🇸 🦀
 - 💻 CLI Commands
 - Grammar Reference Cards & Cheat Sheets
@@ -433,47 +433,54 @@
 - Discourse Connectors 06: Con Todo y Con Eso (Adversative Synthesis)
 - Changelog
 - Design Specification: Informative & Non-Spoiling Exercise TODOs
-- sync.rs
+- exercise_validity_tests.rs
 - Informative & Non-Spoiling Exercise TODOs Implementation Plan
 - Rich Context Drill Prompts & Topic Cheat Sheets Implementation Plan
-- .load_from_path
-- .current_exercise
-- weakness_profiler_tests.rs
+- .from_str
+- select_arcade_items
+- Design Specification: Spanglings Rapid Single-Key ADHD Arcade & Showdown Engine
 - Functional Semantic Grammar Keys & Communicative Glosses Design Specification
 - Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan
-- run_init
+- Exercise
+- SrsItem
+- .load_from_path
+- sync.rs
+- get_exercises_json
+- weakness_profiler_tests.rs
 - .on_key
-- json_output_tests.rs
+- Rapid Single-Key ADHD Arcade & Showdown Engine Implementation Plan
 - pack.rs
+- Design Specification: Expanded 16-Pair Spanish Binary Contrast Showdowns
+- Implementation Plan: Expanded 16-Pair Spanish Binary Contrast Showdowns
 
 ## God Nodes (most connected - your core abstractions)
-1. `App` - 75 edges
-2. `Exercise` - 47 edges
-3. `AppState` - 43 edges
+1. `App` - 93 edges
+2. `Exercise` - 49 edges
+3. `AppState` - 47 edges
 4. `get_reference_card()` - 30 edges
-5. `create_sample_exercises()` - 27 edges
+5. `create_sample_exercises()` - 28 edges
 6. `validate_submission()` - 25 edges
-7. `new_test_app()` - 24 edges
-8. `find_all_exercises_or_embedded()` - 21 edges
-9. `draw_ui()` - 21 edges
-10. `Grammar Reference Cards & Cheat Sheets` - 21 edges
+7. `draw_ui()` - 25 edges
+8. `new_test_app()` - 24 edges
+9. `find_all_exercises_or_embedded()` - 22 edges
+10. `Level` - 21 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `test_list_exercises_json_serialization()` --calls--> `get_exercises_json()`  [INFERRED]
-  tests/json_output_tests.rs → src/cli/commands/list.rs
 - `test_progress_json_serialization()` --calls--> `get_progress_json()`  [INFERRED]
   tests/json_output_tests.rs → src/cli/commands/progress.rs
 - `test_progress_json_includes_weak_topics_and_recommendations()` --calls--> `get_progress_json()`  [INFERRED]
   tests/weakness_profiler_tests.rs → src/cli/commands/progress.rs
+- `test_tui_all_16_showdown_pairs_lifecycle_and_rendering()` --calls--> `list_showdown_pairs()`  [INFERRED]
+  tests/tui_arcade_tests.rs → src/core/arcade.rs
+- `test_tui_arcade_showdown_cycling_navigation()` --calls--> `list_showdown_pairs()`  [INFERRED]
+  tests/tui_arcade_tests.rs → src/core/arcade.rs
 - `test_find_all_exercises_or_embedded_fallback()` --calls--> `find_all_exercises_or_embedded()`  [INFERRED]
   tests/embedded_tests.rs → src/core/curriculum.rs
-- `test_state_fast_track_level()` --calls--> `get_embedded_exercises()`  [INFERRED]
-  tests/srs_tests.rs → src/core/embedded.rs
 
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (438 total, 8 thin omitted)
+## Communities (445 total, 7 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -485,15 +492,15 @@ Nodes (19): 1.1 Problem Statement, 1.2 The Solution: Spanglings, 1. Executive Su
 
 ### Community 2 - "App"
 Cohesion: 0.06
-Nodes (5): App, AppMode, Self, String, Vec
+Nodes (6): Instant, App, Option, Self, String, Vec
 
 ### Community 3 - "exercise.rs"
-Cohesion: 0.13
-Nodes (17): ExerciseType, parse_string_list(), ParseExerciseTypeError, Display, Err, Formatter, FromStr, P (+9 more)
+Cohesion: 0.15
+Nodes (16): DiagnosticRule, ExerciseType, parse_optional_string(), parse_string_list(), ParseExerciseTypeError, Display, Err, Formatter (+8 more)
 
 ### Community 4 - "embedded.rs"
-Cohesion: 0.25
-Nodes (12): Dir, collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir(), P, Path, Result (+4 more)
+Cohesion: 0.15
+Nodes (17): Dir, Option, Result, run_init(), collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir() (+9 more)
 
 ### Community 7 - "AppState"
 Cohesion: 0.17
@@ -519,9 +526,9 @@ Nodes (22): 1. 🚀 Interactive Terminal UI (`spanglings` / `spanglings tui`), 2
 Cohesion: 0.09
 Nodes (36): print_topic_catalog(), Option, Result, show_explanation(), get_grammar_concept(), get_reference_card(), GrammarConcept, list_grammar_concepts() (+28 more)
 
-### Community 16 - "drill_tests.rs"
-Cohesion: 0.14
-Nodes (16): DrillEvaluation, DrillItem, evaluate_drill_answer(), get_drill_items(), get_topic_cheat_sheet(), Option, Result, String (+8 more)
+### Community 16 - "DrillItem"
+Cohesion: 0.05
+Nodes (44): BlitzItem, BlitzResult, evaluate_blitz_answer(), get_blitz_items(), From, Option, Result, Self (+36 more)
 
 ### Community 17 - "Commands"
 Cohesion: 0.46
@@ -1007,9 +1014,9 @@ Nodes (19): 💻 Focus Area 10: VS Code & Cursor IDE Extension (`spanglings-vsco
 Cohesion: 0.29
 Nodes (6): Spanglings Init Subcommand Implementation Plan, Task 1: Create Integration Tests, Task 2: Implement Init Subcommand Command Handler, Task 3: Update CLI Definition and Main Dispatcher, Task 4: Verification and Code Quality, Task 5: Commit changes
 
-### Community 140 - "get_blitz_items"
-Cohesion: 0.18
-Nodes (12): BlitzItem, BlitzResult, evaluate_blitz_answer(), get_blitz_items(), Option, Result, String, Vec (+4 more)
+### Community 140 - "exercise_todo_tests.rs"
+Cohesion: 0.13
+Nodes (21): AccentResult, check_accent_match(), String, strip_accents(), normalize(), String, check_solution_leakage(), collect_md_paths() (+13 more)
 
 ### Community 141 - "Smart Diagnostics & Pedagogical Enhancements Implementation Plan"
 Cohesion: 0.33
@@ -1140,12 +1147,12 @@ Cohesion: 0.14
 Nodes (19): print_conjugation_summary(), Option, Result, run_conjugate(), conjugate_verb(), get_irregular_verb(), ImperativeForms, PronounForms (+11 more)
 
 ### Community 173 - "Level"
-Cohesion: 0.07
-Nodes (47): R, Option, Result, String, run_test(), run_test_with_io(), Level, Display (+39 more)
+Cohesion: 0.12
+Nodes (28): Option, R, Result, String, run_test(), run_test_with_io(), Level, Display (+20 more)
 
 ### Community 174 - "tui_tests.rs"
-Cohesion: 0.17
-Nodes (29): create_sample_exercises(), new_test_app(), Vec, test_app_draw_ui_in_search_mode(), test_app_draw_ui_renders_without_panicking(), test_app_first_run_welcome_state_initialization(), test_app_initialization_and_navigation(), test_app_initialization_with_embedded_fallback() (+21 more)
+Cohesion: 0.16
+Nodes (30): create_sample_exercises(), new_test_app(), Vec, test_app_draw_ui_in_search_mode(), test_app_draw_ui_renders_without_panicking(), test_app_first_run_welcome_state_initialization(), test_app_initialization_and_navigation(), test_app_initialization_with_embedded_fallback() (+22 more)
 
 ### Community 175 - "evaluate_current_exercise_in"
 Cohesion: 0.19
@@ -1171,9 +1178,9 @@ Nodes (6): Focus Area 5: Verb Conjugator, Git Workflow Hooks, and Custom Packs I
 Cohesion: 0.25
 Nodes (7): Spanglings Next-Gen Capabilities Implementation Plan, Task 1: In-TUI Verb Conjugator Modal (`SPANG-050`), Task 2: In-TUI Grammar Reference Browser & Help Modals (`SPANG-051`, `SPANG-053`), Task 3: Advanced C1 Technical, RFC & Professional Track Expansion (`SPANG-060` - `SPANG-063`), Task 4: Anki Deck, Markdown Study Notes Exporter & State Sync (`SPANG-070` - `SPANG-072`), Task 5: Native Language Server Protocol (LSP) Engine (`SPANG-080` - `SPANG-082`), Task 6: Documentation, ADR & Full System Verification
 
-### Community 183 - "SrsItem"
-Cohesion: 0.17
-Nodes (9): calculate_sm2_review(), DateTime, Default, Option, Self, Utc, SrsItem, test_sm2_repetition_intervals() (+1 more)
+### Community 183 - "Adaptive Weakness-Driven Drills, Dynamic Question Bank & TUI Concept Mastery Dashboard Design"
+Cohesion: 0.14
+Nodes (13): 1. Executive Summary, 2.1 Expanded `DrillItem` & Question Bank, 2.2 Question Bank Expansion, 2.3 Dynamic Exercise-to-Drill Transformer, 2. Architecture & Data Structures, 3.1 Adaptive Question Selection, 3.2 Real-time Live State Updating, 3.3 Post-Session Mastery Summary (+5 more)
 
 ### Community 184 - "Diagnostic"
 Cohesion: 0.50
@@ -1289,15 +1296,15 @@ Nodes (8): Standard Spanish & General Conversational Curriculum Expansion Implem
 
 ### Community 213 - "ConceptId"
 Cohesion: 0.13
-Nodes (21): From, ConceptCategory, ConceptId, ConceptNode, get_default_linguistic_graph(), LinguisticGraph, Display, Formatter (+13 more)
+Nodes (21): ConceptCategory, ConceptId, ConceptNode, get_default_linguistic_graph(), LinguisticGraph, Display, Formatter, From (+13 more)
 
-### Community 214 - "run_tui_app"
-Cohesion: 0.25
-Nodes (8): B, Result, run_tui_app(), RawModeGuard, Drop, Result, start_tui(), Terminal
+### Community 214 - "app.rs"
+Cohesion: 0.13
+Nodes (12): B, KeyCode, AppMode, Result, run_tui_app(), RawModeGuard, Drop, Result (+4 more)
 
 ### Community 215 - "draw_ui"
-Cohesion: 0.41
-Nodes (15): Frame, Rect, centered_rect(), draw_conjugator_modal(), draw_footer(), draw_header(), draw_help_modal(), draw_left_pane() (+7 more)
+Cohesion: 0.35
+Nodes (18): Frame, Rect, centered_rect(), draw(), draw_arcade_modal(), draw_conjugator_modal(), draw_footer(), draw_header() (+10 more)
 
 ### Community 216 - "TourStation"
 Cohesion: 0.21
@@ -1320,8 +1327,8 @@ Cohesion: 0.18
 Nodes (10): activationEvents, description, displayName, engines, vscode, license, main, name (+2 more)
 
 ### Community 221 - "find_all_exercises_or_embedded"
-Cohesion: 0.09
-Nodes (23): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), collect_md_files(), find_all_exercises() (+15 more)
+Cohesion: 0.11
+Nodes (21): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), collect_md_files(), Curriculum (+13 more)
 
 ### Community 222 - "devDependencies"
 Cohesion: 0.22
@@ -1787,13 +1794,13 @@ Nodes (4): Context, Conversational Markers 05: Courteous Formulas: Faltaría má
 Cohesion: 0.40
 Nodes (4): Context, Conversational Markers 06: Digressive Markers: Por cierto & A propósito, Exercise, Instructions
 
-### Community 338 - "Exercise"
-Cohesion: 0.20
-Nodes (19): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+11 more)
+### Community 338 - "Combinatorial Grammar Question Engine, Adaptive Weakness Drills & TUI Mastery Dashboard Design"
+Cohesion: 0.17
+Nodes (11): 1. Executive Summary, 2.1 Combinatorial Question Generation (`src/core/generator.rs`), 2.2 Coverage across all 24 `GrammarConcept`s, 2. Architecture & Data Structures, 3.1 Adaptive Question Sampling, 3.2 Real-time Live State Updates, 3. Adaptive Weakness-Driven Engine (`--weak`), 4.1 Modal View & Navigation (+3 more)
 
-### Community 339 - "get_exercises_json"
-Cohesion: 0.47
-Nodes (5): get_exercises_json(), list_exercises(), Option, Result, String
+### Community 339 - "Combinatorial Grammar Question Engine, Adaptive Weakness Drills & TUI Mastery Dashboard Implementation Plan"
+Cohesion: 0.29
+Nodes (6): Combinatorial Grammar Question Engine, Adaptive Weakness Drills & TUI Mastery Dashboard Implementation Plan, Task 1: Combinatorial Grammar Question Generator (`src/core/generator.rs`), Task 2: Curriculum Exercise-to-Drill Extractor, Task 3: Adaptive Weakness-Driven Drill Engine & CLI Flags, Task 4: TUI Concept Mastery & Weakness Dashboard Modal (`[m]`), Task 5: End-to-End Workspace Verification & Knowledge Graph Update
 
 ### Community 340 - "Spanglings Onboarding & Learner's Guide 🇪🇸 🦀"
 Cohesion: 0.06
@@ -2135,17 +2142,25 @@ Nodes (24): [0.1.0] - 2026-08-27, [0.1.1] - 2026-08-27, [0.2.0] - 2026-08-27, [0
 Cohesion: 0.29
 Nodes (6): 1. Context & Motivation, 2. Standardized Exercise File Template, 3. Strict Non-Spoiling Rules & Validation Policy, 4. TUI, LSP & Tooling Enhancements, 5. Phased Execution Plan, Design Specification: Informative & Non-Spoiling Exercise TODOs
 
-### Community 425 - "sync.rs"
-Cohesion: 0.29
-Nodes (10): export_state_json(), import_state_json(), PortableStateBackup, DateTime, Option, Result, String, Utc (+2 more)
+### Community 425 - "exercise_validity_tests.rs"
+Cohesion: 0.47
+Nodes (5): collect_md_paths(), Path, PathBuf, Vec, test_all_curriculum_exercises_are_valid_and_solvable()
 
 ### Community 428 - "Rich Context Drill Prompts & Topic Cheat Sheets Implementation Plan"
 Cohesion: 0.40
 Nodes (4): Rich Context Drill Prompts & Topic Cheat Sheets Implementation Plan, Task 1: Data Model Expansion & Topic Cheat Sheets Engine, Task 2: Interactive Prompt Layout & In-Drill Live Hint Handling, Task 3: Blitz Command Synchronization & Full Integration Verification
 
-### Community 429 - ".load_from_path"
-Cohesion: 0.27
-Nodes (5): Into, Path, PathBuf, Result, Self
+### Community 429 - ".from_str"
+Cohesion: 0.40
+Nodes (4): ParseLevelError, Err, Self, String
+
+### Community 430 - "select_arcade_items"
+Cohesion: 0.06
+Nodes (39): ArcadeChoiceResult, ArcadeSessionStats, evaluate_arcade_choice(), get_combo_rank(), play_arcade_sound(), print_arcade_summary(), RawModeGuard, Drop (+31 more)
+
+### Community 431 - "Design Specification: Spanglings Rapid Single-Key ADHD Arcade & Showdown Engine"
+Cohesion: 0.12
+Nodes (16): 1. Problem Statement & Motivation, 2.1 Two Zero-Friction Rapid Modes, 2.2 Hyper-Speed Auto-Advance Mechanics, 2. Core Architecture & Game Loops, 3.1 Showdown Pairs, 3.2 Arcade Item & Smart Distractor Generation, 3. Data Structures & Engine (`src/core/arcade.rs`), 4.1 Combo Multipliers & Ranks (+8 more)
 
 ### Community 432 - "Functional Semantic Grammar Keys & Communicative Glosses Design Specification"
 Cohesion: 0.18
@@ -2155,33 +2170,57 @@ Nodes (10): 1. Drill & Blitz Prompt Layout, 1. Objective & Motivation, 2. Archit
 Cohesion: 0.29
 Nodes (6): Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan, Task 1: Core `GrammarConcept` Data Structure & 24-Concept Metadata Catalog, Task 2: CLI `spanglings explain` / `spanglings reference` Functional Listing & Semantic Discovery, Task 3: Drill & Blitz Prompt Layout Enhancement with Communicative Glosses, Task 4: TUI Reference Browser & Modal Integration with Functional Glosses, Task 5: End-to-End Workspace Verification & Knowledge Graph Update
 
-### Community 434 - "run_init"
-Cohesion: 0.33
-Nodes (5): Option, Result, run_init(), test_run_init_creates_exercise_workspace(), test_run_init_force_flag()
+### Community 434 - "Exercise"
+Cohesion: 0.27
+Nodes (15): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+7 more)
 
-### Community 437 - "pack.rs"
+### Community 435 - "SrsItem"
+Cohesion: 0.17
+Nodes (9): calculate_sm2_review(), DateTime, Default, Option, Self, Utc, SrsItem, test_sm2_repetition_intervals() (+1 more)
+
+### Community 436 - ".load_from_path"
+Cohesion: 0.27
+Nodes (5): Into, Path, PathBuf, Result, Self
+
+### Community 437 - "sync.rs"
+Cohesion: 0.29
+Nodes (10): export_state_json(), import_state_json(), PortableStateBackup, DateTime, Option, Result, String, Utc (+2 more)
+
+### Community 438 - "get_exercises_json"
+Cohesion: 0.28
+Nodes (7): get_exercises_json(), list_exercises(), Option, Result, String, test_list_exercises_json_serialization(), test_progress_json_serialization()
+
+### Community 441 - "Rapid Single-Key ADHD Arcade & Showdown Engine Implementation Plan"
+Cohesion: 0.33
+Nodes (5): Rapid Single-Key ADHD Arcade & Showdown Engine Implementation Plan, Task 1: Core Arcade & Showdown Engine (`src/core/arcade.rs`), Task 2: CLI Arcade Command (`src/cli/commands/arcade.rs` & CLI Dispatch), Task 3: In-TUI Interactive Arcade Arena Modal (`[x]` / `[d]`), Task 4: End-to-End Verification & Knowledge Graph Update
+
+### Community 442 - "pack.rs"
 Cohesion: 0.33
 Nodes (8): collect_markdown_files(), Path, PathBuf, Result, Vec, run_pack_create(), run_pack_validate(), test_pack_create_and_validate()
 
+### Community 443 - "Design Specification: Expanded 16-Pair Spanish Binary Contrast Showdowns"
+Cohesion: 0.22
+Nodes (8): 1. Motivation & Linguistic Scope, 2. The 16 Binary Showdown Pairs, 3.1 Enum Definition Update, 3.2 High-Yield Sentence Pools, 3. Core Engine Architecture (`src/core/arcade.rs`), 4. CLI & TUI Updates, 5. Verification Plan, Design Specification: Expanded 16-Pair Spanish Binary Contrast Showdowns
+
 ## Knowledge Gaps
-- **1409 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+1404 more)
+- **1453 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+1448 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **7 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Exercise` connect `Exercise` to `App`, `exercise.rs`, `embedded.rs`, `AppState`, `validate_submission`, `progress.rs`, `Level`, `check.rs`, `.current_exercise`, `evaluate_current_exercise_in`, `tui_tests.rs`, `search_exercises`, `find_all_exercises_or_embedded`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `App` connect `App` to `AppState`, `validate_submission`, `conjugate_verb`, `Level`, `.current_exercise`, `tui_tests.rs`, `Exercise`, `.on_key`, `run_tui_app`, `draw_ui`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
-- **Why does `AppState` connect `AppState` to `App`, `sync.rs`, `.load_from_path`, `progress.rs`, `evaluate_current_exercise_in`, `Exercise`, `SrsItem`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+- **Why does `Exercise` connect `Exercise` to `App`, `exercise.rs`, `embedded.rs`, `AppState`, `validate_submission`, `progress.rs`, `Level`, `check.rs`, `evaluate_current_exercise_in`, `tui_tests.rs`, `app.rs`, `search_exercises`, `find_all_exercises_or_embedded`?**
+  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+- **Why does `App` connect `App` to `AppState`, `validate_submission`, `conjugate_verb`, `Level`, `select_arcade_items`, `tui_tests.rs`, `Exercise`, `app.rs`, `draw_ui`, `.on_key`?**
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+- **Why does `AppState` connect `AppState` to `App`, `progress.rs`, `select_arcade_items`, `evaluate_current_exercise_in`, `DrillItem`, `Exercise`, `SrsItem`, `.load_from_path`, `sync.rs`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **Are the 27 inferred relationships involving `get_reference_card()` (e.g. with `compute_hover()` and `draw_reference_browser_modal()`) actually correct?**
   _`get_reference_card()` has 27 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `esbuild`, `minify` to the rest of the system?**
-  _1409 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1453 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `App` be split into smaller, more focused modules?**
-  _Cohesion score 0.0641025641025641 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.0611764705882353 - nodes in this community are weakly interconnected._
