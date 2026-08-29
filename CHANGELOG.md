@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.1] - 2026-08-29
+
+### Added
+- **Scientific SM-2 Concept Mastery Model**:
+  - Replaced flat $+30\%$ increments with a mathematically grounded SuperMemo SM-2 interval expansion and log-scale memory stability curve:
+    $$\text{Mastery Score} = \min\left(1.0, \frac{\text{reps}}{6}\right) \times \min\left(1.0, \frac{\ln(1 + \text{interval})}{\ln(61)}\right) \times \left(\frac{EF}{2.5}\right)$$
+  - Extended `ConceptMastery` to track and persist `repetitions`, `interval_days`, and adaptive `ease_factor` with backward-compatible serde defaults.
+- **Symmetric Leitner Step-Inversion Rollback on Lapses**:
+  - Replaced the harsh 0% hard-reset on mistakes with a fair, intuitive 1-step rollback ladder ($R = R.\text{saturating\_sub}(1)$, interval $6\text{d} \to 1\text{d} \to 0\text{d}$), preserving prior learning while ensuring lapses decrement ease factor for adaptive targeting (`-w`).
+- **Post-Workout Arcade Mistakes Breakdown with Explanations**:
+  - Added dedicated `❌ Review Missed Questions` cards in both CLI (`print_arcade_summary`) and TUI recap modals, rendering sentence prompts, user answers, correct answers, and grammatical rule explanations.
+  - Added celebratory perfect-run recognition for 100% accuracy runs.
+
 ## [0.5.0] - 2026-08-29
 
 ### Added

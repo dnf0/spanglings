@@ -5788,83 +5788,6 @@
       "source_location": "L1"
     },
     {
-      "id": "src_cli_commands_explain",
-      "label": "explain.rs",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "explain.rs",
-      "source_file": "src/cli/commands/explain.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_cli_commands_explain_print_topic_catalog",
-      "label": "print_topic_catalog()",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "print_topic_catalog()",
-      "source_file": "src/cli/commands/explain.rs",
-      "source_location": "L29"
-    },
-    {
-      "id": "src_cli_commands_explain_rs_option",
-      "label": "Option",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_explain_rs_result",
-      "label": "Result",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_cli_commands_explain_show_explanation",
-      "label": "show_explanation()",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "show_explanation()",
-      "source_file": "src/cli/commands/explain.rs",
-      "source_location": "L4"
-    },
-    {
-      "id": "src_core_reference",
-      "label": "reference.rs",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "reference.rs",
-      "source_file": "src/core/reference.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_core_reference_get_grammar_concept",
-      "label": "get_grammar_concept()",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "get_grammar_concept()",
-      "source_file": "src/core/reference.rs",
-      "source_location": "L510"
-    },
-    {
       "id": "src_core_reference_get_reference_card",
       "label": "get_reference_card()",
       "_origin": "ast",
@@ -5874,50 +5797,6 @@
       "norm_label": "get_reference_card()",
       "source_file": "src/core/reference.rs",
       "source_location": "L556"
-    },
-    {
-      "id": "src_core_reference_grammarconcept",
-      "label": "GrammarConcept",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "grammarconcept",
-      "source_file": "src/core/reference.rs",
-      "source_location": "L33"
-    },
-    {
-      "id": "src_core_reference_list_grammar_concepts",
-      "label": "list_grammar_concepts()",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "list_grammar_concepts()",
-      "source_file": "src/core/reference.rs",
-      "source_location": "L506"
-    },
-    {
-      "id": "src_core_reference_list_reference_topics",
-      "label": "list_reference_topics()",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "list_reference_topics()",
-      "source_file": "src/core/reference.rs",
-      "source_location": "L28"
-    },
-    {
-      "id": "src_core_reference_rs_option",
-      "label": "Option",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
     },
     {
       "id": "tests_reference_tests",
@@ -6215,28 +6094,6 @@
       "norm_label": "test_get_voseo_reference_card()",
       "source_file": "tests/reference_tests.rs",
       "source_location": "L77"
-    },
-    {
-      "id": "tests_reference_tests_test_list_reference_topics",
-      "label": "test_list_reference_topics()",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "test_list_reference_topics()",
-      "source_file": "tests/reference_tests.rs",
-      "source_location": "L186"
-    },
-    {
-      "id": "tests_reference_tests_test_semantic_keyword_concept_lookups",
-      "label": "test_semantic_keyword_concept_lookups()",
-      "_origin": "ast",
-      "community": 15,
-      "community_name": "get_reference_card",
-      "file_type": "code",
-      "norm_label": "test_semantic_keyword_concept_lookups()",
-      "source_file": "tests/reference_tests.rs",
-      "source_location": "L261"
     },
     {
       "id": "tests_reference_tests_test_unknown_topic_returns_none",
@@ -11319,17 +11176,6 @@
       "source_location": ""
     },
     {
-      "id": "keyevent",
-      "label": "KeyEvent",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": "keyevent",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_tui_app_app",
       "label": "App",
       "_origin": "ast",
@@ -11339,6 +11185,39 @@
       "norm_label": "app",
       "source_file": "src/tui/app.rs",
       "source_location": "L30"
+    },
+    {
+      "id": "src_tui_app_app_active_list_len",
+      "label": ".active_list_len()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".active_list_len()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L235"
+    },
+    {
+      "id": "src_tui_app_app_current_exercise",
+      "label": ".current_exercise()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".current_exercise()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L181"
+    },
+    {
+      "id": "src_tui_app_app_current_exercise_mut",
+      "label": ".current_exercise_mut()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".current_exercise_mut()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L191"
     },
     {
       "id": "src_tui_app_app_delete_char_backwards",
@@ -11429,28 +11308,6 @@
       "source_location": "L714"
     },
     {
-      "id": "src_tui_app_app_enter_placement_test",
-      "label": ".enter_placement_test()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".enter_placement_test()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L611"
-    },
-    {
-      "id": "src_tui_app_app_enter_reference_browser",
-      "label": ".enter_reference_browser()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".enter_reference_browser()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L501"
-    },
-    {
       "id": "src_tui_app_app_enter_search",
       "label": ".enter_search()",
       "_origin": "ast",
@@ -11517,6 +11374,17 @@
       "source_location": "L512"
     },
     {
+      "id": "src_tui_app_app_exit_search",
+      "label": ".exit_search()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".exit_search()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L252"
+    },
+    {
       "id": "src_tui_app_app_fast_track_placement_levels",
       "label": ".fast_track_placement_levels()",
       "_origin": "ast",
@@ -11526,17 +11394,6 @@
       "norm_label": ".fast_track_placement_levels()",
       "source_file": "src/tui/app.rs",
       "source_location": "L665"
-    },
-    {
-      "id": "src_tui_app_app_handle_key",
-      "label": ".handle_key()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".handle_key()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L984"
     },
     {
       "id": "src_tui_app_app_insert_char",
@@ -11605,37 +11462,15 @@
       "source_location": "L348"
     },
     {
-      "id": "src_tui_app_app_new",
-      "label": ".new()",
+      "id": "src_tui_app_app_next_exercise",
+      "label": ".next_exercise()",
       "_origin": "ast",
       "community": 2,
       "community_name": "App",
       "file_type": "code",
-      "norm_label": ".new()",
+      "norm_label": ".next_exercise()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L94"
-    },
-    {
-      "id": "src_tui_app_app_new_with_state",
-      "label": ".new_with_state()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".new_with_state()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L106"
-    },
-    {
-      "id": "src_tui_app_app_next_mastery_concept",
-      "label": ".next_mastery_concept()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".next_mastery_concept()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L736"
+      "source_location": "L203"
     },
     {
       "id": "src_tui_app_app_next_ref_topic",
@@ -11649,26 +11484,15 @@
       "source_location": "L567"
     },
     {
-      "id": "src_tui_app_app_on_key",
-      "label": ".on_key()",
+      "id": "src_tui_app_app_prev_exercise",
+      "label": ".prev_exercise()",
       "_origin": "ast",
       "community": 2,
       "community_name": "App",
       "file_type": "code",
-      "norm_label": ".on_key()",
+      "norm_label": ".prev_exercise()",
       "source_file": "src/tui/app.rs",
-      "source_location": "L988"
-    },
-    {
-      "id": "src_tui_app_app_prev_mastery_concept",
-      "label": ".prev_mastery_concept()",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": ".prev_mastery_concept()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L743"
+      "source_location": "L217"
     },
     {
       "id": "src_tui_app_app_prev_ref_topic",
@@ -11680,6 +11504,28 @@
       "norm_label": ".prev_ref_topic()",
       "source_file": "src/tui/app.rs",
       "source_location": "L575"
+    },
+    {
+      "id": "src_tui_app_app_reset",
+      "label": ".reset()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".reset()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L421"
+    },
+    {
+      "id": "src_tui_app_app_reset_current_state",
+      "label": ".reset_current_state()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".reset_current_state()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L433"
     },
     {
       "id": "src_tui_app_app_scroll_conjugator_down",
@@ -11737,6 +11583,28 @@
       "source_location": "L354"
     },
     {
+      "id": "src_tui_app_app_submit_current_answer",
+      "label": ".submit_current_answer()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".submit_current_answer()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L358"
+    },
+    {
+      "id": "src_tui_app_app_toggle_hint",
+      "label": ".toggle_hint()",
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "App",
+      "file_type": "code",
+      "norm_label": ".toggle_hint()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L397"
+    },
+    {
       "id": "src_tui_app_app_toggle_mastery_dashboard",
       "label": ".toggle_mastery_dashboard()",
       "_origin": "ast",
@@ -11781,24 +11649,13 @@
       "source_location": "L270"
     },
     {
-      "id": "src_tui_app_rs_into",
-      "label": "Into",
+      "id": "src_tui_app_rs_option",
+      "label": "Option",
       "_origin": "ast",
       "community": 2,
       "community_name": "App",
       "file_type": "code",
-      "norm_label": "into",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_tui_app_rs_self",
-      "label": "Self",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": "self",
+      "norm_label": "option",
       "source_file": "",
       "source_location": ""
     },
@@ -11810,17 +11667,6 @@
       "community_name": "App",
       "file_type": "code",
       "norm_label": "string",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_tui_app_rs_vec",
-      "label": "Vec",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "App",
-      "file_type": "code",
-      "norm_label": "vec",
       "source_file": "",
       "source_location": ""
     },
@@ -13510,40 +13356,18 @@
       "label": "B",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "b",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "src_tui_app",
-      "label": "app.rs",
-      "_origin": "ast",
-      "community": 214,
-      "community_name": "app.rs",
-      "file_type": "code",
-      "norm_label": "app.rs",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "src_tui_app_appmode",
-      "label": "AppMode",
-      "_origin": "ast",
-      "community": 214,
-      "community_name": "app.rs",
-      "file_type": "code",
-      "norm_label": "appmode",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L21"
-    },
-    {
       "id": "src_tui_events",
       "label": "events.rs",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "events.rs",
       "source_file": "src/tui/events.rs",
@@ -13554,7 +13378,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -13565,7 +13389,7 @@
       "label": "run_tui_app()",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "run_tui_app()",
       "source_file": "src/tui/events.rs",
@@ -13576,7 +13400,7 @@
       "label": "tui/mod.rs",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "tui/mod.rs",
       "source_file": "src/tui/mod.rs",
@@ -13587,7 +13411,7 @@
       "label": "RawModeGuard",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "rawmodeguard",
       "source_file": "src/tui/mod.rs",
@@ -13598,7 +13422,7 @@
       "label": ".drop()",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": ".drop()",
       "source_file": "src/tui/mod.rs",
@@ -13609,7 +13433,7 @@
       "label": "Drop",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "drop",
       "source_file": "",
@@ -13620,7 +13444,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -13631,7 +13455,7 @@
       "label": "start_tui()",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "start_tui()",
       "source_file": "src/tui/mod.rs",
@@ -13642,7 +13466,7 @@
       "label": "Terminal",
       "_origin": "ast",
       "community": 214,
-      "community_name": "app.rs",
+      "community_name": "run_tui_app",
       "file_type": "code",
       "norm_label": "terminal",
       "source_file": "",
@@ -14567,7 +14391,7 @@
       "label": "hint.rs",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "hint.rs",
       "source_file": "src/cli/commands/hint.rs",
@@ -14578,7 +14402,7 @@
       "label": "Option",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "option",
       "source_file": "",
@@ -14589,7 +14413,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -14600,7 +14424,7 @@
       "label": "show_hint()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "show_hint()",
       "source_file": "src/cli/commands/hint.rs",
@@ -14611,7 +14435,7 @@
       "label": "run.rs",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "run.rs",
       "source_file": "src/cli/commands/run.rs",
@@ -14622,7 +14446,7 @@
       "label": "reset_exercise()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "reset_exercise()",
       "source_file": "src/cli/commands/run.rs",
@@ -14633,7 +14457,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -14644,7 +14468,7 @@
       "label": "run_exercise()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "run_exercise()",
       "source_file": "src/cli/commands/run.rs",
@@ -14655,7 +14479,7 @@
       "label": "curriculum.rs",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "curriculum.rs",
       "source_file": "src/core/curriculum.rs",
@@ -14666,7 +14490,7 @@
       "label": "collect_md_files()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "collect_md_files()",
       "source_file": "src/core/curriculum.rs",
@@ -14677,7 +14501,7 @@
       "label": "Curriculum",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "curriculum",
       "source_file": "src/core/curriculum.rs",
@@ -14688,7 +14512,7 @@
       "label": "find_all_exercises()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "find_all_exercises()",
       "source_file": "src/core/curriculum.rs",
@@ -14699,7 +14523,7 @@
       "label": "find_all_exercises_or_embedded()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "find_all_exercises_or_embedded()",
       "source_file": "src/core/curriculum.rs",
@@ -14710,62 +14534,29 @@
       "label": "find_exercise_by_query()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "find_exercise_by_query()",
       "source_file": "src/core/curriculum.rs",
       "source_location": "L88"
     },
     {
-      "id": "src_core_curriculum_level_from_str",
-      "label": ".from_str()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": ".from_str()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L35"
-    },
-    {
       "id": "src_core_curriculum_load_curriculum",
       "label": "load_curriculum()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "load_curriculum()",
       "source_file": "src/core/curriculum.rs",
       "source_location": "L112"
     },
     {
-      "id": "src_core_curriculum_parselevelerror",
-      "label": "ParseLevelError",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "parselevelerror",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L30"
-    },
-    {
-      "id": "src_core_curriculum_rs_err",
-      "label": "Err",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "err",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_core_curriculum_rs_option",
       "label": "Option",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "option",
       "source_file": "",
@@ -14776,7 +14567,7 @@
       "label": "P",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "p",
       "source_file": "",
@@ -14787,7 +14578,7 @@
       "label": "Path",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "path",
       "source_file": "",
@@ -14798,31 +14589,9 @@
       "label": "Result",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_self",
-      "label": "Self",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "self",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_string",
-      "label": "String",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "string",
       "source_file": "",
       "source_location": ""
     },
@@ -14831,106 +14600,51 @@
       "label": "Vec",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "vec",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "tests_cli_tests",
-      "label": "cli_tests.rs",
+      "id": "src_core_exercise_exercise",
+      "label": "Exercise",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
-      "norm_label": "cli_tests.rs",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L1"
+      "norm_label": "exercise",
+      "source_file": "src/core/exercise.rs",
+      "source_location": "L55"
     },
     {
-      "id": "tests_cli_tests_test_cli_explain_semantic_lookup_and_glosses",
-      "label": "test_cli_explain_semantic_lookup_and_glosses()",
+      "id": "src_core_exercise_rs_pathbuf",
+      "label": "PathBuf",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
-      "norm_label": "test_cli_explain_semantic_lookup_and_glosses()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L194"
-    },
-    {
-      "id": "tests_cli_tests_test_cli_parsing_subcommands",
-      "label": "test_cli_parsing_subcommands()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "test_cli_parsing_subcommands()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L13"
-    },
-    {
-      "id": "tests_cli_tests_test_cli_tour_command_parsing",
-      "label": "test_cli_tour_command_parsing()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "test_cli_tour_command_parsing()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L161"
+      "norm_label": "pathbuf",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "tests_cli_tests_test_curriculum_discovery_and_query",
       "label": "test_curriculum_discovery_and_query()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "test_curriculum_discovery_and_query()",
       "source_file": "tests/cli_tests.rs",
       "source_location": "L232"
     },
     {
-      "id": "tests_cli_tests_test_explain_command_executes_cleanly",
-      "label": "test_explain_command_executes_cleanly()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "test_explain_command_executes_cleanly()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L179"
-    },
-    {
-      "id": "tests_cli_tests_test_list_and_progress_execute_cleanly",
-      "label": "test_list_and_progress_execute_cleanly()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "test_list_and_progress_execute_cleanly()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L202"
-    },
-    {
-      "id": "tests_cli_tests_test_run_exercise_with_file_path",
-      "label": "test_run_exercise_with_file_path()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "test_run_exercise_with_file_path()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L212"
-    },
-    {
       "id": "tests_extractor_tests",
       "label": "extractor_tests.rs",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "extractor_tests.rs",
       "source_file": "tests/extractor_tests.rs",
@@ -14941,7 +14655,7 @@
       "label": "test_curriculum_exercises_convert_to_drill_items()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "test_curriculum_exercises_convert_to_drill_items()",
       "source_file": "tests/extractor_tests.rs",
@@ -14952,7 +14666,7 @@
       "label": "test_extracted_drill_item_from_custom_markdown()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "test_extracted_drill_item_from_custom_markdown()",
       "source_file": "tests/extractor_tests.rs",
@@ -14963,7 +14677,7 @@
       "label": "test_extracted_drill_items_have_valid_fields()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "test_extracted_drill_items_have_valid_fields()",
       "source_file": "tests/extractor_tests.rs",
@@ -20527,81 +20241,70 @@
       "source_location": "L80"
     },
     {
-      "id": "tests_exercise_parser_tests",
-      "label": "exercise_parser_tests.rs",
+      "id": "tests_exercise_validity_tests",
+      "label": "exercise_validity_tests.rs",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "exercise_parser_tests.rs",
-      "source_file": "tests/exercise_parser_tests.rs",
+      "norm_label": "exercise_validity_tests.rs",
+      "source_file": "tests/exercise_validity_tests.rs",
       "source_location": "L1"
     },
     {
-      "id": "tests_exercise_parser_tests_test_parse_exercise_with_concept_tags_and_comma_separated",
-      "label": "test_parse_exercise_with_concept_tags_and_comma_separated()",
+      "id": "tests_exercise_validity_tests_collect_md_paths",
+      "label": "collect_md_paths()",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "test_parse_exercise_with_concept_tags_and_comma_separated()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L128"
+      "norm_label": "collect_md_paths()",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L8"
     },
     {
-      "id": "tests_exercise_parser_tests_test_parse_exercise_with_concepts_and_prerequisites",
-      "label": "test_parse_exercise_with_concepts_and_prerequisites()",
+      "id": "tests_exercise_validity_tests_rs_path",
+      "label": "Path",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "test_parse_exercise_with_concepts_and_prerequisites()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L90"
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "tests_exercise_parser_tests_test_parse_invalid_level_error",
-      "label": "test_parse_invalid_level_error()",
+      "id": "tests_exercise_validity_tests_rs_pathbuf",
+      "label": "PathBuf",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "test_parse_invalid_level_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L70"
+      "norm_label": "pathbuf",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "tests_exercise_parser_tests_test_parse_invalid_type_error",
-      "label": "test_parse_invalid_type_error()",
+      "id": "tests_exercise_validity_tests_rs_vec",
+      "label": "Vec",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "test_parse_invalid_type_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L80"
+      "norm_label": "vec",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "tests_exercise_parser_tests_test_parse_missing_id_error",
-      "label": "test_parse_missing_id_error()",
+      "id": "tests_exercise_validity_tests_test_all_curriculum_exercises_are_valid_and_solvable",
+      "label": "test_all_curriculum_exercises_are_valid_and_solvable()",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "test_parse_missing_id_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L60"
-    },
-    {
-      "id": "tests_exercise_parser_tests_test_parse_valid_markdown_exercise",
-      "label": "test_parse_valid_markdown_exercise()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "exercise.rs",
-      "file_type": "code",
-      "norm_label": "test_parse_valid_markdown_exercise()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L5"
+      "norm_label": "test_all_curriculum_exercises_are_valid_and_solvable()",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L27"
     },
     {
       "id": "exercises_01_ser_vs_estar_05_passive_vs_resultant_state",
@@ -28914,6 +28617,17 @@
       "source_location": "L16"
     },
     {
+      "id": "tests_srs_tests_test_state_fast_track_level",
+      "label": "test_state_fast_track_level()",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "test_state_fast_track_level()",
+      "source_file": "tests/srs_tests.rs",
+      "source_location": "L73"
+    },
+    {
       "id": "exercises_03_subjunctive_weirdo_04_recommendations_influence",
       "label": "04_recommendations_influence.md",
       "_origin": "ast",
@@ -30495,7 +30209,7 @@
       "node_kind": "heading",
       "norm_label": "[0.1.0] - 2026-08-27",
       "source_file": "CHANGELOG.md",
-      "source_location": "L154"
+      "source_location": "L167"
     },
     {
       "id": "changelog_0_1_1_2026_08_27",
@@ -30507,7 +30221,7 @@
       "node_kind": "heading",
       "norm_label": "[0.1.1] - 2026-08-27",
       "source_file": "CHANGELOG.md",
-      "source_location": "L146"
+      "source_location": "L159"
     },
     {
       "id": "changelog_0_2_0_2026_08_27",
@@ -30519,7 +30233,7 @@
       "node_kind": "heading",
       "norm_label": "[0.2.0] - 2026-08-27",
       "source_file": "CHANGELOG.md",
-      "source_location": "L135"
+      "source_location": "L148"
     },
     {
       "id": "changelog_0_3_0_2026_08_27",
@@ -30531,7 +30245,7 @@
       "node_kind": "heading",
       "norm_label": "[0.3.0] - 2026-08-27",
       "source_file": "CHANGELOG.md",
-      "source_location": "L115"
+      "source_location": "L128"
     },
     {
       "id": "changelog_0_4_0_2026_08_28",
@@ -30543,7 +30257,7 @@
       "node_kind": "heading",
       "norm_label": "[0.4.0] - 2026-08-28",
       "source_file": "CHANGELOG.md",
-      "source_location": "L95"
+      "source_location": "L108"
     },
     {
       "id": "changelog_0_4_1_2026_08_28",
@@ -30555,7 +30269,7 @@
       "node_kind": "heading",
       "norm_label": "[0.4.1] - 2026-08-28",
       "source_file": "CHANGELOG.md",
-      "source_location": "L85"
+      "source_location": "L98"
     },
     {
       "id": "changelog_0_4_2_2026_08_28",
@@ -30567,7 +30281,7 @@
       "node_kind": "heading",
       "norm_label": "[0.4.2] - 2026-08-28",
       "source_file": "CHANGELOG.md",
-      "source_location": "L78"
+      "source_location": "L91"
     },
     {
       "id": "changelog_0_4_3_2026_08_28",
@@ -30579,7 +30293,7 @@
       "node_kind": "heading",
       "norm_label": "[0.4.3] - 2026-08-28",
       "source_file": "CHANGELOG.md",
-      "source_location": "L69"
+      "source_location": "L82"
     },
     {
       "id": "changelog_0_4_4_2026_08_28",
@@ -30591,7 +30305,7 @@
       "node_kind": "heading",
       "norm_label": "[0.4.4] - 2026-08-28",
       "source_file": "CHANGELOG.md",
-      "source_location": "L60"
+      "source_location": "L73"
     },
     {
       "id": "changelog_0_4_5_2026_08_28",
@@ -30603,7 +30317,7 @@
       "node_kind": "heading",
       "norm_label": "[0.4.5] - 2026-08-28",
       "source_file": "CHANGELOG.md",
-      "source_location": "L46"
+      "source_location": "L59"
     },
     {
       "id": "changelog_0_5_0_2026_08_29",
@@ -30614,6 +30328,18 @@
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "[0.5.0] - 2026-08-29",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L21"
+    },
+    {
+      "id": "changelog_0_5_1_2026_08_29",
+      "label": "[0.5.1] - 2026-08-29",
+      "_origin": "ast",
+      "community": 423,
+      "community_name": "Changelog",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "[0.5.1] - 2026-08-29",
       "source_file": "CHANGELOG.md",
       "source_location": "L8"
     },
@@ -30630,7 +30356,7 @@
       "source_location": "L10"
     },
     {
-      "id": "changelog_added_117",
+      "id": "changelog_added_110",
       "label": "Added",
       "_origin": "ast",
       "community": 423,
@@ -30639,10 +30365,10 @@
       "node_kind": "heading",
       "norm_label": "added",
       "source_file": "CHANGELOG.md",
-      "source_location": "L117"
+      "source_location": "L110"
     },
     {
-      "id": "changelog_added_137",
+      "id": "changelog_added_130",
       "label": "Added",
       "_origin": "ast",
       "community": 423,
@@ -30651,10 +30377,10 @@
       "node_kind": "heading",
       "norm_label": "added",
       "source_file": "CHANGELOG.md",
-      "source_location": "L137"
+      "source_location": "L130"
     },
     {
-      "id": "changelog_added_156",
+      "id": "changelog_added_150",
       "label": "Added",
       "_origin": "ast",
       "community": 423,
@@ -30663,10 +30389,10 @@
       "node_kind": "heading",
       "norm_label": "added",
       "source_file": "CHANGELOG.md",
-      "source_location": "L156"
+      "source_location": "L150"
     },
     {
-      "id": "changelog_added_48",
+      "id": "changelog_added_169",
       "label": "Added",
       "_origin": "ast",
       "community": 423,
@@ -30675,10 +30401,10 @@
       "node_kind": "heading",
       "norm_label": "added",
       "source_file": "CHANGELOG.md",
-      "source_location": "L48"
+      "source_location": "L169"
     },
     {
-      "id": "changelog_added_97",
+      "id": "changelog_added_23",
       "label": "Added",
       "_origin": "ast",
       "community": 423,
@@ -30687,7 +30413,19 @@
       "node_kind": "heading",
       "norm_label": "added",
       "source_file": "CHANGELOG.md",
-      "source_location": "L97"
+      "source_location": "L23"
+    },
+    {
+      "id": "changelog_added_61",
+      "label": "Added",
+      "_origin": "ast",
+      "community": 423,
+      "community_name": "Changelog",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "added",
+      "source_file": "CHANGELOG.md",
+      "source_location": "L61"
     },
     {
       "id": "changelog_changed",
@@ -30699,10 +30437,10 @@
       "node_kind": "heading",
       "norm_label": "changed",
       "source_file": "CHANGELOG.md",
-      "source_location": "L109"
+      "source_location": "L122"
     },
     {
-      "id": "changelog_changed_129",
+      "id": "changelog_changed_142",
       "label": "Changed",
       "_origin": "ast",
       "community": 423,
@@ -30711,7 +30449,7 @@
       "node_kind": "heading",
       "norm_label": "changed",
       "source_file": "CHANGELOG.md",
-      "source_location": "L129"
+      "source_location": "L142"
     },
     {
       "id": "changelog_changelog",
@@ -30735,10 +30473,10 @@
       "node_kind": "heading",
       "norm_label": "fixed",
       "source_file": "CHANGELOG.md",
-      "source_location": "L56"
+      "source_location": "L69"
     },
     {
-      "id": "changelog_fixed_148",
+      "id": "changelog_fixed_100",
       "label": "Fixed",
       "_origin": "ast",
       "community": 423,
@@ -30747,10 +30485,10 @@
       "node_kind": "heading",
       "norm_label": "fixed",
       "source_file": "CHANGELOG.md",
-      "source_location": "L148"
+      "source_location": "L100"
     },
     {
-      "id": "changelog_fixed_62",
+      "id": "changelog_fixed_161",
       "label": "Fixed",
       "_origin": "ast",
       "community": 423,
@@ -30759,10 +30497,10 @@
       "node_kind": "heading",
       "norm_label": "fixed",
       "source_file": "CHANGELOG.md",
-      "source_location": "L62"
+      "source_location": "L161"
     },
     {
-      "id": "changelog_fixed_71",
+      "id": "changelog_fixed_75",
       "label": "Fixed",
       "_origin": "ast",
       "community": 423,
@@ -30771,10 +30509,10 @@
       "node_kind": "heading",
       "norm_label": "fixed",
       "source_file": "CHANGELOG.md",
-      "source_location": "L71"
+      "source_location": "L75"
     },
     {
-      "id": "changelog_fixed_80",
+      "id": "changelog_fixed_84",
       "label": "Fixed",
       "_origin": "ast",
       "community": 423,
@@ -30783,10 +30521,10 @@
       "node_kind": "heading",
       "norm_label": "fixed",
       "source_file": "CHANGELOG.md",
-      "source_location": "L80"
+      "source_location": "L84"
     },
     {
-      "id": "changelog_fixed_87",
+      "id": "changelog_fixed_93",
       "label": "Fixed",
       "_origin": "ast",
       "community": 423,
@@ -30795,7 +30533,7 @@
       "node_kind": "heading",
       "norm_label": "fixed",
       "source_file": "CHANGELOG.md",
-      "source_location": "L87"
+      "source_location": "L93"
     },
     {
       "id": "docs_superpowers_specs_2026_08_28_informative_non_spoiling_exercise_todos_design",
@@ -30882,125 +30620,147 @@
       "source_location": "L1"
     },
     {
-      "id": "src_tui_app_app_active_list_len",
-      "label": ".active_list_len()",
+      "id": "src_cli_commands_explain",
+      "label": "explain.rs",
       "_origin": "ast",
       "community": 425,
-      "community_name": ".current_exercise",
+      "community_name": "app.rs",
       "file_type": "code",
-      "norm_label": ".active_list_len()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L235"
+      "norm_label": "explain.rs",
+      "source_file": "src/cli/commands/explain.rs",
+      "source_location": "L1"
     },
     {
-      "id": "src_tui_app_app_current_exercise",
-      "label": ".current_exercise()",
+      "id": "src_cli_commands_explain_print_topic_catalog",
+      "label": "print_topic_catalog()",
       "_origin": "ast",
       "community": 425,
-      "community_name": ".current_exercise",
+      "community_name": "app.rs",
       "file_type": "code",
-      "norm_label": ".current_exercise()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L181"
+      "norm_label": "print_topic_catalog()",
+      "source_file": "src/cli/commands/explain.rs",
+      "source_location": "L29"
     },
     {
-      "id": "src_tui_app_app_current_exercise_mut",
-      "label": ".current_exercise_mut()",
-      "_origin": "ast",
-      "community": 425,
-      "community_name": ".current_exercise",
-      "file_type": "code",
-      "norm_label": ".current_exercise_mut()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L191"
-    },
-    {
-      "id": "src_tui_app_app_exit_search",
-      "label": ".exit_search()",
-      "_origin": "ast",
-      "community": 425,
-      "community_name": ".current_exercise",
-      "file_type": "code",
-      "norm_label": ".exit_search()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L252"
-    },
-    {
-      "id": "src_tui_app_app_next_exercise",
-      "label": ".next_exercise()",
-      "_origin": "ast",
-      "community": 425,
-      "community_name": ".current_exercise",
-      "file_type": "code",
-      "norm_label": ".next_exercise()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L203"
-    },
-    {
-      "id": "src_tui_app_app_prev_exercise",
-      "label": ".prev_exercise()",
-      "_origin": "ast",
-      "community": 425,
-      "community_name": ".current_exercise",
-      "file_type": "code",
-      "norm_label": ".prev_exercise()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L217"
-    },
-    {
-      "id": "src_tui_app_app_reset",
-      "label": ".reset()",
-      "_origin": "ast",
-      "community": 425,
-      "community_name": ".current_exercise",
-      "file_type": "code",
-      "norm_label": ".reset()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L421"
-    },
-    {
-      "id": "src_tui_app_app_reset_current_state",
-      "label": ".reset_current_state()",
-      "_origin": "ast",
-      "community": 425,
-      "community_name": ".current_exercise",
-      "file_type": "code",
-      "norm_label": ".reset_current_state()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L433"
-    },
-    {
-      "id": "src_tui_app_app_submit_current_answer",
-      "label": ".submit_current_answer()",
-      "_origin": "ast",
-      "community": 425,
-      "community_name": ".current_exercise",
-      "file_type": "code",
-      "norm_label": ".submit_current_answer()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L358"
-    },
-    {
-      "id": "src_tui_app_app_toggle_hint",
-      "label": ".toggle_hint()",
-      "_origin": "ast",
-      "community": 425,
-      "community_name": ".current_exercise",
-      "file_type": "code",
-      "norm_label": ".toggle_hint()",
-      "source_file": "src/tui/app.rs",
-      "source_location": "L397"
-    },
-    {
-      "id": "src_tui_app_rs_option",
+      "id": "src_cli_commands_explain_rs_option",
       "label": "Option",
       "_origin": "ast",
       "community": 425,
-      "community_name": ".current_exercise",
+      "community_name": "app.rs",
       "file_type": "code",
       "norm_label": "option",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_explain_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": "app.rs",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_explain_show_explanation",
+      "label": "show_explanation()",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": "app.rs",
+      "file_type": "code",
+      "norm_label": "show_explanation()",
+      "source_file": "src/cli/commands/explain.rs",
+      "source_location": "L4"
+    },
+    {
+      "id": "src_core_reference",
+      "label": "reference.rs",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": "app.rs",
+      "file_type": "code",
+      "norm_label": "reference.rs",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_core_reference_get_grammar_concept",
+      "label": "get_grammar_concept()",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": "app.rs",
+      "file_type": "code",
+      "norm_label": "get_grammar_concept()",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L510"
+    },
+    {
+      "id": "src_core_reference_grammarconcept",
+      "label": "GrammarConcept",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": "app.rs",
+      "file_type": "code",
+      "norm_label": "grammarconcept",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L33"
+    },
+    {
+      "id": "src_core_reference_list_grammar_concepts",
+      "label": "list_grammar_concepts()",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": "app.rs",
+      "file_type": "code",
+      "norm_label": "list_grammar_concepts()",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L506"
+    },
+    {
+      "id": "src_core_reference_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": "app.rs",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_tui_app",
+      "label": "app.rs",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": "app.rs",
+      "file_type": "code",
+      "norm_label": "app.rs",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_tui_app_appmode",
+      "label": "AppMode",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": "app.rs",
+      "file_type": "code",
+      "norm_label": "appmode",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L21"
+    },
+    {
+      "id": "tests_reference_tests_test_semantic_keyword_concept_lookups",
+      "label": "test_semantic_keyword_concept_lookups()",
+      "_origin": "ast",
+      "community": 425,
+      "community_name": "app.rs",
+      "file_type": "code",
+      "norm_label": "test_semantic_keyword_concept_lookups()",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L261"
     },
     {
       "id": "docs_superpowers_plans_2026_08_28_informative_non_spoiling_exercise_todos",
@@ -32018,7 +31778,7 @@
       "label": "export.rs",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "export.rs",
       "source_file": "src/cli/commands/export.rs",
@@ -32029,7 +31789,7 @@
       "label": "generate_anki_tsv()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "generate_anki_tsv()",
       "source_file": "src/cli/commands/export.rs",
@@ -32040,7 +31800,7 @@
       "label": "generate_json_export()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "generate_json_export()",
       "source_file": "src/cli/commands/export.rs",
@@ -32051,7 +31811,7 @@
       "label": "generate_markdown_notes()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "generate_markdown_notes()",
       "source_file": "src/cli/commands/export.rs",
@@ -32062,7 +31822,7 @@
       "label": "html_escape()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "html_escape()",
       "source_file": "src/cli/commands/export.rs",
@@ -32073,7 +31833,7 @@
       "label": "Option",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "option",
       "source_file": "",
@@ -32084,7 +31844,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -32095,7 +31855,7 @@
       "label": "String",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "",
@@ -32106,40 +31866,18 @@
       "label": "run_export()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "run_export()",
       "source_file": "src/cli/commands/export.rs",
       "source_location": "L188"
     },
     {
-      "id": "src_core_exercise_exercise",
-      "label": "Exercise",
-      "_origin": "ast",
-      "community": 434,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "exercise",
-      "source_file": "src/core/exercise.rs",
-      "source_location": "L55"
-    },
-    {
-      "id": "src_core_exercise_rs_pathbuf",
-      "label": "PathBuf",
-      "_origin": "ast",
-      "community": 434,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "pathbuf",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "tests_export_sync_tests",
       "label": "export_sync_tests.rs",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "export_sync_tests.rs",
       "source_file": "tests/export_sync_tests.rs",
@@ -32150,7 +31888,7 @@
       "label": "Vec",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "vec",
       "source_file": "",
@@ -32161,7 +31899,7 @@
       "label": "sample_exercises()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "sample_exercises()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32172,7 +31910,7 @@
       "label": "test_anki_tsv_export_generation()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "test_anki_tsv_export_generation()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32183,7 +31921,7 @@
       "label": "test_json_export_generation()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "test_json_export_generation()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32194,7 +31932,7 @@
       "label": "test_markdown_study_guide_export()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "test_markdown_study_guide_export()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32342,17 +32080,6 @@
       "norm_label": "test_srs_item_deterministic_default()",
       "source_file": "tests/srs_tests.rs",
       "source_location": "L32"
-    },
-    {
-      "id": "tests_srs_tests_test_state_fast_track_level",
-      "label": "test_state_fast_track_level()",
-      "_origin": "ast",
-      "community": 435,
-      "community_name": "SrsItem",
-      "file_type": "code",
-      "norm_label": "test_state_fast_track_level()",
-      "source_file": "tests/srs_tests.rs",
-      "source_location": "L73"
     },
     {
       "id": "tests_srs_tests_test_state_load_corrupt_file_fails",
@@ -34211,70 +33938,81 @@
       "source_location": ""
     },
     {
-      "id": "tests_exercise_validity_tests",
-      "label": "exercise_validity_tests.rs",
+      "id": "keyevent",
+      "label": "KeyEvent",
       "_origin": "ast",
       "community": 454,
-      "community_name": "exercise_validity_tests.rs",
+      "community_name": ".on_key",
       "file_type": "code",
-      "norm_label": "exercise_validity_tests.rs",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_exercise_validity_tests_collect_md_paths",
-      "label": "collect_md_paths()",
-      "_origin": "ast",
-      "community": 454,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "collect_md_paths()",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L8"
-    },
-    {
-      "id": "tests_exercise_validity_tests_rs_path",
-      "label": "Path",
-      "_origin": "ast",
-      "community": 454,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "path",
+      "norm_label": "keyevent",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "tests_exercise_validity_tests_rs_pathbuf",
-      "label": "PathBuf",
+      "id": "src_tui_app_app_enter_reference_browser",
+      "label": ".enter_reference_browser()",
       "_origin": "ast",
       "community": 454,
-      "community_name": "exercise_validity_tests.rs",
+      "community_name": ".on_key",
       "file_type": "code",
-      "norm_label": "pathbuf",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": ".enter_reference_browser()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L501"
     },
     {
-      "id": "tests_exercise_validity_tests_rs_vec",
-      "label": "Vec",
+      "id": "src_tui_app_app_handle_key",
+      "label": ".handle_key()",
       "_origin": "ast",
       "community": 454,
-      "community_name": "exercise_validity_tests.rs",
+      "community_name": ".on_key",
       "file_type": "code",
-      "norm_label": "vec",
-      "source_file": "",
-      "source_location": ""
+      "norm_label": ".handle_key()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L984"
     },
     {
-      "id": "tests_exercise_validity_tests_test_all_curriculum_exercises_are_valid_and_solvable",
-      "label": "test_all_curriculum_exercises_are_valid_and_solvable()",
+      "id": "src_tui_app_app_next_mastery_concept",
+      "label": ".next_mastery_concept()",
       "_origin": "ast",
       "community": 454,
-      "community_name": "exercise_validity_tests.rs",
+      "community_name": ".on_key",
       "file_type": "code",
-      "norm_label": "test_all_curriculum_exercises_are_valid_and_solvable()",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L27"
+      "norm_label": ".next_mastery_concept()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L736"
+    },
+    {
+      "id": "src_tui_app_app_on_key",
+      "label": ".on_key()",
+      "_origin": "ast",
+      "community": 454,
+      "community_name": ".on_key",
+      "file_type": "code",
+      "norm_label": ".on_key()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L988"
+    },
+    {
+      "id": "src_tui_app_app_prev_mastery_concept",
+      "label": ".prev_mastery_concept()",
+      "_origin": "ast",
+      "community": 454,
+      "community_name": ".on_key",
+      "file_type": "code",
+      "norm_label": ".prev_mastery_concept()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L743"
+    },
+    {
+      "id": "src_tui_app_rs_into",
+      "label": "Into",
+      "_origin": "ast",
+      "community": 454,
+      "community_name": ".on_key",
+      "file_type": "code",
+      "norm_label": "into",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery",
@@ -34385,6 +34123,237 @@
       "source_location": "L122"
     },
     {
+      "id": "src_core_reference_list_reference_topics",
+      "label": "list_reference_topics()",
+      "_origin": "ast",
+      "community": 457,
+      "community_name": ".new_with_state",
+      "file_type": "code",
+      "norm_label": "list_reference_topics()",
+      "source_file": "src/core/reference.rs",
+      "source_location": "L28"
+    },
+    {
+      "id": "src_tui_app_app_enter_placement_test",
+      "label": ".enter_placement_test()",
+      "_origin": "ast",
+      "community": 457,
+      "community_name": ".new_with_state",
+      "file_type": "code",
+      "norm_label": ".enter_placement_test()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L611"
+    },
+    {
+      "id": "src_tui_app_app_new",
+      "label": ".new()",
+      "_origin": "ast",
+      "community": 457,
+      "community_name": ".new_with_state",
+      "file_type": "code",
+      "norm_label": ".new()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L94"
+    },
+    {
+      "id": "src_tui_app_app_new_with_state",
+      "label": ".new_with_state()",
+      "_origin": "ast",
+      "community": 457,
+      "community_name": ".new_with_state",
+      "file_type": "code",
+      "norm_label": ".new_with_state()",
+      "source_file": "src/tui/app.rs",
+      "source_location": "L106"
+    },
+    {
+      "id": "src_tui_app_rs_self",
+      "label": "Self",
+      "_origin": "ast",
+      "community": 457,
+      "community_name": ".new_with_state",
+      "file_type": "code",
+      "norm_label": "self",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_tui_app_rs_vec",
+      "label": "Vec",
+      "_origin": "ast",
+      "community": 457,
+      "community_name": ".new_with_state",
+      "file_type": "code",
+      "norm_label": "vec",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_reference_tests_test_list_reference_topics",
+      "label": "test_list_reference_topics()",
+      "_origin": "ast",
+      "community": 457,
+      "community_name": ".new_with_state",
+      "file_type": "code",
+      "norm_label": "test_list_reference_topics()",
+      "source_file": "tests/reference_tests.rs",
+      "source_location": "L186"
+    },
+    {
+      "id": "tests_cli_tests",
+      "label": "cli_tests.rs",
+      "_origin": "ast",
+      "community": 458,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "cli_tests.rs",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_cli_tests_test_cli_explain_semantic_lookup_and_glosses",
+      "label": "test_cli_explain_semantic_lookup_and_glosses()",
+      "_origin": "ast",
+      "community": 458,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_cli_explain_semantic_lookup_and_glosses()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L194"
+    },
+    {
+      "id": "tests_cli_tests_test_cli_parsing_subcommands",
+      "label": "test_cli_parsing_subcommands()",
+      "_origin": "ast",
+      "community": 458,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_cli_parsing_subcommands()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L13"
+    },
+    {
+      "id": "tests_cli_tests_test_cli_tour_command_parsing",
+      "label": "test_cli_tour_command_parsing()",
+      "_origin": "ast",
+      "community": 458,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_cli_tour_command_parsing()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L161"
+    },
+    {
+      "id": "tests_cli_tests_test_explain_command_executes_cleanly",
+      "label": "test_explain_command_executes_cleanly()",
+      "_origin": "ast",
+      "community": 458,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_explain_command_executes_cleanly()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L179"
+    },
+    {
+      "id": "tests_cli_tests_test_list_and_progress_execute_cleanly",
+      "label": "test_list_and_progress_execute_cleanly()",
+      "_origin": "ast",
+      "community": 458,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_list_and_progress_execute_cleanly()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L202"
+    },
+    {
+      "id": "tests_cli_tests_test_run_exercise_with_file_path",
+      "label": "test_run_exercise_with_file_path()",
+      "_origin": "ast",
+      "community": 458,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_run_exercise_with_file_path()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L212"
+    },
+    {
+      "id": "tests_exercise_parser_tests",
+      "label": "exercise_parser_tests.rs",
+      "_origin": "ast",
+      "community": 459,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "exercise_parser_tests.rs",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_exercise_with_concept_tags_and_comma_separated",
+      "label": "test_parse_exercise_with_concept_tags_and_comma_separated()",
+      "_origin": "ast",
+      "community": 459,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_exercise_with_concept_tags_and_comma_separated()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L128"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_exercise_with_concepts_and_prerequisites",
+      "label": "test_parse_exercise_with_concepts_and_prerequisites()",
+      "_origin": "ast",
+      "community": 459,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_exercise_with_concepts_and_prerequisites()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L90"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_invalid_level_error",
+      "label": "test_parse_invalid_level_error()",
+      "_origin": "ast",
+      "community": 459,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_invalid_level_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L70"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_invalid_type_error",
+      "label": "test_parse_invalid_type_error()",
+      "_origin": "ast",
+      "community": 459,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_invalid_type_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L80"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_missing_id_error",
+      "label": "test_parse_missing_id_error()",
+      "_origin": "ast",
+      "community": 459,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_missing_id_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L60"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_valid_markdown_exercise",
+      "label": "test_parse_valid_markdown_exercise()",
+      "_origin": "ast",
+      "community": 459,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_valid_markdown_exercise()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L5"
+    },
+    {
       "id": "exercises_04_subjunctive_relative_04_location_relative",
       "label": "04_location_relative.md",
       "_origin": "ast",
@@ -34443,6 +34412,61 @@
       "norm_label": "subjunctive in relative clauses 04: indefinite location (donde)",
       "source_file": "exercises/04_subjunctive_relative/04_location_relative.md",
       "source_location": "L1"
+    },
+    {
+      "id": "src_core_curriculum_level_from_str",
+      "label": ".from_str()",
+      "_origin": "ast",
+      "community": 460,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": ".from_str()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L35"
+    },
+    {
+      "id": "src_core_curriculum_parselevelerror",
+      "label": "ParseLevelError",
+      "_origin": "ast",
+      "community": 460,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "parselevelerror",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_core_curriculum_rs_err",
+      "label": "Err",
+      "_origin": "ast",
+      "community": 460,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "err",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_self",
+      "label": "Self",
+      "_origin": "ast",
+      "community": 460,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "self",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 460,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "string",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "exercises_04_subjunctive_relative_05_person_unknown",
@@ -35269,7 +35293,7 @@
       "source_file": "Cargo.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "0.5.0"
+      "version": "0.5.1"
     },
     {
       "id": "exercises_07_por_vs_para_01_cause_vs_purpose",
@@ -49849,57 +49873,68 @@
     },
     {
       "source": "changelog_0_1_0_2026_08_27",
-      "target": "changelog_added_156",
+      "target": "changelog_added_169",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L156",
+      "source_location": "L169",
       "weight": 1.0
     },
     {
       "source": "changelog_0_1_1_2026_08_27",
-      "target": "changelog_fixed_148",
+      "target": "changelog_fixed_161",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L148",
+      "source_location": "L161",
       "weight": 1.0
     },
     {
       "source": "changelog_0_2_0_2026_08_27",
-      "target": "changelog_added_137",
+      "target": "changelog_added_150",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L137",
+      "source_location": "L150",
       "weight": 1.0
     },
     {
       "source": "changelog_0_3_0_2026_08_27",
-      "target": "changelog_added_117",
+      "target": "changelog_added_130",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L117",
+      "source_location": "L130",
       "weight": 1.0
     },
     {
       "source": "changelog_0_3_0_2026_08_27",
-      "target": "changelog_changed_129",
+      "target": "changelog_changed_142",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L129",
+      "source_location": "L142",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_0_4_0_2026_08_28",
+      "target": "changelog_added_110",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L110",
       "weight": 1.0
     },
     {
@@ -49910,73 +49945,62 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L109",
-      "weight": 1.0
-    },
-    {
-      "source": "changelog_0_4_0_2026_08_28",
-      "target": "changelog_added_97",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CHANGELOG.md",
-      "source_location": "L97",
+      "source_location": "L122",
       "weight": 1.0
     },
     {
       "source": "changelog_0_4_1_2026_08_28",
-      "target": "changelog_fixed_87",
+      "target": "changelog_fixed_100",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L87",
+      "source_location": "L100",
       "weight": 1.0
     },
     {
       "source": "changelog_0_4_2_2026_08_28",
-      "target": "changelog_fixed_80",
+      "target": "changelog_fixed_93",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L80",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
       "source": "changelog_0_4_3_2026_08_28",
-      "target": "changelog_fixed_71",
+      "target": "changelog_fixed_84",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L71",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
       "source": "changelog_0_4_4_2026_08_28",
-      "target": "changelog_fixed_62",
+      "target": "changelog_fixed_75",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L62",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
       "source": "changelog_0_4_5_2026_08_28",
-      "target": "changelog_added_48",
+      "target": "changelog_added_61",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L48",
+      "source_location": "L61",
       "weight": 1.0
     },
     {
@@ -49987,11 +50011,22 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L56",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
       "source": "changelog_0_5_0_2026_08_29",
+      "target": "changelog_added_23",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_0_5_1_2026_08_29",
       "target": "changelog_added",
       "relation": "contains",
       "_origin": "ast",
@@ -50003,13 +50038,24 @@
     },
     {
       "source": "changelog_changelog",
+      "target": "changelog_0_4_0_2026_08_28",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_changelog",
       "target": "changelog_0_3_0_2026_08_27",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L115",
+      "source_location": "L128",
       "weight": 1.0
     },
     {
@@ -50020,7 +50066,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L135",
+      "source_location": "L148",
       "weight": 1.0
     },
     {
@@ -50031,7 +50077,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L146",
+      "source_location": "L159",
       "weight": 1.0
     },
     {
@@ -50042,51 +50088,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L154",
-      "weight": 1.0
-    },
-    {
-      "source": "changelog_changelog",
-      "target": "changelog_0_4_5_2026_08_28",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CHANGELOG.md",
-      "source_location": "L46",
-      "weight": 1.0
-    },
-    {
-      "source": "changelog_changelog",
-      "target": "changelog_0_4_4_2026_08_28",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CHANGELOG.md",
-      "source_location": "L60",
-      "weight": 1.0
-    },
-    {
-      "source": "changelog_changelog",
-      "target": "changelog_0_4_3_2026_08_28",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CHANGELOG.md",
-      "source_location": "L69",
-      "weight": 1.0
-    },
-    {
-      "source": "changelog_changelog",
-      "target": "changelog_0_4_2_2026_08_28",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CHANGELOG.md",
-      "source_location": "L78",
+      "source_location": "L167",
       "weight": 1.0
     },
     {
@@ -50097,7 +50099,62 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_changelog",
+      "target": "changelog_0_4_5_2026_08_28",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_changelog",
+      "target": "changelog_0_4_4_2026_08_28",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_changelog",
+      "target": "changelog_0_5_1_2026_08_29",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
       "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_changelog",
+      "target": "changelog_0_4_3_2026_08_28",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "changelog_changelog",
+      "target": "changelog_0_4_2_2026_08_28",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CHANGELOG.md",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
@@ -50108,18 +50165,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CHANGELOG.md",
-      "source_location": "L85",
-      "weight": 1.0
-    },
-    {
-      "source": "changelog_changelog",
-      "target": "changelog_0_4_0_2026_08_28",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CHANGELOG.md",
-      "source_location": "L95",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -80609,5 +80655,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "5162ba24f51bedc7256add83534188c6ddaa8187"
+  "built_at_commit": "cbaec8a62108c9c197d98948cb6c63c4b3fc9bed"
 }
