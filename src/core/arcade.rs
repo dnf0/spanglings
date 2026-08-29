@@ -2120,10 +2120,619 @@ fn synthesize_distractors<R: Rng + ?Sized>(
     distinct
 }
 
+#[derive(Debug, Clone)]
+struct SpecializedEngineSentence {
+    sentence: &'static str,
+    target: &'static str,
+    distractors: [&'static str; 3],
+    explanation: &'static str,
+}
+
+static ENGINE_REGIMEN_POOL: &[SpecializedEngineSentence] = &[
+    SpecializedEngineSentence {
+        sentence: "Sueño ____ viajar por el mundo entero.",
+        target: "con",
+        distractors: ["de", "en", "por"],
+        explanation: "'Soñar con' requires 'con' to express dreaming about or of something.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Siempre pienso ____ las soluciones más simples.",
+        target: "en",
+        distractors: ["de", "con", "a"],
+        explanation: "'Pensar en' requires 'en' to express thinking about someone or something.",
+    },
+    SpecializedEngineSentence {
+        sentence: "No me acordé ____ cerrar la sesión en el servidor.",
+        target: "de",
+        distractors: ["en", "con", "a"],
+        explanation: "'Acordarse de' requires 'de' (to remember to do something).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Fíjate ____ los detalles del contrato antes de firmar.",
+        target: "en",
+        distractors: ["a", "de", "con"],
+        explanation: "'Fijarse en' requires 'en' (to notice / pay attention to something).",
+    },
+    SpecializedEngineSentence {
+        sentence: "El éxito del proyecto depende ____ nuestro esfuerzo.",
+        target: "de",
+        distractors: ["en", "por", "a"],
+        explanation: "'Depender de' requires 'de' (to depend on).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Se enamoró ____ la cultura y gastronomía española.",
+        target: "de",
+        distractors: ["con", "en", "a"],
+        explanation: "'Enamorarse de' requires 'de' (to fall in love with).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Me di cuenta ____ que cometí un error grave.",
+        target: "de",
+        distractors: ["en", "con", "a"],
+        explanation: "'Darse cuenta de' requires 'de' (to realize something).",
+    },
+    SpecializedEngineSentence {
+        sentence: "El cliente insiste ____ cambiar el diseño actual.",
+        target: "en",
+        distractors: ["de", "por", "con"],
+        explanation: "'Insistir en' requires 'en' (to insist on doing something).",
+    },
+    SpecializedEngineSentence {
+        sentence: "El examen técnico consiste ____ tres secciones prácticas.",
+        target: "en",
+        distractors: ["de", "por", "con"],
+        explanation: "'Consistir en' requires 'en' (to consist of).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Estoy aprendiendo ____ programar sistemas en Rust.",
+        target: "a",
+        distractors: ["en", "de", "por"],
+        explanation: "'Aprender a' + infinitive requires 'a' (to learn to do something).",
+    },
+    SpecializedEngineSentence {
+        sentence: "No me acostumbro ____ este nuevo horario de trabajo.",
+        target: "a",
+        distractors: ["con", "en", "de"],
+        explanation: "'Acostumbrarse a' requires 'a' (to get used to something).",
+    },
+    SpecializedEngineSentence {
+        sentence: "El testigo se negó ____ firmar el documento.",
+        target: "a",
+        distractors: ["de", "en", "por"],
+        explanation: "'Negarse a' + infinitive requires 'a' (to refuse to do something).",
+    },
+    SpecializedEngineSentence {
+        sentence: "No te preocupes ____ cosas que no puedes controlar.",
+        target: "por",
+        distractors: ["de", "en", "para"],
+        explanation: "'Preocuparse por' requires 'por' to denote the cause of worry.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Siempre se queja ____ la lentitud de la conexión.",
+        target: "de",
+        distractors: ["en", "por", "con"],
+        explanation: "'Quejarse de' requires 'de' (to complain about something).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Nadie se atreve ____ contradecir al director general.",
+        target: "a",
+        distractors: ["de", "en", "con"],
+        explanation: "'Atreverse a' + infinitive requires 'a' (to dare to do something).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Tardamos dos horas ____ compilar el proyecto entero.",
+        target: "en",
+        distractors: ["a", "de", "para"],
+        explanation:
+            "'Tardar [tiempo] en' + infinitive requires 'en' (to take time to do something).",
+    },
+];
+
+static ENGINE_IRREGULARS_POOL: &[SpecializedEngineSentence] = &[
+    SpecializedEngineSentence {
+        sentence: "Ayer yo ____ el archivo en el servidor.",
+        target: "puse",
+        distractors: ["poní", "ponía", "pongí"],
+        explanation: "Preterite of 'poner' (yo) has irregular stem 'pus-': puse (not poní).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Ella no ____ aceptar la oferta laboral.",
+        target: "quiso",
+        distractors: ["querió", "quería", "querrá"],
+        explanation: "Preterite of 'querer' (ella) has irregular stem 'quis-': quiso (not querió).",
+    },
+    SpecializedEngineSentence {
+        sentence: "La caja no ____ en el maletero del coche.",
+        target: "cupo",
+        distractors: ["cabió", "cabía", "caberá"],
+        explanation: "Preterite of 'caber' (ella/él) has irregular stem 'cup-': cupo (not cabió).",
+    },
+    SpecializedEngineSentence {
+        sentence: "¿Qué ____ tú para la reunión de hoy?",
+        target: "trajiste",
+        distractors: ["traíste", "traías", "traerás"],
+        explanation:
+            "Preterite of 'traer' (tú) has irregular stem 'traj-': trajiste (not traíste).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Él ____ toda la noche por carreteras oscuras.",
+        target: "condujo",
+        distractors: ["conducía", "conducirá", "conducio"],
+        explanation: "Preterite of 'conducir' (él) has j-stem: condujo (no accent, ending in -o).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Nosotros ____ diez kilómetros bajo la lluvia ayer.",
+        target: "anduvimos",
+        distractors: ["andamos", "andábamos", "andaremos"],
+        explanation: "Preterite of 'andar' (nosotros) has irregular stem 'anduv-': anduvimos.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Cuando lo ____, llamé a la policía de inmediato.",
+        target: "supe",
+        distractors: ["sabí", "sabía", "sabré"],
+        explanation:
+            "Preterite of 'saber' (yo) has irregular stem 'sup-': supe (meaning 'found out').",
+    },
+    SpecializedEngineSentence {
+        sentence: "Ayer ____ muchos problemas de red en la oficina.",
+        target: "hubo",
+        distractors: ["habió", "había", "habrá"],
+        explanation: "Preterite impersonal of 'haber' is 'hubo' (never habió).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Yo no ____ en este asiento tan estrecho.",
+        target: "quepo",
+        distractors: ["cabo", "caberé", "caigo"],
+        explanation:
+            "Present indicative 1st person (yo) of 'caber' is irregular: quepo (never cabo).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Yo no ____ cómo resolver este problema complejo.",
+        target: "sé",
+        distractors: ["sabo", "sepa", "supe"],
+        explanation:
+            "Present indicative 1st person (yo) of 'saber' is 'sé' with accent (never sabo).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Espero que tú lo ____ pronto para decidir.",
+        target: "sepas",
+        distractors: ["sabes", "sabas", "supieras"],
+        explanation: "Present subjunctive (tú) of 'saber' uses stem 'sep-': sepas.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Ojalá que todo ____ en una sola maleta.",
+        target: "quepa",
+        distractors: ["caba", "cabe", "cabiera"],
+        explanation: "Present subjunctive of 'caber' uses stem 'quep-': quepa (never caba).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Dudo que ____ otra oportunidad similar.",
+        target: "haya",
+        distractors: ["haiga", "ha", "hubo"],
+        explanation:
+            "Present subjunctive of 'haber' is 'haya' ('haiga' is incorrect/non-standard).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Mañana yo ____ la nueva versión en producción.",
+        target: "pondré",
+        distractors: ["poneré", "pondría", "ponga"],
+        explanation:
+            "Future indicative of 'poner' (yo) has syncopated d-stem: pondré (never poneré).",
+    },
+    SpecializedEngineSentence {
+        sentence: "¿Qué ____ tú este fin de semana en Madrid?",
+        target: "harás",
+        distractors: ["hacerás", "hacías", "hiciste"],
+        explanation:
+            "Future indicative of 'hacer' (tú) has contracted stem 'har-': harás (never hacerás).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Nosotros ____ a las ocho de la mañana.",
+        target: "saldremos",
+        distractors: ["saliremos", "saldríamos", "salgamos"],
+        explanation:
+            "Future indicative of 'salir' (nosotros) has d-stem: saldremos (never saliremos).",
+    },
+];
+
+static ENGINE_FALSE_FRIENDS_POOL: &[SpecializedEngineSentence] = &[
+    SpecializedEngineSentence {
+        sentence: "La situación política ____ es muy compleja.",
+        target: "actual",
+        distractors: ["real", "actualizada", "revelada"],
+        explanation:
+            "'Actual' means current/present-day in Spanish, whereas 'real' means real/royal.",
+    },
+    SpecializedEngineSentence {
+        sentence: "María está ____ de seis meses y dará a luz pronto.",
+        target: "embarazada",
+        distractors: ["avergonzada", "molesta", "apenada"],
+        explanation: "'Embarazada' means pregnant. 'Avergonzado/a' means embarrassed.",
+    },
+    SpecializedEngineSentence {
+        sentence: "La nueva aplicación tuvo un gran ____ de ventas.",
+        target: "éxito",
+        distractors: ["salida", "suceso", "partida"],
+        explanation: "'Éxito' means success. 'Salida' means exit.",
+    },
+    SpecializedEngineSentence {
+        sentence: "El médico va a ____ a los pacientes ahora.",
+        target: "atender",
+        distractors: ["asistir", "pretender", "apoyar"],
+        explanation: "'Atender' means to serve/attend to. To attend an event is 'asistir a'.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Mañana voy a ____ a la conferencia internacional.",
+        target: "asistir",
+        distractors: ["atender", "esperar", "pretender"],
+        explanation:
+            "'Asistir a' means to attend an event. 'Atender' means to serve or pay attention.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Él es muy ____ y se ofende con facilidad.",
+        target: "sensible",
+        distractors: ["sensato", "razonable", "prudente"],
+        explanation: "'Sensible' means sensitive/emotional. 'Sensato' means sensible/prudent.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Tomar precauciones antes del viaje fue una decisión ____.",
+        target: "sensata",
+        distractors: ["sensible", "sentimental", "sencilla"],
+        explanation: "'Sensato/a' means sensible/prudent. 'Sensible' means sensitive.",
+    },
+    SpecializedEngineSentence {
+        sentence: "El discurso fue demasiado ____ y aburrido.",
+        target: "largo",
+        distractors: ["grande", "ancho", "grueso"],
+        explanation: "'Largo' means long in length/duration. 'Grande' means large/big.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Guarda todos los documentos en esta ____ azul.",
+        target: "carpeta",
+        distractors: ["alfombra", "cartelera", "cartera"],
+        explanation: "'Carpeta' means folder/binder. 'Alfombra' means carpet/rug.",
+    },
+    SpecializedEngineSentence {
+        sentence: "No puedo ____ el ruido constante de las obras.",
+        target: "soportar",
+        distractors: ["apoyar", "sostener", "asistir"],
+        explanation: "'Soportar' means to bear/tolerate. To support someone is 'apoyar'.",
+    },
+    SpecializedEngineSentence {
+        sentence: "No ____ ofenderte con mis comentarios.",
+        target: "pretendo",
+        distractors: ["finjo", "presumo", "aparento"],
+        explanation: "'Pretender' means to aim/intend. To pretend/fake is 'fingir'.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Vamos a ____ una auditoría exhaustiva del código.",
+        target: "realizar",
+        distractors: ["darnos cuenta", "comprender", "advertir"],
+        explanation: "'Realizar' means to carry out/execute. To realize is 'darse cuenta de'.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Tengo congestión nasal porque estoy ____.",
+        target: "constipado",
+        distractors: ["estreñido", "bloqueado", "atrapado"],
+        explanation: "'Constipado' means having a cold/congested. 'Estreñido' means constipated.",
+    },
+    SpecializedEngineSentence {
+        sentence: "No puedo ____ dónde dejé las llaves del coche.",
+        target: "recordar",
+        distractors: ["grabar", "guardar", "registrar"],
+        explanation: "'Recordar' means to remember. 'Grabar' means to record audio/video.",
+    },
+    SpecializedEngineSentence {
+        sentence: "No me gusta ____ sobre temas polémicos en público.",
+        target: "discutir",
+        distractors: ["charlar", "conversar", "dialogar"],
+        explanation:
+            "'Discutir' means to argue/dispute. To discuss casually is 'hablar' or 'charlar'.",
+    },
+    SpecializedEngineSentence {
+        sentence: "El periódico reportó un grave ____ en el centro.",
+        target: "suceso",
+        distractors: ["éxito", "logro", "triunfo"],
+        explanation: "'Suceso' means event/incident. 'Éxito' means success.",
+    },
+];
+
+static ENGINE_SE_MATRIX_POOL: &[SpecializedEngineSentence] = &[
+    SpecializedEngineSentence {
+        sentence: "A Juan ____ la contraseña del servidor.",
+        target: "se le olvidó",
+        distractors: ["le olvidó", "se olvidó", "olvidó"],
+        explanation: "Accidental/involuntary 'se' (se le olvidó) marks unintentional forgetting.",
+    },
+    SpecializedEngineSentence {
+        sentence: "A mí ____ las llaves al suelo.",
+        target: "se me cayeron",
+        distractors: ["me cayeron", "se cayeron", "las caí"],
+        explanation: "Accidental 'se' with 1st-person dative (se me cayeron) denotes accidental dropping.",
+    },
+    SpecializedEngineSentence {
+        sentence: "A nosotros ____ el coche en la autopista.",
+        target: "se nos descompuso",
+        distractors: ["nos descompuso", "se descompuso", "lo descompusimos"],
+        explanation: "Accidental 'se' with 1st-person plural dative (se nos descompuso) marks unexpected breakdown.",
+    },
+    SpecializedEngineSentence {
+        sentence: "A ellos ____ el billete de tren en la estación.",
+        target: "se les perdió",
+        distractors: ["les perdió", "se perdió", "perdieron"],
+        explanation: "Accidental 'se' with 3rd-person plural dative (se les perdió) marks involuntary loss.",
+    },
+    SpecializedEngineSentence {
+        sentence: "En este país ____ muy bien y con tranquilidad.",
+        target: "se vive",
+        distractors: ["vive", "se viven", "viven"],
+        explanation: "Impersonal 'se' with intransitive verb takes singular verb (se vive).",
+    },
+    SpecializedEngineSentence {
+        sentence: "En la biblioteca ____ guardar silencio absoluto.",
+        target: "se debe",
+        distractors: ["debe", "se deben", "deben"],
+        explanation: "Impersonal 'se' (se debe) expresses general obligation without named agent.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Aquí ____ con mucha dedicación y entrega.",
+        target: "se trabaja",
+        distractors: ["trabaja", "se trabajan", "trabajan"],
+        explanation: "Impersonal 'se' (se trabaja) expresses general collective action in singular.",
+    },
+    SpecializedEngineSentence {
+        sentence: "En esa agencia ____ oficinas comerciales.",
+        target: "se alquilan",
+        distractors: ["se alquila", "alquilan", "están alquilando"],
+        explanation: "Passive reflexive (pasiva refleja): plural verb agrees with plural subject (oficinas).",
+    },
+    SpecializedEngineSentence {
+        sentence: "En la recepción ____ español e inglés.",
+        target: "se hablan",
+        distractors: ["se habla", "hablan", "está hablando"],
+        explanation: "Passive reflexive: plural verb agrees with compound subject (español e inglés).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Ayer ____ el vuelo por el mal tiempo.",
+        target: "se canceló",
+        distractors: ["se cancelaron", "canceló", "cancelaron"],
+        explanation: "Passive reflexive with singular subject (el vuelo se canceló).",
+    },
+    SpecializedEngineSentence {
+        sentence: "En esta imprenta ____ miles de libros al día.",
+        target: "se imprimen",
+        distractors: ["se imprime", "imprimen", "están imprimiendo"],
+        explanation: "Passive reflexive agrees with plural grammatical subject (miles de libros se imprimen).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Los dos presidentes ____ cordialmente.",
+        target: "se saludaron",
+        distractors: ["saludaron", "le saludaron", "se saludó"],
+        explanation: "Reciprocal 'se' (se saludaron) indicates mutual action between two parties.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Mis amigos y yo ____ mutuamente en el proyecto.",
+        target: "nos ayudamos",
+        distractors: ["se ayudan", "ayudamos", "les ayudamos"],
+        explanation: "Reciprocal 'nos' (nos ayudamos) expresses mutual assistance among 'nosotros'.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Él ____ toda la tarta él solo.",
+        target: "se comió",
+        distractors: ["comió", "se comieron", "le comió"],
+        explanation: "Aspectual/telic 'se' (se comió) emphasizes total consumption of the entire object.",
+    },
+    SpecializedEngineSentence {
+        sentence: "Ya es tarde, así que yo ____ a casa.",
+        target: "me voy",
+        distractors: ["voy", "me va", "se va"],
+        explanation: "Aspectual departure 'irse' (me voy) emphasizes departing from the current location.",
+    },
+    SpecializedEngineSentence {
+        sentence: "El bebé ____ en cuanto lo acostamos.",
+        target: "se durmió",
+        distractors: ["durmió", "le durmió", "se duerme"],
+        explanation: "Inchoative/aspectual 'dormirse' (se durmió) denotes entering the state of sleep.",
+    },
+];
+
+static ENGINE_CONNECTORS_POOL: &[SpecializedEngineSentence] = &[
+    SpecializedEngineSentence {
+        sentence: "Estudió mucho; ____, no aprobó el examen.",
+        target: "sin embargo",
+        distractors: ["por lo tanto", "es decir", "además"],
+        explanation: "'Sin embargo' introduces an adversative contrast / counter-expectation.",
+    },
+    SpecializedEngineSentence {
+        sentence: "El plan es ambicioso; ____, contamos con el presupuesto necesario.",
+        target: "no obstante",
+        distractors: ["por consiguiente", "o sea", "por ende"],
+        explanation: "'No obstante' expresses formal adversative concession or contrast.",
+    },
+    SpecializedEngineSentence {
+        sentence: "A él le gusta viajar; ____, su hermano prefiere quedarse en casa.",
+        target: "en cambio",
+        distractors: ["por tanto", "así que", "de modo que"],
+        explanation: "'En cambio' highlights contrast and opposition between two subjects.",
+    },
+    SpecializedEngineSentence {
+        sentence: "No tenemos fondos suficientes; ____, debemos posponer el proyecto.",
+        target: "por lo tanto",
+        distractors: ["sin embargo", "a pesar de que", "en cambio"],
+        explanation: "'Por lo tanto' introduces a consecutive result or deduction.",
+    },
+    SpecializedEngineSentence {
+        sentence: "El servidor falló; ____, el servicio quedó interrumpido.",
+        target: "por consiguiente",
+        distractors: ["no obstante", "aunque", "sino"],
+        explanation: "'Por consiguiente' introduces a formal direct consequence (consequently).",
+    },
+    SpecializedEngineSentence {
+        sentence: "No guardó los cambios; ____ perdiera todo el trabajo del día.",
+        target: "de ahí que",
+        distractors: ["por eso", "ya que", "dado que"],
+        explanation:
+            "'De ahí que' expresses consequence and governs the subjunctive mood (perdiera).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Llegamos tarde ____ había un tráfico tremendo en la autopista.",
+        target: "dado que",
+        distractors: ["por lo tanto", "sin embargo", "es decir"],
+        explanation: "'Dado que' introduces a causal explanation or premise (given that).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Suspendieron el vuelo ____ la tormenta de nieve.",
+        target: "debido a",
+        distractors: ["a pesar de", "en cambio", "por consiguiente"],
+        explanation: "'Debido a' + noun phrase indicates the cause or reason for the action.",
+    },
+    SpecializedEngineSentence {
+        sentence: "____ llovía intensamente, salimos a correr.",
+        target: "A pesar de que",
+        distractors: ["Por lo tanto", "Es decir", "Por consiguiente"],
+        explanation: "'A pesar de que' introduces a concessive clause (even though / despite).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Fuimos a la montaña, ____ el pronóstico anunciaba tormentas.",
+        target: "aun cuando",
+        distractors: ["por lo tanto", "en cambio", "es decir"],
+        explanation: "'Aun cuando' introduces a concessive clause (even though).",
+    },
+    SpecializedEngineSentence {
+        sentence: "El código es modular, ____, cada componente tiene una sola responsabilidad.",
+        target: "es decir",
+        distractors: ["sin embargo", "por consiguiente", "a pesar de"],
+        explanation: "'Es decir' introduces an explanatory reformulation or clarification.",
+    },
+    SpecializedEngineSentence {
+        sentence: "No es un fallo crítico, ____, no compromete la seguridad del sistema.",
+        target: "o sea",
+        distractors: ["sin embargo", "a pesar de que", "por el contrario"],
+        explanation: "'O sea' provides a clarifying or reformulating phrase (in other words).",
+    },
+    SpecializedEngineSentence {
+        sentence: "Hemos analizado los datos; ____, concluimos que la hipótesis es válida.",
+        target: "por ende",
+        distractors: ["no obstante", "en cambio", "a pesar de"],
+        explanation: "'Por ende' denotes formal conclusive deduction (therefore / hence).",
+    },
+    SpecializedEngineSentence {
+        sentence: "____, reducimos costes; por otro, aumentamos la productividad.",
+        target: "Por un lado",
+        distractors: ["Sin embargo", "Por lo tanto", "Es decir"],
+        explanation:
+            "'Por un lado... por otro' organizes discourse into balanced comparative points.",
+    },
+    SpecializedEngineSentence {
+        sentence: "____, los resultados respaldan completamente nuestra hipótesis inicial.",
+        target: "En conclusión",
+        distractors: ["Por el contrario", "A pesar de que", "No obstante"],
+        explanation: "'En conclusión' introduces an overarching summary or final conclusion.",
+    },
+    SpecializedEngineSentence {
+        sentence: "No solo cumplimos los plazos, ____ superamos los objetivos establecidos.",
+        target: "sino que además",
+        distractors: ["por lo tanto", "sin embargo", "es decir"],
+        explanation: "'No solo... sino que además' introduces an emphatic additive clause.",
+    },
+];
+
+fn canonicalize_engine_slug(
+    slug: &str,
+) -> Option<(
+    &'static str,
+    &'static str,
+    &'static [SpecializedEngineSentence],
+)> {
+    let clean = slug.trim().to_lowercase().replace(['_', ' '], "-");
+    match clean.as_str() {
+        "regimen"
+        | "prepositions"
+        | "prep"
+        | "verb-regimen"
+        | "regimen-preposicional"
+        | "verbos-con-preposicion" => {
+            Some(("regimen", "Prepositional Regimen", ENGINE_REGIMEN_POOL))
+        }
+        "irregulars" | "verbs" | "irregular" | "verb-speed" | "irregular-verbs" | "speed-gun" => {
+            Some((
+                "irregulars",
+                "Irregular Verb Speed Gun",
+                ENGINE_IRREGULARS_POOL,
+            ))
+        }
+        "false-friends" | "cognates" | "falsos-amigos" | "false-cognates" | "traps" => Some((
+            "false-friends",
+            "False Friends Trap Detector",
+            ENGINE_FALSE_FRIENDS_POOL,
+        )),
+        "se-matrix" | "se" | "se-types" | "se-matrix-drill" | "valores-de-se" => {
+            Some(("se-matrix", "The \"Se\" Matrix", ENGINE_SE_MATRIX_POOL))
+        }
+        "connectors" | "discourse" | "transitions" | "connectors-flow" | "conectores" => Some((
+            "connectors",
+            "Discourse Connectors & Flow",
+            ENGINE_CONNECTORS_POOL,
+        )),
+        _ => None,
+    }
+}
+
+/// Generates 4-choice rapid arcade items for one of the 5 specialized drill engines.
+pub fn generate_specialized_engine_items(slug: &str, count: usize) -> Vec<ArcadeItem> {
+    if count == 0 {
+        return Vec::new();
+    }
+
+    let Some((canonical_slug, cue_title, pool)) = canonicalize_engine_slug(slug) else {
+        return Vec::new();
+    };
+
+    let mut rng = rand::thread_rng();
+    let mut items = Vec::with_capacity(count);
+
+    let mut indices: Vec<usize> = (0..pool.len()).collect();
+    indices.shuffle(&mut rng);
+
+    for i in 0..count {
+        let entry = &pool[indices[i % pool.len()]];
+        let mut options = vec![
+            entry.target.to_string(),
+            entry.distractors[0].to_string(),
+            entry.distractors[1].to_string(),
+            entry.distractors[2].to_string(),
+        ];
+        options.shuffle(&mut rng);
+
+        let correct_index = options
+            .iter()
+            .position(|opt| opt == entry.target)
+            .unwrap_or(0);
+
+        let prompt_cue = cue_title.to_string();
+
+        items.push(ArcadeItem {
+            topic: canonical_slug.to_string(),
+            trigger_sentence: entry.sentence.to_string(),
+            prompt_cue,
+            options,
+            correct_index,
+            explanation: entry.explanation.to_string(),
+        });
+    }
+
+    items
+}
+
 /// Generates 4-choice rapid cloze arcade items for any grammar topic slug (1 correct + 3 distractors).
 pub fn generate_4choice_items(topic: &str, count: usize) -> Vec<ArcadeItem> {
     if count == 0 {
         return Vec::new();
+    }
+
+    // Check if the topic matches any of the 5 specialized drill engines first
+    if canonicalize_engine_slug(topic).is_some() {
+        return generate_specialized_engine_items(topic, count);
     }
 
     let slug = canonicalize_topic(topic);

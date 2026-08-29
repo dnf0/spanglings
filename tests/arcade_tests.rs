@@ -1,5 +1,6 @@
 use spanglings::core::arcade::{
-    generate_4choice_items, generate_showdown_items, list_showdown_pairs, ArcadeItem, ShowdownPair,
+    generate_4choice_items, generate_showdown_items, generate_specialized_engine_items,
+    list_showdown_pairs, ArcadeItem, ShowdownPair,
 };
 use spanglings::core::reference::list_grammar_concepts;
 use std::str::FromStr;
@@ -295,4 +296,103 @@ fn test_arcade_item_methods() {
     assert!(item.is_correct(0));
     assert!(!item.is_correct(1));
     assert_eq!(item.correct_option(), "está");
+}
+
+#[test]
+fn test_all_5_specialized_engines_generate_valid_items() {
+    let engines = [
+        ("regimen", &["prepositions", "prep", "verb-regimen"][..]),
+        ("irregulars", &["verbs", "irregular", "verb-speed"][..]),
+        ("false-friends", &["cognates", "falsos-amigos"][..]),
+        ("se-matrix", &["se", "se-types"][..]),
+        ("connectors", &["discourse", "transitions"][..]),
+    ];
+
+    for (slug, aliases) in engines {
+        let empty = generate_specialized_engine_items(slug, 0);
+        assert!(empty.is_empty());
+
+        let items = generate_specialized_engine_items(slug, 16);
+        assert_eq!(
+            items.len(),
+            16,
+            "Should generate 16 items for engine {}",
+            slug
+        );
+        for item in &items {
+            assert_eq!(item.options.len(), 4, "Engine items must have 4 options");
+            assert!(item.correct_index < 4);
+            assert!(!item.trigger_sentence.is_empty());
+            assert!(
+                item.trigger_sentence.contains("____"),
+                "Must contain blank placeholder"
+            );
+            assert!(!item.explanation.is_empty());
+            assert!(!item.prompt_cue.is_empty());
+            assert!(item.is_correct(item.correct_index));
+            assert_eq!(item.correct_option(), &item.options[item.correct_index]);
+
+            let mut set = std::collections::HashSet::new();
+            for opt in &item.options {
+                set.insert(opt.clone());
+            }
+            assert_eq!(
+                set.len(),
+                4,
+                "All 4 options must be distinct in engine {}: {:?}",
+                slug,
+                item.options
+            );
+        }
+
+        // Test aliases work in generate_specialized_engine_items as well
+        for alias in aliases {
+            let alias_items = generate_specialized_engine_items(alias, 3);
+            assert_eq!(
+                alias_items.len(),
+                3,
+                "Alias {} for {} must work",
+                alias,
+                slug
+            );
+            assert_eq!(alias_items[0].topic, slug);
+        }
+    }
+
+    // Invalid slug returns empty vec
+    assert!(generate_specialized_engine_items("unknown-engine", 5).is_empty());
+}
+
+#[test]
+fn test_4choice_delegation_to_specialized_engines() {
+    let engines = [
+        "regimen",
+        "prepositions",
+        "irregulars",
+        "verbs",
+        "false-friends",
+        "cognates",
+        "se-matrix",
+        "se",
+        "connectors",
+        "discourse",
+    ];
+
+    for engine in engines {
+        let items = generate_4choice_items(engine, 5);
+        assert_eq!(
+            items.len(),
+            5,
+            "generate_4choice_items should work for {}",
+            engine
+        );
+        for item in &items {
+            assert_eq!(item.options.len(), 4);
+            assert!(item.correct_index < 4);
+            assert!(!item.trigger_sentence.is_empty());
+            assert!(item.trigger_sentence.contains("____"));
+            assert!(!item.explanation.is_empty());
+            assert!(item.is_correct(item.correct_index));
+        }
+    }
 }
