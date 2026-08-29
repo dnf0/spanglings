@@ -6,9 +6,9 @@
     "semantic_hash": ""
   },
   "src/main.rs": {
-    "mtime": 1787932159.9616551,
-    "seen": 1787933586.893795,
-    "ast_hash": "79f09490e68490963affa0f21f43a29c",
+    "mtime": 1787988642.441753,
+    "seen": 1787989706.625427,
+    "ast_hash": "f9057eeecf70625b086340f9bb764e14",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-spanglings-implementation.md": {
@@ -24,21 +24,21 @@
     "semantic_hash": ""
   },
   "src/core/curriculum.rs": {
-    "mtime": 1787813831.0041234,
-    "seen": 1787814389.4931421,
-    "ast_hash": "9c3b06d59e930e84313bcf81e62fb5b9",
+    "mtime": 1787951270.3003118,
+    "seen": 1787954702.80021,
+    "ast_hash": "e54951c0e018dbd0cebfdf092770bdd8",
     "semantic_hash": ""
   },
   "src/core/exercise.rs": {
-    "mtime": 1787915771.092115,
-    "seen": 1787918879.6175182,
-    "ast_hash": "b423409977d9c239a62a07bd11bae3e8",
+    "mtime": 1787951270.3005984,
+    "seen": 1787954702.800211,
+    "ast_hash": "0800c782baca97ae998717cec7d0cbd0",
     "semantic_hash": ""
   },
   "src/core/mod.rs": {
-    "mtime": 1787844175.6400812,
-    "seen": 1787863476.011853,
-    "ast_hash": "6dc5bacb205f8b4684589a28d886ee4e",
+    "mtime": 1787986679.1896396,
+    "seen": 1787989706.625419,
+    "ast_hash": "63310cffc5216eae32daab36ade74659",
     "semantic_hash": ""
   },
   "src/lib.rs": {
@@ -126,26 +126,26 @@
     "semantic_hash": ""
   },
   "src/core/reference.rs": {
-    "mtime": 1787931849.2557628,
-    "seen": 1787933586.8937888,
+    "mtime": 1787939407.9088929,
+    "seen": 1787950132.2900019,
     "ast_hash": "59e918f4ceafea85a3d1978e540e4f1a",
     "semantic_hash": ""
   },
   "tests/reference_tests.rs": {
-    "mtime": 1787931849.294881,
-    "seen": 1787933586.8938072,
+    "mtime": 1787939407.9136238,
+    "seen": 1787950132.290019,
     "ast_hash": "d326716d9f4ea67194b3a724e76b2e12",
     "semantic_hash": ""
   },
   "src/cli/commands/drill.rs": {
-    "mtime": 1787932798.2738976,
-    "seen": 1787933586.893776,
-    "ast_hash": "5d7f8f283510b0efdd68027810b1444e",
+    "mtime": 1787951270.2994914,
+    "seen": 1787954702.800202,
+    "ast_hash": "3868e7fbf61941aab48bc00cb90d6f2f",
     "semantic_hash": ""
   },
   "src/cli/commands/explain.rs": {
-    "mtime": 1787932316.21696,
-    "seen": 1787933586.893776,
+    "mtime": 1787939407.9071374,
+    "seen": 1787950132.289987,
     "ast_hash": "4e6799f817c0a21b0b24957f6e842c6b",
     "semantic_hash": ""
   },
@@ -162,9 +162,9 @@
     "semantic_hash": ""
   },
   "src/cli/commands/mod.rs": {
-    "mtime": 1787844175.6377218,
-    "seen": 1787863476.0118458,
-    "ast_hash": "24a2cc8b2720a8f0cc37c3f549f5ef68",
+    "mtime": 1787986679.1884532,
+    "seen": 1787989706.62541,
+    "ast_hash": "8ef97244a3d3e7ae9d62e55d0ee1bf58",
     "semantic_hash": ""
   },
   "src/cli/commands/progress.rs": {
@@ -186,15 +186,15 @@
     "semantic_hash": ""
   },
   "src/cli/mod.rs": {
-    "mtime": 1787932153.6356835,
-    "seen": 1787933586.893784,
-    "ast_hash": "a62cfa9a040a8e975c6a3cac9c4dd3d5",
+    "mtime": 1787988586.1498237,
+    "seen": 1787989706.6254148,
+    "ast_hash": "3afc916a04a4a52ac0186f34623229bf",
     "semantic_hash": ""
   },
   "tests/cli_tests.rs": {
-    "mtime": 1787932141.9071784,
-    "seen": 1787933586.8937988,
-    "ast_hash": "425011a9a7b82aae84eb1c85eca27b38",
+    "mtime": 1787986679.1922162,
+    "seen": 1787989706.625431,
+    "ast_hash": "4d925d8db525eebc5d0f5da88a1fa8be",
     "semantic_hash": ""
   },
   "src/watcher/mod.rs": {
@@ -216,15 +216,15 @@
     "semantic_hash": ""
   },
   "src/tui/app.rs": {
-    "mtime": 1787933339.8852408,
-    "seen": 1787933586.8937962,
-    "ast_hash": "9b2ab1a1d3e104662d04732abdb9323a",
+    "mtime": 1787989313.7763782,
+    "seen": 1787989706.625427,
+    "ast_hash": "00b079f4ca71950b5652cbd3bc009723",
     "semantic_hash": ""
   },
   "src/tui/events.rs": {
-    "mtime": 1787844175.642086,
-    "seen": 1787863476.011862,
-    "ast_hash": "73e4658e9ab821dd6e520e9eec2b8faf",
+    "mtime": 1787989128.8879628,
+    "seen": 1787989706.625428,
+    "ast_hash": "97f83240552fe87b9e1a1323cf4f5882",
     "semantic_hash": ""
   },
   "src/tui/mod.rs": {
@@ -234,9 +234,9 @@
     "semantic_hash": ""
   },
   "src/tui/ui.rs": {
-    "mtime": 1787933274.1400478,
-    "seen": 1787933586.8937972,
-    "ast_hash": "48f500e2d0b77a0ff8720c876d01352b",
+    "mtime": 1787989313.7966173,
+    "seen": 1787989706.625429,
+    "ast_hash": "70964cfc3f9da1fabe278c4ec6f29b0f",
     "semantic_hash": ""
   },
   "tests/exercise_validity_tests.rs": {
@@ -246,9 +246,9 @@
     "semantic_hash": ""
   },
   "tests/tui_tests.rs": {
-    "mtime": 1787933339.9175625,
-    "seen": 1787933586.8938088,
-    "ast_hash": "e21bef7e56b164c20565ff3a5419c6c5",
+    "mtime": 1787951270.3054683,
+    "seen": 1787954702.800235,
+    "ast_hash": "ac08b7a907716a3312f4a72f74a36d9f",
     "semantic_hash": ""
   },
   "README.md": {
@@ -1206,15 +1206,15 @@
     "semantic_hash": ""
   },
   "src/cli/commands/blitz.rs": {
-    "mtime": 1787932798.2684557,
-    "seen": 1787933586.893773,
-    "ast_hash": "bdbcafc387de664ef389597815289577",
+    "mtime": 1787951270.2991138,
+    "seen": 1787954702.8002,
+    "ast_hash": "48b86c4c6473ca90b2f28e050a3c2e73",
     "semantic_hash": ""
   },
   "tests/blitz_tests.rs": {
-    "mtime": 1787932798.3326514,
-    "seen": 1787933586.8937979,
-    "ast_hash": "91675852ab9d7fe6c89ed13e99ccf269",
+    "mtime": 1787951270.3036864,
+    "seen": 1787954702.8002229,
+    "ast_hash": "1fa35e456c95eb13e168fed947d09cab",
     "semantic_hash": ""
   },
   "tests/weakness_profiler_tests.rs": {
@@ -2826,9 +2826,9 @@
     "semantic_hash": ""
   },
   "tests/drill_tests.rs": {
-    "mtime": 1787932798.3370497,
-    "seen": 1787933586.893801,
-    "ast_hash": "dd3778d176f0b40305f11c36581e452b",
+    "mtime": 1787951270.304617,
+    "seen": 1787954702.800226,
+    "ast_hash": "97d8f578daa3dd0238bf956ec1c634c5",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-28-rich-drill-prompts-and-cheat-sheets.md": {
@@ -2844,15 +2844,105 @@
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-28-functional-grammar-keys.md": {
-    "mtime": 1787931445.5352967,
-    "seen": 1787933586.8938282,
+    "mtime": 1787939407.8944545,
+    "seen": 1787950132.290038,
     "ast_hash": "f3586411198e1a7d837841636411a0c9",
     "semantic_hash": ""
   },
   "docs/superpowers/specs/2026-08-28-functional-grammar-keys-design.md": {
-    "mtime": 1787931174.4519422,
-    "seen": 1787933586.893831,
+    "mtime": 1787939407.8948388,
+    "seen": 1787950132.2900422,
     "ast_hash": "a7d218e4f41bd52087c7041a4cd7d386",
+    "semantic_hash": ""
+  },
+  "src/core/generator.rs": {
+    "mtime": 1787951270.3010418,
+    "seen": 1787954702.800211,
+    "ast_hash": "34f41ca99b604f3d4926b92cb7239bee",
+    "semantic_hash": ""
+  },
+  "tests/extractor_tests.rs": {
+    "mtime": 1787951270.3048072,
+    "seen": 1787954702.800228,
+    "ast_hash": "9cd8c74653c59a9bc3c56f35d555f6b0",
+    "semantic_hash": ""
+  },
+  "tests/generator_tests.rs": {
+    "mtime": 1787951270.3050494,
+    "seen": 1787954702.800229,
+    "ast_hash": "3fe746b78a09271b3244ae097e03da23",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-28-combinatorial-drill-generator-mastery.md": {
+    "mtime": 1787951270.2981825,
+    "seen": 1787954702.800253,
+    "ast_hash": "7a092e65b2e4a3913b9a9f810002f6ac",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-28-adaptive-drills-mastery-dashboard-design.md": {
+    "mtime": 1787951270.2984896,
+    "seen": 1787954702.800257,
+    "ast_hash": "5e9dfa17208bca57e27c69da3bbc4d99",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-28-combinatorial-drill-generator-mastery-design.md": {
+    "mtime": 1787951270.298753,
+    "seen": 1787954702.800257,
+    "ast_hash": "fcb1c410cb1956a44861ae71993e8d47",
+    "semantic_hash": ""
+  },
+  "src/cli/commands/arcade.rs": {
+    "mtime": 1787988602.9844182,
+    "seen": 1787989706.625404,
+    "ast_hash": "195e97c7e39597cc078bc061b6072a71",
+    "semantic_hash": ""
+  },
+  "src/core/arcade.rs": {
+    "mtime": 1787988238.32977,
+    "seen": 1787989706.6254148,
+    "ast_hash": "b4a25fd41ca8664d33f9ca53c0697861",
+    "semantic_hash": ""
+  },
+  "tests/arcade_tests.rs": {
+    "mtime": 1787988238.380998,
+    "seen": 1787989706.62543,
+    "ast_hash": "71493c3228addef4dd195f1c0e8ba782",
+    "semantic_hash": ""
+  },
+  "tests/cli_arcade_tests.rs": {
+    "mtime": 1787988618.3863463,
+    "seen": 1787989706.625431,
+    "ast_hash": "b57d7400983dfc952ba99666d812cb06",
+    "semantic_hash": ""
+  },
+  "tests/tui_arcade_tests.rs": {
+    "mtime": 1787989241.101476,
+    "seen": 1787989706.6254442,
+    "ast_hash": "57ad84aa4170bc7ea92712cab4007fc2",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-28-rapid-arcade-single-key-drills.md": {
+    "mtime": 1787952548.165947,
+    "seen": 1787954702.800255,
+    "ast_hash": "c562754d6acb625a0e01ac23625a71f8",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-28-rapid-arcade-single-key-drills-design.md": {
+    "mtime": 1787952243.9474185,
+    "seen": 1787954702.800259,
+    "ast_hash": "69f9a94d4eb1639d04544a40247f97e8",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-29-expanded-binary-showdowns.md": {
+    "mtime": 1787987750.9504013,
+    "seen": 1787989706.6254668,
+    "ast_hash": "2139d846c5b0c6069a812017a6b9ae43",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-29-expanded-binary-showdowns-design.md": {
+    "mtime": 1787987742.236938,
+    "seen": 1787989706.625472,
+    "ast_hash": "ad41ed70ce9e31e834e91eebf5ddb478",
     "semantic_hash": ""
   }
 }

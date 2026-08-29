@@ -276,7 +276,10 @@ pub fn run_arcade(
     if weak {
         println!("{}", "🎯 Mode: Adaptive Weakness Targeting".yellow());
     } else if let Some(ref s) = showdown {
-        println!("🎯 Mode: Showdown Duel ({})", s.bold().magenta());
+        let title = ShowdownPair::from_str(s)
+            .map(|p| p.title().to_string())
+            .unwrap_or_else(|| s.clone());
+        println!("🎯 Mode: Showdown Duel ({})", title.bold().magenta());
     } else if let Some(ref c) = concept {
         println!("🎯 Mode: Concept Cloze ({})", c.bold().blue());
     } else {

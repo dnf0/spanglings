@@ -2540,10 +2540,19 @@ pub fn draw_mastery_dashboard_modal(frame: &mut Frame, app: &App, area: Rect) {
 pub fn draw_arcade_modal(frame: &mut Frame, app: &App, area: Rect) {
     frame.render_widget(Clear, area);
 
+    let modal_title = if let Some(showdown) = app.arcade_selected_showdown {
+        format!(
+            " ⚡ ARCADE ARENA: {} ⚡ (Esc or [q] to exit) ",
+            showdown.title()
+        )
+    } else {
+        " ⚡ SPANGLINGS ARCADE ARENA ⚡ (Esc or [q] to exit) ".to_string()
+    };
+
     let modal_block = Block::default()
         .borders(Borders::ALL)
         .border_type(BorderType::Rounded)
-        .title(" ⚡ SPANGLINGS ARCADE ARENA ⚡ (Esc or [q] to exit) ")
+        .title(modal_title)
         .border_style(Style::default().fg(Color::Yellow));
     frame.render_widget(modal_block.clone(), area);
 
@@ -2655,6 +2664,14 @@ pub fn draw_arcade_modal(frame: &mut Frame, app: &App, area: Rect) {
                     .add_modifier(Modifier::BOLD),
             ),
             Span::styled(" Play Again  |  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [ s / Tab ] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Cycle Showdown  |  ", Style::default().fg(Color::White)),
             Span::styled(
                 " [ q / Esc ] ",
                 Style::default()
@@ -2962,6 +2979,14 @@ pub fn draw_arcade_modal(frame: &mut Frame, app: &App, area: Rect) {
             ),
             Span::styled(" Option 2  |  ", Style::default().fg(Color::White)),
             Span::styled(
+                " [ s / Tab ] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Cycle  |  ", Style::default().fg(Color::White)),
+            Span::styled(
                 " [ Esc / q ] ",
                 Style::default()
                     .fg(Color::Black)
@@ -2980,6 +3005,14 @@ pub fn draw_arcade_modal(frame: &mut Frame, app: &App, area: Rect) {
                     .add_modifier(Modifier::BOLD),
             ),
             Span::styled(" Select Option  |  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [ s / Tab ] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Cycle  |  ", Style::default().fg(Color::White)),
             Span::styled(
                 " [ Esc / q ] ",
                 Style::default()

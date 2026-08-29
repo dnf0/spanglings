@@ -45,9 +45,9 @@ pub enum Commands {
     },
     /// Launch rapid single-key ADHD arcade & showdown drills (no Enter required)
     Arcade {
-        /// Grammar showdown duel pair or concept topic (e.g. por-para, ser-estar, subj-ind, subjunctive)
+        /// Grammar showdown duel pair or concept topic (e.g. por-para, ser-estar, tener-haber, saber-conocer, muy-mucho, pedir-preguntar, subjunctive)
         topic: Option<String>,
-        /// Grammar showdown duel pair (e.g. por-para, ser-estar, subj-ind, pret-imp)
+        /// Grammar showdown duel pair (e.g. por-para, ser-estar, tener-haber, saber-conocer, muy-mucho, pedir-preguntar, llevar-traer, haber-estar, ir-irse, bien-bueno)
         #[arg(long)]
         showdown: Option<String>,
         /// Filter arcade items by specific linguistic concept

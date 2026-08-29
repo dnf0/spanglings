@@ -22,7 +22,32 @@ pub fn run_tui_app<B: Backend>(terminal: &mut Terminal<B>, mut app: App) -> Resu
 
                 // --- Arcade Arena Modal Event Handling ---
                 if app.show_arcade_modal {
-                    app.on_key(key);
+                    if app.arcade_item_idx >= app.arcade_items.len() {
+                        match (key.code, key.modifiers) {
+                            (KeyCode::Char('s'), _)
+                            | (KeyCode::Char('S'), _)
+                            | (KeyCode::Tab, _) => {
+                                app.cycle_arcade_showdown(true);
+                            }
+                            (KeyCode::BackTab, _) => {
+                                app.cycle_arcade_showdown(false);
+                            }
+                            (KeyCode::Char('r'), _) | (KeyCode::Char('R'), _) => {
+                                let showdown = app.arcade_selected_showdown;
+                                app.enter_arcade_mode(showdown);
+                            }
+                            (KeyCode::Esc, _)
+                            | (KeyCode::Char('q'), _)
+                            | (KeyCode::Char('Q'), _) => {
+                                app.exit_arcade_mode();
+                            }
+                            _ => {
+                                app.on_key(key);
+                            }
+                        }
+                    } else {
+                        app.on_key(key);
+                    }
                     continue;
                 }
 

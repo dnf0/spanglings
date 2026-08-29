@@ -27,12 +27,17 @@ fn main() -> anyhow::Result<()> {
             count,
             sound,
         }) => {
-            let selected_showdown = showdown.or_else(|| {
-                topic
-                    .as_deref()
-                    .and_then(spanglings::core::arcade::ShowdownPair::from_str)
-                    .map(|p| p.slug().to_string())
-            });
+            let selected_showdown = showdown
+                .as_deref()
+                .and_then(spanglings::core::arcade::ShowdownPair::from_str)
+                .map(|p| p.slug().to_string())
+                .or_else(|| {
+                    topic
+                        .as_deref()
+                        .and_then(spanglings::core::arcade::ShowdownPair::from_str)
+                        .map(|p| p.slug().to_string())
+                })
+                .or(showdown);
             let selected_concept = concept.or_else(|| {
                 if selected_showdown.is_none() {
                     topic
