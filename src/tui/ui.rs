@@ -2563,30 +2563,6 @@ pub fn draw_arcade_modal(frame: &mut Frame, app: &App, area: Rect) {
 
     // If finished all items or no items
     if app.arcade_items.is_empty() || app.arcade_item_idx >= app.arcade_items.len() {
-        let chunks = Layout::default()
-            .direction(Direction::Vertical)
-            .constraints([
-                Constraint::Length(3), // Banner
-                Constraint::Min(8),    // Stats card
-                Constraint::Length(3), // Footer
-            ])
-            .split(inner_area);
-
-        // Banner
-        let banner_lines = vec![Line::from(vec![
-            Span::styled(" 🏆 ", Style::default().fg(Color::Yellow)),
-            Span::styled(
-                "ARCADE SESSION COMPLETE!",
-                Style::default()
-                    .fg(Color::Yellow)
-                    .add_modifier(Modifier::BOLD),
-            ),
-            Span::styled(" 🏆 ", Style::default().fg(Color::Yellow)),
-        ])];
-        let banner_para = Paragraph::new(banner_lines).alignment(Alignment::Center);
-        frame.render_widget(banner_para, chunks[0]);
-
-        // Stats summary
         let stats = &app.arcade_stats;
         let accuracy = if stats.total_answered > 0 {
             (stats.correct_count as f64 / stats.total_answered as f64 * 100.0).round() as u32
@@ -2600,64 +2576,6 @@ pub fn draw_arcade_modal(frame: &mut Frame, app: &App, area: Rect) {
         };
         let combo_rank = crate::cli::commands::arcade::get_combo_rank(stats.best_streak);
 
-        let stats_block = Block::default()
-            .borders(Borders::ALL)
-            .border_type(BorderType::Rounded)
-            .title(" Session Recap ")
-            .border_style(Style::default().fg(Color::Cyan));
-
-        let summary_lines = vec![
-            Line::from(""),
-            Line::from(vec![
-                Span::styled("  Total Score:         ", Style::default().fg(Color::White)),
-                Span::styled(
-                    format!("{} XP", stats.score),
-                    Style::default()
-                        .fg(Color::Yellow)
-                        .add_modifier(Modifier::BOLD),
-                ),
-            ]),
-            Line::from(vec![
-                Span::styled("  Accuracy:            ", Style::default().fg(Color::White)),
-                Span::styled(
-                    format!(
-                        "{}% ({}/{} correct)",
-                        accuracy, stats.correct_count, stats.total_answered
-                    ),
-                    Style::default()
-                        .fg(if accuracy >= 80 {
-                            Color::Green
-                        } else {
-                            Color::LightRed
-                        })
-                        .add_modifier(Modifier::BOLD),
-                ),
-            ]),
-            Line::from(vec![
-                Span::styled("  Best Streak:         ", Style::default().fg(Color::White)),
-                Span::styled(
-                    format!("🔥 {} (Rank: {})", stats.best_streak, combo_rank),
-                    Style::default()
-                        .fg(Color::Magenta)
-                        .add_modifier(Modifier::BOLD),
-                ),
-            ]),
-            Line::from(vec![
-                Span::styled("  Avg Response Time:   ", Style::default().fg(Color::White)),
-                Span::styled(
-                    format!("⚡ {} ms", avg_time),
-                    Style::default()
-                        .fg(Color::Cyan)
-                        .add_modifier(Modifier::BOLD),
-                ),
-            ]),
-            Line::from(""),
-        ];
-
-        let summary_para = Paragraph::new(summary_lines).block(stats_block);
-        frame.render_widget(summary_para, chunks[1]);
-
-        // Footer
         let footer_spans = vec![
             Span::styled(
                 " [ r ] ",
@@ -2684,15 +2602,242 @@ pub fn draw_arcade_modal(frame: &mut Frame, app: &App, area: Rect) {
             ),
             Span::styled(" Exit Arena ", Style::default().fg(Color::White)),
         ];
+        let footer_block = Block::default()
+            .borders(Borders::ALL)
+            .border_type(BorderType::Rounded)
+            .border_style(Style::default().fg(Color::DarkGray));
         let footer_para = Paragraph::new(Line::from(footer_spans))
-            .block(
-                Block::default()
-                    .borders(Borders::ALL)
-                    .border_type(BorderType::Rounded)
-                    .border_style(Style::default().fg(Color::DarkGray)),
-            )
+            .block(footer_block)
             .alignment(Alignment::Center);
-        frame.render_widget(footer_para, chunks[2]);
+
+        // Banner
+        let banner_lines = vec![Line::from(vec![
+            Span::styled(" 🏆 ", Style::default().fg(Color::Yellow)),
+            Span::styled(
+                "ARCADE SESSION COMPLETE!",
+                Style::default()
+                    .fg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" 🏆 ", Style::default().fg(Color::Yellow)),
+        ])];
+        let banner_para = Paragraph::new(banner_lines).alignment(Alignment::Center);
+
+        if stats.mistakes.is_empty() {
+            let chunks = Layout::default()
+                .direction(Direction::Vertical)
+                .constraints([
+                    Constraint::Length(3), // Banner
+                    Constraint::Min(8),    // Stats card
+                    Constraint::Length(3), // Footer
+                ])
+                .split(inner_area);
+
+            frame.render_widget(banner_para, chunks[0]);
+
+            let stats_block = Block::default()
+                .borders(Borders::ALL)
+                .border_type(BorderType::Rounded)
+                .title(" Session Recap ")
+                .border_style(Style::default().fg(Color::Cyan));
+
+            let summary_lines = vec![
+                Line::from(""),
+                Line::from(vec![
+                    Span::styled("  Total Score:         ", Style::default().fg(Color::White)),
+                    Span::styled(
+                        format!("{} XP", stats.score),
+                        Style::default()
+                            .fg(Color::Yellow)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+                Line::from(vec![
+                    Span::styled("  Accuracy:            ", Style::default().fg(Color::White)),
+                    Span::styled(
+                        format!(
+                            "{}% ({}/{} correct)",
+                            accuracy, stats.correct_count, stats.total_answered
+                        ),
+                        Style::default()
+                            .fg(if accuracy >= 80 {
+                                Color::Green
+                            } else {
+                                Color::LightRed
+                            })
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+                Line::from(vec![
+                    Span::styled("  Best Streak:         ", Style::default().fg(Color::White)),
+                    Span::styled(
+                        format!("🔥 {} (Rank: {})", stats.best_streak, combo_rank),
+                        Style::default()
+                            .fg(Color::Magenta)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+                Line::from(vec![
+                    Span::styled("  Avg Response Time:   ", Style::default().fg(Color::White)),
+                    Span::styled(
+                        format!("⚡ {} ms", avg_time),
+                        Style::default()
+                            .fg(Color::Cyan)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+                Line::from(""),
+                Line::from(Span::styled(
+                    "  ✨ Perfect Run! 100% Accuracy — No mistakes to review! ✨",
+                    Style::default()
+                        .fg(Color::Green)
+                        .add_modifier(Modifier::BOLD),
+                )),
+            ];
+
+            let summary_para = Paragraph::new(summary_lines).block(stats_block);
+            frame.render_widget(summary_para, chunks[1]);
+            frame.render_widget(footer_para, chunks[2]);
+        } else {
+            let chunks = Layout::default()
+                .direction(Direction::Vertical)
+                .constraints([
+                    Constraint::Length(3), // Banner
+                    Constraint::Length(7), // Stats card
+                    Constraint::Min(8),    // Missed Questions Card
+                    Constraint::Length(3), // Footer
+                ])
+                .split(inner_area);
+
+            frame.render_widget(banner_para, chunks[0]);
+
+            let stats_block = Block::default()
+                .borders(Borders::ALL)
+                .border_type(BorderType::Rounded)
+                .title(" Session Recap ")
+                .border_style(Style::default().fg(Color::Cyan));
+
+            let summary_lines = vec![
+                Line::from(vec![
+                    Span::styled("  Total Score:         ", Style::default().fg(Color::White)),
+                    Span::styled(
+                        format!("{} XP", stats.score),
+                        Style::default()
+                            .fg(Color::Yellow)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+                Line::from(vec![
+                    Span::styled("  Accuracy:            ", Style::default().fg(Color::White)),
+                    Span::styled(
+                        format!(
+                            "{}% ({}/{} correct)",
+                            accuracy, stats.correct_count, stats.total_answered
+                        ),
+                        Style::default()
+                            .fg(if accuracy >= 80 {
+                                Color::Green
+                            } else {
+                                Color::LightRed
+                            })
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+                Line::from(vec![
+                    Span::styled("  Best Streak:         ", Style::default().fg(Color::White)),
+                    Span::styled(
+                        format!("🔥 {} (Rank: {})", stats.best_streak, combo_rank),
+                        Style::default()
+                            .fg(Color::Magenta)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+                Line::from(vec![
+                    Span::styled("  Avg Response Time:   ", Style::default().fg(Color::White)),
+                    Span::styled(
+                        format!("⚡ {} ms", avg_time),
+                        Style::default()
+                            .fg(Color::Cyan)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]),
+            ];
+
+            let summary_para = Paragraph::new(summary_lines).block(stats_block);
+            frame.render_widget(summary_para, chunks[1]);
+
+            let missed_block = Block::default()
+                .borders(Borders::ALL)
+                .border_type(BorderType::Rounded)
+                .title(format!(
+                    " ❌ Review Missed Questions ({}) ",
+                    stats.mistakes.len()
+                ))
+                .border_style(Style::default().fg(Color::LightRed));
+
+            let mut missed_lines = Vec::new();
+            for (i, m) in stats.mistakes.iter().enumerate() {
+                missed_lines.push(Line::from(vec![
+                    Span::styled(
+                        format!("  {}. ", i + 1),
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        format!("[{}] ", m.topic),
+                        Style::default()
+                            .fg(Color::Cyan)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        &m.trigger_sentence,
+                        Style::default()
+                            .fg(Color::White)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]));
+                missed_lines.push(Line::from(vec![
+                    Span::styled(
+                        "     ✗ Your: ",
+                        Style::default().fg(Color::Red).add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        &m.user_answer,
+                        Style::default().fg(Color::Red).add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled("   |   ", Style::default().fg(Color::DarkGray)),
+                    Span::styled(
+                        "✓ Correct: ",
+                        Style::default()
+                            .fg(Color::Green)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(
+                        &m.correct_answer,
+                        Style::default()
+                            .fg(Color::Green)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                ]));
+                missed_lines.push(Line::from(vec![
+                    Span::styled(
+                        "     💡 Why: ",
+                        Style::default()
+                            .fg(Color::Yellow)
+                            .add_modifier(Modifier::BOLD),
+                    ),
+                    Span::styled(&m.explanation, Style::default().fg(Color::LightYellow)),
+                ]));
+                missed_lines.push(Line::from(""));
+            }
+
+            let missed_para = Paragraph::new(missed_lines)
+                .block(missed_block)
+                .wrap(Wrap { trim: false });
+            frame.render_widget(missed_para, chunks[2]);
+            frame.render_widget(footer_para, chunks[3]);
+        }
         return;
     }
 
