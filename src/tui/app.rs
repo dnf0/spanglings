@@ -1,3 +1,7 @@
+use crate::cli::commands::arcade::{
+    evaluate_arcade_choice, play_arcade_sound, select_arcade_items, ArcadeSessionStats,
+};
+use crate::core::arcade::{generate_showdown_items, ArcadeItem, ShowdownPair};
 use crate::core::conjugator::{conjugate_verb, VerbTable};
 use crate::core::exercise::Exercise;
 use crate::core::placement::{
@@ -71,6 +75,14 @@ pub struct App {
     // Mastery Dashboard state
     pub show_mastery_dashboard: bool,
     pub mastery_selected_idx: usize,
+
+    // Arcade Arena modal state
+    pub show_arcade_modal: bool,
+    pub arcade_items: Vec<ArcadeItem>,
+    pub arcade_item_idx: usize,
+    pub arcade_stats: ArcadeSessionStats,
+    pub arcade_flash: Option<(bool, String, std::time::Instant)>,
+    pub arcade_item_start_time: std::time::Instant,
 }
 
 impl App {
@@ -150,6 +162,12 @@ impl App {
             tour_current_station: 0,
             show_mastery_dashboard: false,
             mastery_selected_idx: 0,
+            show_arcade_modal: false,
+            arcade_items: Vec::new(),
+            arcade_item_idx: 0,
+            arcade_stats: ArcadeSessionStats::default(),
+            arcade_flash: None,
+            arcade_item_start_time: std::time::Instant::now(),
         }
     }
 
@@ -719,6 +737,138 @@ impl App {
         self.mastery_selected_idx = self.mastery_selected_idx.saturating_sub(1);
     }
 
+    // --- Arcade Arena Modal Methods ---
+
+    pub fn enter_arcade_mode(&mut self, showdown: Option<ShowdownPair>) {
+        self.show_tour_welcome = false;
+        self.show_tour_modal = false;
+        self.show_mastery_dashboard = false;
+        self.show_reference = false;
+        self.show_arcade_modal = true;
+
+        if let Some(pair) = showdown {
+            self.arcade_items = generate_showdown_items(pair, 10);
+        } else {
+            self.arcade_items = select_arcade_items(None, None, false, 15, &self.state);
+        }
+
+        if self.arcade_items.is_empty() {
+            self.arcade_items = generate_showdown_items(ShowdownPair::PorPara, 10);
+        }
+
+        self.arcade_item_idx = 0;
+        self.arcade_stats = ArcadeSessionStats::default();
+        self.arcade_flash = None;
+        self.arcade_item_start_time = std::time::Instant::now();
+    }
+
+    pub fn exit_arcade_mode(&mut self) {
+        self.show_arcade_modal = false;
+        self.arcade_flash = None;
+    }
+
+    pub fn handle_arcade_key_code(&mut self, key: KeyCode) {
+        match key {
+            KeyCode::Esc | KeyCode::Char('q') | KeyCode::Char('Q') => {
+                self.exit_arcade_mode();
+            }
+            KeyCode::Left => {
+                self.handle_arcade_key_char('j');
+            }
+            KeyCode::Right => {
+                self.handle_arcade_key_char('k');
+            }
+            KeyCode::Char(c) => {
+                self.handle_arcade_key_char(c);
+            }
+            _ => {}
+        }
+    }
+
+    pub fn handle_arcade_key_char(&mut self, c: char) {
+        if !self.show_arcade_modal {
+            return;
+        }
+
+        // If completed all items, any key or 'r'/'q' exits/restarts
+        if self.arcade_item_idx >= self.arcade_items.len() {
+            match c {
+                'r' | 'R' => {
+                    let showdown =
+                        if self.arcade_items.first().map(|it| it.options.len()) == Some(2) {
+                            ShowdownPair::from_str(&self.arcade_items[0].topic)
+                        } else {
+                            None
+                        };
+                    self.enter_arcade_mode(showdown);
+                }
+                _ => {
+                    self.exit_arcade_mode();
+                }
+            }
+            return;
+        }
+
+        if c == 'q' || c == 'Q' {
+            self.exit_arcade_mode();
+            return;
+        }
+
+        let item = &self.arcade_items[self.arcade_item_idx];
+        let chosen_idx = match c {
+            '1' if !item.options.is_empty() => Some(0),
+            '2' if item.options.len() >= 2 => Some(1),
+            '3' if item.options.len() >= 3 => Some(2),
+            '4' if item.options.len() >= 4 => Some(3),
+            'j' | 'J' if !item.options.is_empty() => Some(0),
+            'k' | 'K' if item.options.len() >= 2 => Some(1),
+            _ => None,
+        };
+
+        if let Some(choice_idx) = chosen_idx {
+            let elapsed_ms = self.arcade_item_start_time.elapsed().as_millis();
+            let result =
+                evaluate_arcade_choice(item, choice_idx, elapsed_ms, &mut self.arcade_stats);
+
+            // Update concept mastery in app state
+            let quality = if result.is_correct {
+                if elapsed_ms < 800 {
+                    5
+                } else if elapsed_ms < 1500 {
+                    4
+                } else {
+                    3
+                }
+            } else {
+                1
+            };
+            self.state
+                .update_concept_mastery(&item.topic, quality, Utc::now());
+            let _ = self.state.save();
+
+            // Sound feedback
+            play_arcade_sound(result.is_correct, true);
+
+            // Flash message
+            let msg = if result.is_correct {
+                format!(
+                    "✓ CORRECT! +{} PTS (+{} speed) — {}",
+                    result.points_earned, result.speed_bonus, item.explanation
+                )
+            } else {
+                format!(
+                    "✗ INCORRECT! Correct: '{}' — {}",
+                    item.correct_option(),
+                    item.explanation
+                )
+            };
+            self.arcade_flash = Some((result.is_correct, msg, std::time::Instant::now()));
+
+            self.arcade_item_idx += 1;
+            self.arcade_item_start_time = std::time::Instant::now();
+        }
+    }
+
     // --- Key Event Handling ---
 
     pub fn handle_key(&mut self, key: impl Into<KeyEvent>) {
@@ -727,6 +877,12 @@ impl App {
 
     pub fn on_key(&mut self, key: impl Into<KeyEvent>) {
         let key = key.into();
+
+        if self.show_arcade_modal {
+            self.handle_arcade_key_code(key.code);
+            return;
+        }
+
         if self.show_tour_welcome {
             match key.code {
                 KeyCode::Char('y') | KeyCode::Char('Y') => {
@@ -818,6 +974,13 @@ impl App {
                             .to_string(),
                     );
                 }
+                KeyCode::Char('x') | KeyCode::Char('X') => {
+                    self.show_mastery_dashboard = false;
+                    let showdown = concepts
+                        .get(self.mastery_selected_idx)
+                        .and_then(|c| ShowdownPair::from_str(c.slug));
+                    self.enter_arcade_mode(showdown);
+                }
                 _ => {}
             }
             return;
@@ -827,6 +990,10 @@ impl App {
             match key.code {
                 KeyCode::Char('m') | KeyCode::Char('M') => {
                     self.toggle_mastery_dashboard();
+                    return;
+                }
+                KeyCode::Char('x') | KeyCode::Char('X') => {
+                    self.enter_arcade_mode(None);
                     return;
                 }
                 _ => {}

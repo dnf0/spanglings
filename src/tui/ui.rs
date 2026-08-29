@@ -31,6 +31,12 @@ pub fn draw_ui(frame: &mut Frame, app: &App) {
     draw_workspace(frame, app, main_chunks[1]);
     draw_footer(frame, app, main_chunks[2]);
 
+    if app.show_arcade_modal {
+        let modal_area = centered_rect(88, 85, size);
+        draw_arcade_modal(frame, app, modal_area);
+        return;
+    }
+
     if app.show_tour_welcome {
         let modal_area = centered_rect(65, 40, size);
         draw_tour_welcome_modal(frame, modal_area);
@@ -848,6 +854,14 @@ fn draw_footer(frame: &mut Frame, app: &App, area: Rect) {
                     .add_modifier(Modifier::BOLD),
             ),
             Span::styled(" Mastery ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [x] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Arcade ", Style::default().fg(Color::White)),
             Span::styled(
                 " [T] ",
                 Style::default()
@@ -2480,6 +2494,14 @@ pub fn draw_mastery_dashboard_modal(frame: &mut Frame, app: &App, area: Rect) {
         ),
         Span::styled(" Reference Sheet  ", Style::default().fg(Color::White)),
         Span::styled(
+            " [x] ",
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Yellow)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(" Arcade  ", Style::default().fg(Color::White)),
+        Span::styled(
             " [d] ",
             Style::default()
                 .fg(Color::Black)
@@ -2491,7 +2513,7 @@ pub fn draw_mastery_dashboard_modal(frame: &mut Frame, app: &App, area: Rect) {
             " [w] ",
             Style::default()
                 .fg(Color::Black)
-                .bg(Color::Yellow)
+                .bg(Color::Cyan)
                 .add_modifier(Modifier::BOLD),
         ),
         Span::styled(" Weakness Drill  ", Style::default().fg(Color::White)),
@@ -2513,4 +2535,468 @@ pub fn draw_mastery_dashboard_modal(frame: &mut Frame, app: &App, area: Rect) {
         .block(footer_block)
         .alignment(Alignment::Center);
     frame.render_widget(footer_para, chunks[2]);
+}
+
+pub fn draw_arcade_modal(frame: &mut Frame, app: &App, area: Rect) {
+    frame.render_widget(Clear, area);
+
+    let modal_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(" ⚡ SPANGLINGS ARCADE ARENA ⚡ (Esc or [q] to exit) ")
+        .border_style(Style::default().fg(Color::Yellow));
+    frame.render_widget(modal_block.clone(), area);
+
+    let inner_area = modal_block.inner(area);
+
+    // If finished all items or no items
+    if app.arcade_items.is_empty() || app.arcade_item_idx >= app.arcade_items.len() {
+        let chunks = Layout::default()
+            .direction(Direction::Vertical)
+            .constraints([
+                Constraint::Length(3), // Banner
+                Constraint::Min(8),    // Stats card
+                Constraint::Length(3), // Footer
+            ])
+            .split(inner_area);
+
+        // Banner
+        let banner_lines = vec![Line::from(vec![
+            Span::styled(" 🏆 ", Style::default().fg(Color::Yellow)),
+            Span::styled(
+                "ARCADE SESSION COMPLETE!",
+                Style::default()
+                    .fg(Color::Yellow)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" 🏆 ", Style::default().fg(Color::Yellow)),
+        ])];
+        let banner_para = Paragraph::new(banner_lines).alignment(Alignment::Center);
+        frame.render_widget(banner_para, chunks[0]);
+
+        // Stats summary
+        let stats = &app.arcade_stats;
+        let accuracy = if stats.total_answered > 0 {
+            (stats.correct_count as f64 / stats.total_answered as f64 * 100.0).round() as u32
+        } else {
+            0
+        };
+        let avg_time = if stats.total_answered > 0 {
+            stats.total_time_ms / stats.total_answered as u128
+        } else {
+            0
+        };
+        let combo_rank = crate::cli::commands::arcade::get_combo_rank(stats.best_streak);
+
+        let stats_block = Block::default()
+            .borders(Borders::ALL)
+            .border_type(BorderType::Rounded)
+            .title(" Session Recap ")
+            .border_style(Style::default().fg(Color::Cyan));
+
+        let summary_lines = vec![
+            Line::from(""),
+            Line::from(vec![
+                Span::styled("  Total Score:         ", Style::default().fg(Color::White)),
+                Span::styled(
+                    format!("{} XP", stats.score),
+                    Style::default()
+                        .fg(Color::Yellow)
+                        .add_modifier(Modifier::BOLD),
+                ),
+            ]),
+            Line::from(vec![
+                Span::styled("  Accuracy:            ", Style::default().fg(Color::White)),
+                Span::styled(
+                    format!(
+                        "{}% ({}/{} correct)",
+                        accuracy, stats.correct_count, stats.total_answered
+                    ),
+                    Style::default()
+                        .fg(if accuracy >= 80 {
+                            Color::Green
+                        } else {
+                            Color::LightRed
+                        })
+                        .add_modifier(Modifier::BOLD),
+                ),
+            ]),
+            Line::from(vec![
+                Span::styled("  Best Streak:         ", Style::default().fg(Color::White)),
+                Span::styled(
+                    format!("🔥 {} (Rank: {})", stats.best_streak, combo_rank),
+                    Style::default()
+                        .fg(Color::Magenta)
+                        .add_modifier(Modifier::BOLD),
+                ),
+            ]),
+            Line::from(vec![
+                Span::styled("  Avg Response Time:   ", Style::default().fg(Color::White)),
+                Span::styled(
+                    format!("⚡ {} ms", avg_time),
+                    Style::default()
+                        .fg(Color::Cyan)
+                        .add_modifier(Modifier::BOLD),
+                ),
+            ]),
+            Line::from(""),
+        ];
+
+        let summary_para = Paragraph::new(summary_lines).block(stats_block);
+        frame.render_widget(summary_para, chunks[1]);
+
+        // Footer
+        let footer_spans = vec![
+            Span::styled(
+                " [ r ] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Green)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Play Again  |  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [ q / Esc ] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Red)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Exit Arena ", Style::default().fg(Color::White)),
+        ];
+        let footer_para = Paragraph::new(Line::from(footer_spans))
+            .block(
+                Block::default()
+                    .borders(Borders::ALL)
+                    .border_type(BorderType::Rounded)
+                    .border_style(Style::default().fg(Color::DarkGray)),
+            )
+            .alignment(Alignment::Center);
+        frame.render_widget(footer_para, chunks[2]);
+        return;
+    }
+
+    // Active question mode:
+    let item = &app.arcade_items[app.arcade_item_idx];
+    let total_q = app.arcade_items.len();
+    let current_q = app.arcade_item_idx + 1;
+    let is_showdown = item.options.len() == 2;
+
+    let chunks = Layout::default()
+        .direction(Direction::Vertical)
+        .constraints([
+            Constraint::Length(3), // Header & HUD Gauges (Score, Multiplier, Streak, Progress)
+            Constraint::Min(6),    // Cloze Question Card
+            Constraint::Length(5), // Choice Options
+            Constraint::Length(3), // Visual Flash / Feedback Banner
+            Constraint::Length(3), // Footer Keybindings helper
+        ])
+        .split(inner_area);
+
+    // --- 1. Header HUD (Score, Combo Flame, Multiplier, Streak, Progress) ---
+    let streak = app.arcade_stats.current_streak;
+    let multiplier = if streak >= 10 {
+        "x4"
+    } else if streak >= 5 {
+        "x3"
+    } else if streak >= 3 {
+        "x2"
+    } else {
+        "x1"
+    };
+
+    let flame_icon = if streak >= 10 {
+        "🔥🔥🔥"
+    } else if streak >= 5 {
+        "🔥🔥"
+    } else if streak >= 3 {
+        "🔥"
+    } else {
+        "⚡"
+    };
+
+    let hud_spans = vec![
+        Span::styled(
+            format!(" [ Q {}/{} ] ", current_q, total_q),
+            Style::default()
+                .fg(Color::Black)
+                .bg(Color::Cyan)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled("  Score: ", Style::default().fg(Color::White)),
+        Span::styled(
+            format!("{} XP ", app.arcade_stats.score),
+            Style::default()
+                .fg(Color::Yellow)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled("│ Streak: ", Style::default().fg(Color::DarkGray)),
+        Span::styled(
+            format!("{} {} ", flame_icon, streak),
+            Style::default()
+                .fg(if streak >= 3 {
+                    Color::Magenta
+                } else {
+                    Color::White
+                })
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled(
+            format!("({}) ", multiplier),
+            Style::default()
+                .fg(Color::Yellow)
+                .add_modifier(Modifier::BOLD),
+        ),
+        Span::styled("│ Best: ", Style::default().fg(Color::DarkGray)),
+        Span::styled(
+            format!("{} ", app.arcade_stats.best_streak),
+            Style::default().fg(Color::Cyan),
+        ),
+    ];
+
+    let hud_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(" Live HUD ")
+        .border_style(Style::default().fg(Color::Yellow));
+    let hud_para = Paragraph::new(Line::from(hud_spans))
+        .block(hud_block)
+        .alignment(Alignment::Center);
+    frame.render_widget(hud_para, chunks[0]);
+
+    // --- 2. Central Question Card ---
+    let q_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .title(format!(" Topic: {} ", item.topic.to_uppercase()))
+        .border_style(Style::default().fg(Color::Cyan));
+
+    let mut q_lines = Vec::new();
+    q_lines.push(Line::from(""));
+    q_lines.push(Line::from(vec![
+        Span::styled("  Cue: ", Style::default().fg(Color::DarkGray)),
+        Span::styled(
+            &item.prompt_cue,
+            Style::default()
+                .fg(Color::Magenta)
+                .add_modifier(Modifier::BOLD),
+        ),
+    ]));
+    q_lines.push(Line::from(""));
+
+    // Render trigger sentence with highlighted blank
+    let parts: Vec<&str> = item.trigger_sentence.split("____").collect();
+    if parts.len() >= 2 {
+        let mut sentence_spans = vec![Span::styled("  ", Style::default())];
+        for (i, p) in parts.iter().enumerate() {
+            sentence_spans.push(Span::styled(
+                *p,
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
+            ));
+            if i + 1 < parts.len() {
+                sentence_spans.push(Span::styled(
+                    " [ ___ ] ",
+                    Style::default()
+                        .fg(Color::Black)
+                        .bg(Color::Yellow)
+                        .add_modifier(Modifier::BOLD),
+                ));
+            }
+        }
+        q_lines.push(Line::from(sentence_spans));
+    } else {
+        q_lines.push(Line::from(vec![
+            Span::styled("  ", Style::default()),
+            Span::styled(
+                &item.trigger_sentence,
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
+            ),
+        ]));
+    }
+    q_lines.push(Line::from(""));
+
+    let q_para = Paragraph::new(q_lines)
+        .block(q_block)
+        .wrap(Wrap { trim: false });
+    frame.render_widget(q_para, chunks[1]);
+
+    // --- 3. Choice Options ---
+    if is_showdown {
+        let opt_chunks = Layout::default()
+            .direction(Direction::Horizontal)
+            .constraints([Constraint::Percentage(50), Constraint::Percentage(50)])
+            .split(chunks[2]);
+
+        let opt0 = &item.options[0];
+        let opt1 = &item.options[1];
+
+        let box0 = Block::default()
+            .borders(Borders::ALL)
+            .border_type(BorderType::Rounded)
+            .title(" [ J ] or [ 1 ] or [ ← ] ")
+            .border_style(Style::default().fg(Color::Cyan));
+        let para0 = Paragraph::new(Line::from(vec![
+            Span::styled("  ▶ ", Style::default().fg(Color::Cyan)),
+            Span::styled(
+                opt0,
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
+            ),
+        ]))
+        .block(box0)
+        .alignment(Alignment::Center);
+        frame.render_widget(para0, opt_chunks[0]);
+
+        let box1 = Block::default()
+            .borders(Borders::ALL)
+            .border_type(BorderType::Rounded)
+            .title(" [ K ] or [ 2 ] or [ → ] ")
+            .border_style(Style::default().fg(Color::Magenta));
+        let para1 = Paragraph::new(Line::from(vec![
+            Span::styled("  ▶ ", Style::default().fg(Color::Magenta)),
+            Span::styled(
+                opt1,
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
+            ),
+        ]))
+        .block(box1)
+        .alignment(Alignment::Center);
+        frame.render_widget(para1, opt_chunks[1]);
+    } else {
+        let opt_count = item.options.len();
+        let safe_count = (opt_count as u32).max(1);
+        let constraints = vec![Constraint::Ratio(1, safe_count); opt_count];
+        let opt_chunks = Layout::default()
+            .direction(Direction::Horizontal)
+            .constraints(constraints)
+            .split(chunks[2]);
+
+        for (idx, opt) in item.options.iter().enumerate() {
+            let key_label = (idx + 1).to_string();
+            let opt_color = match idx {
+                0 => Color::Cyan,
+                1 => Color::Green,
+                2 => Color::Yellow,
+                _ => Color::Magenta,
+            };
+            let opt_box = Block::default()
+                .borders(Borders::ALL)
+                .border_type(BorderType::Rounded)
+                .title(format!(" [ {} ] ", key_label))
+                .border_style(Style::default().fg(opt_color));
+            let opt_para = Paragraph::new(Line::from(vec![Span::styled(
+                opt,
+                Style::default()
+                    .fg(Color::White)
+                    .add_modifier(Modifier::BOLD),
+            )]))
+            .block(opt_box)
+            .alignment(Alignment::Center);
+            frame.render_widget(opt_para, opt_chunks[idx]);
+        }
+    }
+
+    // --- 4. Live Visual Flash / Feedback Banner ---
+    let flash_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded);
+
+    let flash_widget = if let Some((is_correct, ref msg, timestamp)) = app.arcade_flash {
+        if timestamp.elapsed() < std::time::Duration::from_millis(2000) {
+            let (bg_color, border_color) = if is_correct {
+                (Color::Green, Color::LightGreen)
+            } else {
+                (Color::Red, Color::LightRed)
+            };
+            Paragraph::new(Line::from(vec![Span::styled(
+                format!(" {} ", msg),
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(bg_color)
+                    .add_modifier(Modifier::BOLD),
+            )]))
+            .block(flash_block.border_style(Style::default().fg(border_color)))
+            .alignment(Alignment::Center)
+        } else {
+            Paragraph::new(Line::from(Span::styled(
+                "⚡ Rapid Single-Key Arcade: Answer immediately for maximum speed multipliers!",
+                Style::default().fg(Color::DarkGray),
+            )))
+            .block(flash_block.border_style(Style::default().fg(Color::DarkGray)))
+            .alignment(Alignment::Center)
+        }
+    } else {
+        Paragraph::new(Line::from(Span::styled(
+            "⚡ Rapid Single-Key Arcade: Answer immediately for maximum speed multipliers!",
+            Style::default().fg(Color::DarkGray),
+        )))
+        .block(flash_block.border_style(Style::default().fg(Color::DarkGray)))
+        .alignment(Alignment::Center)
+    };
+    frame.render_widget(flash_widget, chunks[3]);
+
+    // --- 5. Footer Keybindings helper ---
+    let helper_spans = if is_showdown {
+        vec![
+            Span::styled(
+                " [ J / 1 / ← ] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Option 1  |  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [ K / 2 / → ] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Magenta)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Option 2  |  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [ Esc / q ] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Red)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Quit Arena ", Style::default().fg(Color::White)),
+        ]
+    } else {
+        vec![
+            Span::styled(
+                " [ 1 ] [ 2 ] [ 3 ] [ 4 ] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Cyan)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Select Option  |  ", Style::default().fg(Color::White)),
+            Span::styled(
+                " [ Esc / q ] ",
+                Style::default()
+                    .fg(Color::Black)
+                    .bg(Color::Red)
+                    .add_modifier(Modifier::BOLD),
+            ),
+            Span::styled(" Quit Arena ", Style::default().fg(Color::White)),
+        ]
+    };
+
+    let helper_block = Block::default()
+        .borders(Borders::ALL)
+        .border_type(BorderType::Rounded)
+        .border_style(Style::default().fg(Color::DarkGray));
+    let helper_para = Paragraph::new(Line::from(helper_spans))
+        .block(helper_block)
+        .alignment(Alignment::Center);
+    frame.render_widget(helper_para, chunks[4]);
 }

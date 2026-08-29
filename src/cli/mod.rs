@@ -43,6 +43,26 @@ pub enum Commands {
         /// Grammar topic or communicative intent (e.g. subjunctive, wishes, por-para, ser-estar)
         topic: Option<String>,
     },
+    /// Launch rapid single-key ADHD arcade & showdown drills (no Enter required)
+    Arcade {
+        /// Grammar showdown duel pair or concept topic (e.g. por-para, ser-estar, subj-ind, subjunctive)
+        topic: Option<String>,
+        /// Grammar showdown duel pair (e.g. por-para, ser-estar, subj-ind, pret-imp)
+        #[arg(long)]
+        showdown: Option<String>,
+        /// Filter arcade items by specific linguistic concept
+        #[arg(short, long)]
+        concept: Option<String>,
+        /// Focus arcade drills on user's weakest concepts based on mastery scores
+        #[arg(short = 'w', long)]
+        weak: bool,
+        /// Number of arcade drill questions (default: 10)
+        #[arg(short = 'n', long)]
+        count: Option<usize>,
+        /// Enable audio sound effects (cues on macOS / terminal bell)
+        #[arg(short = 's', long)]
+        sound: bool,
+    },
     /// Launch quick-fire irregular stem conjugation and grammar drills
     Drill {
         /// Topic or concept to drill (e.g. preterite, subjunctive, por-para, ser-estar, pronouns, false-friends, prepositions, idioms)

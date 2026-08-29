@@ -1,3 +1,4 @@
+pub mod arcade;
 pub mod blitz;
 pub mod check;
 pub mod completions;

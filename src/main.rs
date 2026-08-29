@@ -19,6 +19,36 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Explain { topic }) => {
             spanglings::cli::commands::explain::show_explanation(topic.as_deref())?;
         }
+        Some(Commands::Arcade {
+            topic,
+            showdown,
+            concept,
+            weak,
+            count,
+            sound,
+        }) => {
+            let selected_showdown = showdown.or_else(|| {
+                topic
+                    .as_deref()
+                    .and_then(spanglings::core::arcade::ShowdownPair::from_str)
+                    .map(|p| p.slug().to_string())
+            });
+            let selected_concept = concept.or_else(|| {
+                if selected_showdown.is_none() {
+                    topic
+                } else {
+                    None
+                }
+            });
+            spanglings::cli::commands::arcade::run_arcade(
+                selected_showdown,
+                selected_concept,
+                weak,
+                count,
+                sound,
+                cli.strict_accents,
+            )?;
+        }
         Some(Commands::Drill {
             topic,
             concept,
