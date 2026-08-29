@@ -8,7 +8,9 @@ use std::io::{self, Write};
 use std::time::{Duration, Instant};
 
 use crate::core::arcade::{
-    generate_4choice_items, generate_showdown_items, list_showdown_pairs, ArcadeItem, ShowdownPair,
+    canonicalize_engine_slug, generate_4choice_items, generate_showdown_items,
+    generate_specialized_engine_items, get_engine_title, list_showdown_pairs,
+    list_specialized_engines, ArcadeItem, ShowdownPair,
 };
 use crate::core::state::AppState;
 
@@ -137,7 +139,7 @@ pub fn play_arcade_sound(is_correct: bool, sound_enabled: bool) {
     }
 }
 
-/// Selects arcade items based on showdown pair, concept, weakness targeting, or mixed mode.
+/// Selects arcade items based on showdown pair, specialized engine, concept, weakness targeting, or mixed mode.
 pub fn select_arcade_items(
     showdown: Option<&str>,
     concept: Option<&str>,
@@ -149,15 +151,21 @@ pub fn select_arcade_items(
         return Vec::new();
     }
 
-    // 1. Specific showdown pair requested
+    // 1. Specific showdown pair or specialized engine requested via showdown
     if let Some(s) = showdown {
         if let Some(pair) = ShowdownPair::from_str(s) {
             return generate_showdown_items(pair, count);
         }
+        if canonicalize_engine_slug(s).is_some() {
+            return generate_specialized_engine_items(s, count);
+        }
     }
 
-    // 2. Specific concept requested
+    // 2. Specific concept or specialized engine requested
     if let Some(c) = concept {
+        if canonicalize_engine_slug(c).is_some() {
+            return generate_specialized_engine_items(c, count);
+        }
         let items = generate_4choice_items(c, count);
         if !items.is_empty() {
             return items;
@@ -186,6 +194,11 @@ pub fn select_arcade_items(
                     if let Some(it) = pair_items.pop() {
                         items.push(it);
                     }
+                } else if canonicalize_engine_slug(slug).is_some() {
+                    let mut eng_items = generate_specialized_engine_items(slug, 1);
+                    if let Some(it) = eng_items.pop() {
+                        items.push(it);
+                    }
                 } else {
                     let mut c_items = generate_4choice_items(slug, 1);
                     if let Some(it) = c_items.pop() {
@@ -200,14 +213,16 @@ pub fn select_arcade_items(
         }
     }
 
-    // 4. Default: Mixed pool of Showdown pairs and 4-choice items
+    // 4. Default: Mixed pool of Showdown pairs, Specialized Engines, and 4-choice items
     let mut items = Vec::with_capacity(count);
     let pairs = list_showdown_pairs();
+    let engines = list_specialized_engines();
     let mut rng = rand::thread_rng();
 
     for _ in 0..count {
-        let use_showdown = rng.gen_bool(0.6);
-        if use_showdown && !pairs.is_empty() {
+        let roll: f32 = rng.gen();
+        if roll < 0.45 && !pairs.is_empty() {
+            // Showdown pair (binary choice)
             let pair = pairs
                 .choose(&mut rng)
                 .copied()
@@ -217,16 +232,26 @@ pub fn select_arcade_items(
                 items.push(item);
                 continue;
             }
-        }
-
-        let concepts = crate::core::reference::list_grammar_concepts();
-        let concept = concepts
-            .choose(&mut rng)
-            .map(|c| c.slug)
-            .unwrap_or("subjunctive");
-        let mut choice_items = generate_4choice_items(concept, 1);
-        if let Some(item) = choice_items.pop() {
-            items.push(item);
+        } else if roll < 0.75 && !engines.is_empty() {
+            // Specialized Engine drill
+            let engine = engines.choose(&mut rng).copied().unwrap_or("regimen");
+            let mut engine_items = generate_specialized_engine_items(engine, 1);
+            if let Some(item) = engine_items.pop() {
+                items.push(item);
+                continue;
+            }
+        } else {
+            // Standard grammar concept
+            let concepts = crate::core::reference::list_grammar_concepts();
+            let concept = concepts
+                .choose(&mut rng)
+                .map(|c| c.slug)
+                .unwrap_or("subjunctive");
+            let mut choice_items = generate_4choice_items(concept, 1);
+            if let Some(item) = choice_items.pop() {
+                items.push(item);
+                continue;
+            }
         }
     }
 
@@ -276,12 +301,26 @@ pub fn run_arcade(
     if weak {
         println!("{}", "🎯 Mode: Adaptive Weakness Targeting".yellow());
     } else if let Some(ref s) = showdown {
-        let title = ShowdownPair::from_str(s)
-            .map(|p| p.title().to_string())
-            .unwrap_or_else(|| s.clone());
-        println!("🎯 Mode: Showdown Duel ({})", title.bold().magenta());
+        if let Some(engine_title) = get_engine_title(s) {
+            println!(
+                "🎯 Mode: Specialized Engine ({})",
+                engine_title.bold().cyan()
+            );
+        } else {
+            let title = ShowdownPair::from_str(s)
+                .map(|p| p.title().to_string())
+                .unwrap_or_else(|| s.clone());
+            println!("🎯 Mode: Showdown Duel ({})", title.bold().magenta());
+        }
     } else if let Some(ref c) = concept {
-        println!("🎯 Mode: Concept Cloze ({})", c.bold().blue());
+        if let Some(engine_title) = get_engine_title(c) {
+            println!(
+                "🎯 Mode: Specialized Engine ({})",
+                engine_title.bold().cyan()
+            );
+        } else {
+            println!("🎯 Mode: Concept Cloze ({})", c.bold().blue());
+        }
     } else {
         println!("{}", "🎯 Mode: Mixed Rapid Arcade".green());
     }

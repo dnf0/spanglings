@@ -296,4 +296,187 @@ fn test_arcade_cli_argument_parsing() {
             sound: false,
         })
     );
+
+    // Positional specialized engine topics & aliases
+    let engines_to_test = [
+        ("regimen", "regimen"),
+        ("prepositions", "prepositions"),
+        ("irregulars", "irregulars"),
+        ("verbs", "verbs"),
+        ("false-friends", "false-friends"),
+        ("cognates", "cognates"),
+        ("se-matrix", "se-matrix"),
+        ("se", "se"),
+        ("connectors", "connectors"),
+        ("discourse", "discourse"),
+    ];
+
+    for (arg, expected_str) in engines_to_test {
+        let parsed = Cli::parse_from(["spanglings", "arcade", arg]);
+        assert_eq!(
+            parsed.command,
+            Some(Commands::Arcade {
+                topic: Some(expected_str.to_string()),
+                showdown: None,
+                concept: None,
+                weak: false,
+                count: None,
+                sound: false,
+            })
+        );
+    }
+
+    // Explicit concept flag with specialized engines
+    for (arg, expected_str) in engines_to_test {
+        let parsed = Cli::parse_from(["spanglings", "arcade", "--concept", arg]);
+        assert_eq!(
+            parsed.command,
+            Some(Commands::Arcade {
+                topic: None,
+                showdown: None,
+                concept: Some(expected_str.to_string()),
+                weak: false,
+                count: None,
+                sound: false,
+            })
+        );
+    }
+}
+
+#[test]
+fn test_select_arcade_items_specialized_engines() {
+    use spanglings::cli::commands::arcade::select_arcade_items;
+    use spanglings::core::arcade::{get_engine_title, list_specialized_engines};
+    use spanglings::core::state::AppState;
+
+    let state = AppState::default();
+
+    // Verify list_specialized_engines
+    let engines = list_specialized_engines();
+    assert_eq!(
+        engines,
+        &[
+            "regimen",
+            "irregulars",
+            "false-friends",
+            "se-matrix",
+            "connectors"
+        ]
+    );
+
+    // Verify get_engine_title for canonical and aliases
+    assert_eq!(
+        get_engine_title("regimen"),
+        Some("Prepositional Regimen Engine (Verbos con Régimen)")
+    );
+    assert_eq!(
+        get_engine_title("prepositions"),
+        Some("Prepositional Regimen Engine (Verbos con Régimen)")
+    );
+    assert_eq!(
+        get_engine_title("irregulars"),
+        Some("Irregular Verb Speed Gun (Conjugación Irregular)")
+    );
+    assert_eq!(
+        get_engine_title("verbs"),
+        Some("Irregular Verb Speed Gun (Conjugación Irregular)")
+    );
+    assert_eq!(
+        get_engine_title("false-friends"),
+        Some("False Friends Trap Detector (Falsos Amigos)")
+    );
+    assert_eq!(
+        get_engine_title("cognates"),
+        Some("False Friends Trap Detector (Falsos Amigos)")
+    );
+    assert_eq!(
+        get_engine_title("se-matrix"),
+        Some("The \"Se\" Matrix (Las 5 Caras del Se)")
+    );
+    assert_eq!(
+        get_engine_title("se"),
+        Some("The \"Se\" Matrix (Las 5 Caras del Se)")
+    );
+    assert_eq!(
+        get_engine_title("connectors"),
+        Some("Discourse Connectors & Flow (Conectores B2/C1)")
+    );
+    assert_eq!(
+        get_engine_title("discourse"),
+        Some("Discourse Connectors & Flow (Conectores B2/C1)")
+    );
+    assert_eq!(get_engine_title("unknown-engine"), None);
+
+    let test_cases = [
+        ("regimen", "regimen"),
+        ("prepositions", "regimen"),
+        ("irregulars", "irregulars"),
+        ("verbs", "irregulars"),
+        ("false-friends", "false-friends"),
+        ("cognates", "false-friends"),
+        ("se-matrix", "se-matrix"),
+        ("se", "se-matrix"),
+        ("connectors", "connectors"),
+        ("discourse", "connectors"),
+    ];
+
+    for (input, expected_topic) in test_cases {
+        // Test selection via concept argument
+        let items_via_concept = select_arcade_items(None, Some(input), false, 8, &state);
+        assert_eq!(
+            items_via_concept.len(),
+            8,
+            "Expected 8 items for concept '{}', got {}",
+            input,
+            items_via_concept.len()
+        );
+        for item in &items_via_concept {
+            assert_eq!(
+                item.options.len(),
+                4,
+                "Expected 4 options for specialized engine '{}', got {}",
+                input,
+                item.options.len()
+            );
+            assert_eq!(
+                item.topic, expected_topic,
+                "Expected topic '{}' for input '{}', got '{}'",
+                expected_topic, input, item.topic
+            );
+            assert!(
+                item.correct_index < 4,
+                "Correct index out of bounds for input '{}'",
+                input
+            );
+            assert!(
+                !item.trigger_sentence.is_empty(),
+                "Empty sentence for input '{}'",
+                input
+            );
+            assert!(
+                !item.explanation.is_empty(),
+                "Empty explanation for input '{}'",
+                input
+            );
+            assert!(
+                !item.prompt_cue.is_empty(),
+                "Empty prompt cue for input '{}'",
+                input
+            );
+        }
+
+        // Test selection via showdown argument (fallback/alias support)
+        let items_via_showdown = select_arcade_items(Some(input), None, false, 5, &state);
+        assert_eq!(
+            items_via_showdown.len(),
+            5,
+            "Expected 5 items for showdown '{}', got {}",
+            input,
+            items_via_showdown.len()
+        );
+        for item in &items_via_showdown {
+            assert_eq!(item.options.len(), 4);
+            assert_eq!(item.topic, expected_topic);
+        }
+    }
 }

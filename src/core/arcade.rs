@@ -2121,11 +2121,11 @@ fn synthesize_distractors<R: Rng + ?Sized>(
 }
 
 #[derive(Debug, Clone)]
-struct SpecializedEngineSentence {
-    sentence: &'static str,
-    target: &'static str,
-    distractors: [&'static str; 3],
-    explanation: &'static str,
+pub struct SpecializedEngineSentence {
+    pub sentence: &'static str,
+    pub target: &'static str,
+    pub distractors: [&'static str; 3],
+    pub explanation: &'static str,
 }
 
 static ENGINE_REGIMEN_POOL: &[SpecializedEngineSentence] = &[
@@ -2637,7 +2637,31 @@ static ENGINE_CONNECTORS_POOL: &[SpecializedEngineSentence] = &[
     },
 ];
 
-fn canonicalize_engine_slug(
+/// Returns the list of 5 specialized drill engine slugs.
+pub fn list_specialized_engines() -> &'static [&'static str] {
+    &[
+        "regimen",
+        "irregulars",
+        "false-friends",
+        "se-matrix",
+        "connectors",
+    ]
+}
+
+/// Returns a human-friendly display title for a specialized drill engine slug or alias.
+pub fn get_engine_title(slug: &str) -> Option<&'static str> {
+    let (canonical, _, _) = canonicalize_engine_slug(slug)?;
+    match canonical {
+        "regimen" => Some("Prepositional Regimen Engine (Verbos con Régimen)"),
+        "irregulars" => Some("Irregular Verb Speed Gun (Conjugación Irregular)"),
+        "false-friends" => Some("False Friends Trap Detector (Falsos Amigos)"),
+        "se-matrix" => Some("The \"Se\" Matrix (Las 5 Caras del Se)"),
+        "connectors" => Some("Discourse Connectors & Flow (Conectores B2/C1)"),
+        _ => None,
+    }
+}
+
+pub fn canonicalize_engine_slug(
     slug: &str,
 ) -> Option<(
     &'static str,
