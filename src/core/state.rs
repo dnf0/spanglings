@@ -248,9 +248,10 @@ impl AppState {
             }
             .clamp(1, 3650);
 
+            const MAX_STABILITY_LN: f32 = 4.110874; // ln(61.0)
             let rep_factor = (entry.repetitions as f32 / 6.0).min(1.0);
             let stability_factor =
-                ((1.0 + entry.interval_days as f32).ln() / 61.0_f32.ln()).min(1.0);
+                ((1.0 + entry.interval_days as f32).ln() / MAX_STABILITY_LN).min(1.0);
             let ease_scale = entry.ease_factor / 2.5;
 
             entry.mastery_score = (rep_factor * stability_factor * ease_scale).clamp(0.0, 1.0);
