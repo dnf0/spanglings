@@ -5,22 +5,27 @@ use spanglings::core::reference::list_grammar_concepts;
 use std::str::FromStr;
 
 #[test]
-fn test_all_8_showdown_pairs_generate_valid_items() {
+fn test_all_16_showdown_pairs_generate_valid_items() {
     let pairs = list_showdown_pairs();
-    assert_eq!(pairs.len(), 8);
+    assert_eq!(pairs.len(), 16);
     for pair in pairs {
         assert!(!pair.slug().is_empty());
         assert!(!pair.title().is_empty());
         assert!(!pair.description().is_empty());
 
+        let (opt1, opt2) = pair.options();
+        assert!(!opt1.is_empty());
+        assert!(!opt2.is_empty());
+        assert_ne!(opt1, opt2);
+
         let empty = generate_showdown_items(pair, 0);
         assert!(empty.is_empty());
 
-        let items = generate_showdown_items(pair, 10);
+        let items = generate_showdown_items(pair, 12);
         assert_eq!(
             items.len(),
-            10,
-            "Should generate 10 items for pair {:?}",
+            12,
+            "Should generate 12 items for pair {:?}",
             pair
         );
         for item in &items {
@@ -82,6 +87,7 @@ fn test_4choice_generator_across_all_24_concepts() {
 
 #[test]
 fn test_showdown_pair_parsing() {
+    // Original 8 pairs
     assert_eq!(
         ShowdownPair::from_str("por-para"),
         Some(ShowdownPair::PorPara)
@@ -111,12 +117,167 @@ fn test_showdown_pair_parsing() {
         ShowdownPair::from_str("para-que-porque"),
         Some(ShowdownPair::ParaQuePorque)
     );
+
+    // Expanded 8 pairs
+    assert_eq!(
+        ShowdownPair::from_str("tener-haber"),
+        Some(ShowdownPair::TenerHaber)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("have"),
+        Some(ShowdownPair::TenerHaber)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("tener"),
+        Some(ShowdownPair::TenerHaber)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("haber"),
+        Some(ShowdownPair::TenerHaber)
+    );
+
+    assert_eq!(
+        ShowdownPair::from_str("saber-conocer"),
+        Some(ShowdownPair::SaberConocer)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("know"),
+        Some(ShowdownPair::SaberConocer)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("saber"),
+        Some(ShowdownPair::SaberConocer)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("conocer"),
+        Some(ShowdownPair::SaberConocer)
+    );
+
+    assert_eq!(
+        ShowdownPair::from_str("muy-mucho"),
+        Some(ShowdownPair::MuyMucho)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("very-much"),
+        Some(ShowdownPair::MuyMucho)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("very_much"),
+        Some(ShowdownPair::MuyMucho)
+    );
+    assert_eq!(ShowdownPair::from_str("very"), Some(ShowdownPair::MuyMucho));
+    assert_eq!(ShowdownPair::from_str("much"), Some(ShowdownPair::MuyMucho));
+    assert_eq!(ShowdownPair::from_str("muy"), Some(ShowdownPair::MuyMucho));
+    assert_eq!(
+        ShowdownPair::from_str("mucho"),
+        Some(ShowdownPair::MuyMucho)
+    );
+
+    assert_eq!(
+        ShowdownPair::from_str("pedir-preguntar"),
+        Some(ShowdownPair::PedirPreguntar)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("ask"),
+        Some(ShowdownPair::PedirPreguntar)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("pedir"),
+        Some(ShowdownPair::PedirPreguntar)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("preguntar"),
+        Some(ShowdownPair::PedirPreguntar)
+    );
+
+    assert_eq!(
+        ShowdownPair::from_str("llevar-traer"),
+        Some(ShowdownPair::LlevarTraer)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("take-bring"),
+        Some(ShowdownPair::LlevarTraer)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("take_bring"),
+        Some(ShowdownPair::LlevarTraer)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("llevar"),
+        Some(ShowdownPair::LlevarTraer)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("traer"),
+        Some(ShowdownPair::LlevarTraer)
+    );
+
+    assert_eq!(
+        ShowdownPair::from_str("haber-estar"),
+        Some(ShowdownPair::HaberEstar)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("hay-esta"),
+        Some(ShowdownPair::HaberEstar)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("exist-locate"),
+        Some(ShowdownPair::HaberEstar)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("estar-loc"),
+        Some(ShowdownPair::HaberEstar)
+    );
+
+    assert_eq!(
+        ShowdownPair::from_str("ir-irse"),
+        Some(ShowdownPair::IrIrse)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("go-leave"),
+        Some(ShowdownPair::IrIrse)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("go_leave"),
+        Some(ShowdownPair::IrIrse)
+    );
+    assert_eq!(ShowdownPair::from_str("ir"), Some(ShowdownPair::IrIrse));
+    assert_eq!(ShowdownPair::from_str("irse"), Some(ShowdownPair::IrIrse));
+
+    assert_eq!(
+        ShowdownPair::from_str("bien-bueno"),
+        Some(ShowdownPair::BienBueno)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("well-good"),
+        Some(ShowdownPair::BienBueno)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("well_good"),
+        Some(ShowdownPair::BienBueno)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("bien"),
+        Some(ShowdownPair::BienBueno)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("bueno"),
+        Some(ShowdownPair::BienBueno)
+    );
+    assert_eq!(
+        ShowdownPair::from_str("buen"),
+        Some(ShowdownPair::BienBueno)
+    );
+
     assert_eq!(ShowdownPair::from_str("unknown-pair"), None);
 
     // Test FromStr trait
     assert_eq!(
         <ShowdownPair as FromStr>::from_str("por-para").unwrap(),
         ShowdownPair::PorPara
+    );
+    assert_eq!(
+        <ShowdownPair as FromStr>::from_str("tener-haber").unwrap(),
+        ShowdownPair::TenerHaber
     );
     assert!(<ShowdownPair as FromStr>::from_str("invalid").is_err());
 }
