@@ -1,7 +1,7 @@
 {
   "Cargo.toml": {
-    "mtime": 1788001419.9768178,
-    "seen": 1788001536.798729,
+    "mtime": 1788001561.7238233,
+    "seen": 1788004333.28328,
     "ast_hash": "f8fa155ea6cad70a06d887f5c9868ff5",
     "semantic_hash": ""
   },
@@ -234,9 +234,9 @@
     "semantic_hash": ""
   },
   "src/tui/ui.rs": {
-    "mtime": 1788000053.5703151,
-    "seen": 1788001536.7987661,
-    "ast_hash": "acb6733850076497003679fae0d5ad07",
+    "mtime": 1788004108.5845706,
+    "seen": 1788004333.2833211,
+    "ast_hash": "32b96e59ca82e046b24051940bcdc074",
     "semantic_hash": ""
   },
   "tests/exercise_validity_tests.rs": {
@@ -1518,8 +1518,8 @@
     "semantic_hash": ""
   },
   "editors/vscode/package.json": {
-    "mtime": 1788001432.3697505,
-    "seen": 1788001536.7987359,
+    "mtime": 1788001561.7239876,
+    "seen": 1788004333.283286,
     "ast_hash": "f5c11089b9b923deca1d132e0697df0a",
     "semantic_hash": ""
   },
@@ -2784,8 +2784,8 @@
     "semantic_hash": ""
   },
   "CHANGELOG.md": {
-    "mtime": 1788001463.4012764,
-    "seen": 1788001536.7987862,
+    "mtime": 1788001561.723385,
+    "seen": 1788004333.283343,
     "ast_hash": "1ee43871543e257abf6cbcde657fe389",
     "semantic_hash": ""
   },
@@ -2892,9 +2892,9 @@
     "semantic_hash": ""
   },
   "src/cli/commands/arcade.rs": {
-    "mtime": 1788000053.5677617,
-    "seen": 1788001536.798742,
-    "ast_hash": "2bac343531badb9f97e9540c311e03c5",
+    "mtime": 1788003648.7192001,
+    "seen": 1788004333.2832918,
+    "ast_hash": "0b4ac2979c60261bee9d79b3028b2738",
     "semantic_hash": ""
   },
   "src/core/arcade.rs": {
@@ -2910,15 +2910,15 @@
     "semantic_hash": ""
   },
   "tests/cli_arcade_tests.rs": {
-    "mtime": 1788000053.5711555,
-    "seen": 1788001536.798769,
-    "ast_hash": "f4f5ecda67b1b9f9f9aaa2bb54f31199",
+    "mtime": 1788003621.7981267,
+    "seen": 1788004333.283324,
+    "ast_hash": "68f9c948a1e0a95ff2785e1621f4de7a",
     "semantic_hash": ""
   },
   "tests/tui_arcade_tests.rs": {
-    "mtime": 1788000053.5716105,
-    "seen": 1788001536.7987819,
-    "ast_hash": "386921a449121d5c4455592f71fb0c70",
+    "mtime": 1788004108.6166408,
+    "seen": 1788004333.283338,
+    "ast_hash": "10b0b30b6497fa8c3f2c3740de3d4902",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-28-rapid-arcade-single-key-drills.md": {
@@ -2955,6 +2955,18 @@
     "mtime": 1788000053.5462928,
     "seen": 1788001536.798811,
     "ast_hash": "4f53b0c9d7e11f5f0a61414e129b955e",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-29-arcade-mistakes-explanation-review.md": {
+    "mtime": 1788003249.551814,
+    "seen": 1788004333.283363,
+    "ast_hash": "b21f038af28d3528a313ba2fb5ec8fbe",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-29-arcade-mistakes-explanation-review-design.md": {
+    "mtime": 1788003224.4468522,
+    "seen": 1788004333.28337,
+    "ast_hash": "4a43cedabe9de1efe764dc1ee32463f6",
     "semantic_hash": ""
   }
 }
