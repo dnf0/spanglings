@@ -5,6 +5,44 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.0] - 2026-08-29
+
+### Added
+- **ADHD Rapid Single-Key Arcade Mode & Showdown Arena**:
+  - Introduced zero-friction, single-key input (`1`..`4`, `j`/`k`, `←`/`→`) with zero `Enter` key requirement for ultra-fast response training (`spanglings arcade`).
+  - Added real-time score multipliers ($1\times$ to $5\times$), response speed bonuses (up to +150 pts), combo rank evaluations (*Quick Focus*, *ON FIRE*, *UNSTOPPABLE*, *ULTRA INSTINCT*), and audio cues (macOS system audio / terminal bells).
+  - Built a dedicated full-screen TUI Arcade Arena modal overlay (`[x]` / `[F8]`) with live showdown cycling (`[s]`, `[Tab]`, `[BackTab]`), instant recap screens, and quick restart (`[r]`).
+- **16 High-Stakes Spanish Binary Contrast Showdown Duels**:
+  - Expanded the binary showdown duel library to 16 pairs with rich alias matching (`spanglings arcade <slug>`):
+    - `tener-haber` (`have`): Tener (possession, age, feelings, obligation) vs Haber (auxiliary, existential, impersonal obligation).
+    - `saber-conocer` (`know`): Saber (facts, knowledge, skills) vs Conocer (people, places, acquaintance).
+    - `muy-mucho` (`very-much`): Muy (adverb modifying adj/adv) vs Mucho (quantifier/adjective or modifying verbs).
+    - `pedir-preguntar` (`ask`): Pedir (requesting objects/services) vs Preguntar (asking questions/inquiries).
+    - `llevar-traer` (`take-bring`): Llevar (away from speaker) vs Traer (toward speaker).
+    - `haber-estar` (`hay-esta`): Haber (indefinite existence) vs Estar (specific known location).
+    - `ir-irse` (`go-leave`): Ir (movement to destination) vs Irse (departure / leaving a place).
+    - `bien-bueno` (`well-good`): Bien (adverb) vs Bueno/Buen (adjective).
+    - `por-para`: Por (cause, means, duration, exchange) vs Para (destination, recipient, deadline, purpose).
+    - `ser-estar`: Ser (identity, essence) vs Estar (states, conditions, locations).
+    - `subj-ind`: Subjuntivo (doubt, wishes, uncertainty) vs Indicativo (facts, certainty).
+    - `pret-imp`: Pretérito (completed events) vs Imperfecto (habitual past, descriptions).
+    - `tu-usted`: Tú (informal address) vs Usted (formal address).
+    - `lo-le`: Direct object (lo/la) vs Indirect object (le/les).
+    - `sino-pero`: Sino (replacement after negation) vs Pero (contrast).
+    - `para-que-porque`: Para que (+subj) vs Porque (+ind).
+- **5 High-Yield Specialized Advanced Drill Engines**:
+  - `regimen` (`prepositions`): Fixed verb-preposition bonds (*soñar con*, *pensar en*, *acordarse de*, *fijarse en*, *depender de*, *enamorarse de*, *darse cuenta de*, *insistir en*, *consistir en*, *aprender a*, *acostumbrarse a*, *negarse a*, *preocuparse por*, *quejarse de*, *atreverse a*, *tardar en*).
+  - `irregulars` (`verbs`): High-friction irregular stem retrieval for preterites (*puse*, *quiso*, *cupo*, *trajiste*, *condujo*, *anduvimos*, *supe*, *hubo*), presents (*quepo*, *sé*), subjunctives (*sepas*, *quepa*, *haya*), and futures (*pondré*, *harás*, *saldremos*).
+  - `false-friends` (`cognates`): Real-time override training for deceptive English-Spanish false cognates (*actual* vs *real*, *embarazada* vs *avergonzado*, *éxito* vs *salida*, *atender* vs *asistir*, *sensible* vs *sensato*, *largo* vs *grande*, *carpeta* vs *alfombra*, *soportar* vs *apoyar*, *pretender* vs *fingir*, *realizar* vs *darse cuenta*, *constipado* vs *estreñido*, *recordar* vs *grabar*).
+  - `se-matrix` (`se`): The 5 functional faces of Spanish *Se* (Accidental Involuntary Dative *se me cayó*, Impersonal *se vive bien*, Passive Reflexive *se alquilan*, Reciprocal *se saludaron*, and Aspectual/Telic *se comió*).
+  - `connectors` (`discourse`): B2/C1 sentence transition markers and discourse connectors (*sin embargo*, *no obstante*, *en cambio*, *por lo tanto*, *por consiguiente*, *de ahí que*, *dado que*, *debido a*, *a pesar de que*, *es decir*, *por ende*).
+- **Combinatorial Question Engine & Adaptive Weakness Profiler**:
+  - Built a 130+ template combinatorial question engine generating over 4,000 unique questions across all 24 CEFR grammar topics.
+  - Integrated SM-2 spaced repetition concept mastery profiling with `--weak` targeting in `drill`, `blitz`, and `arcade`.
+  - Added an interactive TUI Concept Mastery Dashboard modal (`[m]`).
+- **Intelligent Mixed Arcade Blending**:
+  - Default `spanglings arcade` intelligently blends 45% Showdowns, 30% Specialized Drill Engines, and 25% Grammar Concept clozes for comprehensive Spanish mastery workouts.
+
 ## [0.4.5] - 2026-08-28
 
 ### Added

@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-08-29)
 
 ## Corpus Check
-- 486 files · ~218,982 words
+- 486 files · ~219,543 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3193 nodes · 3716 edges · 446 communities (437 shown, 9 thin omitted)
+- 3195 nodes · 3718 edges · 447 communities (439 shown, 8 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 223 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `cb53348d`
+- Built from commit: `0c0d863c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -435,7 +435,6 @@
 - Design Specification: Informative & Non-Spoiling Exercise TODOs
 - .current_exercise
 - Informative & Non-Spoiling Exercise TODOs Implementation Plan
-- exercise_parser_tests.rs
 - Rich Context Drill Prompts & Topic Cheat Sheets Implementation Plan
 - Design Specification: 5 High-Yield Advanced Drill Engines
 - select_arcade_items
@@ -453,7 +452,8 @@
 - pack.rs
 - Design Specification: Expanded 16-Pair Spanish Binary Contrast Showdowns
 - Implementation Plan: Expanded 16-Pair Spanish Binary Contrast Showdowns
-- json_output_tests.rs
+- run_init
+- exercise_validity_tests.rs
 
 ## God Nodes (most connected - your core abstractions)
 1. `App` - 94 edges
@@ -468,8 +468,6 @@
 10. `Level` - 21 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `test_list_exercises_json_serialization()` --calls--> `get_exercises_json()`  [INFERRED]
-  tests/json_output_tests.rs → src/cli/commands/list.rs
 - `test_progress_json_serialization()` --calls--> `get_progress_json()`  [INFERRED]
   tests/json_output_tests.rs → src/cli/commands/progress.rs
 - `test_progress_json_includes_weak_topics_and_recommendations()` --calls--> `get_progress_json()`  [INFERRED]
@@ -478,11 +476,13 @@
   tests/embedded_tests.rs → src/core/curriculum.rs
 - `test_state_fast_track_level()` --calls--> `get_embedded_exercises()`  [INFERRED]
   tests/srs_tests.rs → src/core/embedded.rs
+- `test_arcade_choice_evaluation_and_scoring()` --calls--> `evaluate_arcade_choice()`  [INFERRED]
+  tests/cli_arcade_tests.rs → src/cli/commands/arcade.rs
 
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (446 total, 9 thin omitted)
+## Communities (447 total, 8 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -501,8 +501,8 @@ Cohesion: 0.16
 Nodes (18): DiagnosticRule, Exercise, ExerciseType, parse_optional_string(), parse_string_list(), ParseExerciseTypeError, Display, Err (+10 more)
 
 ### Community 4 - "embedded.rs"
-Cohesion: 0.15
-Nodes (17): Dir, Option, Result, run_init(), collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir() (+9 more)
+Cohesion: 0.25
+Nodes (12): Dir, collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir(), P, Path, Result (+4 more)
 
 ### Community 7 - "AppState"
 Cohesion: 0.17
@@ -1149,8 +1149,8 @@ Cohesion: 0.14
 Nodes (19): print_conjugation_summary(), Option, Result, run_conjugate(), conjugate_verb(), get_irregular_verb(), ImperativeForms, PronounForms (+11 more)
 
 ### Community 173 - "Level"
-Cohesion: 0.12
-Nodes (28): Option, R, Result, String, run_test(), run_test_with_io(), Level, Display (+20 more)
+Cohesion: 0.14
+Nodes (26): Option, R, Result, String, run_test(), run_test_with_io(), Level, Display (+18 more)
 
 ### Community 174 - "tui_tests.rs"
 Cohesion: 0.16
@@ -1329,8 +1329,8 @@ Cohesion: 0.18
 Nodes (10): activationEvents, description, displayName, engines, vscode, license, main, name (+2 more)
 
 ### Community 221 - "find_all_exercises_or_embedded"
-Cohesion: 0.09
-Nodes (25): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), collect_md_files(), Curriculum (+17 more)
+Cohesion: 0.08
+Nodes (27): Option, Result, show_hint(), reset_exercise(), Result, run_exercise(), collect_md_files(), Curriculum (+19 more)
 
 ### Community 222 - "devDependencies"
 Cohesion: 0.22
@@ -2137,16 +2137,12 @@ Cohesion: 0.40
 Nodes (4): Context, Discourse Connectors 06: Con Todo y Con Eso (Adversative Synthesis), Exercise, Instructions
 
 ### Community 423 - "Changelog"
-Cohesion: 0.08
-Nodes (24): [0.1.0] - 2026-08-27, [0.1.1] - 2026-08-27, [0.2.0] - 2026-08-27, [0.3.0] - 2026-08-27, [0.4.0] - 2026-08-28, [0.4.1] - 2026-08-28, [0.4.2] - 2026-08-28, [0.4.3] - 2026-08-28 (+16 more)
+Cohesion: 0.07
+Nodes (26): [0.1.0] - 2026-08-27, [0.1.1] - 2026-08-27, [0.2.0] - 2026-08-27, [0.3.0] - 2026-08-27, [0.4.0] - 2026-08-28, [0.4.1] - 2026-08-28, [0.4.2] - 2026-08-28, [0.4.3] - 2026-08-28 (+18 more)
 
 ### Community 424 - "Design Specification: Informative & Non-Spoiling Exercise TODOs"
 Cohesion: 0.29
 Nodes (6): 1. Context & Motivation, 2. Standardized Exercise File Template, 3. Strict Non-Spoiling Rules & Validation Policy, 4. TUI, LSP & Tooling Enhancements, 5. Phased Execution Plan, Design Specification: Informative & Non-Spoiling Exercise TODOs
-
-### Community 427 - "exercise_parser_tests.rs"
-Cohesion: 0.17
-Nodes (5): collect_md_paths(), Path, PathBuf, Vec, test_all_curriculum_exercises_are_valid_and_solvable()
 
 ### Community 428 - "Rich Context Drill Prompts & Topic Cheat Sheets Implementation Plan"
 Cohesion: 0.40
@@ -2189,8 +2185,8 @@ Cohesion: 0.29
 Nodes (10): export_state_json(), import_state_json(), PortableStateBackup, DateTime, Option, Result, String, Utc (+2 more)
 
 ### Community 438 - "get_exercises_json"
-Cohesion: 0.47
-Nodes (5): get_exercises_json(), list_exercises(), Option, Result, String
+Cohesion: 0.28
+Nodes (7): get_exercises_json(), list_exercises(), Option, Result, String, test_list_exercises_json_serialization(), test_progress_json_serialization()
 
 ### Community 441 - "Rapid Single-Key ADHD Arcade & Showdown Engine Implementation Plan"
 Cohesion: 0.33
@@ -2204,10 +2200,18 @@ Nodes (8): collect_markdown_files(), Path, PathBuf, Result, Vec, run_pack_create
 Cohesion: 0.22
 Nodes (8): 1. Motivation & Linguistic Scope, 2. The 16 Binary Showdown Pairs, 3.1 Enum Definition Update, 3.2 High-Yield Sentence Pools, 3. Core Engine Architecture (`src/core/arcade.rs`), 4. CLI & TUI Updates, 5. Verification Plan, Design Specification: Expanded 16-Pair Spanish Binary Contrast Showdowns
 
+### Community 445 - "run_init"
+Cohesion: 0.33
+Nodes (5): Option, Result, run_init(), test_run_init_creates_exercise_workspace(), test_run_init_force_flag()
+
+### Community 446 - "exercise_validity_tests.rs"
+Cohesion: 0.47
+Nodes (5): collect_md_paths(), Path, PathBuf, Vec, test_all_curriculum_exercises_are_valid_and_solvable()
+
 ## Knowledge Gaps
-- **1457 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+1452 more)
+- **1458 isolated node(s):** `spanglings`, `esbuild`, `minify`, `name`, `displayName` (+1453 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **9 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **8 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -2221,7 +2225,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 27 inferred relationships involving `get_reference_card()` (e.g. with `compute_hover()` and `draw_reference_browser_modal()`) actually correct?**
   _`get_reference_card()` has 27 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `esbuild`, `minify` to the rest of the system?**
-  _1457 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1458 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `App` be split into smaller, more focused modules?**
