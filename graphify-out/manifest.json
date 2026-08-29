@@ -114,9 +114,9 @@
     "semantic_hash": ""
   },
   "src/core/state.rs": {
-    "mtime": 1787844175.6406875,
-    "seen": 1787863476.0118558,
-    "ast_hash": "71f1fedd227d059d8c0dffbc713ba619",
+    "mtime": 1788006302.7549374,
+    "seen": 1788006359.0716548,
+    "ast_hash": "97e89565ac10e256630ea8cc1e33af33",
     "semantic_hash": ""
   },
   "tests/srs_tests.rs": {
@@ -234,8 +234,8 @@
     "semantic_hash": ""
   },
   "src/tui/ui.rs": {
-    "mtime": 1788004108.5845706,
-    "seen": 1788004333.2833211,
+    "mtime": 1788004352.420357,
+    "seen": 1788006359.071664,
     "ast_hash": "32b96e59ca82e046b24051940bcdc074",
     "semantic_hash": ""
   },
@@ -1218,9 +1218,9 @@
     "semantic_hash": ""
   },
   "tests/weakness_profiler_tests.rs": {
-    "mtime": 1787844175.6458244,
-    "seen": 1787863476.011874,
-    "ast_hash": "f9ad33e2a4915bcc58d5de2c7d92d5b9",
+    "mtime": 1788006067.6408675,
+    "seen": 1788006359.0716832,
+    "ast_hash": "b31e1640de59f3a25844ad03481063d0",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy.md": {
@@ -2892,8 +2892,8 @@
     "semantic_hash": ""
   },
   "src/cli/commands/arcade.rs": {
-    "mtime": 1788003648.7192001,
-    "seen": 1788004333.2832918,
+    "mtime": 1788004352.4200277,
+    "seen": 1788006359.0716338,
     "ast_hash": "0b4ac2979c60261bee9d79b3028b2738",
     "semantic_hash": ""
   },
@@ -2910,14 +2910,14 @@
     "semantic_hash": ""
   },
   "tests/cli_arcade_tests.rs": {
-    "mtime": 1788003621.7981267,
-    "seen": 1788004333.283324,
+    "mtime": 1788004352.420554,
+    "seen": 1788006359.071667,
     "ast_hash": "68f9c948a1e0a95ff2785e1621f4de7a",
     "semantic_hash": ""
   },
   "tests/tui_arcade_tests.rs": {
-    "mtime": 1788004108.6166408,
-    "seen": 1788004333.283338,
+    "mtime": 1788004352.4207718,
+    "seen": 1788006359.071682,
     "ast_hash": "10b0b30b6497fa8c3f2c3740de3d4902",
     "semantic_hash": ""
   },
@@ -2958,15 +2958,27 @@
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-29-arcade-mistakes-explanation-review.md": {
-    "mtime": 1788003249.551814,
-    "seen": 1788004333.283363,
+    "mtime": 1788004352.4054337,
+    "seen": 1788006359.0717068,
     "ast_hash": "b21f038af28d3528a313ba2fb5ec8fbe",
     "semantic_hash": ""
   },
   "docs/superpowers/specs/2026-08-29-arcade-mistakes-explanation-review-design.md": {
-    "mtime": 1788003224.4468522,
-    "seen": 1788004333.28337,
+    "mtime": 1788004352.4056082,
+    "seen": 1788006359.071715,
     "ast_hash": "4a43cedabe9de1efe764dc1ee32463f6",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery.md": {
+    "mtime": 1788005836.9009173,
+    "seen": 1788006359.071709,
+    "ast_hash": "b033043776e5955266e142534f24b589",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md": {
+    "mtime": 1788005793.460749,
+    "seen": 1788006359.071717,
+    "ast_hash": "39c5eb5560baa415caf38f5d970bed1e",
     "semantic_hash": ""
   }
 }

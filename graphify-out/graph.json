@@ -8758,6 +8758,17 @@
       "source_location": ""
     },
     {
+      "id": "src_core_curriculum_rs_fromstr",
+      "label": "FromStr",
+      "_origin": "ast",
+      "community": 173,
+      "community_name": "Level",
+      "file_type": "code",
+      "norm_label": "fromstr",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
       "id": "src_core_placement",
       "label": "placement.rs",
       "_origin": "ast",
@@ -14556,7 +14567,7 @@
       "label": "hint.rs",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "hint.rs",
       "source_file": "src/cli/commands/hint.rs",
@@ -14567,7 +14578,7 @@
       "label": "Option",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "option",
       "source_file": "",
@@ -14578,7 +14589,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -14589,7 +14600,7 @@
       "label": "show_hint()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "show_hint()",
       "source_file": "src/cli/commands/hint.rs",
@@ -14600,7 +14611,7 @@
       "label": "run.rs",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "run.rs",
       "source_file": "src/cli/commands/run.rs",
@@ -14611,7 +14622,7 @@
       "label": "reset_exercise()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "reset_exercise()",
       "source_file": "src/cli/commands/run.rs",
@@ -14622,7 +14633,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -14633,7 +14644,7 @@
       "label": "run_exercise()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "run_exercise()",
       "source_file": "src/cli/commands/run.rs",
@@ -14644,7 +14655,7 @@
       "label": "curriculum.rs",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "curriculum.rs",
       "source_file": "src/core/curriculum.rs",
@@ -14655,7 +14666,7 @@
       "label": "collect_md_files()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "collect_md_files()",
       "source_file": "src/core/curriculum.rs",
@@ -14666,7 +14677,7 @@
       "label": "Curriculum",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "curriculum",
       "source_file": "src/core/curriculum.rs",
@@ -14677,7 +14688,7 @@
       "label": "find_all_exercises()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "find_all_exercises()",
       "source_file": "src/core/curriculum.rs",
@@ -14688,7 +14699,7 @@
       "label": "find_all_exercises_or_embedded()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "find_all_exercises_or_embedded()",
       "source_file": "src/core/curriculum.rs",
@@ -14699,73 +14710,29 @@
       "label": "find_exercise_by_query()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "find_exercise_by_query()",
       "source_file": "src/core/curriculum.rs",
       "source_location": "L88"
     },
     {
-      "id": "src_core_curriculum_level_from_str",
-      "label": ".from_str()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": ".from_str()",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L35"
-    },
-    {
       "id": "src_core_curriculum_load_curriculum",
       "label": "load_curriculum()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "load_curriculum()",
       "source_file": "src/core/curriculum.rs",
       "source_location": "L112"
     },
     {
-      "id": "src_core_curriculum_parselevelerror",
-      "label": "ParseLevelError",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "parselevelerror",
-      "source_file": "src/core/curriculum.rs",
-      "source_location": "L30"
-    },
-    {
-      "id": "src_core_curriculum_rs_err",
-      "label": "Err",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "err",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_fromstr",
-      "label": "FromStr",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "fromstr",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "src_core_curriculum_rs_option",
       "label": "Option",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "option",
       "source_file": "",
@@ -14776,7 +14743,7 @@
       "label": "P",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "p",
       "source_file": "",
@@ -14787,7 +14754,7 @@
       "label": "Path",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "path",
       "source_file": "",
@@ -14798,31 +14765,9 @@
       "label": "Result",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_self",
-      "label": "Self",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "self",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "src_core_curriculum_rs_string",
-      "label": "String",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "string",
       "source_file": "",
       "source_location": ""
     },
@@ -14831,106 +14776,51 @@
       "label": "Vec",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "vec",
       "source_file": "",
       "source_location": ""
     },
     {
-      "id": "tests_cli_tests",
-      "label": "cli_tests.rs",
+      "id": "src_core_exercise_exercise",
+      "label": "Exercise",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
-      "norm_label": "cli_tests.rs",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L1"
+      "norm_label": "exercise",
+      "source_file": "src/core/exercise.rs",
+      "source_location": "L55"
     },
     {
-      "id": "tests_cli_tests_test_cli_explain_semantic_lookup_and_glosses",
-      "label": "test_cli_explain_semantic_lookup_and_glosses()",
+      "id": "src_core_exercise_rs_pathbuf",
+      "label": "PathBuf",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
-      "norm_label": "test_cli_explain_semantic_lookup_and_glosses()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L194"
-    },
-    {
-      "id": "tests_cli_tests_test_cli_parsing_subcommands",
-      "label": "test_cli_parsing_subcommands()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "test_cli_parsing_subcommands()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L13"
-    },
-    {
-      "id": "tests_cli_tests_test_cli_tour_command_parsing",
-      "label": "test_cli_tour_command_parsing()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "test_cli_tour_command_parsing()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L161"
+      "norm_label": "pathbuf",
+      "source_file": "",
+      "source_location": ""
     },
     {
       "id": "tests_cli_tests_test_curriculum_discovery_and_query",
       "label": "test_curriculum_discovery_and_query()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "test_curriculum_discovery_and_query()",
       "source_file": "tests/cli_tests.rs",
       "source_location": "L232"
     },
     {
-      "id": "tests_cli_tests_test_explain_command_executes_cleanly",
-      "label": "test_explain_command_executes_cleanly()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "test_explain_command_executes_cleanly()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L179"
-    },
-    {
-      "id": "tests_cli_tests_test_list_and_progress_execute_cleanly",
-      "label": "test_list_and_progress_execute_cleanly()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "test_list_and_progress_execute_cleanly()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L202"
-    },
-    {
-      "id": "tests_cli_tests_test_run_exercise_with_file_path",
-      "label": "test_run_exercise_with_file_path()",
-      "_origin": "ast",
-      "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
-      "file_type": "code",
-      "norm_label": "test_run_exercise_with_file_path()",
-      "source_file": "tests/cli_tests.rs",
-      "source_location": "L212"
-    },
-    {
       "id": "tests_extractor_tests",
       "label": "extractor_tests.rs",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "extractor_tests.rs",
       "source_file": "tests/extractor_tests.rs",
@@ -14941,7 +14831,7 @@
       "label": "test_curriculum_exercises_convert_to_drill_items()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "test_curriculum_exercises_convert_to_drill_items()",
       "source_file": "tests/extractor_tests.rs",
@@ -14952,7 +14842,7 @@
       "label": "test_extracted_drill_item_from_custom_markdown()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "test_extracted_drill_item_from_custom_markdown()",
       "source_file": "tests/extractor_tests.rs",
@@ -14963,7 +14853,7 @@
       "label": "test_extracted_drill_items_have_valid_fields()",
       "_origin": "ast",
       "community": 221,
-      "community_name": "find_all_exercises_or_embedded",
+      "community_name": "Exercise",
       "file_type": "code",
       "norm_label": "test_extracted_drill_items_have_valid_fields()",
       "source_file": "tests/extractor_tests.rs",
@@ -20527,81 +20417,70 @@
       "source_location": "L80"
     },
     {
-      "id": "tests_exercise_parser_tests",
-      "label": "exercise_parser_tests.rs",
+      "id": "tests_exercise_validity_tests",
+      "label": "exercise_validity_tests.rs",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "exercise_parser_tests.rs",
-      "source_file": "tests/exercise_parser_tests.rs",
+      "norm_label": "exercise_validity_tests.rs",
+      "source_file": "tests/exercise_validity_tests.rs",
       "source_location": "L1"
     },
     {
-      "id": "tests_exercise_parser_tests_test_parse_exercise_with_concept_tags_and_comma_separated",
-      "label": "test_parse_exercise_with_concept_tags_and_comma_separated()",
+      "id": "tests_exercise_validity_tests_collect_md_paths",
+      "label": "collect_md_paths()",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "test_parse_exercise_with_concept_tags_and_comma_separated()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L128"
+      "norm_label": "collect_md_paths()",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L8"
     },
     {
-      "id": "tests_exercise_parser_tests_test_parse_exercise_with_concepts_and_prerequisites",
-      "label": "test_parse_exercise_with_concepts_and_prerequisites()",
+      "id": "tests_exercise_validity_tests_rs_path",
+      "label": "Path",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "test_parse_exercise_with_concepts_and_prerequisites()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L90"
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "tests_exercise_parser_tests_test_parse_invalid_level_error",
-      "label": "test_parse_invalid_level_error()",
+      "id": "tests_exercise_validity_tests_rs_pathbuf",
+      "label": "PathBuf",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "test_parse_invalid_level_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L70"
+      "norm_label": "pathbuf",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "tests_exercise_parser_tests_test_parse_invalid_type_error",
-      "label": "test_parse_invalid_type_error()",
+      "id": "tests_exercise_validity_tests_rs_vec",
+      "label": "Vec",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "test_parse_invalid_type_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L80"
+      "norm_label": "vec",
+      "source_file": "",
+      "source_location": ""
     },
     {
-      "id": "tests_exercise_parser_tests_test_parse_missing_id_error",
-      "label": "test_parse_missing_id_error()",
+      "id": "tests_exercise_validity_tests_test_all_curriculum_exercises_are_valid_and_solvable",
+      "label": "test_all_curriculum_exercises_are_valid_and_solvable()",
       "_origin": "ast",
       "community": 3,
       "community_name": "exercise.rs",
       "file_type": "code",
-      "norm_label": "test_parse_missing_id_error()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L60"
-    },
-    {
-      "id": "tests_exercise_parser_tests_test_parse_valid_markdown_exercise",
-      "label": "test_parse_valid_markdown_exercise()",
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "exercise.rs",
-      "file_type": "code",
-      "norm_label": "test_parse_valid_markdown_exercise()",
-      "source_file": "tests/exercise_parser_tests.rs",
-      "source_location": "L5"
+      "norm_label": "test_all_curriculum_exercises_are_valid_and_solvable()",
+      "source_file": "tests/exercise_validity_tests.rs",
+      "source_location": "L27"
     },
     {
       "id": "exercises_01_ser_vs_estar_05_passive_vs_resultant_state",
@@ -28694,6 +28573,50 @@
       "source_location": ""
     },
     {
+      "id": "src_cli_commands_init",
+      "label": "init.rs",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "init.rs",
+      "source_file": "src/cli/commands/init.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "src_cli_commands_init_rs_option",
+      "label": "Option",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "option",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_init_rs_result",
+      "label": "Result",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "result",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_cli_commands_init_run_init",
+      "label": "run_init()",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "run_init()",
+      "source_file": "src/cli/commands/init.rs",
+      "source_location": "L5"
+    },
+    {
       "id": "src_core_embedded",
       "label": "embedded.rs",
       "_origin": "ast",
@@ -28835,6 +28758,50 @@
       "norm_label": "test_init_exercises_dir_writes_files()",
       "source_file": "tests/embedded_tests.rs",
       "source_location": "L20"
+    },
+    {
+      "id": "tests_init_tests",
+      "label": "init_tests.rs",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "init_tests.rs",
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_init_tests_test_run_init_creates_exercise_workspace",
+      "label": "test_run_init_creates_exercise_workspace()",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "test_run_init_creates_exercise_workspace()",
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "tests_init_tests_test_run_init_force_flag",
+      "label": "test_run_init_force_flag()",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "test_run_init_force_flag()",
+      "source_file": "tests/init_tests.rs",
+      "source_location": "L16"
+    },
+    {
+      "id": "tests_srs_tests_test_state_fast_track_level",
+      "label": "test_state_fast_track_level()",
+      "_origin": "ast",
+      "community": 4,
+      "community_name": "embedded.rs",
+      "file_type": "code",
+      "norm_label": "test_state_fast_track_level()",
+      "source_file": "tests/srs_tests.rs",
+      "source_location": "L73"
     },
     {
       "id": "exercises_03_subjunctive_weirdo_04_recommendations_influence",
@@ -31941,7 +31908,7 @@
       "label": "export.rs",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "export.rs",
       "source_file": "src/cli/commands/export.rs",
@@ -31952,7 +31919,7 @@
       "label": "generate_anki_tsv()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "generate_anki_tsv()",
       "source_file": "src/cli/commands/export.rs",
@@ -31963,7 +31930,7 @@
       "label": "generate_json_export()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "generate_json_export()",
       "source_file": "src/cli/commands/export.rs",
@@ -31974,7 +31941,7 @@
       "label": "generate_markdown_notes()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "generate_markdown_notes()",
       "source_file": "src/cli/commands/export.rs",
@@ -31985,7 +31952,7 @@
       "label": "html_escape()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "html_escape()",
       "source_file": "src/cli/commands/export.rs",
@@ -31996,7 +31963,7 @@
       "label": "Option",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "option",
       "source_file": "",
@@ -32007,7 +31974,7 @@
       "label": "Result",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "result",
       "source_file": "",
@@ -32018,7 +31985,7 @@
       "label": "String",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "string",
       "source_file": "",
@@ -32029,40 +31996,18 @@
       "label": "run_export()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "run_export()",
       "source_file": "src/cli/commands/export.rs",
       "source_location": "L188"
     },
     {
-      "id": "src_core_exercise_exercise",
-      "label": "Exercise",
-      "_origin": "ast",
-      "community": 434,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "exercise",
-      "source_file": "src/core/exercise.rs",
-      "source_location": "L55"
-    },
-    {
-      "id": "src_core_exercise_rs_pathbuf",
-      "label": "PathBuf",
-      "_origin": "ast",
-      "community": 434,
-      "community_name": "Exercise",
-      "file_type": "code",
-      "norm_label": "pathbuf",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
       "id": "tests_export_sync_tests",
       "label": "export_sync_tests.rs",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "export_sync_tests.rs",
       "source_file": "tests/export_sync_tests.rs",
@@ -32073,7 +32018,7 @@
       "label": "Vec",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "vec",
       "source_file": "",
@@ -32084,7 +32029,7 @@
       "label": "sample_exercises()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "sample_exercises()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32095,7 +32040,7 @@
       "label": "test_anki_tsv_export_generation()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "test_anki_tsv_export_generation()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32106,7 +32051,7 @@
       "label": "test_json_export_generation()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "test_json_export_generation()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32117,7 +32062,7 @@
       "label": "test_markdown_study_guide_export()",
       "_origin": "ast",
       "community": 434,
-      "community_name": "Exercise",
+      "community_name": "export.rs",
       "file_type": "code",
       "norm_label": "test_markdown_study_guide_export()",
       "source_file": "tests/export_sync_tests.rs",
@@ -32267,17 +32212,6 @@
       "source_location": "L32"
     },
     {
-      "id": "tests_srs_tests_test_state_fast_track_level",
-      "label": "test_state_fast_track_level()",
-      "_origin": "ast",
-      "community": 435,
-      "community_name": "SrsItem",
-      "file_type": "code",
-      "norm_label": "test_state_fast_track_level()",
-      "source_file": "tests/srs_tests.rs",
-      "source_location": "L73"
-    },
-    {
       "id": "tests_srs_tests_test_state_load_corrupt_file_fails",
       "label": "test_state_load_corrupt_file_fails()",
       "_origin": "ast",
@@ -32319,7 +32253,7 @@
       "file_type": "code",
       "norm_label": ".default()",
       "source_file": "src/core/state.rs",
-      "source_location": "L63"
+      "source_location": "L76"
     },
     {
       "id": "src_core_state_appstate_default_path",
@@ -32330,7 +32264,7 @@
       "file_type": "code",
       "norm_label": ".default_path()",
       "source_file": "src/core/state.rs",
-      "source_location": "L80"
+      "source_location": "L93"
     },
     {
       "id": "src_core_state_appstate_load",
@@ -32341,7 +32275,7 @@
       "file_type": "code",
       "norm_label": ".load()",
       "source_file": "src/core/state.rs",
-      "source_location": "L89"
+      "source_location": "L102"
     },
     {
       "id": "src_core_state_appstate_load_from_path",
@@ -32352,7 +32286,7 @@
       "file_type": "code",
       "norm_label": ".load_from_path()",
       "source_file": "src/core/state.rs",
-      "source_location": "L94"
+      "source_location": "L107"
     },
     {
       "id": "src_core_state_appstate_save",
@@ -32363,7 +32297,7 @@
       "file_type": "code",
       "norm_label": ".save()",
       "source_file": "src/core/state.rs",
-      "source_location": "L106"
+      "source_location": "L119"
     },
     {
       "id": "src_core_state_appstate_save_to_path",
@@ -32374,29 +32308,7 @@
       "file_type": "code",
       "norm_label": ".save_to_path()",
       "source_file": "src/core/state.rs",
-      "source_location": "L111"
-    },
-    {
-      "id": "src_core_state_conceptmastery_new",
-      "label": ".new()",
-      "_origin": "ast",
-      "community": 436,
-      "community_name": ".load_from_path",
-      "file_type": "code",
-      "norm_label": ".new()",
-      "source_file": "src/core/state.rs",
-      "source_location": "L36"
-    },
-    {
-      "id": "src_core_state_rs_into",
-      "label": "Into",
-      "_origin": "ast",
-      "community": 436,
-      "community_name": ".load_from_path",
-      "file_type": "code",
-      "norm_label": "into",
-      "source_file": "",
-      "source_location": ""
+      "source_location": "L124"
     },
     {
       "id": "src_core_state_rs_path",
@@ -32693,7 +32605,7 @@
       "file_type": "code",
       "norm_label": "test_concept_mastery_lapse_penalization_and_recovery()",
       "source_file": "tests/weakness_profiler_tests.rs",
-      "source_location": "L112"
+      "source_location": "L115"
     },
     {
       "id": "tests_weakness_profiler_tests_test_get_concept_mastery_scores",
@@ -32704,7 +32616,7 @@
       "file_type": "code",
       "norm_label": "test_get_concept_mastery_scores()",
       "source_file": "tests/weakness_profiler_tests.rs",
-      "source_location": "L174"
+      "source_location": "L180"
     },
     {
       "id": "tests_weakness_profiler_tests_test_get_weakest_concepts_sorting_and_limiting",
@@ -32715,7 +32627,7 @@
       "file_type": "code",
       "norm_label": "test_get_weakest_concepts_sorting_and_limiting()",
       "source_file": "tests/weakness_profiler_tests.rs",
-      "source_location": "L152"
+      "source_location": "L158"
     },
     {
       "id": "tests_weakness_profiler_tests_test_progress_json_includes_weak_topics_and_recommendations",
@@ -32729,6 +32641,17 @@
       "source_location": "L55"
     },
     {
+      "id": "tests_weakness_profiler_tests_test_scientific_sm2_concept_mastery_progression",
+      "label": "test_scientific_sm2_concept_mastery_progression()",
+      "_origin": "ast",
+      "community": 439,
+      "community_name": "weakness_profiler_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_scientific_sm2_concept_mastery_progression()",
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L215"
+    },
+    {
       "id": "tests_weakness_profiler_tests_test_state_backwards_compatibility_without_concept_mastery",
       "label": "test_state_backwards_compatibility_without_concept_mastery()",
       "_origin": "ast",
@@ -32737,7 +32660,7 @@
       "file_type": "code",
       "norm_label": "test_state_backwards_compatibility_without_concept_mastery()",
       "source_file": "tests/weakness_profiler_tests.rs",
-      "source_location": "L189"
+      "source_location": "L197"
     },
     {
       "id": "tests_weakness_profiler_tests_test_weakness_profiler_detects_low_ease_and_lapses",
@@ -33173,147 +33096,189 @@
       "source_location": "L8"
     },
     {
-      "id": "src_cli_commands_init",
-      "label": "init.rs",
+      "id": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design",
+      "label": "2026-08-29-scientific-sm2-concept-mastery-design.md",
       "_origin": "ast",
       "community": 445,
-      "community_name": "run_init",
-      "file_type": "code",
-      "norm_label": "init.rs",
-      "source_file": "src/cli/commands/init.rs",
+      "community_name": "Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
       "source_location": "L1"
     },
     {
-      "id": "src_cli_commands_init_rs_option",
-      "label": "Option",
+      "id": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_1_problem_statement_motivation",
+      "label": "1. Problem Statement & Motivation",
       "_origin": "ast",
       "community": 445,
-      "community_name": "run_init",
-      "file_type": "code",
-      "norm_label": "option",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. problem statement & motivation",
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L9"
     },
     {
-      "id": "src_cli_commands_init_rs_result",
-      "label": "Result",
+      "id": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_2_scientific_foundations_sm_2_spacing_effect",
+      "label": "2. Scientific Foundations (SM-2 & Spacing Effect)",
       "_origin": "ast",
       "community": 445,
-      "community_name": "run_init",
-      "file_type": "code",
-      "norm_label": "result",
-      "source_file": "",
-      "source_location": ""
+      "community_name": "Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. scientific foundations (sm-2 & spacing effect)",
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L17"
     },
     {
-      "id": "src_cli_commands_init_run_init",
-      "label": "run_init()",
+      "id": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_3_data_model_architecture_src_core_state_rs",
+      "label": "3. Data Model Architecture (`src/core/state.rs`)",
       "_origin": "ast",
       "community": 445,
-      "community_name": "run_init",
-      "file_type": "code",
-      "norm_label": "run_init()",
-      "source_file": "src/cli/commands/init.rs",
-      "source_location": "L5"
+      "community_name": "Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. data model architecture (`src/core/state.rs`)",
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L25"
     },
     {
-      "id": "tests_init_tests",
-      "label": "init_tests.rs",
+      "id": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_4_expected_progression_rates",
+      "label": "4. Expected Progression Rates",
       "_origin": "ast",
       "community": 445,
-      "community_name": "run_init",
-      "file_type": "code",
-      "norm_label": "init_tests.rs",
-      "source_file": "tests/init_tests.rs",
-      "source_location": "L1"
+      "community_name": "Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. expected progression rates",
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L95"
     },
     {
-      "id": "tests_init_tests_test_run_init_creates_exercise_workspace",
-      "label": "test_run_init_creates_exercise_workspace()",
+      "id": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_5_verification_backward_compatibility",
+      "label": "5. Verification & Backward Compatibility",
       "_origin": "ast",
       "community": 445,
-      "community_name": "run_init",
-      "file_type": "code",
-      "norm_label": "test_run_init_creates_exercise_workspace()",
-      "source_file": "tests/init_tests.rs",
-      "source_location": "L5"
+      "community_name": "Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. verification & backward compatibility",
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L105"
     },
     {
-      "id": "tests_init_tests_test_run_init_force_flag",
-      "label": "test_run_init_force_flag()",
+      "id": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_conceptmastery_struct",
+      "label": "`ConceptMastery` Struct",
       "_origin": "ast",
       "community": 445,
-      "community_name": "run_init",
-      "file_type": "code",
-      "norm_label": "test_run_init_force_flag()",
-      "source_file": "tests/init_tests.rs",
-      "source_location": "L16"
-    },
-    {
-      "id": "tests_exercise_validity_tests",
-      "label": "exercise_validity_tests.rs",
-      "_origin": "ast",
-      "community": 446,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "exercise_validity_tests.rs",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L1"
-    },
-    {
-      "id": "tests_exercise_validity_tests_collect_md_paths",
-      "label": "collect_md_paths()",
-      "_origin": "ast",
-      "community": 446,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "collect_md_paths()",
-      "source_file": "tests/exercise_validity_tests.rs",
-      "source_location": "L8"
-    },
-    {
-      "id": "tests_exercise_validity_tests_rs_path",
-      "label": "Path",
-      "_origin": "ast",
-      "community": 446,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "path",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_exercise_validity_tests_rs_pathbuf",
-      "label": "PathBuf",
-      "_origin": "ast",
-      "community": 446,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "pathbuf",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_exercise_validity_tests_rs_vec",
-      "label": "Vec",
-      "_origin": "ast",
-      "community": 446,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "vec",
-      "source_file": "",
-      "source_location": ""
-    },
-    {
-      "id": "tests_exercise_validity_tests_test_all_curriculum_exercises_are_valid_and_solvable",
-      "label": "test_all_curriculum_exercises_are_valid_and_solvable()",
-      "_origin": "ast",
-      "community": 446,
-      "community_name": "exercise_validity_tests.rs",
-      "file_type": "code",
-      "norm_label": "test_all_curriculum_exercises_are_valid_and_solvable()",
-      "source_file": "tests/exercise_validity_tests.rs",
+      "community_name": "Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "`conceptmastery` struct",
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
       "source_location": "L27"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_design_specification_scientific_sm_2_interval_stability_concept_mastery_model",
+      "label": "Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model",
+      "_origin": "ast",
+      "community": 445,
+      "community_name": "Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "design specification: scientific sm-2 interval & stability concept mastery model",
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_sm_2_mastery_calculation_logic_update_concept_mastery",
+      "label": "SM-2 Mastery Calculation Logic (`update_concept_mastery`)",
+      "_origin": "ast",
+      "community": 445,
+      "community_name": "Design Specification: Scientific SM-2 Interval & Stability Concept Mastery Model",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "sm-2 mastery calculation logic (`update_concept_mastery`)",
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L49"
+    },
+    {
+      "id": "tests_cli_tests",
+      "label": "cli_tests.rs",
+      "_origin": "ast",
+      "community": 446,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "cli_tests.rs",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_cli_tests_test_cli_explain_semantic_lookup_and_glosses",
+      "label": "test_cli_explain_semantic_lookup_and_glosses()",
+      "_origin": "ast",
+      "community": 446,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_cli_explain_semantic_lookup_and_glosses()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L194"
+    },
+    {
+      "id": "tests_cli_tests_test_cli_parsing_subcommands",
+      "label": "test_cli_parsing_subcommands()",
+      "_origin": "ast",
+      "community": 446,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_cli_parsing_subcommands()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L13"
+    },
+    {
+      "id": "tests_cli_tests_test_cli_tour_command_parsing",
+      "label": "test_cli_tour_command_parsing()",
+      "_origin": "ast",
+      "community": 446,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_cli_tour_command_parsing()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L161"
+    },
+    {
+      "id": "tests_cli_tests_test_explain_command_executes_cleanly",
+      "label": "test_explain_command_executes_cleanly()",
+      "_origin": "ast",
+      "community": 446,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_explain_command_executes_cleanly()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L179"
+    },
+    {
+      "id": "tests_cli_tests_test_list_and_progress_execute_cleanly",
+      "label": "test_list_and_progress_execute_cleanly()",
+      "_origin": "ast",
+      "community": 446,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_list_and_progress_execute_cleanly()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L202"
+    },
+    {
+      "id": "tests_cli_tests_test_run_exercise_with_file_path",
+      "label": "test_run_exercise_with_file_path()",
+      "_origin": "ast",
+      "community": 446,
+      "community_name": "cli_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_run_exercise_with_file_path()",
+      "source_file": "tests/cli_tests.rs",
+      "source_location": "L212"
     },
     {
       "id": "src_cli_commands_arcade",
@@ -34104,6 +34069,198 @@
       "community_name": "RawModeGuard",
       "file_type": "code",
       "norm_label": "drop",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "tests_exercise_parser_tests",
+      "label": "exercise_parser_tests.rs",
+      "_origin": "ast",
+      "community": 454,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "exercise_parser_tests.rs",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L1"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_exercise_with_concept_tags_and_comma_separated",
+      "label": "test_parse_exercise_with_concept_tags_and_comma_separated()",
+      "_origin": "ast",
+      "community": 454,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_exercise_with_concept_tags_and_comma_separated()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L128"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_exercise_with_concepts_and_prerequisites",
+      "label": "test_parse_exercise_with_concepts_and_prerequisites()",
+      "_origin": "ast",
+      "community": 454,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_exercise_with_concepts_and_prerequisites()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L90"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_invalid_level_error",
+      "label": "test_parse_invalid_level_error()",
+      "_origin": "ast",
+      "community": 454,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_invalid_level_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L70"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_invalid_type_error",
+      "label": "test_parse_invalid_type_error()",
+      "_origin": "ast",
+      "community": 454,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_invalid_type_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L80"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_missing_id_error",
+      "label": "test_parse_missing_id_error()",
+      "_origin": "ast",
+      "community": 454,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_missing_id_error()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L60"
+    },
+    {
+      "id": "tests_exercise_parser_tests_test_parse_valid_markdown_exercise",
+      "label": "test_parse_valid_markdown_exercise()",
+      "_origin": "ast",
+      "community": 454,
+      "community_name": "exercise_parser_tests.rs",
+      "file_type": "code",
+      "norm_label": "test_parse_valid_markdown_exercise()",
+      "source_file": "tests/exercise_parser_tests.rs",
+      "source_location": "L5"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery",
+      "label": "2026-08-29-scientific-sm2-concept-mastery.md",
+      "_origin": "ast",
+      "community": 455,
+      "community_name": "Scientific SM-2 Interval & Stability Concept Mastery Implementation Plan",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-08-29-scientific-sm2-concept-mastery.md",
+      "source_file": "docs/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery_scientific_sm_2_interval_stability_concept_mastery_implementation_plan",
+      "label": "Scientific SM-2 Interval & Stability Concept Mastery Implementation Plan",
+      "_origin": "ast",
+      "community": 455,
+      "community_name": "Scientific SM-2 Interval & Stability Concept Mastery Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "scientific sm-2 interval & stability concept mastery implementation plan",
+      "source_file": "docs/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery_task_1_core_sm_2_data_model_scientific_mastery_engine_src_core_state_rs_tests_weakness_profiler_tests_rs",
+      "label": "Task 1: Core SM-2 Data Model & Scientific Mastery Engine (`src/core/state.rs`, `tests/weakness_profiler_tests.rs`)",
+      "_origin": "ast",
+      "community": 455,
+      "community_name": "Scientific SM-2 Interval & Stability Concept Mastery Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 1: core sm-2 data model & scientific mastery engine (`src/core/state.rs`, `tests/weakness_profiler_tests.rs`)",
+      "source_file": "docs/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery_task_2_update_existing_tests_verify_end_to_end_tests_weakness_profiler_tests_rs_tests_cli_arcade_tests_rs",
+      "label": "Task 2: Update Existing Tests & Verify End-to-End (`tests/weakness_profiler_tests.rs`, `tests/cli_arcade_tests.rs`)",
+      "_origin": "ast",
+      "community": 455,
+      "community_name": "Scientific SM-2 Interval & Stability Concept Mastery Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 2: update existing tests & verify end-to-end (`tests/weakness_profiler_tests.rs`, `tests/cli_arcade_tests.rs`)",
+      "source_file": "docs/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery.md",
+      "source_location": "L153"
+    },
+    {
+      "id": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery_task_3_complete_verification_formatting_release_polish",
+      "label": "Task 3: Complete Verification, Formatting & Release Polish",
+      "_origin": "ast",
+      "community": 455,
+      "community_name": "Scientific SM-2 Interval & Stability Concept Mastery Implementation Plan",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "task 3: complete verification, formatting & release polish",
+      "source_file": "docs/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery.md",
+      "source_location": "L174"
+    },
+    {
+      "id": "src_core_curriculum_level_from_str",
+      "label": ".from_str()",
+      "_origin": "ast",
+      "community": 456,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": ".from_str()",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L35"
+    },
+    {
+      "id": "src_core_curriculum_parselevelerror",
+      "label": "ParseLevelError",
+      "_origin": "ast",
+      "community": 456,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "parselevelerror",
+      "source_file": "src/core/curriculum.rs",
+      "source_location": "L30"
+    },
+    {
+      "id": "src_core_curriculum_rs_err",
+      "label": "Err",
+      "_origin": "ast",
+      "community": 456,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "err",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_self",
+      "label": "Self",
+      "_origin": "ast",
+      "community": 456,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "self",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_curriculum_rs_string",
+      "label": "String",
+      "_origin": "ast",
+      "community": 456,
+      "community_name": ".from_str",
+      "file_type": "code",
+      "norm_label": "string",
       "source_file": "",
       "source_location": ""
     },
@@ -35614,7 +35771,7 @@
       "file_type": "code",
       "norm_label": "appstate",
       "source_file": "src/core/state.rs",
-      "source_location": "L49"
+      "source_location": "L62"
     },
     {
       "id": "src_core_state_appstate_fast_track_level",
@@ -35625,7 +35782,7 @@
       "file_type": "code",
       "norm_label": ".fast_track_level()",
       "source_file": "src/core/state.rs",
-      "source_location": "L178"
+      "source_location": "L191"
     },
     {
       "id": "src_core_state_appstate_get_concept_mastery_scores",
@@ -35636,7 +35793,7 @@
       "file_type": "code",
       "norm_label": ".get_concept_mastery_scores()",
       "source_file": "src/core/state.rs",
-      "source_location": "L241"
+      "source_location": "L273"
     },
     {
       "id": "src_core_state_appstate_get_weakest_concepts",
@@ -35647,7 +35804,7 @@
       "file_type": "code",
       "norm_label": ".get_weakest_concepts()",
       "source_file": "src/core/state.rs",
-      "source_location": "L229"
+      "source_location": "L261"
     },
     {
       "id": "src_core_state_appstate_is_completed",
@@ -35658,7 +35815,7 @@
       "file_type": "code",
       "norm_label": ".is_completed()",
       "source_file": "src/core/state.rs",
-      "source_location": "L120"
+      "source_location": "L133"
     },
     {
       "id": "src_core_state_appstate_is_due_for_review",
@@ -35669,7 +35826,7 @@
       "file_type": "code",
       "norm_label": ".is_due_for_review()",
       "source_file": "src/core/state.rs",
-      "source_location": "L158"
+      "source_location": "L171"
     },
     {
       "id": "src_core_state_appstate_mark_completed",
@@ -35680,7 +35837,7 @@
       "file_type": "code",
       "norm_label": ".mark_completed()",
       "source_file": "src/core/state.rs",
-      "source_location": "L131"
+      "source_location": "L144"
     },
     {
       "id": "src_core_state_appstate_mark_tour_completed",
@@ -35691,7 +35848,7 @@
       "file_type": "code",
       "norm_label": ".mark_tour_completed()",
       "source_file": "src/core/state.rs",
-      "source_location": "L147"
+      "source_location": "L160"
     },
     {
       "id": "src_core_state_appstate_record_activity",
@@ -35702,7 +35859,7 @@
       "file_type": "code",
       "norm_label": ".record_activity()",
       "source_file": "src/core/state.rs",
-      "source_location": "L124"
+      "source_location": "L137"
     },
     {
       "id": "src_core_state_appstate_unmark_completed",
@@ -35713,7 +35870,7 @@
       "file_type": "code",
       "norm_label": ".unmark_completed()",
       "source_file": "src/core/state.rs",
-      "source_location": "L151"
+      "source_location": "L164"
     },
     {
       "id": "src_core_state_appstate_update_concept_mastery",
@@ -35724,7 +35881,7 @@
       "file_type": "code",
       "norm_label": ".update_concept_mastery()",
       "source_file": "src/core/state.rs",
-      "source_location": "L207"
+      "source_location": "L220"
     },
     {
       "id": "src_core_state_appstate_update_srs",
@@ -35735,7 +35892,7 @@
       "file_type": "code",
       "norm_label": ".update_srs()",
       "source_file": "src/core/state.rs",
-      "source_location": "L166"
+      "source_location": "L179"
     },
     {
       "id": "src_core_state_conceptmastery",
@@ -35746,7 +35903,29 @@
       "file_type": "code",
       "norm_label": "conceptmastery",
       "source_file": "src/core/state.rs",
-      "source_location": "L27"
+      "source_location": "L31"
+    },
+    {
+      "id": "src_core_state_conceptmastery_new",
+      "label": ".new()",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "AppState",
+      "file_type": "code",
+      "norm_label": ".new()",
+      "source_file": "src/core/state.rs",
+      "source_location": "L46"
+    },
+    {
+      "id": "src_core_state_default_ease_factor",
+      "label": "default_ease_factor()",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "AppState",
+      "file_type": "code",
+      "norm_label": "default_ease_factor()",
+      "source_file": "src/core/state.rs",
+      "source_location": "L26"
     },
     {
       "id": "src_core_state_evaluatedlevel",
@@ -35811,6 +35990,17 @@
       "community_name": "AppState",
       "file_type": "code",
       "norm_label": "hashset",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "src_core_state_rs_into",
+      "label": "Into",
+      "_origin": "ast",
+      "community": 7,
+      "community_name": "AppState",
+      "file_type": "code",
+      "norm_label": "into",
       "source_file": "",
       "source_location": ""
     },
@@ -38843,7 +39033,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/state.rs",
-      "source_location": "L66",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -38855,7 +39045,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/state.rs",
-      "source_location": "L203",
+      "source_location": "L216",
       "weight": 1.0
     },
     {
@@ -38867,7 +39057,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/state.rs",
-      "source_location": "L90",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -38879,7 +39069,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/state.rs",
-      "source_location": "L91",
+      "source_location": "L104",
       "weight": 1.0
     },
     {
@@ -38891,7 +39081,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/state.rs",
-      "source_location": "L96",
+      "source_location": "L109",
       "weight": 1.0
     },
     {
@@ -38903,7 +39093,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/state.rs",
-      "source_location": "L144",
+      "source_location": "L157",
       "weight": 1.0
     },
     {
@@ -38915,7 +39105,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/state.rs",
-      "source_location": "L107",
+      "source_location": "L120",
       "weight": 1.0
     },
     {
@@ -38927,7 +39117,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/state.rs",
-      "source_location": "L108",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate_update_concept_mastery",
+      "target": "src_core_state_conceptmastery_new",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "src/core/state.rs",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -38939,7 +39141,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/state.rs",
-      "source_location": "L171",
+      "source_location": "L184",
       "weight": 1.0
     },
     {
@@ -38951,7 +39153,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "src/core/state.rs",
-      "source_location": "L175",
+      "source_location": "L188",
       "weight": 1.0
     },
     {
@@ -41291,7 +41493,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/core/state.rs",
-      "source_location": "L51",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -41303,7 +41505,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/core/state.rs",
-      "source_location": "L53",
+      "source_location": "L66",
       "weight": 1.0
     },
     {
@@ -41315,7 +41517,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/core/state.rs",
-      "source_location": "L57",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -41327,7 +41529,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/core/state.rs",
-      "source_location": "L58",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -41339,7 +41541,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/core/state.rs",
-      "source_location": "L28",
+      "source_location": "L32",
       "weight": 1.0
     },
     {
@@ -41351,7 +41553,7 @@
       "confidence_score": 1.0,
       "context": "field",
       "source_file": "src/core/state.rs",
-      "source_location": "L32",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -42971,7 +43173,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L54",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
@@ -42983,7 +43185,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L55",
+      "source_location": "L68",
       "weight": 1.0
     },
     {
@@ -42995,7 +43197,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L57",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -43007,7 +43209,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L58",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -43019,7 +43221,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L58",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -43031,7 +43233,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L241",
+      "source_location": "L273",
       "weight": 1.0
     },
     {
@@ -43043,7 +43245,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L229",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -43055,7 +43257,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L229",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -43067,7 +43269,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L158",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -43079,7 +43281,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L89",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -43091,7 +43293,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L94",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -43103,7 +43305,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L207",
+      "source_location": "L220",
       "weight": 1.0
     },
     {
@@ -43115,7 +43317,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L166",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
@@ -43127,7 +43329,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L32",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -43139,7 +43341,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L32",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -43151,7 +43353,7 @@
       "confidence_score": 1.0,
       "context": "generic_arg",
       "source_file": "src/core/state.rs",
-      "source_location": "L36",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -46679,7 +46881,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L178",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -46691,7 +46893,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L178",
+      "source_location": "L191",
       "weight": 1.0
     },
     {
@@ -46703,7 +46905,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L158",
+      "source_location": "L171",
       "weight": 1.0
     },
     {
@@ -46715,7 +46917,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L94",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -46727,7 +46929,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L111",
+      "source_location": "L124",
       "weight": 1.0
     },
     {
@@ -46739,7 +46941,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L207",
+      "source_location": "L220",
       "weight": 1.0
     },
     {
@@ -46751,7 +46953,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L166",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
@@ -46763,7 +46965,7 @@
       "confidence_score": 1.0,
       "context": "parameter_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L36",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -48995,7 +49197,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L63",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -49007,7 +49209,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L80",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -49019,7 +49221,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L241",
+      "source_location": "L273",
       "weight": 1.0
     },
     {
@@ -49031,7 +49233,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L229",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -49043,7 +49245,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L89",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -49055,7 +49257,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L94",
+      "source_location": "L107",
       "weight": 1.0
     },
     {
@@ -49067,7 +49269,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L106",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
@@ -49079,7 +49281,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L111",
+      "source_location": "L124",
       "weight": 1.0
     },
     {
@@ -49091,7 +49293,7 @@
       "confidence_score": 1.0,
       "context": "return_type",
       "source_file": "src/core/state.rs",
-      "source_location": "L36",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -53189,6 +53391,50 @@
       "weight": 1.0
     },
     {
+      "source": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery",
+      "target": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery_scientific_sm_2_interval_stability_concept_mastery_implementation_plan",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery_scientific_sm_2_interval_stability_concept_mastery_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery_task_2_update_existing_tests_verify_end_to_end_tests_weakness_profiler_tests_rs_tests_cli_arcade_tests_rs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery.md",
+      "source_location": "L153",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery_scientific_sm_2_interval_stability_concept_mastery_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery_task_1_core_sm_2_data_model_scientific_mastery_engine_src_core_state_rs_tests_weakness_profiler_tests_rs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery_scientific_sm_2_interval_stability_concept_mastery_implementation_plan",
+      "target": "docs_superpowers_plans_2026_08_29_scientific_sm2_concept_mastery_task_3_complete_verification_formatting_release_polish",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery.md",
+      "source_location": "L174",
+      "weight": 1.0
+    },
+    {
       "source": "docs_superpowers_specs_2026_08_26_spanglings_design",
       "target": "docs_superpowers_specs_2026_08_26_spanglings_design_spanglings_design_specification",
       "relation": "contains",
@@ -54759,6 +55005,94 @@
       "confidence_score": 1.0,
       "source_file": "docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design",
+      "target": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_design_specification_scientific_sm_2_interval_stability_concept_mastery_model",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_3_data_model_architecture_src_core_state_rs",
+      "target": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_conceptmastery_struct",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_3_data_model_architecture_src_core_state_rs",
+      "target": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_sm_2_mastery_calculation_logic_update_concept_mastery",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L49",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_design_specification_scientific_sm_2_interval_stability_concept_mastery_model",
+      "target": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_5_verification_backward_compatibility",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_design_specification_scientific_sm_2_interval_stability_concept_mastery_model",
+      "target": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_2_scientific_foundations_sm_2_spacing_effect",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_design_specification_scientific_sm_2_interval_stability_concept_mastery_model",
+      "target": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_3_data_model_architecture_src_core_state_rs",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_design_specification_scientific_sm_2_interval_stability_concept_mastery_model",
+      "target": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_1_problem_statement_motivation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_design_specification_scientific_sm_2_interval_stability_concept_mastery_model",
+      "target": "docs_superpowers_specs_2026_08_29_scientific_sm2_concept_mastery_design_4_expected_progression_rates",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design.md",
+      "source_location": "L95",
       "weight": 1.0
     },
     {
@@ -72616,13 +72950,24 @@
     },
     {
       "source": "src_core_state",
+      "target": "src_core_state_default_ease_factor",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state",
       "target": "src_core_state_conceptmastery",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/core/state.rs",
-      "source_location": "L27",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -72633,7 +72978,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/core/state.rs",
-      "source_location": "L49",
+      "source_location": "L62",
       "weight": 1.0
     },
     {
@@ -75614,7 +75959,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/weakness_profiler_tests.rs",
-      "source_location": "L112",
+      "source_location": "L115",
       "weight": 1.0
     },
     {
@@ -75625,7 +75970,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/weakness_profiler_tests.rs",
-      "source_location": "L152",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -75636,7 +75981,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/weakness_profiler_tests.rs",
-      "source_location": "L174",
+      "source_location": "L180",
       "weight": 1.0
     },
     {
@@ -75647,7 +75992,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/weakness_profiler_tests.rs",
-      "source_location": "L189",
+      "source_location": "L197",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_weakness_profiler_tests",
+      "target": "tests_weakness_profiler_tests_test_scientific_sm2_concept_mastery_progression",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/weakness_profiler_tests.rs",
+      "source_location": "L215",
       "weight": 1.0
     },
     {
@@ -75801,7 +76157,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/core/state.rs",
-      "source_location": "L62",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -76367,178 +76723,13 @@
     },
     {
       "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_save",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L106",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_save_to_path",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L111",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_is_completed",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L120",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_record_activity",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L124",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_mark_completed",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L131",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_mark_tour_completed",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L147",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_unmark_completed",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L151",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_is_due_for_review",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L158",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_update_srs",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L166",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_fast_track_level",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L178",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_update_concept_mastery",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L207",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_get_weakest_concepts",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L229",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_get_concept_mastery_scores",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L241",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_default",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L63",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
-      "target": "src_core_state_appstate_default_path",
-      "relation": "method",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "src/core/state.rs",
-      "source_location": "L80",
-      "weight": 1.0
-    },
-    {
-      "source": "src_core_state_appstate",
       "target": "src_core_state_appstate_load",
       "relation": "method",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/core/state.rs",
-      "source_location": "L89",
+      "source_location": "L102",
       "weight": 1.0
     },
     {
@@ -76549,7 +76740,172 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/core/state.rs",
-      "source_location": "L94",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_save",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_save_to_path",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_is_completed",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_record_activity",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_mark_completed",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_mark_tour_completed",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L160",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_unmark_completed",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L164",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_is_due_for_review",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L171",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_update_srs",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L179",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_fast_track_level",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L191",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_update_concept_mastery",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L220",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_get_weakest_concepts",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L261",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_get_concept_mastery_scores",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L273",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_default",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "src_core_state_appstate",
+      "target": "src_core_state_appstate_default_path",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/core/state.rs",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -76560,7 +76916,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/core/state.rs",
-      "source_location": "L36",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -77844,7 +78200,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "src/core/state.rs",
-      "source_location": "L172",
+      "source_location": "L185",
       "weight": 1.0
     },
     {
@@ -80045,5 +80401,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "a5147fb83054ed1f504a089e22797760ca4d4895"
+  "built_at_commit": "cc56d6b21454872a165bac32029864da889a26dc"
 }
