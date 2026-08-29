@@ -288,5 +288,98 @@ fn test_tui_enter_arcade_with_topic_aliases_and_showdowns() {
         assert_eq!(app.arcade_selected_topic.as_deref(), Some(canonical));
         assert_eq!(app.arcade_items.len(), 15);
         app.exit_arcade_mode();
+        assert!(!app.show_arcade_modal);
     }
+}
+
+#[test]
+fn test_tui_arcade_session_recap_renders_mistakes_and_perfect_run() {
+    use spanglings::core::arcade::ShowdownPair;
+
+    let mut app = App::new_with_state(vec![], false, AppState::default());
+    let backend = TestBackend::new(120, 40);
+    let mut terminal = Terminal::new(backend).unwrap();
+
+    // 1. Run arcade session answering all questions incorrectly
+    app.enter_arcade_mode(Some(ShowdownPair::PorPara));
+    assert!(app.show_arcade_modal);
+    assert_eq!(app.arcade_items.len(), 10);
+
+    while app.arcade_item_idx < app.arcade_items.len() {
+        let correct_idx = app.arcade_items[app.arcade_item_idx].correct_index;
+        let wrong_key = if correct_idx == 0 { 'k' } else { 'j' };
+        app.handle_arcade_key_char(wrong_key);
+    }
+
+    assert!(app.arcade_item_idx >= app.arcade_items.len());
+    assert!(!app.arcade_stats.mistakes.is_empty());
+    assert_eq!(app.arcade_stats.mistakes.len(), 10);
+
+    // Draw frame using TestBackend
+    terminal
+        .draw(|f| spanglings::tui::ui::draw_ui(f, &app))
+        .unwrap();
+
+    let buffer = terminal.backend().buffer();
+    let rendered_text: String = buffer
+        .content()
+        .iter()
+        .map(|cell| cell.symbol())
+        .collect::<Vec<_>>()
+        .join("");
+
+    assert!(
+        rendered_text.contains("Review Missed Questions")
+            || rendered_text.contains("Missed Questions"),
+        "Buffer must contain 'Review Missed Questions' or 'Missed Questions', found: {}",
+        rendered_text
+    );
+    assert!(
+        rendered_text.contains("Your:"),
+        "Buffer must contain 'Your:', found: {}",
+        rendered_text
+    );
+    assert!(
+        rendered_text.contains("Correct:"),
+        "Buffer must contain 'Correct:', found: {}",
+        rendered_text
+    );
+    assert!(
+        rendered_text.contains("Why:"),
+        "Buffer must contain explanation / 'Why:', found: {}",
+        rendered_text
+    );
+
+    // 2. 100% correct run
+    app.enter_arcade_mode(Some(ShowdownPair::PorPara));
+    assert_eq!(app.arcade_item_idx, 0);
+    assert!(app.arcade_stats.mistakes.is_empty());
+
+    while app.arcade_item_idx < app.arcade_items.len() {
+        let correct_idx = app.arcade_items[app.arcade_item_idx].correct_index;
+        let correct_key = if correct_idx == 0 { 'j' } else { 'k' };
+        app.handle_arcade_key_char(correct_key);
+    }
+
+    assert!(app.arcade_item_idx >= app.arcade_items.len());
+    assert!(app.arcade_stats.mistakes.is_empty());
+    assert_eq!(app.arcade_stats.correct_count, 10);
+
+    terminal
+        .draw(|f| spanglings::tui::ui::draw_ui(f, &app))
+        .unwrap();
+
+    let buffer = terminal.backend().buffer();
+    let rendered_text: String = buffer
+        .content()
+        .iter()
+        .map(|cell| cell.symbol())
+        .collect::<Vec<_>>()
+        .join("");
+
+    assert!(
+        rendered_text.contains("Perfect Run") || rendered_text.contains("No mistakes to review"),
+        "Buffer must contain 'Perfect Run' or 'No mistakes to review', found: {}",
+        rendered_text
+    );
 }

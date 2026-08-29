@@ -14,6 +14,17 @@ use crate::core::arcade::{
 };
 use crate::core::state::AppState;
 
+/// Detailed record of a question answered incorrectly during an arcade session.
+#[derive(Debug, Clone, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
+pub struct ArcadeMistake {
+    pub topic: String,
+    pub trigger_sentence: String,
+    pub user_answer: String,
+    pub correct_answer: String,
+    pub prompt_cue: String,
+    pub explanation: String,
+}
+
 /// Tracks performance, combo streaks, speed, and scoring throughout an arcade session.
 #[derive(Debug, Clone, Default, PartialEq, Eq, serde::Serialize, serde::Deserialize)]
 pub struct ArcadeSessionStats {
@@ -24,6 +35,8 @@ pub struct ArcadeSessionStats {
     pub best_streak: usize,
     pub score: u64,
     pub total_time_ms: u128,
+    #[serde(default)]
+    pub mistakes: Vec<ArcadeMistake>,
 }
 
 /// Result of evaluating a single arcade choice selection.
@@ -86,6 +99,14 @@ pub fn evaluate_arcade_choice(
     } else {
         stats.incorrect_count += 1;
         stats.current_streak = 0;
+        stats.mistakes.push(ArcadeMistake {
+            topic: item.topic.clone(),
+            trigger_sentence: item.trigger_sentence.clone(),
+            user_answer: item.options.get(selected_idx).cloned().unwrap_or_default(),
+            correct_answer: item.correct_option().to_string(),
+            prompt_cue: item.prompt_cue.clone(),
+            explanation: item.explanation.clone(),
+        });
 
         ArcadeChoiceResult {
             is_correct: false,
@@ -620,6 +641,54 @@ pub fn print_arcade_summary(
                 delta_str
             );
         }
+    }
+
+    // Missed questions review
+    if !stats.mistakes.is_empty() {
+        println!(
+            "\n{}",
+            format!("❌ Review Missed Questions ({}):", stats.mistakes.len())
+                .bold()
+                .red()
+        );
+        println!(
+            "{}",
+            "─────────────────────────────────────────────────────────────".dimmed()
+        );
+        for (i, m) in stats.mistakes.iter().enumerate() {
+            println!(
+                "  {}. [{}] {}",
+                (i + 1).to_string().bold(),
+                m.topic.cyan(),
+                m.trigger_sentence.white().bold()
+            );
+            println!(
+                "     {} {}",
+                "✗ Your answer:   ".red(),
+                m.user_answer.red().bold()
+            );
+            println!(
+                "     {} {}",
+                "✓ Correct answer:".green(),
+                m.correct_answer.green().bold()
+            );
+            println!(
+                "     {} {}\n",
+                "💡 Rule / Why:  ".yellow(),
+                m.explanation.dimmed()
+            );
+        }
+        println!(
+            "{}",
+            "─────────────────────────────────────────────────────────────".dimmed()
+        );
+    } else if stats.total_answered > 0 {
+        println!(
+            "\n{}",
+            "✨ Perfect Run! 100% Accuracy — No mistakes to review! ✨"
+                .bold()
+                .green()
+        );
     }
 
     println!(
