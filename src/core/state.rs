@@ -236,9 +236,14 @@ impl AppState {
 
         if q < 3 {
             entry.lapses += 1;
-            entry.repetitions = 0;
-            entry.interval_days = 1;
-            entry.mastery_score = 0.0;
+            entry.repetitions = entry.repetitions.saturating_sub(1);
+            entry.interval_days = match entry.repetitions {
+                0 => 0,
+                1 => 1,
+                2 => 6,
+                _ => ((entry.interval_days as f32) / entry.ease_factor).round() as u32,
+            }
+            .clamp(0, 3650);
         } else {
             entry.repetitions += 1;
             entry.interval_days = match entry.repetitions {
@@ -247,7 +252,11 @@ impl AppState {
                 _ => ((entry.interval_days as f32) * new_ef).round() as u32,
             }
             .clamp(1, 3650);
+        }
 
+        if entry.repetitions == 0 || entry.interval_days == 0 {
+            entry.mastery_score = 0.0;
+        } else {
             const MAX_STABILITY_LN: f32 = 4.110874; // ln(61.0)
             let rep_factor = (entry.repetitions as f32 / 6.0).min(1.0);
             let stability_factor =
