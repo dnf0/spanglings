@@ -2820,15 +2820,36 @@ pub fn draw_arcade_modal(frame: &mut Frame, app: &App, area: Rect) {
                             .add_modifier(Modifier::BOLD),
                     ),
                 ]));
-                missed_lines.push(Line::from(vec![
-                    Span::styled(
-                        "     💡 Why: ",
-                        Style::default()
-                            .fg(Color::Yellow)
-                            .add_modifier(Modifier::BOLD),
-                    ),
-                    Span::styled(&m.explanation, Style::default().fg(Color::LightYellow)),
-                ]));
+                if !m.plain_english.is_empty() {
+                    missed_lines.push(Line::from(vec![
+                        Span::styled(
+                            "     💡 Meaning: ",
+                            Style::default()
+                                .fg(Color::Yellow)
+                                .add_modifier(Modifier::BOLD),
+                        ),
+                        Span::styled(&m.plain_english, Style::default().fg(Color::LightYellow)),
+                    ]));
+                    missed_lines.push(Line::from(vec![
+                        Span::styled(
+                            "     📐 Rule:    ",
+                            Style::default()
+                                .fg(Color::Cyan)
+                                .add_modifier(Modifier::BOLD),
+                        ),
+                        Span::styled(&m.explanation, Style::default().fg(Color::LightCyan)),
+                    ]));
+                } else {
+                    missed_lines.push(Line::from(vec![
+                        Span::styled(
+                            "     💡 Why: ",
+                            Style::default()
+                                .fg(Color::Yellow)
+                                .add_modifier(Modifier::BOLD),
+                        ),
+                        Span::styled(&m.explanation, Style::default().fg(Color::LightYellow)),
+                    ]));
+                }
                 missed_lines.push(Line::from(""));
             }
 

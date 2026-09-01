@@ -227,6 +227,29 @@ pub fn get_topic_cheat_sheet(topic: &str) -> Option<&'static str> {
     }
 }
 
+/// Prints the pre-session topic cheat sheet and intuitive plain-English mental model.
+pub fn show_topic_cheat_sheet(topic: &str) {
+    let mental_model = crate::core::reference::get_mental_model_for_topic(topic);
+    let cheat_sheet = get_topic_cheat_sheet(topic);
+
+    if mental_model.is_none() && cheat_sheet.is_none() {
+        return;
+    }
+
+    println!("{}", "--- [TOPIC CHEAT SHEET] ---".yellow().bold());
+    if let Some(model) = mental_model {
+        println!(
+            "🧠 {}: {}\n",
+            "Plain-English Mental Model".bold().green(),
+            model.cyan()
+        );
+    }
+    if let Some(sheet) = cheat_sheet {
+        println!("{}\n", sheet.cyan());
+    }
+    println!("{}", "---------------------------".yellow());
+}
+
 pub fn get_drill_items(topic_filter: Option<&str>) -> Vec<DrillItem> {
     let all_items = vec![
         // ----------------------------------------------------
@@ -1136,14 +1159,20 @@ pub fn get_drill_items(topic_filter: Option<&str>) -> Vec<DrillItem> {
 
     filtered_static
         .into_iter()
-        .map(|item| DrillItem {
-            topic: item.topic.to_string(),
-            formula_cue: item.formula_cue.to_string(),
-            trigger_sentence: item.trigger_sentence.to_string(),
-            target_verb: item.target_verb.to_string(),
-            target_subject: item.target_subject.to_string(),
-            target: item.target.to_string(),
-            explanation: item.explanation.to_string(),
+        .map(|item| {
+            let plain_english = crate::core::reference::get_mental_model_for_topic(item.topic)
+                .unwrap_or("")
+                .to_string();
+            DrillItem {
+                topic: item.topic.to_string(),
+                formula_cue: item.formula_cue.to_string(),
+                trigger_sentence: item.trigger_sentence.to_string(),
+                target_verb: item.target_verb.to_string(),
+                target_subject: item.target_subject.to_string(),
+                target: item.target.to_string(),
+                explanation: item.explanation.to_string(),
+                plain_english,
+            }
         })
         .collect()
 }
@@ -1234,11 +1263,7 @@ pub fn run_drill(
     );
 
     if let Some(ref t) = chosen_topic {
-        if let Some(sheet) = get_topic_cheat_sheet(t) {
-            println!("{}", "--- [TOPIC CHEAT SHEET] ---".yellow().bold());
-            println!("{}\n", sheet.cyan());
-            println!("{}", "---------------------------".yellow());
-        }
+        show_topic_cheat_sheet(t);
     }
 
     let stdin = io::stdin();
@@ -1268,7 +1293,20 @@ pub fn run_drill(
 
             if trimmed.eq_ignore_ascii_case("?") || trimmed.eq_ignore_ascii_case("hint") {
                 hint_used = true;
-                println!("  {}\n", item.format_hint().yellow());
+                if !item.plain_english.is_empty() {
+                    println!(
+                        "  💡 {}: {}",
+                        "Meaning".bold().yellow(),
+                        item.plain_english.yellow()
+                    );
+                    println!(
+                        "  📐 {}:    {}\n",
+                        "Rule".bold().cyan(),
+                        item.explanation.cyan()
+                    );
+                } else {
+                    println!("  {}\n", item.format_hint().yellow());
+                }
                 continue;
             }
 
@@ -1297,11 +1335,16 @@ pub fn run_drill(
                 }
                 DrillEvaluation::Incorrect => {
                     println!(
-                        "  {} Incorrect. Expected: '{}' ({})\n",
+                        "  {} Incorrect. Expected: '{}'",
                         "✗".red().bold(),
-                        item.target.green().bold(),
-                        item.explanation.dimmed()
+                        item.target.green().bold()
                     );
+                    if !item.plain_english.is_empty() {
+                        println!("     💡 Meaning: {}", item.plain_english.yellow());
+                        println!("     📐 Rule:    {}\n", item.explanation.dimmed());
+                    } else {
+                        println!("     💡 Rule:    {}\n", item.explanation.dimmed());
+                    }
                     state.update_concept_mastery(&item.topic, 1, now);
                     let _ = state.save();
                 }

@@ -345,8 +345,13 @@ fn test_tui_arcade_session_recap_renders_mistakes_and_perfect_run() {
         rendered_text
     );
     assert!(
-        rendered_text.contains("Why:"),
-        "Buffer must contain explanation / 'Why:', found: {}",
+        rendered_text.contains("Rule:") || rendered_text.contains("Why:"),
+        "Buffer must contain explanation / 'Rule:' or 'Why:', found: {}",
+        rendered_text
+    );
+    assert!(
+        rendered_text.contains("Meaning:"),
+        "Buffer must contain 'Meaning:', found: {}",
         rendered_text
     );
 
@@ -381,5 +386,94 @@ fn test_tui_arcade_session_recap_renders_mistakes_and_perfect_run() {
         rendered_text.contains("Perfect Run") || rendered_text.contains("No mistakes to review"),
         "Buffer must contain 'Perfect Run' or 'No mistakes to review', found: {}",
         rendered_text
+    );
+}
+
+#[test]
+fn test_tui_arcade_recap_modal_renders_dual_layer_explanations() {
+    use ratatui::backend::TestBackend;
+    use ratatui::Terminal;
+    use spanglings::cli::commands::arcade::ArcadeMistake;
+    use spanglings::core::arcade::ShowdownPair;
+
+    let mut app = App::new_with_state(vec![], false, AppState::default());
+    let backend = TestBackend::new(140, 40);
+    let mut terminal = Terminal::new(backend).unwrap();
+
+    // 1. Dual-layer mistake recap (with plain_english present)
+    app.enter_arcade_mode(Some(ShowdownPair::PorPara));
+    app.arcade_item_idx = app.arcade_items.len(); // Trigger recap mode
+    app.arcade_stats.total_answered = 1;
+    app.arcade_stats.incorrect_count = 1;
+    app.arcade_stats.mistakes = vec![ArcadeMistake {
+        topic: "por-para".to_string(),
+        trigger_sentence: "Trabajo ____ ganar dinero.".to_string(),
+        user_answer: "por".to_string(),
+        correct_answer: "para".to_string(),
+        prompt_cue: "purpose/goal -> para".to_string(),
+        explanation: "Para indicates purpose or goal.".to_string(),
+        plain_english: "Points forward to destination or goal ('for/in order to').".to_string(),
+    }];
+
+    terminal
+        .draw(|f| spanglings::tui::ui::draw_ui(f, &app))
+        .unwrap();
+
+    let buffer = terminal.backend().buffer();
+    let rendered_text: String = buffer
+        .content()
+        .iter()
+        .map(|cell| cell.symbol())
+        .collect::<Vec<_>>()
+        .join("");
+
+    assert!(
+        rendered_text.contains("Meaning:"),
+        "Buffer must contain 'Meaning:', found: {}",
+        rendered_text
+    );
+    assert!(
+        rendered_text.contains("Points forward to destination"),
+        "Buffer must contain plain_english text, found: {}",
+        rendered_text
+    );
+    assert!(
+        rendered_text.contains("Rule:"),
+        "Buffer must contain 'Rule:', found: {}",
+        rendered_text
+    );
+    assert!(
+        rendered_text.contains("Para indicates purpose or goal."),
+        "Buffer must contain explanation text, found: {}",
+        rendered_text
+    );
+
+    // 2. Fallback single-layer mistake recap (empty plain_english)
+    app.arcade_stats.mistakes = vec![ArcadeMistake {
+        topic: "por-para".to_string(),
+        trigger_sentence: "Trabajo ____ ganar dinero.".to_string(),
+        user_answer: "por".to_string(),
+        correct_answer: "para".to_string(),
+        prompt_cue: "purpose/goal -> para".to_string(),
+        explanation: "Para indicates purpose or goal.".to_string(),
+        plain_english: "".to_string(),
+    }];
+
+    terminal
+        .draw(|f| spanglings::tui::ui::draw_ui(f, &app))
+        .unwrap();
+
+    let buffer2 = terminal.backend().buffer();
+    let rendered_text2: String = buffer2
+        .content()
+        .iter()
+        .map(|cell| cell.symbol())
+        .collect::<Vec<_>>()
+        .join("");
+
+    assert!(
+        rendered_text2.contains("Why:"),
+        "Buffer must contain fallback 'Why:', found: {}",
+        rendered_text2
     );
 }

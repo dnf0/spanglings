@@ -12,6 +12,7 @@ fn test_arcade_choice_evaluation_and_scoring() {
         options: vec!["por".to_string(), "para".to_string()],
         correct_index: 1,
         explanation: "Para indicates purpose or goal.".to_string(),
+        plain_english: "Points forward to destination, recipient, deadline, or intended goal ('for/in order to').".to_string(),
     };
 
     let mut stats = ArcadeSessionStats::default();
@@ -44,6 +45,7 @@ fn test_arcade_choice_records_mistakes() {
         options: vec!["por".to_string(), "para".to_string()],
         correct_index: 1,
         explanation: "Para indicates purpose or goal.".to_string(),
+        plain_english: "Points forward to destination, recipient, deadline, or intended goal ('for/in order to').".to_string(),
     };
 
     let mut stats = ArcadeSessionStats::default();
@@ -83,6 +85,7 @@ fn test_arcade_session_stats_json_serialization_and_deserialization_compatibilit
             correct_answer: "le".to_string(),
             prompt_cue: "involuntary dative -> le".to_string(),
             explanation: "Involuntary dative requires 'le' for 3rd person.".to_string(),
+            plain_english: "Involuntary accidental 'se' dative pronoun.".to_string(),
         }],
     };
 
@@ -182,6 +185,7 @@ fn test_arcade_summary_and_sound_helpers() {
             correct_answer: "para".to_string(),
             prompt_cue: "purpose/goal -> para".to_string(),
             explanation: "Para indicates purpose or goal.".to_string(),
+            plain_english: "Points forward to destination or goal ('for/in order to').".to_string(),
         }],
     };
 
@@ -586,4 +590,63 @@ fn test_select_arcade_items_specialized_engines() {
             assert_eq!(item.topic, expected_topic);
         }
     }
+}
+
+#[test]
+fn test_arcade_mistake_dual_layer_serde_and_fallback() {
+    use spanglings::cli::commands::arcade::{
+        evaluate_arcade_choice, ArcadeMistake, ArcadeSessionStats,
+    };
+    use spanglings::core::arcade::ArcadeItem;
+
+    // 1. Deserialization of old JSON without plain_english field
+    let old_json = r#"{
+        "topic": "por-para",
+        "trigger_sentence": "Estudio ____ aprender español.",
+        "user_answer": "por",
+        "correct_answer": "para",
+        "prompt_cue": "purpose/goal -> para",
+        "explanation": "Para indicates purpose or goal."
+    }"#;
+    let old_mistake: ArcadeMistake = serde_json::from_str(old_json).unwrap();
+    assert_eq!(old_mistake.topic, "por-para");
+    assert_eq!(old_mistake.plain_english, "");
+
+    // 2. Deserialization of new JSON with plain_english
+    let new_json = r#"{
+        "topic": "por-para",
+        "trigger_sentence": "Estudio ____ aprender español.",
+        "user_answer": "por",
+        "correct_answer": "para",
+        "prompt_cue": "purpose/goal -> para",
+        "explanation": "Para indicates purpose or goal.",
+        "plain_english": "Points forward to destination, recipient, deadline, or intended goal ('for/in order to')."
+    }"#;
+    let new_mistake: ArcadeMistake = serde_json::from_str(new_json).unwrap();
+    assert_eq!(
+        new_mistake.plain_english,
+        "Points forward to destination, recipient, deadline, or intended goal ('for/in order to')."
+    );
+
+    // 3. Round-trip serialization
+    let serialized = serde_json::to_string(&new_mistake).unwrap();
+    assert!(serialized.contains("plain_english"));
+    let deserialized: ArcadeMistake = serde_json::from_str(&serialized).unwrap();
+    assert_eq!(deserialized, new_mistake);
+
+    // 4. evaluate_arcade_choice populates plain_english from item
+    let item = ArcadeItem {
+        topic: "por-para".to_string(),
+        trigger_sentence: "Estudio ____ aprender español.".to_string(),
+        prompt_cue: "purpose/goal -> para".to_string(),
+        options: vec!["por".to_string(), "para".to_string()],
+        correct_index: 1,
+        explanation: "Para indicates purpose or goal.".to_string(),
+        plain_english: "Points forward to destination, recipient, deadline, or intended goal ('for/in order to').".to_string(),
+    };
+    let mut stats = ArcadeSessionStats::default();
+    let result = evaluate_arcade_choice(&item, 0, 800, &mut stats);
+    assert!(!result.is_correct);
+    assert_eq!(stats.mistakes.len(), 1);
+    assert_eq!(stats.mistakes[0].plain_english, item.plain_english);
 }
