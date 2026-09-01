@@ -180,6 +180,7 @@ fn test_evaluate_drill_answer() {
         target_subject: "yo".to_string(),
         target: "tuv".to_string(),
         explanation: "tener -> tuv-".to_string(),
+        plain_english: "Completed past event with irregular stem.".to_string(),
     };
 
     assert_eq!(
@@ -210,6 +211,7 @@ fn test_evaluate_drill_answer_accents() {
         target_subject: "ella".to_string(),
         target: "dé".to_string(),
         explanation: "dar -> dé".to_string(),
+        plain_english: "Expresses a subjective wish or hope.".to_string(),
     };
 
     // Exact accent match
@@ -322,6 +324,7 @@ fn test_drill_item_prompt_formatting() {
         target_subject: "yo".to_string(),
         target: "ponga".to_string(),
         explanation: "yo pongo -> drop -o -> add -a -> ponga".to_string(),
+        plain_english: "Expresses doubt or uncertainty.".to_string(),
     };
     let formatted = item.format_prompt(1, 5);
     assert!(formatted.contains(
@@ -340,6 +343,7 @@ fn test_drill_item_prompt_formatting() {
         target_subject: "yo".to_string(),
         target: "ponga".to_string(),
         explanation: "yo pongo -> ponga".to_string(),
+        plain_english: "Expresses doubt or uncertainty.".to_string(),
     };
     let formatted_no_cue = item_no_cue.format_prompt(2, 5);
     assert!(formatted_no_cue.contains("Q2/5 [Subjunctive (wishes, hypotheses, doubt, demands)]"));
@@ -353,6 +357,7 @@ fn test_drill_item_prompt_formatting() {
         target_subject: "s".to_string(),
         target: "t".to_string(),
         explanation: "e".to_string(),
+        plain_english: "Mental model for custom topic.".to_string(),
     };
     let formatted_unknown = item_unknown.format_prompt(3, 5);
     assert!(formatted_unknown.contains("Q3/5 [Custom Topic | rule 1]"));
@@ -368,6 +373,7 @@ fn test_drill_live_hint_generation() {
         target_subject: "yo".to_string(),
         target: "ponga".to_string(),
         explanation: "yo pongo -> drop -o -> add -a -> ponga".to_string(),
+        plain_english: "Expresses doubt or uncertainty.".to_string(),
     };
     let hint = item.format_hint();
     assert!(hint.contains("💡 Hint:"));

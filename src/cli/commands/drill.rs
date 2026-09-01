@@ -1136,14 +1136,20 @@ pub fn get_drill_items(topic_filter: Option<&str>) -> Vec<DrillItem> {
 
     filtered_static
         .into_iter()
-        .map(|item| DrillItem {
-            topic: item.topic.to_string(),
-            formula_cue: item.formula_cue.to_string(),
-            trigger_sentence: item.trigger_sentence.to_string(),
-            target_verb: item.target_verb.to_string(),
-            target_subject: item.target_subject.to_string(),
-            target: item.target.to_string(),
-            explanation: item.explanation.to_string(),
+        .map(|item| {
+            let plain_english = crate::core::reference::get_mental_model_for_topic(item.topic)
+                .unwrap_or("")
+                .to_string();
+            DrillItem {
+                topic: item.topic.to_string(),
+                formula_cue: item.formula_cue.to_string(),
+                trigger_sentence: item.trigger_sentence.to_string(),
+                target_verb: item.target_verb.to_string(),
+                target_subject: item.target_subject.to_string(),
+                target: item.target.to_string(),
+                explanation: item.explanation.to_string(),
+                plain_english,
+            }
         })
         .collect()
 }

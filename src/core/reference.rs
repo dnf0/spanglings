@@ -34,6 +34,7 @@ pub struct GrammarConcept {
     pub slug: &'static str,
     pub title: &'static str,
     pub gloss: &'static str,
+    pub mental_model: &'static str,
     pub keywords: &'static [&'static str],
     pub card: &'static str,
 }
@@ -43,6 +44,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "subjunctive",
         title: "Subjunctive",
         gloss: "wishes, hypotheses, doubt, demands",
+        mental_model: "Think of the subjunctive as the 'mood of the mind'—it expresses desires, doubts, hypotheses, and demands rather than objective facts in physical reality.",
         keywords: &[
             "wishes",
             "desires",
@@ -65,6 +67,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "por-para",
         title: "Por vs. Para",
         gloss: "cause/means (por) vs. purpose/destination/deadline (para)",
+        mental_model: "Think of 'por' as looking backward or around (cause, reason, duration, exchange) and 'para' as looking forward (goal, destination, deadline, recipient).",
         keywords: &[
             "cause",
             "reason",
@@ -87,6 +90,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "ser-estar",
         title: "Ser vs. Estar",
         gloss: "essence/identity (ser) vs. states/conditions/location (estar)",
+        mental_model: "Think of 'ser' for inherent identity and essence ('what/who it is') and 'estar' for current state, condition, or location ('how/where it is right now').",
         keywords: &[
             "identity",
             "essence",
@@ -109,6 +113,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "past",
         title: "Past Tenses",
         gloss: "completed actions (pret) vs. ongoing background & habit (imp)",
+        mental_model: "Think of the preterite as a snapshot of a completed event, and the imperfect as a video of ongoing background scene, habit, or state.",
         keywords: &[
             "preterite",
             "imperfect",
@@ -130,6 +135,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "pronouns",
         title: "Pronoun Stacking",
         gloss: "clitic placement & pronoun stacking (se lo)",
+        mental_model: "Think of pronoun order as 'people before things' (reflexive -> indirect -> direct), turning 'le + lo' into 'se lo' for smooth pronunciation.",
         keywords: &[
             "direct",
             "indirect",
@@ -151,6 +157,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "prepositions",
         title: "Prepositional Verbs",
         gloss: "verb-bound prepositions (régimen preposicional)",
+        mental_model: "Think of prepositional verbs as two-word packages where the verb requires a specific preposition that cannot be translated literally from English.",
         keywords: &[
             "prepositions",
             "regimen",
@@ -167,6 +174,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "accidental-se",
         title: "Accidental 'Se'",
         gloss: "unintentional events & non-agentive slips (se me cayó)",
+        mental_model: "Think of accidental 'se' as a linguistic shield: the item dropped or broke on its own, and you were merely the affected bystander ('it fell on me').",
         keywords: &[
             "accidental",
             "unintentional",
@@ -185,6 +193,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "tech-software",
         title: "Tech & Software Engineering",
         gloss: "terminal workflows, architecture, system design, SLA terms",
+        mental_model: "Think of technical Spanish as precise engineering terminology replacing Spanglish borrowings with standard terms (e.g. desplegar, subsanar, bloqueo mutuo).",
         keywords: &[
             "tech",
             "software",
@@ -202,6 +211,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "business",
         title: "Executive & Business Spanish",
         gloss: "formal correspondence, diplomatic negotiation, stakeholder sync",
+        mental_model: "Think of executive Spanish as diplomacy in writing: using formulaic courtesy frames and contractual precision to project executive authority.",
         keywords: &[
             "business",
             "business-correspondence",
@@ -217,6 +227,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "false-friends",
         title: "False Friends",
         gloss: "deceptive cognates with divergent meanings (actual, realizar)",
+        mental_model: "Think of false friends as optical illusions: words that look identical to English but have completely different meanings (e.g. 'actualmente' means 'currently').",
         keywords: &[
             "false-friends",
             "falsos-amigos",
@@ -236,6 +247,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "voseo",
         title: "Voseo & Regional Address",
         gloss: "informal singular address in Rioplatense & Central America",
+        mental_model: "Think of 'vos' as the warm, everyday informal singular address of the Río de la Plata and parts of Central America with stressed final-vowel verb forms.",
         keywords: &[
             "voseo",
             "vos",
@@ -251,6 +263,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "accents",
         title: "Accentuation & Tildes",
         gloss: "stress rules (agudas/llanas/esdrújulas) & diacritical disambiguation",
+        mental_model: "Think of written accents (tildes) as phonetic GPS: marking where to apply stress whenever a word deviates from natural pronunciation rules.",
         keywords: &[
             "accents",
             "accentuation",
@@ -270,6 +283,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "epistemic-conjecture",
         title: "Epistemic Conjecture",
         gloss: "guessing & deduction in present/past (serán las tres)",
+        mental_model: "Think of epistemic conjecture as using future tense to guess about the present ('serán las cuatro') and conditional tense to guess about the past.",
         keywords: &[
             "conjecture",
             "probability",
@@ -286,6 +300,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "clitic-doubling",
         title: "Clitic Doubling",
         gloss: "redundant pronoun reinforcement for focus & clarity (le hablé a ella)",
+        mental_model: "Think of clitic doubling as redundant pronoun bookmarks that ensure clarity and emphasis whenever an object is fronted or uses a tonic pronoun.",
         keywords: &[
             "clitic-doubling",
             "doubling",
@@ -307,6 +322,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "personal-a",
         title: "Personal 'A'",
         gloss: "mandatory accusative marker for specific human & personified entities",
+        mental_model: "Think of the 'personal a' as an animacy flag required before specific, known human beings or loved pets acting as direct objects.",
         keywords: &[
             "personal-a",
             "personal a",
@@ -324,6 +340,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "gerund-rules",
         title: "Gerund Rules & Pitfalls",
         gloss: "simultaneous actions; avoiding forbidden adjectival gerunds",
+        mental_model: "Think of Spanish gerunds (-ando/-iendo) as strictly simultaneous or preceding actions—never as noun modifiers or for subsequent results.",
         keywords: &[
             "gerund-rules",
             "gerund",
@@ -342,6 +359,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "adversatives",
         title: "Adversatives (Pero vs. Sino)",
         gloss: "simple contrast (pero) vs. exclusive negative substitution (sino)",
+        mental_model: "Think of 'pero' as adding a limitation ('yes, but...') and 'sino'/'sino que' as a total corrective replacement after a negative ('not X, but rather Y').",
         keywords: &[
             "adversatives",
             "pero",
@@ -360,6 +378,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "legal-subjunctive",
         title: "Legal & Statutory Subjunctive",
         gloss: "statutory formulations & future subjunctive in legal texts (-ere)",
+        mental_model: "Think of the future subjunctive (-ere) and archaic optatives as formal legal blueprints that express hypothetical statutory conditions.",
         keywords: &[
             "legal-subjunctive",
             "legal",
@@ -379,6 +398,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "verbs-of-becoming",
         title: "Verbs of Becoming",
         gloss: "transformational change (hacerse, volverse, ponerse, quedarse)",
+        mental_model: "Think of verbs of becoming as transformation vectors based on speed, effort, and permanence (ponerse for mood/state, hacerse for effort, volverse for deep shifts).",
         keywords: &[
             "verbs-of-becoming",
             "becoming",
@@ -399,6 +419,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "epistemic-adverbs",
         title: "Epistemic Adverbs",
         gloss: "mood selection with doubt adverbs (quizás, tal vez, probablemente)",
+        mental_model: "Think of epistemic adverbs as doubt dials: 'a lo mejor' requires indicative, while 'quizás' lets you choose indicative for confidence or subjunctive for doubt.",
         keywords: &[
             "epistemic-adverbs",
             "adverbs",
@@ -421,6 +442,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "possessive-datives",
         title: "Possessive Datives",
         gloss: "inalienable possession with dative clitics (me lavo las manos)",
+        mental_model: "Think of possessive datives as claiming ownership through personal impact clitics (me lavo las manos) instead of possessive adjectives (*mis manos).",
         keywords: &[
             "possessive-datives",
             "possession",
@@ -443,6 +465,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "corrective-polarity",
         title: "Corrective Polarity",
         gloss: "rectifying negated premises with mandatory mood selection",
+        mental_model: "Think of 'no es que... sino que...' as rejecting a false hypothesis in the subjunctive to assert the real factual explanation in the indicative.",
         keywords: &[
             "corrective-polarity",
             "polarity",
@@ -463,6 +486,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "participial-absolutes",
         title: "Participial Absolutes",
         gloss: "concise temporal/causal backgrounding with past participles",
+        mental_model: "Think of participial absolutes as high-density scene-setters packaging completed prerequisites at the start of a sentence ('Terminada la reunión...').",
         keywords: &[
             "participial-absolutes",
             "absolute",
@@ -482,6 +506,7 @@ pub const CONCEPTS: &[GrammarConcept] = &[
         slug: "scalar-concession",
         title: "Scalar Concession",
         gloss: "intensive concessive structures (por más que, aun cuando, siquiera)",
+        mental_model: "Think of scalar concession ('por mucho que...', 'aun a riesgo de que...') as pushing an obstacle to its theoretical maximum in the subjunctive while the main action holds.",
         keywords: &[
             "scalar-concession",
             "concession",
@@ -557,10 +582,18 @@ pub fn get_reference_card(topic: &str) -> Option<&'static str> {
     get_grammar_concept(topic).map(|c| c.card)
 }
 
+pub fn get_mental_model_for_topic(slug: &str) -> Option<&'static str> {
+    get_grammar_concept(slug).map(|c| c.mental_model)
+}
+
 pub const SUBJUNCTIVE_CARD: &str = r#"
 ================================================================================
                      SPANISH SUBJUNCTIVE CHEAT SHEET (WEIRDO)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of the subjunctive as the 'mood of the mind'—it expresses desires, doubts,
+hypotheses, and demands rather than objective facts in physical reality.
+
 Triggers require: [Main Clause Verb] + "QUE" + [Subject Change]
 
   W - Wishes / Desires:       querer, desear, preferir, esperar, exigir
@@ -587,6 +620,10 @@ pub const POR_PARA_CARD: &str = r#"
 ================================================================================
                           POR VS PARA REFERENCE CARD
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of 'por' as looking backward or around (cause, reason, duration, exchange)
+and 'para' as looking forward (goal, destination, deadline, recipient).
+
 POR (Cause, Motive, Passage, Exchange):
   - Cause / Reason:           Lo hizo por amor. (Out of love)
   - Means / Communication:    Hablamos por teléfono. / Enviado por correo.
@@ -609,6 +646,10 @@ pub const SER_ESTAR_CARD: &str = r#"
 ================================================================================
                          SER VS ESTAR REFERENCE CARD
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of 'ser' for inherent identity and essence ('what/who it is') and 'estar'
+for current state, condition, or location ('how/where it is right now').
+
 SER (Identity, Essence, Characteristics, Origin, Time):
   - D - Description:          Soy alto y moreno.
   - O - Occupation:           Es ingeniera de software.
@@ -636,6 +677,10 @@ pub const PAST_TENSES_CARD: &str = r#"
 ================================================================================
                      PRETERITE VS IMPERFECT ASPECT
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of the preterite as a snapshot of a completed event, and the imperfect
+as a video of ongoing background scene, habit, or state.
+
 PRETERITE (Completed Action, Fixed Timeframe, Succession):
   - Definite beginning/end:   Llegó a las 8:00.
   - Sequence of events:       Se levantó, desayunó y salió.
@@ -659,6 +704,10 @@ pub const PRONOUN_STACKING_CARD: &str = r#"
 ================================================================================
                     DOUBLE OBJECT PRONOUNS & ACCENTS
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of pronoun order as 'people before things' (reflexive -> indirect ->
+direct), turning 'le + lo' into 'se lo' for smooth pronunciation.
+
 ORDER RULE: [REFLEXIVE] -> [INDIRECT] -> [DIRECT]
   Indirect: me, te, le, nos, os, les
   Direct:   me, te, lo/la, nos, os, los/las
@@ -680,6 +729,10 @@ pub const PREPOSITIONS_CARD: &str = r#"
 ================================================================================
                      VERBAL REGIMEN (VERBS + PREPOSITIONS)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of prepositional verbs as two-word packages where the verb requires a
+specific preposition that cannot be translated literally from English.
+
 Common verb + preposition combinations (régimen preposicional):
   - a:       acostumbrarse a, atreverse a, negarse a, aspirar a, comprometerse a
   - de:      acordarse de, alegrarse de, enterarse de, quejarse de, depender de
@@ -693,6 +746,10 @@ pub const ACCIDENTAL_SE_CARD: &str = r#"
 ================================================================================
                        ACCIDENTAL / UNINTENDED "SE"
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of accidental 'se' as a linguistic shield: the item dropped or broke on
+its own, and you were merely the affected bystander ('it fell on me').
+
 STRUCTURE:
   "Se" + [Indirect Object Pronoun] + [Verb] + [Subject (the dropped item)]
 
@@ -712,6 +769,10 @@ pub const TECH_SOFTWARE_CARD: &str = r#"
 ================================================================================
                  SOFTWARE ENGINEERING & TECH SPANISH
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of technical Spanish as precise engineering terminology replacing
+Spanglish borrowings with standard terms (e.g. desplegar, subsanar, bloqueo mutuo).
+
 DEVELOPMENT & GIT:
   - to deploy:                desplegar (a producción) [avoid *deployar]
   - pull request:             solicitud de extracción
@@ -734,6 +795,10 @@ pub const BUSINESS_CORRESPONDENCE_CARD: &str = r#"
 ================================================================================
              FORMAL BUSINESS & DIPLOMATIC CORRESPONDENCE
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of executive Spanish as diplomacy in writing: using formulaic courtesy
+frames and contractual precision to project executive authority.
+
 FORMAL OPENINGS & CLOSINGS:
   - "I remain at your full disposal":    Quedo a su entera disposición
   - "Thanking you in advance":           Agradeciendo de antemano su atención
@@ -752,6 +817,10 @@ pub const FALSE_FRIENDS_CARD: &str = r#"
 ================================================================================
                  HIGH-FREQUENCY FALSE FRIENDS (FALSOS AMIGOS)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of false friends as optical illusions: words that look identical to
+English but have completely different meanings (e.g. 'actualmente' means 'currently').
+
 1. actualmente != actually
    - actualmente = currently / at present
    - actually = en realidad / de hecho / en verdad
@@ -782,6 +851,10 @@ pub const VOSEO_CARD: &str = r#"
 ================================================================================
                     RIOPLATENSE & PAN-AMERICAN VOSEO
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of 'vos' as the warm, everyday informal singular address of the Río de
+la Plata and parts of Central America with stressed final-vowel verb forms.
+
 PRESENT TENSE CONJUGATION (Stressed final vowel, no diphthong):
   - -AR (hablar):     vos hablás   (tú hablas)
   - -ER (comer):      vos comés    (tú comes)
@@ -800,6 +873,10 @@ pub const ACCENTS_CARD: &str = r#"
 ================================================================================
               SPANISH ACCENTUATION & ORTHOGRAPHIC STRESS (TILDES)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of written accents (tildes) as phonetic GPS: marking where to apply
+stress whenever a word deviates from natural pronunciation rules.
+
 GENERAL RULES BY STRESS POSITION:
 
 1. AGUDAS (Stressed on the LAST syllable):
@@ -848,6 +925,10 @@ pub const EPISTEMIC_CONJECTURE_CARD: &str = r#"
 ================================================================================
           EPISTEMIC CONJECTURE & PROBABILITY (FUTURO Y CONDICIONAL)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of epistemic conjecture as using future tense to guess about the present
+('serán las cuatro') and conditional tense to guess about the past.
+
 In Spanish, the future and conditional tenses frequently express conjecture,
 hypothesis, or probability in place of adverbs like 'probablemente'.
 
@@ -873,6 +954,10 @@ pub const CLITIC_DOUBLING_CARD: &str = r#"
 ================================================================================
             CLITIC DOUBLING & LEFT-DISLOCATION (DUPLICACIÓN CLÍTICA)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of clitic doubling as redundant pronoun bookmarks that ensure clarity
+and emphasis whenever an object is fronted or uses a tonic pronoun.
+
 Spanish has rigorous syntactic rules requiring redundant object pronouns:
 
 1. MANDATORY LEFT-DISLOCATION (Fronted Direct & Indirect Objects):
@@ -896,6 +981,10 @@ pub const PERSONAL_A_CARD: &str = r#"
 ================================================================================
              THE 'PERSONAL A' SYSTEM & ANIMACY (A PERSONAL)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of the 'personal a' as an animacy flag required before specific, known
+human beings or loved pets acting as direct objects.
+
 The preposition 'A' precedes direct objects according to specificity and animacy:
 
 1. MANDATORY WITH SPECIFIC, KNOWN HUMAN BEINGS:
@@ -921,6 +1010,10 @@ pub const GERUND_RULES_CARD: &str = r#"
 ================================================================================
         GERUND RESTRICTIONS & ANGLICISM TRAPS (GERUNDIO CORRECTO)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of Spanish gerunds (-ando/-iendo) as strictly simultaneous or preceding
+actions—never as noun modifiers or for subsequent results.
+
 Spanish gerunds (-ando, -iendo) MUST express actions that are SIMULTANEOUS or
 IMMEDIATELY PRECEDING the main verb.
 
@@ -947,6 +1040,10 @@ pub const ADVERSATIVES_CARD: &str = r#"
 ================================================================================
          ADVERSATIVE COORDINATION: PERO VS SINO VS SINO QUE
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of 'pero' as adding a limitation ('yes, but...') and 'sino'/'sino que'
+as a total corrective replacement after a negative ('not X, but rather Y').
+
 1. PERO (Additive Contrast / Restriction):
    Adds a qualification or limitation to the first clause without negating it:
    - El algoritmo es complejo, PERO es extremadamente rápido.
@@ -970,6 +1067,10 @@ pub const LEGAL_SUBJUNCTIVE_CARD: &str = r#"
 ================================================================================
        OPTATIVES, INDEPENDENT SUBJUNCTIVE & LEGAL TENSES
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of the future subjunctive (-ere) and archaic optatives as formal legal
+blueprints that express hypothetical statutory conditions.
+
 1. INDEPENDENT OPTATIVE FORMULAS (Wishes & Imprecations):
    - ¡Quién + Imperfecto de Subjuntivo! (Counterfactual longing):
      ¡Quién tuviera veinte años otra vez! (If only I were twenty again!)
@@ -995,6 +1096,10 @@ pub const VERBS_OF_BECOMING_CARD: &str = r#"
 ================================================================================
              VERBS OF BECOMING & TRANSFORMATION (VERBOS DE CAMBIO)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of verbs of becoming as transformation vectors based on speed, effort,
+and permanence (ponerse for mood/state, hacerse for effort, volverse for deep shifts).
+
 Spanish lacks a generic verb "to become". Choice depends on voluntariness,
 permanence, and the physical/psychological nature of the transition:
 
@@ -1028,6 +1133,10 @@ pub const EPISTEMIC_ADVERBS_CARD: &str = r#"
 ================================================================================
                EPISTEMIC ADVERBS & MOOD SELECTION (DUDA Y CERTEZA)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of epistemic adverbs as doubt dials: 'a lo mejor' requires indicative,
+while 'quizás' lets you choose indicative for confidence or subjunctive for doubt.
+
 1. MANDATORY INDICATIVE: A LO MEJOR, IGUAL, LO MISMO:
    These colloquial epistemic adverbs ALWAYS take the INDICATIVE mood:
    - A LO MEJOR TIENE (❌ *tenga) la clave de cifrado.
@@ -1052,6 +1161,10 @@ pub const POSSESSIVE_DATIVES_CARD: &str = r#"
 ================================================================================
          DATIVE OF INALIENABLE POSSESSION & ETHIC/AFFECTIVE CLITICS
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of possessive datives as claiming ownership through personal impact clitics
+(me lavo las manos) instead of possessive adjectives (*mis manos).
+
 1. INALIENABLE POSSESSION (Body Parts & Personal Possessions):
    Spanish rejects redundant possessive adjectives (*mis, *sus) when an affected
    person is marked with a dative clitic and definite article:
@@ -1072,6 +1185,10 @@ pub const CORRECTIVE_POLARITY_CARD: &str = r#"
 ================================================================================
              CORRECTIVE & CONCESSIVE POLARITY (NO ES QUE... SINO QUE...)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of 'no es que... sino que...' as rejecting a false hypothesis in the
+subjunctive to assert the real factual explanation in the indicative.
+
 1. CORRECTIVE NEGATION: NO ES QUE [Subjuntivo]... SINO QUE [Indicativo]:
    Rejects a false hypothesis in the first clause and asserts actual fact in the second:
    - NO ES QUE no QUIERA (Subjunctive) ayudarte, SINO QUE no PUEDO (Indicative).
@@ -1093,6 +1210,10 @@ pub const PARTICIPIAL_ABSOLUTES_CARD: &str = r#"
 ================================================================================
         PARTICIPIAL ABSOLUTE CONSTRUCTIONS (CONSTRUCCIONES ABSOLUTAS)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of participial absolutes as high-density scene-setters packaging completed
+prerequisites at the start of a sentence ('Terminada la reunión...').
+
 A hallmark of formal, legal, journalistic, and administrative Spanish syntax.
 Condenses subordinate temporal or causal clauses into a preposed absolute participle.
 
@@ -1119,6 +1240,10 @@ pub const SCALAR_CONCESSION_CARD: &str = r#"
 ================================================================================
          SCALAR CONCESSION & INTENSIVE CONNECTORS (POR MUCHO QUE...)
 ================================================================================
+🧠 PLAIN-ENGLISH MENTAL MODEL:
+Think of scalar concession ('por mucho que...', 'aun a riesgo de que...') as pushing
+an obstacle to its theoretical maximum in the subjunctive while the main action holds.
+
 1. SCALAR INTENSIFIERS WITH SUBJUNCTIVE:
    Expresses extreme hypothetical resistance or maximum degree using Subjunctive:
    - POR MUCHO QUE INSISTAS (Subjunctive), no aceptaremos el acuerdo.

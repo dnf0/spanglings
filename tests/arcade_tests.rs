@@ -292,6 +292,9 @@ fn test_arcade_item_methods() {
         options: vec!["está".to_string(), "es".to_string()],
         correct_index: 0,
         explanation: "Estar for state".to_string(),
+        plain_english:
+            "Describes temporary condition, physical location, or immediate operational state."
+                .to_string(),
     };
     assert!(item.is_correct(0));
     assert!(!item.is_correct(1));

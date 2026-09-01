@@ -10,6 +10,8 @@ pub struct DrillItem {
     pub target_subject: String,
     pub target: String,
     pub explanation: String,
+    #[serde(default)]
+    pub plain_english: String,
 }
 
 impl DrillItem {
@@ -66,6 +68,7 @@ pub struct SentenceFrame {
     pub target_subject: &'static str,
     pub target: &'static str,
     pub explanation: &'static str,
+    pub plain_english: &'static str,
     pub slots: &'static [(&'static str, &'static [&'static str])],
 }
 
@@ -77,6 +80,7 @@ impl SentenceFrame {
         let mut verb = self.target_verb.to_string();
         let mut subject = self.target_subject.to_string();
         let mut explanation = self.explanation.to_string();
+        let mut plain_english = self.plain_english.to_string();
 
         for &(slot, options) in self.slots {
             if !options.is_empty() {
@@ -88,6 +92,7 @@ impl SentenceFrame {
                 verb = verb.replace(&token, chosen);
                 subject = subject.replace(&token, chosen);
                 explanation = explanation.replace(&token, chosen);
+                plain_english = plain_english.replace(&token, chosen);
             }
         }
 
@@ -99,6 +104,7 @@ impl SentenceFrame {
             target_subject: subject,
             target,
             explanation,
+            plain_english,
         }
     }
 }
@@ -115,6 +121,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "ponga",
         explanation: "poner in present subjunctive: yo pongo -> drop -o -> ponga",
+        plain_english: "Expresses uncertainty, preference, or necessity rather than an established fact.",
         slots: &[
             ("opener", &["Dudo", "No creo", "Espero", "Es necesario", "Es mejor"]),
             ("item", &["los archivos de configuración", "los certificados", "los scripts", "la documentación"]),
@@ -128,6 +135,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "salgamos",
         explanation: "salir in present subjunctive: salgamos",
+        plain_english: "Expresses a proposal, recommendation, or desired future outcome.",
         slots: &[
             ("opener", &["Es conveniente", "Es preferible", "El líder sugiere", "Recomiendo"]),
             ("time", &["temprano", "antes de las cinco", "con antelación", "puntualmente"]),
@@ -141,6 +149,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "tú",
         target: "sepas",
         explanation: "saber in present subjunctive: sepa, sepas, sepa, sepamos, sepáis, sepan",
+        plain_english: "Expresses a fundamental requirement or subjective expectation.",
         slots: &[
             ("opener", &["Es fundamental", "Espero", "Dudo", "Es importante"]),
             ("topic", &["la contraseña maestra", "el procedimiento de rollback", "el protocolo de cifrado", "la arquitectura completa"]),
@@ -154,6 +163,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el servidor",
         target: "esté",
         explanation: "estar in present subjunctive takes written accent: esté",
+        plain_english: "Expresses doubt about whether a condition will be met in time.",
         slots: &[
             ("state", &["listo", "disponible", "completamente operativo", "restablecido"]),
         ],
@@ -166,6 +176,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la dirección",
         target: "dé",
         explanation: "dar in present subjunctive: dé (with accent mark)",
+        plain_english: "Expresses an earnest wish or hope ('ojalá') for a favorable outcome.",
         slots: &[
             ("resource", &["luz verde", "más tiempo", "presupuesto adicional", "su visto bueno"]),
         ],
@@ -178,6 +189,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "tuviera",
         explanation: "tener in imperfect subjunctive: tuviera (hypothetical condition with 'si')",
+        plain_english: "Imagines an unreal or counterfactual hypothetical scenario ('if I had...').",
         slots: &[
             ("resource", &["tiempo libre", "ancho de banda", "experiencia en Rust", "recursos"]),
         ],
@@ -190,6 +202,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "tú",
         target: "vayas",
         explanation: "ir in present subjunctive: vaya, vayas, vaya, vayamos, vayáis, vayan",
+        plain_english: "Expresses an essential requirement for someone's attendance.",
         slots: &[
             ("event", &["la reunión de sincronización", "la presentación del cliente", "la sesión de arquitectura", "la oficina central"]),
         ],
@@ -206,6 +219,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "para",
         explanation: "para denotes employer, recipient, or intended destination",
+        plain_english: "Identifies the recipient, employer, or direct beneficiary of the work.",
         slots: &[
             ("company", &["una empresa multinacional", "una consultora internacional", "un banco digital", "una startup tecnológica"]),
         ],
@@ -218,6 +232,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "por",
         explanation: "por expresses cause, motive, or gratitude (dar las gracias por algo)",
+        plain_english: "Identifies the underlying reason, motive, or cause for gratitude.",
         slots: &[
             ("reason", &["tu colaboración en el sprint", "la rápida respuesta", "revisar la solicitud de extracción", "tu valioso tiempo"]),
         ],
@@ -230,6 +245,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "para",
         explanation: "para indicates a definitive deadline or temporal milestone",
+        plain_english: "Sets a definitive future deadline or target milestone.",
         slots: &[
             ("deadline", &["el próximo viernes", "el lunes por la mañana", "finales de mes", "la próxima reunión"]),
         ],
@@ -242,6 +258,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "por",
         explanation: "por denotes physical transit through, along, or around an area",
+        plain_english: "Describes physical movement through, along, or across a space.",
         slots: &[
             ("location", &["el centro tecnológico", "el paseo fluvial", "las instalaciones del campus", "la zona financiera"]),
         ],
@@ -254,6 +271,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "por",
         explanation: "por indicates economic exchange, price, or barter",
+        plain_english: "Expresses monetary price, exchange value, or trade.",
         slots: &[
             ("price", &["cincuenta euros", "un precio muy ventajoso", "cien dólares", "veinte euros al mes"]),
         ],
@@ -266,6 +284,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "Para",
         explanation: "para + infinitive expresses purpose or goal ('in order to')",
+        plain_english: "States the overarching goal or objective ('in order to').",
         slots: &[
             ("objective", &["Para dominar el lenguaje", "Para escribir código más limpio", "Para aprobar la certificación", "Para optimizar el rendimiento"]),
         ],
@@ -282,6 +301,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "{person}",
         target: "es",
         explanation: "ser is used for identity, profession, and inherent attributes",
+        plain_english: "Defines professional identity, role, or inherent characteristic.",
         slots: &[
             ("person", &["Elena", "Carlos", "Marta", "Daniel", "Laura"]),
             ("profession", &["arquitecta de software", "ingeniero de datos", "analista de seguridad", "directora técnica"]),
@@ -295,6 +315,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la base de datos",
         target: "está",
         explanation: "estar expresses state, condition, or temporary operational status",
+        plain_english: "Describes temporary condition, status, or operational state.",
         slots: &[
             ("state", &["inactiva", "caída", "en mantenimiento", "bloqueada", "sobrecargada"]),
         ],
@@ -307,6 +328,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la conferencia",
         target: "es",
         explanation: "ser is used to express the location where an event occurs",
+        plain_english: "Identifies the location where an organized event takes place.",
         slots: &[
             ("venue", &["el auditorio principal", "el palacio de congresos", "el hotel Victoria", "la sala de actos"]),
         ],
@@ -319,6 +341,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el centro de datos",
         target: "está",
         explanation: "estar denotes spatial or geographical location of entities",
+        plain_english: "Pinpoints the physical or geographic location of an entity.",
         slots: &[
             ("city", &["Madrid", "Frankfurt", "Barcelona", "Ámsterdam", "Valencia"]),
         ],
@@ -331,6 +354,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "estamos",
         explanation: "estar listo = to be ready; ser listo = to be clever/smart",
+        plain_english: "Describes readiness as a temporary state (estar listo) rather than cleverness (ser listo).",
         slots: &[],
     },
     SentenceFrame {
@@ -341,6 +365,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el hielo",
         target: "es",
         explanation: "ser defines inherent characteristics and essential properties",
+        plain_english: "Describes an inherent, essential physical property.",
         slots: &[],
     },
 
@@ -355,6 +380,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "tuve",
         explanation: "tener in preterite -> yo tuve (completed past event)",
+        plain_english: "Describes a completed, punctual past event at a specific point in time.",
         slots: &[
             ("time", &["Ayer por la tarde", "Anoche", "La semana pasada", "El martes pasado"]),
         ],
@@ -367,6 +393,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el equipo",
         target: "puso",
         explanation: "poner in preterite -> él/ella/el equipo puso",
+        plain_english: "Marks a single, finished past action with defined completion.",
         slots: &[
             ("time", &["Ayer", "Anoche", "El fin de semana pasado", "Esta madrugada"]),
         ],
@@ -379,6 +406,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "tenía",
         explanation: "imperfect tense (tenía) sets the background age or habitual past context",
+        plain_english: "Sets ongoing background age and habitual context in the past.",
         slots: &[
             ("age", &["dieciocho años", "veinte años", "joven", "estudiante"]),
             ("city", &["Sevilla", "Granada", "Buenos Aires", "Madrid", "Salamanca"]),
@@ -392,6 +420,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "supimos",
         explanation: "saber in preterite (supimos) means 'found out / learned of'",
+        plain_english: "Marks the exact moment of discovering or learning new information.",
         slots: &[],
     },
     SentenceFrame {
@@ -402,6 +431,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el ponente",
         target: "dijo",
         explanation: "decir in preterite -> dijo",
+        plain_english: "Reports a completed statement made at a specific past moment.",
         slots: &[],
     },
     SentenceFrame {
@@ -412,6 +442,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "los ingenieros",
         target: "estuvieron",
         explanation: "estar in preterite -> estuvieron",
+        plain_english: "Emphasizes the duration of an activity bounded within a specific past timeframe.",
         slots: &[],
     },
 
@@ -426,6 +457,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "se lo",
         explanation: "indirect le transforms to se before direct pronoun lo/la/los/las",
+        plain_english: "Replaces indirect 'le' with 'se' before 'lo' to avoid awkward duplicate 'l-' sounds.",
         slots: &[
             ("item", &["el informe técnico", "el contrato firmado", "el documento de diseño", "el presupuesto"]),
         ],
@@ -438,6 +470,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "se la",
         explanation: "le + la transforms into se la",
+        plain_english: "Transforms indirect 'le' to 'se' before direct object pronoun 'la'.",
         slots: &[
             ("item", &["la propuesta comercial", "la factura rectificada", "la presentación técnica", "la versión final"]),
         ],
@@ -450,6 +483,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "se los",
         explanation: "les + los transforms into se los",
+        plain_english: "Replaces indirect 'le' with 'se' before 'lo' to avoid awkward duplicate 'l-' sounds.",
         slots: &[
             ("item", &["los registros del sistema", "los diagramas de flujo", "los datos de telemetría", "los resultados"]),
         ],
@@ -462,6 +496,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "se las",
         explanation: "les + las transforms into se las",
+        plain_english: "Transforms indirect 'le' to 'se' before direct object pronoun 'la'.",
         slots: &[
             ("item", &["las claves de acceso", "las credenciales seguras", "las instrucciones de instalación", "las notas"]),
         ],
@@ -474,6 +509,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "explicártelo",
         explanation: "attached clitics on infinitive: explicár + te + lo -> explicártelo (esdrújula)",
+        plain_english: "Attaches both pronouns to the infinitive, adding a written accent to preserve stress.",
         slots: &[],
     },
     SentenceFrame {
@@ -484,6 +520,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "tú",
         target: "Entrégamelo",
         explanation: "affirmative command + me + lo -> Entrégamelo (esdrújula accent)",
+        plain_english: "Attaches stacked pronouns to an affirmative command, requiring an accent on the stressed syllable.",
         slots: &[],
     },
 
@@ -498,6 +535,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "con",
         explanation: "soñar takes preposition 'con' (soñar con algo/alguien)",
+        plain_english: "Verb connects to its topic of dreaming or reliance using the fixed preposition 'con'.",
         slots: &[
             ("activity", &["crear un sistema operativo propio", "viajar por todo el mundo", "fundar una empresa de robótica", "escribir un libro"]),
         ],
@@ -510,6 +548,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el éxito",
         target: "de",
         explanation: "depender takes preposition 'de' (depender de)",
+        plain_english: "Verb connects to its determining condition using the preposition 'de'.",
         slots: &[
             ("factor", &["la rigurosidad de las pruebas", "nuestro esfuerzo colectivo", "la estabilidad de la red", "la planificación previa"]),
         ],
@@ -522,6 +561,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el director",
         target: "en",
         explanation: "insistir takes preposition 'en' (insistir en algo)",
+        plain_english: "Verb links to the focal point of emphasis using the preposition 'en'.",
         slots: &[
             ("point", &["la importancia de la seguridad", "mantener una alta cobertura de tests", "cumplir los plazos previstos", "la claridad del código"]),
         ],
@@ -534,6 +574,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el sospechoso",
         target: "a",
         explanation: "negarse takes 'a' + infinitive (negarse a hacer algo)",
+        plain_english: "Verb connects to a rejected action using the preposition 'a'.",
         slots: &[
             ("action", &["declarar", "firmar el acta", "responder a las preguntas", "entregar las pruebas"]),
         ],
@@ -546,6 +587,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "de",
         explanation: "acordarse takes 'de' (acordarse de hacer algo vs recordar without prep)",
+        plain_english: "Verb connects to its determining condition using the preposition 'de'.",
         slots: &[
             ("task", &["guardar los cambios", "enviar el reporte diario", "cerrar la sesión remota", "actualizar el repositorio"]),
         ],
@@ -558,6 +600,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "tú",
         target: "con",
         explanation: "contar con = to rely on / count on",
+        plain_english: "Verb connects to its topic of dreaming or reliance using the fixed preposition 'con'.",
         slots: &[
             ("support", &["nuestro apoyo incondicional", "la colaboración del equipo", "los recursos necesarios", "mi ayuda técnica"]),
         ],
@@ -570,6 +613,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el microservicio",
         target: "en",
         explanation: "tardar en (+ inf) = to take time to do something",
+        plain_english: "Verb links to the focal point of emphasis using the preposition 'en'.",
         slots: &[
             ("action", &["procesar la solicitud", "responder a la consulta", "inicializar la caché", "validar el token"]),
         ],
@@ -586,6 +630,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el vaso",
         target: "me",
         explanation: "se me cayó indicates unintentional dropping affecting 1st person",
+        plain_english: "Linguistic shield: the item dropped unexpectedly, and you were the affected bystander ('it fell on me').",
         slots: &[],
     },
     SentenceFrame {
@@ -596,6 +641,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "las tarjetas",
         target: "nos",
         explanation: "se nos olvidaron indicates unintentional oversight affecting 1st plural",
+        plain_english: "Frames forgetting as an involuntary slip affecting the group ('it slipped our minds').",
         slots: &[],
     },
     SentenceFrame {
@@ -606,6 +652,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "las llaves",
         target: "le",
         explanation: "se le perdieron indicates accidental loss affecting 3rd person",
+        plain_english: "Removes direct blame by portraying the keys as going missing from him/her.",
         slots: &[],
     },
     SentenceFrame {
@@ -616,6 +663,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la pantalla",
         target: "te",
         explanation: "se te rompió expresses involuntary damage affecting 2nd person singular",
+        plain_english: "Frames the damage as an accidental occurrence affecting you rather than deliberate breakage.",
         slots: &[],
     },
     SentenceFrame {
@@ -626,6 +674,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el almuerzo",
         target: "les",
         explanation: "se les quemó indicates unintentional burning affecting 3rd plural",
+        plain_english: "Portrays burning food as an unintended accident affecting them.",
         slots: &[],
     },
     SentenceFrame {
@@ -636,6 +685,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la batería",
         target: "me",
         explanation: "se me acabó = ran out on me (accidental exhaustion of a resource)",
+        plain_english: "Frames running out of battery as an unexpected depletion affecting me.",
         slots: &[],
     },
 
@@ -650,6 +700,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el equipo",
         target: "desplegar",
         explanation: "desplegar is the formal Spanish verb for deploy (avoid anglicism *deployar)",
+        plain_english: "Uses standard engineering Spanish ('desplegar') instead of the Spanglish borrowing '*deployar'.",
         slots: &[],
     },
     SentenceFrame {
@@ -660,6 +711,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "depurar",
         explanation: "depurar is the proper technical Spanish equivalent for debugging code",
+        plain_english: "Uses proper technical Spanish ('depurar') for finding and fixing code bugs instead of '*debuggear'.",
         slots: &[],
     },
     SentenceFrame {
@@ -670,6 +722,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el proceso",
         target: "bloqueo mutuo",
         explanation: "bloqueo mutuo or interbloqueo is the precise technical term for deadlock",
+        plain_english: "Uses standard computing terminology ('bloqueo mutuo' / 'interbloqueo') for deadlock.",
         slots: &[],
     },
     SentenceFrame {
@@ -680,6 +733,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "solicitud de extracción",
         explanation: "solicitud de extracción translates pull request in standard Spanish",
+        plain_english: "Translates pull request into precise technical Spanish ('solicitud de extracción').",
         slots: &[],
     },
     SentenceFrame {
@@ -690,6 +744,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el error",
         target: "condición de carrera",
         explanation: "condición de carrera is the standard translation for race condition",
+        plain_english: "Uses standard computing terminology ('condición de carrera') for race condition.",
         slots: &[],
     },
     SentenceFrame {
@@ -700,6 +755,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el equipo",
         target: "subsanar",
         explanation: "subsanar o corregir is the formal technical term for remediating/fixing a vulnerability",
+        plain_english: "Uses formal engineering terminology ('subsanar' / 'corregir') for remediating a vulnerability.",
         slots: &[],
     },
 
@@ -714,6 +770,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "disposición",
         explanation: "quedo a su entera disposición = I remain at your complete disposal",
+        plain_english: "Standard diplomatic closing projecting total availability and professional courtesy.",
         slots: &[],
     },
     SentenceFrame {
@@ -724,6 +781,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "antemano",
         explanation: "agradeciendo de antemano = thanking you in advance",
+        plain_english: "Formulaic business courtesy expressing advance gratitude ('de antemano').",
         slots: &[],
     },
     SentenceFrame {
@@ -734,6 +792,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "particular",
         explanation: "sin otro particular = without further matters to discuss for now",
+        plain_english: "Traditional executive letter closing signaling transition to sign-off ('sin otro particular').",
         slots: &[],
     },
     SentenceFrame {
@@ -744,6 +803,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "adjuntar",
         explanation: "adjuntar = to attach (formal business phrasing)",
+        plain_english: "Precise formal correspondence phrasing for attaching legal and commercial documents.",
         slots: &[],
     },
     SentenceFrame {
@@ -754,6 +814,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "atañe",
         explanation: "en lo que atañe a = as far as it concerns / regarding",
+        plain_english: "Contractual formula for isolating and discussing a specific term or scope ('en lo que atañe a').",
         slots: &[],
     },
     SentenceFrame {
@@ -764,6 +825,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la empresa",
         target: "saldar",
         explanation: "saldar = to settle/pay off an outstanding debt or account balance",
+        plain_english: "Precise commercial financial terminology for resolving and clearing an outstanding balance.",
         slots: &[],
     },
 
@@ -778,6 +840,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "Actualmente",
         explanation: "actualmente = currently; actually = en realidad / de hecho",
+        plain_english: "False friend: 'actualmente' means 'currently/at present', while 'actually' is 'en realidad'.",
         slots: &[
             ("city", &["Madrid", "Barcelona", "Valencia", "Sevilla", "Bogotá"]),
         ],
@@ -790,6 +853,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "fingir",
         explanation: "fingir = to pretend; pretender = to aim / intend",
+        plain_english: "False friend: 'fingir' means 'to pretend/fake', while 'pretender' means 'to attempt/aim'.",
         slots: &[],
     },
     SentenceFrame {
@@ -800,6 +864,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la resolución",
         target: "sensata",
         explanation: "sensato/a = sensible/prudent; sensible = sensitive/emotional",
+        plain_english: "False friend: 'sensato/a' means 'sensible/prudent', while 'sensible' means 'sensitive'.",
         slots: &[],
     },
     SentenceFrame {
@@ -810,6 +875,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el ingeniero",
         target: "darse cuenta de",
         explanation: "darse cuenta de = to realize; realizar = to carry out / execute",
+        plain_english: "False friend: 'darse cuenta de' means 'to realize/notice', while 'realizar' means 'to carry out'.",
         slots: &[],
     },
     SentenceFrame {
@@ -820,6 +886,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la fundación",
         target: "apoyar",
         explanation: "apoyar = to support; soportar = to tolerate / endure",
+        plain_english: "False friend: 'apoyar' means 'to support/back', while 'soportar' means 'to tolerate/endure'.",
         slots: &[],
     },
     SentenceFrame {
@@ -830,6 +897,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la presentación",
         target: "éxito",
         explanation: "éxito = success; suceso = event / incident",
+        plain_english: "False friend: 'éxito' means 'success', while 'suceso' means 'event/incident'.",
         slots: &[],
     },
 
@@ -844,6 +912,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "vos",
         target: "hablás",
         explanation: "voseo present of -AR verbs ends in stressed -ás (vos hablás)",
+        plain_english: "Rioplatense informal address 'vos' conjugates -AR verbs with a stressed final vowel (hablás).",
         slots: &[],
     },
     SentenceFrame {
@@ -854,6 +923,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "vos",
         target: "comés",
         explanation: "voseo present of -ER verbs ends in stressed -és (vos comés)",
+        plain_english: "Rioplatense 'vos' conjugates -ER verbs with a stressed final vowel (comés).",
         slots: &[],
     },
     SentenceFrame {
@@ -864,6 +934,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "vos",
         target: "vivís",
         explanation: "voseo present of -IR verbs ends in stressed -ís (vos vivís)",
+        plain_english: "Rioplatense 'vos' conjugates -IR verbs with a stressed final vowel (vivís).",
         slots: &[],
     },
     SentenceFrame {
@@ -874,6 +945,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "vos",
         target: "sos",
         explanation: "ser in voseo present indicative is 'vos sos'",
+        plain_english: "Rioplatense irregular present of 'ser' for informal address (vos sos).",
         slots: &[],
     },
     SentenceFrame {
@@ -884,6 +956,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "vos",
         target: "tenés",
         explanation: "tener in voseo present indicative is 'vos tenés'",
+        plain_english: "Rioplatense 'vos' form keeps the monophthong and stresses the ending (vos tenés).",
         slots: &[],
     },
     SentenceFrame {
@@ -894,6 +967,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "vos",
         target: "Decí",
         explanation: "voseo imperative drops '-r' and stresses final vowel (¡Decí!)",
+        plain_english: "Rioplatense affirmative imperative drops the infinitive '-r' and stresses the final vowel (¡Decí!).",
         slots: &[],
     },
 
@@ -908,6 +982,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el desarrollador",
         target: "compró",
         explanation: "aguda words ending in N, S, or vowel carry a written accent mark (com-PRÓ)",
+        plain_english: "Aguda word ending in a vowel carries a written accent mark on the final syllable.",
         slots: &[],
     },
     SentenceFrame {
@@ -918,6 +993,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el problema",
         target: "fácil",
         explanation: "llana words ending in consonants other than N or S take a tilde (FÁ-cil)",
+        plain_english: "Llana word ending in a consonant other than N or S takes a written accent.",
         slots: &[],
     },
     SentenceFrame {
@@ -928,6 +1004,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la gramática",
         target: "gramática",
         explanation: "all esdrújula words carry a tilde on the antepenultimate syllable (gra-MÁ-ti-ca)",
+        plain_english: "Esdrújula word stressed on the antepenultimate syllable always takes a written tilde.",
         slots: &[],
     },
     SentenceFrame {
@@ -938,6 +1015,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "tu",
         explanation: "tu (unaccented) is possessive adjective; tú (accented) is subject pronoun",
+        plain_english: "Possessive adjective 'tu' is unaccented, distinguishing it from pronoun 'tú'.",
         slots: &[],
     },
     SentenceFrame {
@@ -948,6 +1026,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "él",
         target: "él",
         explanation: "él (accented) is 3rd person subject pronoun; el (unaccented) is article",
+        plain_english: "Subject pronoun 'él' takes a diacritical accent to distinguish it from the article 'el'.",
         slots: &[],
     },
     SentenceFrame {
@@ -958,6 +1037,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "sé",
         explanation: "sé (accented) is 1st person present of saber or imperative of ser",
+        plain_english: "Verb 'sé' (from saber/ser) carries a diacritical accent to distinguish it from pronoun 'se'.",
         slots: &[],
     },
 
@@ -972,6 +1052,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "las horas",
         target: "serán",
         explanation: "futuro simple expresses conjecture/probability regarding the present moment",
+        plain_english: "Uses future tense to speculate about the present moment ('it must be around {time}').",
         slots: &[
             ("time", &["las cuatro de la tarde", "las cinco y media", "las tres", "las seis aproximadamente"]),
         ],
@@ -984,6 +1065,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la jefa",
         target: "Estará",
         explanation: "estará expresses speculation or deduction about current whereabouts",
+        plain_english: "Uses future tense to deduce or guess current location ('she is probably in her office').",
         slots: &[],
     },
     SentenceFrame {
@@ -994,6 +1076,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el analista",
         target: "estaría",
         explanation: "condicional simple expresses conjecture or probability about past states",
+        plain_english: "Uses conditional tense to conjecture about a past state ('he was probably sick').",
         slots: &[],
     },
     SentenceFrame {
@@ -1004,6 +1087,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el clúster",
         target: "costaría",
         explanation: "costaría expresses past hypothesis/conjecture ('it probably cost...')",
+        plain_english: "Uses conditional tense to estimate a past cost ('it must have cost a fortune').",
         slots: &[],
     },
     SentenceFrame {
@@ -1014,6 +1098,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "Carlos",
         target: "habrá",
         explanation: "futuro compuesto (habrá + participio) conjectures about completed recent events",
+        plain_english: "Uses compound future (habrá + participio) to hypothesize about a completed past action.",
         slots: &[],
     },
 
@@ -1028,6 +1113,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "les",
         explanation: "fronted indirect objects (A los nuevos empleados) require redundant clitic 'les'",
+        plain_english: "Fronted indirect object requires a duplicate clitic pronoun ('les') to maintain syntactic harmony.",
         slots: &[],
     },
     SentenceFrame {
@@ -1038,6 +1124,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "lo",
         explanation: "fronted specific direct object requires redundant clitic 'lo'",
+        plain_english: "Fronted specific direct object requires a redundant clitic pronoun ('lo').",
         slots: &[],
     },
     SentenceFrame {
@@ -1048,6 +1135,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "la",
         explanation: "fronted feminine direct object requires clitic 'la'",
+        plain_english: "Fronted feminine direct object requires an obligatory redundant clitic ('la').",
         slots: &[],
     },
     SentenceFrame {
@@ -1058,6 +1146,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la solución",
         target: "me",
         explanation: "prepositional tonic pronoun 'a mí' requires doubling clitic 'me'",
+        plain_english: "Tonic prepositional pronoun 'a mí' strictly requires doubling with clitic 'me'.",
         slots: &[],
     },
     SentenceFrame {
@@ -1068,6 +1157,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el cambio",
         target: "te",
         explanation: "tonic pronoun 'a ti' requires doubling clitic 'te' with psych-verbs",
+        plain_english: "Tonic pronoun 'a ti' with psych-verbs obligatorily requires doubling with 'te'.",
         slots: &[],
     },
 
@@ -1082,6 +1172,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "al",
         explanation: "specific human direct object requires personal 'a' (contracted: a + el = al)",
+        plain_english: "Marks a specific, known human direct object with the personal 'a' (contracted: a + el = al).",
         slots: &[],
     },
     SentenceFrame {
@@ -1092,6 +1183,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "a la",
         explanation: "specific female human direct object requires preposition 'a la'",
+        plain_english: "Marks a specific female professional acting as the direct object with personal 'a'.",
         slots: &[
             ("person", &["ingeniera principal", "directora técnica", "profesora de redes", "investigadora"]),
         ],
@@ -1104,6 +1196,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "al",
         explanation: "domestic pets and companion animals receive personal 'a' (a + el = al)",
+        plain_english: "Applies personal 'a' to a loved domestic pet treated as an animate family companion.",
         slots: &[],
     },
     SentenceFrame {
@@ -1114,6 +1207,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "a",
         explanation: "proper names of people always take personal 'a' when acting as direct objects",
+        plain_english: "Proper names of individuals always require personal 'a' when functioning as direct objects.",
         slots: &[
             ("name", &["Carlos", "Elena", "Daniel", "Marta", "Sofía"]),
         ],
@@ -1130,6 +1224,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el fallo",
         target: "provocó",
         explanation: "gerunds cannot express posterior consequences in Spanish; coordinate with past verb 'provocó'",
+        plain_english: "Spanish gerunds cannot express a later consequence; coordinate with a finite past verb ('y provocó').",
         slots: &[],
     },
     SentenceFrame {
@@ -1140,6 +1235,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el tren",
         target: "causó",
         explanation: "avoid gerund of posteriority (*causando); coordinate with finite past verb 'y causó'",
+        plain_english: "Avoids gerund of posteriority (*causando) by connecting with a past finite verb ('y causó').",
         slots: &[],
     },
     SentenceFrame {
@@ -1150,6 +1246,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el ponente",
         target: "hablando",
         explanation: "gerund correctly expresses simultaneous manner occurring alongside the main verb",
+        plain_english: "Correctly uses gerund to describe an action occurring at the exact same time as entering.",
         slots: &[],
     },
     SentenceFrame {
@@ -1160,6 +1257,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la directiva",
         target: "regula",
         explanation: "Spanish rejects adjectival gerunds (*directiva regulando); use relative clause 'que regula'",
+        plain_english: "Spanish rejects adjectival gerunds (*regulando); use a relative clause ('que regula').",
         slots: &[],
     },
 
@@ -1174,6 +1272,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "pero",
         explanation: "pero introduces qualification or limitation without negating the prior clause",
+        plain_english: "Adds a limitation or qualifying contrast without negating the initial statement.",
         slots: &[],
     },
     SentenceFrame {
@@ -1184,6 +1283,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "sino",
         explanation: "sino is used after a negative premise to introduce exclusive substitution of phrases",
+        plain_english: "Substitutes an alternative phrase directly following a negated clause ('not X, but rather Y').",
         slots: &[],
     },
     SentenceFrame {
@@ -1194,6 +1294,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "sino",
         explanation: "sino rectifies an element after a negated premise (no X sino Y)",
+        plain_english: "Substitutes an alternative phrase directly following a negated clause ('not X, but rather Y').",
         slots: &[],
     },
     SentenceFrame {
@@ -1204,6 +1305,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "sino que",
         explanation: "sino que introduces an exclusive rectification containing a conjugated verb clause",
+        plain_english: "Substitutes a full conjugated verb clause after a negative statement ('not only X, but rather Y').",
         slots: &[],
     },
     SentenceFrame {
@@ -1214,6 +1316,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "n/a",
         target: "sino que",
         explanation: "sino que introduces a full conjugated clause after negation",
+        plain_english: "Substitutes a full conjugated verb clause after a negative statement ('not only X, but rather Y').",
         slots: &[],
     },
 
@@ -1228,6 +1331,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "alguna de las partes",
         target: "incumpliere",
         explanation: "future subjunctive (-iere/-are) is mandatory in statutory and contractual formulations",
+        plain_english: "Uses statutory future subjunctive (-iere) to specify hypothetical breach of contract.",
         slots: &[],
     },
     SentenceFrame {
@@ -1238,6 +1342,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "quien",
         target: "cometiere",
         explanation: "statutory conditional clauses in legal codes preserve future subjunctive (-iere)",
+        plain_english: "Formal penal code construction preserving future subjunctive for conditional legal offences.",
         slots: &[],
     },
     SentenceFrame {
@@ -1248,6 +1353,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "tuviera",
         explanation: "¡Quién + imperfect subjunctive expresses counterfactual longing",
+        plain_english: "Uses ¡Quién + imperfect subjunctive to express counterfactual wistful longing.",
         slots: &[],
     },
     SentenceFrame {
@@ -1258,6 +1364,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "tú",
         target: "tengas",
         explanation: "¡Que + present subjunctive expresses an independent optative wish",
+        plain_english: "Uses ¡Que + present subjunctive as an independent formula for wishing someone well.",
         slots: &[],
     },
     SentenceFrame {
@@ -1268,6 +1375,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el precio",
         target: "cueste",
         explanation: "fixed concessive-optative formula: cueste lo que cueste",
+        plain_english: "Fixed concessive formula balancing two subjunctive forms ('cueste lo que cueste').",
         slots: &[],
     },
 
@@ -1282,6 +1390,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el desarrollador",
         target: "puso",
         explanation: "ponerse indicates a rapid, temporary, involuntary emotional shift",
+        plain_english: "Ponerse describes a rapid, involuntary, temporary emotional reaction.",
         slots: &[],
     },
     SentenceFrame {
@@ -1292,6 +1401,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "quedamos",
         explanation: "quedarse expresses a resulting state of shock, aftermath, or impression",
+        plain_english: "Quedarse describes the resulting state of shock or aftermath from unexpected news.",
         slots: &[],
     },
     SentenceFrame {
@@ -1302,6 +1412,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el portátil",
         target: "quedó",
         explanation: "quedarse sin = to run out of a resource",
+        plain_english: "Quedarse sin expresses the involuntary loss or depletion of an essential resource.",
         slots: &[],
     },
     SentenceFrame {
@@ -1312,6 +1423,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "ella",
         target: "hizo",
         explanation: "hacerse conveys voluntary transformation resulting from sustained effort or career evolution",
+        plain_english: "Hacerse conveys a voluntary professional transformation achieved through sustained effort.",
         slots: &[],
     },
     SentenceFrame {
@@ -1322,6 +1434,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el auditor",
         target: "volvió",
         explanation: "volverse describes a deep, lasting psychological or personality transformation",
+        plain_english: "Volverse describes a deep, lasting shift in personality or mindset over time.",
         slots: &[],
     },
     SentenceFrame {
@@ -1332,6 +1445,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la startup",
         target: "convirtió",
         explanation: "convertirse en indicates a radical qualitative or categorical metamorphosis",
+        plain_english: "Convertirse en indicates a radical categorical metamorphosis from one entity into another.",
         slots: &[],
     },
 
@@ -1346,6 +1460,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el administrador",
         target: "tiene",
         explanation: "colloquial epistemic adverbs 'a lo mejor', 'igual', 'lo mismo' strictly take indicative",
+        plain_english: "Colloquial epistemic adverb 'a lo mejor' strictly requires the indicative mood.",
         slots: &[],
     },
     SentenceFrame {
@@ -1356,6 +1471,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el equipo",
         target: "llega",
         explanation: "'igual' (perhaps/maybe) takes indicative mood exclusively",
+        plain_english: "Epistemic adverb 'igual' (maybe/perhaps) exclusively takes indicative mood.",
         slots: &[],
     },
     SentenceFrame {
@@ -1366,6 +1482,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la contraparte",
         target: "acepte",
         explanation: "pre-verbal quizás triggers subjunctive when expressing genuine epistemic doubt",
+        plain_english: "Pre-verbal 'quizás' triggers subjunctive mood when conveying genuine doubt.",
         slots: &[],
     },
     SentenceFrame {
@@ -1376,6 +1493,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "podamos",
         explanation: "tal vez with subjective uncertainty selects subjunctive mood",
+        plain_english: "Pre-verbal 'tal vez' selects subjunctive mood when expressing subjective possibility.",
         slots: &[],
     },
     SentenceFrame {
@@ -1386,6 +1504,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "ello",
         target: "es",
         explanation: "when quizás / tal vez follows the verb clause, the indicative mood is grammatically obligatory",
+        plain_english: "When 'quizás' appears after the verb phrase, the verb must be in the indicative mood.",
         slots: &[],
     },
 
@@ -1400,6 +1519,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "me",
         explanation: "Spanish uses dative clitic + definite article instead of possessive *mis manos",
+        plain_english: "Claims ownership of body parts with dative clitic 'me' and definite article instead of '*mis manos'.",
         slots: &[],
     },
     SentenceFrame {
@@ -1410,6 +1530,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "le",
         explanation: "dative clitic 'le' marks the affected possessor alongside article 'la pantalla'",
+        plain_english: "Marks the affected owner of a broken item using dative clitic 'le' and article 'la pantalla'.",
         slots: &[],
     },
     SentenceFrame {
@@ -1420,6 +1541,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el pasaporte",
         target: "le",
         explanation: "dative pronoun 'le' denotes the person whose personal possession is affected",
+        plain_english: "Combines accidental 'se' with dative 'le' to identify whose possession fell.",
         slots: &[],
     },
     SentenceFrame {
@@ -1430,6 +1552,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "tú",
         target: "me",
         explanation: "ethic dative clitic 'me' expresses affectionate/personal involvement in the action",
+        plain_english: "Affective/ethic dative 'me' adds emotional personal connection ('don't cry on me').",
         slots: &[],
     },
     SentenceFrame {
@@ -1440,6 +1563,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la conexión",
         target: "nos",
         explanation: "sympathetic dative 'nos' reflects collective shared impact",
+        plain_english: "Sympathetic dative 'nos' reflects collective shared impact on the whole team.",
         slots: &[],
     },
 
@@ -1454,6 +1578,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "yo",
         target: "quiera",
         explanation: "the rejected hypothesis after 'no es que' requires subjunctive mood (quiera)",
+        plain_english: "Subjunctive after 'no es que' rejects a false assumption before stating the real reason in the indicative.",
         slots: &[],
     },
     SentenceFrame {
@@ -1464,6 +1589,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la propuesta",
         target: "sea",
         explanation: "'no es que' rejects a proposition and mandates subjunctive (sea)",
+        plain_english: "Rejects an alleged flaw in the subjunctive ('no es que sea...') to assert lack of time in indicative.",
         slots: &[],
     },
     SentenceFrame {
@@ -1474,6 +1600,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el framework",
         target: "sea",
         explanation: "'no porque' introduces a rejected causal reason and requires subjunctive (sea)",
+        plain_english: "'No porque' rejects an alleged causal factor using the subjunctive mood.",
         slots: &[],
     },
     SentenceFrame {
@@ -1484,6 +1611,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "tú",
         target: "pidas",
         explanation: "'no porque' rejects justification and mandates subjunctive (pidas)",
+        plain_english: "'No porque' dismisses an excuse or pressure in the subjunctive.",
         slots: &[],
     },
     SentenceFrame {
@@ -1494,6 +1622,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el sistema operativo",
         target: "reiniciara",
         explanation: "the consecutive connector 'de ahí que' strictly governs subjunctive mood (reiniciara)",
+        plain_english: "Formal consecutive connector 'de ahí que' strictly governs the subjunctive mood.",
         slots: &[],
     },
     SentenceFrame {
@@ -1504,6 +1633,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el regulador",
         target: "suspendiera",
         explanation: "'de ahí que' mandates subjunctive mood in formal consecutive causal clauses",
+        plain_english: "'De ahí que' links an established cause to its formal consequence using subjunctive.",
         slots: &[],
     },
 
@@ -1518,6 +1648,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la reunión",
         target: "Terminada",
         explanation: "participial absolutes agree in gender and number with postposed subject (Terminada la reunión)",
+        plain_english: "Preposed absolute participle agrees in gender and number with feminine singular subject ('la reunión').",
         slots: &[],
     },
     SentenceFrame {
@@ -1528,6 +1659,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "las directivas",
         target: "Aprobadas",
         explanation: "feminine plural agreement with postposed subject (Aprobadas las directivas)",
+        plain_english: "Absolute participle agrees in feminine plural with postposed subject ('las directivas').",
         slots: &[],
     },
     SentenceFrame {
@@ -1538,6 +1670,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el contrato",
         target: "Firmado",
         explanation: "masculine singular agreement with subject (Firmado el contrato)",
+        plain_english: "Absolute participle agrees in masculine singular with subject ('el contrato').",
         slots: &[],
     },
     SentenceFrame {
@@ -1548,6 +1681,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "los experimentos",
         target: "Concluidos",
         explanation: "masculine plural agreement with subject (Concluidos los experimentos)",
+        plain_english: "Absolute participle agrees in masculine plural with subject ('los experimentos').",
         slots: &[],
     },
     SentenceFrame {
@@ -1558,6 +1692,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "esto",
         target: "Dicho",
         explanation: "fixed discourse formula: Dicho esto (= habiéndose dicho esto)",
+        plain_english: "Fixed participial absolute formula establishing the transition to the next topic ('Dicho esto...').",
         slots: &[],
     },
     SentenceFrame {
@@ -1568,6 +1703,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el resultado",
         target: "Visto",
         explanation: "participial absolute expressing causal background: Visto el resultado",
+        plain_english: "Participial absolute providing causal background for a decision ('Visto el resultado...').",
         slots: &[],
     },
 
@@ -1582,6 +1718,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el cliente",
         target: "insista",
         explanation: "scalar concessive 'por mucho que' strictly takes subjunctive mood",
+        plain_english: "Scalar intensifier 'por mucho que' tests maximum hypothetical effort in the subjunctive.",
         slots: &[],
     },
     SentenceFrame {
@@ -1592,6 +1729,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "nosotros",
         target: "trabajemos",
         explanation: "'por más que' governs subjunctive when expressing extreme or hypothetical effort",
+        plain_english: "'Por más que' pushes hypothetical effort to the limit in the subjunctive while the main clause holds.",
         slots: &[],
     },
     SentenceFrame {
@@ -1602,6 +1740,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "el desafío",
         target: "sea",
         explanation: "'por muy + adj + que' governs subjunctive mood (sea)",
+        plain_english: "'Por muy + adj + que' governs subjunctive to acknowledge extreme difficulty without yielding.",
         slots: &[],
     },
     SentenceFrame {
@@ -1612,6 +1751,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "las incidencias",
         target: "surjan",
         explanation: "'aun a riesgo de que' introduces hypothetical danger and requires subjunctive",
+        plain_english: "'Aun a riesgo de que' introduces hypothetical danger and strictly requires subjunctive.",
         slots: &[],
     },
     SentenceFrame {
@@ -1622,6 +1762,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "la tarea",
         target: "era",
         explanation: "'aun a sabiendas de que' introduces an acknowledged certainty and takes indicative",
+        plain_english: "'Aun a sabiendas de que' introduces an acknowledged certainty and strictly takes indicative.",
         slots: &[],
     },
     SentenceFrame {
@@ -1632,6 +1773,7 @@ pub static FRAMES: &[SentenceFrame] = &[
         target_subject: "tú",
         target: "aportes",
         explanation: "'por poco que' introduces minimal scalar condition and takes subjunctive",
+        plain_english: "'Por poco que' frames a minimal scalar contribution using subjunctive mood.",
         slots: &[],
     },
 ];

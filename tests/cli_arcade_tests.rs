@@ -12,6 +12,7 @@ fn test_arcade_choice_evaluation_and_scoring() {
         options: vec!["por".to_string(), "para".to_string()],
         correct_index: 1,
         explanation: "Para indicates purpose or goal.".to_string(),
+        plain_english: "Points forward to destination, recipient, deadline, or intended goal ('for/in order to').".to_string(),
     };
 
     let mut stats = ArcadeSessionStats::default();
@@ -44,6 +45,7 @@ fn test_arcade_choice_records_mistakes() {
         options: vec!["por".to_string(), "para".to_string()],
         correct_index: 1,
         explanation: "Para indicates purpose or goal.".to_string(),
+        plain_english: "Points forward to destination, recipient, deadline, or intended goal ('for/in order to').".to_string(),
     };
 
     let mut stats = ArcadeSessionStats::default();

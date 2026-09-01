@@ -278,3 +278,31 @@ fn test_semantic_keyword_concept_lookups() {
         .expect("Should resolve 'body parts' to possessive-datives");
     assert_eq!(body_parts.slug, "possessive-datives");
 }
+
+#[test]
+fn test_all_grammar_concepts_have_rich_mental_models() {
+    let concepts = spanglings::core::reference::list_grammar_concepts();
+    assert_eq!(concepts.len(), 24);
+    for concept in concepts {
+        assert!(
+            !concept.mental_model.is_empty(),
+            "Mental model should not be empty for {}",
+            concept.slug
+        );
+        assert!(
+            concept.mental_model.len() >= 15,
+            "Mental model should be at least 15 characters for {}: '{}'",
+            concept.slug,
+            concept.mental_model
+        );
+    }
+
+    // Verify get_mental_model_for_topic helper
+    let model = spanglings::core::reference::get_mental_model_for_topic("subjunctive");
+    assert!(model.is_some());
+    assert!(
+        model.unwrap().contains("mind")
+            || model.unwrap().contains("desires")
+            || model.unwrap().contains("Subjunctive")
+    );
+}

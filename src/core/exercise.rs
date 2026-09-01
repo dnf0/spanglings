@@ -503,6 +503,10 @@ impl Exercise {
             explanation
         };
 
+        let plain_english = crate::core::reference::get_mental_model_for_topic(&topic)
+            .unwrap_or("")
+            .to_string();
+
         vec![DrillItem {
             topic,
             formula_cue,
@@ -511,6 +515,7 @@ impl Exercise {
             target_subject,
             target,
             explanation,
+            plain_english,
         }]
     }
 }
