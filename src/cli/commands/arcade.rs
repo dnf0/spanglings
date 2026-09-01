@@ -519,22 +519,42 @@ pub fn run_arcade(
                 format!(" ({}ms)", elapsed_ms).dimmed()
             };
             print!(
-                "\r\n{} {}{}\r\n   {}\r\n",
+                "\r\n{} {}{}\r\n",
                 "✓ CORRECT!".bold().green(),
                 format!("+{} PTS", eval_result.points_earned)
                     .bold()
                     .yellow(),
                 speed_tag,
-                item.explanation.dimmed()
             );
+            if !item.plain_english.is_empty() {
+                print!(
+                    "   {} {}\r\n   {} {}\r\n",
+                    "💡 Meaning:".bold().yellow(),
+                    item.plain_english.yellow(),
+                    "📐 Rule:   ".bold().cyan(),
+                    item.explanation.cyan()
+                );
+            } else {
+                print!("   {}\r\n", item.explanation.dimmed());
+            }
         } else {
             print!(
-                "\r\n{} Correct answer: {} ({}ms)\r\n   {}\r\n",
+                "\r\n{} Correct answer: {} ({}ms)\r\n",
                 "✗ INCORRECT!".bold().red(),
                 item.correct_option().bold().green(),
                 elapsed_ms.to_string().dimmed(),
-                item.explanation.dimmed()
             );
+            if !item.plain_english.is_empty() {
+                print!(
+                    "   {} {}\r\n   {} {}\r\n",
+                    "💡 Meaning:".bold().yellow(),
+                    item.plain_english.yellow(),
+                    "📐 Rule:   ".bold().cyan(),
+                    item.explanation.cyan()
+                );
+            } else {
+                print!("   {}\r\n", item.explanation.dimmed());
+            }
         }
         io::stdout().flush()?;
 

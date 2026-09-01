@@ -1,6 +1,6 @@
 [package]
 name = "spanglings"
-version = "0.5.3"
+version = "0.5.4"
 edition = "2021"
 authors = ["Daniel Fisher"]
 description = "Spanglings builds the syntax compiler; real-world usage supplies the data. Developer-grade CLI & interactive TUI for mastering Spanish."
