@@ -23,6 +23,8 @@ pub struct ArcadeMistake {
     pub correct_answer: String,
     pub prompt_cue: String,
     pub explanation: String,
+    #[serde(default)]
+    pub plain_english: String,
 }
 
 /// Tracks performance, combo streaks, speed, and scoring throughout an arcade session.
@@ -106,6 +108,7 @@ pub fn evaluate_arcade_choice(
             correct_answer: item.correct_option().to_string(),
             prompt_cue: item.prompt_cue.clone(),
             explanation: item.explanation.clone(),
+            plain_english: item.plain_english.clone(),
         });
 
         ArcadeChoiceResult {
@@ -672,11 +675,24 @@ pub fn print_arcade_summary(
                 "✓ Correct answer:".green(),
                 m.correct_answer.green().bold()
             );
-            println!(
-                "     {} {}\n",
-                "💡 Rule / Why:  ".yellow(),
-                m.explanation.dimmed()
-            );
+            if !m.plain_english.is_empty() {
+                println!(
+                    "     {} {}",
+                    "💡 Meaning:      ".yellow(),
+                    m.plain_english.yellow()
+                );
+                println!(
+                    "     {} {}\n",
+                    "📐 Rule:         ".cyan(),
+                    m.explanation.dimmed()
+                );
+            } else {
+                println!(
+                    "     {} {}\n",
+                    "💡 Rule / Why:   ".yellow(),
+                    m.explanation.dimmed()
+                );
+            }
         }
         println!(
             "{}",

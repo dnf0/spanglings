@@ -74,6 +74,17 @@ fn test_get_topic_cheat_sheet_all_topics() {
 }
 
 #[test]
+fn test_show_topic_cheat_sheet_handles_topics_and_fallback() {
+    use spanglings::cli::commands::drill::show_topic_cheat_sheet;
+
+    // Should execute cleanly without panic
+    show_topic_cheat_sheet("subjunctive");
+    show_topic_cheat_sheet("por_para");
+    show_topic_cheat_sheet("ser_estar");
+    show_topic_cheat_sheet("unknown_topic_xyz");
+}
+
+#[test]
 fn test_drill_items_rich_fields() {
     let items = get_drill_items(None);
     assert!(!items.is_empty());

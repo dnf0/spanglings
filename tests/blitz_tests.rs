@@ -79,6 +79,7 @@ fn test_blitz_prompt_formatting() {
         target_subject: "yo".to_string(),
         target: "ponga".to_string(),
         explanation: "yo pongo -> drop -o -> add -a -> ponga".to_string(),
+        plain_english: "Expresses doubt or uncertainty.".to_string(),
     };
     let formatted = item.format_prompt(45, 3);
     assert!(formatted
@@ -96,6 +97,7 @@ fn test_blitz_prompt_formatting() {
         target_subject: "yo".to_string(),
         target: "ponga".to_string(),
         explanation: "yo pongo -> ponga".to_string(),
+        plain_english: "".to_string(),
     };
     let formatted_no_cue = item_no_cue.format_prompt(30, 0);
     assert!(formatted_no_cue.contains(
@@ -111,6 +113,7 @@ fn test_blitz_prompt_formatting() {
         target_subject: "s".to_string(),
         target: "t".to_string(),
         explanation: "e".to_string(),
+        plain_english: "".to_string(),
     };
     let formatted_unknown = item_unknown.format_prompt(15, 1);
     assert!(formatted_unknown.contains("[15s remaining | Streak: 1] [Custom Topic | rule 1]"));
@@ -126,6 +129,7 @@ fn test_evaluate_blitz_answer_case_and_whitespace() {
         target_subject: "yo".to_string(),
         target: "tuv".to_string(),
         explanation: "tener -> tuv".to_string(),
+        plain_english: "Completed, past events viewed as a finished point in time.".to_string(),
     };
 
     assert!(evaluate_blitz_answer(&item, "tuv"));

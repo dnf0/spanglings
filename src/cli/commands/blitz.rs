@@ -12,6 +12,7 @@ pub struct BlitzItem {
     pub target_subject: String,
     pub target: String,
     pub explanation: String,
+    pub plain_english: String,
 }
 
 impl From<crate::core::generator::DrillItem> for BlitzItem {
@@ -24,6 +25,7 @@ impl From<crate::core::generator::DrillItem> for BlitzItem {
             target_subject: item.target_subject,
             target: item.target,
             explanation: item.explanation,
+            plain_english: item.plain_english,
         }
     }
 }
@@ -170,11 +172,7 @@ pub fn run_blitz(
     println!("Answer as many as you can before the timer expires! Press Ctrl+C to abort.\n");
 
     if let Some(t) = topic {
-        if let Some(sheet) = crate::cli::commands::drill::get_topic_cheat_sheet(t) {
-            println!("{}", "--- [TOPIC CHEAT SHEET] ---".yellow().bold());
-            println!("{}\n", sheet.cyan());
-            println!("{}", "---------------------------".yellow());
-        }
+        crate::cli::commands::drill::show_topic_cheat_sheet(t);
     }
 
     let stdin = io::stdin();
@@ -225,7 +223,20 @@ pub fn run_blitz(
 
             if trimmed.eq_ignore_ascii_case("?") || trimmed.eq_ignore_ascii_case("hint") {
                 hint_used = true;
-                println!("  💡 Hint: {}\n", item.explanation.yellow());
+                if !item.plain_english.is_empty() {
+                    println!(
+                        "  💡 {}: {}",
+                        "Meaning".bold().yellow(),
+                        item.plain_english.yellow()
+                    );
+                    println!(
+                        "  📐 {}:    {}\n",
+                        "Rule".bold().cyan(),
+                        item.explanation.cyan()
+                    );
+                } else {
+                    println!("  💡 Hint: {}\n", item.explanation.yellow());
+                }
                 continue;
             }
 
@@ -248,11 +259,16 @@ pub fn run_blitz(
                 state.update_concept_mastery(&item.topic, 1, now);
                 let _ = state.save();
                 println!(
-                    "  {} Incorrect. Expected: '{}' ({})\n",
+                    "  {} Incorrect. Expected: '{}'",
                     "✗".red().bold(),
-                    item.target.green().bold(),
-                    item.explanation.dimmed()
+                    item.target.green().bold()
                 );
+                if !item.plain_english.is_empty() {
+                    println!("     💡 Meaning: {}", item.plain_english.yellow());
+                    println!("     📐 Rule:    {}\n", item.explanation.dimmed());
+                } else {
+                    println!("     💡 Hint:    {}\n", item.explanation.dimmed());
+                }
             }
             break;
         }
