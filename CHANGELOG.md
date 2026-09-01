@@ -5,6 +5,19 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.5.2] - 2026-09-01
+
+### Added
+- **Universal Dual-Layer Explanations & Plain-English Mental Models**:
+  - Transformed grammatical feedback across all Spanglings surfaces (CLI Arcade recaps, TUI Arena recap modals, pre-session cheat sheets, and interactive hints) into dual-layer cards pairing an intuitive communicative mental model with a precise structural rule:
+    ```text
+    💡 Meaning: Expresses requirement ("need you to know"); uncertainty triggers virtual mode.
+    📐 Rule:    Present subjunctive (tú) of 'saber' uses irregular stem 'sep-' ➔ sepas.
+    ```
+  - Populated intuitive plain-English mental models for all 24 core grammar concepts in `src/core/reference.rs`, all 136 sentence frames in `src/core/generator.rs`, and all 262 showdown and specialized engine sentences in `src/core/arcade.rs`.
+  - Added `🧠 PLAIN-ENGLISH MENTAL MODEL:` header sections to all 24 topic cheat sheets and reference cards (`spanglings explain <topic>`).
+  - Added backward-compatible `#[serde(default)]` serialization and clean single-layer fallback formatting.
+
 ## [0.5.1] - 2026-08-29
 
 ### Added
