@@ -49,6 +49,10 @@
          <lastmod>2026-09-02</lastmod>
     </url>
     <url>
+         <loc>https://dnf0.github.io/spanglings/assets/playground/pkg/</loc>
+         <lastmod>2026-09-02</lastmod>
+    </url>
+    <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion/</loc>
          <lastmod>2026-09-02</lastmod>
     </url>
@@ -169,6 +173,10 @@
          <lastmod>2026-09-02</lastmod>
     </url>
     <url>
+         <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-09-02-true-rust-wasm-engine/</loc>
+         <lastmod>2026-09-02</lastmod>
+    </url>
+    <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-26-spanglings-design/</loc>
          <lastmod>2026-09-02</lastmod>
     </url>
@@ -234,6 +242,10 @@
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-09-02-kubelings-style-alignment-design/</loc>
+         <lastmod>2026-09-02</lastmod>
+    </url>
+    <url>
+         <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-09-02-true-rust-wasm-engine-design/</loc>
          <lastmod>2026-09-02</lastmod>
     </url>
 </urlset>

@@ -302,6 +302,27 @@ class SpanglingsStorage {
   }
 
   /**
+   * Static reference to WebAssembly SM-2 calculation export.
+   * @type {Function|null}
+   */
+  static wasmCalculateSm2 = null;
+
+  /**
+   * Sets the active WebAssembly engine or SM-2 calculator.
+   *
+   * @param {object|Function|null} engine - Wasm exports object or calculate_sm2_review_wasm function.
+   */
+  static setWasmEngine(engine) {
+    if (typeof engine === "function") {
+      SpanglingsStorage.wasmCalculateSm2 = engine;
+    } else if (engine && typeof engine.calculate_sm2_review_wasm === "function") {
+      SpanglingsStorage.wasmCalculateSm2 = engine.calculate_sm2_review_wasm;
+    } else {
+      SpanglingsStorage.wasmCalculateSm2 = null;
+    }
+  }
+
+  /**
    * Updates SRS spaced repetition data using the SuperMemo SM-2 algorithm.
    * Parity matched with `src/core/srs.rs::calculate_sm2_review`.
    *
@@ -324,6 +345,34 @@ class SpanglingsStorage {
     };
 
     const q = Math.max(0, Math.min(5, Math.floor(quality)));
+
+    // Try Rust WebAssembly SM-2 calculation if available
+    if (typeof SpanglingsStorage.wasmCalculateSm2 === "function") {
+      try {
+        const rawWasmResult = SpanglingsStorage.wasmCalculateSm2(
+          currentItem.ease_factor,
+          currentItem.interval_days,
+          currentItem.repetitions,
+          q
+        );
+        const wasmRes = typeof rawWasmResult === "string" ? JSON.parse(rawWasmResult) : rawWasmResult;
+        const nextDueDate = new Date(currentDate.getTime() + wasmRes.interval_days * 24 * 60 * 60 * 1000);
+        const updatedItem = {
+          repetitions: wasmRes.repetitions,
+          interval_days: wasmRes.interval_days,
+          ease_factor: Number(wasmRes.ease_factor.toFixed(4)),
+          next_review_due: nextDueDate.toISOString(),
+          last_reviewed: currentIso,
+        };
+        state.srs[exerciseId] = updatedItem;
+        this.recordActivity(currentIso.slice(0, 10));
+        this.save();
+        return updatedItem;
+      } catch (err) {
+        console.warn("Wasm SM-2 calculation failed, falling back to JS implementation:", err);
+      }
+    }
+
     const qDiff = 5.0 - q;
     let newEf = currentItem.ease_factor + (0.1 - qDiff * (0.08 + qDiff * 0.02));
     if (newEf < 1.3) {

@@ -11,6 +11,163 @@
 import { SpanglingsStorage } from "./storage.js";
 
 /**
+ * WebAssembly runtime state and exported function registry.
+ */
+let wasmReady = false;
+let wasmExports = null;
+let wasmCurriculumCatalog = null;
+let wasmArcadeCatalog = null;
+
+/**
+ * Checks if the True Rust WebAssembly engine is loaded and ready.
+ *
+ * @returns {boolean}
+ */
+export function isWasmReady() {
+  return wasmReady;
+}
+
+/**
+ * Returns current WebAssembly runtime diagnostics.
+ *
+ * @returns {{ ready: boolean, hasCurriculum: boolean, hasArcade: boolean }}
+ */
+export function getWasmStatus() {
+  return {
+    ready: wasmReady,
+    hasCurriculum: wasmCurriculumCatalog !== null,
+    hasArcade: wasmArcadeCatalog !== null,
+  };
+}
+
+/**
+ * Retrieves the parsed full curriculum catalog from the Rust Wasm engine if loaded.
+ *
+ * @returns {object|null} Curriculum catalog with { count: number, exercises: Array }
+ */
+export function getCurriculumCatalog() {
+  if (wasmCurriculumCatalog) {
+    return wasmCurriculumCatalog;
+  }
+  if (wasmReady && typeof wasmExports?.get_curriculum_catalog_json === "function") {
+    try {
+      const raw = wasmExports.get_curriculum_catalog_json();
+      wasmCurriculumCatalog = typeof raw === "string" ? JSON.parse(raw) : raw;
+      return wasmCurriculumCatalog;
+    } catch (err) {
+      console.warn("Failed to parse curriculum catalog from Wasm:", err);
+    }
+  }
+  return null;
+}
+
+/**
+ * Retrieves the parsed rapid arcade catalog for the specified mode from the Rust Wasm engine.
+ *
+ * @param {string} [mode="all"] - Arcade mode or showdown pair slug.
+ * @returns {object|null} Arcade catalog with { mode: string, available_modes: Array, count: number, items: Array }
+ */
+export function getArcadeCatalog(mode = "all") {
+  if (wasmReady && typeof wasmExports?.get_arcade_catalog_json === "function") {
+    try {
+      const raw = wasmExports.get_arcade_catalog_json(mode);
+      return typeof raw === "string" ? JSON.parse(raw) : raw;
+    } catch (err) {
+      console.warn(`Failed to parse arcade catalog for mode '${mode}' from Wasm:`, err);
+    }
+  }
+  return null;
+}
+
+/**
+ * Initializes the compiled Rust WebAssembly module (`./pkg/spanglings.js`).
+ * On success, updates status pill to `● Rust Wasm Engine Active` and wires up SM-2 persistence.
+ * On failure, falls back gracefully to `playground-bundle.json` and updates status pill to `○ Wasm Fallback Mode`.
+ *
+ * @param {object|string|Uint8Array|ArrayBuffer} [wasmOptionsOrPath=null] - Optional init arguments or wasm binary bytes.
+ * @returns {Promise<boolean>} True if Rust WebAssembly initialized successfully, false otherwise.
+ */
+export async function initWasm(wasmOptionsOrPath = null) {
+  try {
+    updateStatusPill("loading", "Initializing Rust Wasm Engine...");
+
+    let initWasmPkg = null;
+    let rawExports = {};
+
+    try {
+      const pkgModule = await import("./pkg/spanglings.js");
+      initWasmPkg = pkgModule.default || pkgModule.init;
+      rawExports = pkgModule;
+    } catch (importErr) {
+      if (typeof globalThis !== "undefined" && globalThis.__spanglingsWasmInit) {
+        initWasmPkg = globalThis.__spanglingsWasmInit;
+        rawExports = globalThis.__spanglingsWasmExports || {};
+      } else {
+        throw importErr;
+      }
+    }
+
+    if (typeof initWasmPkg !== "function") {
+      throw new Error("Wasm package init function not found in ./pkg/spanglings.js");
+    }
+
+    let initArgs = wasmOptionsOrPath;
+    if (!initArgs) {
+      initArgs = "./pkg/spanglings_bg.wasm";
+    }
+
+    if (typeof initArgs === "object" && initArgs !== null && initArgs.module_or_path) {
+      await initWasmPkg(initArgs.module_or_path);
+    } else {
+      await initWasmPkg(initArgs);
+    }
+
+    wasmExports = rawExports;
+    wasmReady = true;
+
+    // Pre-populate curriculum and arcade catalogs
+    if (typeof wasmExports.get_curriculum_catalog_json === "function") {
+      try {
+        const rawCurriculum = wasmExports.get_curriculum_catalog_json();
+        wasmCurriculumCatalog =
+          typeof rawCurriculum === "string" ? JSON.parse(rawCurriculum) : rawCurriculum;
+      } catch (e) {
+        console.warn("Failed to load Wasm curriculum catalog:", e);
+      }
+    }
+
+    if (typeof wasmExports.get_arcade_catalog_json === "function") {
+      try {
+        const rawArcade = wasmExports.get_arcade_catalog_json("all");
+        wasmArcadeCatalog = typeof rawArcade === "string" ? JSON.parse(rawArcade) : rawArcade;
+      } catch (e) {
+        console.warn("Failed to load Wasm arcade catalog:", e);
+      }
+    }
+
+    // Connect Wasm SM-2 calculation engine to SpanglingsStorage
+    if (typeof wasmExports.calculate_sm2_review_wasm === "function") {
+      SpanglingsStorage.setWasmEngine(wasmExports);
+    }
+
+    updateStatusPill("ready", "● Rust Wasm Engine Active");
+    return true;
+  } catch (err) {
+    console.warn(
+      "Spanglings Rust WebAssembly engine unavailable, operating in graceful fallback mode:",
+      err
+    );
+    wasmReady = false;
+    wasmExports = null;
+    wasmCurriculumCatalog = null;
+    wasmArcadeCatalog = null;
+    SpanglingsStorage.setWasmEngine(null);
+    updateStatusPill("fallback", "○ Wasm Fallback Mode");
+    return false;
+  }
+}
+
+/**
  * Standard Spanish diacritics and inverted punctuation helper characters.
  * @type {string[]}
  */
@@ -205,20 +362,74 @@ export function evaluateArcadeChoice(item, selectedIndex, responseTimeMs = 0) {
     };
   }
 
-  const isCorrect = selectedIndex === item.correct_index;
-  const speedBonus = isCorrect ? calculateSpeedBonus(responseTimeMs) : 0;
-  const baseScore = isCorrect ? 100 : 0;
-  const totalScore = baseScore + speedBonus;
   const options = Array.isArray(item.options) ? item.options : [];
   const selectedOption =
     options[selectedIndex] !== undefined ? options[selectedIndex] : null;
+  const timeMs = typeof responseTimeMs === "number" ? Math.max(0, Math.round(responseTimeMs)) : 0;
+
+  // 1. Try Rust WebAssembly evaluation first if active
+  if (
+    wasmReady &&
+    typeof wasmExports?.evaluate_arcade_choice_wasm === "function" &&
+    item.id &&
+    selectedOption !== null
+  ) {
+    try {
+      const rawWasmResult = wasmExports.evaluate_arcade_choice_wasm(
+        item.id,
+        selectedOption,
+        BigInt(timeMs)
+      );
+      const wasmEval =
+        typeof rawWasmResult === "string" ? JSON.parse(rawWasmResult) : rawWasmResult;
+
+      const isCorrect = Boolean(wasmEval.is_correct);
+      const totalScore = wasmEval.score_delta || 0;
+      const baseScore = isCorrect ? 100 : 0;
+      const speedBonus = isCorrect ? Math.max(0, totalScore - baseScore) : 0;
+
+      return {
+        isCorrect,
+        baseScore,
+        speedBonus,
+        totalScore,
+        responseTimeMs: timeMs,
+        selectedIndex,
+        selectedOption,
+        correctIndex: item.correct_index,
+        correctOption:
+          wasmEval.correct_option || item.correct_option || (options[item.correct_index] || ""),
+        meaning:
+          wasmEval.meaning ||
+          wasmEval.plain_english ||
+          item.meaning ||
+          item.plain_english ||
+          "Mental model context unavailable.",
+        rule:
+          wasmEval.rule ||
+          wasmEval.explanation ||
+          item.rule ||
+          item.explanation ||
+          "Grammar rule explanation unavailable.",
+        triggerSentence: item.trigger_sentence || item.template || item.prompt || "",
+      };
+    } catch (wasmErr) {
+      console.warn("Wasm evaluate_arcade_choice_wasm failed, falling back to JS:", wasmErr);
+    }
+  }
+
+  // 2. Fallback JS evaluation
+  const isCorrect = selectedIndex === item.correct_index;
+  const speedBonus = isCorrect ? calculateSpeedBonus(timeMs) : 0;
+  const baseScore = isCorrect ? 100 : 0;
+  const totalScore = baseScore + speedBonus;
 
   return {
     isCorrect,
     baseScore,
     speedBonus,
     totalScore,
-    responseTimeMs: typeof responseTimeMs === "number" ? Math.round(responseTimeMs) : 0,
+    responseTimeMs: timeMs,
     selectedIndex,
     selectedOption,
     correctIndex: item.correct_index,
@@ -664,11 +875,132 @@ export function evaluateExercise(frame, userInput, accentMode = "Forgiving") {
     };
   }
 
-  const target = (frame.target || "").trim();
+  const target = (frame.target || frame.solution || "").trim();
   const rawInput = (userInput || "").trim();
-  const extractedAnswer = extractAnswerFromSubmission(frame.template, rawInput);
+  const extractedAnswer = extractAnswerFromSubmission(frame.template || frame.raw_content, rawInput);
   const answer = extractedAnswer || rawInput;
 
+  // 1. Try Rust WebAssembly evaluation first if available
+  if (wasmReady && typeof wasmExports?.evaluate_exercise_wasm === "function" && frame.id) {
+    try {
+      const rawWasmResult = wasmExports.evaluate_exercise_wasm(frame.id, answer);
+      const wasmEval =
+        typeof rawWasmResult === "string" ? JSON.parse(rawWasmResult) : rawWasmResult;
+
+      if (wasmEval && wasmEval.error_code !== "NOT_FOUND") {
+        const expectedSolution = wasmEval.solution || target;
+        const foldedTarget = normalizeSpanish(expectedSolution, true);
+        const foldedAnswer = normalizeSpanish(answer, true);
+        const foldMatch = foldedAnswer === foldedTarget;
+
+        const meaning =
+          wasmEval.meaning ||
+          wasmEval.plain_english ||
+          frame.meaning ||
+          frame.plain_english ||
+          "";
+        const rule =
+          wasmEval.rule ||
+          wasmEval.explanation ||
+          frame.rule ||
+          frame.explanation ||
+          "";
+
+        // Correct exact or acceptable alternative match
+        if (wasmEval.is_correct) {
+          return {
+            isValid: true,
+            score: 100,
+            feedback: "✓ CORRECT!",
+            accentError: false,
+            accentWarning: wasmEval.notice || null,
+            meaning,
+            rule,
+            expected: expectedSolution,
+            actual: answer,
+            diagnostic: wasmEval.diagnostic || null,
+            errorCode: wasmEval.error_code || null,
+          };
+        }
+
+        // Fold match (spelling matches ignoring accents)
+        if (foldMatch) {
+          if (accentMode === "Strict") {
+            return {
+              isValid: false,
+              score: 0,
+              feedback: `✗ Accent mismatch: Expected '${expectedSolution}', got '${answer}'. Strict mode requires exact diacritics.`,
+              accentError: true,
+              accentWarning: null,
+              meaning,
+              rule,
+              expected: expectedSolution,
+              actual: answer,
+              diagnostic: wasmEval.diagnostic || null,
+              errorCode: wasmEval.error_code || null,
+            };
+          }
+
+          if (accentMode === "Off") {
+            return {
+              isValid: true,
+              score: 100,
+              feedback: "✓ CORRECT!",
+              accentError: false,
+              accentWarning: null,
+              meaning,
+              rule,
+              expected: expectedSolution,
+              actual: answer,
+              diagnostic: null,
+              errorCode: null,
+            };
+          }
+
+          // Default: Forgiving mode -> Valid with helpful reminder warning
+          return {
+            isValid: true,
+            score: 100,
+            feedback: "✓ CORRECT!",
+            accentError: false,
+            accentWarning: `ℹ Note: Remember the accent mark on '${expectedSolution}' (you typed '${answer}').`,
+            meaning,
+            rule,
+            expected: expectedSolution,
+            actual: answer,
+            diagnostic: null,
+            errorCode: null,
+          };
+        }
+
+        // Incorrect answer with compiler diagnostic or error message
+        const feedbackMsg = wasmEval.error_message
+          ? `✗ ${wasmEval.error_message}`
+          : `✗ INCORRECT. Expected '${expectedSolution}', got '${answer}'.`;
+
+        return {
+          isValid: false,
+          score: 0,
+          feedback: feedbackMsg,
+          accentError: false,
+          accentWarning: null,
+          meaning,
+          rule,
+          expected: expectedSolution,
+          actual: answer,
+          diagnostic: wasmEval.diagnostic || null,
+          errorCode: wasmEval.error_code || null,
+        };
+      }
+    } catch (wasmErr) {
+      console.warn(
+        "Wasm evaluate_exercise_wasm failed, falling back to JS evaluator:",
+        wasmErr
+      );
+    }
+  }
+
+  // 2. Fallback JS evaluation
   const exactMatch = answer === target;
   const foldedTarget = normalizeSpanish(target, true);
   const foldedAnswer = normalizeSpanish(answer, true);
@@ -1058,7 +1390,7 @@ export class SpanglingsPlaygroundApp {
 
     this.renderDiagnosticsView(result);
     this.renderSyllabusView();
-    this.updateStatusPill("ready", "Ready");
+    this.updateStatusPill("ready", isWasmReady() ? "Rust Wasm Active" : "Ready");
     return result;
   }
 
@@ -1274,7 +1606,9 @@ export class SpanglingsPlaygroundApp {
    * @param {string} [url="assets/playground/playground-bundle.json"]
    */
   async loadBundle(url = "assets/playground/playground-bundle.json") {
-    this.updateStatusPill("loading", "Loading bundle...");
+    this.updateStatusPill("loading", "Bootstrapping Spanglings Engine...");
+    const wasmOk = await initWasm();
+
     try {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status} fetching bundle`);
@@ -1282,11 +1616,42 @@ export class SpanglingsPlaygroundApp {
       this.arcadeEngine.bundle = this.bundle;
       this._selectInitialExercise();
       this.render();
-      this.updateStatusPill("ready", "Ready");
+
+      if (wasmOk) {
+        this.updateStatusPill("ready", "● Rust Wasm Engine Active");
+      } else {
+        this.updateStatusPill("fallback", "○ Wasm Fallback Mode");
+      }
     } catch (err) {
-      console.error("Failed to load playground bundle:", err);
-      this.updateStatusPill("error", "Failed to load bundle");
-      this.showToast("Failed to load playground bundle.", "error");
+      console.warn("Failed to load playground bundle from network/disk:", err);
+      const wasmCatalog = getCurriculumCatalog();
+      if (wasmCatalog && Array.isArray(wasmCatalog.exercises)) {
+        this.bundle = {
+          topics: [],
+          frames: wasmCatalog.exercises.map((ex) => ({
+            id: ex.id,
+            level: ex.level,
+            topic: ex.topic,
+            title: ex.title,
+            template: ex.raw_content || `${ex.prompt_cue || ""} ___`,
+            target: ex.solution,
+            solution: ex.solution,
+            meaning: ex.meaning || ex.plain_english,
+            rule: ex.rule || ex.explanation,
+            plain_english: ex.plain_english,
+            explanation: ex.explanation,
+            hints: ex.hints || [],
+          })),
+          arcade_items: wasmArcadeCatalog ? wasmArcadeCatalog.items : [],
+        };
+        this.arcadeEngine.bundle = this.bundle;
+        this._selectInitialExercise();
+        this.render();
+        this.updateStatusPill("ready", "● Rust Wasm Engine Active");
+      } else {
+        this.updateStatusPill("error", "Failed to load bundle");
+        this.showToast("Failed to load playground bundle.", "error");
+      }
     }
   }
 
@@ -2234,11 +2599,17 @@ export class SpanglingsPlaygroundApp {
 
 // Auto-initialize if running in a browser environment with mount element
 if (typeof window !== "undefined") {
+  window.initWasm = initWasm;
+  window.isWasmReady = isWasmReady;
+  window.getWasmStatus = getWasmStatus;
+  window.getCurriculumCatalog = getCurriculumCatalog;
+  window.getArcadeCatalog = getArcadeCatalog;
   window.SpanglingsPlaygroundApp = SpanglingsPlaygroundApp;
   window.SpanglingsArcadeEngine = SpanglingsArcadeEngine;
   window.calculateSpeedBonus = calculateSpeedBonus;
   window.normalizeModeSlug = normalizeModeSlug;
   window.filterArcadePool = filterArcadePool;
+  window.evaluateExercise = evaluateExercise;
   window.evaluateArcadeChoice = evaluateArcadeChoice;
   window.SHOWDOWN_PAIRS = SHOWDOWN_PAIRS;
   window.SPECIALIZED_ENGINES = SPECIALIZED_ENGINES;
