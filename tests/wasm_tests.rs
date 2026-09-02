@@ -262,7 +262,7 @@ fn test_calculate_sm2_review_wasm() {
 fn test_evaluate_exercise_wasm_accent_handling() {
     let catalog_json = get_curriculum_catalog_json();
     let catalog: WasmCurriculumCatalog = serde_json::from_str(&catalog_json).unwrap();
-    
+
     // Find an exercise that contains accented characters in the solution and does not list the unaccented form in alternatives
     let accented_ex = catalog.exercises.iter().find(|e| {
         let has_accent = e.solution.contains('á')
@@ -280,7 +280,9 @@ fn test_evaluate_exercise_wasm_accent_handling() {
             .replace('í', "i")
             .replace('ó', "o")
             .replace('ú', "u");
-        !e.alternatives.iter().any(|alt| alt.eq_ignore_ascii_case(&unaccented))
+        !e.alternatives
+            .iter()
+            .any(|alt| alt.eq_ignore_ascii_case(&unaccented))
     });
 
     if let Some(ex) = accented_ex {
@@ -318,7 +320,8 @@ fn test_all_wasm_exports_json_structure() {
     assert!(cat_val.get("exercises").is_some());
 
     // 2. Exercise evaluation JSON
-    let eval_val: Value = serde_json::from_str(&evaluate_exercise_wasm("ser_estar_1", "soy")).unwrap();
+    let eval_val: Value =
+        serde_json::from_str(&evaluate_exercise_wasm("ser_estar_1", "soy")).unwrap();
     assert!(eval_val.get("is_correct").is_some());
     assert!(eval_val.get("meaning").is_some());
     assert!(eval_val.get("plain_english").is_some());
