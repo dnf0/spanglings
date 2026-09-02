@@ -57,10 +57,6 @@ extra_css:
   - assets/playground/playground.css
 
 not_in_nav: |
-  cli-reference.md
-  onboarding-guide.md
-  grammar-reference.md
-  getting-started.md
   superpowers/**
   adr/**
   BACKLOG.md
