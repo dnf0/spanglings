@@ -8,8 +8,10 @@ on:
       - "docs/**"
       - "mkdocs.yml"
       - ".github/workflows/docs.yml"
-      - "scripts/build_playground_bundle.py"
-      - "src/core/**"
+      - "scripts/**"
+      - "src/**"
+      - "exercises/**"
+      - "Cargo.lock"
       - "Cargo.toml"
   workflow_dispatch:
 
@@ -25,6 +27,16 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Set up Rust & wasm32 target
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -39,9 +51,9 @@ jobs:
         run: |
           uv pip install --system mkdocs-material
 
-      - name: Build Playground Bundle
+      - name: Build WebAssembly Engine & Bundle
         run: |
-          python scripts/build_playground_bundle.py
+          python scripts/build_wasm.py
 
       - name: Deploy to GitHub Pages
         run: |
