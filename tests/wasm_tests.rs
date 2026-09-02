@@ -252,6 +252,96 @@ fn test_calculate_sm2_review_wasm() {
     // Verify valid JSON object serialization
     let raw_val: Value = serde_json::from_str(&res_json).unwrap();
     assert!(raw_val.get("next_review_due").is_some());
+    assert!(raw_val.get("meaning").is_some());
     assert!(raw_val.get("plain_english").is_some());
+    assert!(raw_val.get("rule").is_some());
     assert!(raw_val.get("explanation").is_some());
+}
+
+#[test]
+fn test_evaluate_exercise_wasm_accent_handling() {
+    let catalog_json = get_curriculum_catalog_json();
+    let catalog: WasmCurriculumCatalog = serde_json::from_str(&catalog_json).unwrap();
+    
+    // Find an exercise that contains accented characters in the solution and does not list the unaccented form in alternatives
+    let accented_ex = catalog.exercises.iter().find(|e| {
+        let has_accent = e.solution.contains('á')
+            || e.solution.contains('é')
+            || e.solution.contains('í')
+            || e.solution.contains('ó')
+            || e.solution.contains('ú');
+        if !has_accent {
+            return false;
+        }
+        let unaccented = e
+            .solution
+            .replace('á', "a")
+            .replace('é', "e")
+            .replace('í', "i")
+            .replace('ó', "o")
+            .replace('ú', "u");
+        !e.alternatives.iter().any(|alt| alt.eq_ignore_ascii_case(&unaccented))
+    });
+
+    if let Some(ex) = accented_ex {
+        // Exact submission must pass
+        let eval_exact: WasmExerciseEvaluation =
+            serde_json::from_str(&evaluate_exercise_wasm(&ex.id, &ex.solution)).unwrap();
+        assert!(eval_exact.is_correct);
+
+        // Stripped accent submission should fail under strict accent mode in evaluate_exercise_wasm
+        let unaccented = ex
+            .solution
+            .replace('á', "a")
+            .replace('é', "e")
+            .replace('í', "i")
+            .replace('ó', "o")
+            .replace('ú', "u");
+        if unaccented != ex.solution {
+            let eval_unaccented: WasmExerciseEvaluation =
+                serde_json::from_str(&evaluate_exercise_wasm(&ex.id, &unaccented)).unwrap();
+            assert!(
+                !eval_unaccented.is_correct,
+                "Strict accent mode should reject missing accents for {}",
+                ex.id
+            );
+            assert!(eval_unaccented.error_code.is_some());
+        }
+    }
+}
+
+#[test]
+fn test_all_wasm_exports_json_structure() {
+    // 1. Curriculum catalog JSON
+    let cat_val: Value = serde_json::from_str(&get_curriculum_catalog_json()).unwrap();
+    assert!(cat_val.get("count").is_some());
+    assert!(cat_val.get("exercises").is_some());
+
+    // 2. Exercise evaluation JSON
+    let eval_val: Value = serde_json::from_str(&evaluate_exercise_wasm("ser_estar_1", "soy")).unwrap();
+    assert!(eval_val.get("is_correct").is_some());
+    assert!(eval_val.get("meaning").is_some());
+    assert!(eval_val.get("plain_english").is_some());
+    assert!(eval_val.get("rule").is_some());
+    assert!(eval_val.get("explanation").is_some());
+
+    // 3. Arcade catalog JSON
+    let arc_val: Value = serde_json::from_str(&get_arcade_catalog_json("por-para")).unwrap();
+    assert!(arc_val.get("mode").is_some());
+    assert!(arc_val.get("available_modes").is_some());
+    assert!(arc_val.get("items").is_some());
+
+    // 4. Arcade choice evaluation JSON
+    let choice_val: Value =
+        serde_json::from_str(&evaluate_arcade_choice_wasm("por-para_0", "por", 250)).unwrap();
+    assert!(choice_val.get("is_correct").is_some());
+    assert!(choice_val.get("score_delta").is_some());
+    assert!(choice_val.get("meaning").is_some());
+    assert!(choice_val.get("rule").is_some());
+
+    // 5. SM-2 review JSON
+    let sm2_val: Value = serde_json::from_str(&calculate_sm2_review_wasm(2.5, 1, 1, 4)).unwrap();
+    assert!(sm2_val.get("repetitions").is_some());
+    assert!(sm2_val.get("interval_days").is_some());
+    assert!(sm2_val.get("ease_factor").is_some());
 }

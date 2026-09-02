@@ -94,9 +94,16 @@ impl AppState {
         if let Some(override_path) = std::env::var_os("SPANGLINGS_STATE_PATH") {
             return PathBuf::from(override_path);
         }
-        dirs::config_dir()
-            .map(|p| p.join("spanglings").join("state.json"))
-            .unwrap_or_else(|| PathBuf::from(".spanglings_state.json"))
+        #[cfg(not(target_arch = "wasm32"))]
+        {
+            dirs::config_dir()
+                .map(|p| p.join("spanglings").join("state.json"))
+                .unwrap_or_else(|| PathBuf::from(".spanglings_state.json"))
+        }
+        #[cfg(target_arch = "wasm32")]
+        {
+            PathBuf::from(".spanglings_state.json")
+        }
     }
 
     pub fn load() -> Result<Self> {

@@ -1,6 +1,9 @@
+#[cfg(not(target_arch = "wasm32"))]
 use clap::Parser;
+#[cfg(not(target_arch = "wasm32"))]
 use spanglings::cli::{Cli, Commands};
 
+#[cfg(not(target_arch = "wasm32"))]
 fn main() -> anyhow::Result<()> {
     let cli = Cli::parse();
     match cli.command {
@@ -178,3 +181,6 @@ fn main() -> anyhow::Result<()> {
     }
     Ok(())
 }
+
+#[cfg(target_arch = "wasm32")]
+fn main() {}
