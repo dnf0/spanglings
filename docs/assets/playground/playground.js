@@ -113,7 +113,11 @@ export async function initWasm(wasmOptionsOrPath = null) {
 
     let initArgs = wasmOptionsOrPath;
     if (!initArgs) {
-      initArgs = "./pkg/spanglings_bg.wasm";
+      try {
+        initArgs = new URL("pkg/spanglings_bg.wasm", import.meta.url).href;
+      } catch (_) {
+        initArgs = undefined;
+      }
     }
 
     if (typeof initArgs === "object" && initArgs !== null && initArgs.module_or_path) {
@@ -1605,25 +1609,51 @@ export class SpanglingsPlaygroundApp {
    *
    * @param {string} [url="assets/playground/playground-bundle.json"]
    */
-  async loadBundle(url = "assets/playground/playground-bundle.json") {
+  async loadBundle(url = null) {
     this.updateStatusPill("loading", "Bootstrapping Spanglings Engine...");
     const wasmOk = await initWasm();
 
-    try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`HTTP ${res.status} fetching bundle`);
-      this.bundle = await res.json();
-      this.arcadeEngine.bundle = this.bundle;
-      this._selectInitialExercise();
-      this.render();
+    const candidateUrls = url
+      ? [url]
+      : [
+          (() => {
+            try {
+              return new URL("playground-bundle.json", import.meta.url).href;
+            } catch (_) {
+              return "../assets/playground/playground-bundle.json";
+            }
+          })(),
+          "../assets/playground/playground-bundle.json",
+          "assets/playground/playground-bundle.json",
+          "./assets/playground/playground-bundle.json",
+          "./playground-bundle.json",
+        ];
 
+    let loaded = false;
+    for (const targetUrl of candidateUrls) {
+      try {
+        const res = await fetch(targetUrl);
+        if (res.ok) {
+          this.bundle = await res.json();
+          this.arcadeEngine.bundle = this.bundle;
+          this._selectInitialExercise();
+          this.render();
+          loaded = true;
+          break;
+        }
+      } catch (_) {
+        // try next candidate
+      }
+    }
+
+    if (loaded) {
       if (wasmOk) {
         this.updateStatusPill("ready", "● Rust Wasm Engine Active");
       } else {
         this.updateStatusPill("fallback", "○ Wasm Fallback Mode");
       }
-    } catch (err) {
-      console.warn("Failed to load playground bundle from network/disk:", err);
+    } else {
+      console.warn("Failed to load playground bundle from candidate URLs.");
       const wasmCatalog = getCurriculumCatalog();
       if (wasmCatalog && Array.isArray(wasmCatalog.exercises)) {
         this.bundle = {
@@ -2618,15 +2648,22 @@ if (typeof window !== "undefined") {
   window.initThemeObserver = initThemeObserver;
   window.updateStatusPill = updateStatusPill;
 
-  if (typeof document !== "undefined" && typeof window.addEventListener === "function") {
-    window.addEventListener("DOMContentLoaded", async () => {
+  if (typeof document !== "undefined") {
+    const mountApp = async () => {
       const appMount = document.getElementById("spanglings-app");
-      if (appMount) {
+      if (appMount && !window.spanglingsPlayground) {
         const app = new SpanglingsPlaygroundApp({ containerId: "spanglings-app" });
         await app.loadBundle();
         window.spanglingsPlayground = app;
       }
-    });
+    };
+
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+      mountApp();
+    } else if (typeof window.addEventListener === "function") {
+      window.addEventListener("DOMContentLoaded", mountApp);
+      window.addEventListener("load", mountApp);
+    }
   }
 }
 

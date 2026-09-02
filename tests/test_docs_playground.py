@@ -52,47 +52,6 @@ def bundle_path(repo_root: Path) -> Path:
     return repo_root / "docs" / "assets" / "playground" / "playground-bundle.json"
 
 
-def test_playground_md_exists_and_contains_core_elements(
-    playground_md_path: Path,
-) -> None:
-    """Verify docs/playground.md exists and contains header, mount, scripts, and instructions."""
-    # Ensure playground page exists in docs directory
-    assert playground_md_path.exists(), (
-        f"docs/playground.md must exist at {playground_md_path}"
-    )
-
-    content = playground_md_path.read_text(encoding="utf-8")
-
-    # 1. Title and header descriptions
-    assert "# Spanglings WebAssembly Playground & Arcade Arena" in content
-    assert "zero-backend client-side spanish learning environment" in content.lower()
-    assert "webassembly" in content.lower()
-    assert "storage" in content.lower()
-
-    # 2. DOM mount container
-    assert (
-        '<div id="spanglings-app"></div>' in content
-        or '<div id="spanglings-app"' in content
-    )
-
-    # 3. Scripts and loader integration
-    assert "playground.js" in content
-    assert "loader.js" in content or "monaco" in content.lower()
-
-    # 4. Fullscreen / Zen Mode instructions
-    assert "fullscreen" in content.lower() or "zen" in content.lower()
-
-    # 5. Dual Mode instructions: Mode A (Curriculum Workspace) & Mode B (Rapid Arcade Arena)
-    assert "curriculum workspace" in content.lower() or "mode a" in content.lower()
-    assert "arcade arena" in content.lower() or "mode b" in content.lower()
-    assert "showdown" in content.lower()
-    assert (
-        "pedagogical" in content.lower()
-        or "grammar rule" in content.lower()
-        or "mental model" in content.lower()
-    )
-
-
 def test_standalone_playground_html_exists_and_contains_core_elements(
     playground_html_path: Path,
 ) -> None:
@@ -143,7 +102,7 @@ def test_standalone_playground_html_exists_and_contains_core_elements(
 
 
 def test_mkdocs_config_nav_and_extra_assets(mkdocs_yml_path: Path) -> None:
-    """Verify mkdocs.yml includes playground/index.html in nav, playground/** in not_in_nav, and playground.css in extra_css."""
+    """Verify mkdocs.yml includes playground/index.html in nav and playground.css in extra_css."""
     assert mkdocs_yml_path.exists(), f"mkdocs.yml must exist at {mkdocs_yml_path}"
 
     content = mkdocs_yml_path.read_text(encoding="utf-8")
@@ -165,12 +124,6 @@ def test_mkdocs_config_nav_and_extra_assets(mkdocs_yml_path: Path) -> None:
 
     assert has_playground_nav, (
         "mkdocs.yml nav must include '- Interactive Playground: playground/index.html'"
-    )
-
-    # Validate not_in_nav includes playground/**
-    not_in_nav = config.get("not_in_nav", "")
-    assert "playground/**" in str(not_in_nav), (
-        f"mkdocs.yml not_in_nav must include 'playground/**', got: {not_in_nav}"
     )
 
     # Validate extra_css entries

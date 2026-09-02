@@ -1,14 +1,14 @@
 {
   "Cargo.toml": {
-    "mtime": 1788367687.821151,
-    "seen": 1788374486.6177611,
-    "ast_hash": "bd0dcbfd533f4419f87d81265ffc3c0c",
+    "mtime": 1788379678.0534632,
+    "seen": 1788382806.485752,
+    "ast_hash": "6553bb0af9b9626ca4810d9945f9b754",
     "semantic_hash": ""
   },
   "src/main.rs": {
-    "mtime": 1787989995.3785949,
-    "seen": 1787999854.781446,
-    "ast_hash": "f9057eeecf70625b086340f9bb764e14",
+    "mtime": 1788379761.1614034,
+    "seen": 1788382806.485794,
+    "ast_hash": "e4c46b0a37b01118d90bfd3c087950af",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-08-26-spanglings-implementation.md": {
@@ -42,9 +42,9 @@
     "semantic_hash": ""
   },
   "src/lib.rs": {
-    "mtime": 1788366134.258947,
-    "seen": 1788374486.617793,
-    "ast_hash": "f398790ddedd9ad894834b29e2222677",
+    "mtime": 1788379684.686144,
+    "seen": 1788382806.485792,
+    "ast_hash": "827f4d07d0a82fa105d5fb4895116214",
     "semantic_hash": ""
   },
   "tests/exercise_parser_tests.rs": {
@@ -114,9 +114,9 @@
     "semantic_hash": ""
   },
   "src/core/state.rs": {
-    "mtime": 1788007030.2496004,
-    "seen": 1788009256.383052,
-    "ast_hash": "55938c7fca8a50990dee0f6d964a0618",
+    "mtime": 1788379732.1773813,
+    "seen": 1788382806.4857888,
+    "ast_hash": "718285b1c4c0f125a78b3a61bf60349f",
     "semantic_hash": ""
   },
   "tests/srs_tests.rs": {
@@ -2268,9 +2268,9 @@
     "semantic_hash": ""
   },
   ".github/workflows/docs.yml": {
-    "mtime": 1788373570.767378,
-    "seen": 1788374486.617815,
-    "ast_hash": "32b36bdbfca889376a6e0aa4079a86b3",
+    "mtime": 1788381906.413183,
+    "seen": 1788382806.4858181,
+    "ast_hash": "7824f1a875ad9a2aba31e20450ca1a7d",
     "semantic_hash": ""
   },
   "CONTRIBUTING.md": {
@@ -2328,9 +2328,9 @@
     "semantic_hash": ""
   },
   "mkdocs.yml": {
-    "mtime": 1788373541.1920009,
-    "seen": 1788374486.617976,
-    "ast_hash": "f2aff00588e1a4b7ac8c96d137301a1d",
+    "mtime": 1788382016.597462,
+    "seen": 1788382806.4860108,
+    "ast_hash": "e2533be85802d63255da18e6420cb804",
     "semantic_hash": ""
   },
   "docs/adr/0003-language-completeness-and-expanded-ontology.md": {
@@ -2898,8 +2898,8 @@
     "semantic_hash": ""
   },
   "src/core/arcade.rs": {
-    "mtime": 1788365375.465521,
-    "seen": 1788374486.617785,
+    "mtime": 1788378207.3478265,
+    "seen": 1788382806.485783,
     "ast_hash": "bdff72ec803dce404d9ddd05feb4c8f7",
     "semantic_hash": ""
   },
@@ -3006,81 +3006,81 @@
     "semantic_hash": ""
   },
   "docs/assets/playground/playground-bundle.json": {
-    "mtime": 1788373687.8494716,
-    "seen": 1788374486.617764,
+    "mtime": 1788382303.5803983,
+    "seen": 1788382806.485759,
     "ast_hash": "49b332451b4794ab8b570132680a0325",
     "semantic_hash": ""
   },
   "docs/assets/playground/playground.js": {
-    "mtime": 1788372688.3643641,
-    "seen": 1788374486.6177652,
-    "ast_hash": "e48106584273009b9d736a74aeb2e2b9",
+    "mtime": 1788381835.8012533,
+    "seen": 1788382806.48576,
+    "ast_hash": "176ee88a245eb7426d58fbb116dda235",
     "semantic_hash": ""
   },
   "docs/assets/playground/storage.js": {
-    "mtime": 1788371423.8128765,
-    "seen": 1788374486.6177652,
-    "ast_hash": "72abfa03c8d60b7aee3892a6710723b9",
+    "mtime": 1788381099.7019205,
+    "seen": 1788382806.48576,
+    "ast_hash": "eb300c59a416512d11932c5971f518dd",
     "semantic_hash": ""
   },
   "pyproject.toml": {
-    "mtime": 1788369079.874861,
-    "seen": 1788374486.617773,
+    "mtime": 1788378207.346263,
+    "seen": 1788382806.485767,
     "ast_hash": "d99b66f1f4c1c648265756588097b511",
     "semantic_hash": ""
   },
   "scripts/__init__.py": {
-    "mtime": 1788368684.0429876,
-    "seen": 1788374486.617774,
+    "mtime": 1788378207.346492,
+    "seen": 1788382806.4857678,
     "ast_hash": "633d1e3919a344abd3fe223ee9650125",
     "semantic_hash": ""
   },
   "scripts/build_playground_bundle.py": {
-    "mtime": 1788369003.096566,
-    "seen": 1788374486.617774,
+    "mtime": 1788378207.347273,
+    "seen": 1788382806.485769,
     "ast_hash": "395080468c8fcac763320c0fb3d1ad55",
     "semantic_hash": ""
   },
   "src/wasm.rs": {
-    "mtime": 1788366134.2884111,
-    "seen": 1788374486.6177971,
+    "mtime": 1788378207.3493633,
+    "seen": 1788382806.4857972,
     "ast_hash": "4662aa445a54b87c41233a1a51702117",
     "semantic_hash": ""
   },
   "tests/test_arcade_ui.py": {
-    "mtime": 1788372802.4933538,
-    "seen": 1788374486.6178088,
-    "ast_hash": "0b988584b02128001494b2d802b459b8",
+    "mtime": 1788378207.3496392,
+    "seen": 1788382806.485811,
+    "ast_hash": "ab97334753d6ecd63c4ef9b76fd41781",
     "semantic_hash": ""
   },
   "tests/test_docs_playground.py": {
-    "mtime": 1788373607.5375357,
-    "seen": 1788374486.61781,
-    "ast_hash": "1c6286a45a20d777ffd2dd525637a525",
+    "mtime": 1788381973.4524314,
+    "seen": 1788382806.485812,
+    "ast_hash": "593e7628ca2740795e8371e6a947df5d",
     "semantic_hash": ""
   },
   "tests/test_playground_bundle.py": {
-    "mtime": 1788369003.0964155,
-    "seen": 1788374486.617811,
+    "mtime": 1788378207.3501337,
+    "seen": 1788382806.485812,
     "ast_hash": "c6d00e5019937b2cb9bb7b9009f9f5ca",
     "semantic_hash": ""
   },
   "tests/test_playground_ui.py": {
-    "mtime": 1788371855.0035536,
-    "seen": 1788374486.617811,
-    "ast_hash": "2f4ee7914d18af76578e52834efb28b2",
+    "mtime": 1788381564.4556546,
+    "seen": 1788382806.485813,
+    "ast_hash": "69b9b720b41d2a8e281ab610d1aeb8ce",
     "semantic_hash": ""
   },
   "tests/test_storage_parity.py": {
-    "mtime": 1788370222.6079276,
-    "seen": 1788374486.617811,
+    "mtime": 1788378207.3506534,
+    "seen": 1788382806.485813,
     "ast_hash": "79efbf82de618779e3150d62523ff451",
     "semantic_hash": ""
   },
   "tests/wasm_tests.rs": {
-    "mtime": 1788366134.32042,
-    "seen": 1788374486.617813,
-    "ast_hash": "ac44f173efe3a139662779646a83d0a1",
+    "mtime": 1788380102.4227848,
+    "seen": 1788382806.485816,
+    "ast_hash": "d6ac8d947697161998f13a0cc23b66a7",
     "semantic_hash": ""
   },
   "AGENTS.md": {
@@ -3090,21 +3090,99 @@
     "semantic_hash": ""
   },
   "docs/playground.md": {
-    "mtime": 1788373532.965902,
-    "seen": 1788374486.617822,
+    "mtime": 1788378207.3350878,
+    "seen": 1788382806.485827,
     "ast_hash": "5d356295217123eada437d8ea30d348d",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-09-02-browser-wasm-learning-platform.md": {
-    "mtime": 1788364008.7412422,
-    "seen": 1788374486.617834,
+    "mtime": 1788378207.3358493,
+    "seen": 1788382806.485842,
     "ast_hash": "ae1b1bdcd0773b769d71b048ccdc2235",
     "semantic_hash": ""
   },
   "docs/superpowers/specs/2026-09-02-full-browser-wasm-learning-platform-design.md": {
-    "mtime": 1788363745.635511,
-    "seen": 1788374486.617841,
+    "mtime": 1788378207.3363485,
+    "seen": 1788382806.4858508,
     "ast_hash": "c587f3146e89cd30c83b0da3f2dca13e",
+    "semantic_hash": ""
+  },
+  "docs/assets/playground/pkg/package.json": {
+    "mtime": 1788382303.5256782,
+    "seen": 1788382806.485755,
+    "ast_hash": "21d431218b03071598b2fe4ed70dbe3f",
+    "semantic_hash": ""
+  },
+  "docs/assets/playground/pkg/spanglings.d.ts": {
+    "mtime": 1788382302.345379,
+    "seen": 1788382806.485756,
+    "ast_hash": "aa1ecffa86aef15091c42e2aa2c0e2dd",
+    "semantic_hash": ""
+  },
+  "docs/assets/playground/pkg/spanglings.js": {
+    "mtime": 1788382302.3451853,
+    "seen": 1788382806.485756,
+    "ast_hash": "dd3f9e759449d5ebe79f337588a5c9be",
+    "semantic_hash": ""
+  },
+  "docs/assets/playground/pkg/spanglings_bg.wasm.d.ts": {
+    "mtime": 1788382302.3455799,
+    "seen": 1788382806.4857569,
+    "ast_hash": "432de2d5b3255019a572c60b0a625953",
+    "semantic_hash": ""
+  },
+  "scripts/build_wasm.py": {
+    "mtime": 1788380485.6898682,
+    "seen": 1788382806.485769,
+    "ast_hash": "e351c30bd29d90e8152416efb1a9a864",
+    "semantic_hash": ""
+  },
+  "tests/test_wasm_package.py": {
+    "mtime": 1788380495.4543808,
+    "seen": 1788382806.485814,
+    "ast_hash": "b7a4a5f677a64dd342f0664f36ffac71",
+    "semantic_hash": ""
+  },
+  "tests/test_wasm_ui_integration.py": {
+    "mtime": 1788381526.0907712,
+    "seen": 1788382806.485814,
+    "ast_hash": "6be706eda06fcefd2ac6c9120c111cb3",
+    "semantic_hash": ""
+  },
+  "docs/assets/playground/pkg/README.md": {
+    "mtime": 1787850695.236116,
+    "seen": 1788382806.485824,
+    "ast_hash": "ae7d707fff2d349a82115c4cda1434db",
+    "semantic_hash": ""
+  },
+  "docs/playground/index.html": {
+    "mtime": 1788378207.3354697,
+    "seen": 1788382806.485827,
+    "ast_hash": "83f8db6375e3c563f51d527f6e71c8d4",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-09-02-kubelings-style-alignment.md": {
+    "mtime": 1788378207.3361053,
+    "seen": 1788382806.485843,
+    "ast_hash": "81b77f4c18bf8517a3e1807c4482539a",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-09-02-true-rust-wasm-engine.md": {
+    "mtime": 1788379305.6483111,
+    "seen": 1788382806.485843,
+    "ast_hash": "fb80eceb59ce8a28ca15d9130d10b631",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-09-02-kubelings-style-alignment-design.md": {
+    "mtime": 1788378207.3366492,
+    "seen": 1788382806.4858508,
+    "ast_hash": "c1d8331d55d8fa0074ca937e5532fcc5",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-09-02-true-rust-wasm-engine-design.md": {
+    "mtime": 1788379251.1318722,
+    "seen": 1788382806.485852,
+    "ast_hash": "fda454eccf3c49b80a69af6ea30a5ce5",
     "semantic_hash": ""
   }
 }
