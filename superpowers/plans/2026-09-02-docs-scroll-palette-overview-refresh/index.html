@@ -12,7 +12,7 @@
         <meta name="author" content="Spanglings Contributors">
       
       
-        <link rel="canonical" href="https://dnf0.github.io/spanglings/superpowers/plans/2026-08-29-high-yield-arcade-drill-engines/">
+        <link rel="canonical" href="https://dnf0.github.io/spanglings/superpowers/plans/2026-09-02-docs-scroll-palette-overview-refresh/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Implementation Plan: 5 High-Yield Advanced Drill Engines - Spanglings</title>
+        <title>Docs Scrolling, Modern Palette, and Overview Refresh Plan - Spanglings</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#implementation-plan-5-high-yield-advanced-drill-engines" class="md-skip">
+        <a href="#docs-scrolling-modern-palette-and-overview-refresh-plan" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Implementation Plan: 5 High-Yield Advanced Drill Engines
+              Docs Scrolling, Modern Palette, and Overview Refresh Plan
             
           </span>
         </div>
@@ -417,13 +417,52 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tasks-overview" class="md-nav__link">
+  <a href="#global-constraints" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tasks Overview
+        Global Constraints
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Global Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-fix-documentation-scrolling-css-scoping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Fix Documentation Scrolling &amp; CSS Scoping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-modernize-palette-color-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Modernize Palette &amp; Color Scheme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-overhaul-modernize-docs-overview-docsindexmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Overhaul &amp; Modernize Docs Overview (docs/index.md)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -447,47 +486,74 @@
   
 
 
-<h1 id="implementation-plan-5-high-yield-advanced-drill-engines">Implementation Plan: 5 High-Yield Advanced Drill Engines</h1>
-<p><strong>Branch:</strong> <code>feat/high-yield-arcade-engines</code><br />
-<strong>Spec Reference:</strong> <a href="file:///Users/danielfisher/repos/spanglings/docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md"><code>docs/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design.md</code></a></p>
-<hr />
-<h2 id="tasks-overview">Tasks Overview</h2>
+<h1 id="docs-scrolling-modern-palette-and-overview-refresh-plan">Docs Scrolling, Modern Palette, and Overview Refresh Plan</h1>
+<blockquote>
+<p><strong>For agentic workers:</strong> REQUIRED SUB-SKILL: Choose an execution mode:
+1. <code>superpowers:subagent-driven-development</code> (recommended for multi-agent reviews, backed by <code>SKILL.state</code> / <code>.agent-state/state.json</code>)
+2. <code>agent-rules:stateful-execution</code> (SKILL.state) (recommended for deterministic single-agent linear execution)
+3. <code>superpowers:executing-plans</code> (batch execution with manual checkpoints)
+Steps use checkbox (<code>- [ ]</code>) syntax for tracking.</p>
+</blockquote>
+<p><strong>Goal:</strong> Restore full vertical scrolling across all MkDocs pages, modernize the documentation color palette from harsh red/amber to clean indigo/slate, and rewrite <code>docs/index.md</code> to cleanly showcase the Language Manual, Dual WebAssembly Playground, and Syllabus without legacy cruft.</p>
+<p><strong>Architecture:</strong>
+1. Isolate playground layout CSS by removing <code>docs/assets/playground/playground.css</code> from <code>mkdocs.yml</code> <code>extra_css</code> and removing global <code>html, body { overflow: hidden; }</code> from <code>playground.css</code>. Add <code>docs/assets/extra.css</code> for clean MkDocs styling.
+2. Update <code>mkdocs.yml</code> theme palette to use <code>primary: indigo</code> and <code>accent: indigo</code> (and <code>scheme: slate</code> for dark mode), matching modern developer doc standards.
+3. Overhaul <code>docs/index.md</code> to highlight the three core pillars: Spanish Language Manual, Interactive Web Playground (Curriculum + Arcade), and Syllabus.</p>
+<p><strong>Tech Stack:</strong> Python 3.12, MkDocs Material, CSS3, Pytest.</p>
+<h2 id="global-constraints">Global Constraints</h2>
 <ul>
-<li>[ ] <strong>Task 1: Core Engine Implementation (<code>src/core/arcade.rs</code>)</strong></li>
-<li>Implement curated sentence pools for:<ul>
-<li>Prepositional Regimen (<code>ENGINE_REGIMEN_POOL</code>)</li>
-<li>Irregular Verb Speed Gun (<code>ENGINE_IRREGULARS_POOL</code>)</li>
-<li>False Friends Trap Detector (<code>ENGINE_FALSE_FRIENDS_POOL</code>)</li>
-<li>The "Se" Matrix (<code>ENGINE_SE_MATRIX_POOL</code>)</li>
-<li>Discourse Connectors &amp; Flow (<code>ENGINE_CONNECTORS_POOL</code>)</li>
+<li>All 65+ pytest tests and 101 cargo tests must pass.</li>
+<li><code>mkdocs build --strict</code> must pass without warnings or broken links.</li>
+<li>No global <code>overflow: hidden</code> on documentation pages.</li>
+<li>Palette must use professional, high-contrast Material colors (indigo/slate).</li>
 </ul>
-</li>
-<li>Implement <code>generate_specialized_engine_items(slug, count)</code> and integrate into <code>generate_4choice_items</code> &amp; <code>select_arcade_items</code>.</li>
-<li>
-<p>Add tests in <code>tests/arcade_tests.rs</code> verifying item generation, valid distractor counts, and explanation completeness for all 5 engines.</p>
-</li>
-<li>
-<p>[ ] <strong>Task 2: CLI Command &amp; Argument Dispatch (<code>src/cli/commands/arcade.rs</code>, <code>src/cli/mod.rs</code>, <code>src/main.rs</code>)</strong></p>
-</li>
-<li>Update CLI argument parser and topic matcher to handle all 5 engine slugs and their aliases (<code>regimen</code>, <code>prepositions</code>, <code>irregulars</code>, <code>verbs</code>, <code>false-friends</code>, <code>cognates</code>, <code>se</code>, <code>se-matrix</code>, <code>connectors</code>, <code>discourse</code>).</li>
-<li>Update <code>select_arcade_items</code> to include specialized engine items in the default mixed mode pool.</li>
-<li>
-<p>Update <code>tests/cli_arcade_tests.rs</code>.</p>
-</li>
-<li>
-<p>[ ] <strong>Task 3: TUI Integration &amp; Showdown/Engine Navigation Polish (<code>src/tui/app.rs</code>, <code>src/tui/ui.rs</code>, <code>src/tui/events.rs</code>)</strong></p>
-</li>
-<li>Ensure TUI arcade arena displays clear engine names and titles when launched with engine topics.</li>
-<li>
-<p>Update <code>tests/tui_arcade_tests.rs</code>.</p>
-</li>
-<li>
-<p>[ ] <strong>Task 4: Complete Verification, Formatting, &amp; Knowledge Graph Update</strong></p>
-</li>
-<li>Run <code>cargo test</code> across all suites.</li>
-<li>Run <code>cargo clippy --all-targets -- -D warnings</code> and <code>cargo fmt --check</code>.</li>
-<li>Run <code>uvx --from graphifyy graphify update .</code>.</li>
-<li>Conduct final code review and merge via PR.</li>
+<hr />
+<h3 id="task-1-fix-documentation-scrolling-css-scoping">Task 1: Fix Documentation Scrolling &amp; CSS Scoping</h3>
+<p><strong>Files:</strong>
+- Modify: <code>docs/assets/playground/playground.css:150-170</code>
+- Modify: <code>mkdocs.yml:55-60</code>
+- Create: <code>docs/assets/extra.css</code>
+- Modify: <code>tests/test_docs_playground.py</code></p>
+<p><strong>Interfaces:</strong>
+- Consumes: MkDocs Material layout structure
+- Produces: Unblocked vertical scrolling on all docs pages</p>
+<ul>
+<li>[ ] <strong>Step 1: Write failing test in <code>tests/test_docs_playground.py</code></strong></li>
+<li>[ ] <strong>Step 2: Run test to verify it fails</strong></li>
+<li>[ ] <strong>Step 3: Update <code>docs/assets/playground/playground.css</code>, <code>mkdocs.yml</code>, and create <code>docs/assets/extra.css</code></strong></li>
+<li>[ ] <strong>Step 4: Run tests to verify they pass</strong></li>
+<li>[ ] <strong>Step 5: Commit changes</strong></li>
+</ul>
+<hr />
+<h3 id="task-2-modernize-palette-color-scheme">Task 2: Modernize Palette &amp; Color Scheme</h3>
+<p><strong>Files:</strong>
+- Modify: <code>mkdocs.yml:8-25</code>
+- Modify: <code>docs/assets/extra.css</code>
+- Modify: <code>tests/test_docs_playground.py</code></p>
+<p><strong>Interfaces:</strong>
+- Consumes: MkDocs Material palette system
+- Produces: Polished indigo/slate dark and clean light themes</p>
+<ul>
+<li>[ ] <strong>Step 1: Write test for modern palette in <code>tests/test_docs_playground.py</code></strong></li>
+<li>[ ] <strong>Step 2: Run test to verify it fails</strong></li>
+<li>[ ] <strong>Step 3: Update <code>mkdocs.yml</code> palette configuration</strong></li>
+<li>[ ] <strong>Step 4: Run test to verify it passes</strong></li>
+<li>[ ] <strong>Step 5: Commit changes</strong></li>
+</ul>
+<hr />
+<h3 id="task-3-overhaul-modernize-docs-overview-docsindexmd">Task 3: Overhaul &amp; Modernize Docs Overview (<code>docs/index.md</code>)</h3>
+<p><strong>Files:</strong>
+- Modify: <code>docs/index.md</code>
+- Modify: <code>tests/test_docs_playground.py</code></p>
+<p><strong>Interfaces:</strong>
+- Consumes: Language Manual, Playground, and Syllabus URLs
+- Produces: High-impact, streamlined Spanglings landing page</p>
+<ul>
+<li>[ ] <strong>Step 1: Write test for index overview in <code>tests/test_docs_playground.py</code></strong></li>
+<li>[ ] <strong>Step 2: Run test to verify it fails</strong></li>
+<li>[ ] <strong>Step 3: Update <code>docs/index.md</code></strong></li>
+<li>[ ] <strong>Step 4: Run tests to verify they pass</strong></li>
+<li>[ ] <strong>Step 5: Commit changes</strong></li>
 </ul>
 
 

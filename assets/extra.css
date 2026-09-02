@@ -1,0 +1,99 @@
+/* ==============================================================================
+   Spanglings Documentation Theme Enhancements
+   Palette: Indigo / Slate Dark & Clean Light
+   ============================================================================== */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+/* Ensure unhindered scrolling */
+body, .md-main, .md-content {
+  overflow-y: visible !important;
+}
+
+/* Enhanced Cards Grid */
+.grid.cards > ul > li {
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 0.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid.cards > ul > li:hover {
+  transform: translateY(-2px);
+  border-color: var(--md-accent-fg-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+[data-md-color-scheme="slate"] .grid.cards > ul > li:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* Minimal Pair Tables & Decision Matrices */
+.md-typeset table:not([class]) {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  border-radius: 0.375rem;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: var(--md-primary-bg-color);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.65rem 0.85rem;
+}
+
+.md-typeset table:not([class]) td {
+  padding: 0.65rem 0.85rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+/* Topic Section Headings and Anchor Styling */
+.md-typeset h2 {
+  margin-top: 2rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.md-typeset h3 {
+  margin-top: 1.5rem;
+  font-weight: 600;
+}
+
+/* Dual-Layer Explanations Accentuation */
+.md-typeset .admonition.tip,
+.md-typeset details.tip {
+  border-left-color: #0284c7;
+}
+
+.md-typeset .admonition.note,
+.md-typeset details.note {
+  border-left-color: #6366f1;
+}
+
+/* Interactive Playground CTA Badges */
+.md-typeset a.action-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  margin: 0.25rem 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  background-color: var(--md-accent-fg-color--transparent);
+  color: var(--md-accent-fg-color);
+  border: 1px solid var(--md-accent-fg-color);
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.md-typeset a.action-cta:hover {
+  background-color: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color);
+}
