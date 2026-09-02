@@ -259,12 +259,12 @@ impl ArcadeItem {
 }
 
 #[derive(Debug, Clone)]
-struct ShowdownSentence {
-    sentence: &'static str,
-    target: &'static str,
-    distractor: &'static str,
-    explanation: &'static str,
-    plain_english: &'static str,
+pub struct ShowdownSentence {
+    pub sentence: &'static str,
+    pub target: &'static str,
+    pub distractor: &'static str,
+    pub explanation: &'static str,
+    pub plain_english: &'static str,
 }
 
 static SHOWDOWN_POR_PARA: &[ShowdownSentence] = &[
@@ -1675,7 +1675,7 @@ static SHOWDOWN_BIEN_BUENO: &[ShowdownSentence] = &[
     },
 ];
 
-fn get_showdown_pool(pair: ShowdownPair) -> &'static [ShowdownSentence] {
+pub fn get_showdown_pool(pair: ShowdownPair) -> &'static [ShowdownSentence] {
     match pair {
         ShowdownPair::PorPara => SHOWDOWN_POR_PARA,
         ShowdownPair::SerEstar => SHOWDOWN_SER_ESTAR,
