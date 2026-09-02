@@ -1390,7 +1390,7 @@ export class SpanglingsPlaygroundApp {
 
     this.renderDiagnosticsView(result);
     this.renderSyllabusView();
-    this.updateStatusPill("ready", "Ready");
+    this.updateStatusPill("ready", isWasmReady() ? "Rust Wasm Active" : "Ready");
     return result;
   }
 
