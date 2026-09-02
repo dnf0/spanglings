@@ -102,7 +102,7 @@ def test_standalone_playground_html_exists_and_contains_core_elements(
 
 
 def test_mkdocs_config_nav_and_extra_assets(mkdocs_yml_path: Path) -> None:
-    """Verify mkdocs.yml includes playground/index.html in nav and playground.css in extra_css."""
+    """Verify mkdocs.yml includes playground/index.html in nav and extra.css in extra_css."""
     assert mkdocs_yml_path.exists(), f"mkdocs.yml must exist at {mkdocs_yml_path}"
 
     content = mkdocs_yml_path.read_text(encoding="utf-8")
@@ -128,9 +128,56 @@ def test_mkdocs_config_nav_and_extra_assets(mkdocs_yml_path: Path) -> None:
 
     # Validate extra_css entries
     extra_css = config.get("extra_css", [])
-    assert any("playground.css" in str(css) for css in extra_css), (
-        f"mkdocs.yml extra_css must include playground.css, got: {extra_css}"
+    assert any("extra.css" in str(css) for css in extra_css), (
+        f"mkdocs.yml extra_css must include extra.css, got: {extra_css}"
     )
+    assert not any("playground.css" in str(css) for css in extra_css), (
+        "mkdocs.yml extra_css must NOT include playground.css (it belongs only in standalone playground HTML)"
+    )
+
+
+def test_mkdocs_theme_palette_is_indigo_slate(mkdocs_yml_path: Path) -> None:
+    """Verify mkdocs.yml uses clean indigo/slate palette instead of red/amber."""
+    content = mkdocs_yml_path.read_text(encoding="utf-8")
+    config = yaml.safe_load(content)
+    palette = config.get("theme", {}).get("palette", [])
+
+    assert len(palette) >= 2
+    for entry in palette:
+        assert entry.get("primary") == "indigo", f"Expected primary indigo, got {entry.get('primary')}"
+        assert entry.get("accent") == "indigo", f"Expected accent indigo, got {entry.get('accent')}"
+
+
+def test_playground_css_scopes_html_body_layout(repo_root: Path) -> None:
+    """Verify playground.css does not globally hide overflow on all document pages."""
+    playground_css = repo_root / "docs" / "assets" / "playground" / "playground.css"
+    content = playground_css.read_text(encoding="utf-8")
+    assert "html, body {\n  margin: 0;\n  padding: 0;\n  height: 100%;\n  overflow: hidden;" not in content
+
+
+def test_docs_overview_streamlined_dual_pillars(repo_root: Path) -> None:
+    """Verify docs/index.md highlights the Manual, Web Playground, and Syllabus without obsolete LSP configs."""
+    index_path = repo_root / "docs" / "index.md"
+    assert index_path.exists()
+    content = index_path.read_text(encoding="utf-8")
+
+    # Core 3 navigation cards
+    assert "Spanish Language Manual" in content
+    assert "Interactive Web Playground" in content
+    assert "Curriculum Syllabus" in content
+    assert "manual.md" in content
+    assert "playground/index.html" in content
+    assert "syllabus.md" in content
+
+    # Clean CLI quickstart
+    assert "cargo install spanglings" in content
+    assert "spanglings init" in content
+    assert "spanglings" in content
+
+    # Obsolete / bloated editor configs should be removed
+    assert "spanglings lsp" not in content
+    assert "nvim-lspconfig" not in content
+    assert "language-server.spanglings-lsp" not in content
 
 
 def test_docs_ci_workflow_builds_playground_bundle(
