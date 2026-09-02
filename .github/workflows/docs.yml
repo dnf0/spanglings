@@ -8,6 +8,9 @@ on:
       - "docs/**"
       - "mkdocs.yml"
       - ".github/workflows/docs.yml"
+      - "scripts/build_playground_bundle.py"
+      - "src/core/**"
+      - "Cargo.toml"
   workflow_dispatch:
 
 permissions:
@@ -35,6 +38,10 @@ jobs:
       - name: Install dependencies
         run: |
           uv pip install --system mkdocs-material
+
+      - name: Build Playground Bundle
+        run: |
+          python scripts/build_playground_bundle.py
 
       - name: Deploy to GitHub Pages
         run: |

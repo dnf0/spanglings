@@ -49,11 +49,15 @@ markdown_extensions:
 nav:
   - Overview: index.md
   - Getting Started: getting-started.md
+  - Interactive Playground: playground.md
   - Onboarding Guide: onboarding-guide.md
   - Curriculum Syllabus: syllabus.md
   - CLI & TUI Reference: cli-reference.md
   - Grammar Cheat Sheets: grammar-reference.md
   - Contributing: contributing.md
+
+extra_css:
+  - assets/playground/playground.css
 
 not_in_nav: |
   superpowers/**
