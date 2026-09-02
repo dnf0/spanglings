@@ -10,15 +10,15 @@ theme:
   palette:
     # Palette toggle for dark mode
     - scheme: slate
-      primary: red
-      accent: amber
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/weather-night
         name: Switch to light mode
     # Palette toggle for light mode
     - scheme: default
-      primary: red
-      accent: amber
+      primary: indigo
+      accent: indigo
       toggle:
         icon: material/weather-sunny
         name: Switch to dark mode
@@ -54,7 +54,7 @@ nav:
   - Contributing: contributing.md
 
 extra_css:
-  - assets/playground/playground.css
+  - assets/extra.css
 
 not_in_nav: |
   superpowers/**

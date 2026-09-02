@@ -153,7 +153,8 @@ html[data-theme="dark"] {
    2. Standalone Application Header & Edge-to-Edge Layout
    ============================================================================== */
 
-html, body {
+html:has(#standalone-playground-root),
+body:has(#standalone-playground-root) {
   margin: 0;
   padding: 0;
   height: 100%;
