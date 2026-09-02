@@ -49,7 +49,7 @@ markdown_extensions:
 nav:
   - Overview: index.md
   - Getting Started: getting-started.md
-  - Interactive Playground: playground.md
+  - Interactive Playground: playground/index.html
   - Onboarding Guide: onboarding-guide.md
   - Curriculum Syllabus: syllabus.md
   - CLI & TUI Reference: cli-reference.md
@@ -63,3 +63,5 @@ not_in_nav: |
   superpowers/**
   adr/**
   BACKLOG.md
+  playground/**
+  playground.md

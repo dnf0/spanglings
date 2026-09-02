@@ -29,6 +29,12 @@ def playground_md_path(repo_root: Path) -> Path:
 
 
 @pytest.fixture(scope="module")
+def playground_html_path(repo_root: Path) -> Path:
+    """Returns path to docs/playground/index.html."""
+    return repo_root / "docs" / "playground" / "index.html"
+
+
+@pytest.fixture(scope="module")
 def mkdocs_yml_path(repo_root: Path) -> Path:
     """Returns path to mkdocs.yml."""
     return repo_root / "mkdocs.yml"
@@ -87,8 +93,57 @@ def test_playground_md_exists_and_contains_core_elements(
     )
 
 
+def test_standalone_playground_html_exists_and_contains_core_elements(
+    playground_html_path: Path,
+) -> None:
+    """Verify docs/playground/index.html exists and contains standalone header, root, app mount, and scripts."""
+    assert playground_html_path.exists(), (
+        f"docs/playground/index.html must exist at {playground_html_path}"
+    )
+
+    content = playground_html_path.read_text(encoding="utf-8")
+
+    # 1. HTML5 document, lang, and data-theme
+    assert "<!DOCTYPE html>" in content or "<!doctype html>" in content.lower()
+    assert 'lang="en"' in content
+    assert 'data-theme="dark"' in content
+
+    # 2. Title
+    assert (
+        "Spanglings Playground — Interactive Spanish Learning Platform & Rapid Arcade Arena"
+        in content
+    )
+
+    # 3. Standalone Header and Brand elements
+    assert 'id="standalone-header"' in content
+    assert "🇪🇸" in content
+    assert "Spanglings" in content
+    assert "brand-badge" in content
+    assert "Interactive Playground" in content
+
+    # 4. Navigation links in header
+    assert 'href="../"' in content or "Documentation" in content
+    assert 'href="../syllabus/"' in content or "Syllabus" in content
+    assert "https://github.com/dnf0/spanglings" in content
+    assert 'id="theme-toggle-btn"' in content
+
+    # 5. Standalone Playground Root and Spanglings App Mount
+    assert 'id="standalone-playground-root"' in content
+    assert 'id="spanglings-app"' in content
+    assert "spanglings-playground" in content
+
+    # 6. Scripts & Loader integration
+    assert "loader.js" in content
+    assert "playground.js" in content
+    assert "storage.js" in content or "storage" in content.lower()
+
+    # 7. Theme persistence and switching script
+    assert "spanglings-theme" in content
+    assert "localStorage" in content
+
+
 def test_mkdocs_config_nav_and_extra_assets(mkdocs_yml_path: Path) -> None:
-    """Verify mkdocs.yml includes playground.md in nav and playground.css in extra_css."""
+    """Verify mkdocs.yml includes playground/index.html in nav, playground/** in not_in_nav, and playground.css in extra_css."""
     assert mkdocs_yml_path.exists(), f"mkdocs.yml must exist at {mkdocs_yml_path}"
 
     content = mkdocs_yml_path.read_text(encoding="utf-8")
@@ -100,12 +155,23 @@ def test_mkdocs_config_nav_and_extra_assets(mkdocs_yml_path: Path) -> None:
     for item in nav:
         if isinstance(item, dict):
             for title, target in item.items():
-                if "playground" in str(title).lower() or target == "playground.md":
+                if target == "playground/index.html" or (
+                    "playground" in str(title).lower()
+                    and "playground/index.html" in str(target)
+                ):
                     has_playground_nav = True
-        elif isinstance(item, str) and item == "playground.md":
+        elif isinstance(item, str) and item == "playground/index.html":
             has_playground_nav = True
 
-    assert has_playground_nav, "mkdocs.yml nav must include playground.md"
+    assert has_playground_nav, (
+        "mkdocs.yml nav must include '- Interactive Playground: playground/index.html'"
+    )
+
+    # Validate not_in_nav includes playground/**
+    not_in_nav = config.get("not_in_nav", "")
+    assert "playground/**" in str(not_in_nav), (
+        f"mkdocs.yml not_in_nav must include 'playground/**', got: {not_in_nav}"
+    )
 
     # Validate extra_css entries
     extra_css = config.get("extra_css", [])

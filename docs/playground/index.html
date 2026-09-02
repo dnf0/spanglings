@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spanglings Playground — Interactive Spanish Learning Platform & Rapid Arcade Arena</title>
+  <link rel="stylesheet" href="../assets/playground/playground.css" />
+  <script>
+    // Immediate theme bootstrap to prevent flash of light theme
+    (function () {
+      const savedTheme = localStorage.getItem("spanglings-theme") || "dark";
+      document.documentElement.setAttribute("data-theme", savedTheme);
+    })();
+  </script>
+</head>
+<body>
+  <!-- 48px Standalone Kubelings-style Header Navigation -->
+  <header id="standalone-header">
+    <div class="header-left">
+      <a href="../" class="brand-link">
+        <span class="brand-flag">🇪🇸</span>
+        <span class="brand-title">Spanglings</span>
+        <span class="brand-badge">⚡ Interactive Playground</span>
+      </a>
+    </div>
+    <div class="header-right">
+      <a href="../" class="nav-btn">📖 Documentation</a>
+      <a href="../syllabus/" class="nav-btn">📚 Syllabus</a>
+      <a href="https://github.com/dnf0/spanglings" target="_blank" rel="noopener noreferrer" class="nav-btn">GitHub</a>
+      <button id="theme-toggle-btn" class="nav-btn theme-toggle" title="Toggle Theme" aria-label="Toggle Theme">🌓 Theme</button>
+    </div>
+  </header>
+
+  <!-- Edge-to-Edge Standalone Playground Mount Container -->
+  <main id="standalone-playground-root">
+    <div id="spanglings-app" class="spanglings-playground"></div>
+  </main>
+
+  <!-- Monaco AMD Script Loader -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.js"></script>
+  <!-- Spanglings WebAssembly & Storage App Controller (imports storage.js) -->
+  <script type="module" src="../assets/playground/playground.js"></script>
+
+  <!-- Dynamic Theme Switcher and Monaco Synchronization Script -->
+  <script>
+    (function () {
+      const themeBtn = document.getElementById("theme-toggle-btn");
+      if (themeBtn) {
+        themeBtn.addEventListener("click", function () {
+          const currentTheme = document.documentElement.getAttribute("data-theme") || "dark";
+          const newTheme = currentTheme === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", newTheme);
+          localStorage.setItem("spanglings-theme", newTheme);
+          if (window.monaco && window.monaco.editor) {
+            window.monaco.editor.setTheme(newTheme === "dark" ? "vs-dark" : "vs");
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
