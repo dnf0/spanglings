@@ -1220,14 +1220,18 @@ html, body {
   overflow-y: auto;
 }
 
-.playground-container.arcade-mode .syllabus-pane,
-.playground-container.arcade-mode .editor-pane,
-.playground-container.arcade-mode .diagnostics-pane {
-  display: none;
+.spanglings-playground.arcade-mode .syllabus-pane,
+.spanglings-playground.arcade-mode .editor-pane,
+.spanglings-playground.arcade-mode .diagnostics-pane,
+#spanglings-app.arcade-mode .syllabus-pane,
+#spanglings-app.arcade-mode .editor-pane,
+#spanglings-app.arcade-mode .diagnostics-pane {
+  display: none !important;
 }
 
-.playground-container.arcade-mode .arcade-arena-container {
-  display: flex;
+.spanglings-playground.arcade-mode .arcade-arena-container,
+#spanglings-app.arcade-mode .arcade-arena-container {
+  display: flex !important;
 }
 
 .arcade-setup-card,

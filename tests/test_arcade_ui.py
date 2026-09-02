@@ -513,3 +513,23 @@ def test_arcade_css_structure_and_constraints(playground_css_path: Path) -> None
     # Zero sound/shake/flash animations constraint
     assert "@keyframes shake" not in content.lower()
     assert "@keyframes flash" not in content.lower()
+
+
+def test_arcade_css_selector_targets_spanglings_playground(
+    playground_css_path: Path,
+) -> None:
+    """Verify arcade-mode CSS selectors target .spanglings-playground.arcade-mode and #spanglings-app.arcade-mode."""
+    content = playground_css_path.read_text(encoding="utf-8")
+    assert (
+        ".spanglings-playground.arcade-mode" in content
+        or "#spanglings-app.arcade-mode" in content
+    )
+    assert (
+        ".spanglings-playground.arcade-mode .syllabus-pane" in content
+        or "#spanglings-app.arcade-mode .syllabus-pane" in content
+    )
+    assert (
+        ".spanglings-playground.arcade-mode .arcade-arena-container" in content
+        or "#spanglings-app.arcade-mode .arcade-arena-container" in content
+    )
+
