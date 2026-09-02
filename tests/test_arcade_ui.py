@@ -518,11 +518,12 @@ def test_arcade_css_structure_and_constraints(playground_css_path: Path) -> None
 def test_arcade_css_selector_targets_spanglings_playground(
     playground_css_path: Path,
 ) -> None:
-    """Verify arcade-mode CSS selectors target .spanglings-playground.arcade-mode and #spanglings-app.arcade-mode."""
+    """Verify arcade-mode CSS selectors target .spanglings-playground.arcade-mode, .playground-container.arcade-mode, and #spanglings-app.arcade-mode."""
     content = playground_css_path.read_text(encoding="utf-8")
     assert (
-        ".spanglings-playground.arcade-mode" in content
-        or "#spanglings-app.arcade-mode" in content
+        ".spanglings-playground.arcade-mode .playground-body" in content
+        or ".playground-container.arcade-mode .playground-body" in content
+        or "#spanglings-app.arcade-mode .playground-body" in content
     )
     assert (
         ".spanglings-playground.arcade-mode .syllabus-pane" in content
@@ -530,6 +531,42 @@ def test_arcade_css_selector_targets_spanglings_playground(
     )
     assert (
         ".spanglings-playground.arcade-mode .arcade-arena-container" in content
+        or ".playground-container.arcade-mode .arcade-arena-container" in content
         or "#spanglings-app.arcade-mode .arcade-arena-container" in content
     )
+
+
+def test_arcade_url_query_param_auto_starts_round(
+    playground_js_path: Path, storage_js_path: Path, bundle_path: Path
+) -> None:
+    """Verify deep linking with ?mode=arcade&topic=ser-estar auto-starts arcade round."""
+    script = """
+    const storage = new SpanglingsStorage('test_arcade_url_param_key');
+    const app = new SpanglingsPlaygroundApp({
+        containerId: 'spanglings-app',
+        storage: storage,
+    });
+    app.bundle = bundleData;
+    app.arcadeEngine.bundle = bundleData;
+
+    // Apply ?mode=arcade&topic=ser-vs-estar
+    app.applyUrlParams('?mode=arcade&topic=ser-vs-estar');
+
+    return {
+        currentMode: app.currentMode,
+        arcadeMode: app.arcadeEngine.mode,
+        arcadeState: app.arcadeEngine.state,
+        itemCount: app.arcadeEngine.items.length,
+        firstItemTopic: app.arcadeEngine.getCurrentItem()?.topic,
+    };
+    """
+    out = run_node_arcade_eval(playground_js_path, storage_js_path, bundle_path, script)
+    res = out["result"]
+
+    assert res["currentMode"] == "arcade"
+    assert res["arcadeMode"] == "ser-estar"
+    assert res["arcadeState"] == "question"
+    assert res["itemCount"] > 0
+    assert res["firstItemTopic"] == "ser-estar"
+
 

@@ -1250,11 +1250,21 @@ html, body {
   background-color: var(--pg-bg);
   padding: 2rem 1.5rem;
   overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.spanglings-playground.arcade-mode .playground-body,
+.playground-container.arcade-mode .playground-body,
+#spanglings-app.arcade-mode .playground-body {
+  display: none !important;
 }
 
 .spanglings-playground.arcade-mode .syllabus-pane,
 .spanglings-playground.arcade-mode .editor-pane,
 .spanglings-playground.arcade-mode .diagnostics-pane,
+.playground-container.arcade-mode .syllabus-pane,
+.playground-container.arcade-mode .editor-pane,
+.playground-container.arcade-mode .diagnostics-pane,
 #spanglings-app.arcade-mode .syllabus-pane,
 #spanglings-app.arcade-mode .editor-pane,
 #spanglings-app.arcade-mode .diagnostics-pane {
@@ -1262,8 +1272,12 @@ html, body {
 }
 
 .spanglings-playground.arcade-mode .arcade-arena-container,
+.playground-container.arcade-mode .arcade-arena-container,
 #spanglings-app.arcade-mode .arcade-arena-container {
   display: flex !important;
+  width: 100%;
+  height: calc(100% - var(--header-height));
+  box-sizing: border-box;
 }
 
 .arcade-setup-card,

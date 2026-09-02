@@ -1335,9 +1335,12 @@ export class SpanglingsPlaygroundApp {
           currBtn?.classList.remove("active");
         }
         if (topicParam) {
-          this.arcadeEngine.mode = normalizeModeSlug(topicParam);
+          const normalized = normalizeModeSlug(topicParam);
+          this.arcadeEngine.mode = normalized;
+          this.arcadeEngine.startRound(normalized, 10);
+        } else {
+          this.renderArcadeView();
         }
-        this.renderArcadeView();
       } else {
         if (modeParam === "curriculum") {
           this.currentMode = "curriculum";
