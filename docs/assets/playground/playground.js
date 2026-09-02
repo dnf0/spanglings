@@ -801,6 +801,107 @@ export function buildSyllabusModel(bundleData, storage) {
 }
 
 /**
+ * Synchronizes Monaco editor theme with active HTML document theme.
+ *
+ * @param {boolean} [isDark=null] - Optional explicit boolean flag; if omitted, detects from document.
+ * @returns {string} The active Monaco theme applied ("vs-dark" | "vs").
+ */
+export function syncMonacoTheme(isDark = null) {
+  let dark = isDark;
+  if (dark === null || typeof dark === "undefined") {
+    if (typeof document !== "undefined" && document.documentElement) {
+      const dataTheme = document.documentElement.getAttribute("data-theme");
+      const dataMdScheme = document.documentElement.getAttribute("data-md-color-scheme");
+      if (dataTheme === "light" || dataMdScheme === "default") {
+        dark = false;
+      } else if (dataTheme === "dark" || dataMdScheme === "slate") {
+        dark = true;
+      } else {
+        dark = true; // default dark/slate
+      }
+    } else {
+      dark = true;
+    }
+  }
+
+  const monacoTheme = dark ? "vs-dark" : "vs";
+  if (typeof window !== "undefined" && window.monaco?.editor?.setTheme) {
+    window.monaco.editor.setTheme(monacoTheme);
+  }
+  return monacoTheme;
+}
+
+/**
+ * Initializes a MutationObserver on document.documentElement to watch for theme changes
+ * and sync Monaco editor theme automatically.
+ *
+ * @param {Function} [onThemeChange=null] - Optional callback receiving (isDark, monacoTheme).
+ * @returns {MutationObserver|null} The initialized observer instance.
+ */
+export function initThemeObserver(onThemeChange = null) {
+  if (typeof document === "undefined" || typeof MutationObserver === "undefined") {
+    return null;
+  }
+
+  const observer = new MutationObserver((mutations) => {
+    for (const mutation of mutations) {
+      if (
+        mutation.type === "attributes" &&
+        (mutation.attributeName === "data-theme" ||
+          mutation.attributeName === "data-md-color-scheme")
+      ) {
+        const monacoTheme = syncMonacoTheme();
+        const isDark = monacoTheme === "vs-dark";
+        if (typeof onThemeChange === "function") {
+          onThemeChange(isDark, monacoTheme);
+        }
+      }
+    }
+  });
+
+  if (document.documentElement) {
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["data-theme", "data-md-color-scheme"],
+    });
+  }
+
+  return observer;
+}
+
+/**
+ * Updates the status pill indicator state and text label.
+ *
+ * @param {"loading"|"ready"|"running"|"error"} [state="ready"] - Status lifecycle state.
+ * @param {string} [text=""] - Optional custom label text.
+ */
+export function updateStatusPill(state = "ready", text = "") {
+  if (typeof document === "undefined") return;
+
+  const defaultLabels = {
+    loading: "Loading Wasm...",
+    ready: "Ready",
+    running: "Evaluating...",
+    error: "Error",
+  };
+
+  const labelText = text || defaultLabels[state] || state;
+  const pill = document.getElementById("playground-status-pill");
+  const dot = document.getElementById("status-dot") || pill?.querySelector?.(".status-dot");
+  const label = document.getElementById("status-label") || pill?.querySelector?.(".status-label");
+
+  if (dot) {
+    dot.className = `status-dot status-${state}`;
+  }
+  if (label) {
+    label.textContent = labelText;
+  }
+  if (pill) {
+    pill.className = `playground-status-pill status-${state}`;
+  }
+}
+
+/**
  * Main Controller class for the Spanglings Interactive Playground.
  */
 export class SpanglingsPlaygroundApp {
@@ -824,6 +925,13 @@ export class SpanglingsPlaygroundApp {
     this.monacoEditor = null;
     this.isMonacoReady = false;
 
+    // Theme MutationObserver
+    this.themeObserver = initThemeObserver((isDark, theme) => {
+      if (this.monacoEditor && typeof window !== "undefined" && window.monaco?.editor?.setTheme) {
+        window.monaco.editor.setTheme(theme);
+      }
+    });
+
     // Initialize Rapid Arcade Arena Engine
     this.arcadeEngine = new SpanglingsArcadeEngine({
       bundle: this.bundle,
@@ -840,6 +948,16 @@ export class SpanglingsPlaygroundApp {
     if (this.bundle) {
       this._selectInitialExercise();
     }
+  }
+
+  /**
+   * Updates the status pill indicator state and label.
+   *
+   * @param {"loading"|"ready"|"running"|"error"} [state="ready"]
+   * @param {string} [text=""]
+   */
+  updateStatusPill(state = "ready", text = "") {
+    updateStatusPill(state, text);
   }
 
   /**
@@ -919,6 +1037,8 @@ export class SpanglingsPlaygroundApp {
       return { isValid: false, feedback: "No exercise selected." };
     }
 
+    this.updateStatusPill("running", "Evaluating...");
+
     let input = inputOverride;
     if (input === null) {
       input = this.getEditorValue();
@@ -938,6 +1058,7 @@ export class SpanglingsPlaygroundApp {
 
     this.renderDiagnosticsView(result);
     this.renderSyllabusView();
+    this.updateStatusPill("ready", "Ready");
     return result;
   }
 
@@ -1087,22 +1208,40 @@ export class SpanglingsPlaygroundApp {
   }
 
   /**
-   * Toggles fullscreen layout.
+   * Toggles fullscreen / zen layout mode.
+   * Compatible with standalone #standalone-playground-root and embedded containers.
    */
   toggleFullscreen() {
+    if (typeof document === "undefined") return;
+
+    const standaloneRoot = document.getElementById("standalone-playground-root");
     const container = document.getElementById(this.containerId);
-    if (!container) return;
+    const targetElement = standaloneRoot || container;
+
+    if (!targetElement) return;
 
     if (!document.fullscreenElement) {
-      container.classList.add("fullscreen");
-      if (container.requestFullscreen) {
-        container.requestFullscreen().catch(() => {});
+      targetElement.classList.add("fullscreen");
+      if (container && container !== targetElement) {
+        container.classList.add("fullscreen");
+      }
+      if (targetElement.requestFullscreen) {
+        targetElement.requestFullscreen().catch(() => {});
       }
     } else {
-      container.classList.remove("fullscreen");
+      targetElement.classList.remove("fullscreen");
+      if (container && container !== targetElement) {
+        container.classList.remove("fullscreen");
+      }
       if (document.exitFullscreen) {
         document.exitFullscreen().catch(() => {});
       }
+    }
+
+    if (this.monacoEditor && typeof this.monacoEditor.layout === "function") {
+      setTimeout(() => {
+        this.monacoEditor?.layout?.();
+      }, 100);
     }
   }
 
@@ -1135,6 +1274,7 @@ export class SpanglingsPlaygroundApp {
    * @param {string} [url="assets/playground/playground-bundle.json"]
    */
   async loadBundle(url = "assets/playground/playground-bundle.json") {
+    this.updateStatusPill("loading", "Loading bundle...");
     try {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status} fetching bundle`);
@@ -1142,8 +1282,10 @@ export class SpanglingsPlaygroundApp {
       this.arcadeEngine.bundle = this.bundle;
       this._selectInitialExercise();
       this.render();
+      this.updateStatusPill("ready", "Ready");
     } catch (err) {
       console.error("Failed to load playground bundle:", err);
+      this.updateStatusPill("error", "Failed to load bundle");
       this.showToast("Failed to load playground bundle.", "error");
     }
   }
@@ -1155,6 +1297,10 @@ export class SpanglingsPlaygroundApp {
     if (typeof document === "undefined") return;
     const container = document.getElementById(this.containerId);
     if (!container) return;
+
+    if (!container.dataset) {
+      container.dataset = {};
+    }
 
     if (!container.dataset.mounted) {
       this._mountSkeleton(container);
@@ -1180,6 +1326,10 @@ export class SpanglingsPlaygroundApp {
         <div class="header-brand">
           <span>⚡ Spanglings</span>
           <span class="brand-badge">WASM Playground</span>
+          <div class="playground-status-pill" id="playground-status-pill">
+            <span class="status-dot status-ready" id="status-dot"></span>
+            <span class="status-label" id="status-label">Ready</span>
+          </div>
         </div>
         <div class="mode-switcher">
           <button id="mode-curriculum-btn" class="mode-btn active">📚 Curriculum Workspace</button>
@@ -1388,8 +1538,26 @@ export class SpanglingsPlaygroundApp {
       }
     });
 
+    // Window resize and fullscreen change listeners for editor layout
+    if (typeof window !== "undefined" && typeof window.addEventListener === "function") {
+      window.addEventListener("resize", () => {
+        if (this.monacoEditor && typeof this.monacoEditor.layout === "function") {
+          this.monacoEditor.layout();
+        }
+      });
+      if (typeof document !== "undefined" && typeof document.addEventListener === "function") {
+        document.addEventListener("fullscreenchange", () => {
+          if (this.monacoEditor && typeof this.monacoEditor.layout === "function") {
+            setTimeout(() => {
+              this.monacoEditor?.layout?.();
+            }, 100);
+          }
+        });
+      }
+    }
+
     // Global keyboard shortcuts
-    if (typeof window !== "undefined") {
+    if (typeof window !== "undefined" && typeof window.addEventListener === "function") {
       window.addEventListener("keydown", (e) => {
         if (this.currentMode === "arcade") {
           const activeTag = document.activeElement?.tagName?.toLowerCase();
@@ -1418,6 +1586,7 @@ export class SpanglingsPlaygroundApp {
   _initMonacoOrFallback() {
     const fallback = document.getElementById("fallback-textarea");
     const monacoMount = document.getElementById("monaco-editor-mount");
+    const initialTheme = syncMonacoTheme();
 
     if (typeof window !== "undefined" && window.require) {
       window.require.config({ paths: { vs: MONACO_CDN_BASE } });
@@ -1427,7 +1596,7 @@ export class SpanglingsPlaygroundApp {
           this.monacoEditor = window.monaco.editor.create(monacoMount, {
             value: this.getCurrentFrame()?.template || "",
             language: "markdown",
-            theme: "vs-dark",
+            theme: initialTheme,
             fontSize: 14,
             fontFamily: "var(--font-mono)",
             minimap: { enabled: false },
@@ -1443,6 +1612,7 @@ export class SpanglingsPlaygroundApp {
           );
 
           this.isMonacoReady = true;
+          this.updateStatusPill("ready", "Ready");
           if (fallback) fallback.style.display = "none";
         },
         (err) => {
@@ -2073,6 +2243,9 @@ if (typeof window !== "undefined") {
   window.SHOWDOWN_PAIRS = SHOWDOWN_PAIRS;
   window.SPECIALIZED_ENGINES = SPECIALIZED_ENGINES;
   window.HOTKEY_MAP = HOTKEY_MAP;
+  window.syncMonacoTheme = syncMonacoTheme;
+  window.initThemeObserver = initThemeObserver;
+  window.updateStatusPill = updateStatusPill;
 
   if (typeof document !== "undefined" && typeof window.addEventListener === "function") {
     window.addEventListener("DOMContentLoaded", async () => {

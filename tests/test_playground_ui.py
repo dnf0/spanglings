@@ -73,28 +73,150 @@ def run_node_playground_eval(
         }}
     }}
 
-    globalThis.localStorage = new MockLocalStorage();
-    globalThis.window = globalThis;
-    globalThis.document = {{
-        getElementById: () => null,
-        querySelector: () => null,
-        querySelectorAll: () => [],
-        createElement: (tag) => ({{
+    class MockClassList {{
+        constructor(element) {{
+            this._el = element;
+            this._classes = new Set();
+        }}
+        add(...tokens) {{
+            tokens.forEach(t => this._classes.add(t));
+            this._sync();
+        }}
+        remove(...tokens) {{
+            tokens.forEach(t => this._classes.delete(t));
+            this._sync();
+        }}
+        toggle(token) {{
+            const has = this._classes.has(token);
+            if (has) this._classes.delete(token);
+            else this._classes.add(token);
+            this._sync();
+            return !has;
+        }}
+        contains(token) {{
+            return this._classes.has(token);
+        }}
+        _sync() {{
+            this._el._className = Array.from(this._classes).join(' ');
+        }}
+    }}
+
+    function createMockElement(tag = 'DIV', id = '') {{
+        const el = {{
             tagName: tag.toUpperCase(),
+            id: id,
+            _className: '',
+            dataset: {{}},
             style: {{}},
-            classList: {{
-                add() {{}},
-                remove() {{}},
-                toggle() {{}},
-                contains() {{ return false; }}
+            children: [],
+            appendChild(child) {{ this.children.push(child); }},
+            setAttribute(name, val) {{ this['_' + name] = String(val); }},
+            getAttribute(name) {{ return this['_' + name] !== undefined ? this['_' + name] : null; }},
+            addEventListener(ev, fn) {{
+                this._listeners = this._listeners || {{}};
+                this._listeners[ev] = this._listeners[ev] || [];
+                this._listeners[ev].push(fn);
             }},
-            appendChild() {{}},
-            setAttribute() {{}},
-            getAttribute() {{ return null; }},
-            addEventListener() {{}},
+            dispatchEvent(ev) {{
+                const fns = (this._listeners && this._listeners[ev.type]) || [];
+                fns.forEach(fn => fn(ev));
+            }},
             innerHTML: '',
             textContent: '',
-        }}),
+            querySelector(sel) {{
+                if (sel.startsWith('.')) {{
+                    const cls = sel.slice(1);
+                    return this.classList.contains(cls) ? this : null;
+                }}
+                if (sel.startsWith('#')) {{
+                    const targetId = sel.slice(1);
+                    return this.id === targetId ? this : null;
+                }}
+                return null;
+            }},
+            querySelectorAll() {{ return []; }},
+        }};
+        el.classList = new MockClassList(el);
+        Object.defineProperty(el, 'className', {{
+            get() {{ return this._className; }},
+            set(v) {{
+                this._className = v;
+                this.classList._classes = new Set((v || '').split(/\\s+/).filter(Boolean));
+            }}
+        }});
+        return el;
+    }}
+
+    const elementsRegistry = new Map();
+    const mockDocumentElement = createMockElement('HTML');
+    mockDocumentElement.setAttribute('data-theme', 'dark');
+
+    globalThis.localStorage = new MockLocalStorage();
+    globalThis.window = globalThis;
+    globalThis.window.addEventListener = (ev, fn) => {{
+        globalThis.window._listeners = globalThis.window._listeners || {{}};
+        globalThis.window._listeners[ev] = globalThis.window._listeners[ev] || [];
+        globalThis.window._listeners[ev].push(fn);
+    }};
+    globalThis.window.__currentMonacoTheme = 'vs-dark';
+    globalThis.window.monaco = {{
+        editor: {{
+            setTheme(th) {{
+                globalThis.window.__currentMonacoTheme = th;
+            }},
+            create(mount, opts) {{
+                const inst = {{
+                    _opts: opts,
+                    getValue() {{ return this._val || opts.value || ''; }},
+                    setValue(v) {{ this._val = v; }},
+                    layout() {{ globalThis.window.__layoutCalled = (globalThis.window.__layoutCalled || 0) + 1; }},
+                    addCommand() {{}},
+                    getSelection() {{ return {{}}; }},
+                    executeEdits() {{}},
+                    focus() {{}},
+                }};
+                globalThis.window.__lastMonacoInstance = inst;
+                return inst;
+            }},
+        }},
+        KeyMod: {{ CtrlCmd: 2048 }},
+        KeyCode: {{ Enter: 3 }},
+    }};
+
+    globalThis.MutationObserver = class MockMutationObserver {{
+        constructor(callback) {{
+            this.callback = callback;
+            this.target = null;
+            this.options = null;
+            globalThis.__lastMutationObserver = this;
+        }}
+        observe(target, options) {{
+            this.target = target;
+            this.options = options;
+        }}
+        disconnect() {{}}
+        trigger(mutations) {{
+            if (this.callback) this.callback(mutations);
+        }}
+    }};
+
+    globalThis.document = {{
+        documentElement: mockDocumentElement,
+        body: createMockElement('BODY'),
+        getElementById(id) {{
+            if (!elementsRegistry.has(id)) {{
+                const el = createMockElement('DIV', id);
+                elementsRegistry.set(id, el);
+            }}
+            return elementsRegistry.get(id);
+        }},
+        querySelector(sel) {{
+            if (sel.startsWith('#')) return this.getElementById(sel.slice(1));
+            return null;
+        }},
+        querySelectorAll() {{ return []; }},
+        createElement: (tag) => createMockElement(tag),
+        addEventListener: () => {{}},
     }};
 
     import * as fs from 'fs';
@@ -107,6 +229,9 @@ def run_node_playground_eval(
         evaluateExercise,
         buildSyllabusModel,
         SpanglingsPlaygroundApp,
+        syncMonacoTheme,
+        initThemeObserver,
+        updateStatusPill,
     }} from '{playground_js_path.as_uri()}';
 
     const bundleData = JSON.parse(fs.readFileSync('{bundle_path.as_posix()}', 'utf-8'));
@@ -222,6 +347,7 @@ def test_playground_css_kubelings_theme_variables_and_standalone_layout(
     assert ".status-loading" in content
     assert ".status-ready" in content
     assert ".status-running" in content
+    assert ".status-error" in content
 
     # Action toolbar & rounded buttons
     assert ".playground-btn" in content
@@ -504,3 +630,170 @@ def test_playground_app_state_lifecycle(
     assert res["hint1Tier"] == 1
     assert res["hint2Tier"] == 2
     assert res["hint3Tier"] == 3
+
+
+def test_monaco_theme_sync_and_mutation_observer(
+    playground_js_path: Path, storage_js_path: Path, bundle_path: Path
+) -> None:
+    """Verify Monaco editor theme synchronization with data-theme/data-md-color-scheme mutations."""
+    script = """
+    // 1. Initial dark theme
+    document.documentElement.setAttribute('data-theme', 'dark');
+    const t1 = syncMonacoTheme();
+    const monacoTheme1 = globalThis.window.__currentMonacoTheme;
+
+    // 2. Switch to light theme
+    document.documentElement.setAttribute('data-theme', 'light');
+    const t2 = syncMonacoTheme();
+    const monacoTheme2 = globalThis.window.__currentMonacoTheme;
+
+    // 3. Switch via MkDocs slate color scheme
+    document.documentElement.setAttribute('data-theme', '');
+    document.documentElement.setAttribute('data-md-color-scheme', 'slate');
+    const t3 = syncMonacoTheme();
+    const monacoTheme3 = globalThis.window.__currentMonacoTheme;
+
+    // 4. Test MutationObserver integration
+    let observerCallbackTheme = null;
+    const observer = initThemeObserver((isDark, monacoTheme) => {
+        observerCallbackTheme = monacoTheme;
+    });
+
+    // Simulate mutation trigger
+    document.documentElement.setAttribute('data-theme', 'light');
+    if (globalThis.__lastMutationObserver) {
+        globalThis.__lastMutationObserver.trigger([
+            { type: 'attributes', attributeName: 'data-theme' }
+        ]);
+    }
+
+    const observerTriggeredTheme = observerCallbackTheme;
+
+    return {
+        t1, monacoTheme1,
+        t2, monacoTheme2,
+        t3, monacoTheme3,
+        observerTriggeredTheme
+    };
+    """
+    out = run_node_playground_eval(
+        playground_js_path, storage_js_path, bundle_path, script
+    )
+    res = out["result"]
+
+    assert res["t1"] == "vs-dark"
+    assert res["monacoTheme1"] == "vs-dark"
+    assert res["t2"] == "vs"
+    assert res["monacoTheme2"] == "vs"
+    assert res["t3"] == "vs-dark"
+    assert res["monacoTheme3"] == "vs-dark"
+    assert res["observerTriggeredTheme"] == "vs"
+
+
+def test_status_pill_lifecycle_state_management(
+    playground_js_path: Path, storage_js_path: Path, bundle_path: Path
+) -> None:
+    """Verify status pill transitions across loading, ready, running, and error states."""
+    script = """
+    const storage = new SpanglingsStorage('test_status_pill_key');
+    const app = new SpanglingsPlaygroundApp({
+        bundle: bundleData,
+        storage: storage,
+    });
+
+    // Setup DOM elements for status pill
+    const pill = document.getElementById('playground-status-pill');
+    const dot = document.getElementById('status-dot');
+    const label = document.getElementById('status-label');
+
+    // 1. Loading state
+    updateStatusPill('loading', 'Loading Wasm runtime...');
+    const loadingClass = dot.className;
+    const loadingText = label.textContent;
+
+    // 2. Ready state
+    updateStatusPill('ready', 'Ready');
+    const readyClass = dot.className;
+    const readyText = label.textContent;
+
+    // 3. Running state
+    updateStatusPill('running', 'Evaluating submission...');
+    const runningClass = dot.className;
+    const runningText = label.textContent;
+
+    // 4. Error state
+    updateStatusPill('error', 'Runtime compilation error');
+    const errorClass = dot.className;
+    const errorText = label.textContent;
+
+    // 5. App instance method integration
+    app.updateStatusPill('ready', 'Engine Ready');
+    const appReadyText = label.textContent;
+
+    return {
+        loadingClass, loadingText,
+        readyClass, readyText,
+        runningClass, runningText,
+        errorClass, errorText,
+        appReadyText
+    };
+    """
+    out = run_node_playground_eval(
+        playground_js_path, storage_js_path, bundle_path, script
+    )
+    res = out["result"]
+
+    assert "status-loading" in res["loadingClass"]
+    assert res["loadingText"] == "Loading Wasm runtime..."
+
+    assert "status-ready" in res["readyClass"]
+    assert res["readyText"] == "Ready"
+
+    assert "status-running" in res["runningClass"]
+    assert res["runningText"] == "Evaluating submission..."
+
+    assert "status-error" in res["errorClass"]
+    assert res["errorText"] == "Runtime compilation error"
+
+    assert res["appReadyText"] == "Engine Ready"
+
+
+def test_fullscreen_toggle_and_monaco_relayout(
+    playground_js_path: Path, storage_js_path: Path, bundle_path: Path
+) -> None:
+    """Verify fullscreen toggle compatibility with standalone root and Monaco relayout."""
+    script = """
+    const storage = new SpanglingsStorage('test_fullscreen_key');
+    const app = new SpanglingsPlaygroundApp({
+        bundle: bundleData,
+        storage: storage,
+    });
+
+    const root = document.getElementById('standalone-playground-root');
+    const container = document.getElementById('spanglings-app');
+
+    // Attach mock monaco editor
+    app.monacoEditor = globalThis.window.monaco.editor.create(null, {});
+
+    // Toggle fullscreen on
+    app.toggleFullscreen();
+    const isFullscreen1 = root.classList.contains('fullscreen');
+
+    // Toggle fullscreen off
+    document.fullscreenElement = root;
+    app.toggleFullscreen();
+    const isFullscreen2 = root.classList.contains('fullscreen');
+
+    return {
+        isFullscreen1,
+        isFullscreen2,
+    };
+    """
+    out = run_node_playground_eval(
+        playground_js_path, storage_js_path, bundle_path, script
+    )
+    res = out["result"]
+
+    assert res["isFullscreen1"] is True
+    assert res["isFullscreen2"] is False
+
