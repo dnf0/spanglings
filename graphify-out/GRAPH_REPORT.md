@@ -1,16 +1,16 @@
 # Graph Report - spanglings  (2026-09-02)
 
 ## Corpus Check
-- 523 files · ~308,141 words
+- 525 files · ~319,909 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 3792 nodes · 4671 edges · 484 communities (464 shown, 11 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 264 edges (avg confidence: 0.85)
+- 3966 nodes · 4859 edges · 501 communities (482 shown, 11 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 264 edges (avg confidence: 0.85)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `567395f2`
+- Built from commit: `2a463046`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -353,7 +353,7 @@
 - Grammar Reference Cards & Cheat Sheets
 - Contributing to Spanglings
 - Contributing to Spanglings
-- 📊 Curriculum Track Matrix
+- 📊 60-Track Curriculum Catalog Matrix
 - Spanglings MkDocs Material Documentation Site Implementation Plan
 - Spanglings 🇪🇸 🦀
 - search_exercises
@@ -444,7 +444,7 @@
 - Functional Semantic Grammar Keys & Communicative Glosses Implementation Plan
 - Global Constraints
 - test_wasm_ui_integration.py
-- exercise_validity_tests.rs
+- Tier 1: Foundations & Aspectual Geometry (A1–A2)
 - test_storage_parity.py
 - get_exercises_json
 - weakness_profiler_tests.rs
@@ -467,17 +467,18 @@
 - Symmetric Step-Inversion Ladder Concept Mastery Implementation Plan
 - test_docs_playground.py
 - evaluate_current_exercise_in
-- reference.rs
+- exercise_parser_tests.rs
+- 📐 Grammar Rules & Decision Matrix
 - export.rs
 - wasm.rs
 - get_embedded_exercises
 - Spanglings WebAssembly Browser Platform Design
-- Spanglings WebAssembly Playground & Arcade Arena
+- manual.md
 - Spanglings 🇪🇸 🦀
 - sync.rs
-- .load_from_path
+- .new
 - Global Constraints
-- run_init
+- Global Constraints
 - test_wasm_package.py
 - Spanglings Agent Guidance
 - __init__.py
@@ -489,13 +490,30 @@
 - Global Constraints
 - build_wasm
 - spanglings.d.ts
-- RawModeGuard
+- 2. Architecture & Design
+- 📐 Grammar Rules & Decision Matrix
+- Tier 2: Mood, Triggers & Pragmatic Voice (B1–B2)
+- Tier 3: Advanced Nuance, Registers & Edge Mechanics (B2–C1)
+- 📐 Grammar Rules & Decision Matrix
+- 📐 Grammar Rules & Decision Matrix
+- 📐 Grammar Rules & Decision Matrix
+- 📐 Grammar Rules & Decision Matrix
+- Interactive Learning Modes
+- 14. Possessive & Sympathetic Datives (Inalienable Possession) <span class="badge">B1–B2</span>
+- 16. Gerund Syntax & Pitfalls (Simultaneity vs. Banned Posteriority) <span class="badge">B1–B2</span>
+- 18. Scalar & Intensive Concession (`por más que`, `aun a riesgo de que`) <span class="badge">B2–C1</span>
+- 19. Epistemic Conjecture & Probability (Future/Conditional of Probability) <span class="badge">B2–C1</span>
+- 21. False Friends & Deceptive Cognates (`actual`, `realizar`, `pretender`) <span class="badge">B2–C1</span>
+- 22. Voseo & Regional Address Variations (Rioplatense & Central American) <span class="badge">B2–C1</span>
+- 23. Software Engineering & Technical Spanish (`desplegar`, `depurar`, `concurrencia`) <span class="badge">B2–C1</span>
+- 24. Legal, Statutory & Contractual Spanish (Statutory Subjunctive `-ere`) <span class="badge">B2–C1</span>
+- json_output_tests.rs
 
 ## God Nodes (most connected - your core abstractions)
 1. `App` - 94 edges
 2. `Exercise` - 51 edges
 3. `AppState` - 47 edges
-4. `SpanglingsPlaygroundApp` - 30 edges
+4. `SpanglingsPlaygroundApp` - 31 edges
 5. `get_reference_card()` - 30 edges
 6. `create_sample_exercises()` - 28 edges
 7. `validate_submission()` - 26 edges
@@ -504,6 +522,8 @@
 10. `new_test_app()` - 24 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `test_list_exercises_json_serialization()` --calls--> `get_exercises_json()`  [INFERRED]
+  tests/json_output_tests.rs → src/cli/commands/list.rs
 - `test_progress_json_serialization()` --calls--> `get_progress_json()`  [INFERRED]
   tests/json_output_tests.rs → src/cli/commands/progress.rs
 - `test_progress_json_includes_weak_topics_and_recommendations()` --calls--> `get_progress_json()`  [INFERRED]
@@ -512,13 +532,11 @@
   tests/tui_arcade_tests.rs → src/core/arcade.rs
 - `test_find_all_exercises_or_embedded_fallback()` --calls--> `find_all_exercises_or_embedded()`  [INFERRED]
   tests/embedded_tests.rs → src/core/curriculum.rs
-- `test_state_fast_track_level()` --calls--> `get_embedded_exercises()`  [INFERRED]
-  tests/srs_tests.rs → src/core/embedded.rs
 
 ## Import Cycles
 - 2-file cycle: `src/core/curriculum.rs -> src/core/exercise.rs -> src/core/curriculum.rs`
 
-## Communities (484 total, 11 thin omitted)
+## Communities (501 total, 11 thin omitted)
 
 ### Community 0 - "Spanglings Implementation Plan"
 Cohesion: 0.15
@@ -557,16 +575,16 @@ Cohesion: 0.25
 Nodes (7): Grammar Diagnostics & Compiler-Style Error Formatter Implementation Plan, Task 1: Scaffolding and Failing Tests, Task 2: Standard Error Codes, Task 3: Compiler-Style Diagnostics, Task 4: Accent Mode Integration and Module Exporting, Task 5: Core Validation Logic & Submission Evaluator, Task 6: Verification and Automated Quality Control
 
 ### Community 13 - "progress.rs"
-Cohesion: 0.20
-Nodes (21): BTreeMap, ActivitySummary, compute_activity_summary(), compute_weakness_profile(), get_progress_json(), LevelProgress, ProgressSummary, render_activity_heatmap() (+13 more)
+Cohesion: 0.19
+Nodes (22): BTreeMap, ActivitySummary, compute_activity_summary(), compute_weakness_profile(), get_progress_json(), LevelProgress, ProgressSummary, render_activity_heatmap() (+14 more)
 
 ### Community 14 - "Spanglings 🇪🇸 🦀"
 Cohesion: 0.09
 Nodes (22): 1. 🚀 Interactive Terminal UI (`spanglings` / `spanglings tui`), 2. ⚡ Modern Headless Watcher (`spanglings watch`), 3. 🎯 Diagnostic CEFR Placement Assessment (`spanglings test`), 4. 📖 In-Terminal Grammar Explainers (`spanglings explain`), 5. 🔄 Spaced Repetition Review (`spanglings review` & `spanglings drill`), 6. 🔌 Native Language Server Protocol (LSP) Integration, Architecture, Complete CLI Reference (+14 more)
 
 ### Community 15 - "reference_tests.rs"
-Cohesion: 0.11
-Nodes (27): get_reference_card(), list_reference_topics(), test_get_accents_reference_card(), test_get_accidental_se_reference_card(), test_get_adversatives_reference_card(), test_get_business_reference_card(), test_get_clitic_doubling_reference_card(), test_get_corrective_polarity_reference_card() (+19 more)
+Cohesion: 0.08
+Nodes (37): print_topic_catalog(), Option, Result, show_explanation(), get_grammar_concept(), get_mental_model_for_topic(), get_reference_card(), GrammarConcept (+29 more)
 
 ### Community 16 - "DrillItem"
 Cohesion: 0.05
@@ -1864,17 +1882,17 @@ Nodes (9): ✍️ Authoring Curriculum Exercises, Build & Run Tests, 🏗️ Cod
 Cohesion: 0.20
 Nodes (9): ✍️ Authoring Curriculum Exercises, Build & Run Tests, 🏗️ Codebase Architecture, Contributing to Spanglings 🤝, 🛠️ Development Setup, Exercise Format Specification, Exercise Requirements Checklist, 📋 Git Commit Standards (+1 more)
 
-### Community 345 - "📊 Curriculum Track Matrix"
-Cohesion: 0.22
-Nodes (8): 🟣 Advanced & Situational Synthesis (C1) • 154 Exercises, 🟢 Baseline Foundations (A1–A2) • 16 Exercises, Curriculum Syllabus & Knowledge Graph, 📊 Curriculum Track Matrix, 🟡 Intermediate Core (B1) • 74 Exercises, Key Graph Primitives, 🌐 The 81-Concept Linguistic Knowledge Graph, 🔵 Upper-Intermediate Mastery (B2) • 95 Exercises
+### Community 345 - "📊 60-Track Curriculum Catalog Matrix"
+Cohesion: 0.17
+Nodes (12): 🗺️ 24 Core Curriculum Topics & Studio Hub, 📊 60-Track Curriculum Catalog Matrix, 🟣 Advanced & Situational Synthesis (C1) • 154 Exercises, 🟢 Baseline Foundations (A1–A2) • 16 Exercises, Curriculum Syllabus & Knowledge Graph, 🟡 Intermediate Core (B1) • 74 Exercises, Key Graph Primitives, 🌐 The 81-Concept Linguistic Knowledge Graph (+4 more)
 
 ### Community 346 - "Spanglings MkDocs Material Documentation Site Implementation Plan"
 Cohesion: 0.29
 Nodes (6): Spanglings MkDocs Material Documentation Site Implementation Plan, Task 1: MkDocs Configuration & GitHub Pages Workflow, Task 2: Core Documentation Pages (Overview, Getting Started, Onboarding Guide), Task 3: Curriculum Syllabus, 53-Concept Ontology & Grammar Reference, Task 4: CLI Reference, Contributing Guides & Root Contributing File, Task 5: Build Verification, Link Integrity & Graphify Update
 
 ### Community 347 - "Spanglings 🇪🇸 🦀"
-Cohesion: 0.17
-Nodes (11): 1. 🚀 Interactive Terminal UI (`spanglings` / `spanglings tui`), 2. ⚡ Modern Headless Watcher (`spanglings watch`), 3. 🎯 Diagnostic CEFR Placement Assessment (`spanglings test`), 4. 📖 In-Terminal Grammar Explainers (`spanglings explain`), Architecture, Editor Integration (LSP) 🔌, Interactive Learning Modes, Pedagogical Philosophy: The Syntax Compiler Model (+3 more)
+Cohesion: 0.20
+Nodes (10): Architecture, Editor Integration (LSP) 🔌, 🏛️ Language Architecture: 24 Topics across 3 CEFR Tiers, Pedagogical Philosophy: The Syntax Compiler Model, Quickstart, Spanglings 🇪🇸 🦀, 🌐 The *lings Ecosystem, 🟢 Tier 1: Foundations & Aspectual Geometry (A1–A2) (+2 more)
 
 ### Community 348 - "search_exercises"
 Cohesion: 0.33
@@ -2220,17 +2238,17 @@ Nodes (5): Dual-Layer Explanations & Plain-English Mental Models Implementation 
 Cohesion: 0.11
 Nodes (30): bundle_path(), pkg_dir(), playground_css_path(), playground_js_path(), Any, fixture, Path, Tests for Spanglings Rust WebAssembly browser playground and arcade UI… (+22 more)
 
-### Community 436 - "exercise_validity_tests.rs"
-Cohesion: 0.47
-Nodes (5): collect_md_paths(), Path, PathBuf, Vec, test_all_curriculum_exercises_are_valid_and_solvable()
+### Community 436 - "Tier 1: Foundations & Aspectual Geometry (A1–A2)"
+Cohesion: 0.04
+Nodes (49): 1. Ser vs. Estar (Identity vs. State & Location) <span class="badge">A1–A2</span>, 2. Por vs. Para (Cause & Trajectory vs. Goal & Recipient) <span class="badge">A1–A2</span>, 3. Past Tenses & Aspect (Preterite vs. Imperfect) <span class="badge">A1–A2</span>, 4. Pronoun Stacking & Clitic Placement (`se lo`) <span class="badge">A1–A2</span>, 5. Verbs like Gustar & Inverted Dative Syntax <span class="badge">A1–A2</span>, 6. Reflexive Verbs & Inherent Proradical Actions <span class="badge">A1–A2</span>, 7. Stem-Changing Verbs & Boot Conjugations <span class="badge">A1–A2</span>, 8. Prepositional Regimen (Verbal Complements) <span class="badge">A1–A2</span> (+41 more)
 
 ### Community 437 - "test_storage_parity.py"
 Cohesion: 0.10
 Nodes (36): Any, fixture, Path, Tests for SpanglingsStorage browser state persistence engine. Validates that…, Verify that docs/assets/playground/storage.js exists., Verify default state matches Rust AppState structure., Verify marking exercise completed updates state, stats, and activity., Verify SM-2 calculation in storage.js matches Rust calculate_sm2_review. (+28 more)
 
 ### Community 438 - "get_exercises_json"
-Cohesion: 0.28
-Nodes (7): get_exercises_json(), list_exercises(), Option, Result, String, test_list_exercises_json_serialization(), test_progress_json_serialization()
+Cohesion: 0.47
+Nodes (5): get_exercises_json(), list_exercises(), Option, Result, String
 
 ### Community 441 - "Rapid Single-Key ADHD Arcade & Showdown Engine Implementation Plan"
 Cohesion: 0.33
@@ -2253,12 +2271,12 @@ Cohesion: 0.33
 Nodes (5): 1. Concept Summary, 2. Mathematical Progression Ladder, 3. Algorithm Details (`src/core/state.rs`), 4. Verification Requirements, Design Specification: Symmetric Step-Inversion Ladder Concept Mastery
 
 ### Community 447 - "select_arcade_items"
-Cohesion: 0.14
-Nodes (21): ArcadeChoiceResult, ArcadeMistake, ArcadeSessionStats, evaluate_arcade_choice(), get_combo_rank(), play_arcade_sound(), print_arcade_summary(), HashMap (+13 more)
+Cohesion: 0.12
+Nodes (24): ArcadeChoiceResult, ArcadeMistake, ArcadeSessionStats, evaluate_arcade_choice(), get_combo_rank(), play_arcade_sound(), print_arcade_summary(), RawModeGuard (+16 more)
 
 ### Community 448 - "ShowdownPair"
-Cohesion: 0.15
-Nodes (8): generate_showdown_items(), get_showdown_pool(), Err, FromStr, Result, Self, ShowdownPair, ShowdownSentence
+Cohesion: 0.17
+Nodes (6): generate_showdown_items(), Err, FromStr, Result, Self, ShowdownPair
 
 ### Community 449 - "Design Specification: Arcade Mode End-of-Session Mistakes Explanation & Review"
 Cohesion: 0.18
@@ -2273,12 +2291,12 @@ Cohesion: 0.33
 Nodes (5): Arcade Mistakes Explanation & Review Implementation Plan, Task 1: Core Mistake Recording & Data Model (`src/cli/commands/arcade.rs`, `tests/cli_arcade_tests.rs`), Task 2: CLI Summary Formatting & Breakdown (`src/cli/commands/arcade.rs`, `tests/cli_arcade_tests.rs`), Task 3: TUI Modal Recap Review Card & Layout (`src/tui/ui.rs`, `src/tui/app.rs`, `tests/tui_arcade_tests.rs`), Task 4: Complete Verification, Formatting & Release Polish
 
 ### Community 452 - "test_arcade_ui.py"
-Cohesion: 0.11
-Nodes (32): bundle_path(), playground_css_path(), playground_js_path(), Any, fixture, Path, Tests for the Spanglings Rapid Arcade Arena Engine. Validates…, Verify speed bonus formula (+1 point per 15ms under 1500ms, max 100). (+24 more)
+Cohesion: 0.10
+Nodes (34): bundle_path(), playground_css_path(), playground_js_path(), Any, fixture, Path, Tests for the Spanglings Rapid Arcade Arena Engine. Validates…, Verify speed bonus formula (+1 point per 15ms under 1500ms, max 100). (+26 more)
 
 ### Community 453 - "test_playground_ui.py"
-Cohesion: 0.09
-Nodes (40): bundle_path(), playground_css_path(), playground_js_path(), Any, fixture, Path, Tests for the Spanglings Interactive Split-Pane Workspace & Monaco Editor.…, Returns repository root directory. (+32 more)
+Cohesion: 0.07
+Nodes (46): bundle_path(), playground_css_path(), playground_js_path(), Any, fixture, Path, Tests for the Spanglings Interactive Split-Pane Workspace & Monaco Editor.…, Returns repository root directory. (+38 more)
 
 ### Community 454 - "SpanglingsStorage"
 Cohesion: 0.15
@@ -2293,36 +2311,40 @@ Cohesion: 0.50
 Nodes (3): Symmetric Step-Inversion Ladder Concept Mastery Implementation Plan, Task 1: Implement Symmetric Ladder in `src/core/state.rs` & Tests (`tests/weakness_profiler_tests.rs`), Task 2: Full Workspace Verification, Graphify & PR Integration
 
 ### Community 457 - "test_docs_playground.py"
-Cohesion: 0.11
-Nodes (27): bundle_path(), docs_workflow_path(), mkdocs_yml_path(), playground_html_path(), playground_md_path(), fixture, Path, Tests for the Spanglings MkDocs Playground Page, Fullscreen Layout & CI… (+19 more)
+Cohesion: 0.10
+Nodes (31): bundle_path(), docs_workflow_path(), mkdocs_yml_path(), playground_html_path(), playground_md_path(), fixture, Path, Tests for the Spanglings MkDocs Playground Page, Fullscreen Layout & CI… (+23 more)
 
 ### Community 458 - "evaluate_current_exercise_in"
 Cohesion: 0.19
 Nodes (18): AccentMode, clear_screen(), evaluate_current_exercise(), evaluate_current_exercise_in(), evaluate_exercise(), RawModeGuard, render_all_completed(), render_output() (+10 more)
 
-### Community 460 - "reference.rs"
-Cohesion: 0.26
-Nodes (11): print_topic_catalog(), Option, Result, show_explanation(), get_grammar_concept(), get_mental_model_for_topic(), GrammarConcept, list_grammar_concepts() (+3 more)
+### Community 459 - "exercise_parser_tests.rs"
+Cohesion: 0.17
+Nodes (5): collect_md_paths(), Path, PathBuf, Vec, test_all_curriculum_exercises_are_valid_and_solvable()
+
+### Community 460 - "📐 Grammar Rules & Decision Matrix"
+Cohesion: 0.22
+Nodes (9): 9. Present Subjunctive & WEIRDO Triggers <span class="badge">B1–B2</span>, 💡 Communicative Mental Model, Doubt vs. Certainty Minimal Pairs, 📐 Grammar Rules & Decision Matrix, Interactive Practice, Irregular Present Subjunctive Verbs (DISHES), Present Subjunctive Morphology: "Cross-Over Vowels", The WEIRDO Trigger Framework (+1 more)
 
 ### Community 461 - "export.rs"
 Cohesion: 0.29
 Nodes (13): generate_anki_tsv(), generate_json_export(), generate_markdown_notes(), html_escape(), Option, Result, String, run_export() (+5 more)
 
 ### Community 462 - "wasm.rs"
-Cohesion: 0.16
-Nodes (28): list_specialized_engines(), calculate_sm2_review_wasm(), evaluate_arcade_choice_wasm(), evaluate_exercise_wasm(), get_all_available_modes(), get_arcade_catalog_json(), get_curriculum_catalog_json(), Diagnostic (+20 more)
+Cohesion: 0.15
+Nodes (30): get_showdown_pool(), ShowdownSentence, calculate_sm2_review_wasm(), evaluate_arcade_choice_wasm(), evaluate_exercise_wasm(), exercise_to_wasm_item(), get_all_available_modes(), get_arcade_catalog_json() (+22 more)
 
 ### Community 463 - "get_embedded_exercises"
-Cohesion: 0.25
-Nodes (12): Dir, collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir(), P, Path, Result (+4 more)
+Cohesion: 0.15
+Nodes (17): Dir, Option, Result, run_init(), collect_from_embedded_dir(), extract_dir(), get_embedded_exercises(), init_exercises_dir() (+9 more)
 
 ### Community 464 - "Spanglings WebAssembly Browser Platform Design"
 Cohesion: 0.14
 Nodes (13): 1. Executive Summary, 2.1 Rust WebAssembly Crate (`crates/spanglings-wasm` or `src/wasm.rs`), 2.2 Static Web App Architecture (`docs/playground/` & `docs/assets/playground/`), 2. Architectural Blueprint, 3.1 State Schema (CLI Parity), 3.2 State Operations, 3. Client-Side State Persistence (`SpanglingsStorage`), 4.1 Split-Pane Syllabus Explorer (Left 320px) (+5 more)
 
-### Community 465 - "Spanglings WebAssembly Playground & Arcade Arena"
-Cohesion: 0.17
-Nodes (11): 1. 16 Binary Showdown Duels, 2. 5 Specialized Drill Engines, Arcade Controls & Rapid Answering, ⛶ Fullscreen & Zen Mode, Key Capabilities, 💾 Local Storage & CLI Synchronization, Mode A: Curriculum Workspace (Dual-Pane Editor), Mode B: Rapid Arcade Arena (Showdowns & Specialized Engines) (+3 more)
+### Community 465 - "manual.md"
+Cohesion: 0.29
+Nodes (5): Spanglings Spanish Language Manual, Table of Contents, Tier 1: Foundations & Aspectual Geometry (A1–A2), Tier 2: Mood, Triggers & Pragmatic Voice (B1–B2), Tier 3: Advanced Nuance, Registers & Edge Mechanics (B2–C1)
 
 ### Community 466 - "Spanglings 🇪🇸 🦀"
 Cohesion: 0.09
@@ -2332,17 +2354,17 @@ Nodes (22): 1. 🚀 Interactive Terminal UI (`spanglings` / `spanglings tui`), 2
 Cohesion: 0.29
 Nodes (10): export_state_json(), import_state_json(), PortableStateBackup, DateTime, Option, Result, String, Utc (+2 more)
 
-### Community 468 - ".load_from_path"
-Cohesion: 0.33
-Nodes (4): Path, PathBuf, Result, Self
+### Community 468 - ".new"
+Cohesion: 0.29
+Nodes (4): Into, PathBuf, Result, Self
 
 ### Community 469 - "Global Constraints"
 Cohesion: 0.22
 Nodes (8): Global Constraints, Spanglings WebAssembly Browser Platform Implementation Plan, Task 1: Rust WebAssembly Interface & Evaluator Bridge, Task 2: Curriculum & Arcade Web Bundle Generator, Task 3: Client-Side State Persistence Engine (`SpanglingsStorage`), Task 4: Interactive Split-Pane Workspace & Monaco Editor, Task 5: Single-Key Rapid Arcade Arena Engine, Task 6: Documentation Page, Fullscreen Mode, and CI Docs Workflow
 
-### Community 470 - "run_init"
-Cohesion: 0.33
-Nodes (5): Option, Result, run_init(), test_run_init_creates_exercise_workspace(), test_run_init_force_flag()
+### Community 470 - "Global Constraints"
+Cohesion: 0.25
+Nodes (7): Global Constraints, Targeted Spanish Language Manual, Bidirectional Deep-Linking & Rapid Arcade Fix Implementation Plan, Task 1: Fix Rapid Arcade Arena CSS Selector & View Activation, Task 2: Playground URL Query Parameter Deep-Linking & Manual Cross-Linking, Task 3: Comprehensive Spanish Language Manual (`docs/manual.md`), Task 4: Streamline Documentation Hub, Syllabus & MkDocs Navigation, Task 5: Full Verification Suite, Graphify Update & Production Readiness
 
 ### Community 471 - "test_wasm_package.py"
 Cohesion: 0.14
@@ -2376,24 +2398,92 @@ Nodes (6): build_wasm(), find_wasm_pack_cmd(), Path, WebAssembly Build Pipeline 
 Cohesion: 0.50
 Nodes (3): InitInput, InitOutput, SyncInitInput
 
+### Community 482 - "2. Architecture & Design"
+Cohesion: 0.25
+Nodes (7): 1. Problem Statement, 2.1 Documentation Structure (`docs/`), 2.2 Content Template for Each Manual Topic Section, 2.3 Rapid Arcade Arena Fix & Bidirectional Deep-Linking, 2. Architecture & Design, 3. Verification & Testing Strategy, Spanglings Targeted Language Manual, Bidirectional Deep-Linking & Rapid Arcade Fix
+
+### Community 484 - "📐 Grammar Rules & Decision Matrix"
+Cohesion: 0.29
+Nodes (7): 10. Imperfect Subjunctive & Counterfactual Conditionals <span class="badge">B1–B2</span>, 💡 Communicative Mental Model, Conditional Sentence Matrix (Si Clauses), 📐 Grammar Rules & Decision Matrix, Interactive Practice, Polite Requests & Softening Formulas, Systematic Derivation Formula
+
+### Community 485 - "Tier 2: Mood, Triggers & Pragmatic Voice (B1–B2)"
+Cohesion: 0.29
+Nodes (7): 11. Imperative Mood & Command Clitic Syntax <span class="badge">B1–B2</span>, Clitic Pronoun Polarity Switch, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice, The 8 Irregular Affirmative `tú` Commands, Tier 2: Mood, Triggers & Pragmatic Voice (B1–B2)
+
+### Community 486 - "Tier 3: Advanced Nuance, Registers & Edge Mechanics (B2–C1)"
+Cohesion: 0.29
+Nodes (7): 17. Verbs of Becoming & Transformation (`ponerse`, `hacerse`, `volverse`, `quedarse`) <span class="badge">B2–C1</span>, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice, Minimal Pairs Matrix, 🎯 Summary & Learning Roadmap, Tier 3: Advanced Nuance, Registers & Edge Mechanics (B2–C1)
+
+### Community 487 - "📐 Grammar Rules & Decision Matrix"
+Cohesion: 0.33
+Nodes (6): 12. Accidental & Involuntary "Se" (Non-Agentive Events) <span class="badge">B1–B2</span>, Common Accidental Verbs, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice, Minimal Pairs & Culpability Contrast
+
+### Community 488 - "📐 Grammar Rules & Decision Matrix"
+Cohesion: 0.33
+Nodes (6): 13. Passive & Impersonal "Se" vs. True Reflexives <span class="badge">B1–B2</span>, Agreement Disambiguation Matrix, Common Traps, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice
+
+### Community 489 - "📐 Grammar Rules & Decision Matrix"
+Cohesion: 0.33
+Nodes (6): 15. Relative Pronouns & Clauses (`que`, `quien`, `el que`, `cuyo`) <span class="badge">B1–B2</span>, Common Traps, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice, The Agreement Rule for `cuyo`
+
+### Community 490 - "📐 Grammar Rules & Decision Matrix"
+Cohesion: 0.33
+Nodes (6): 20. Adversatives & Rectification (`pero` vs. `sino` vs. `sino que`) <span class="badge">B2–C1</span>, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice, Minimal Pairs, The Corrective Polarity Pattern: `No es que... sino que...`
+
+### Community 491 - "Interactive Learning Modes"
+Cohesion: 0.40
+Nodes (5): 1. 🚀 Interactive Terminal UI (`spanglings` / `spanglings tui`), 2. ⚡ Modern Headless Watcher (`spanglings watch`), 3. 🎯 Diagnostic CEFR Placement Assessment (`spanglings test`), 4. 📖 In-Terminal Grammar Explainers (`spanglings explain`), Interactive Learning Modes
+
+### Community 492 - "14. Possessive & Sympathetic Datives (Inalienable Possession) <span class="badge">B1–B2</span>"
+Cohesion: 0.40
+Nodes (5): 14. Possessive & Sympathetic Datives (Inalienable Possession) <span class="badge">B1–B2</span>, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice, Sympathetic & Ethic Datives (Affective Involvement)
+
+### Community 493 - "16. Gerund Syntax & Pitfalls (Simultaneity vs. Banned Posteriority) <span class="badge">B1–B2</span>"
+Cohesion: 0.40
+Nodes (5): 16. Gerund Syntax & Pitfalls (Simultaneity vs. Banned Posteriority) <span class="badge">B1–B2</span>, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice, Minimal Pairs & Anglicism Traps
+
+### Community 494 - "18. Scalar & Intensive Concession (`por más que`, `aun a riesgo de que`) <span class="badge">B2–C1</span>"
+Cohesion: 0.40
+Nodes (5): 18. Scalar & Intensive Concession (`por más que`, `aun a riesgo de que`) <span class="badge">B2–C1</span>, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice, Mood Selection Contrast: Risk vs. Verified Fact
+
+### Community 495 - "19. Epistemic Conjecture & Probability (Future/Conditional of Probability) <span class="badge">B2–C1</span>"
+Cohesion: 0.40
+Nodes (5): 19. Epistemic Conjecture & Probability (Future/Conditional of Probability) <span class="badge">B2–C1</span>, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice, Minimal Pairs: Direct Statement vs. Epistemic Deduction
+
+### Community 496 - "21. False Friends & Deceptive Cognates (`actual`, `realizar`, `pretender`) <span class="badge">B2–C1</span>"
+Cohesion: 0.40
+Nodes (5): 21. False Friends & Deceptive Cognates (`actual`, `realizar`, `pretender`) <span class="badge">B2–C1</span>, Common Traps in Technical Discourse, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice
+
+### Community 497 - "22. Voseo & Regional Address Variations (Rioplatense & Central American) <span class="badge">B2–C1</span>"
+Cohesion: 0.40
+Nodes (5): 22. Voseo & Regional Address Variations (Rioplatense & Central American) <span class="badge">B2–C1</span>, Affirmative Imperatives in Voseo, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice
+
+### Community 498 - "23. Software Engineering & Technical Spanish (`desplegar`, `depurar`, `concurrencia`) <span class="badge">B2–C1</span>"
+Cohesion: 0.40
+Nodes (5): 23. Software Engineering & Technical Spanish (`desplegar`, `depurar`, `concurrencia`) <span class="badge">B2–C1</span>, 💡 Communicative Mental Model, 📐 Grammar Rules & Decision Matrix, Interactive Practice, Standard Technical Lexicon
+
+### Community 499 - "24. Legal, Statutory & Contractual Spanish (Statutory Subjunctive `-ere`) <span class="badge">B2–C1</span>"
+Cohesion: 0.40
+Nodes (5): 24. Legal, Statutory & Contractual Spanish (Statutory Subjunctive `-ere`) <span class="badge">B2–C1</span>, 💡 Communicative Mental Model, Contractual Courtesy & Administrative Formulas, 📐 Grammar Rules & Decision Matrix, Interactive Practice
+
 ## Knowledge Gaps
-- **1595 isolated node(s):** `spanglings`, `name`, `type`, `Daniel Fisher`, `description` (+1590 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2322 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1699 isolated node(s):** `spanglings`, `name`, `type`, `Daniel Fisher`, `description` (+1694 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 2431 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **11 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Exercise` connect `Exercise` to `App`, `AppState`, `.current_exercise`, `validate_submission`, `evaluate_current_exercise_in`, `reference.rs`, `progress.rs`, `export.rs`, `check.rs`, `get_embedded_exercises`, `Level`, `wasm.rs`, `tui_tests.rs`, `app.rs`, `search_exercises`, `find_all_exercises_or_embedded`?**
-  _High betweenness centrality (0.023) - this node is a cross-community bridge._
-- **Why does `AppState` connect `AppState` to `App`, `SrsItem`, `evaluate_current_exercise_in`, `progress.rs`, `export.rs`, `DrillItem`, `sync.rs`, `.load_from_path`, `select_arcade_items`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `Exercise` connect `Exercise` to `App`, `AppState`, `.current_exercise`, `validate_submission`, `evaluate_current_exercise_in`, `progress.rs`, `export.rs`, `check.rs`, `get_embedded_exercises`, `Level`, `wasm.rs`, `tui_tests.rs`, `app.rs`, `search_exercises`, `find_all_exercises_or_embedded`?**
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
 - **Why does `App` connect `App` to `ShowdownPair`, `Exercise`, `AppState`, `.current_exercise`, `validate_submission`, `core/arcade.rs`, `conjugate_verb`, `Level`, `tui_tests.rs`, `app.rs`, `draw_ui`, `select_arcade_items`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+- **Why does `AppState` connect `AppState` to `App`, `SrsItem`, `evaluate_current_exercise_in`, `progress.rs`, `export.rs`, `DrillItem`, `sync.rs`, `.new`, `select_arcade_items`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Are the 27 inferred relationships involving `get_reference_card()` (e.g. with `compute_hover()` and `draw_reference_browser_modal()`) actually correct?**
   _`get_reference_card()` has 27 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `spanglings`, `name`, `type` to the rest of the system?**
-  _1595 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1699 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Spanglings Design Specification` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `App` be split into smaller, more focused modules?**

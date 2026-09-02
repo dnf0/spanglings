@@ -48,12 +48,9 @@ markdown_extensions:
 
 nav:
   - Overview: index.md
-  - Getting Started: getting-started.md
-  - Interactive Playground: playground/index.html
-  - Onboarding Guide: onboarding-guide.md
+  - Spanish Language Manual: manual.md
   - Curriculum Syllabus: syllabus.md
-  - CLI & TUI Reference: cli-reference.md
-  - Grammar Cheat Sheets: grammar-reference.md
+  - Interactive Playground: playground/index.html
   - Contributing: contributing.md
 
 extra_css:
@@ -64,3 +61,4 @@ not_in_nav: |
   adr/**
   BACKLOG.md
   assets/**
+

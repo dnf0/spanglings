@@ -1,13 +1,13 @@
 {
   "Cargo.toml": {
-    "mtime": 1788379678.0534632,
-    "seen": 1788382806.485752,
+    "mtime": 1788382876.150152,
+    "seen": 1788386145.0336199,
     "ast_hash": "6553bb0af9b9626ca4810d9945f9b754",
     "semantic_hash": ""
   },
   "src/main.rs": {
-    "mtime": 1788379761.1614034,
-    "seen": 1788382806.485794,
+    "mtime": 1788382876.1603673,
+    "seen": 1788386145.033667,
     "ast_hash": "e4c46b0a37b01118d90bfd3c087950af",
     "semantic_hash": ""
   },
@@ -42,8 +42,8 @@
     "semantic_hash": ""
   },
   "src/lib.rs": {
-    "mtime": 1788379684.686144,
-    "seen": 1788382806.485792,
+    "mtime": 1788382876.1600878,
+    "seen": 1788386145.033664,
     "ast_hash": "827f4d07d0a82fa105d5fb4895116214",
     "semantic_hash": ""
   },
@@ -114,8 +114,8 @@
     "semantic_hash": ""
   },
   "src/core/state.rs": {
-    "mtime": 1788379732.1773813,
-    "seen": 1788382806.4857888,
+    "mtime": 1788382876.1598463,
+    "seen": 1788386145.0336618,
     "ast_hash": "718285b1c4c0f125a78b3a61bf60349f",
     "semantic_hash": ""
   },
@@ -2268,8 +2268,8 @@
     "semantic_hash": ""
   },
   ".github/workflows/docs.yml": {
-    "mtime": 1788381906.413183,
-    "seen": 1788382806.4858181,
+    "mtime": 1788382876.1498525,
+    "seen": 1788386145.033689,
     "ast_hash": "7824f1a875ad9a2aba31e20450ca1a7d",
     "semantic_hash": ""
   },
@@ -2304,9 +2304,9 @@
     "semantic_hash": ""
   },
   "docs/index.md": {
-    "mtime": 1787850695.2372303,
-    "seen": 1787863476.0118809,
-    "ast_hash": "a8b3566df71fac88a6efcc553d1bf4bf",
+    "mtime": 1788385931.2135217,
+    "seen": 1788386145.033696,
+    "ast_hash": "ba54266dd5fc57abd9810d3bce5d5528",
     "semantic_hash": ""
   },
   "docs/onboarding-guide.md": {
@@ -2322,15 +2322,15 @@
     "semantic_hash": ""
   },
   "docs/syllabus.md": {
-    "mtime": 1787844175.5509205,
-    "seen": 1787863476.011892,
-    "ast_hash": "ec58f73a0ac82b78b89341cf4032571d",
+    "mtime": 1788385850.2170396,
+    "seen": 1788386145.0337238,
+    "ast_hash": "46fbd0e5e00f8ae5c6a90751a9998ce8",
     "semantic_hash": ""
   },
   "mkdocs.yml": {
-    "mtime": 1788382016.597462,
-    "seen": 1788382806.4860108,
-    "ast_hash": "e2533be85802d63255da18e6420cb804",
+    "mtime": 1788385805.5174096,
+    "seen": 1788386145.033866,
+    "ast_hash": "582cd84dbdfc1d57a8780202f2fdb380",
     "semantic_hash": ""
   },
   "docs/adr/0003-language-completeness-and-expanded-ontology.md": {
@@ -3012,14 +3012,14 @@
     "semantic_hash": ""
   },
   "docs/assets/playground/playground.js": {
-    "mtime": 1788381835.8012533,
-    "seen": 1788382806.48576,
-    "ast_hash": "176ee88a245eb7426d58fbb116dda235",
+    "mtime": 1788385020.598477,
+    "seen": 1788386145.03363,
+    "ast_hash": "5f1f7155442632f4b2bababac9fd4231",
     "semantic_hash": ""
   },
   "docs/assets/playground/storage.js": {
-    "mtime": 1788381099.7019205,
-    "seen": 1788382806.48576,
+    "mtime": 1788382876.1589417,
+    "seen": 1788386145.033632,
     "ast_hash": "eb300c59a416512d11932c5971f518dd",
     "semantic_hash": ""
   },
@@ -3048,15 +3048,15 @@
     "semantic_hash": ""
   },
   "tests/test_arcade_ui.py": {
-    "mtime": 1788378207.3496392,
-    "seen": 1788382806.485811,
-    "ast_hash": "ab97334753d6ecd63c4ef9b76fd41781",
+    "mtime": 1788384557.5938787,
+    "seen": 1788386145.0336819,
+    "ast_hash": "e7edc44d5538daf30a8dcc32bbd096de",
     "semantic_hash": ""
   },
   "tests/test_docs_playground.py": {
-    "mtime": 1788381973.4524314,
-    "seen": 1788382806.485812,
-    "ast_hash": "593e7628ca2740795e8371e6a947df5d",
+    "mtime": 1788385785.567818,
+    "seen": 1788386145.033683,
+    "ast_hash": "8f8b3246a46a340868b8dd3b1823a5f8",
     "semantic_hash": ""
   },
   "tests/test_playground_bundle.py": {
@@ -3066,9 +3066,9 @@
     "semantic_hash": ""
   },
   "tests/test_playground_ui.py": {
-    "mtime": 1788381564.4556546,
-    "seen": 1788382806.485813,
-    "ast_hash": "69b9b720b41d2a8e281ab610d1aeb8ce",
+    "mtime": 1788384744.2216709,
+    "seen": 1788386145.033684,
+    "ast_hash": "49e5a32c9ffe6faca4303852c8301da4",
     "semantic_hash": ""
   },
   "tests/test_storage_parity.py": {
@@ -3078,8 +3078,8 @@
     "semantic_hash": ""
   },
   "tests/wasm_tests.rs": {
-    "mtime": 1788380102.4227848,
-    "seen": 1788382806.485816,
+    "mtime": 1788382876.1617641,
+    "seen": 1788386145.033687,
     "ast_hash": "d6ac8d947697161998f13a0cc23b66a7",
     "semantic_hash": ""
   },
@@ -3087,12 +3087,6 @@
     "mtime": 1788263336.257374,
     "seen": 1788374486.617816,
     "ast_hash": "bdf6d0c1d2b986916734e1cf239846b0",
-    "semantic_hash": ""
-  },
-  "docs/playground.md": {
-    "mtime": 1788378207.3350878,
-    "seen": 1788382806.485827,
-    "ast_hash": "5d356295217123eada437d8ea30d348d",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-09-02-browser-wasm-learning-platform.md": {
@@ -3108,57 +3102,57 @@
     "semantic_hash": ""
   },
   "docs/assets/playground/pkg/package.json": {
-    "mtime": 1788382303.5256782,
-    "seen": 1788382806.485755,
+    "mtime": 1788382876.1513233,
+    "seen": 1788386145.0336242,
     "ast_hash": "21d431218b03071598b2fe4ed70dbe3f",
     "semantic_hash": ""
   },
   "docs/assets/playground/pkg/spanglings.d.ts": {
-    "mtime": 1788382302.345379,
-    "seen": 1788382806.485756,
+    "mtime": 1788382876.1515923,
+    "seen": 1788386145.0336251,
     "ast_hash": "aa1ecffa86aef15091c42e2aa2c0e2dd",
     "semantic_hash": ""
   },
   "docs/assets/playground/pkg/spanglings.js": {
-    "mtime": 1788382302.3451853,
-    "seen": 1788382806.485756,
+    "mtime": 1788382876.1520026,
+    "seen": 1788386145.033626,
     "ast_hash": "dd3f9e759449d5ebe79f337588a5c9be",
     "semantic_hash": ""
   },
   "docs/assets/playground/pkg/spanglings_bg.wasm.d.ts": {
-    "mtime": 1788382302.3455799,
-    "seen": 1788382806.4857569,
+    "mtime": 1788382876.1572733,
+    "seen": 1788386145.0336268,
     "ast_hash": "432de2d5b3255019a572c60b0a625953",
     "semantic_hash": ""
   },
   "scripts/build_wasm.py": {
-    "mtime": 1788380485.6898682,
-    "seen": 1788382806.485769,
+    "mtime": 1788382876.1595652,
+    "seen": 1788386145.033642,
     "ast_hash": "e351c30bd29d90e8152416efb1a9a864",
     "semantic_hash": ""
   },
   "tests/test_wasm_package.py": {
-    "mtime": 1788380495.4543808,
-    "seen": 1788382806.485814,
+    "mtime": 1788382876.1611228,
+    "seen": 1788386145.033685,
     "ast_hash": "b7a4a5f677a64dd342f0664f36ffac71",
     "semantic_hash": ""
   },
   "tests/test_wasm_ui_integration.py": {
-    "mtime": 1788381526.0907712,
-    "seen": 1788382806.485814,
+    "mtime": 1788382876.161376,
+    "seen": 1788386145.033685,
     "ast_hash": "6be706eda06fcefd2ac6c9120c111cb3",
     "semantic_hash": ""
   },
   "docs/assets/playground/pkg/README.md": {
-    "mtime": 1787850695.236116,
-    "seen": 1788382806.485824,
+    "mtime": 1788382876.1510131,
+    "seen": 1788386145.033694,
     "ast_hash": "ae7d707fff2d349a82115c4cda1434db",
     "semantic_hash": ""
   },
   "docs/playground/index.html": {
-    "mtime": 1788378207.3354697,
-    "seen": 1788382806.485827,
-    "ast_hash": "83f8db6375e3c563f51d527f6e71c8d4",
+    "mtime": 1788384816.9359164,
+    "seen": 1788386145.033698,
+    "ast_hash": "93730957ac03615c6f9c7d3466ed1af3",
     "semantic_hash": ""
   },
   "docs/superpowers/plans/2026-09-02-kubelings-style-alignment.md": {
@@ -3183,6 +3177,24 @@
     "mtime": 1788379251.1318722,
     "seen": 1788382806.485852,
     "ast_hash": "fda454eccf3c49b80a69af6ea30a5ce5",
+    "semantic_hash": ""
+  },
+  "docs/manual.md": {
+    "mtime": 1788385520.5990996,
+    "seen": 1788386145.0336971,
+    "ast_hash": "8670ad5a4c8f4176ae56aff682589989",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/plans/2026-09-02-targeted-language-manual-and-arcade-playground.md": {
+    "mtime": 1788384374.0319293,
+    "seen": 1788386145.0337138,
+    "ast_hash": "dd1e23f1b82fc11d29c8aaf2ac371560",
+    "semantic_hash": ""
+  },
+  "docs/superpowers/specs/2026-09-02-targeted-language-manual-and-arcade-playground-design.md": {
+    "mtime": 1788384282.771886,
+    "seen": 1788386145.0337229,
+    "ast_hash": "140ef360b728458da1c68e13fb44ad99",
     "semantic_hash": ""
   }
 }

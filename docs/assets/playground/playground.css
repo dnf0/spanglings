@@ -1109,6 +1109,38 @@ html, body {
   color: var(--pg-text);
 }
 
+.card-manual-cta {
+  padding: 0.5rem 0.75rem;
+  background-color: var(--pg-card-bg);
+  border-top: 1px solid var(--pg-border);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.manual-cta-link,
+.ref-manual-link {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--pg-accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: color 0.15s ease;
+}
+
+.manual-cta-link:hover,
+.ref-manual-link:hover {
+  color: var(--pg-accent-hover);
+  text-decoration: underline;
+}
+
+.ref-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
 /* Progressive Hint Card */
 .hint-tier-card {
   margin: 0.5rem 1rem;
@@ -1220,14 +1252,18 @@ html, body {
   overflow-y: auto;
 }
 
-.playground-container.arcade-mode .syllabus-pane,
-.playground-container.arcade-mode .editor-pane,
-.playground-container.arcade-mode .diagnostics-pane {
-  display: none;
+.spanglings-playground.arcade-mode .syllabus-pane,
+.spanglings-playground.arcade-mode .editor-pane,
+.spanglings-playground.arcade-mode .diagnostics-pane,
+#spanglings-app.arcade-mode .syllabus-pane,
+#spanglings-app.arcade-mode .editor-pane,
+#spanglings-app.arcade-mode .diagnostics-pane {
+  display: none !important;
 }
 
-.playground-container.arcade-mode .arcade-arena-container {
-  display: flex;
+.spanglings-playground.arcade-mode .arcade-arena-container,
+#spanglings-app.arcade-mode .arcade-arena-container {
+  display: flex !important;
 }
 
 .arcade-setup-card,

@@ -177,3 +177,128 @@ def test_mkdocs_strict_build_succeeds(repo_root: Path) -> None:
         f"STDOUT:\n{result.stdout}\n"
         f"STDERR:\n{result.stderr}"
     )
+
+
+def test_comprehensive_language_manual_structure(repo_root: Path) -> None:
+    """Verify docs/manual.md exists and contains all 24 topics with mental models, rules, and deep links."""
+    manual_path = repo_root / "docs" / "manual.md"
+    assert manual_path.exists(), f"docs/manual.md must exist at {manual_path}"
+
+    content = manual_path.read_text(encoding="utf-8")
+    assert "# Spanglings Spanish Language Manual" in content
+
+    # Check 24 topics
+    expected_topics = [
+        "ser-estar",
+        "por-para",
+        "past-tenses",
+        "pronouns",
+        "gustar",
+        "reflexive",
+        "stem-changing",
+        "prepositions",
+        "subjunctive",
+        "imperfect-subjunctive",
+        "imperative",
+        "accidental-se",
+        "passive-impersonal-se",
+        "possessive-datives",
+        "relative-pronouns",
+        "gerund-rules",
+        "verbs-of-becoming",
+        "scalar-concession",
+        "epistemic-conjecture",
+        "adversatives",
+        "false-friends",
+        "voseo",
+        "tech",
+        "legal",
+    ]
+    for topic in expected_topics:
+        assert (
+            f'id="{topic}"' in content
+            or f"#{topic}" in content
+            or f"topic={topic}" in content
+        ), f"Topic '{topic}' anchor or reference must be present in docs/manual.md"
+        assert f"playground/?topic={topic}" in content, (
+            f"Studio link for '{topic}' must be present in docs/manual.md"
+        )
+        assert f"playground/?mode=arcade&topic={topic}" in content, (
+            f"Arcade showdown link for '{topic}' must be present in docs/manual.md"
+        )
+
+    assert content.count("### 💡 Communicative Mental Model") == 24
+    assert content.count("### 📐 Grammar Rules & Decision Matrix") == 24
+    assert "playground/?topic=" in content
+    assert "playground/?mode=arcade" in content
+
+
+def test_mkdocs_navigation_includes_manual_and_syllabus(
+    mkdocs_yml_path: Path,
+) -> None:
+    """Verify mkdocs.yml navigation is streamlined around Manual, Syllabus, and Playground."""
+    content = mkdocs_yml_path.read_text(encoding="utf-8")
+    config = yaml.safe_load(content)
+
+    nav = config.get("nav", [])
+    nav_targets: list[str] = []
+    for item in nav:
+        if isinstance(item, dict):
+            for val in item.values():
+                if isinstance(val, str):
+                    nav_targets.append(val)
+        elif isinstance(item, str):
+            nav_targets.append(item)
+
+    assert "index.md" in nav_targets
+    assert "manual.md" in nav_targets
+    assert "syllabus.md" in nav_targets
+    assert "playground/index.html" in nav_targets
+    assert "contributing.md" in nav_targets
+
+
+def test_syllabus_links_all_topics_to_manual_and_playground(
+    repo_root: Path,
+) -> None:
+    """Verify docs/syllabus.md links all 24 topics to manual.md anchors and playground."""
+    syllabus_path = repo_root / "docs" / "syllabus.md"
+    assert syllabus_path.exists(), f"docs/syllabus.md must exist at {syllabus_path}"
+
+    content = syllabus_path.read_text(encoding="utf-8")
+    expected_topics = [
+        "ser-estar",
+        "por-para",
+        "past-tenses",
+        "pronouns",
+        "gustar",
+        "reflexive",
+        "stem-changing",
+        "prepositions",
+        "subjunctive",
+        "imperfect-subjunctive",
+        "imperative",
+        "accidental-se",
+        "passive-impersonal-se",
+        "possessive-datives",
+        "relative-pronouns",
+        "gerund-rules",
+        "verbs-of-becoming",
+        "scalar-concession",
+        "epistemic-conjecture",
+        "adversatives",
+        "false-friends",
+        "voseo",
+        "tech",
+        "legal",
+    ]
+    for topic in expected_topics:
+        assert f"manual.md#{topic}" in content, (
+            f"Topic '{topic}' link to manual.md must be present in docs/syllabus.md"
+        )
+        assert f"topic={topic}" in content, (
+            f"Topic '{topic}' link to playground must be present in docs/syllabus.md"
+        )
+
+
+
+

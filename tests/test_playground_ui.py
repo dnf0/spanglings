@@ -796,3 +796,67 @@ def test_fullscreen_toggle_and_monaco_relayout(
 
     assert res["isFullscreen1"] is True
     assert res["isFullscreen2"] is False
+
+
+def test_playground_js_handles_url_query_params(repo_root: Path) -> None:
+    """Verify playground.js parses ?mode=arcade, ?topic=, and ?exercise= query params."""
+    js_path = repo_root / "docs" / "assets" / "playground" / "playground.js"
+    content = js_path.read_text(encoding="utf-8")
+
+    assert "URLSearchParams" in content
+    assert "applyUrlParams" in content or "parseUrlParams" in content
+    assert "manual/#" in content or "../manual/" in content
+
+
+def test_standalone_header_links_to_manual(repo_root: Path) -> None:
+    """Verify docs/playground/index.html header links to ../manual/."""
+    html_path = repo_root / "docs" / "playground" / "index.html"
+    content = html_path.read_text(encoding="utf-8")
+
+    assert 'href="../manual/"' in content
+    assert "Language Manual" in content
+
+
+def test_playground_url_query_param_evaluation(
+    playground_js_path: Path, storage_js_path: Path, bundle_path: Path
+) -> None:
+    """Verify SpanglingsPlaygroundApp.applyUrlParams handles mode, topic, and exercise params in Node."""
+    script = """
+    const storage = new SpanglingsStorage('test_url_params_key');
+    const app = new SpanglingsPlaygroundApp({
+        bundle: bundleData,
+        storage: storage,
+    });
+
+    // 1. Test curriculum topic deep-linking (?topic=subjunctive)
+    app.applyUrlParams('?topic=subjunctive');
+    const frameAfterTopic = app.getCurrentFrame();
+    const modeAfterTopic = app.currentMode;
+
+    // 2. Test exercise deep-linking (?exercise=ser-estar-02)
+    app.applyUrlParams('?exercise=ser-estar-02');
+    const frameAfterExercise = app.getCurrentFrame();
+
+    // 3. Test arcade mode deep-linking (?mode=arcade&topic=ser-estar)
+    app.applyUrlParams('?mode=arcade&topic=ser-estar');
+    const modeAfterArcade = app.currentMode;
+    const arcadeTopicMode = app.arcadeEngine.mode;
+
+    return {
+        topicFrameTopic: frameAfterTopic ? frameAfterTopic.topic : null,
+        modeAfterTopic,
+        exerciseId: frameAfterExercise ? frameAfterExercise.id : null,
+        modeAfterArcade,
+        arcadeTopicMode,
+    };
+    """
+    out = run_node_playground_eval(
+        playground_js_path, storage_js_path, bundle_path, script
+    )
+    res = out["result"]
+
+    assert res["topicFrameTopic"] == "subjunctive"
+    assert res["modeAfterTopic"] == "curriculum"
+    assert res["exerciseId"] == "ser-estar-02"
+    assert res["modeAfterArcade"] == "arcade"
+    assert res["arcadeTopicMode"] == "ser-estar"
