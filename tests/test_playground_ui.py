@@ -154,19 +154,8 @@ def test_playground_css_exists_and_conforms_to_spec(
     content = playground_css_path.read_text(encoding="utf-8")
     assert len(content) > 200, "playground.css is too short"
 
-    # Slate dark palette checks
-    assert "#0f172a" in content.lower() or "0f172a" in content.lower(), (
-        "Missing slate-900 background #0f172a"
-    )
-    assert "#1e293b" in content.lower() or "1e293b" in content.lower(), (
-        "Missing slate-800 surface #1e293b"
-    )
-    assert "#334155" in content.lower() or "334155" in content.lower(), (
-        "Missing slate-700 border #334155"
-    )
-
     # Key layout selectors
-    assert ".playground-container" in content
+    assert ".playground-container" in content or ".spanglings-playground" in content
     assert ".syllabus-pane" in content or "#syllabus-pane" in content
     assert ".editor-pane" in content or "#editor-pane" in content
     assert ".diagnostics-pane" in content or "#diagnostics-pane" in content
@@ -176,6 +165,71 @@ def test_playground_css_exists_and_conforms_to_spec(
     # Zero sound/shake/flashing constraint
     assert "@keyframes shake" not in content.lower()
     assert "@keyframes flash" not in content.lower()
+
+
+def test_playground_css_kubelings_theme_variables_and_standalone_layout(
+    playground_css_path: Path,
+) -> None:
+    """Verify Kubelings CSS variable tokens, light/slate theme selectors, and standalone rules."""
+    content = playground_css_path.read_text(encoding="utf-8")
+
+    # Required Kubelings CSS variables
+    required_vars = [
+        "--pg-bg",
+        "--pg-card-bg",
+        "--pg-sidebar-bg",
+        "--pg-header-bg",
+        "--pg-border",
+        "--pg-border-focus",
+        "--pg-text",
+        "--pg-text-muted",
+        "--pg-accent",
+        "--pg-accent-hover",
+        "--pg-accent-fg",
+        "--pg-btn-bg",
+        "--pg-btn-hover",
+        "--pg-btn-active",
+        "--pg-btn-text",
+        "--pg-term-bg",
+        "--pg-term-header-bg",
+        "--pg-term-text",
+        "--pg-term-border",
+        "--pg-term-dim",
+        "--pg-success-bg",
+        "--pg-error-bg",
+        "--pg-warning-bg",
+        "--pg-info-bg",
+        "--pg-radius",
+        "--pg-shadow",
+    ]
+    for var_name in required_vars:
+        assert var_name in content, f"Missing Kubelings CSS variable {var_name}"
+
+    # Theme selectors
+    assert '[data-md-color-scheme="slate"]' in content
+    assert 'html[data-theme="dark"]' in content
+    assert 'html[data-theme="light"]' in content or ":root" in content
+
+    # Standalone navigation and edge-to-edge layout rules
+    assert "#standalone-header" in content
+    assert "#standalone-playground-root" in content
+    assert ".spanglings-playground" in content
+    assert ".playground-split-layout" in content or ".playground-body" in content
+
+    # Status pill with pulsing dot
+    assert ".playground-status-pill" in content or ".status-dot" in content
+    assert "@keyframes pg-pulse" in content
+    assert ".status-loading" in content
+    assert ".status-ready" in content
+    assert ".status-running" in content
+
+    # Action toolbar & rounded buttons
+    assert ".playground-btn" in content
+    assert ".playground-btn-primary" in content
+    assert ".playground-btn-kbd" in content
+
+    # Gradient progress fill
+    assert "linear-gradient" in content
 
 
 def test_playground_js_exists(playground_js_path: Path) -> None:

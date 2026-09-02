@@ -507,6 +507,8 @@ def test_arcade_css_structure_and_constraints(playground_css_path: Path) -> None
     assert ".arcade-hotkey-badge" in content or ".arcade-key" in content
     assert ".arcade-feedback-banner" in content or ".arcade-status" in content
     assert ".arcade-mistakes-card" in content or ".arcade-mistake" in content
+    assert ".arcade-streak-badge" in content
+    assert ".arcade-speed-bonus" in content
 
     # Zero sound/shake/flash animations constraint
     assert "@keyframes shake" not in content.lower()
