@@ -46,3 +46,10 @@ site/
 **/node_modules/
 editors/vscode/dist/
 editors/vscode/out/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+
