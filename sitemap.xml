@@ -2,218 +2,238 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dnf0.github.io/spanglings/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/BACKLOG/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/cli-reference/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/contributing/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/getting-started/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/grammar-reference/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/onboarding-guide/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
+    </url>
+    <url>
+         <loc>https://dnf0.github.io/spanglings/playground/</loc>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/syllabus/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/adr/0002-lsp-and-in-tui-modal-architecture/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/adr/0003-language-completeness-and-expanded-ontology/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/adr/0004-full-spectrum-c1-c2-linguistic-completeness/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-26-curriculum-and-vocab-expansion/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-26-discoverability-and-portability/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-26-grammar-diagnostics/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-26-interactive-tui/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-26-smart-diagnostics-and-pedagogy/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-26-spanglings-implementation/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-26-spanglings-init-subcommand/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-27-conjugator-hooks-packs/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-27-diagnostic-placement-and-level-fast-track/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-27-interactive-onboarding-tour/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-27-language-completeness-expansion/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-27-linguistic-knowledge-graph-and-practical-expansion/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-27-mkdocs-documentation-site/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-27-standard-language-and-general-conversation-curriculum/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-27-tui-heatmap-search-lsp/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-27-tui-modals-curriculum-exporter-lsp/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-27-vscode-extension-and-latam-curriculum/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-28-combinatorial-drill-generator-mastery/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-28-functional-grammar-keys/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-28-informative-non-spoiling-exercise-todos/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-28-rapid-arcade-single-key-drills/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-28-rich-drill-prompts-and-cheat-sheets/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-29-arcade-mistakes-explanation-review/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-29-expanded-binary-showdowns/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-29-high-yield-arcade-drill-engines/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-29-scientific-sm2-concept-mastery/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-08-29-symmetric-ladder-concept-mastery/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-09-01-dual-layer-explanations/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
+    </url>
+    <url>
+         <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-09-02-browser-wasm-learning-platform/</loc>
+         <lastmod>2026-09-02</lastmod>
+    </url>
+    <url>
+         <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-09-02-kubelings-style-alignment/</loc>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-26-spanglings-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-27-interactive-onboarding-tour-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-27-linguistic-knowledge-graph-and-practical-expansion-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-28-adaptive-drills-mastery-dashboard-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-28-combinatorial-drill-generator-mastery-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-28-functional-grammar-keys-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-28-informative-non-spoiling-exercise-todos-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-28-rapid-arcade-single-key-drills-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-28-rich-drill-prompts-and-cheat-sheets-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-29-arcade-mistakes-explanation-review-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-29-expanded-binary-showdowns-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-29-scientific-sm2-concept-mastery-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-29-symmetric-ladder-concept-mastery-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-09-01-dual-layer-explanations-design/</loc>
-         <lastmod>2026-09-01</lastmod>
+         <lastmod>2026-09-02</lastmod>
+    </url>
+    <url>
+         <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-09-02-full-browser-wasm-learning-platform-design/</loc>
+         <lastmod>2026-09-02</lastmod>
+    </url>
+    <url>
+         <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-09-02-kubelings-style-alignment-design/</loc>
+         <lastmod>2026-09-02</lastmod>
     </url>
 </urlset>

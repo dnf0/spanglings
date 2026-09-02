@@ -12,7 +12,7 @@
         <meta name="author" content="Spanglings Contributors">
       
       
-        <link rel="canonical" href="https://dnf0.github.io/spanglings/superpowers/plans/2026-08-28-informative-non-spoiling-exercise-todos/">
+        <link rel="canonical" href="https://dnf0.github.io/spanglings/superpowers/specs/2026-09-02-kubelings-style-alignment-design/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Informative & Non-Spoiling Exercise TODOs Implementation Plan - Spanglings</title>
+        <title>Design Specification: Kubelings Style & Standalone Layout Alignment - Spanglings</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#informative-non-spoiling-exercise-todos-implementation-plan" class="md-skip">
+        <a href="#design-specification-kubelings-style-standalone-layout-alignment" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Informative &amp; Non-Spoiling Exercise TODOs Implementation Plan
+              Design Specification: Kubelings Style &amp; Standalone Layout Alignment
             
           </span>
         </div>
@@ -498,10 +498,99 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tasks" class="md-nav__link">
+  <a href="#1-overview-objective" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Tasks
+        1. Overview &amp; Objective
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Overview &amp; Objective">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Goals:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-architecture-file-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Architecture &amp; File Structure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-detailed-component-specifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Detailed Component Specifications
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Detailed Component Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-standalone-html-page-docsplaygroundindexhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Standalone HTML Page (docs/playground/index.html)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-css-theme-palette-playgroundcss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 CSS Theme Palette (playground.css)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-mode-switcher-arcade-arena-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Mode Switcher &amp; Arcade Arena Integration
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-verification-quality-gates" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Verification &amp; Quality Gates
       
     </span>
   </a>
@@ -528,92 +617,81 @@
   
 
 
-<h1 id="informative-non-spoiling-exercise-todos-implementation-plan">Informative &amp; Non-Spoiling Exercise TODOs Implementation Plan</h1>
-<blockquote>
-<p><strong>For agentic workers:</strong> REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (<code>- [ ]</code>) syntax for tracking.</p>
-</blockquote>
-<p><strong>Goal:</strong> Review and enrich all 339 exercises across all 60 tracks with explicit, informative <code>### Instructions</code> blocks (<code>**TODO**:</code> and <code>**Why**:</code>) and in-editor comments without leaking/spoiling the solution words.</p>
-<p><strong>Architecture:</strong> Standardized exercise markdown format incorporating an actionable task description and grammatical/pragmatic rationale. In-TUI prompt card rendering extracts and highlights the instruction block. An automated test suite enforces 100% presence of non-empty TODOs/Whys and zero solution leaks.</p>
-<p><strong>Tech Stack:</strong> Rust 2021, Ratatui, Markdown, Regex, cargo test.</p>
+<h1 id="design-specification-kubelings-style-standalone-layout-alignment">Design Specification: Kubelings Style &amp; Standalone Layout Alignment</h1>
+<p><strong>Date:</strong> 2026-09-02<br />
+<strong>Status:</strong> Approved<br />
+<strong>Target Repository:</strong> <code>dnf0/spanglings</code>  </p>
 <hr />
-<h2 id="tasks">Tasks</h2>
+<h2 id="1-overview-objective">1. Overview &amp; Objective</h2>
+<p>Align the Spanglings WebAssembly browser learning platform (<code>https://dnf0.github.io/spanglings/playground/</code>) with the architecture, visual polish, and layout ergonomics of <strong>Kubelings</strong> (<code>https://dnf0.github.io/kubelings/playground/</code>).</p>
+<h3 id="goals">Goals:</h3>
+<ol>
+<li><strong>Standalone Dedicated App (<code>docs/playground/index.html</code>)</strong>: Provide a full-window (<code>100vw × 100vh</code>) standalone web application with a 48px top navigation bar (<code>#standalone-header</code>), brand badge (<code>🇪🇸 Spanglings ⚡ Interactive Playground</code>), top navigation links (<code>📖 Documentation</code>, <code>📚 Syllabus</code>, <code>🐙 GitHub</code>), and <code>🌓 Theme</code> toggle.</li>
+<li><strong>Theme &amp; CSS System Alignment (<code>playground.css</code>)</strong>: Implement Kubelings CSS variable architecture supporting both Dark Slate (<code>[data-md-color-scheme="slate"]</code>, <code>html[data-theme="dark"]</code>) and Light (<code>html[data-theme="light"]</code>) modes with Catppuccin-inspired slate hues.</li>
+<li><strong>Component Polish</strong>:</li>
+<li>Status pill with pulsing dot indicator (<code>.status-loading</code>, <code>.status-ready</code>, <code>.status-running</code>).</li>
+<li>Accordion topic explorer with complete count badges and gradient progress bar.</li>
+<li>Rounded action toolbar with keyboard shortcut badges (<code>[⌘↵]</code>, <code>[?]</code>, <code>[⛶]</code>).</li>
+<li>Spanish accent helper toolbar (<code>á</code>, <code>é</code>, <code>í</code>, <code>ó</code>, <code>ú</code>, <code>ñ</code>, <code>ü</code>, <code>¿</code>, <code>¡</code>).</li>
+<li><strong>Preserve Spanglings Strengths</strong>:</li>
+<li>Retain dual-mode switcher: Mode A (Curriculum Workspace) and Mode B (Rapid Arcade Arena).</li>
+<li>Retain dual-layer pedagogical feedback (<code>💡 Meaning / Communicative Context</code> + <code>📐 Grammar Rule / Structural Law</code>).</li>
+<li>Retain zero audio distractions and zero screen shaking.</li>
+<li>Retain SM-2 spaced repetition decay tracking and JSON state export/import.</li>
+</ol>
+<hr />
+<h2 id="2-architecture-file-structure">2. Architecture &amp; File Structure</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docs/
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>├── playground/
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>│   └── index.html               &lt;-- Dedicated standalone edge-to-edge HTML application
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>├── assets/
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>│   └── playground/
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>│       ├── playground.css       &lt;-- CSS variable theme system matching Kubelings
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>│       ├── playground.js        &lt;-- UI controller &amp; Rapid Arcade engine
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>│       ├── storage.js           &lt;-- SM-2 &amp; concept mastery persistence engine
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>│       └── playground-bundle.json &lt;-- 24 topics, 136 frames, 262 arcade items
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>mkdocs.yml                       &lt;-- Navigation updated to playground/index.html
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>tests/
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>└── test_docs_playground.py      &lt;-- Strict tests validating standalone page, nav, and build
+</span></code></pre></div>
+<hr />
+<h2 id="3-detailed-component-specifications">3. Detailed Component Specifications</h2>
+<h3 id="31-standalone-html-page-docsplaygroundindexhtml">3.1 Standalone HTML Page (<code>docs/playground/index.html</code>)</h3>
 <ul>
-<li>[ ] <strong>Task 1: Batch 1 Enrichment (Tracks 00–14, 80 exercises)</strong></li>
-<li><strong>Files</strong>: All 80 exercise files across <code>exercises/00_baseline/</code> to <code>exercises/14_connectors/</code></li>
-<li><strong>Actions</strong>:<ul>
-<li>Add <code>### Instructions</code> with <code>**TODO**:</code> (actionable instruction) and <code>**Why**:</code> (linguistic rationale).</li>
-<li>Add inline <code>&lt;!-- TODO: ... --&gt;</code> above the exercise prompt line.</li>
-<li>Guarantee zero solution word leaks in the instructions.</li>
+<li><strong>Container</strong>: Full-bleed <code>width: 100vw; height: 100vh; overflow: hidden;</code></li>
+<li><strong>Header (<code>#standalone-header</code>)</strong>:</li>
+<li>Left: Brand icon <code>🇪🇸</code>, Title <code>Spanglings</code>, <code>&lt;span class="brand-badge"&gt;⚡ Interactive Playground&lt;/span&gt;</code>.</li>
+<li>Right: <code>📖 Documentation</code> (link to <code>../</code>), <code>📚 Syllabus</code> (link to <code>../syllabus/</code> or reference), <code>GitHub</code> (link to <code>https://github.com/dnf0/spanglings</code>), and <code>🌓 Theme</code> button.</li>
+<li><strong>Root Element</strong>: <code>&lt;main id="standalone-playground-root"&gt;&lt;div id="spanglings-app" class="spanglings-playground"&gt;&lt;/div&gt;&lt;/main&gt;</code></li>
+<li><strong>Theme Script</strong>: Reads <code>localStorage.getItem("spanglings-theme")</code>, toggles <code>data-theme="dark|light"</code>, and syncs Monaco editor theme (<code>vs-dark</code> vs <code>vs</code>).</li>
 </ul>
-</li>
-<li>
-<p><strong>Verification</strong>: Verify parsing with <code>cargo test --test exercise_validity_tests</code>.</p>
-</li>
-<li>
-<p>[ ] <strong>Task 2: Batch 2 Enrichment (Tracks 15–26, 61 exercises)</strong></p>
-</li>
-<li><strong>Files</strong>: All 61 exercise files across <code>exercises/15_advanced_imperative/</code> to <code>exercises/26_regional_contrasts/</code></li>
-<li><strong>Actions</strong>:<ul>
-<li>Add <code>### Instructions</code> with <code>**TODO**:</code> and <code>**Why**:</code>.</li>
-<li>Add inline <code>&lt;!-- TODO: ... --&gt;</code> above prompt.</li>
-<li>Guarantee zero solution word leaks.</li>
+<h3 id="32-css-theme-palette-playgroundcss">3.2 CSS Theme Palette (<code>playground.css</code>)</h3>
+<ul>
+<li>Variable structure:</li>
+<li><code>--pg-bg</code>: <code>#ffffff</code> (light) / <code>#1e1e2e</code> (dark slate)</li>
+<li><code>--pg-card-bg</code>: <code>#ffffff</code> (light) / <code>#181825</code> (dark slate)</li>
+<li><code>--pg-sidebar-bg</code>: <code>#f8fafc</code> (light) / <code>#11111b</code> (dark slate)</li>
+<li><code>--pg-header-bg</code>: <code>#f8fafc</code> (light) / <code>#11111b</code> (dark slate)</li>
+<li><code>--pg-border</code>: <code>#e2e8f0</code> (light) / <code>#313244</code> (dark slate)</li>
+<li><code>--pg-border-focus</code>: <code>#0284c7</code> (light) / <code>#89b4fa</code> (dark slate)</li>
+<li><code>--pg-accent</code>: <code>#0284c7</code> (light) / <code>#89b4fa</code> (dark slate)</li>
+<li><code>--pg-term-bg</code>: <code>#0b0f19</code> (light) / <code>#0f0f17</code> (dark slate)</li>
+<li><code>--pg-term-header-bg</code>: <code>#111827</code> (light) / <code>#181825</code> (dark slate)</li>
+<li><code>--pg-term-text</code>: <code>#f1f5f9</code> (light) / <code>#cdd6f4</code> (dark slate)</li>
+<li>Split layout: <code>320px 1fr</code> grid with responsive breakpoints for <code>&lt; 1024px</code> (280px sidebar) and <code>&lt; 768px</code> (stacked).</li>
 </ul>
-</li>
-<li>
-<p><strong>Verification</strong>: <code>cargo test --test exercise_validity_tests</code>.</p>
-</li>
-<li>
-<p>[ ] <strong>Task 3: Batch 3 Enrichment (Tracks 27–41, 90 exercises)</strong></p>
-</li>
-<li><strong>Files</strong>: All 90 exercise files across <code>exercises/27_system_design/</code> to <code>exercises/41_adverbial_clauses_and_conjunctions/</code></li>
-<li><strong>Actions</strong>:<ul>
-<li>Add <code>### Instructions</code> with <code>**TODO**:</code> and <code>**Why**:</code>.</li>
-<li>Add inline <code>&lt;!-- TODO: ... --&gt;</code> above prompt.</li>
-<li>Guarantee zero solution word leaks.</li>
+<h3 id="33-mode-switcher-arcade-arena-integration">3.3 Mode Switcher &amp; Arcade Arena Integration</h3>
+<ul>
+<li>Top toolbar mode switcher allowing immediate toggle between <strong>Curriculum Workspace</strong> and <strong>Rapid Arcade Arena</strong>.</li>
+<li>Seamless integration with existing <code>SpanglingsStorage</code> and <code>SpanglingsArcadeEngine</code>.</li>
 </ul>
-</li>
-<li>
-<p><strong>Verification</strong>: <code>cargo test --test exercise_validity_tests</code>.</p>
-</li>
-<li>
-<p>[ ] <strong>Task 4: Batch 4 Enrichment (Tracks 42–59, 108 exercises)</strong></p>
-</li>
-<li><strong>Files</strong>: All 108 exercise files across <code>exercises/42_travel_logistics_and_borders/</code> to <code>exercises/59_scalar_concession_and_intensive_connectors/</code></li>
-<li><strong>Actions</strong>:<ul>
-<li>Add <code>### Instructions</code> with <code>**TODO**:</code> and <code>**Why**:</code>.</li>
-<li>Add inline <code>&lt;!-- TODO: ... --&gt;</code> above prompt.</li>
-<li>Guarantee zero solution word leaks.</li>
-</ul>
-</li>
-<li>
-<p><strong>Verification</strong>: <code>cargo test --test exercise_validity_tests</code>.</p>
-</li>
-<li>
-<p>[ ] <strong>Task 5: TUI Prompt Card Enhancement &amp; Automated Leakage Verification Test</strong></p>
-</li>
-<li><strong>Files</strong>: <code>src/tui/ui.rs</code>, <code>tests/exercise_todo_tests.rs</code></li>
-<li><strong>Actions</strong>:<ul>
-<li>In <code>src/tui/ui.rs</code>, parse <code>### Instructions</code> and render <code>Task (TODO):</code> and <code>Why:</code> in the prompt card with dedicated color styling.</li>
-<li>Create <code>tests/exercise_todo_tests.rs</code> asserting:</li>
-<li>Every one of the 339 exercises contains <code>### Instructions</code>, <code>**TODO**:</code>, and <code>**Why**:</code>.</li>
-<li>No instruction text is empty or shorter than 20 characters.</li>
-<li>No instruction text or inline <code>&lt;!-- TODO: --&gt;</code> comment contains the exact solution string from <code>&lt;!-- SOLUTION --&gt;</code>.</li>
-</ul>
-</li>
-<li>
-<p><strong>Verification</strong>: Run <code>cargo test --test exercise_todo_tests</code>.</p>
-</li>
-<li>
-<p>[ ] <strong>Task 6: Full Verification, Documentation &amp; Knowledge Graph Update</strong></p>
-</li>
-<li><strong>Actions</strong>:<ul>
-<li>Run <code>cargo fmt --check</code>.</li>
-<li>Run <code>cargo clippy --all-targets -- -D warnings</code>.</li>
-<li>Run <code>cargo test</code>.</li>
-<li>Update knowledge graph: <code>uvx --from graphifyy graphify update .</code>.</li>
-<li>Run <code>roborev status</code> and <code>roborev show HEAD</code>.</li>
-</ul>
-</li>
+<hr />
+<h2 id="4-verification-quality-gates">4. Verification &amp; Quality Gates</h2>
+<ul>
+<li><code>uv run pytest tests/test_docs_playground.py</code> and <code>uv run pytest</code> pass 100%.</li>
+<li><code>uv run mkdocs build --strict</code> runs with 0 warnings/errors.</li>
+<li><code>cargo test --all-targets</code> passes 100%.</li>
+<li><code>uv run ruff check scripts/ tests/</code> and <code>uv run pyright tests/ scripts/</code> pass with 0 errors.</li>
 </ul>
 
 

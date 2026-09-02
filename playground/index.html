@@ -12,7 +12,7 @@
         <meta name="author" content="Spanglings Contributors">
       
       
-        <link rel="canonical" href="https://dnf0.github.io/spanglings/adr/0002-lsp-and-in-tui-modal-architecture/">
+        <link rel="canonical" href="https://dnf0.github.io/spanglings/playground/">
       
       
       
@@ -20,19 +20,19 @@
         
       
       
-      <link rel="icon" href="../../assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
-        <title>ADR-0002: Language Server Protocol (LSP) Engine & In-TUI Modal Architecture - Spanglings</title>
+        <title>Spanglings WebAssembly Playground & Arcade Arena - Spanglings</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -51,9 +51,9 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/playground/playground.css">
+      <link rel="stylesheet" href="../assets/playground/playground.css">
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#adr-0002-language-server-protocol-lsp-engine-in-tui-modal-architecture" class="md-skip">
+        <a href="#spanglings-webassembly-playground-arcade-arena" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Spanglings" class="md-header__button md-logo" aria-label="Spanglings" data-md-component="logo">
+    <a href=".." title="Spanglings" class="md-header__button md-logo" aria-label="Spanglings" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ADR-0002: Language Server Protocol (LSP) Engine &amp; In-TUI Modal Architecture
+              Spanglings WebAssembly Playground &amp; Arcade Arena
             
           </span>
         </div>
@@ -232,7 +232,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Spanglings" class="md-nav__button md-logo" aria-label="Spanglings" data-md-component="logo">
+    <a href=".." title="Spanglings" class="md-nav__button md-logo" aria-label="Spanglings" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -262,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href=".." class="md-nav__link">
         
   
   
@@ -289,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../getting-started/" class="md-nav__link">
+      <a href="../getting-started/" class="md-nav__link">
         
   
   
@@ -316,7 +316,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../playground/" class="md-nav__link">
+      <a href="./" class="md-nav__link">
         
   
   
@@ -343,7 +343,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../onboarding-guide/" class="md-nav__link">
+      <a href="../onboarding-guide/" class="md-nav__link">
         
   
   
@@ -370,7 +370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../syllabus/" class="md-nav__link">
+      <a href="../syllabus/" class="md-nav__link">
         
   
   
@@ -397,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../cli-reference/" class="md-nav__link">
+      <a href="../cli-reference/" class="md-nav__link">
         
   
   
@@ -424,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../grammar-reference/" class="md-nav__link">
+      <a href="../grammar-reference/" class="md-nav__link">
         
   
   
@@ -451,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../contributing/" class="md-nav__link">
+      <a href="../contributing/" class="md-nav__link">
         
   
   
@@ -498,66 +498,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#status" class="md-nav__link">
+  <a href="#playground-architecture-overview" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Status
+        🎮 Playground Architecture &amp; Overview
       
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#context" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Context
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#decisions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Decisions
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Decisions">
+    <nav class="md-nav" aria-label="🎮 Playground Architecture &amp; Overview">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-in-tui-non-disruptive-popup-modals" class="md-nav__link">
+  <a href="#key-capabilities" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. In-TUI Non-Disruptive Popup Modals
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-native-stdio-language-server-protocol-lsp-engine-spanglings-lsp" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        2. Native Stdio Language Server Protocol (LSP) Engine (spanglings lsp)
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-portable-study-notes-spaced-repetition-exporter" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        3. Portable Study Notes &amp; Spaced Repetition Exporter
+        Key Capabilities
       
     </span>
   </a>
@@ -570,10 +526,99 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#consequences" class="md-nav__link">
+  <a href="#two-operational-modes" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Consequences
+        🕹️ Two Operational Modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🕹️ Two Operational Modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mode-a-curriculum-workspace-dual-pane-editor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode A: Curriculum Workspace (Dual-Pane Editor)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mode-b-rapid-arcade-arena-showdowns-specialized-engines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mode B: Rapid Arcade Arena (Showdowns &amp; Specialized Engines)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mode B: Rapid Arcade Arena (Showdowns &amp; Specialized Engines)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-16-binary-showdown-duels" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 16 Binary Showdown Duels
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-5-specialized-drill-engines" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 5 Specialized Drill Engines
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arcade-controls-rapid-answering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Arcade Controls &amp; Rapid Answering
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fullscreen-zen-mode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⛶ Fullscreen &amp; Zen Mode
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#local-storage-cli-synchronization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        💾 Local Storage &amp; CLI Synchronization
       
     </span>
   </a>
@@ -600,50 +645,130 @@
   
 
 
-<h1 id="adr-0002-language-server-protocol-lsp-engine-in-tui-modal-architecture">ADR-0002: Language Server Protocol (LSP) Engine &amp; In-TUI Modal Architecture</h1>
-<h2 id="status">Status</h2>
-<p>Accepted</p>
-<h2 id="context">Context</h2>
-<p>As Spanglings expanded to support 30 comprehensive curriculum tracks (covering B1-C1 grammar, distributed system architecture RFCs, and executive leadership collocations), developers needed seamless, non-disruptive access to reference material and instant feedback both inside the terminal and inside their primary code editors (VS Code, Neovim, Helix, Zed).</p>
-<p>Prior to this architecture:
-1. Reviewing verb conjugations or reference cards required exiting or opening a secondary terminal window to execute CLI commands (<code>spanglings explain</code>, <code>spanglings conjugate</code>).
-2. External editor integrations relied on polling or CLI check executions (<code>spanglings check --json</code>).
-3. Flashcard learners who use Anki or Obsidian could not easily export their SRS progression or study guides.</p>
-<h2 id="decisions">Decisions</h2>
-<h3 id="1-in-tui-non-disruptive-popup-modals">1. In-TUI Non-Disruptive Popup Modals</h3>
+<h1 id="spanglings-webassembly-playground-arcade-arena">Spanglings WebAssembly Playground &amp; Arcade Arena</h1>
+<blockquote>
+<p><strong>Zero-backend client-side Spanish learning environment powered by WebAssembly and client storage.</strong><br />
+Master B1–C1 Spanish grammar, verb mechanics, aspectual distinctions (<em>pretérito vs imperfecto</em>), subjunctive triggers, and idiomatic collocations directly in your browser with instant compiler feedback.</p>
+</blockquote>
+<hr />
+<!-- Interactive WebAssembly & JavaScript Playground Application Mount -->
+<div id="spanglings-app"></div>
+
+<!-- Monaco AMD Script Loader -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.45.0/min/vs/loader.js"></script>
+<!-- Spanglings WebAssembly & Storage App Controller -->
+<script type="module" src="../assets/playground/playground.js"></script>
+
+<hr />
+<h2 id="playground-architecture-overview">🎮 Playground Architecture &amp; Overview</h2>
+<p>The <strong>Spanglings Playground</strong> brings the complete developer-grade terminal learning experience into a client-side, zero-latency WebAssembly sandbox. All verification, sentence generation, spaced repetition tracking, and diagnostic evaluation run 100% locally in your browser.</p>
+<h3 id="key-capabilities">Key Capabilities</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>⚡ 0ms Latency Compilation</strong></td>
+<td style="text-align: left;">Validates Spanish conjugations, clitic placements, and mood selection in &lt; 15ms.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>🔒 100% Offline &amp; Private</strong></td>
+<td style="text-align: left;">Progress and custom settings persist exclusively in browser <code>localStorage</code>. No accounts, no tracking.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>💡 Dual-Layer Explanations</strong></td>
+<td style="text-align: left;">Every exercise and duel pairs an intuitive communicative mental model with a structural grammar rule.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>⛶ Zen &amp; Fullscreen Mode</strong></td>
+<td style="text-align: left;">Toggle distraction-free full-screen mode to turn your browser into a dedicated language terminal.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>⌨️ Keyboard-First Workflow</strong></td>
+<td style="text-align: left;">Native shortcuts for accent insertion, code submission (<code>Ctrl+Enter</code>), and arcade rapid answers (<code>1</code>-<code>4</code> or <code>j</code>/<code>k</code>/<code>l</code>/<code>;</code>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="two-operational-modes">🕹️ Two Operational Modes</h2>
+<h3 id="mode-a-curriculum-workspace-dual-pane-editor">Mode A: Curriculum Workspace (Dual-Pane Editor)</h3>
+<p>The <strong>Curriculum Workspace</strong> mirrors the Spanglings CLI watcher and TUI experience across all <strong>24 core grammar tracks</strong> and <strong>136 structural sentence frames</strong>:</p>
+<ol>
+<li><strong>Track Navigation</strong>: Select any topic from the sidebar (e.g. <em>Subjunctive Triggers</em>, <em>Por vs. Para</em>, <em>Indirect Object Clitics</em>, <em>Conditional Sentences</em>).</li>
+<li><strong>Monaco Code Editor</strong>: Edit sentence code with syntax highlighting, line numbers, and error markers.</li>
+<li><strong>Accent Toolbar</strong>: Insert Spanish diacritics (<code>á</code>, <code>é</code>, <code>í</code>, <code>ó</code>, <code>ú</code>, <code>ñ</code>, <code>ü</code>, <code>¿</code>, <code>¡</code>) with one click or using keyboard shortcuts.</li>
+<li><strong>Progressive 3-Tier Hint System</strong>:</li>
+<li><code>Hint 1 (?)</code>: Subtle clue highlighting the critical structural dependency.</li>
+<li><code>Hint 2 (??)</code>: Explicit grammar rule and morphological pattern.</li>
+<li><code>Hint 3 (???)</code>: Complete verified target solution with dual-layer breakdown.</li>
+<li><strong>Dual-Layer Feedback Cards</strong>:</li>
+<li><code>💡 Meaning / Context</code>: Real-world communicative intent and mental model.</li>
+<li><code>📐 Grammar Rule</code>: Formal syntactic transformation and morphological rationale.</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>+-----------------------------------------------------------------------------+
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>| 🇪🇸 Spanglings WebAssembly Workspace                    [Curriculum] [Arcade] |
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>+----------------------+-----------------------------+------------------------+
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>| 📚 Track Navigation  | 📝 Monaco Code Editor       | 💡 Pedagogical Feedback|
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>|  • Subjunctive (A1)  |                             |                        |
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>|  • Por vs Para (B1)  |  Dudo que ellos [vengan]    |  ✓ CORRECT!            |
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>|  • Clitics (B2)      |  a la fiesta esta noche.    |  💡 Meaning: Doubt      |
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>|  • Regimen (C1)      |                             |  📐 Rule: Subjunctive  |
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>|                      |  [á] [é] [í] [ó] [ú] [ñ]    |     required after     |
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>|                      |  [✓ Submit (Ctrl+Enter)]    |     verbs of denial    |
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>+----------------------+-----------------------------+------------------------+
+</span></code></pre></div>
+<hr />
+<h3 id="mode-b-rapid-arcade-arena-showdowns-specialized-engines">Mode B: Rapid Arcade Arena (Showdowns &amp; Specialized Engines)</h3>
+<p>The <strong>Rapid Arcade Arena</strong> is a high-speed, interactive drill environment designed to build instantaneous syntactic intuition through two game types:</p>
+<h4 id="1-16-binary-showdown-duels">1. 16 Binary Showdown Duels</h4>
+<p>High-velocity discrimination duels targeting the most notorious Spanish contrast pairs:
+- <strong>Ser vs. Estar</strong>: Essence vs. state, condition, and characteristic.
+- <strong>Por vs. Para</strong>: Cause/means/duration vs. destination/recipient/deadline.
+- <strong>Pretérito vs. Imperfecto</strong>: Completed endpoint vs. ongoing background aspect.
+- <strong>Subjunctive vs. Indicative</strong>: Doubt/desire/non-assertion vs. factual declaration.
+- <strong>Saber vs. Conocer</strong>: Factual knowledge/skills vs. acquaintance/familiarity.
+- <strong>Pedir vs. Preguntar</strong>: Requesting actions/objects vs. inquiring for information.
+- <strong>Llevar vs. Traer</strong>: Movement away from vs. movement toward the speaker.
+- <strong>Muy vs. Mucho</strong>: Adverbial degree modifier vs. noun quantifier.
+- <strong>Bien vs. Bueno</strong>: Adverbial manner vs. adjectival quality.
+- <strong>Tú vs. Usted</strong>: Informal solidarity vs. formal social distance.
+- <strong>Lo/La vs. Le/Les</strong>: Direct accusative object vs. indirect dative recipient.
+- <strong>Haber vs. Estar</strong>: Existence (<em>hay</em>) vs. definite spatial location (<em>está</em>).
+- <strong>Tener vs. Haber</strong>: Possession vs. perfect tense compound auxiliary.
+- <strong>Ir vs. Irse</strong>: Directional transit vs. emphatic departure/leaving.
+- <strong>Sino vs. Pero</strong>: Direct corrective substitution (<em>not this, but that</em>) vs. adversative qualification.
+- <strong>Para qué vs. Por qué / Porque</strong>: Purpose/goal inquiry vs. cause/reason explanation.</p>
+<h4 id="2-5-specialized-drill-engines">2. 5 Specialized Drill Engines</h4>
+<p>Targeted mechanical training modules for advanced syntactic nuances:
+- <strong>Prepositional Regimen Engine (<em>Verbos con Régimen</em>)</strong>: Master mandatory verb-bound prepositions (<em>soñar con</em>, <em>depender de</em>, <em>fijarse en</em>, <em>acordarse de</em>).
+- <strong>High-Frequency Irregulars Engine</strong>: Stem-changing radical shifts, irregular preterite roots (<em>puse</em>, <em>tuve</em>, <em>quise</em>), and irregular subjunctive stems.
+- <strong>False Friends &amp; Cognates Trap Detector</strong>: Deceptive pairs (<em>embarazada</em>, <em>constipado</em>, <em>éxito</em>, <em>realizar</em>, <em>sensible</em>).
+- <strong>The "Se" Matrix (<em>Las 5 Caras del Se</em>)</strong>: Disambiguate reflexive, reciprocal, passive, impersonal, and accidental involuntary <em>se</em> constructions.
+- <strong>Discourse Connectors &amp; Flow (<em>Conectores B2/C1</em>)</strong>: Complex transitional phrases (<em>sin embargo</em>, <em>por lo tanto</em>, <em>a pesar de que</em>, <em>ya que</em>, <em>en cuanto</em>).</p>
+<h4 id="arcade-controls-rapid-answering">Arcade Controls &amp; Rapid Answering</h4>
 <ul>
-<li>Extended <code>ratatui</code> rendering pipeline with a centralized <code>centered_rect</code> layer using <code>Clear</code> widgets.</li>
-<li>Added dedicated modal states in <code>AppMode</code>:</li>
-<li><code>AppMode::Conjugating</code>: Real-time verb search and colorized 7-tense pronoun grid with irregular stem highlights.</li>
-<li><code>AppMode::BrowsingReference</code>: Split-pane topic selector and markdown reference cheat sheet viewer with real-time filtering.</li>
-<li><code>AppMode::Help</code>: Overlay detailing all shortcuts, power tools, and workflow bindings.</li>
-<li>Bound modal activations to global hotkeys (<code>F1</code>/<code>F3</code>/<code>F4</code>, <code>Ctrl+K</code>, <code>Ctrl+B</code>, <code>?</code>) and <code>Esc</code> for instant dismissal back to editing mode.</li>
+<li><strong>Key 1 / J</strong>: Select Option 1</li>
+<li><strong>Key 2 / K</strong>: Select Option 2</li>
+<li><strong>Key 3 / L</strong>: Select Option 3 (Engines)</li>
+<li><strong>Key 4 / ;</strong>: Select Option 4 (Engines)</li>
+<li><strong>Speed Multipliers</strong>: Answer in under 2,000ms for a score velocity bonus (+10 to +50 pts).</li>
 </ul>
-<h3 id="2-native-stdio-language-server-protocol-lsp-engine-spanglings-lsp">2. Native Stdio Language Server Protocol (LSP) Engine (<code>spanglings lsp</code>)</h3>
-<ul>
-<li>Implemented a lightweight, zero-dependency JSON-RPC 2.0 stdio server supporting:</li>
-<li><code>initialize</code> / <code>shutdown</code> protocol handshake.</li>
-<li><code>textDocument/didOpen</code>, <code>textDocument/didChange</code>: Real-time incremental/full diagnostic streaming with warnings for missing accents and errors for grammatical/calque mistakes.</li>
-<li><code>textDocument/hover</code>: Instant Markdown popups rendering complete conjugation tables for verbs under cursor and grammar reference cheat sheets for grammatical topics.</li>
-<li><code>textDocument/completion</code>: Authentic technical Spanish completions (e.g. <em>conmutación por error</em>, <em>desplegar</em>).</li>
-<li><code>textDocument/codeAction</code>: One-click QuickFix action to remove <code>&lt;!-- I AM NOT DONE --&gt;</code>.</li>
-</ul>
-<h3 id="3-portable-study-notes-spaced-repetition-exporter">3. Portable Study Notes &amp; Spaced Repetition Exporter</h3>
-<ul>
-<li>Created <code>spanglings export</code>:</li>
-<li><code>--format anki</code>: Emits tab-separated values (TSV) with HTML formatting, hints, and tagging compatible with Anki deck imports.</li>
-<li><code>--format markdown</code>: Emits clean, topic-indexed study guides suitable for Obsidian or GitHub wikis.</li>
-<li><code>--format json</code>: Emits machine-readable curriculum and review performance metadata.</li>
-<li>Created <code>spanglings sync</code>:</li>
-<li><code>--export &lt;file&gt;</code>: Exports portable learning state and SRS history with version metadata.</li>
-<li><code>--import &lt;file&gt;</code>: Merges external state with local history, maintaining highest repetition intervals and latest review timestamps.</li>
-</ul>
-<h2 id="consequences">Consequences</h2>
-<ul>
-<li><strong>Positive</strong>: Zero context switching for learners: reference cheat sheets and verb tables are accessible within 1 keystroke inside both the interactive TUI and code editors.</li>
-<li><strong>Positive</strong>: Complete portability: study progress can be synchronized across machines or exported to external flashcard ecosystems.</li>
-<li><strong>Positive</strong>: High testability: LSP protocol messages and modal state machines are 100% covered by deterministic integration tests.</li>
-</ul>
+<hr />
+<h2 id="fullscreen-zen-mode">⛶ Fullscreen &amp; Zen Mode</h2>
+<p>To eliminate browser chrome and enter an immersive terminal session:
+1. Click the <strong>⛶ Fullscreen</strong> icon in the playground header navigation bar.
+2. The playground expands to fill the entire viewport (<code>100vw × 100vh</code>) with fixed z-index elevation.
+3. Click the button again or press <code>Esc</code> to restore the standard documentation layout.</p>
+<hr />
+<h2 id="local-storage-cli-synchronization">💾 Local Storage &amp; CLI Synchronization</h2>
+<p>All playground sessions maintain strict state parity with the Spanglings CLI:
+- <strong>Completed Exercises</strong>: Synced in <code>spanglings_completed_exercises</code>.
+- <strong>Arcade High Scores</strong>: Recorded by mode and topic in <code>spanglings_arcade_scores</code>.
+- <strong>Export / Import</strong>: Back up your progress as JSON to migrate between browser playgrounds and your local desktop terminal.</p>
 
 
 
@@ -699,10 +824,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
