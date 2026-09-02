@@ -796,4 +796,3 @@ def test_fullscreen_toggle_and_monaco_relayout(
 
     assert res["isFullscreen1"] is True
     assert res["isFullscreen2"] is False
-

@@ -183,16 +183,16 @@ def test_mkdocs_config_nav_and_extra_assets(mkdocs_yml_path: Path) -> None:
 def test_docs_ci_workflow_builds_playground_bundle(
     docs_workflow_path: Path,
 ) -> None:
-    """Verify .github/workflows/docs.yml executes build_playground_bundle.py before deploy."""
+    """Verify .github/workflows/docs.yml executes build_wasm.py before deploy."""
     assert docs_workflow_path.exists(), (
         f".github/workflows/docs.yml must exist at {docs_workflow_path}"
     )
 
     content = docs_workflow_path.read_text(encoding="utf-8")
 
-    # Workflow must execute build_playground_bundle.py
-    assert "build_playground_bundle.py" in content, (
-        ".github/workflows/docs.yml must run scripts/build_playground_bundle.py"
+    # Workflow must execute build_wasm.py
+    assert "build_wasm.py" in content, (
+        ".github/workflows/docs.yml must run scripts/build_wasm.py"
     )
 
 

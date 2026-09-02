@@ -1,0 +1,32 @@
+{
+  "name": "spanglings",
+  "type": "module",
+  "collaborators": [
+    "Daniel Fisher"
+  ],
+  "description": "Spanglings builds the syntax compiler; real-world usage supplies the data. Developer-grade CLI & interactive TUI for mastering Spanish.",
+  "version": "0.5.4",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dnf0/spanglings"
+  },
+  "files": [
+    "spanglings_bg.wasm",
+    "spanglings.js",
+    "spanglings.d.ts"
+  ],
+  "main": "spanglings.js",
+  "homepage": "https://github.com/dnf0/spanglings",
+  "types": "spanglings.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ],
+  "keywords": [
+    "spanish",
+    "learning",
+    "cli",
+    "tui",
+    "rustlings"
+  ]
+}
