@@ -33,12 +33,12 @@
 - Produces: `docs/playground/index.html` standalone application entrypoint mounted at `#spanglings-app`.
 - Navigation: `mkdocs.yml` `nav` entry `- Interactive Playground: playground/index.html`.
 
-- [ ] **Step 1: Write failing test in `tests/test_docs_playground.py` for `docs/playground/index.html`**
-- [ ] **Step 2: Run test to verify it fails**
-- [ ] **Step 3: Create `docs/playground/index.html` with `#standalone-header`, theme toggle, and `#spanglings-app` container**
-- [ ] **Step 4: Update `mkdocs.yml` navigation and `not_in_nav`**
-- [ ] **Step 5: Run tests and verify they pass**
-- [ ] **Step 6: Commit changes**
+- [x] **Step 1: Write failing test in `tests/test_docs_playground.py` for `docs/playground/index.html`**
+- [x] **Step 2: Run test to verify it fails**
+- [x] **Step 3: Create `docs/playground/index.html` with `#standalone-header`, theme toggle, and `#spanglings-app` container**
+- [x] **Step 4: Update `mkdocs.yml` navigation and `not_in_nav`**
+- [x] **Step 5: Run tests and verify they pass**
+- [x] **Step 6: Commit changes**
 
 ---
 
@@ -53,11 +53,11 @@
 - Produces: CSS variable architecture (`--pg-bg`, `--pg-card-bg`, `--pg-sidebar-bg`, `--pg-header-bg`, `--pg-border`, `--pg-accent`, `--pg-term-*`) supporting `[data-md-color-scheme="slate"]`, `html[data-theme="dark"]`, and `html[data-theme="light"]`.
 - Styling: Standalone edge-to-edge layout, pulsing status dot (`.status-loading`, `.status-ready`, `.status-running`), gradient progress bar, complete badge counters, rounded action toolbar buttons.
 
-- [ ] **Step 1: Write tests for Kubelings CSS variable tokens and layout classes**
-- [ ] **Step 2: Run tests to verify failure**
-- [ ] **Step 3: Update `docs/assets/playground/playground.css` with Kubelings theme variables, standalone layout rules, and component styles**
-- [ ] **Step 4: Run tests to verify pass**
-- [ ] **Step 5: Commit changes**
+- [x] **Step 1: Write tests for Kubelings CSS variable tokens and layout classes**
+- [x] **Step 2: Run tests to verify failure**
+- [x] **Step 3: Update `docs/assets/playground/playground.css` with Kubelings theme variables, standalone layout rules, and component styles**
+- [x] **Step 4: Run tests to verify pass**
+- [x] **Step 5: Commit changes**
 
 ---
 
@@ -70,11 +70,11 @@
 **Interfaces:**
 - Produces: Seamless Monaco editor theme synchronization (`vs-dark` vs `vs`), standalone container sizing, status dot lifecycle updates.
 
-- [ ] **Step 1: Write test for theme switching Monaco sync and status dot management**
-- [ ] **Step 2: Run tests to verify failure**
-- [ ] **Step 3: Update `docs/assets/playground/playground.js` with theme sync helper and status pill states**
-- [ ] **Step 4: Run tests to verify pass**
-- [ ] **Step 5: Commit changes**
+- [x] **Step 1: Write test for theme switching Monaco sync and status dot management**
+- [x] **Step 2: Run tests to verify failure**
+- [x] **Step 3: Update `docs/assets/playground/playground.js` with theme sync helper and status pill states**
+- [x] **Step 4: Run tests to verify pass**
+- [x] **Step 5: Commit changes**
 
 ---
 
@@ -87,6 +87,6 @@
 **Interfaces:**
 - Verifies: Full test suite (`cargo test --all-targets`, `uv run pytest`, `uv run mkdocs build --strict`, `uv run ruff check`).
 
-- [ ] **Step 1: Run comprehensive verification suites**
-- [ ] **Step 2: Verify `mkdocs build --strict` output**
-- [ ] **Step 3: Commit and finalize task**
+- [x] **Step 1: Run comprehensive verification suites**
+- [x] **Step 2: Verify `mkdocs build --strict` output**
+- [x] **Step 3: Commit and finalize task**
