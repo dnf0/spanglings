@@ -461,6 +461,25 @@ class SpanglingsStorage {
   }
 
   /**
+   * Combined helper to record an exercise review, updating completion, SRS, and concept mastery.
+   *
+   * @param {string} conceptId - Concept slug or topic identifier.
+   * @param {string} exerciseId - Exercise unique identifier.
+   * @param {number} [quality=4] - Rating from 0 to 5.
+   * @param {boolean} [isCorrect=true] - Whether the submission was correct.
+   * @param {number} [hintsUsed=0] - Number of hints used.
+   */
+  recordReview(conceptId, exerciseId, quality = 4, isCorrect = true, hintsUsed = 0) {
+    if (isCorrect) {
+      this.markCompleted(exerciseId, hintsUsed);
+    }
+    this.updateSrs(exerciseId, quality);
+    if (conceptId) {
+      this.updateConceptMastery(conceptId, quality);
+    }
+  }
+
+  /**
    * Updates arcade stats summary.
    *
    * @param {number} points - Score achieved.
