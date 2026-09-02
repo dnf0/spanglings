@@ -1,0 +1,2433 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Spanglings builds the syntax compiler; real-world usage supplies the data. Developer-grade CLI & interactive TUI for mastering Spanish (B1–C1).">
+      
+      
+        <meta name="author" content="Spanglings Contributors">
+      
+      
+        <link rel="canonical" href="https://dnf0.github.io/spanglings/manual/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../syllabus/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Spanish Language Manual - Spanglings</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/playground/playground.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#spanglings-spanish-language-manual" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Spanglings" class="md-header__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Spanglings
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Spanish Language Manual
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Spanglings" class="md-nav__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Spanglings
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spanish Language Manual
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spanish Language Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table of Contents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-1-foundations-aspectual-geometry-a1a2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 1: Foundations &amp; Aspectual Geometry (A1–A2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-2-mood-triggers-pragmatic-voice-b1b2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 2: Mood, Triggers &amp; Pragmatic Voice (B1–B2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-3-advanced-nuance-registers-edge-mechanics-b2c1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 3: Advanced Nuance, Registers &amp; Edge Mechanics (B2–C1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curriculum Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../playground/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interactive Playground
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Table of Contents
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Table of Contents">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tier-1-foundations-aspectual-geometry-a1a2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 1: Foundations &amp; Aspectual Geometry (A1–A2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-2-mood-triggers-pragmatic-voice-b1b2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 2: Mood, Triggers &amp; Pragmatic Voice (B1–B2)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tier-3-advanced-nuance-registers-edge-mechanics-b2c1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tier 3: Advanced Nuance, Registers &amp; Edge Mechanics (B2–C1)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="spanglings-spanish-language-manual">Spanglings Spanish Language Manual</h1>
+<p>Welcome to the <strong>Spanglings Spanish Language Reference Manual</strong>. Designed with the precision and structural clarity of developer documentation, this manual maps the complete Spanish grammatical architecture across 24 core curriculum topics organized into three CEFR competency tiers.</p>
+<p>Every chapter provides dual-layer explanations:
+1. <strong>💡 Communicative Mental Model</strong>: An intuitive cognitive model explaining <em>why</em> native speakers structure thoughts in this pattern.
+2. <strong>📐 Grammar Rules &amp; Decision Matrix</strong>: Concrete syntax trigger matrices, morphology tables, minimal pairs, and actionable contrast rules.</p>
+<p>Every topic section connects bidirectionally to the <strong>Interactive Playground</strong>, offering immediate access to the <strong>Curriculum Syntax Studio</strong> and <strong>Rapid Showdown Duel Arena</strong>.</p>
+<hr />
+<h2 id="table-of-contents">Table of Contents</h2>
+<h3 id="tier-1-foundations-aspectual-geometry-a1a2">Tier 1: Foundations &amp; Aspectual Geometry (A1–A2)</h3>
+<ol>
+<li><a href="#ser-estar">Ser vs. Estar (Identity vs. State &amp; Location)</a></li>
+<li><a href="#por-para">Por vs. Para (Cause &amp; Trajectory vs. Goal &amp; Recipient)</a></li>
+<li><a href="#past-tenses">Past Tenses &amp; Aspect (Preterite vs. Imperfect)</a></li>
+<li><a href="#pronouns">Pronoun Stacking &amp; Clitic Placement (<code>se lo</code>)</a></li>
+<li><a href="#gustar">Verbs like Gustar &amp; Inverted Dative Syntax</a></li>
+<li><a href="#reflexive">Reflexive Verbs &amp; Inherent Proradical Actions</a></li>
+<li><a href="#stem-changing">Stem-Changing Verbs &amp; Boot Conjugations</a></li>
+<li><a href="#prepositions">Prepositional Regimen (Verbal Complements)</a></li>
+</ol>
+<h3 id="tier-2-mood-triggers-pragmatic-voice-b1b2">Tier 2: Mood, Triggers &amp; Pragmatic Voice (B1–B2)</h3>
+<ol>
+<li><a href="#subjunctive">Present Subjunctive &amp; WEIRDO Triggers</a></li>
+<li><a href="#imperfect-subjunctive">Imperfect Subjunctive &amp; Counterfactual Conditionals</a></li>
+<li><a href="#imperative">Imperative Mood &amp; Command Clitic Syntax</a></li>
+<li><a href="#accidental-se">Accidental &amp; Involuntary "Se" (Non-Agentive Events)</a></li>
+<li><a href="#passive-impersonal-se">Passive &amp; Impersonal "Se" vs. True Reflexives</a></li>
+<li><a href="#possessive-datives">Possessive &amp; Sympathetic Datives (Inalienable Possession)</a></li>
+<li><a href="#relative-pronouns">Relative Pronouns &amp; Clauses (<code>que</code>, <code>quien</code>, <code>el que</code>, <code>cuyo</code>)</a></li>
+<li><a href="#gerund-rules">Gerund Syntax &amp; Pitfalls (Simultaneity vs. Banned Posteriority)</a></li>
+</ol>
+<h3 id="tier-3-advanced-nuance-registers-edge-mechanics-b2c1">Tier 3: Advanced Nuance, Registers &amp; Edge Mechanics (B2–C1)</h3>
+<ol>
+<li><a href="#verbs-of-becoming">Verbs of Becoming &amp; Transformation (<code>ponerse</code>, <code>hacerse</code>, <code>volverse</code>, <code>quedarse</code>)</a></li>
+<li><a href="#scalar-concession">Scalar &amp; Intensive Concession (<code>por más que</code>, <code>aun a riesgo de que</code>)</a></li>
+<li><a href="#epistemic-conjecture">Epistemic Conjecture &amp; Probability (Future/Conditional of Probability)</a></li>
+<li><a href="#adversatives">Adversatives &amp; Rectification (<code>pero</code> vs. <code>sino</code> vs. <code>sino que</code>)</a></li>
+<li><a href="#false-friends">False Friends &amp; Deceptive Cognates (<code>actual</code>, <code>realizar</code>, <code>pretender</code>)</a></li>
+<li><a href="#voseo">Voseo &amp; Regional Address Variations (Rioplatense &amp; Central American)</a></li>
+<li><a href="#tech">Software Engineering &amp; Technical Spanish (<code>desplegar</code>, <code>depurar</code>, <code>concurrencia</code>)</a></li>
+<li><a href="#legal">Legal, Statutory &amp; Contractual Spanish (Statutory Subjunctive <code>-ere</code>)</a></li>
+</ol>
+<hr />
+<h1 id="tier-1-foundations-aspectual-geometry-a1a2_1">Tier 1: Foundations &amp; Aspectual Geometry (A1–A2)</h1>
+<hr />
+<div id="ser-estar"></div>
+
+<h2 id="1-ser-vs-estar-identity-vs-state-location-a1a2">1. Ser vs. Estar (Identity vs. State &amp; Location) <span class="badge">A1–A2</span></h2>
+<h3 id="communicative-mental-model">💡 Communicative Mental Model</h3>
+<p>Think of <strong><code>ser</code></strong> as defining inherent identity, essence, and categorization (<em>"what / who something is"</em>), and <strong><code>estar</code></strong> as capturing current state, condition, posture, or physical location (<em>"how / where something stands right now"</em>). </p>
+<p><code>ser</code> constructs the permanent baseline coordinates of an entity; <code>estar</code> tracks dynamic readings from sensors in real time.</p>
+<h3 id="grammar-rules-decision-matrix">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dimension</th>
+<th style="text-align: left;"><code>ser</code> (Essence &amp; Categorization)</th>
+<th style="text-align: left;"><code>estar</code> (State, Condition &amp; Location)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Identity &amp; Roles</strong></td>
+<td style="text-align: left;"><code>Es ingeniera de software.</code> (Occupation)</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Material &amp; Origin</strong></td>
+<td style="text-align: left;"><code>La mesa es de madera.</code> / <code>Soy de España.</code></td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Time &amp; Dates</strong></td>
+<td style="text-align: left;"><code>Son las tres y media.</code> / <code>Hoy es martes.</code></td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Characteristics</strong></td>
+<td style="text-align: left;"><code>El hielo es frío.</code> (Inherent physical property)</td>
+<td style="text-align: left;"><code>El café está frío.</code> (Current thermal state)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Location</strong></td>
+<td style="text-align: left;"><code>El concierto es en el estadio.</code> (<em>Events</em> take <code>ser</code>)</td>
+<td style="text-align: left;"><code>Madrid está en España.</code> (<em>Physical entities</em> take <code>estar</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Emotions / States</strong></td>
+<td style="text-align: left;"><code>Es una persona alegre.</code> (Personality trait)</td>
+<td style="text-align: left;"><code>Está alegre hoy.</code> (Transient mood)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Progressive Aspect</strong></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Está compilando el código.</code> (<code>estar</code> + gerund)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="adjectives-that-shift-meaning-with-ser-vs-estar">Adjectives that Shift Meaning with <code>ser</code> vs. <code>estar</code></h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Adjective</th>
+<th style="text-align: left;">With <code>ser</code> (Inherent Trait)</th>
+<th style="text-align: left;">With <code>estar</code> (Current State / Condition)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>listo</strong></td>
+<td style="text-align: left;">Clever, smart (<em>Es muy listo</em>)</td>
+<td style="text-align: left;">Ready, prepared (<em>Está listo para la demo</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>rico</strong></td>
+<td style="text-align: left;">Wealthy, affluent (<em>Es rico</em>)</td>
+<td style="text-align: left;">Delicious, tasty (<em>La comida está rica</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>atento</strong></td>
+<td style="text-align: left;">Courteous, polite (<em>Es atento con los clientes</em>)</td>
+<td style="text-align: left;">Paying attention (<em>Está atento al monitor</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>verde</strong></td>
+<td style="text-align: left;">Green-colored (<em>La manzana es verde</em>)</td>
+<td style="text-align: left;">Unripe, immature (<em>El plátano está verde</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>aburrido</strong></td>
+<td style="text-align: left;">Boring person/thing (<em>La charla es aburrida</em>)</td>
+<td style="text-align: left;">Bored (<em>Estoy aburrido</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>grave</strong></td>
+<td style="text-align: left;">Serious, deep voice (<em>Voz grave</em>)</td>
+<td style="text-align: left;">Critically ill (<em>El paciente está grave</em>)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="minimal-pairs-contrast">Minimal Pairs &amp; Contrast</h4>
+<ul>
+<li><strong>Event vs. Object Location:</strong></li>
+<li><em>La reunión </em><em>es</em><em> en la sala 3.</em> (Event occurrence $\rightarrow$ <code>ser</code>).</li>
+<li><em>La pizarra </em><em>está</em><em> en la sala 3.</em> (Physical entity location $\rightarrow$ <code>estar</code>).</li>
+<li><strong>Inherent vs. Measured Condition:</strong></li>
+<li><em>La manzana </em><em>es</em><em> dulce.</em> (Apples as a category are sweet $\rightarrow$ <code>ser</code>).</li>
+<li><em>Esta sopa </em><em>está</em><em> dulce.</em> (Tasting impression: this specific soup tastes sweet $\rightarrow$ <code>estar</code>).</li>
+</ul>
+<h4 id="common-traps-high-frequency-pitfalls">Common Traps &amp; High-Frequency Pitfalls</h4>
+<ol>
+<li><strong>Event Location Trap:</strong> Using <code>estar</code> for events (<em>*La fiesta está en mi casa</em> ❌ $\rightarrow$ <em>La fiesta es en mi casa</em> ✅).</li>
+<li><strong>Permanent vs. Temporary Myth:</strong> Memorizing <code>ser = permanent</code> and <code>estar = temporary</code> leads to errors with death (<em>Está muerto</em> takes <code>estar</code> because death is a state, not an identity).</li>
+</ol>
+<h4 id="interactive-practice">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=ser-estar">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=ser-estar">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="por-para"></div>
+
+<h2 id="2-por-vs-para-cause-trajectory-vs-goal-recipient-a1a2">2. Por vs. Para (Cause &amp; Trajectory vs. Goal &amp; Recipient) <span class="badge">A1–A2</span></h2>
+<h3 id="communicative-mental-model_1">💡 Communicative Mental Model</h3>
+<p>Think of <strong><code>por</code></strong> as looking backward or around (cause, motivation, duration, exchange, channel, trajectory) and <strong><code>para</code></strong> as looking forward (goal, destination, deadline, recipient, standard of comparison).</p>
+<p><code>por</code> is the <em>propelling force</em> or <em>pipeline transit</em>; <code>para</code> is the <em>target endpoint</em> or <em>destination payload</em>.</p>
+<h3 id="grammar-rules-decision-matrix_1">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Dimension</th>
+<th style="text-align: left;"><code>por</code> (Vector Origin, Cause, Path)</th>
+<th style="text-align: left;"><code>para</code> (Vector Target, Destination, Goal)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Purpose vs. Cause</strong></td>
+<td style="text-align: left;"><code>Lo hizo por miedo.</code> (Motive / Cause)</td>
+<td style="text-align: left;"><code>Estudia para aprender.</code> (Purpose / Objective)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Time &amp; Schedule</strong></td>
+<td style="text-align: left;"><code>Trabajó por dos horas.</code> (Duration)</td>
+<td style="text-align: left;"><code>La entrega es para el viernes.</code> (Hard Deadline)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Space &amp; Direction</strong></td>
+<td style="text-align: left;"><code>Caminamos por el parque.</code> (Transit through)</td>
+<td style="text-align: left;"><code>Salgo para Madrid.</code> (Final Destination)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Recipient &amp; Stake</strong></td>
+<td style="text-align: left;"><code>Lucharon por la libertad.</code> (Cause / Sake)</td>
+<td style="text-align: left;"><code>Este informe es para ti.</code> (Direct Recipient)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Financial / Trade</strong></td>
+<td style="text-align: left;"><code>Pagué 20 euros por el libro.</code> (Exchange / Price)</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Communication / Means</strong></td>
+<td style="text-align: left;"><code>Te lo envié por correo electrónico.</code> (Channel)</td>
+<td style="text-align: left;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Standard of Comparison</strong></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Para ser junior, programa muy bien.</code> (Comparison)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Personal Assessment</strong></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Para mí, la arquitectura es sólida.</code> (Opinion)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="minimal-pairs-contrast_1">Minimal Pairs &amp; Contrast</h4>
+<ul>
+<li><strong>Working Relationship:</strong></li>
+<li><em>Trabajé </em><em>por</em><em> ti.</em> (I worked in your place / on your behalf because you were absent $\rightarrow$ substitution / cause).</li>
+<li><em>Trabajé </em><em>para</em><em> ti.</em> (You were my boss / employer $\rightarrow$ recipient of services).</li>
+<li><strong>Inclinational States (<code>estar por</code> vs. <code>estar para</code>):</strong></li>
+<li><em>Estoy </em><em>por</em><em> salir.</em> (I am inclined / in favor of going out, or on the verge of leaving $\rightarrow$ motive).</li>
+<li><em>No estoy </em><em>para</em><em> bromas.</em> (I am in no condition / mood for jokes $\rightarrow$ suitability).</li>
+</ul>
+<h4 id="common-traps-high-frequency-pitfalls_1">Common Traps &amp; High-Frequency Pitfalls</h4>
+<ol>
+<li><strong>"In order to" Confusion:</strong> Translating English "for learning" as <code>*por aprender</code> ❌ instead of <code>para aprender</code> ✅.</li>
+<li><strong>Substitution vs. Employment:</strong> Using <code>por</code> when naming a company you work for (<em>*Trabajo por Google</em> ❌ $\rightarrow$ <em>Trabajo para Google</em> ✅).</li>
+</ol>
+<h4 id="interactive-practice_1">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=por-para">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=por-para">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="past-tenses"></div>
+
+<h2 id="3-past-tenses-aspect-preterite-vs-imperfect-a1a2">3. Past Tenses &amp; Aspect (Preterite vs. Imperfect) <span class="badge">A1–A2</span></h2>
+<h3 id="communicative-mental-model_2">💡 Communicative Mental Model</h3>
+<p>Think of the <strong>Pretérito Indefinido (Preterite)</strong> as a <em>photographic snapshot</em> of a bounded, completed event with fixed timestamps, and the <strong>Pretérito Imperfecto (Imperfect)</strong> as a <em>video recording</em> of ongoing background conditions, atmospheric scene-setting, habitual routines, or mental states without defined boundaries.</p>
+<h3 id="grammar-rules-decision-matrix_2">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metric</th>
+<th style="text-align: left;">Pretérito Indefinido (Punctual / Bounded)</th>
+<th style="text-align: left;">Pretérito Imperfecto (Continuous / Background)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Event Boundary</strong></td>
+<td style="text-align: left;">Explicit start or finish (<em>Llegó a las 8:00</em>)</td>
+<td style="text-align: left;">Open-ended / unreferenced boundary (<em>Dormía</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sequential Progression</strong></td>
+<td style="text-align: left;">Sequence of actions (<em>Se levantó, comió y salió</em>)</td>
+<td style="text-align: left;">Concurrent backdrop (<em>Hacía frío y llovía</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Habitual Repetition</strong></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Repeated routines (<em>Siempre íbamos a la playa</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Age &amp; Clock Time</strong></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;">Past age / time (<em>Tenía 20 años</em>; <em>Eran las diez</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Trigger Signals</strong></td>
+<td style="text-align: left;"><em>ayer, anoche, de repente, el año pasado, una vez</em></td>
+<td style="text-align: left;"><em>siempre, todos los días, mientras, de niño, a menudo</em></td>
+</tr>
+</tbody>
+</table>
+<h4 id="aspectual-lexical-shifts-verbs-that-shift-meaning-in-the-past">Aspectual Lexical Shifts (Verbs that Shift Meaning in the Past)</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Verb</th>
+<th style="text-align: left;">Pretérito Indefinido (Punctual / Culmination)</th>
+<th style="text-align: left;">Pretérito Imperfecto (Continuous State / Disposition)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>conocer</strong></td>
+<td style="text-align: left;">Met for the first time (<em>La conocí en la conferencia</em>)</td>
+<td style="text-align: left;">Knew / was acquainted with (<em>La conocía desde niño</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>saber</strong></td>
+<td style="text-align: left;">Found out / learned (<em>Ayer supe la verdad</em>)</td>
+<td style="text-align: left;">Knew (had the information) (<em>Yo ya lo sabía</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>querer</strong></td>
+<td style="text-align: left;">Attempted / tried to (<em>Quiso abrir el candado</em>)</td>
+<td style="text-align: left;">Wanted / felt like (<em>Quería viajar a Tokio</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>no querer</strong></td>
+<td style="text-align: left;">Refused to (<em>No quiso firmar el contrato</em>)</td>
+<td style="text-align: left;">Didn't feel like (<em>No quería salir anoche</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>poder</strong></td>
+<td style="text-align: left;">Managed / succeeded in (<em>Pude arreglar el servidor</em>)</td>
+<td style="text-align: left;">Had the general ability (<em>Podía correr rápido</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>no poder</strong></td>
+<td style="text-align: left;">Failed after trying (<em>No pude compilar el código</em>)</td>
+<td style="text-align: left;">Was unable / had difficulty (<em>No podía concentrarse</em>)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="minimal-pairs-interruption-syntax">Minimal Pairs &amp; Interruption Syntax</h4>
+<ul>
+<li><em>Yo </em><em>leía</em><em> el informe cuando de repente </em><em>se cayó</em><em> el servidor.</em></li>
+<li><em>leía</em> = Ongoing background activity (Imperfect).</li>
+<li><em>se cayó</em> = Punctual interrupting event (Preterite).</li>
+</ul>
+<h4 id="interactive-practice_2">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=past-tenses">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=past-tenses">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="pronouns"></div>
+
+<h2 id="4-pronoun-stacking-clitic-placement-se-lo-a1a2">4. Pronoun Stacking &amp; Clitic Placement (<code>se lo</code>) <span class="badge">A1–A2</span></h2>
+<h3 id="communicative-mental-model_3">💡 Communicative Mental Model</h3>
+<p>Think of Spanish pronoun sequences as governed by the strict pipeline principle: <strong>"People before Things"</strong> (<code>Reflexive</code> $\rightarrow$ <code>Indirect</code> $\rightarrow$ <code>Direct</code>). When two third-person pronouns collide (<code>le/les</code> + <code>lo/la/los/las</code>), Spanish replaces the indirect pronoun with <strong><code>se</code></strong> to prevent phonological cacophony ("the <em>le lo</em> avoidance rule").</p>
+<h3 id="grammar-rules-decision-matrix_3">📐 Grammar Rules &amp; Decision Matrix</h3>
+<h4 id="pronoun-sequence-hierarchy">Pronoun Sequence Hierarchy</h4>
+<p>$$\mathbf{Se} \;\longrightarrow\; \mathbf{Me / Te / Nos / Os} \;\longrightarrow\; \mathbf{Le / Les} \;\longrightarrow\; \mathbf{Lo / La / Los / Las}$$</p>
+<h4 id="the-le-les-rightarrow-se-transformation-matrix">The <code>Le / Les</code> $\rightarrow$ <code>Se</code> Transformation Matrix</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Intended Indirect</th>
+<th style="text-align: left;">Intended Direct</th>
+<th style="text-align: left;">Forbidden Calque</th>
+<th style="text-align: left;">Standard Spanish Form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>le</code> (to him/her/you)</td>
+<td style="text-align: left;"><code>lo</code> (it masc.)</td>
+<td style="text-align: left;"><code>*Le lo doy</code> ❌</td>
+<td style="text-align: left;"><strong><code>Se lo doy</code></strong> ✅</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>le</code> (to him/her/you)</td>
+<td style="text-align: left;"><code>la</code> (it fem.)</td>
+<td style="text-align: left;"><code>*Le la envío</code> ❌</td>
+<td style="text-align: left;"><strong><code>Se la envío</code></strong> ✅</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>les</code> (to them/you all)</td>
+<td style="text-align: left;"><code>los</code> (them masc.)</td>
+<td style="text-align: left;"><code>*Les los entrego</code> ❌</td>
+<td style="text-align: left;"><strong><code>Se los entrego</code></strong> ✅</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>les</code> (to them/you all)</td>
+<td style="text-align: left;"><code>las</code> (them fem.)</td>
+<td style="text-align: left;"><code>*Les las muestro</code> ❌</td>
+<td style="text-align: left;"><strong><code>Se las muestro</code></strong> ✅</td>
+</tr>
+</tbody>
+</table>
+<h4 id="clitic-attachment-orthographic-accent-rules">Clitic Attachment &amp; Orthographic Accent Rules</h4>
+<ol>
+<li><strong>Preposed (Before conjugated verbs):</strong> <em>Se lo dije ayer.</em></li>
+<li><strong>Postfixed / Attached to Infinitives:</strong> <em>Voy a decír</em><em>se</em><em>lo.</em> (Accented to preserve stem stress).</li>
+<li><strong>Postfixed / Attached to Gerunds:</strong> <em>Estoy explicándo</em><em>te</em><em>lo.</em> (Accented).</li>
+<li><strong>Postfixed / Attached to Affirmative Commands:</strong> <em>¡Dí</em><em>me</em><em>lo ahora!</em> (Accented).</li>
+</ol>
+<h4 id="common-traps-high-frequency-pitfalls_2">Common Traps &amp; High-Frequency Pitfalls</h4>
+<ol>
+<li><strong>Splitting Compound Verbs:</strong> Placing clitics between auxiliary <code>haber</code> and past participle (<em>*He lo visto</em> ❌ $\rightarrow$ <em>Lo he visto</em> ✅).</li>
+<li><strong>Forgetting Tildes on Attachment:</strong> Attaching double clitics without adding the orthographic accent (<em>*Darselo</em> ❌ $\rightarrow$ <em>Dárselo</em> ✅).</li>
+</ol>
+<h4 id="interactive-practice_3">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=pronouns">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=pronouns">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="gustar"></div>
+
+<h2 id="5-verbs-like-gustar-inverted-dative-syntax-a1a2">5. Verbs like Gustar &amp; Inverted Dative Syntax <span class="badge">A1–A2</span></h2>
+<h3 id="communicative-mental-model_4">💡 Communicative Mental Model</h3>
+<p>Think of <strong><code>gustar</code></strong> not as "to like", but as <strong>"to be pleasing to"</strong>. Inverted psych-verbs place the <em>stimulus</em> as the grammatical subject that triggers agreement on the verb, while the human experiencer receives dative case marking.</p>
+<h3 id="grammar-rules-decision-matrix_4">📐 Grammar Rules &amp; Decision Matrix</h3>
+<p>$$\text{[Optional Reduplicative Phase: } \mathbf{A + Tonic Pronoun}\text{]} + \mathbf{Dative Clitic} + \mathbf{Verb (3rd Sing / Plur)} + \mathbf{Subject (Stimulus)}$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Experiencer</th>
+<th style="text-align: left;">Dative Clitic</th>
+<th style="text-align: left;">Verb (Singular Subject)</th>
+<th style="text-align: left;">Verb (Plural Subject)</th>
+<th style="text-align: left;">Stimulus / Subject</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>A mí</code></td>
+<td style="text-align: left;"><code>me</code></td>
+<td style="text-align: left;"><code>gusta</code></td>
+<td style="text-align: left;"><code>gustan</code></td>
+<td style="text-align: left;"><code>el código / los libros</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>A ti</code></td>
+<td style="text-align: left;"><code>te</code></td>
+<td style="text-align: left;"><code>encanta</code></td>
+<td style="text-align: left;"><code>encantan</code></td>
+<td style="text-align: left;"><code>la arquitectura / las pruebas</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>A él / ella / usted</code></td>
+<td style="text-align: left;"><code>le</code></td>
+<td style="text-align: left;"><code>molesta</code></td>
+<td style="text-align: left;"><code>molestan</code></td>
+<td style="text-align: left;"><code>el ruido / los errores</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>A nosotros</code></td>
+<td style="text-align: left;"><code>nos</code></td>
+<td style="text-align: left;"><code>interesa</code></td>
+<td style="text-align: left;"><code>interesan</code></td>
+<td style="text-align: left;"><code>el proyecto / los datos</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>A vosotros</code></td>
+<td style="text-align: left;"><code>os</code></td>
+<td style="text-align: left;"><code>parece bien</code></td>
+<td style="text-align: left;"><code>parecen bien</code></td>
+<td style="text-align: left;"><code>la propuesta / las ideas</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>A ellos / ustedes</code></td>
+<td style="text-align: left;"><code>les</code></td>
+<td style="text-align: left;"><code>falta</code></td>
+<td style="text-align: left;"><code>faltan</code></td>
+<td style="text-align: left;"><code>tiempo / dos minutos</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="catalog-of-common-inverted-psych-verbs">Catalog of Common Inverted Psych-Verbs</h4>
+<ul>
+<li><strong>encantar:</strong> to love / be delighted by (<em>Me encantan los microservicios</em>).</li>
+<li><strong>faltar / quedar:</strong> to lack / have remaining (<em>Nos quedan dos tareas</em>).</li>
+<li><strong>doler (o $\rightarrow$ ue):</strong> to hurt (<em>Le duele la cabeza</em>).</li>
+<li><strong>costar (o $\rightarrow$ ue):</strong> to find difficult (<em>Me cuesta entender la concurrencia</em>).</li>
+<li><strong>importar:</strong> to care about / matter (<em>No les importa el retraso</em>).</li>
+</ul>
+<h4 id="common-traps">Common Traps</h4>
+<ul>
+<li>Agreeing with the person (<em>*Yo gusto los libros</em> ❌ $\rightarrow$ <em>Me gustan los libros</em> ✅).</li>
+<li>Omitting the plural <code>-n</code> before plural nouns (<em>*Me gusta los libros</em> ❌ $\rightarrow$ <em>Me gustan los libros</em> ✅).</li>
+</ul>
+<h4 id="interactive-practice_4">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=gustar">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=gustar">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="reflexive"></div>
+
+<h2 id="6-reflexive-verbs-inherent-proradical-actions-a1a2">6. Reflexive Verbs &amp; Inherent Proradical Actions <span class="badge">A1–A2</span></h2>
+<h3 id="communicative-mental-model_5">💡 Communicative Mental Model</h3>
+<p>Think of the reflexive particle <strong><code>se</code></strong> as a versatile syntactic lens: it can reflect an action directly back onto the actor (<em>self-care</em>), mark mutual interaction (<em>reciprocity</em>), signify entering a new state (<em>inchoative</em>), or transform the entire lexical meaning of a verb root (<em>proradical shift</em>).</p>
+<h3 id="grammar-rules-decision-matrix_5">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">Syntactic Function</th>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">English Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Direct Reflexive</strong></td>
+<td style="text-align: left;">Subject acts on self</td>
+<td style="text-align: left;"><code>Se lava las manos.</code></td>
+<td style="text-align: left;">He/she washes his/her hands.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Reciprocal</strong></td>
+<td style="text-align: left;">Mutual action between subjects</td>
+<td style="text-align: left;"><code>Juan y María se ayudan.</code></td>
+<td style="text-align: left;">Juan and María help each other.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Inchoative (State Change)</strong></td>
+<td style="text-align: left;">Entry into a physical/mental state</td>
+<td style="text-align: left;"><code>Se durmió a medianoche.</code></td>
+<td style="text-align: left;">He fell asleep at midnight.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Inherent Pronominal</strong></td>
+<td style="text-align: left;">Verb only exists with <code>se</code></td>
+<td style="text-align: left;"><code>Se queja del servicio.</code></td>
+<td style="text-align: left;">He complains about the service.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="lexical-shifts-between-non-reflexive-and-reflexive-verbs">Lexical Shifts Between Non-Reflexive and Reflexive Verbs</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Non-Reflexive Base</th>
+<th style="text-align: left;">Meaning</th>
+<th style="text-align: left;">Reflexive Form</th>
+<th style="text-align: left;">Shifted Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>dormir</strong></td>
+<td style="text-align: left;">To sleep (<em>Dormí 8 horas</em>)</td>
+<td style="text-align: left;"><strong>dormirse</strong></td>
+<td style="text-align: left;">To fall asleep (<em>Me dormí en el tren</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>ir</strong></td>
+<td style="text-align: left;">To go (<em>Voy a la oficina</em>)</td>
+<td style="text-align: left;"><strong>irse</strong></td>
+<td style="text-align: left;">To leave / depart (<em>Me voy ahora</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>llevar</strong></td>
+<td style="text-align: left;">To carry / take (<em>Lleva la mochila</em>)</td>
+<td style="text-align: left;"><strong>llevarse</strong></td>
+<td style="text-align: left;">To take away / get along (<em>Se llevan bien</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>acordar</strong></td>
+<td style="text-align: left;">To agree / settle (<em>Acordaron el precio</em>)</td>
+<td style="text-align: left;"><strong>acordarse de</strong></td>
+<td style="text-align: left;">To remember (<em>Me acordé de tu aviso</em>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>negar</strong></td>
+<td style="text-align: left;">To deny (<em>Negó la acusación</em>)</td>
+<td style="text-align: left;"><strong>negarse a</strong></td>
+<td style="text-align: left;">To refuse (<em>Se negó a firmar</em>)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="interactive-practice_5">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=reflexive">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=reflexive">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="stem-changing"></div>
+
+<h2 id="7-stem-changing-verbs-boot-conjugations-a1a2">7. Stem-Changing Verbs &amp; Boot Conjugations <span class="badge">A1–A2</span></h2>
+<h3 id="communicative-mental-model_6">💡 Communicative Mental Model</h3>
+<p>Think of stem-changing verbs as <strong>"stress-activated vowel transformations"</strong>. Whenever the phonetic stress falls directly on the stem syllable of the verb, the vowel opens or diphthongizes (<code>e</code> $\rightarrow$ <code>ie</code>, <code>o</code> $\rightarrow$ <code>ue</code>, <code>e</code> $\rightarrow$ <code>i</code>). When stress moves to the ending (<code>nosotros</code> and <code>vosotros</code>), the stem returns to its resting base. This creates the classic <strong>"boot" (la bota)</strong> pattern on conjugation charts.</p>
+<h3 id="grammar-rules-decision-matrix_6">📐 Grammar Rules &amp; Decision Matrix</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>       [ YO: pienso ]      [ NOSOTROS: pensamos ]   &lt;-- Outside the boot (unstressed stem)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>       [ TÚ: piensas ]     [ VOSOTROS: pensáis  ]   &lt;-- Outside the boot (unstressed stem)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>       [ ÉL: piensa  ]     [ ELLOS:    piensan  ]
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>       \________________________________________/
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                  Inside the Boot
+</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Stem Shift Class</th>
+<th style="text-align: left;">Infinitive</th>
+<th style="text-align: left;">Present Indicative Conjugations (<code>yo / tú / él / nosotros / ellos</code>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>E $\rightarrow$ IE</strong></td>
+<td style="text-align: left;"><code>pensar</code></td>
+<td style="text-align: left;"><code>pienso, piensas, piensa, pensamos, piensan</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E $\rightarrow$ IE</strong></td>
+<td style="text-align: left;"><code>entender</code></td>
+<td style="text-align: left;"><code>entiendo, entiendes, entiende, entendemos, entienden</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>O $\rightarrow$ UE</strong></td>
+<td style="text-align: left;"><code>poder</code></td>
+<td style="text-align: left;"><code>puedo, puedes, puede, podemos, pueden</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>O $\rightarrow$ UE</strong></td>
+<td style="text-align: left;"><code>dormir</code></td>
+<td style="text-align: left;"><code>duermo, duermes, duerme, dormimos, duermen</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E $\rightarrow$ I</strong></td>
+<td style="text-align: left;"><code>pedir</code></td>
+<td style="text-align: left;"><code>pido, pides, pide, pedimos, piden</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E $\rightarrow$ I</strong></td>
+<td style="text-align: left;"><code>servir</code></td>
+<td style="text-align: left;"><code>sirvo, sirves, sirve, servimos, sirven</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>U $\rightarrow$ UE</strong></td>
+<td style="text-align: left;"><code>jugar</code></td>
+<td style="text-align: left;"><code>juego, juegas, juega, jugamos, juegan</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="sandal-verbs-in-the-preterite-ir-verbs-only">"Sandal Verbs" in the Preterite (-IR Verbs Only)</h4>
+<p>In the preterite tense, only <strong>-IR stem-changing verbs</strong> change, and only in the <strong>3rd person singular and plural</strong> (the "sandal" shape):
+- <em>dormir</em> $\rightarrow$ <em>dormí, dormiste, </em><em>durmió</em><em>, dormimos, </em><em>durmieron</em><strong>.
+- <em>pedir<em> $\rightarrow$ </em>pedí, pediste, <strong>pidió</strong>, pedimos, **pidieron</em></strong>.
+- <em>sentir</em> $\rightarrow$ <em>sentí, sentiste, </em><em>sintió</em><em>, sentimos, </em><em>sintieron</em>**.</p>
+<h4 id="interactive-practice_6">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=stem-changing">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=stem-changing">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="prepositions"></div>
+
+<h2 id="8-prepositional-regimen-verbal-complements-a1a2">8. Prepositional Regimen (Verbal Complements) <span class="badge">A1–A2</span></h2>
+<h3 id="communicative-mental-model_7">💡 Communicative Mental Model</h3>
+<p>Think of prepositional verbs as <strong>"syntactic two-word packages"</strong>. In Spanish, many verbs govern an obligatory bound preposition (<em>régimen preposicional</em>) that connects the action to its object. These bonds are lexicalized and cannot be translated literally from English prepositions.</p>
+<h3 id="grammar-rules-decision-matrix_7">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Bound Preposition</th>
+<th style="text-align: left;">Governed Verbs</th>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">Real English Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>a</strong></td>
+<td style="text-align: left;"><code>acostumbrarse a</code>, <code>atreverse a</code>, <code>negarse a</code>, <code>aspirar a</code>, <code>comprometerse a</code>, <code>renunciar a</code></td>
+<td style="text-align: left;"><code>Se comprometió a entregar el código.</code></td>
+<td style="text-align: left;">Committed to delivering the code.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>de</strong></td>
+<td style="text-align: left;"><code>acordarse de</code>, <code>alegrarse de</code>, <code>enterarse de</code>, <code>quejarse de</code>, <code>depender de</code>, <code>carecer de</code></td>
+<td style="text-align: left;"><code>El rendimiento depende de la latencia.</code></td>
+<td style="text-align: left;">Performance depends ON latency.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>en</strong></td>
+<td style="text-align: left;"><code>pensar en</code>, <code>confiar en</code>, <code>insistir en</code>, <code>tardar en</code>, <code>fijarse en</code>, <code>consistir en</code></td>
+<td style="text-align: left;"><code>Pienso en la refactorización.</code></td>
+<td style="text-align: left;">I think ABOUT the refactoring.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>con</strong></td>
+<td style="text-align: left;"><code>contar con</code>, <code>soñar con</code>, <code>conformarse con</code>, <code>tropezar con</code>, <code>casarse con</code></td>
+<td style="text-align: left;"><code>Sueña con fundar su propia startup.</code></td>
+<td style="text-align: left;">Dreams OF/ABOUT founding a startup.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>por</strong></td>
+<td style="text-align: left;"><code>preocuparse por</code>, <code>interesarse por</code>, <code>luchar por</code>, <code>optar por</code>, <code>abogar por</code></td>
+<td style="text-align: left;"><code>Se preocupa por la escalabilidad.</code></td>
+<td style="text-align: left;">Cares / worries ABOUT scalability.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="high-frequency-translation-traps">High-Frequency Translation Traps</h4>
+<ul>
+<li><em>Depend on</em> $\rightarrow$ <code>*depender en</code> ❌ $\rightarrow$ <code>depender de</code> ✅.</li>
+<li><em>Dream about</em> $\rightarrow$ <code>*soñar sobre</code> ❌ $\rightarrow$ <code>soñar con</code> ✅.</li>
+<li><em>Think about</em> $\rightarrow$ <code>*pensar sobre</code> ❌ $\rightarrow$ <code>pensar en</code> ✅ (<em>pensar de</em> means "to have an opinion of").</li>
+</ul>
+<h4 id="interactive-practice_7">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=prepositions">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=prepositions">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<h1 id="tier-2-mood-triggers-pragmatic-voice-b1b2_1">Tier 2: Mood, Triggers &amp; Pragmatic Voice (B1–B2)</h1>
+<hr />
+<div id="subjunctive"></div>
+
+<h2 id="9-present-subjunctive-weirdo-triggers-b1b2">9. Present Subjunctive &amp; WEIRDO Triggers <span class="badge">B1–B2</span></h2>
+<h3 id="communicative-mental-model_8">💡 Communicative Mental Model</h3>
+<p>Think of the <strong>Indicative</strong> as the mood of <em>declared reality and objective facts</em>, and the <strong>Subjunctive</strong> as the <strong>"mood of the mind"</strong>—expressing desires, doubts, hypotheses, emotional evaluations, and virtual projections.</p>
+<p>The subjunctive activates when a main clause asserts a perspective, demand, or evaluation over a subordinate clause with a <strong>change of grammatical subject</strong>.</p>
+<h3 id="grammar-rules-decision-matrix_8">📐 Grammar Rules &amp; Decision Matrix</h3>
+<h4 id="trigger-formula">Trigger Formula</h4>
+<p>$$\mathbf{\text{[Main Clause Trigger]}} \;+\; \mathbf{\text{QUE}} \;+\; \mathbf{\text{[Subject Change]}} \;\longrightarrow\; \mathbf{\text{SUBJUNCTIVE}}$$</p>
+<h4 id="the-weirdo-trigger-framework">The WEIRDO Trigger Framework</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Trigger Letter</th>
+<th style="text-align: left;">Category</th>
+<th style="text-align: left;">Common Trigger Verbs</th>
+<th style="text-align: left;">Example Subjunctive Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>W</strong></td>
+<td style="text-align: left;">Wishes &amp; Desires</td>
+<td style="text-align: left;"><code>querer, desear, preferir, esperar, exigir</code></td>
+<td style="text-align: left;"><code>Quiero que vengas temprano.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>E</strong></td>
+<td style="text-align: left;">Emotion &amp; Assessment</td>
+<td style="text-align: left;"><code>alegrarse de, temer, sentir, molestar, encantar</code></td>
+<td style="text-align: left;"><code>Me alegro de que estés aquí.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>I</strong></td>
+<td style="text-align: left;">Impersonal Expressions</td>
+<td style="text-align: left;"><code>es necesario que, es importante que, conviene que</code></td>
+<td style="text-align: left;"><code>Es necesario que revisemos el log.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>R</strong></td>
+<td style="text-align: left;">Requests &amp; Directives</td>
+<td style="text-align: left;"><code>pedir, recomendar, sugerir, aconsejar, rogar</code></td>
+<td style="text-align: left;"><code>Te sugiero que guardes los cambios.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>D</strong></td>
+<td style="text-align: left;">Doubt &amp; Denial</td>
+<td style="text-align: left;"><code>dudar, no creer, no pensar, negar, no estar seguro</code></td>
+<td style="text-align: left;"><code>No creo que el servidor aguante.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>O</strong></td>
+<td style="text-align: left;">Ojalá</td>
+<td style="text-align: left;"><code>¡Ojalá (que)...!</code> (Invariable optative)</td>
+<td style="text-align: left;"><code>¡Ojalá tengamos éxito!</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="present-subjunctive-morphology-cross-over-vowels">Present Subjunctive Morphology: "Cross-Over Vowels"</h4>
+<ol>
+<li>Take the <strong>YO</strong> form of the present indicative (<code>tengo</code>, <code>hablo</code>, <code>como</code>, <code>pido</code>).</li>
+<li>Drop the <code>-o</code>.</li>
+<li>Add <strong>opposite vowel endings</strong>:</li>
+<li><strong>-AR Verbs:</strong> <code>-e, -es, -e, -emos, -éis, -en</code></li>
+<li><strong>-ER / -IR Verbs:</strong> <code>-a, -as, -a, -amos, -áis, -an</code></li>
+</ol>
+<h4 id="irregular-present-subjunctive-verbs-dishes">Irregular Present Subjunctive Verbs (DISHES)</h4>
+<ul>
+<li><strong>Dar:</strong> <code>dé, des, dé, demos, deis, den</code></li>
+<li><strong>Ir:</strong> <code>vaya, vayas, vaya, vayamos, vayáis, vayan</code></li>
+<li><strong>Ser:</strong> <code>sea, seas, sea, seamos, seáis, sean</code></li>
+<li><strong>Haber:</strong> <code>haya</code></li>
+<li><strong>Estar:</strong> <code>esté, estés, esté, estemos, estéis, estén</code></li>
+<li><strong>Saber:</strong> <code>sepa, sepas, sepa, sepamos, sepáis, sepan</code></li>
+</ul>
+<h4 id="doubt-vs-certainty-minimal-pairs">Doubt vs. Certainty Minimal Pairs</h4>
+<ul>
+<li><em>Creo que </em><em>viene</em><em> hoy.</em> (Certainty $\rightarrow$ Indicative).</li>
+<li><em>No creo que </em><em>venga</em><em> hoy.</em> (Negated belief / Doubt $\rightarrow$ Subjunctive).</li>
+<li><em>Es obvio que </em><em>tiene</em><em> razón.</em> (Certainty $\rightarrow$ Indicative).</li>
+<li><em>No es obvio que </em><em>tenga</em><em> razón.</em> (Doubt $\rightarrow$ Subjunctive).</li>
+</ul>
+<h4 id="interactive-practice_8">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=subjunctive">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=subjunctive">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="imperfect-subjunctive"></div>
+
+<h2 id="10-imperfect-subjunctive-counterfactual-conditionals-b1b2">10. Imperfect Subjunctive &amp; Counterfactual Conditionals <span class="badge">B1–B2</span></h2>
+<h3 id="communicative-mental-model_9">💡 Communicative Mental Model</h3>
+<p>Think of the <strong>Imperfect Subjunctive</strong> as extending the "mood of the mind" across two major axes:
+1. <strong>Past Subordinate Projection:</strong> Expressing desires, doubts, or requests triggered in past narratives (<em>Quería que vinieras</em>).
+2. <strong>Counterfactual Conditionals:</strong> Projecting hypothetical, unrealized universes (<em>"If X were true, then Y would happen"</em>).</p>
+<h3 id="grammar-rules-decision-matrix_9">📐 Grammar Rules &amp; Decision Matrix</h3>
+<h4 id="systematic-derivation-formula">Systematic Derivation Formula</h4>
+<ol>
+<li>Take the <strong>3rd person plural (ellos) of the Pretérito Indefinido</strong> (<code>hablaron</code>, <code>comieron</code>, <code>tuvieron</code>, <code>hicieron</code>, <code>fueron</code>).</li>
+<li>Drop the <strong><code>-ron</code></strong>.</li>
+<li>Add the Imperfect Subjunctive endings:</li>
+<li><strong>-ra form (universal):</strong> <code>-ra, -ras, -ra, -'ramos, -rais, -ran</code></li>
+<li><strong>-se form (literary/regional):</strong> <code>-se, -ses, -se, -'semos, -seis, -sen</code>
+<em>(Note: The <code>nosotros</code> form </em><em>always</em><em> takes an orthographic accent on the preceding vowel: <code>habláramos</code>, <code>tuviéramos</code>)</em>.</li>
+</ol>
+<h4 id="conditional-sentence-matrix-si-clauses">Conditional Sentence Matrix (Si Clauses)</h4>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Conditional Level</th>
+<th style="text-align: left;"><code>Si</code> Clause (Condition)</th>
+<th style="text-align: left;">Result Clause (Consequence)</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Real / Possible</strong></td>
+<td style="text-align: left;"><code>Si</code> + Present Indicative</td>
+<td style="text-align: left;">Present / Future Indicative / Imperative</td>
+<td style="text-align: left;"><code>Si tengo tiempo, te ayudo / ayudaré.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hypothetical / Counterfactual (Present)</strong></td>
+<td style="text-align: left;"><code>Si</code> + <strong>Imperfect Subjunctive</strong></td>
+<td style="text-align: left;"><strong>Condicional Simple</strong></td>
+<td style="text-align: left;"><code>Si tuviera presupuesto, contrataría más ingenieros.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Impossible / Counterfactual (Past)</strong></td>
+<td style="text-align: left;"><code>Si</code> + <strong>Pluscuamperfecto Subj.</strong> (<code>hubiera + part.</code>)</td>
+<td style="text-align: left;"><strong>Condicional Compuesto</strong> (<code>habría + part.</code>)</td>
+<td style="text-align: left;"><code>Si hubieras avisado, habríamos evitado la caída.</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="polite-requests-softening-formulas">Polite Requests &amp; Softening Formulas</h4>
+<p>The <code>-ra</code> forms of <code>querer</code>, <code>poder</code>, and <code>deber</code> serve as polite executive modal softeners:
+- <em>Quisiera hacer una consulta.</em> (I would like to make an inquiry).
+- <em>¿Pudiera / Podría revisar este pull request?</em> (Could you review this PR?).
+- <em>Debieras / Deberías considerar esta arquitectura.</em> (You ought to consider this).</p>
+<h4 id="interactive-practice_9">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=imperfect-subjunctive">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=imperfect-subjunctive">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="imperative"></div>
+
+<h2 id="11-imperative-mood-command-clitic-syntax-b1b2">11. Imperative Mood &amp; Command Clitic Syntax <span class="badge">B1–B2</span></h2>
+<h3 id="communicative-mental-model_10">💡 Communicative Mental Model</h3>
+<p>Think of the <strong>Imperative Mood</strong> as direct executive execution. Spanish distinguishes sharply between <strong>affirmative commands</strong> (where clitic pronouns attach to the end of the verb) and <strong>negative commands</strong> (which shift to the subjunctive and prepose clitics before the verb).</p>
+<h3 id="grammar-rules-decision-matrix_10">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Target Person</th>
+<th style="text-align: left;">Affirmative Command Formation</th>
+<th style="text-align: left;">Negative Command Formation (Always Subjunctive)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Tú (Informal Sing.)</strong></td>
+<td style="text-align: left;">3rd Sing. Present Indicative (<code>¡Habla!</code>, <code>¡Come!</code>)</td>
+<td style="text-align: left;">2nd Sing. Present Subjunctive (<code>¡No hables!</code>, <code>¡No comas!</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Usted (Formal Sing.)</strong></td>
+<td style="text-align: left;">3rd Sing. Present Subjunctive (<code>¡Hable!</code>, <code>¡Coma!</code>)</td>
+<td style="text-align: left;">3rd Sing. Present Subjunctive (<code>¡No hable!</code>, <code>¡No coma!</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vosotros (Informal Plur.)</strong></td>
+<td style="text-align: left;">Drop <code>-r</code>, add <code>-d</code> (<code>¡Hablad!</code>, <code>¡Comed!</code>)</td>
+<td style="text-align: left;">2nd Plur. Present Subjunctive (<code>¡No habléis!</code>, <code>¡No comáis!</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ustedes (Formal Plur.)</strong></td>
+<td style="text-align: left;">3rd Plur. Present Subjunctive (<code>¡Hablen!</code>, <code>¡Coman!</code>)</td>
+<td style="text-align: left;">3rd Plur. Present Subjunctive (<code>¡No hablen!</code>, <code>¡No coman!</code>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nosotros (Let's...)</strong></td>
+<td style="text-align: left;">1st Plur. Present Subjunctive (<code>¡Hablemos!</code>, <code>¡Comamos!</code>)</td>
+<td style="text-align: left;">1st Plur. Present Subjunctive (<code>¡No hablemos!</code>, <code>¡No comamos!</code>)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="the-8-irregular-affirmative-tu-commands">The 8 Irregular Affirmative <code>tú</code> Commands</h4>
+<ul>
+<li><strong>Decir:</strong> <code>¡Di!</code></li>
+<li><strong>Hacer:</strong> <code>¡Haz!</code></li>
+<li><strong>Ir:</strong> <code>¡Ve!</code></li>
+<li><strong>Poner:</strong> <code>¡Pon!</code></li>
+<li><strong>Salir:</strong> <code>¡Sal!</code></li>
+<li><strong>Ser:</strong> <code>¡Sé!</code></li>
+<li><strong>Tener:</strong> <code>¡Ten!</code></li>
+<li><strong>Venir:</strong> <code>¡Ven!</code></li>
+</ul>
+<h4 id="clitic-pronoun-polarity-switch">Clitic Pronoun Polarity Switch</h4>
+<ul>
+<li><strong>Affirmative (Enclitic / Attached):</strong> <code>¡Dí</code> + <code>me</code> + <code>lo</code> $\rightarrow$ <strong><code>¡Dímelo!</code></strong></li>
+<li><strong>Negative (Proclitic / Preposed):</strong> <code>¡No</code> + <code>me</code> + <code>lo</code> + <code>digas!</code> $\rightarrow$ <strong><code>¡No me lo digas!</code></strong></li>
+</ul>
+<h4 id="interactive-practice_10">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=imperative">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=imperative">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="accidental-se"></div>
+
+<h2 id="12-accidental-involuntary-se-non-agentive-events-b1b2">12. Accidental &amp; Involuntary "Se" (Non-Agentive Events) <span class="badge">B1–B2</span></h2>
+<h3 id="communicative-mental-model_11">💡 Communicative Mental Model</h3>
+<p>Think of the <strong>Accidental <code>se</code></strong> as a <strong>linguistic exoneration shield</strong>. Instead of framing a speaker as an active perpetrator of an accident (<em>"I broke the glass"</em>), Spanish syntax portrays the object as acting spontaneously upon an affected bystander (<em>"The glass broke itself on me"</em>).</p>
+<h3 id="grammar-rules-decision-matrix_11">📐 Grammar Rules &amp; Decision Matrix</h3>
+<p>$$\mathbf{Se} \;+\; \mathbf{\text{Indirect Object (Victim / Affected Person)}} \;+\; \mathbf{\text{Verb (Agrees with Object)}} \;+\; \mathbf{\text{Subject (The Item)}}$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Victim</th>
+<th style="text-align: left;">Indirect Clitic</th>
+<th style="text-align: left;">Verb (Singular Item)</th>
+<th style="text-align: left;">Verb (Plural Items)</th>
+<th style="text-align: left;">Example Item</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>A mí</code></td>
+<td style="text-align: left;"><code>me</code></td>
+<td style="text-align: left;"><code>cayó</code></td>
+<td style="text-align: left;"><code>cayeron</code></td>
+<td style="text-align: left;"><code>las llaves</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>A ti</code></td>
+<td style="text-align: left;"><code>te</code></td>
+<td style="text-align: left;"><code>olvidó</code></td>
+<td style="text-align: left;"><code>olvidaron</code></td>
+<td style="text-align: left;"><code>la contraseña</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>A él / ella</code></td>
+<td style="text-align: left;"><code>le</code></td>
+<td style="text-align: left;"><code>rompió</code></td>
+<td style="text-align: left;"><code>rompieron</code></td>
+<td style="text-align: left;"><code>el vaso</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>A nosotros</code></td>
+<td style="text-align: left;"><code>nos</code></td>
+<td style="text-align: left;"><code>perdió</code></td>
+<td style="text-align: left;"><code>perdieron</code></td>
+<td style="text-align: left;"><code>los documentos</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>A ellos</code></td>
+<td style="text-align: left;"><code>les</code></td>
+<td style="text-align: left;"><code>acabó</code></td>
+<td style="text-align: left;"><code>acabaron</code></td>
+<td style="text-align: left;"><code>la memoria RAM</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="common-accidental-verbs">Common Accidental Verbs</h4>
+<ul>
+<li><strong>caerse:</strong> <code>Se me cayeron las llaves.</code> (I dropped the keys / The keys fell from me).</li>
+<li><strong>olvidarse:</strong> <code>Se le olvidó la reunión.</code> (He/she forgot the meeting).</li>
+<li><strong>romperse:</strong> <code>Se nos rompió el servidor.</code> (The server broke on us).</li>
+<li><strong>perderse:</strong> <code>Se me perdió el token de acceso.</code> (I lost the access token).</li>
+<li><strong>acabarse:</strong> <code>Se nos acabó el tiempo.</code> (We ran out of time).</li>
+</ul>
+<h4 id="minimal-pairs-culpability-contrast">Minimal Pairs &amp; Culpability Contrast</h4>
+<ul>
+<li><em>Rompí la base de datos.</em> (Active culpability: I personally destroyed the database).</li>
+<li><em>Se me rompió la base de datos.</em> (Accidental mishap: The database broke while I was using it).</li>
+</ul>
+<h4 id="interactive-practice_11">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=accidental-se">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=accidental-se">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="passive-impersonal-se"></div>
+
+<h2 id="13-passive-impersonal-se-vs-true-reflexives-b1b2">13. Passive &amp; Impersonal "Se" vs. True Reflexives <span class="badge">B1–B2</span></h2>
+<h3 id="communicative-mental-model_12">💡 Communicative Mental Model</h3>
+<p>Think of <strong>Agent De-focusing</strong> as turning down the spotlight on the human actor. When the identity of the agent is unknown, irrelevant, or generalized, Spanish uses <code>se</code> either to promote an inanimate object to grammatical subject (<em>Pasiva Refleja</em>) or to declare an agentless collective action (<em>Se Impersonal</em>).</p>
+<h3 id="grammar-rules-decision-matrix_12">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Structure</th>
+<th style="text-align: left;">Syntactic Rule</th>
+<th style="text-align: left;">Example Sentence</th>
+<th style="text-align: left;">English Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Pasiva Refleja</strong> (Inanimate Patient)</td>
+<td style="text-align: left;"><code>Se</code> + Verb (3rd Sing/Plur) + Patient</td>
+<td style="text-align: left;"><code>Se exporta café.</code> / <code>Se venden casas.</code></td>
+<td style="text-align: left;">Coffee is exported. / Houses are sold.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Se Impersonal</strong> (Human Direct Object with <code>a</code>)</td>
+<td style="text-align: left;"><code>Se</code> + Verb (<strong>Strictly 3rd Sing</strong>) + <code>a</code> + Person</td>
+<td style="text-align: left;"><code>Se contrató a los ingenieros.</code></td>
+<td style="text-align: left;">The engineers were hired.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Se Impersonal</strong> (No Object / General Habit)</td>
+<td style="text-align: left;"><code>Se</code> + Verb (<strong>Strictly 3rd Sing</strong>)</td>
+<td style="text-align: left;"><code>Se vive bien en España.</code></td>
+<td style="text-align: left;">One lives well in Spain.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>True Reflexive</strong></td>
+<td style="text-align: left;">Subject acts on self</td>
+<td style="text-align: left;"><code>Carlos se lava.</code></td>
+<td style="text-align: left;">Carlos washes himself.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Reciprocal</strong></td>
+<td style="text-align: left;">Plural subjects act on each other</td>
+<td style="text-align: left;"><code>Los socios se consultan.</code></td>
+<td style="text-align: left;">The partners consult each other.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="agreement-disambiguation-matrix">Agreement Disambiguation Matrix</h4>
+<ul>
+<li><em>Se </em><em>busca</em><em> programador.</em> (Singular inanimate/generic patient $\rightarrow$ Singular verb).</li>
+<li><em>Se </em><em>buscan</em><em> programadores.</em> (Plural inanimate/generic patient $\rightarrow$ Plural verb agreement).</li>
+<li><em>Se </em><em>busca a</em><em> los programadores.</em> (Human direct object marked by personal <code>a</code> $\rightarrow$ Impersonal, <strong>strictly singular</strong> verb).</li>
+</ul>
+<h4 id="common-traps_1">Common Traps</h4>
+<ul>
+<li>Pluralizing the verb in impersonal sentences with personal <code>a</code> (<em>*Se buscan a los culpables</em> ❌ $\rightarrow$ <em>Se busca a los culpables</em> ✅).</li>
+</ul>
+<h4 id="interactive-practice_12">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=passive-impersonal-se">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=passive-impersonal-se">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="possessive-datives"></div>
+
+<h2 id="14-possessive-sympathetic-datives-inalienable-possession-b1b2">14. Possessive &amp; Sympathetic Datives (Inalienable Possession) <span class="badge">B1–B2</span></h2>
+<h3 id="communicative-mental-model_13">💡 Communicative Mental Model</h3>
+<p>Think of <strong>Inalienable Possession</strong> as Spanish's structural rejection of redundant ownership determiners. Instead of saying <em>"I washed my hands"</em> (attaching ownership to the body part), Spanish marks the human stakeholder via a <strong>dative clitic pronoun</strong> (<code>me, te, le, nos, les</code>) and refers to body parts or immediate clothing with simple <strong>definite articles</strong> (<code>el, la, los, las</code>).</p>
+<h3 id="grammar-rules-decision-matrix_13">📐 Grammar Rules &amp; Decision Matrix</h3>
+<p>$$\mathbf{\text{Dative Clitic}} \;+\; \mathbf{\text{Verb}} \;+\; \mathbf{\text{Definite Article (el/la/los/las)}} \;+\; \mathbf{\text{Body Part / Personal Item}}$$</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Forbidden English Calque</th>
+<th style="text-align: left;">Standard Spanish Dative Construction</th>
+<th style="text-align: left;">Literal Cognitive Translation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><code>*Lavo mis manos.</code> ❌</td>
+<td style="text-align: left;"><strong><code>Me lavo las manos.</code></strong> ✅</td>
+<td style="text-align: left;">I wash the hands to myself.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>*Rompiste su corazón.</code> ❌</td>
+<td style="text-align: left;"><strong><code>Le rompiste el corazón.</code></strong> ✅</td>
+<td style="text-align: left;">You broke the heart to him/her.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>*Me duele mi cabeza.</code> ❌</td>
+<td style="text-align: left;"><strong><code>Me duele la cabeza.</code></strong> ✅</td>
+<td style="text-align: left;">The head pains to me.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><code>*Puso su sombrero en su cabeza.</code> ❌</td>
+<td style="text-align: left;"><strong><code>Se puso el sombrero en la cabeza.</code></strong> ✅</td>
+<td style="text-align: left;">He put the hat on the head.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="sympathetic-ethic-datives-affective-involvement">Sympathetic &amp; Ethic Datives (Affective Involvement)</h4>
+<p>Spanish frequently injects non-argument dative clitics to signal emotional stake, parental affection, or shared vulnerability:
+- <em>¡No </em><em>me</em><em> llores!</em> (Affectionate plea: "Don't cry on me!").
+- <em>El niño no </em><em>me</em><em> come.</em> (Parental affective concern: "The child isn't eating for me").
+- <em>Se </em><em>nos</em><em> cayó el despliegue.</em> (Collective sympathetic impact: "The deployment crashed on us").</p>
+<h4 id="interactive-practice_13">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=possessive-datives">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=possessive-datives">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="relative-pronouns"></div>
+
+<h2 id="15-relative-pronouns-clauses-que-quien-el-que-cuyo-b1b2">15. Relative Pronouns &amp; Clauses (<code>que</code>, <code>quien</code>, <code>el que</code>, <code>cuyo</code>) <span class="badge">B1–B2</span></h2>
+<h3 id="communicative-mental-model_14">💡 Communicative Mental Model</h3>
+<p>Think of relative pronouns as <strong>"syntactic pointers and adapters"</strong>. They connect subordinate descriptive clauses back to their antecedents while maintaining proper animacy, prepositional governance, and grammatical gender/number alignment.</p>
+<h3 id="grammar-rules-decision-matrix_14">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Relative Pronoun</th>
+<th style="text-align: left;">Antecedent Type</th>
+<th style="text-align: left;">Syntactic Context</th>
+<th style="text-align: left;">Example Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>que</strong></td>
+<td style="text-align: left;">People or Things</td>
+<td style="text-align: left;">Restrictive clauses; direct objects without prepositions</td>
+<td style="text-align: left;"><code>El informe que redacté es claro.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>quien / quienes</strong></td>
+<td style="text-align: left;">People only</td>
+<td style="text-align: left;">After prepositions or in non-restrictive parenthetical clauses</td>
+<td style="text-align: left;"><code>La ingeniera con quien hablé.</code> / <code>María, quien llegó tarde...</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>el que / el cual</strong> (and fem/plur)</td>
+<td style="text-align: left;">People or Things</td>
+<td style="text-align: left;">After compound/heavy prepositions (<em>según, mediante, a través de</em>)</td>
+<td style="text-align: left;"><code>La directiva según la cual operamos.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>lo que / lo cual</strong></td>
+<td style="text-align: left;">Whole Idea / Proposition</td>
+<td style="text-align: left;">Neuter relative referring to an entire clause or situation</td>
+<td style="text-align: left;"><code>El servidor falló, lo cual retrasó la demo.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>cuyo / cuya / cuyos / cuyas</strong></td>
+<td style="text-align: left;">Possessive ("whose")</td>
+<td style="text-align: left;">Agrees with the <strong>possessed noun that follows it</strong></td>
+<td style="text-align: left;"><code>El autor cuyos libros leí.</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="the-agreement-rule-for-cuyo">The Agreement Rule for <code>cuyo</code></h4>
+<p><code>cuyo</code> never agrees with the owner; it agrees strictly in gender and number with the noun that immediately follows it:
+- <em>El profesor </em><em>cuya</em><em> clase terminó...</em> (<code>cuya</code> agrees with <code>clase</code>, feminine singular).
+- <em>La empresa </em><em>cuyos</em><em> servidores cayeron...</em> (<code>cuyos</code> agrees with <code>servidores</code>, masculine plural).</p>
+<h4 id="common-traps_2">Common Traps</h4>
+<ul>
+<li>Using <code>*que su</code> instead of <code>cuyo</code> (<em>*El autor que su libro...</em> ❌ $\rightarrow$ <em>El autor cuyo libro...</em> ✅).</li>
+<li>Omitting prepositions before relatives (<em>*La casa que vivo</em> ❌ $\rightarrow$ <em>La casa en la que vivo</em> ✅).</li>
+</ul>
+<h4 id="interactive-practice_14">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=relative-pronouns">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=relative-pronouns">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="gerund-rules"></div>
+
+<h2 id="16-gerund-syntax-pitfalls-simultaneity-vs-banned-posteriority-b1b2">16. Gerund Syntax &amp; Pitfalls (Simultaneity vs. Banned Posteriority) <span class="badge">B1–B2</span></h2>
+<h3 id="communicative-mental-model_15">💡 Communicative Mental Model</h3>
+<p>Think of the Spanish gerund (<code>-ando</code>, <code>-iendo</code>) as a <strong>"strictly simultaneous dynamic adverb"</strong>. It can only express an action occurring concurrently with or immediately preceding the main verb. Unlike English "-ing" forms, Spanish gerunds cannot modify static nouns or express subsequent outcomes.</p>
+<h3 id="grammar-rules-decision-matrix_15">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Gerund Category</th>
+<th style="text-align: left;">Status in Standard Spanish</th>
+<th style="text-align: left;">Incorrect Calque</th>
+<th style="text-align: left;">Correct Spanish Phrasing</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Gerund of Posteriority</strong></td>
+<td style="text-align: left;">❌ <strong>PROHIBITED</strong></td>
+<td style="text-align: left;"><code>*El servidor cayó provocando una interrupción.</code></td>
+<td style="text-align: left;"><code>El servidor cayó y provocó una interrupción.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Adjectival Gerund</strong></td>
+<td style="text-align: left;">❌ <strong>PROHIBITED</strong> (except <em>agua hirviendo</em>, <em>clavo ardiendo</em>)</td>
+<td style="text-align: left;"><code>*Una directiva regulando la privacidad.</code></td>
+<td style="text-align: left;"><code>Una directiva que regula la privacidad.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Gerund as Noun Subject</strong></td>
+<td style="text-align: left;">❌ <strong>PROHIBITED</strong></td>
+<td style="text-align: left;"><code>*Programando es divertido.</code></td>
+<td style="text-align: left;"><code>Programar es divertido.</code> (Use Infinitive)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Continuous Progressive</strong></td>
+<td style="text-align: left;">✅ <strong>VALID</strong></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Estamos depurando el código.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Simultaneous Manner</strong></td>
+<td style="text-align: left;">✅ <strong>VALID</strong></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Entró en la sala gritando.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conditional / Temporal</strong></td>
+<td style="text-align: left;">✅ <strong>VALID</strong></td>
+<td style="text-align: left;">—</td>
+<td style="text-align: left;"><code>Practicando a diario, dominarás Rust.</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="minimal-pairs-anglicism-traps">Minimal Pairs &amp; Anglicism Traps</h4>
+<ul>
+<li><strong>Subsequent Consequence:</strong></li>
+<li><em>Llegó a las diez, </em><em>reuniéndose</em><em> después con el equipo.</em> ❌ (Posteriority).</li>
+<li><em>Llegó a las diez </em><em>y se reunió</em><em> después con el equipo.</em> ✅ (Finite verb coordination).</li>
+<li><strong>Noun Modification:</strong></li>
+<li><em>Una caja </em><em>conteniendo</em><em> documentos.</em> ❌</li>
+<li><em>Una caja </em><em>que contiene</em><em> documentos.</em> ✅</li>
+</ul>
+<h4 id="interactive-practice_15">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=gerund-rules">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=gerund-rules">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<h1 id="tier-3-advanced-nuance-registers-edge-mechanics-b2c1_1">Tier 3: Advanced Nuance, Registers &amp; Edge Mechanics (B2–C1)</h1>
+<hr />
+<div id="verbs-of-becoming"></div>
+
+<h2 id="17-verbs-of-becoming-transformation-ponerse-hacerse-volverse-quedarse-b2c1">17. Verbs of Becoming &amp; Transformation (<code>ponerse</code>, <code>hacerse</code>, <code>volverse</code>, <code>quedarse</code>) <span class="badge">B2–C1</span></h2>
+<h3 id="communicative-mental-model_16">💡 Communicative Mental Model</h3>
+<p>Think of Spanish verbs of becoming as <strong>"transformation vectors"</strong> indexed along three distinct dimensions:
+1. <strong>Speed &amp; Volition:</strong> Rapid involuntary reaction vs. deliberate progressive effort.
+2. <strong>Permanence:</strong> Fleeting state change vs. fundamental character shift.
+3. <strong>Nature of Change:</strong> Physical/emotional state, ideological/professional evolution, or loss/aftermath.</p>
+<h3 id="grammar-rules-decision-matrix_16">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Verb of Becoming</th>
+<th style="text-align: left;">Core Semantics &amp; Vector</th>
+<th style="text-align: left;">Typical Complements</th>
+<th style="text-align: left;">Example Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>ponerse</strong></td>
+<td style="text-align: left;">Rapid, involuntary, temporary physical or emotional reaction</td>
+<td style="text-align: left;">Adjectives of mood / health / color</td>
+<td style="text-align: left;"><code>Se puso furioso con la noticia.</code> / <code>Se puso rojo.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>quedarse</strong></td>
+<td style="text-align: left;">State resulting from external event, shock, loss, or deprivation</td>
+<td style="text-align: left;">Adjectives of reaction / physical aftermath</td>
+<td style="text-align: left;"><code>Se quedó atónito.</code> / <code>El móvil se quedó sin batería.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>hacerse</strong></td>
+<td style="text-align: left;">Deliberate transformation through effort, ideology, career, or time</td>
+<td style="text-align: left;">Nouns / Adjectives of profession / ideology / age</td>
+<td style="text-align: left;"><code>Se hizo vegetariano.</code> / <code>Se hizo arquitecto.</code> / <code>Se hace tarde.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>volverse</strong></td>
+<td style="text-align: left;">Radical, lasting, involuntary personality or psychological change</td>
+<td style="text-align: left;">Adjectives of character / behavior</td>
+<td style="text-align: left;"><code>Se volvió muy desconfiado.</code> / <code>¡Te has vuelto loco!</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>llegar a ser</strong></td>
+<td style="text-align: left;">Culmination of a long journey, career summit, or life effort</td>
+<td style="text-align: left;">Prestigious nouns / titles</td>
+<td style="text-align: left;"><code>Tras décadas de esfuerzo, llegó a ser directora general.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>convertirse en</strong></td>
+<td style="text-align: left;">Total categorical metamorphosis or physical transformation</td>
+<td style="text-align: left;">Nouns with <code>en</code></td>
+<td style="text-align: left;"><code>La startup se convirtió en un unicornio tecnológico.</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="minimal-pairs-matrix">Minimal Pairs Matrix</h4>
+<ul>
+<li><em>Se </em><em>puso</em><em> triste.</em> (Temporary emotional reaction $\rightarrow$ <code>ponerse</code>).</li>
+<li><em>Se </em><em>quedó</em><em> triste.</em> (Lingering aftermath after receiving bad news $\rightarrow$ <code>quedarse</code>).</li>
+<li><em>Se </em><em>volvió</em><em> amargado.</em> (Permanent personality corruption $\rightarrow$ <code>volverse</code>).</li>
+<li><em>Se </em><em>hizo</em><em> rico.</em> (Achieved wealth through deliberate work $\rightarrow$ <code>hacerse</code>).</li>
+</ul>
+<h4 id="interactive-practice_16">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=verbs-of-becoming">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=verbs-of-becoming">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="scalar-concession"></div>
+
+<h2 id="18-scalar-intensive-concession-por-mas-que-aun-a-riesgo-de-que-b2c1">18. Scalar &amp; Intensive Concession (<code>por más que</code>, <code>aun a riesgo de que</code>) <span class="badge">B2–C1</span></h2>
+<h3 id="communicative-mental-model_17">💡 Communicative Mental Model</h3>
+<p>Think of <strong>Scalar Concession</strong> as dialing an obstacle or counter-argument up to its <strong>theoretical maximum intensity</strong> in the subjunctive mood, while declaring that the main clause stubbornly and unconditionally holds true regardless.</p>
+<h3 id="grammar-rules-decision-matrix_17">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Concessive Formula</th>
+<th style="text-align: left;">Governed Mood</th>
+<th style="text-align: left;">Semantic Focus</th>
+<th style="text-align: left;">Example Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>por más que / por mucho que</strong></td>
+<td style="text-align: left;"><strong>Subjunctive</strong></td>
+<td style="text-align: left;">Maximum hypothetical effort or quantity</td>
+<td style="text-align: left;"><code>Por mucho que insistas, no cambiaré de opinión.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>por muy + Adj + que</strong></td>
+<td style="text-align: left;"><strong>Subjunctive</strong></td>
+<td style="text-align: left;">Maximum intensity of a quality/adjective</td>
+<td style="text-align: left;"><code>Por muy complejo que sea el algoritmo, lo implementaremos.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>aun a riesgo de que</strong></td>
+<td style="text-align: left;"><strong>Subjunctive</strong></td>
+<td style="text-align: left;">Conscious acceptance of a hypothetical hazard</td>
+<td style="text-align: left;"><code>Lanzaremos el parche, aun a riesgo de que surjan bugs menores.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>aun a sabiendas de que</strong></td>
+<td style="text-align: left;"><strong>Indicative</strong></td>
+<td style="text-align: left;">Acknowledged, verified factual certainty</td>
+<td style="text-align: left;"><code>Aceptó el cargo, aun a sabiendas de que era agotador.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>siquiera / ni siquiera</strong></td>
+<td style="text-align: left;">Indicative / Subj.</td>
+<td style="text-align: left;">Extreme scalar focus / negative emphasis</td>
+<td style="text-align: left;"><code>No revisó ni siquiera una línea de código.</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="mood-selection-contrast-risk-vs-verified-fact">Mood Selection Contrast: Risk vs. Verified Fact</h4>
+<ul>
+<li><em>Lanzaremos el software, </em><em>aun a riesgo de que fallen</em><em> las pruebas.</em> (Hypothetical danger $\rightarrow$ Subjunctive).</li>
+<li><em>Lanzamos el software, </em><em>aun a sabiendas de que fallaban</em><em> las pruebas.</em> (Known empirical fact $\rightarrow$ Indicative).</li>
+</ul>
+<h4 id="interactive-practice_17">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=scalar-concession">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=scalar-concession">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="epistemic-conjecture"></div>
+
+<h2 id="19-epistemic-conjecture-probability-futureconditional-of-probability-b2c1">19. Epistemic Conjecture &amp; Probability (Future/Conditional of Probability) <span class="badge">B2–C1</span></h2>
+<h3 id="communicative-mental-model_18">💡 Communicative Mental Model</h3>
+<p>Think of the <strong>Epistemic Future and Conditional</strong> as <strong>built-in deduction timestamps</strong>. Native speakers rarely use clumsy modal adverbs like <em>"probablemente"</em> or <em>"debe de ser"</em> for deductions. Instead, they shift verbal tense morphology forward to express speculation about present and past states.</p>
+<h3 id="grammar-rules-decision-matrix_18">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Tense Formulation</th>
+<th style="text-align: left;">Time Frame of Speculation</th>
+<th style="text-align: left;">Real Meaning / English Equivalent</th>
+<th style="text-align: left;">Example Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Futuro Simple</strong></td>
+<td style="text-align: left;"><strong>Present Moment</strong></td>
+<td style="text-align: left;"><em>"It is probably... / It must be..."</em></td>
+<td style="text-align: left;"><code>¿Qué hora es? -&gt; Serán las cuatro.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Futuro Simple</strong></td>
+<td style="text-align: left;"><strong>Present State / Location</strong></td>
+<td style="text-align: left;"><em>"He/she is probably in..."</em></td>
+<td style="text-align: left;"><code>¿Dónde está Juan? -&gt; Estará en su despacho.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Condicional Simple</strong></td>
+<td style="text-align: left;"><strong>Past State / Ongoing Action</strong></td>
+<td style="text-align: left;"><em>"He/she was probably... / must have been..."</em></td>
+<td style="text-align: left;"><code>Ayer no vino; estaría enfermo.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Condicional Simple</strong></td>
+<td style="text-align: left;"><strong>Past Age / Quantity</strong></td>
+<td style="text-align: left;"><em>"He was probably around 20 years old..."</em></td>
+<td style="text-align: left;"><code>Cuando fundó la empresa, tendría 20 años.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Futuro Perfecto</strong></td>
+<td style="text-align: left;"><strong>Prior Action (Present Relevance)</strong></td>
+<td style="text-align: left;"><em>"He has probably already finished..."</em></td>
+<td style="text-align: left;"><code>A estas horas ya habrá terminado el despliegue.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Condicional Compuesto</strong></td>
+<td style="text-align: left;"><strong>Prior Action (Past Counterpart)</strong></td>
+<td style="text-align: left;"><em>"He had probably already left..."</em></td>
+<td style="text-align: left;"><code>A las tres ya se habría marchado de la oficina.</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="minimal-pairs-direct-statement-vs-epistemic-deduction">Minimal Pairs: Direct Statement vs. Epistemic Deduction</h4>
+<ul>
+<li><em>Está en su casa.</em> (Factual assertion: I know he is at home).</li>
+<li><em>Estará en su casa.</em> (Epistemic conjecture: He is probably at home / must be at home).</li>
+<li><em>Tenía fiebre ayer.</em> (Fact: His temperature was measured).</li>
+<li><em>Tendría fiebre ayer.</em> (Deduction: That explains why he looked so pale).</li>
+</ul>
+<h4 id="interactive-practice_18">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=epistemic-conjecture">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=epistemic-conjecture">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="adversatives"></div>
+
+<h2 id="20-adversatives-rectification-pero-vs-sino-vs-sino-que-b2c1">20. Adversatives &amp; Rectification (<code>pero</code> vs. <code>sino</code> vs. <code>sino que</code>) <span class="badge">B2–C1</span></h2>
+<h3 id="communicative-mental-model_19">💡 Communicative Mental Model</h3>
+<p>Think of <strong><code>pero</code></strong> as an <strong>additive qualification</strong> (<em>"Statement A is true, BUT with a caveat B"</em>), and <strong><code>sino</code> / <code>sino que</code></strong> as an <strong>exclusive corrective replacement</strong> (<em>"Hypothesis A is false; NOT A, BUT RATHER B"</em>). <code>sino</code> replaces words and phrases; <code>sino que</code> replaces finite conjugated clauses.</p>
+<h3 id="grammar-rules-decision-matrix_19">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Connector</th>
+<th style="text-align: left;">Preceding Clause</th>
+<th style="text-align: left;">Syntactic Structure</th>
+<th style="text-align: left;">Example Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>pero</strong></td>
+<td style="text-align: left;">Affirmative or Negative</td>
+<td style="text-align: left;">Additive limitation / restriction</td>
+<td style="text-align: left;"><code>El código es complejo, pero es muy eficiente.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>sino</strong></td>
+<td style="text-align: left;"><strong>Strictly Negative</strong></td>
+<td style="text-align: left;">Exclusive replacement of <strong>words / phrases</strong></td>
+<td style="text-align: left;"><code>No usamos Java, sino Rust.</code> / <code>No vino el lunes, sino el martes.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>sino que</strong></td>
+<td style="text-align: left;"><strong>Strictly Negative</strong></td>
+<td style="text-align: left;">Exclusive replacement with a <strong>conjugated clause</strong></td>
+<td style="text-align: left;"><code>No solo corregimos el bug, sino que rediseñamos el módulo.</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="the-corrective-polarity-pattern-no-es-que-sino-que">The Corrective Polarity Pattern: <code>No es que... sino que...</code></h4>
+<p>Used to systematically reject a false hypothesis in the subjunctive and assert the factual truth in the indicative:
+$$\mathbf{\text{No es que}} \;+\; \mathbf{\text{SUBJUNCTIVE}} \;+\; \mathbf{\text{sino que}} \;+\; \mathbf{\text{INDICATIVE}}$$</p>
+<ul>
+<li><em>No es que no </em><em>quiera</em><em> ayudarte, sino que no </em><em>tengo</em><em> tiempo.</em> (Not that I don't want to, but rather I don't have time).</li>
+<li><em>No es que el diseño </em><em>sea</em><em> malo, sino que </em><em>faltan</em><em> recursos.</em></li>
+</ul>
+<h4 id="minimal-pairs">Minimal Pairs</h4>
+<ul>
+<li><em>No es rápido, </em><em>pero</em><em> funciona.</em> (It is not fast, but it works $\rightarrow$ Additive).</li>
+<li><em>No es rápido, </em><em>sino</em><em> lento.</em> (It is not fast, but rather slow $\rightarrow$ Corrective replacement).</li>
+</ul>
+<h4 id="interactive-practice_19">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=adversatives">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=adversatives">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="false-friends"></div>
+
+<h2 id="21-false-friends-deceptive-cognates-actual-realizar-pretender-b2c1">21. False Friends &amp; Deceptive Cognates (<code>actual</code>, <code>realizar</code>, <code>pretender</code>) <span class="badge">B2–C1</span></h2>
+<h3 id="communicative-mental-model_20">💡 Communicative Mental Model</h3>
+<p>Think of false friends as <strong>"semantic optical illusions"</strong>. Because English borrowed thousands of Latin roots through Norman French, many words look identical to modern Spanish terms but drifted radically in semantic definition across eight centuries.</p>
+<h3 id="grammar-rules-decision-matrix_20">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Spanish Deceptive Term</th>
+<th style="text-align: left;">True Spanish Meaning</th>
+<th style="text-align: left;">English Target Word</th>
+<th style="text-align: left;">Correct Spanish Translation for English Word</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>actualmente</strong></td>
+<td style="text-align: left;">Currently / Nowadays</td>
+<td style="text-align: left;">Actually</td>
+<td style="text-align: left;"><code>en realidad</code>, <code>de hecho</code>, <code>en verdad</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>eventualmente</strong></td>
+<td style="text-align: left;">Occasionally / Sporadically</td>
+<td style="text-align: left;">Eventually</td>
+<td style="text-align: left;"><code>finalmente</code>, <code>con el tiempo</code>, <code>a la larga</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>pretender</strong></td>
+<td style="text-align: left;">To aim / attempt / seek</td>
+<td style="text-align: left;">To pretend</td>
+<td style="text-align: left;"><code>fingir</code>, <code>simular</code>, <code>aparentar</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>realizar</strong></td>
+<td style="text-align: left;">To execute / carry out / build</td>
+<td style="text-align: left;">To realize</td>
+<td style="text-align: left;"><code>darse cuenta de</code>, <code>percatarse de</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>soportar</strong></td>
+<td style="text-align: left;">To tolerate / endure / bear load</td>
+<td style="text-align: left;">To support</td>
+<td style="text-align: left;"><code>apoyar</code>, <code>respaldar</code>, <code>admitir</code> (compatibilidad)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>sensible</strong></td>
+<td style="text-align: left;">Sensitive / emotional</td>
+<td style="text-align: left;">Sensible</td>
+<td style="text-align: left;"><code>sensato</code>, <code>prudente</code>, <code>juicioso</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>constipado</strong></td>
+<td style="text-align: left;">Having a common head cold</td>
+<td style="text-align: left;">Constipated</td>
+<td style="text-align: left;"><code>estreñido</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>éxito</strong></td>
+<td style="text-align: left;">Success / triumph</td>
+<td style="text-align: left;">Exit</td>
+<td style="text-align: left;"><code>salida</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>carpeta</strong></td>
+<td style="text-align: left;">Folder / directory</td>
+<td style="text-align: left;">Carpet</td>
+<td style="text-align: left;"><code>alfombra</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>decepción</strong></td>
+<td style="text-align: left;">Disappointment</td>
+<td style="text-align: left;">Deception</td>
+<td style="text-align: left;"><code>engaño</code>, <code>fraude</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="common-traps-in-technical-discourse">Common Traps in Technical Discourse</h4>
+<ul>
+<li><em>"Actually, the build succeeded."</em> $\rightarrow$ <code>*Actualmente, la compilación tuvo éxito.</code> ❌ $\rightarrow$ <code>De hecho, la compilación concluyó con éxito.</code> ✅</li>
+<li><em>"Our software supports Linux."</em> $\rightarrow$ <code>*Nuestro software soporta Linux.</code> ❌ $\rightarrow$ <code>Nuestro software es compatible con Linux / admite Linux.</code> ✅</li>
+</ul>
+<h4 id="interactive-practice_20">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=false-friends">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=false-friends">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="voseo"></div>
+
+<h2 id="22-voseo-regional-address-variations-rioplatense-central-american-b2c1">22. Voseo &amp; Regional Address Variations (Rioplatense &amp; Central American) <span class="badge">B2–C1</span></h2>
+<h3 id="communicative-mental-model_21">💡 Communicative Mental Model</h3>
+<p>Think of <strong><code>vos</code></strong> as the warm, vibrant second-person singular informal address used by over 60 million Spanish speakers across Argentina, Uruguay, Paraguay, and parts of Central America (Guatemala, Costa Rica, Nicaragua). Its verb morphology originates from archaic medieval second-person plurals, resulting in <strong>monophthongized, stem-stressed endings</strong>.</p>
+<h3 id="grammar-rules-decision-matrix_21">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Verb Group</th>
+<th style="text-align: left;">Standard <code>Tú</code> Form (Peninsular / Mexican)</th>
+<th style="text-align: left;"><code>Vos</code> Form (Rioplatense / Central American)</th>
+<th style="text-align: left;">Stress Pattern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>-AR Verbs</strong> (<code>hablar</code>)</td>
+<td style="text-align: left;"><code>tú hablas</code></td>
+<td style="text-align: left;"><strong><code>vos hablás</code></strong></td>
+<td style="text-align: left;">Stressed final <code>-ás</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>-ER Verbs</strong> (<code>comer</code>)</td>
+<td style="text-align: left;"><code>tú comes</code></td>
+<td style="text-align: left;"><strong><code>vos comés</code></strong></td>
+<td style="text-align: left;">Stressed final <code>-és</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>-IR Verbs</strong> (<code>vivir</code>)</td>
+<td style="text-align: left;"><code>tú vives</code></td>
+<td style="text-align: left;"><strong><code>vos vivís</code></strong></td>
+<td style="text-align: left;">Stressed final <code>-ís</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Stem-changing</strong> (<code>querer</code>)</td>
+<td style="text-align: left;"><code>tú quieres</code></td>
+<td style="text-align: left;"><strong><code>vos querés</code></strong></td>
+<td style="text-align: left;">No diphthong; stem-stressed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Stem-changing</strong> (<code>tener</code>)</td>
+<td style="text-align: left;"><code>tú tienes</code></td>
+<td style="text-align: left;"><strong><code>vos tenés</code></strong></td>
+<td style="text-align: left;">No diphthong; stem-stressed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Stem-changing</strong> (<code>poder</code>)</td>
+<td style="text-align: left;"><code>tú puedes</code></td>
+<td style="text-align: left;"><strong><code>vos podés</code></strong></td>
+<td style="text-align: left;">No diphthong; stem-stressed</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ser (Irregular)</strong></td>
+<td style="text-align: left;"><code>tú eres</code></td>
+<td style="text-align: left;"><strong><code>vos sos</code></strong></td>
+<td style="text-align: left;">Monosyllabic</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ir (Irregular)</strong></td>
+<td style="text-align: left;"><code>tú vas</code></td>
+<td style="text-align: left;"><strong><code>vos vas</code></strong></td>
+<td style="text-align: left;">Identical</td>
+</tr>
+</tbody>
+</table>
+<h4 id="affirmative-imperatives-in-voseo">Affirmative Imperatives in Voseo</h4>
+<p>Formed by taking the infinitive, dropping the final <code>-r</code>, and adding an acute accent on the final vowel:
+- <em>hablar</em> $\rightarrow$ <strong><code>¡Hablá!</code></strong> (vs. <em>tú: ¡Habla!</em>)
+- <em>comer</em> $\rightarrow$ <strong><code>¡Comé!</code></strong> (vs. <em>tú: ¡Come!</em>)
+- <em>decir</em> $\rightarrow$ <strong><code>¡Decí!</code></strong> $\rightarrow$ with clitic: <strong><code>¡Decime!</code></strong> (vs. <em>tú: ¡Dime!</em>)
+- <em>sentar</em> $\rightarrow$ <strong><code>¡Sentate!</code></strong> (vs. <em>tú: ¡Siéntate!</em>)
+- <em>poner</em> $\rightarrow$ <strong><code>¡Ponete cómodo!</code></strong> (vs. <em>tú: ¡Ponte cómodo!</em>)</p>
+<h4 id="interactive-practice_21">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=voseo">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=voseo">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="tech"></div>
+<div id="tech-software"></div>
+
+<h2 id="23-software-engineering-technical-spanish-desplegar-depurar-concurrencia-b2c1">23. Software Engineering &amp; Technical Spanish (<code>desplegar</code>, <code>depurar</code>, <code>concurrencia</code>) <span class="badge">B2–C1</span></h2>
+<h3 id="communicative-mental-model_22">💡 Communicative Mental Model</h3>
+<p>Think of technical Spanish as <strong>clean architectural domain modeling</strong>. Instead of resorting to awkward phonetic transliterations (<em>"deployar"</em>, <em>"debuggear"</em>, <em>"mergear"</em>), professional engineering teams throughout Latin America and Spain use precise, standard Spanish technical verbs and nouns that maintain grammatical integrity.</p>
+<h3 id="grammar-rules-decision-matrix_22">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Technical Category</th>
+<th style="text-align: left;">Spanglish Calque (Avoid)</th>
+<th style="text-align: left;">Professional Spanish Term</th>
+<th style="text-align: left;">Contextual Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Deployment &amp; CI/CD</strong></td>
+<td style="text-align: left;"><code>*deployar a prod</code> ❌</td>
+<td style="text-align: left;"><strong><code>desplegar a producción</code></strong> ✅</td>
+<td style="text-align: left;"><code>Vamos a desplegar la nueva versión.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Version Control &amp; Git</strong></td>
+<td style="text-align: left;"><code>*hacer merge del PR</code> ❌</td>
+<td style="text-align: left;"><strong><code>integrar / fusionar la solicitud de extracción</code></strong> ✅</td>
+<td style="text-align: left;"><code>Fusionó la rama principal.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Debugging &amp; Remediation</strong></td>
+<td style="text-align: left;"><code>*debuggear y fixear</code> ❌</td>
+<td style="text-align: left;"><strong><code>depurar el código y subsanar el fallo</code></strong> ✅</td>
+<td style="text-align: left;"><code>Depuramos la fuga de memoria.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Concurrency &amp; Systems</strong></td>
+<td style="text-align: left;"><code>*deadlock y race condition</code> ❌</td>
+<td style="text-align: left;"><strong><code>bloqueo mutuo y condición de carrera</code></strong> ✅</td>
+<td style="text-align: left;"><code>El bloqueo mutuo congeló los hilos.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Performance &amp; Network</strong></td>
+<td style="text-align: left;"><code>*throughput y latency</code> ❌</td>
+<td style="text-align: left;"><strong><code>rendimiento / caudal y latencia de red</code></strong> ✅</td>
+<td style="text-align: left;"><code>Optimizamos el enrutamiento.</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Data Processing</strong></td>
+<td style="text-align: left;"><code>*batch processing</code> ❌</td>
+<td style="text-align: left;"><strong><code>procesamiento por lotes</code></strong> ✅</td>
+<td style="text-align: left;"><code>El pipeline procesa eventos por lotes.</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="standard-technical-lexicon">Standard Technical Lexicon</h4>
+<ul>
+<li><strong>Commit changes:</strong> <em>Confirmar cambios</em> (or <em>hacer un commit</em>).</li>
+<li><strong>Checkout branch:</strong> <em>Cambiar de rama</em> / <em>Alternar a la rama</em>.</li>
+<li><strong>Scalability:</strong> <em>Escalabilidad horizontal / vertical</em>.</li>
+<li><strong>Fault Tolerance:</strong> <em>Tolerancia a fallos / Alta disponibilidad</em>.</li>
+<li><strong>Load Balancer:</strong> <em>Equilibrador de carga</em> / <em>Balanceador de carga</em>.</li>
+</ul>
+<h4 id="interactive-practice_22">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=tech">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=tech">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<div id="legal"></div>
+<div id="legal-subjunctive"></div>
+
+<h2 id="24-legal-statutory-contractual-spanish-statutory-subjunctive-ere-b2c1">24. Legal, Statutory &amp; Contractual Spanish (Statutory Subjunctive <code>-ere</code>) <span class="badge">B2–C1</span></h2>
+<h3 id="communicative-mental-model_23">💡 Communicative Mental Model</h3>
+<p>Think of <strong>Legal Spanish</strong> as a formal, deterministic syntactic blueprint designed for contracts, statutory codes, and institutional compliance. It preserves archaic subjunctive forms and high-register optative formulas to express hypothetical statutory contingencies with exact precision.</p>
+<h3 id="grammar-rules-decision-matrix_23">📐 Grammar Rules &amp; Decision Matrix</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Juridical Structure</th>
+<th style="text-align: left;">Morphology / Formula</th>
+<th style="text-align: left;">Legal Application</th>
+<th style="text-align: left;">Example Sentence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Future Subjunctive</strong> (<code>-are / -iere</code>)</td>
+<td style="text-align: left;">Drop <code>-ron</code> from preterite, add <code>-re, -res, -re, -'remos, -reis, -ren</code></td>
+<td style="text-align: left;">Mandatory in statutory conditions and legislative texts</td>
+<td style="text-align: left;"><code>Si alguna de las partes incumpliere lo pactado en este contrato...</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Optative Formulas</strong></td>
+<td style="text-align: left;"><code>¡Quién + Imperfect Subjunctive!</code></td>
+<td style="text-align: left;">High-register hypothetical longing</td>
+<td style="text-align: left;"><code>¡Quién supiera la solución definitiva a esta controversia!</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Statutory Optatives</strong></td>
+<td style="text-align: left;"><code>¡Que + Present Subjunctive!</code></td>
+<td style="text-align: left;">Formulaic declarations and minutes</td>
+<td style="text-align: left;"><code>¡Que conste en acta para los fines oportunos!</code></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Literary Pluperfect in <code>-ra</code></strong></td>
+<td style="text-align: left;">Replaces <code>había + participio</code></td>
+<td style="text-align: left;">Administrative and formal juridical prose</td>
+<td style="text-align: left;"><code>El acuerdo que suscribiera la entidad el año anterior...</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="contractual-courtesy-administrative-formulas">Contractual Courtesy &amp; Administrative Formulas</h4>
+<ul>
+<li><strong>Closing formula:</strong> <em>Quedo a su entera disposición para cualquier aclaración.</em> (I remain entirely at your disposal).</li>
+<li><strong>Formal submission:</strong> <em>Procedo a adjuntar el dictamen pericial correspondiente.</em> (I hereby attach the expert report).</li>
+<li><strong>Dismissal of motion:</strong> <em>Desestimar el recurso de apelación.</em> (Dismiss the appeal).</li>
+<li><strong>Statutory stipulation:</strong> <em>Conforme a lo dispuesto en la cláusula séptima.</em> (Pursuant to Clause 7).</li>
+</ul>
+<h4 id="interactive-practice_23">Interactive Practice</h4>
+<ul>
+<li><a href="../playground/?topic=legal">⚡ Launch Syntax Studio</a></li>
+<li><a href="../playground/?mode=arcade&amp;topic=legal">⚔️ Duel in Rapid Arcade</a></li>
+</ul>
+<hr />
+<h2 id="summary-learning-roadmap">🎯 Summary &amp; Learning Roadmap</h2>
+<p>Congratulations on exploring the Spanglings Spanish Language Reference Manual! To cement these 24 topics into long-term working memory:</p>
+<ol>
+<li><strong>Syntax Drills:</strong> Open the <a href="../playground/">Interactive Curriculum Syntax Studio</a> to solve interactive code exercises.</li>
+<li><strong>Speed Arena:</strong> Challenge the <a href="../playground/?mode=arcade">Rapid Arcade Arena</a> to sharpen your sub-second reflex recall across binary showdowns.</li>
+<li><strong>CLI Mastery:</strong> Run <code>spanglings explain &lt;topic&gt;</code> or <code>spanglings drill</code> directly in your terminal anytime.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

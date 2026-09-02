@@ -1283,6 +1283,7 @@ export class SpanglingsPlaygroundApp {
 
     if (this.bundle) {
       this._selectInitialExercise();
+      this.applyUrlParams();
     }
   }
 
@@ -1294,6 +1295,80 @@ export class SpanglingsPlaygroundApp {
    */
   updateStatusPill(state = "ready", text = "") {
     updateStatusPill(state, text);
+  }
+
+  /**
+   * Applies URL query parameters to configure initial playground state.
+   * Supports:
+   * - ?mode=arcade (switches directly to Rapid Arcade Arena mode)
+   * - ?topic=<slug> (in curriculum mode selects first frame for topic; in arcade mode sets arcadeEngine.mode = slug)
+   * - ?exercise=<id> (selects specific sentence frame by ID)
+   *
+   * @param {string} [queryString=null] - Optional search query string override (defaults to window.location.search).
+   */
+  applyUrlParams(queryString = null) {
+    let search = queryString;
+    if (search === null || typeof search === "undefined") {
+      if (typeof window !== "undefined" && window.location) {
+        search = window.location.search || "";
+      } else {
+        search = "";
+      }
+    }
+
+    if (!search) return;
+
+    try {
+      const params = new URLSearchParams(search);
+      const modeParam = params.get("mode");
+      const topicParam = params.get("topic");
+      const exerciseParam = params.get("exercise");
+
+      if (modeParam === "arcade") {
+        this.currentMode = "arcade";
+        if (typeof document !== "undefined") {
+          const container = document.getElementById(this.containerId);
+          const currBtn = document.getElementById("mode-curriculum-btn");
+          const arcBtn = document.getElementById("mode-arcade-btn");
+          container?.classList.add("arcade-mode");
+          arcBtn?.classList.add("active");
+          currBtn?.classList.remove("active");
+        }
+        if (topicParam) {
+          this.arcadeEngine.mode = normalizeModeSlug(topicParam);
+        }
+        this.renderArcadeView();
+      } else {
+        if (modeParam === "curriculum") {
+          this.currentMode = "curriculum";
+          if (typeof document !== "undefined") {
+            const container = document.getElementById(this.containerId);
+            const currBtn = document.getElementById("mode-curriculum-btn");
+            const arcBtn = document.getElementById("mode-arcade-btn");
+            container?.classList.remove("arcade-mode");
+            currBtn?.classList.add("active");
+            arcBtn?.classList.remove("active");
+          }
+        }
+        if (topicParam) {
+          const normalizedTopic = normalizeModeSlug(topicParam);
+          const matchingFrame = this.bundle?.frames?.find(
+            (f) => f.topic === topicParam || f.topic === normalizedTopic
+          );
+          if (matchingFrame) {
+            this.selectExercise(matchingFrame.id);
+          }
+        }
+        if (exerciseParam) {
+          const exactFrame = this.bundle?.frames?.find((f) => f.id === exerciseParam);
+          if (exactFrame) {
+            this.selectExercise(exactFrame.id);
+          }
+        }
+      }
+    } catch (err) {
+      console.warn("Failed to parse URL query params in playground:", err);
+    }
   }
 
   /**
@@ -1638,6 +1713,7 @@ export class SpanglingsPlaygroundApp {
           this.arcadeEngine.bundle = this.bundle;
           this._selectInitialExercise();
           this.render();
+          this.applyUrlParams();
           loaded = true;
           break;
         }
@@ -1677,6 +1753,7 @@ export class SpanglingsPlaygroundApp {
         this.arcadeEngine.bundle = this.bundle;
         this._selectInitialExercise();
         this.render();
+        this.applyUrlParams();
         this.updateStatusPill("ready", "● Rust Wasm Engine Active");
       } else {
         this.updateStatusPill("error", "Failed to load bundle");
@@ -1816,12 +1893,18 @@ export class SpanglingsPlaygroundApp {
               <div class="layer-heading">📐 Grammar Rule / Structural Law</div>
               <div class="layer-body" id="card-rule-text">Structural conjugation guidelines will appear here.</div>
             </div>
+            <div class="card-manual-cta" id="diag-manual-cta">
+              <a id="diag-manual-link" href="../manual/" target="_blank" class="manual-cta-link" title="Read in Spanish Language Manual">📖 Read Manual Topic</a>
+            </div>
           </div>
 
           <div class="reference-card-drawer" id="reference-card-drawer">
             <div class="reference-card-header" id="ref-card-header">
               <span>📖 Topic Cheat Sheet</span>
-              <span id="ref-card-toggle-icon">▼</span>
+              <div class="ref-card-actions">
+                <a id="ref-card-manual-link" href="../manual/" target="_blank" class="ref-manual-link" title="Open comprehensive topic guide in Language Manual">📖 Read Manual Topic</a>
+                <span id="ref-card-toggle-icon">▼</span>
+              </div>
             </div>
             <pre class="reference-card-content" id="ref-card-content"></pre>
           </div>
@@ -1923,7 +2006,10 @@ export class SpanglingsPlaygroundApp {
     });
 
     // Reference card accordion toggle
-    document.getElementById("ref-card-header")?.addEventListener("click", () => {
+    document.getElementById("ref-card-header")?.addEventListener("click", (e) => {
+      if (e.target && e.target.closest && e.target.closest(".ref-manual-link")) {
+        return;
+      }
       const content = document.getElementById("ref-card-content");
       const icon = document.getElementById("ref-card-toggle-icon");
       if (content && icon) {
@@ -2173,6 +2259,13 @@ export class SpanglingsPlaygroundApp {
     const meaningText = document.getElementById("card-meaning-text");
     const ruleText = document.getElementById("card-rule-text");
     const nextBtn = document.getElementById("next-btn");
+    const diagManualLink = document.getElementById("diag-manual-link");
+
+    const frame = this.getCurrentFrame();
+    const topicSlug = frame?.topic || "";
+    if (diagManualLink) {
+      diagManualLink.href = topicSlug ? `../manual/#${topicSlug}` : "../manual/";
+    }
 
     if (!result) {
       if (statusContainer) statusContainer.innerHTML = `<div class="diag-status ready">○ Ready for compilation</div>`;
@@ -2245,10 +2338,20 @@ export class SpanglingsPlaygroundApp {
     const frame = this.getCurrentFrame();
     if (!frame || !this.bundle || !this.bundle.topics) return;
 
-    const topicObj = this.bundle.topics.find((t) => t.slug === frame.topic);
+    const topicSlug = frame.topic || "";
+    const topicObj = this.bundle.topics.find((t) => t.slug === topicSlug);
     const contentEl = document.getElementById("ref-card-content");
     const meaningText = document.getElementById("card-meaning-text");
     const ruleText = document.getElementById("card-rule-text");
+    const refManualLink = document.getElementById("ref-card-manual-link");
+    const diagManualLink = document.getElementById("diag-manual-link");
+
+    if (refManualLink) {
+      refManualLink.href = topicSlug ? `../manual/#${topicSlug}` : "../manual/";
+    }
+    if (diagManualLink) {
+      diagManualLink.href = topicSlug ? `../manual/#${topicSlug}` : "../manual/";
+    }
 
     if (topicObj) {
       if (contentEl) {

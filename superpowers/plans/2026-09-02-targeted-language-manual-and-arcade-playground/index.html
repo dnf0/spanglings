@@ -1,0 +1,862 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Spanglings builds the syntax compiler; real-world usage supplies the data. Developer-grade CLI & interactive TUI for mastering Spanish (B1–C1).">
+      
+      
+        <meta name="author" content="Spanglings Contributors">
+      
+      
+        <link rel="canonical" href="https://dnf0.github.io/spanglings/superpowers/plans/2026-09-02-targeted-language-manual-and-arcade-playground/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Targeted Spanish Language Manual, Bidirectional Deep-Linking & Rapid Arcade Fix Implementation Plan - Spanglings</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/playground/playground.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#targeted-spanish-language-manual-bidirectional-deep-linking-rapid-arcade-fix-implementation-plan" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Spanglings" class="md-header__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Spanglings
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Targeted Spanish Language Manual, Bidirectional Deep-Linking &amp; Rapid Arcade Fix Implementation Plan
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="red" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Spanglings" class="md-nav__button md-logo" aria-label="Spanglings" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Spanglings
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dnf0/spanglings" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    dnf0/spanglings
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../manual/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Spanish Language Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../syllabus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Curriculum Syllabus
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../playground/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Interactive Playground
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#global-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Global Constraints
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Global Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task-1-fix-rapid-arcade-arena-css-selector-view-activation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 1: Fix Rapid Arcade Arena CSS Selector &amp; View Activation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-2-playground-url-query-parameter-deep-linking-manual-cross-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 2: Playground URL Query Parameter Deep-Linking &amp; Manual Cross-Linking
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-3-comprehensive-spanish-language-manual-docsmanualmd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 3: Comprehensive Spanish Language Manual (docs/manual.md)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-4-streamline-documentation-hub-syllabus-mkdocs-navigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 4: Streamline Documentation Hub, Syllabus &amp; MkDocs Navigation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#task-5-full-verification-suite-graphify-update-production-readiness" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Task 5: Full Verification Suite, Graphify Update &amp; Production Readiness
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="targeted-spanish-language-manual-bidirectional-deep-linking-rapid-arcade-fix-implementation-plan">Targeted Spanish Language Manual, Bidirectional Deep-Linking &amp; Rapid Arcade Fix Implementation Plan</h1>
+<blockquote>
+<p><strong>For agentic workers:</strong> REQUIRED SUB-SKILL: Choose an execution mode:
+1. <code>superpowers:subagent-driven-development</code> (recommended for multi-agent reviews, backed by <code>SKILL.state</code> / <code>.agent-state/state.json</code>)
+2. <code>agent-rules:stateful-execution</code> (SKILL.state) (recommended for deterministic single-agent linear execution)
+3. <code>superpowers:executing-plans</code> (batch execution with manual checkpoints)
+Steps use checkbox (<code>- [ ]</code>) syntax for tracking.</p>
+</blockquote>
+<p><strong>Goal:</strong> Transform Spanglings documentation from a software manual into a developer-grade Spanish Language Learning Manual across all 24 curriculum topics with contrast tables and decision matrices, fix the Rapid Arcade Arena browser execution, and enable seamless bidirectional deep-linking between documentation and the interactive playground.</p>
+<p><strong>Architecture:</strong> 
+1. Fix CSS selector scoping (<code>.spanglings-playground.arcade-mode</code>) so <code>#arcade-arena-container</code> renders cleanly and hides editor panes upon mode switch.
+2. Add URL query parameter deep-linking (<code>?mode=arcade</code>, <code>?topic=&lt;slug&gt;</code>, <code>?exercise=&lt;id&gt;</code>) and manual cross-links in <code>playground.js</code> and <code>playground/index.html</code>.
+3. Author the complete, 24-topic <code>docs/manual.md</code> featuring communicative mental models, grammar rule decision tables, common traps, and playground action CTAs.
+4. Restructure <code>docs/index.md</code>, <code>docs/syllabus.md</code>, and <code>mkdocs.yml</code> to streamline the user experience around the Language Manual and Interactive Playground.</p>
+<p><strong>Tech Stack:</strong> Python 3.12, pytest, MkDocs Material, Vanilla JS ES Modules, Rust WebAssembly (<code>wasm-pack</code>), CSS Custom Properties.</p>
+<h2 id="global-constraints">Global Constraints</h2>
+<ul>
+<li>Every topic section in the manual must provide both an intuitive communicative mental model (<code>💡 Communicative Mental Model</code>) and a structural rule matrix (<code>📐 Grammar Rules &amp; Decision Matrix</code>).</li>
+<li>All manual topics must include direct deep-links to both the Curriculum Syntax Studio (<code>../playground/?topic=&lt;slug&gt;</code>) and Rapid Showdown Duel (<code>../playground/?mode=arcade&amp;topic=&lt;slug&gt;</code>).</li>
+<li>Playground must provide bidirectional navigation to <code>../manual/#&lt;topic-slug&gt;</code>.</li>
+<li><code>uv run mkdocs build --strict</code> must succeed with zero warnings and zero broken links.</li>
+<li>All tests must pass (<code>uv run pytest</code>, <code>cargo test --all-targets</code>, <code>uv run ruff check</code>, <code>uv run pyright</code>).</li>
+</ul>
+<hr />
+<h3 id="task-1-fix-rapid-arcade-arena-css-selector-view-activation">Task 1: Fix Rapid Arcade Arena CSS Selector &amp; View Activation</h3>
+<p><strong>Files:</strong>
+- Modify: <code>docs/assets/playground/playground.css:1220-1240</code>
+- Test: <code>tests/test_arcade_ui.py</code></p>
+<p><strong>Interfaces:</strong>
+- Consumes: <code>#spanglings-app.spanglings-playground</code> DOM element.
+- Produces: CSS rules for <code>.spanglings-playground.arcade-mode</code> hiding <code>.syllabus-pane</code>, <code>.editor-pane</code>, and <code>.diagnostics-pane</code>, and flexing <code>.arcade-arena-container</code>.</p>
+<ul>
+<li>[ ] <strong>Step 1: Write the failing unit test for arcade CSS selector scoping</strong></li>
+</ul>
+<p>In <code>tests/test_arcade_ui.py</code>:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_arcade_css_selector_targets_spanglings_playground</span><span class="p">(</span><span class="n">repo_root</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="sd">"""Verify playground.css targets .spanglings-playground.arcade-mode or #spanglings-app."""</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">css_path</span> <span class="o">=</span> <span class="n">repo_root</span> <span class="o">/</span> <span class="s2">"docs"</span> <span class="o">/</span> <span class="s2">"assets"</span> <span class="o">/</span> <span class="s2">"playground"</span> <span class="o">/</span> <span class="s2">"playground.css"</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="k">assert</span> <span class="n">css_path</span><span class="o">.</span><span class="n">exists</span><span class="p">()</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">css_path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="k">assert</span> <span class="s2">".spanglings-playground.arcade-mode"</span> <span class="ow">in</span> <span class="n">content</span> <span class="ow">or</span> <span class="s2">"#spanglings-app.arcade-mode"</span> <span class="ow">in</span> <span class="n">content</span><span class="p">,</span> <span class="p">(</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="s2">"playground.css must include .spanglings-playground.arcade-mode selector"</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="p">)</span>
+</span></code></pre></div></p>
+<ul>
+<li>[ ] <strong>Step 2: Run test to verify it fails</strong></li>
+</ul>
+<p>Run: <code>uv run pytest tests/test_arcade_ui.py::test_arcade_css_selector_targets_spanglings_playground -v</code>
+Expected: FAIL (assertion error: <code>.spanglings-playground.arcade-mode</code> not found).</p>
+<ul>
+<li>[ ] <strong>Step 3: Update CSS rules in <code>docs/assets/playground/playground.css</code></strong></li>
+</ul>
+<p>In <code>docs/assets/playground/playground.css</code>:
+<div class="language-css highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">.</span><span class="nc">spanglings-playground</span><span class="p">.</span><span class="nc">arcade-mode</span><span class="w"> </span><span class="p">.</span><span class="nc">syllabus-pane</span><span class="o">,</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="p">.</span><span class="nc">spanglings-playground</span><span class="p">.</span><span class="nc">arcade-mode</span><span class="w"> </span><span class="p">.</span><span class="nc">editor-pane</span><span class="o">,</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">.</span><span class="nc">spanglings-playground</span><span class="p">.</span><span class="nc">arcade-mode</span><span class="w"> </span><span class="p">.</span><span class="nc">diagnostics-pane</span><span class="o">,</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">#</span><span class="nn">spanglings-app</span><span class="p">.</span><span class="nc">arcade-mode</span><span class="w"> </span><span class="p">.</span><span class="nc">syllabus-pane</span><span class="o">,</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">#</span><span class="nn">spanglings-app</span><span class="p">.</span><span class="nc">arcade-mode</span><span class="w"> </span><span class="p">.</span><span class="nc">editor-pane</span><span class="o">,</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="p">#</span><span class="nn">spanglings-app</span><span class="p">.</span><span class="nc">arcade-mode</span><span class="w"> </span><span class="p">.</span><span class="nc">diagnostics-pane</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">none</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">.</span><span class="nc">spanglings-playground</span><span class="p">.</span><span class="nc">arcade-mode</span><span class="w"> </span><span class="p">.</span><span class="nc">arcade-arena-container</span><span class="o">,</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="p">#</span><span class="nn">spanglings-app</span><span class="p">.</span><span class="nc">arcade-mode</span><span class="w"> </span><span class="p">.</span><span class="nc">arcade-arena-container</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="k">display</span><span class="p">:</span><span class="w"> </span><span class="kc">flex</span><span class="w"> </span><span class="cp">!important</span><span class="p">;</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<ul>
+<li>[ ] <strong>Step 4: Run test to verify it passes</strong></li>
+</ul>
+<p>Run: <code>uv run pytest tests/test_arcade_ui.py -v</code>
+Expected: PASS (all tests in test_arcade_ui.py pass).</p>
+<ul>
+<li>[ ] <strong>Step 5: Commit changes</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>git<span class="w"> </span>add<span class="w"> </span>docs/assets/playground/playground.css<span class="w"> </span>tests/test_arcade_ui.py
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>git<span class="w"> </span>commit<span class="w"> </span>--no-gpg-sign<span class="w"> </span>-m<span class="w"> </span><span class="s2">"fix(playground): fix active arcade mode css selector scoping"</span>
+</span></code></pre></div>
+<hr />
+<h3 id="task-2-playground-url-query-parameter-deep-linking-manual-cross-linking">Task 2: Playground URL Query Parameter Deep-Linking &amp; Manual Cross-Linking</h3>
+<p><strong>Files:</strong>
+- Modify: <code>docs/assets/playground/playground.js</code>
+- Modify: <code>docs/playground/index.html</code>
+- Test: <code>tests/test_playground_ui.py</code></p>
+<p><strong>Interfaces:</strong>
+- Consumes: <code>window.location.search</code> (<code>?mode=arcade</code>, <code>?topic=&lt;slug&gt;</code>, <code>?exercise=&lt;id&gt;</code>).
+- Produces: <code>_applyUrlQueryParams()</code> method in <code>SpanglingsPlaygroundApp</code> and <code>📖 View in Manual</code> action links pointing to <code>../manual/#&lt;topic-slug&gt;</code>.</p>
+<ul>
+<li>[ ] <strong>Step 1: Write the failing unit tests for query param parsing and manual links</strong></li>
+</ul>
+<p>In <code>tests/test_playground_ui.py</code>:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_playground_js_handles_url_query_params</span><span class="p">(</span><span class="n">repo_root</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="sd">"""Verify playground.js parses ?mode=arcade, ?topic=, and ?exercise= query params."""</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    <span class="n">js_path</span> <span class="o">=</span> <span class="n">repo_root</span> <span class="o">/</span> <span class="s2">"docs"</span> <span class="o">/</span> <span class="s2">"assets"</span> <span class="o">/</span> <span class="s2">"playground"</span> <span class="o">/</span> <span class="s2">"playground.js"</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">js_path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    <span class="k">assert</span> <span class="s2">"URLSearchParams"</span> <span class="ow">in</span> <span class="n">content</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    <span class="k">assert</span> <span class="s2">"applyUrlParams"</span> <span class="ow">in</span> <span class="n">content</span> <span class="ow">or</span> <span class="s2">"parseUrlParams"</span> <span class="ow">in</span> <span class="n">content</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    <span class="k">assert</span> <span class="s2">"manual/#"</span> <span class="ow">in</span> <span class="n">content</span> <span class="ow">or</span> <span class="s2">"manual"</span> <span class="ow">in</span> <span class="n">content</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_standalone_header_links_to_manual</span><span class="p">(</span><span class="n">repo_root</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="sd">"""Verify docs/playground/index.html header links to ../manual/."""</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="n">html_path</span> <span class="o">=</span> <span class="n">repo_root</span> <span class="o">/</span> <span class="s2">"docs"</span> <span class="o">/</span> <span class="s2">"playground"</span> <span class="o">/</span> <span class="s2">"index.html"</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">html_path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="k">assert</span> <span class="s1">'href="../manual/"'</span> <span class="ow">in</span> <span class="n">content</span>
+</span></code></pre></div></p>
+<ul>
+<li>[ ] <strong>Step 2: Run tests to verify failure</strong></li>
+</ul>
+<p>Run: <code>uv run pytest tests/test_playground_ui.py -k "url_query_params or links_to_manual" -v</code>
+Expected: FAIL.</p>
+<ul>
+<li>[ ] <strong>Step 3: Implement query parameter parsing and manual linking in <code>playground.js</code> and <code>index.html</code></strong></li>
+</ul>
+<p>In <code>docs/assets/playground/playground.js</code>:
+- Add <code>applyUrlParams()</code> method to check <code>new URLSearchParams(window.location.search)</code>.
+- If <code>mode === 'arcade'</code>, activate arcade mode and set <code>arcadeEngine.mode = topicParam || 'all'</code>.
+- If <code>topicParam</code> present in curriculum mode, find and select matching exercise.
+- In topic drawer &amp; diagnostics card, render <code>[📖 View Topic in Manual](../manual/#${topicSlug})</code>.</p>
+<p>In <code>docs/playground/index.html</code>:
+- Update header link from <code>📖 Documentation</code> to <code>📘 Language Manual</code> pointing to <code>../manual/</code>.</p>
+<ul>
+<li>[ ] <strong>Step 4: Run tests to verify they pass</strong></li>
+</ul>
+<p>Run: <code>uv run pytest tests/test_playground_ui.py -v</code>
+Expected: PASS.</p>
+<ul>
+<li>[ ] <strong>Step 5: Commit changes</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>git<span class="w"> </span>add<span class="w"> </span>docs/assets/playground/playground.js<span class="w"> </span>docs/playground/index.html<span class="w"> </span>tests/test_playground_ui.py
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>git<span class="w"> </span>commit<span class="w"> </span>--no-gpg-sign<span class="w"> </span>-m<span class="w"> </span><span class="s2">"feat(playground): add query param deep-linking and bidirectional manual links"</span>
+</span></code></pre></div>
+<hr />
+<h3 id="task-3-comprehensive-spanish-language-manual-docsmanualmd">Task 3: Comprehensive Spanish Language Manual (<code>docs/manual.md</code>)</h3>
+<p><strong>Files:</strong>
+- Create: <code>docs/manual.md</code>
+- Test: <code>tests/test_docs_playground.py</code></p>
+<p><strong>Interfaces:</strong>
+- Consumes: 24 linguistic topics, mental models, decision matrices, contrast rules, and playground practice URLs.
+- Produces: High-quality, exhaustive Spanish grammar manual with 24 topic chapters across CEFR Tiers 1, 2, and 3.</p>
+<ul>
+<li>[ ] <strong>Step 1: Write failing test verifying <code>docs/manual.md</code> completeness</strong></li>
+</ul>
+<p>In <code>tests/test_docs_playground.py</code>:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_comprehensive_language_manual_structure</span><span class="p">(</span><span class="n">repo_root</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="sd">"""Verify docs/manual.md exists and contains all 24 topics with mental models, rules, and deep links."""</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">manual_path</span> <span class="o">=</span> <span class="n">repo_root</span> <span class="o">/</span> <span class="s2">"docs"</span> <span class="o">/</span> <span class="s2">"manual.md"</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="k">assert</span> <span class="n">manual_path</span><span class="o">.</span><span class="n">exists</span><span class="p">(),</span> <span class="sa">f</span><span class="s2">"docs/manual.md must exist at </span><span class="si">{</span><span class="n">manual_path</span><span class="si">}</span><span class="s2">"</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">manual_path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="k">assert</span> <span class="s2">"# Spanglings Spanish Language Manual"</span> <span class="ow">in</span> <span class="n">content</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    <span class="c1"># Check 24 topics</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>    <span class="n">expected_topics</span> <span class="o">=</span> <span class="p">[</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        <span class="s2">"ser-estar"</span><span class="p">,</span> <span class="s2">"por-para"</span><span class="p">,</span> <span class="s2">"past-tenses"</span><span class="p">,</span> <span class="s2">"pronouns"</span><span class="p">,</span> <span class="s2">"gustar"</span><span class="p">,</span> <span class="s2">"reflexive"</span><span class="p">,</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        <span class="s2">"stem-changing"</span><span class="p">,</span> <span class="s2">"prepositions"</span><span class="p">,</span> <span class="s2">"subjunctive"</span><span class="p">,</span> <span class="s2">"imperfect-subjunctive"</span><span class="p">,</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>        <span class="s2">"imperative"</span><span class="p">,</span> <span class="s2">"accidental-se"</span><span class="p">,</span> <span class="s2">"passive-impersonal-se"</span><span class="p">,</span> <span class="s2">"possessive-datives"</span><span class="p">,</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>        <span class="s2">"relative-pronouns"</span><span class="p">,</span> <span class="s2">"gerund-rules"</span><span class="p">,</span> <span class="s2">"verbs-of-becoming"</span><span class="p">,</span> <span class="s2">"scalar-concession"</span><span class="p">,</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>        <span class="s2">"epistemic-conjecture"</span><span class="p">,</span> <span class="s2">"adversatives"</span><span class="p">,</span> <span class="s2">"false-friends"</span><span class="p">,</span> <span class="s2">"voseo"</span><span class="p">,</span> <span class="s2">"tech"</span><span class="p">,</span> <span class="s2">"legal"</span>
+</span><span id="__span-5-16"><a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    <span class="p">]</span>
+</span><span id="__span-5-17"><a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    <span class="k">for</span> <span class="n">topic</span> <span class="ow">in</span> <span class="n">expected_topics</span><span class="p">:</span>
+</span><span id="__span-5-18"><a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>        <span class="k">assert</span> <span class="sa">f</span><span class="s2">"id=</span><span class="se">\"</span><span class="si">{</span><span class="n">topic</span><span class="si">}</span><span class="se">\"</span><span class="s2">"</span> <span class="ow">in</span> <span class="n">content</span> <span class="ow">or</span> <span class="sa">f</span><span class="s2">"#</span><span class="si">{</span><span class="n">topic</span><span class="si">}</span><span class="s2">"</span> <span class="ow">in</span> <span class="n">content</span> <span class="ow">or</span> <span class="n">topic</span> <span class="ow">in</span> <span class="n">content</span>
+</span><span id="__span-5-19"><a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>
+</span><span id="__span-5-20"><a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>    <span class="k">assert</span> <span class="s2">"💡 Communicative Mental Model"</span> <span class="ow">in</span> <span class="n">content</span>
+</span><span id="__span-5-21"><a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    <span class="k">assert</span> <span class="s2">"📐 Grammar Rules &amp; Decision Matrix"</span> <span class="ow">in</span> <span class="n">content</span>
+</span><span id="__span-5-22"><a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>    <span class="k">assert</span> <span class="s2">"playground/?topic="</span> <span class="ow">in</span> <span class="n">content</span>
+</span><span id="__span-5-23"><a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>    <span class="k">assert</span> <span class="s2">"playground/?mode=arcade"</span> <span class="ow">in</span> <span class="n">content</span>
+</span></code></pre></div></p>
+<ul>
+<li>[ ] <strong>Step 2: Run test to verify failure</strong></li>
+</ul>
+<p>Run: <code>uv run pytest tests/test_docs_playground.py::test_comprehensive_language_manual_structure -v</code>
+Expected: FAIL (<code>docs/manual.md</code> not found).</p>
+<ul>
+<li>[ ] <strong>Step 3: Author <code>docs/manual.md</code></strong></li>
+</ul>
+<p>Author <code>docs/manual.md</code> with:
+- CEFR Overview &amp; Cognitive Roadmap.
+- All 24 comprehensive chapters with dual-layer explanations (Mental Model + Grammar Rule Decision Table), high-frequency pitfall warnings, and bidirectional practice CTAs (<code>../playground/?topic=&lt;slug&gt;</code> and <code>../playground/?mode=arcade&amp;topic=&lt;slug&gt;</code>).</p>
+<ul>
+<li>[ ] <strong>Step 4: Run test to verify it passes</strong></li>
+</ul>
+<p>Run: <code>uv run pytest tests/test_docs_playground.py::test_comprehensive_language_manual_structure -v</code>
+Expected: PASS.</p>
+<ul>
+<li>[ ] <strong>Step 5: Commit changes</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>git<span class="w"> </span>add<span class="w"> </span>docs/manual.md<span class="w"> </span>tests/test_docs_playground.py
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>git<span class="w"> </span>commit<span class="w"> </span>--no-gpg-sign<span class="w"> </span>-m<span class="w"> </span><span class="s2">"docs(manual): add comprehensive 24-topic spanish language manual"</span>
+</span></code></pre></div>
+<hr />
+<h3 id="task-4-streamline-documentation-hub-syllabus-mkdocs-navigation">Task 4: Streamline Documentation Hub, Syllabus &amp; MkDocs Navigation</h3>
+<p><strong>Files:</strong>
+- Modify: <code>docs/index.md</code>
+- Modify: <code>docs/syllabus.md</code>
+- Modify: <code>mkdocs.yml</code>
+- Test: <code>tests/test_docs_playground.py</code></p>
+<p><strong>Interfaces:</strong>
+- Consumes: <code>docs/manual.md</code>, <code>docs/syllabus.md</code>, <code>docs/playground/index.html</code>.
+- Produces: Clean, focused documentation hub in <code>docs/index.md</code> and streamlined <code>mkdocs.yml</code> navigation.</p>
+<ul>
+<li>[ ] <strong>Step 1: Write failing test verifying streamlined navigation and syllabus links</strong></li>
+</ul>
+<p>In <code>tests/test_docs_playground.py</code>:
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">test_mkdocs_navigation_includes_manual_and_syllabus</span><span class="p">(</span><span class="n">mkdocs_yml_path</span><span class="p">:</span> <span class="n">Path</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">    </span><span class="sd">"""Verify mkdocs.yml navigation is streamlined around Manual, Syllabus, and Playground."""</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    <span class="n">content</span> <span class="o">=</span> <span class="n">mkdocs_yml_path</span><span class="o">.</span><span class="n">read_text</span><span class="p">(</span><span class="n">encoding</span><span class="o">=</span><span class="s2">"utf-8"</span><span class="p">)</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    <span class="n">config</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">safe_load</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>    <span class="n">nav</span> <span class="o">=</span> <span class="n">config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"nav"</span><span class="p">,</span> <span class="p">[])</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    <span class="n">nav_targets</span> <span class="o">=</span> <span class="p">[]</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">nav</span><span class="p">:</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>            <span class="n">nav_targets</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">item</span><span class="o">.</span><span class="n">values</span><span class="p">())</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>        <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>            <span class="n">nav_targets</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    <span class="k">assert</span> <span class="s2">"index.md"</span> <span class="ow">in</span> <span class="n">nav_targets</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    <span class="k">assert</span> <span class="s2">"manual.md"</span> <span class="ow">in</span> <span class="n">nav_targets</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    <span class="k">assert</span> <span class="s2">"syllabus.md"</span> <span class="ow">in</span> <span class="n">nav_targets</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    <span class="k">assert</span> <span class="s2">"playground/index.html"</span> <span class="ow">in</span> <span class="n">nav_targets</span>
+</span></code></pre></div></p>
+<ul>
+<li>[ ] <strong>Step 2: Run test to verify failure</strong></li>
+</ul>
+<p>Run: <code>uv run pytest tests/test_docs_playground.py::test_mkdocs_navigation_includes_manual_and_syllabus -v</code>
+Expected: FAIL (<code>manual.md</code> not in nav).</p>
+<ul>
+<li>
+<p>[ ] <strong>Step 3: Update <code>docs/index.md</code>, <code>docs/syllabus.md</code>, and <code>mkdocs.yml</code></strong></p>
+</li>
+<li>
+<p>Overhaul <code>docs/index.md</code> to introduce the Syntax Compiler Model, Language Architecture, and prominent links to the Language Manual and Interactive Playground.</p>
+</li>
+<li>Update <code>docs/syllabus.md</code> to link all 24 topics to <code>manual.md#&lt;topic&gt;</code> and <code>playground/?topic=&lt;slug&gt;</code>.</li>
+<li>Update <code>mkdocs.yml</code> nav:
+  <div class="language-yaml highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">nav</span><span class="p">:</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Overview</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">index.md</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Spanish Language Manual</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">manual.md</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Curriculum Syllabus</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">syllabus.md</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Interactive Playground</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">playground/index.html</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">Contributing</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">contributing.md</span>
+</span></code></pre></div></li>
+<li>
+<p>Add <code>cli-reference.md</code>, <code>onboarding-guide.md</code>, <code>grammar-reference.md</code> to <code>not_in_nav</code> or clean them up.</p>
+</li>
+<li>
+<p>[ ] <strong>Step 4: Run tests and strict documentation build</strong></p>
+</li>
+</ul>
+<p>Run: <code>uv run pytest tests/test_docs_playground.py -v &amp;&amp; uv run mkdocs build --strict</code>
+Expected: PASS (strict build succeeds in &lt; 2 seconds).</p>
+<ul>
+<li>[ ] <strong>Step 5: Commit changes</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>git<span class="w"> </span>add<span class="w"> </span>docs/index.md<span class="w"> </span>docs/syllabus.md<span class="w"> </span>mkdocs.yml<span class="w"> </span>tests/test_docs_playground.py
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>git<span class="w"> </span>commit<span class="w"> </span>--no-gpg-sign<span class="w"> </span>-m<span class="w"> </span><span class="s2">"docs(site): streamline documentation hub, syllabus, and navigation"</span>
+</span></code></pre></div>
+<hr />
+<h3 id="task-5-full-verification-suite-graphify-update-production-readiness">Task 5: Full Verification Suite, Graphify Update &amp; Production Readiness</h3>
+<p><strong>Files:</strong>
+- Test: All repository tests and linters</p>
+<p><strong>Interfaces:</strong>
+- Consumes: Entire codebase, docs site, and Wasm runtime.
+- Produces: Passing verification evidence across Rust, Python, and MkDocs.</p>
+<ul>
+<li>[ ] <strong>Step 1: Run complete test and lint suite</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>cargo<span class="w"> </span><span class="nb">test</span><span class="w"> </span>--all-targets
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>uv<span class="w"> </span>run<span class="w"> </span>pytest
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>uv<span class="w"> </span>run<span class="w"> </span>ruff<span class="w"> </span>check<span class="w"> </span>scripts/<span class="w"> </span>tests/
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>uv<span class="w"> </span>run<span class="w"> </span>pyright<span class="w"> </span>scripts/<span class="w"> </span>tests/
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>uv<span class="w"> </span>run<span class="w"> </span>mkdocs<span class="w"> </span>build<span class="w"> </span>--strict
+</span></code></pre></div>
+<ul>
+<li>[ ] <strong>Step 2: Rebuild Graphify Knowledge Graph</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>uvx<span class="w"> </span>--from<span class="w"> </span>graphifyy<span class="w"> </span>graphify<span class="w"> </span>update<span class="w"> </span>.
+</span></code></pre></div>
+<ul>
+<li>[ ] <strong>Step 3: Commit final updates</strong></li>
+</ul>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>git<span class="w"> </span>add<span class="w"> </span>graphify-out/
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>git<span class="w"> </span>commit<span class="w"> </span>--no-gpg-sign<span class="w"> </span>-m<span class="w"> </span><span class="s2">"chore(graph): update knowledge graph for targeted manual and arcade playground"</span>
+</span></code></pre></div>
+<hr />
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

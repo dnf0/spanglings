@@ -12,7 +12,7 @@
         <meta name="author" content="Spanglings Contributors">
       
       
-        <link rel="canonical" href="https://dnf0.github.io/spanglings/superpowers/specs/2026-08-29-high-yield-arcade-drill-engines-design/">
+        <link rel="canonical" href="https://dnf0.github.io/spanglings/superpowers/specs/2026-09-02-targeted-language-manual-and-arcade-playground-design/">
       
       
       
@@ -25,7 +25,7 @@
     
     
       
-        <title>Design Specification: 5 High-Yield Advanced Drill Engines - Spanglings</title>
+        <title>Spanglings Targeted Language Manual, Bidirectional Deep-Linking & Rapid Arcade Fix - Spanglings</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#design-specification-5-high-yield-advanced-drill-engines" class="md-skip">
+        <a href="#spanglings-targeted-language-manual-bidirectional-deep-linking-rapid-arcade-fix" class="md-skip">
           Skip to content
         </a>
       
@@ -114,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Design Specification: 5 High-Yield Advanced Drill Engines
+              Spanglings Targeted Language Manual, Bidirectional Deep-Linking &amp; Rapid Arcade Fix
             
           </span>
         </div>
@@ -417,10 +417,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1-motivation-overview" class="md-nav__link">
+  <a href="#1-problem-statement" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1. Motivation &amp; Overview
+        1. Problem Statement
       
     </span>
   </a>
@@ -428,22 +428,44 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#2-engine-architecture-topic-definitions" class="md-nav__link">
+  <a href="#2-architecture-design" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2. Engine Architecture &amp; Topic Definitions
+        2. Architecture &amp; Design
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Engine Architecture &amp; Topic Definitions">
+    <nav class="md-nav" aria-label="2. Architecture &amp; Design">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#21-engine-details" class="md-nav__link">
+  <a href="#21-documentation-structure-docs" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.1 Engine Details
+        2.1 Documentation Structure (docs/)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22-content-template-for-each-manual-topic-section" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 Content Template for Each Manual Topic Section
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-rapid-arcade-arena-fix-bidirectional-deep-linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 Rapid Arcade Arena Fix &amp; Bidirectional Deep-Linking
       
     </span>
   </a>
@@ -456,10 +478,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#3-integration-points" class="md-nav__link">
+  <a href="#3-verification-testing-strategy" class="md-nav__link">
     <span class="md-ellipsis">
       
-        3. Integration Points
+        3. Verification &amp; Testing Strategy
       
     </span>
   </a>
@@ -486,81 +508,133 @@
   
 
 
-<h1 id="design-specification-5-high-yield-advanced-drill-engines">Design Specification: 5 High-Yield Advanced Drill Engines</h1>
-<p><strong>Date:</strong> 2026-08-29<br />
-<strong>Author:</strong> Google DeepMind / Antigravity Pair Programming<br />
-<strong>Status:</strong> DRAFT (Under Subagent Review)</p>
-<hr />
-<h2 id="1-motivation-overview">1. Motivation &amp; Overview</h2>
-<p>To accelerate Spanish mastery for neurodivergent and rapid-fire learners, we introduce 5 specialized High-Yield Drill Engines into <code>spanglings arcade</code> (and TUI Arena <code>[x]</code>):</p>
+<h1 id="spanglings-targeted-language-manual-bidirectional-deep-linking-rapid-arcade-fix">Spanglings Targeted Language Manual, Bidirectional Deep-Linking &amp; Rapid Arcade Fix</h1>
+<h2 id="1-problem-statement">1. Problem Statement</h2>
 <ol>
-<li>🎯 <strong>Prepositional Regimen Engine (<code>regimen</code> / <code>prepositions</code>)</strong>: Master non-intuitive verb-preposition bonds (<em>soñar con, pensar en, acordarse de, fijarse en, depender de</em>).</li>
-<li>⚡ <strong>Irregular Verb Speed Gun (<code>irregulars</code> / <code>verbs</code>)</strong>: Instantaneous single-key recognition of stem-changing irregular preterite, present subjunctive, and future forms.</li>
-<li>⚠️ <strong>False Friends Trap Detector (<code>false-friends</code> / <code>cognates</code>)</strong>: Rapid override training for deceptive English-Spanish cognates (<em>actual, embarazada, éxito, atender, sensible, largo, carpeta, soportar, pretender, realizar</em>).</li>
-<li>🧩 <strong>The "Se" Matrix (<code>se-matrix</code> / <code>se</code>)</strong>: Master the 5 faces of Spanish <em>Se</em> (Accidental Involuntary Dative, Impersonal, Passive Reflexive, Reciprocal, Aspectual).</li>
-<li>💬 <strong>Discourse Connectors &amp; Flow (<code>connectors</code> / <code>discourse</code>)</strong>: B2/C1 sentence transition connectors (<em>sin embargo, no obstante, por lo tanto, dado que, a pesar de que, por ende</em>).</li>
+<li><strong>Software Manual Bias in Documentation</strong>: The current Spanglings documentation (<code>docs/index.md</code>, <code>docs/cli-reference.md</code>, <code>docs/onboarding-guide.md</code>) reads heavily like a developer tooling/software architecture guide instead of a targeted, pedagogical Spanish Language Manual. Users seeking to master challenging Spanish grammatical areas (<em>por vs para</em>, <em>ser vs estar</em>, subjunctive triggers, clitic doubling, accidental <em>se</em>, false friends) need rich linguistic explanations, contrast tables, mental models, and decision matrices.</li>
+<li><strong>Rapid Arcade Arena Mode Inactive in Browser</strong>: In <code>docs/assets/playground/playground.css</code>, the active arcade mode CSS selector targets <code>.playground-container.arcade-mode</code> rather than <code>.spanglings-playground.arcade-mode</code> / <code>#spanglings-app.arcade-mode</code>. As a result, switching tabs to the Rapid Arcade Arena does not hide curriculum editor panes or display <code>#arcade-arena-container</code>.</li>
+<li><strong>Lack of Bidirectional Playground &lt;-&gt; Documentation Linking</strong>: Learners in the documentation cannot jump directly to practice a specific topic in the interactive playground or arcade duel, and learners in the playground cannot jump directly to read the comprehensive grammatical reference in the manual.</li>
+<li><strong>Scope Consolidation</strong>: The project needs a streamlined focus centering strictly around the rich Spanish Language Manual and the Dual Interactive Playground (Monaco Syntax Studio + Rapid Arcade Arena).</li>
 </ol>
 <hr />
-<h2 id="2-engine-architecture-topic-definitions">2. Engine Architecture &amp; Topic Definitions</h2>
-<p>Each engine is accessible via dedicated topic slugs and aliases in both CLI (<code>spanglings arcade &lt;topic&gt;</code>) and TUI Arena (<code>[x]</code> -&gt; <code>[s]</code> or <code>[Tab]</code>), and automatically integrates into the default mixed arcade pool.</p>
-<h3 id="21-engine-details">2.1 Engine Details</h3>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Engine Slug</th>
-<th style="text-align: left;">Aliases</th>
-<th style="text-align: left;">Question Count &amp; Variety</th>
-<th style="text-align: left;">Mechanics &amp; Format</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;"><strong><code>regimen</code></strong></td>
-<td style="text-align: left;"><code>prepositions</code>, <code>prep</code></td>
-<td style="text-align: left;">16 curated sentences across 6 preposition classes (<code>de</code>, <code>en</code>, <code>con</code>, <code>a</code>, <code>por</code>, <code>para</code>)</td>
-<td style="text-align: left;">Cloze with 4-choice preposition distractors + concise explanation of the verb regimen rule.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>irregulars</code></strong></td>
-<td style="text-align: left;"><code>verbs</code>, <code>irregular</code></td>
-<td style="text-align: left;">16 curated sentences targeting irregular stems (<em>quise, cupo, traje, conduje, anduve, sepa, quepo, valgo, haya, pondré</em>)</td>
-<td style="text-align: left;">Rapid tense/mood cloze with authentic morphological distractors.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>false-friends</code></strong></td>
-<td style="text-align: left;"><code>cognates</code>, <code>falsos-amigos</code></td>
-<td style="text-align: left;">16 curated sentences targeting classic traps (<em>actual vs real, éxito vs salida, embarazada vs avergonzado, atender vs asistir, sensible vs sensato, largo vs grande, carpeta vs alfombra, soportar vs apoyar</em>)</td>
-<td style="text-align: left;">4-choice or 2-choice duel disambiguating the intended meaning from the deceptive English false cognate.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>se-matrix</code></strong></td>
-<td style="text-align: left;"><code>se</code>, <code>se-types</code></td>
-<td style="text-align: left;">16 curated sentences contrasting the 5 types of <em>Se</em> (accidental <em>se me cayó</em>, impersonal <em>se vive bien</em>, passive <em>se venden</em>, reciprocal <em>se ayudan</em>, aspectual <em>se comió</em>)</td>
-<td style="text-align: left;">Cloze or functional classification identifying the correct pronoun combination or usage context.</td>
-</tr>
-<tr>
-<td style="text-align: left;"><strong><code>connectors</code></strong></td>
-<td style="text-align: left;"><code>discourse</code>, <code>transitions</code></td>
-<td style="text-align: left;">16 curated sentences covering causal, adversative, concessive, and consecutive connectors (<em>sin embargo, no obstante, por lo tanto, en cambio, dado que, a pesar de que, por ende</em>)</td>
-<td style="text-align: left;">Cloze testing discourse flow and register.</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="3-integration-points">3. Integration Points</h2>
+<h2 id="2-architecture-design">2. Architecture &amp; Design</h2>
+<h3 id="21-documentation-structure-docs">2.1 Documentation Structure (<code>docs/</code>)</h3>
+<p>We will transform the documentation into a clean, developer-tailored Spanish Language Learning platform:</p>
 <ol>
-<li><strong><code>src/core/arcade.rs</code></strong>:</li>
-<li>Define dedicated sentence pools: <code>ENGINE_REGIMEN_POOL</code>, <code>ENGINE_IRREGULARS_POOL</code>, <code>ENGINE_FALSE_FRIENDS_POOL</code>, <code>ENGINE_SE_MATRIX_POOL</code>, <code>ENGINE_CONNECTORS_POOL</code>.</li>
-<li>Update <code>generate_specialized_engine_items(slug: &amp;str, count: usize) -&gt; Vec&lt;ArcadeItem&gt;</code>.</li>
-<li>Update <code>select_arcade_items</code> to resolve engine slugs in topic matching and include them in the default mixed mode pool.</li>
-<li><strong><code>src/cli/commands/arcade.rs</code> &amp; <code>src/main.rs</code></strong>:</li>
-<li>Support CLI arguments: <code>spanglings arcade regimen</code>, <code>spanglings arcade irregulars</code>, <code>spanglings arcade false-friends</code>, <code>spanglings arcade se</code>, <code>spanglings arcade connectors</code>.</li>
-<li><strong><code>src/tui/app.rs</code> &amp; <code>src/tui/ui.rs</code></strong>:</li>
-<li>TUI arena header and cycling displays engine titles cleanly.</li>
-<li><strong>Testing</strong>:</li>
-<li><code>tests/arcade_tests.rs</code>: Validate all 5 engines generate valid non-empty items with 4 distinct choices, valid correct index, and rich explanations.</li>
-<li><code>tests/cli_arcade_tests.rs</code>: Validate CLI argument dispatch and selection for all 5 engine slugs and aliases.</li>
-<li><code>tests/tui_arcade_tests.rs</code>: Validate TUI arcade arena rendering and single-key navigation across all 5 engines.</li>
+<li><strong><code>docs/index.md</code> (Overview &amp; Pedagogical Architecture)</strong>:</li>
+<li>High-level introduction to the <strong>Syntax Compiler Model</strong> of Spanish language acquisition.</li>
+<li>CEFR Level Progression overview (A1 Foundation -&gt; C1 Mastery).</li>
+<li>Prominent launch banner to the <strong>Standalone Interactive Web Playground</strong>.</li>
+<li>Navigation links to the Comprehensive Language Manual and Curriculum Syllabus.</li>
+<li><strong><code>docs/manual.md</code> (The Comprehensive Spanish Language Manual)</strong>:</li>
+<li>Covers all 24 core curriculum topics organized into three clear CEFR tiers:<ul>
+<li><strong>Tier 1: Foundations &amp; Aspectual Geometry (A1–A2)</strong>:</li>
+<li><em>Ser vs Estar</em> (Essence vs State &amp; Adjective Semantic Shifts)</li>
+<li><em>Por vs Para</em> (Origin/Cause Vector vs Destination/Goal Vector)</li>
+<li><em>Pretérito vs Imperfecto</em> (Aspectual Boundaries: Completed Action vs Continuous Background)</li>
+<li>Direct &amp; Indirect Clitics (<em>Lo/La/Le</em> Distinction &amp; Clitic Doubling Matrix)</li>
+<li><em>Gustar</em> &amp; Inverted Psychological Predicates</li>
+<li>Reflexive &amp; Pronominal Verbs (True Reflexive vs Inherent Pronominal)</li>
+<li>Stem-Changing Verbs (E-&gt;IE, O-&gt;UE, E-&gt;I, U-&gt;UE Mechanics)</li>
+<li>Prepositional Geometry &amp; Mandatory Contractions (<em>a, de, en, con, sin</em>)</li>
+<li><strong>Tier 2: Mood, Triggers &amp; Pragmatic Voice (B1–B2)</strong>:</li>
+<li>Present Subjunctive &amp; Matrix Triggers (WEIRDOS Mnemonic &amp; Decision Matrix)</li>
+<li>Imperfect Subjunctive &amp; Hypothetical <em>Si</em> Clauses (Conditional Pairings)</li>
+<li>Imperative Mood &amp; Clitic Attachment Rules (Affirmative Enclitic vs Negative Proclitic)</li>
+<li>Accidental &amp; Unintentional <em>Se</em> Construction (Blameless Verb Architecture)</li>
+<li>Passive <em>Se</em> vs Impersonal <em>Se</em> (Agreement with Patient vs Fixed Singular)</li>
+<li>Possessive Datives (Inalienable Body Parts &amp; Articles)</li>
+<li>Relative Pronouns &amp; Clauses (<em>que, quien, el cual, cuyo</em>)</li>
+<li>Gerund Mechanics &amp; Prohibited Adjectival Gerunds (Adverbial Circumstance)</li>
+<li><strong>Tier 3: Advanced Nuance, Registers &amp; Edge Mechanics (B2–C1)</strong>:</li>
+<li>Verbs of Becoming (<em>hacerse, ponerse, volverse, quedarse, convertirse en</em>)</li>
+<li>Scalar Concession &amp; Connectors (<em>aunque, a pesar de que, por mucho que</em>)</li>
+<li>Epistemic Conjecture &amp; Probability Futures (<em>será, estaría, habrá sido</em>)</li>
+<li>Corrective Polarity (<em>pero vs sino vs sino que</em>)</li>
+<li>False Friends &amp; Cognitive Traps (<em>actualmente, realizar, soportar, constipado</em>)</li>
+<li>Voseo Mechanics (Rioplatense &amp; Central American Morphological Paradigms)</li>
+<li>Technical, Software &amp; Data Collocations (<em>desplegar, fallar, compilar, enrutar</em>)</li>
+<li>Professional &amp; Legal Subjunctive Forms (<em>-ere</em> Archaisms &amp; Epistolary Formulas)</li>
+</ul>
+</li>
+<li><strong><code>docs/syllabus.md</code> (Curriculum Syllabus &amp; Practice Directory)</strong>:</li>
+<li>Complete index of all 24 topics, 136 curriculum frames, 16 showdown pairs, and 5 specialized drill engines.</li>
+<li>Deep links to the corresponding manual section and direct practice links in the playground.</li>
+<li><strong><code>mkdocs.yml</code> (Streamlined Navigation)</strong>:</li>
+<li>Clean navigation bar:<ul>
+<li>Overview (<code>index.md</code>)</li>
+<li>Spanish Language Manual (<code>manual.md</code>)</li>
+<li>Curriculum Syllabus (<code>syllabus.md</code>)</li>
+<li>Interactive Playground (<code>playground/index.html</code>)</li>
+<li>Contributing (<code>contributing.md</code>)</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="22-content-template-for-each-manual-topic-section">2.2 Content Template for Each Manual Topic Section</h3>
+<p>Every topic section in <code>docs/manual.md</code> will strictly follow the Spanglings dual-layer standard:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gu">### &lt;Topic Title&gt; (e.g. 1. Ser vs Estar)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="gs">**CEFR Level**</span>: A1 | <span class="gs">**Prerequisites**</span>: None | <span class="gs">**Track**</span>: <span class="sb">`ser-estar`</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="gu">#### 💡 Communicative Mental Model</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>[Intuitive spatial/psychological context explaining the native speaker perspective]
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="gu">#### 📐 Strict Grammar Rules &amp; Decision Matrix</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>| Trigger / Context | Verb / Form | Minimal Example | English Translation |
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>| :--- | :--- | :--- | :--- |
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>| Characteristic / Identity | <span class="ge">*Ser*</span> | <span class="ge">*Es ingeniero*</span> | He is an engineer |
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>| Temporary State / Condition | <span class="ge">*Estar*</span> | <span class="ge">*Está cansado*</span> | He is tired |
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>| Semantic Adjective Shift | <span class="ge">*Ser listo*</span> vs <span class="ge">*Estar listo*</span> | <span class="ge">*Es listo*</span> / <span class="ge">*Está listo*</span> | He is smart / He is ready |
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="gu">#### ⚠️ High-Frequency Pitfalls &amp; Traps</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>[Common English speaker mistakes and how to avoid them]
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="gu">#### ⚡ Interactive Practice</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="k">-</span><span class="w"> </span>[<span class="nt">▶ Practice in Curriculum Syntax Studio</span>](<span class="na">../playground/?topic=ser-estar</span>)
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="k">-</span><span class="w"> </span>[<span class="nt">⚔ Battle in Rapid Showdown Duel</span>](<span class="na">../playground/?mode=arcade&amp;topic=ser-vs-estar</span>)
+</span></code></pre></div>
+<hr />
+<h3 id="23-rapid-arcade-arena-fix-bidirectional-deep-linking">2.3 Rapid Arcade Arena Fix &amp; Bidirectional Deep-Linking</h3>
+<ol>
+<li><strong>CSS Selector Alignment</strong>:
+   In <code>docs/assets/playground/playground.css</code>:</li>
+<li>Change <code>.playground-container.arcade-mode ...</code> to <code>.spanglings-playground.arcade-mode .syllabus-pane, .spanglings-playground.arcade-mode .editor-pane, .spanglings-playground.arcade-mode .diagnostics-pane { display: none; }</code> and <code>.spanglings-playground.arcade-mode .arcade-arena-container { display: flex; }</code>.</li>
+<li>
+<p>Ensure <code>#arcade-arena-container</code> occupies the full container height with proper vertical scrolling and centering.</p>
+</li>
+<li>
+<p><strong>Playground Deep-Linking &amp; URL Parameter Handling</strong>:
+   In <code>docs/assets/playground/playground.js</code>:</p>
+</li>
+<li>Parse <code>window.location.search</code> on startup:<ul>
+<li><code>?mode=arcade</code>: Switch directly to Arcade tab and trigger <code>renderArcadeView()</code>.</li>
+<li><code>?topic=&lt;slug&gt;</code>: If in curriculum mode, select the topic and first frame matching the slug. If in arcade mode, set <code>arcadeEngine.mode = &lt;slug&gt;</code> and start the round or select the option in the dropdown.</li>
+<li><code>?exercise=&lt;id&gt;</code>: Select specific exercise ID.</li>
+</ul>
+</li>
+<li>
+<p>Add a <code>📖 View in Manual</code> link in the topic cheat sheet drawer and diagnostics pane pointing to <code>../manual/#&lt;topic-slug&gt;</code>.</p>
+</li>
+<li>
+<p><strong>Header Link in Standalone Shell</strong>:
+   In <code>docs/playground/index.html</code>:</p>
+</li>
+<li>Update the top navigation button to point directly to <code>../manual/</code> (<code>📘 Language Manual</code>).</li>
+</ol>
+<hr />
+<h2 id="3-verification-testing-strategy">3. Verification &amp; Testing Strategy</h2>
+<ol>
+<li><strong>Python Unit Tests (<code>tests/test_docs_playground.py</code> &amp; <code>tests/test_playground_ui.py</code>)</strong>:</li>
+<li>Verify <code>docs/manual.md</code> exists and contains all 24 topic headings, mental models, grammar rules, tables, and playground deep-links.</li>
+<li>Verify <code>mkdocs.yml</code> navigation includes <code>manual.md</code> and <code>playground/index.html</code>.</li>
+<li>Verify CSS selectors for <code>.spanglings-playground.arcade-mode</code> in <code>playground.css</code>.</li>
+<li>Verify URL parameter handling for <code>?mode=arcade</code> and <code>?topic=...</code> in <code>playground.js</code>.</li>
+<li><strong>Automated Documentation Build</strong>:</li>
+<li><code>uv run mkdocs build --strict</code> with zero warnings or broken links.</li>
+<li><strong>Full Rust &amp; Python Test Suite</strong>:</li>
+<li><code>cargo test --all-targets</code> (all unit &amp; integration tests pass).</li>
+<li><code>uv run pytest</code> (all test suites pass).</li>
+<li><code>uv run ruff check</code> and <code>uv run pyright</code> pass cleanly.</li>
 </ol>
 
 
