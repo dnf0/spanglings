@@ -177,3 +177,60 @@ def test_mkdocs_strict_build_succeeds(repo_root: Path) -> None:
         f"STDOUT:\n{result.stdout}\n"
         f"STDERR:\n{result.stderr}"
     )
+
+
+def test_comprehensive_language_manual_structure(repo_root: Path) -> None:
+    """Verify docs/manual.md exists and contains all 24 topics with mental models, rules, and deep links."""
+    manual_path = repo_root / "docs" / "manual.md"
+    assert manual_path.exists(), f"docs/manual.md must exist at {manual_path}"
+
+    content = manual_path.read_text(encoding="utf-8")
+    assert "# Spanglings Spanish Language Manual" in content
+
+    # Check 24 topics
+    expected_topics = [
+        "ser-estar",
+        "por-para",
+        "past-tenses",
+        "pronouns",
+        "gustar",
+        "reflexive",
+        "stem-changing",
+        "prepositions",
+        "subjunctive",
+        "imperfect-subjunctive",
+        "imperative",
+        "accidental-se",
+        "passive-impersonal-se",
+        "possessive-datives",
+        "relative-pronouns",
+        "gerund-rules",
+        "verbs-of-becoming",
+        "scalar-concession",
+        "epistemic-conjecture",
+        "adversatives",
+        "false-friends",
+        "voseo",
+        "tech",
+        "legal",
+    ]
+    for topic in expected_topics:
+        assert (
+            f'id="{topic}"' in content
+            or f"#{topic}" in content
+            or f"topic={topic}" in content
+        ), f"Topic '{topic}' anchor or reference must be present in docs/manual.md"
+        assert f"playground/?topic={topic}" in content, (
+            f"Studio link for '{topic}' must be present in docs/manual.md"
+        )
+        assert f"playground/?mode=arcade&topic={topic}" in content, (
+            f"Arcade showdown link for '{topic}' must be present in docs/manual.md"
+        )
+
+    assert content.count("### 💡 Communicative Mental Model") == 24
+    assert content.count("### 📐 Grammar Rules & Decision Matrix") == 24
+    assert "playground/?topic=" in content
+    assert "playground/?mode=arcade" in content
+
+
+
