@@ -6,7 +6,57 @@ All exercises are mapped into an **81-concept Directed Acyclic Graph (DAG) ontol
 
 ---
 
-## 📊 Curriculum Track Matrix
+## 🗺️ 24 Core Curriculum Topics & Studio Hub
+
+Spanglings structures the entirety of Spanish syntax into **24 targeted pedagogical domains** across three developmental tiers. Each domain is fully covered with cognitive mental models and decision matrices in the [Spanish Language Manual](manual.md), and executable in real-time in the [Interactive Playground](../playground/).
+
+### 🟢 Tier 1: Foundations & Aspectual Geometry (A1–A2)
+
+| # | Topic | CEFR | Grammatical Core | Reference Manual | Interactive Practice |
+| :-: | :--- | :---: | :--- | :--- | :--- |
+| 1 | **Ser vs. Estar** | A1–A2 | Essence & Identity vs. State, Condition & Location; Adjectival meaning shifts | [📘 Ser vs. Estar](manual.md#ser-estar) | [⚡ Studio](../playground/?topic=ser-estar) • [⚔️ Arcade](../playground/?mode=arcade&topic=ser-estar) |
+| 2 | **Por vs. Para** | A1–A2 | Cause, Trajectory & Means vs. Goal, Recipient & Deadline | [📘 Por vs. Para](manual.md#por-para) | [⚡ Studio](../playground/?topic=por-para) • [⚔️ Arcade](../playground/?mode=arcade&topic=por-para) |
+| 3 | **Past Tenses & Aspect** | A1–A2 | Preterite (completed bounded event) vs. Imperfect (ongoing background/habitual) | [📘 Past Tenses](manual.md#past-tenses) | [⚡ Studio](../playground/?topic=past-tenses) • [⚔️ Arcade](../playground/?mode=arcade&topic=past-tenses) |
+| 4 | **Pronoun Stacking** | A1–A2 | Clitic pronoun ordering (`se lo`), verb attachments (infinitives/gerunds/imperatives) | [📘 Pronoun Stacking](manual.md#pronouns) | [⚡ Studio](../playground/?topic=pronouns) • [⚔️ Arcade](../playground/?mode=arcade&topic=pronouns) |
+| 5 | **Verbs like Gustar** | A1–A2 | Inverted dative syntax, stimulus-as-subject agreement (`me gusta / me gustan`) | [📘 Verbs like Gustar](manual.md#gustar) | [⚡ Studio](../playground/?topic=gustar) • [⚔️ Arcade](../playground/?mode=arcade&topic=gustar) |
+| 6 | **Reflexive Verbs** | A1–A2 | Direct reflexives, reciprocal actions, inchoative aspectual shifts (*dormirse*, *irse*) | [📘 Reflexive Verbs](manual.md#reflexive) | [⚡ Studio](../playground/?topic=reflexive) • [⚔️ Arcade](../playground/?mode=arcade&topic=reflexive) |
+| 7 | **Stem-Changing Verbs** | A1–A2 | Radical boot shifts (*e→ie*, *o→ue*, *e→i*), vocalic stress rules | [📘 Stem-Changing](manual.md#stem-changing) | [⚡ Studio](../playground/?topic=stem-changing) • [⚔️ Arcade](../playground/?mode=arcade&topic=stem-changing) |
+| 8 | **Prepositional Regimen** | A1–A2 | Fixed verbal prepositions (*depender de*, *soñar con*, *insistir en*, *renunciar a*) | [📘 Prepositional Regimen](manual.md#prepositions) | [⚡ Studio](../playground/?topic=prepositions) • [⚔️ Arcade](../playground/?mode=arcade&topic=prepositions) |
+
+---
+
+### 🟡 Tier 2: Mood, Triggers & Pragmatic Voice (B1–B2)
+
+| # | Topic | CEFR | Grammatical Core | Reference Manual | Interactive Practice |
+| :-: | :--- | :---: | :--- | :--- | :--- |
+| 9 | **Present Subjunctive** | B1 | WEIRDO triggers, volition, doubt, emotion, non-existent relative antecedents | [📘 Present Subjunctive](manual.md#subjunctive) | [⚡ Studio](../playground/?topic=subjunctive) • [⚔️ Arcade](../playground/?mode=arcade&topic=subjunctive) |
+| 10 | **Imperfect Subjunctive** | B1–B2 | Hypothetical counterfactual *si*-clauses, polite requests (*quisiera*), *-ra* vs. *-se* | [📘 Imperfect Subjunctive](manual.md#imperfect-subjunctive) | [⚡ Studio](../playground/?topic=imperfect-subjunctive) • [⚔️ Arcade](../playground/?mode=arcade&topic=imperfect-subjunctive) |
+| 11 | **Imperative Mood** | B1 | Affirmative vs negative commands, irregular forms, clitic pronoun attachment rules | [📘 Imperative Mood](manual.md#imperative) | [⚡ Studio](../playground/?topic=imperative) • [⚔️ Arcade](../playground/?mode=arcade&topic=imperative) |
+| 12 | **Accidental "Se"** | B1 | Non-agentive unintentional events (*se me cayó*, *se nos olvidaron los accesos*) | [📘 Accidental Se](manual.md#accidental-se) | [⚡ Studio](../playground/?topic=accidental-se) • [⚔️ Arcade](../playground/?mode=arcade&topic=accidental-se) |
+| 13 | **Passive & Impersonal "Se"** | B1–B2 | Agreement in passive *se* (*se publican artículos*) vs invariable impersonal (*se atiende a*) | [📘 Passive & Impersonal Se](manual.md#passive-impersonal-se) | [⚡ Studio](../playground/?topic=passive-impersonal-se) • [⚔️ Arcade](../playground/?mode=arcade&topic=passive-impersonal-se) |
+| 14 | **Possessive Datives** | B1–B2 | Datives of inalienable possession (*me lavé las manos*), ethic & affective datives | [📘 Possessive Datives](manual.md#possessive-datives) | [⚡ Studio](../playground/?topic=possessive-datives) • [⚔️ Arcade](../playground/?mode=arcade&topic=possessive-datives) |
+| 15 | **Relative Pronouns** | B1–B2 | Restrictive vs non-restrictive relative clauses (*que*, *quien*, *el cual*, *el que*, *cuyo*) | [📘 Relative Pronouns](manual.md#relative-pronouns) | [⚡ Studio](../playground/?topic=relative-pronouns) • [⚔️ Arcade](../playground/?mode=arcade&topic=relative-pronouns) |
+| 16 | **Gerund Rules** | B1–B2 | Simultaneous/modal gerunds vs banned posteriority and illegal adjectival gerunds | [📘 Gerund Rules](manual.md#gerund-rules) | [⚡ Studio](../playground/?topic=gerund-rules) • [⚔️ Arcade](../playground/?mode=arcade&topic=gerund-rules) |
+
+---
+
+### 🟣 Tier 3: Advanced Nuance, Registers & Edge Mechanics (B2–C1)
+
+| # | Topic | CEFR | Grammatical Core | Reference Manual | Interactive Practice |
+| :-: | :--- | :---: | :--- | :--- | :--- |
+| 17 | **Verbs of Becoming** | B2–C1 | Dynamic transformation (*ponerse*, *quedarse*, *hacerse*, *volverse*, *convertirse en*) | [📘 Verbs of Becoming](manual.md#verbs-of-becoming) | [⚡ Studio](../playground/?topic=verbs-of-becoming) • [⚔️ Arcade](../playground/?mode=arcade&topic=verbs-of-becoming) |
+| 18 | **Scalar Concession** | B2–C1 | Intensive concession (*por más que*, *por muy + adj + que*, *aun a riesgo de que*) | [📘 Scalar Concession](manual.md#scalar-concession) | [⚡ Studio](../playground/?topic=scalar-concession) • [⚔️ Arcade](../playground/?mode=arcade&topic=scalar-concession) |
+| 19 | **Epistemic Conjecture** | B2–C1 | Future and conditional of probability (*serán las 4*, *estaría ocupado*) vs strict fact | [📘 Epistemic Conjecture](manual.md#epistemic-conjecture) | [⚡ Studio](../playground/?topic=epistemic-conjecture) • [⚔️ Arcade](../playground/?mode=arcade&topic=epistemic-conjecture) |
+| 20 | **Adversatives & Rectification** | B2–C1 | Restrictive *pero* vs exclusive substitution *sino* / *sino que* | [📘 Adversatives](manual.md#adversatives) | [⚡ Studio](../playground/?topic=adversatives) • [⚔️ Arcade](../playground/?mode=arcade&topic=adversatives) |
+| 21 | **False Friends & Cognates** | B2–C1 | Deceptive cognates in professional contexts (*actual*, *realizar*, *pretender*, *eventual*) | [📘 False Friends](manual.md#false-friends) | [⚡ Studio](../playground/?topic=false-friends) • [⚔️ Arcade](../playground/?mode=arcade&topic=false-friends) |
+| 22 | **Voseo & Regional Address** | B2–C1 | Rioplatense & Central American voseo conjugations (*vos podés*, *tené*, *mirá*) | [📘 Voseo](manual.md#voseo) | [⚡ Studio](../playground/?topic=voseo) • [⚔️ Arcade](../playground/?mode=arcade&topic=voseo) |
+| 23 | **Technical & Software Spanish** | B2–C1 | Authentic engineering vocabulary (*desplegar*, *depurar*, *concurrencia*, *repositorio*) | [📘 Tech Spanish](manual.md#tech) | [⚡ Studio](../playground/?topic=tech) • [⚔️ Arcade](../playground/?mode=arcade&topic=tech) |
+| 24 | **Legal & Statutory Spanish** | B2–C1 | Contractual prose, formal obligations, and statutory future subjunctive (`-ere`) | [📘 Legal Spanish](manual.md#legal) | [⚡ Studio](../playground/?topic=legal) • [⚔️ Arcade](../playground/?mode=arcade&topic=legal) |
+
+---
+
+## 📊 60-Track Curriculum Catalog Matrix
+
 
 ### 🟢 Baseline Foundations (A1–A2) • 16 Exercises
 | Track | Name | CEFR | Exercises | Key Concepts Covered |

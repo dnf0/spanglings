@@ -7,13 +7,77 @@
 [![CEFR: A1 to C1](https://img.shields.io/badge/CEFR-A1%20%E2%86%92%20C1%20Mastery-gold.svg)](syllabus.md)
 
 > **Spanglings builds the syntax compiler; real-world usage supplies the data.**  
-> A developer-grade CLI & interactive TUI for mastering Spanish grammar, verb mechanics, and nuanced syntactic architecture.
+> A developer-grade CLI, interactive TUI, and web platform for mastering Spanish grammar, aspectual mechanics, and nuanced syntactic architecture.
+
+---
+
+<div class="grid cards" markdown>
+
+-   :material-book-open-page-variant:{ .lg .middle } __Spanish Language Manual__
+
+    ---
+
+    Explore **24 comprehensive chapters** with dual-layer explanations: cognitive communicative mental models and compiler-style grammar decision matrices.
+
+    [:octicons-arrow-right-24: Read Spanish Language Manual](manual.md)
+
+-   :material-lightning-bolt:{ .lg .middle } __Interactive Web Playground__
+
+    ---
+
+    Practice in your browser with zero installation. Experience the **24-Topic Curriculum Syntax Studio** and real-time **Rapid Showdown Duel Arena**.
+
+    [:octicons-arrow-right-24: Launch Web Playground](playground/index.html)
+
+-   :material-format-list-bulleted-type:{ .lg .middle } __Curriculum Syllabus & Graph__
+
+    ---
+
+    Explore **60 tracks**, **339 exercises**, and the **81-concept Directed Acyclic Graph (DAG)** powering adaptive weakness profiling.
+
+    [:octicons-arrow-right-24: View Curriculum Syllabus](syllabus.md)
+
+</div>
+
+---
 
 <p align="center">
   <img src="assets/spanglings-demo.svg" alt="Spanglings Terminal Watcher Demo" width="850">
 </p>
 
-Inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](https://github.com/dnf0/raylings), **Spanglings** provides a terminal-native, hands-on learning environment for engineers, developers, and power users who want to master authentic Spanish syntax, aspectual contrasts (*pretérito vs imperfecto*), subjunctive triggers, accidental *se*, and professional collocations without childish gamification.
+Inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](https://github.com/dnf0/raylings), **Spanglings** provides a terminal-native and browser-accessible hands-on learning environment for engineers, developers, and power users who want to master authentic Spanish syntax, aspectual contrasts (*pretérito vs imperfecto*), subjunctive triggers, accidental *se*, and professional collocations without childish gamification.
+
+---
+
+## 🏛️ Language Architecture: 24 Topics across 3 CEFR Tiers
+
+Spanglings categorizes the entire Spanish grammar continuum into 24 core pedagogical domains across 3 CEFR competency tiers:
+
+### 🟢 Tier 1: Foundations & Aspectual Geometry (A1–A2)
+Fundamental distinctions and syntactic ordering:
+- **Ser vs. Estar** (`#ser-estar`): Essence & identity vs. transient state, posture, and location.
+- **Por vs. Para** (`#por-para`): Backward motive & trajectory vs. forward goal, recipient & deadline.
+- **Past Tenses & Aspect** (`#past-tenses`): Completed bounded events (preterite) vs. narrative background (imperfect).
+- **Pronoun Stacking** (`#pronouns`), **Verbs like Gustar** (`#gustar`), **Reflexive Verbs** (`#reflexive`), **Stem-Changing Verbs** (`#stem-changing`), and **Prepositional Regimen** (`#prepositions`).
+
+### 🟡 Tier 2: Mood, Triggers & Pragmatic Voice (B1–B2)
+Modality, hypothetical conditions, and non-agentive structures:
+- **Present Subjunctive** (`#subjunctive`): WEIRDO volition, emotion, doubt, and non-existent antecedents.
+- **Imperfect Subjunctive** (`#imperfect-subjunctive`): Counterfactual *si*-clauses and polite hypothetical requests.
+- **Imperative Mood** (`#imperative`): Affirmative and negative commands with direct clitic attachment.
+- **Accidental "Se"** (`#accidental-se`): De-agentified involuntary actions (*se me cayó*).
+- **Passive vs. Impersonal "Se"** (`#passive-impersonal-se`), **Possessive Datives** (`#possessive-datives`), **Relative Pronouns** (`#relative-pronouns`), and **Gerund Syntax Rules** (`#gerund-rules`).
+
+### 🟣 Tier 3: Advanced Nuance, Registers & Edge Mechanics (B2–C1)
+Subtle semantic shifts, pragmatic discourse markers, and specialized domains:
+- **Verbs of Becoming** (`#verbs-of-becoming`): Nuanced transformations (*ponerse*, *quedarse*, *hacerse*, *volverse*, *convertirse en*).
+- **Scalar Concession** (`#scalar-concession`): Intensive concessive polarity (*por mucho que*, *aun a riesgo de que*).
+- **Epistemic Conjecture** (`#epistemic-conjecture`): Future and conditional of probability (*serán las 4*, *estaría cansado*).
+- **Adversatives & Rectification** (`#adversatives`): Restrictive *pero* vs. exclusive corrective *sino* / *sino que*.
+- **False Friends** (`#false-friends`), **Voseo Conjugation** (`#voseo`), **Software & Tech Spanish** (`#tech`), and **Legal & Statutory Spanish** (`#legal`).
+
+👉 Read the in-depth rules and mental models in the [📘 Spanish Language Manual](manual.md) or practice them in the [⚡ Interactive Playground](playground/index.html).
+
 
 ---
 
@@ -79,6 +143,10 @@ Learning a language through passive flashcards or multiple-choice apps is frustr
 ---
 
 ## Quickstart
+
+=== "Interactive Web Playground (Zero Install)"
+    Practice directly in your browser with zero installation:  
+    👉 **[Open Spanglings Interactive Playground](playground/index.html)**
 
 === "Cargo (Recommended)"
     ```bash
