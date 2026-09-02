@@ -767,15 +767,18 @@
   background-color: #7f1d1d;
 }
 
-/* Arcade Placeholder View */
+/* ==============================================================================
+   Rapid Arcade Arena Styles
+   ============================================================================== */
 .arcade-arena-container {
   display: none;
   flex: 1;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: var(--bg-main);
-  padding: 2rem;
+  padding: 2rem 1.5rem;
+  overflow-y: auto;
 }
 
 .playground-container.arcade-mode .syllabus-pane,
@@ -786,6 +789,532 @@
 
 .playground-container.arcade-mode .arcade-arena-container {
   display: flex;
+}
+
+.arcade-setup-card,
+.arcade-card,
+.arcade-summary-card {
+  width: 100%;
+  max-width: 800px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+}
+
+.arcade-title,
+.summary-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.arcade-subtitle,
+.summary-subtitle {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+}
+
+.arcade-config-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.arcade-config-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.arcade-config-label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.arcade-select {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.6rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.arcade-select:focus {
+  border-color: var(--accent-blue);
+}
+
+.arcade-stats-summary-card {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  background-color: var(--bg-surface-elevated);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+}
+
+.arcade-stat-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-dim);
+}
+
+.stat-val {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.arcade-start-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Arcade In-Game HUD */
+.arcade-hud {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.hud-left,
+.hud-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hud-progress {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.hud-topic {
+  font-size: 0.8rem;
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  color: var(--accent-blue);
+}
+
+.hud-score {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #facc15;
+}
+
+.arcade-streak-badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  background-color: var(--bg-surface-elevated);
+  color: var(--text-muted);
+  border: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+}
+
+.arcade-streak-badge.on-fire {
+  background-color: #7c2d12;
+  border-color: #ea580c;
+  color: #ffedd5;
+}
+
+/* Question Prompt & Blank */
+.arcade-question-card {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.arcade-trigger-sentence {
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--text-primary);
+}
+
+.arcade-blank {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  margin: 0 0.3rem;
+  border-bottom: 2px solid var(--accent-blue);
+  color: var(--accent-blue);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.arcade-blank.blank-filled-correct {
+  border-bottom-color: var(--success-border);
+  color: var(--success-color);
+  background-color: rgba(16, 185, 129, 0.1);
+  border-radius: 4px;
+}
+
+.arcade-blank.blank-filled-wrong {
+  border-bottom-color: var(--error-border);
+  color: var(--error-color);
+  background-color: rgba(239, 68, 68, 0.1);
+  border-radius: 4px;
+}
+
+/* Options Grid & Choice Buttons */
+.arcade-options-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.arcade-options-grid.options-2 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.arcade-options-grid.options-4 {
+  grid-template-columns: 1fr 1fr;
+}
+
+.arcade-choice-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-surface-elevated);
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  transition: all 0.15s ease;
+}
+
+.arcade-choice-btn:hover:not(:disabled) {
+  border-color: var(--accent-blue);
+  background-color: #273549;
+}
+
+.arcade-choice-btn:disabled {
+  cursor: default;
+}
+
+.arcade-hotkey-badge {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 700;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  color: var(--text-muted);
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.arcade-choice-text {
+  flex: 1;
+}
+
+.arcade-choice-btn.selected-correct {
+  background-color: #064e3b;
+  border-color: var(--success-border);
+  color: var(--success-color);
+}
+
+.arcade-choice-btn.selected-wrong {
+  background-color: #7f1d1d;
+  border-color: var(--error-border);
+  color: var(--error-color);
+}
+
+.arcade-choice-btn.show-correct {
+  border-color: var(--success-border);
+  border-style: dashed;
+}
+
+/* Live Feedback Banner */
+.arcade-feedback-banner {
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arcade-feedback-banner.correct {
+  background-color: #064e3b;
+  color: var(--success-color);
+  border: 1px solid var(--success-border);
+}
+
+.arcade-feedback-banner.incorrect {
+  background-color: #7f1d1d;
+  color: var(--error-color);
+  border: 1px solid var(--error-border);
+}
+
+.arcade-speed-bonus {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  background-color: rgba(250, 204, 21, 0.2);
+  color: #fde047;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  margin-left: 0.5rem;
+}
+
+/* Dual-Layer Card in Arcade */
+.arcade-dual-layer-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1rem;
+}
+
+.arcade-dual-layer-card .card-layer {
+  padding: 0.5rem 0;
+}
+
+.arcade-dual-layer-card .card-layer.meaning {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.arcade-dual-layer-card .layer-heading {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.25rem;
+}
+
+.arcade-dual-layer-card .layer-body {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* Summary Grid & Recap */
+.arcade-stats-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.arcade-stat-box {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.stat-box-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 600;
+}
+
+.stat-box-val {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+}
+
+.stat-box-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.arcade-perfect-banner {
+  background-color: #064e3b;
+  color: var(--success-color);
+  border: 1px solid var(--success-border);
+  padding: 1rem;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.arcade-mistakes-card {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mistakes-header {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--error-color);
+}
+
+.mistakes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.arcade-mistake-item {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.85rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.mistake-sentence {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.mistake-idx {
+  color: var(--text-dim);
+  margin-right: 0.35rem;
+}
+
+.mistake-answers-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.mistake-label {
+  color: var(--text-dim);
+}
+
+.arcade-mistake-wrong {
+  color: var(--error-color);
+  text-decoration: line-through;
+  font-weight: 600;
+  font-family: var(--font-mono);
+}
+
+.arcade-mistake-correct {
+  color: var(--success-color);
+  font-weight: 700;
+  font-family: var(--font-mono);
+}
+
+.mistake-explanation {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.mistake-why {
+  font-weight: 600;
+  color: var(--accent-blue);
+}
+
+.mistakes-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Arcade Action Buttons */
+.arcade-action-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.15s ease;
+}
+
+.arcade-action-btn.primary {
+  background-color: var(--accent-blue);
+  color: #ffffff;
+}
+
+.arcade-action-btn.primary:hover {
+  background-color: var(--accent-blue-hover);
+}
+
+.arcade-action-btn.next {
+  background-color: var(--accent-blue);
+  color: #ffffff;
+  width: 100%;
+}
+
+.arcade-action-btn.next:hover {
+  background-color: var(--accent-blue-hover);
+}
+
+.arcade-action-btn.replay {
+  background-color: var(--bg-surface);
+  border-color: var(--error-border);
+  color: var(--error-color);
+}
+
+.arcade-action-btn.replay:hover {
+  background-color: #7f1d1d;
+}
+
+.arcade-action-btn.secondary {
+  background-color: var(--bg-surface-elevated);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.arcade-action-btn.secondary:hover {
+  background-color: #334155;
+}
+
+.arcade-hotkey-guide {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.arcade-summary-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
 }
 
 /* Responsive adjustments */
@@ -807,4 +1336,14 @@
     border-left: none;
     border-top: 1px solid var(--border-color);
   }
+  .arcade-config-grid,
+  .arcade-stats-summary-grid,
+  .arcade-stats-summary-card {
+    grid-template-columns: 1fr 1fr;
+  }
+  .arcade-options-grid.options-2,
+  .arcade-options-grid.options-4 {
+    grid-template-columns: 1fr;
+  }
 }
+

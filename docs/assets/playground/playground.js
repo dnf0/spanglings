@@ -17,6 +17,451 @@ import { SpanglingsStorage } from "./storage.js";
 export const ACCENT_CHARS = ["á", "é", "í", "ó", "ú", "ñ", "ü", "¿", "¡"];
 
 /**
+ * 16 Showdown pairs available in the Rapid Arcade Arena.
+ * @type {Array<{ slug: string, title: string, topic: string }>}
+ */
+export const SHOWDOWN_PAIRS = [
+  { slug: "ser-estar", title: "Ser vs. Estar", topic: "ser-estar" },
+  { slug: "por-para", title: "Por vs. Para", topic: "por-para" },
+  { slug: "pret-imp", title: "Preterite vs. Imperfect", topic: "pret-imp" },
+  { slug: "subj-ind", title: "Subjunctive vs. Indicative", topic: "subj-ind" },
+  { slug: "saber-conocer", title: "Saber vs. Conocer", topic: "saber-conocer" },
+  { slug: "pedir-preguntar", title: "Pedir vs. Preguntar", topic: "pedir-preguntar" },
+  { slug: "llevar-traer", title: "Llevar vs. Traer", topic: "llevar-traer" },
+  { slug: "muy-mucho", title: "Muy vs. Mucho", topic: "muy-mucho" },
+  { slug: "bien-bueno", title: "Bien vs. Bueno", topic: "bien-bueno" },
+  { slug: "tu-usted", title: "Tú vs. Usted", topic: "tu-usted" },
+  { slug: "lo-le", title: "Lo vs. Le (Direct vs. Indirect)", topic: "lo-le" },
+  { slug: "haber-estar", title: "Haber vs. Estar (Existence vs Location)", topic: "haber-estar" },
+  { slug: "tener-haber", title: "Tener vs. Haber (Possession vs Auxiliary)", topic: "tener-haber" },
+  { slug: "ir-irse", title: "Ir vs. Irse (Motion vs Departure)", topic: "ir-irse" },
+  { slug: "sino-pero", title: "Sino vs. Pero (Contrast vs Exception)", topic: "sino-pero" },
+  { slug: "para-que-porque", title: "Para qué vs. Por qué / Porque", topic: "para-que-porque" },
+];
+
+/**
+ * 5 Specialized Drill Engines available in the Rapid Arcade Arena.
+ * @type {Array<{ slug: string, title: string, topic: string, description: string }>}
+ */
+export const SPECIALIZED_ENGINES = [
+  {
+    slug: "regimen",
+    title: "Prepositional Regimen Engine",
+    topic: "regimen",
+    description: "Master verb-bound prepositions (soñar con, depender de, fijarse en).",
+  },
+  {
+    slug: "irregulars",
+    title: "High-Frequency Irregulars Engine",
+    topic: "irregulars",
+    description: "Rapid drill for radical stem-changers and irregular preterite/subjunctive forms.",
+  },
+  {
+    slug: "false-friends",
+    title: "False Friends & Cognates Engine",
+    topic: "false-friends",
+    description: "Avoid deceptive cognates (embarazada, constipado, éxito, realizar).",
+  },
+  {
+    slug: "se-matrix",
+    title: "Se Matrix & Reflexive Dynamics",
+    topic: "se-matrix",
+    description: "Disambiguate reflexive, reciprocal, passive, accidental, and middle 'se'.",
+  },
+  {
+    slug: "connectors",
+    title: "Logical Discourse Connectors",
+    topic: "connectors",
+    description: "Fluid transitions (sin embargo, por lo tanto, a pesar de que, ya que).",
+  },
+];
+
+/**
+ * Single-key hotkey mapping for instant arcade answers.
+ * Option 1: 1 / j / J
+ * Option 2: 2 / k / K
+ * Option 3: 3 / l / L
+ * Option 4: 4 / ; / :
+ * @type {Record<string, number>}
+ */
+export const HOTKEY_MAP = {
+  "1": 0,
+  j: 0,
+  J: 0,
+  "2": 1,
+  k: 1,
+  K: 1,
+  "3": 2,
+  l: 2,
+  L: 2,
+  "4": 3,
+  ";": 3,
+  ":": 3,
+};
+
+/**
+ * Calculates speed bonus points (+1 point per 15ms under 1500ms, max 100).
+ *
+ * @param {number} responseTimeMs - Response time in milliseconds.
+ * @returns {number} Speed bonus points from 0 to 100.
+ */
+export function calculateSpeedBonus(responseTimeMs) {
+  if (typeof responseTimeMs !== "number" || isNaN(responseTimeMs)) {
+    return 0;
+  }
+  if (responseTimeMs <= 0) {
+    return 100;
+  }
+  if (responseTimeMs >= 1500) {
+    return 0;
+  }
+  const diff = 1500 - responseTimeMs;
+  return Math.min(100, Math.max(0, Math.floor(diff / 15)));
+}
+
+/**
+ * Normalizes arcade mode slug or alias (e.g. 'ser-vs-estar' -> 'ser-estar').
+ *
+ * @param {string} mode - Mode slug or alias.
+ * @returns {string} Normalized mode slug.
+ */
+export function normalizeModeSlug(mode) {
+  if (!mode || typeof mode !== "string") return "all";
+  const clean = mode.trim().toLowerCase();
+  if (clean === "all" || clean === "mixed") return "all";
+
+  const aliases = {
+    "ser-vs-estar": "ser-estar",
+    "por-vs-para": "por-para",
+    "imperfect-vs-preterite": "pret-imp",
+    "preterite-vs-imperfect": "pret-imp",
+    "subjunctive-vs-indicative": "subj-ind",
+    "indicative-vs-subjunctive": "subj-ind",
+    "saber-vs-conocer": "saber-conocer",
+    "pedir-vs-preguntar": "pedir-preguntar",
+    "llevar-vs-traer": "llevar-traer",
+    "muy-vs-mucho": "muy-mucho",
+    "bien-vs-bueno": "bien-bueno",
+    "tu-vs-usted": "tu-usted",
+    "lo-vs-le": "lo-le",
+    "haber-vs-estar": "haber-estar",
+    "tener-vs-haber": "tener-haber",
+    "ir-vs-irse": "ir-irse",
+    "sino-vs-pero": "sino-pero",
+    "para-que-vs-porque": "para-que-porque",
+    "para-que-porque": "para-que-porque",
+  };
+  return aliases[clean] || clean;
+}
+
+/**
+ * Filters arcade items by selected mode.
+ *
+ * @param {Array<object>} arcadeItems - Complete arcade items array.
+ * @param {string} selectedMode - Selected mode slug (e.g. 'all', 'ser-estar', 'regimen').
+ * @returns {Array<object>} Filtered arcade items.
+ */
+export function filterArcadePool(arcadeItems, selectedMode) {
+  if (!Array.isArray(arcadeItems)) return [];
+  const target = normalizeModeSlug(selectedMode);
+  if (target === "all") {
+    return [...arcadeItems];
+  }
+
+  return arcadeItems.filter((item) => {
+    const itemTopic = (item.topic || "").toLowerCase();
+    const itemMode = (item.mode || "").toLowerCase();
+    return (
+      itemTopic === target ||
+      item.id?.toLowerCase().startsWith(target) ||
+      itemMode === target
+    );
+  });
+}
+
+/**
+ * Evaluates an arcade choice submission, computing score, speed bonus, and dual-layer feedback.
+ *
+ * @param {object} item - Arcade item object.
+ * @param {number} selectedIndex - Index of selected option.
+ * @param {number} [responseTimeMs=0] - Elapsed response time in ms.
+ * @returns {object} Evaluation descriptor.
+ */
+export function evaluateArcadeChoice(item, selectedIndex, responseTimeMs = 0) {
+  if (!item || typeof selectedIndex !== "number") {
+    return {
+      isCorrect: false,
+      baseScore: 0,
+      speedBonus: 0,
+      totalScore: 0,
+      responseTimeMs: responseTimeMs || 0,
+      selectedIndex: -1,
+      selectedOption: null,
+      correctIndex: item?.correct_index ?? 0,
+      correctOption: item?.correct_option || "",
+      meaning: item?.meaning || item?.plain_english || "",
+      rule: item?.rule || item?.explanation || "",
+      triggerSentence: item?.trigger_sentence || item?.template || item?.prompt || "",
+    };
+  }
+
+  const isCorrect = selectedIndex === item.correct_index;
+  const speedBonus = isCorrect ? calculateSpeedBonus(responseTimeMs) : 0;
+  const baseScore = isCorrect ? 100 : 0;
+  const totalScore = baseScore + speedBonus;
+  const options = Array.isArray(item.options) ? item.options : [];
+  const selectedOption =
+    options[selectedIndex] !== undefined ? options[selectedIndex] : null;
+
+  return {
+    isCorrect,
+    baseScore,
+    speedBonus,
+    totalScore,
+    responseTimeMs: typeof responseTimeMs === "number" ? Math.round(responseTimeMs) : 0,
+    selectedIndex,
+    selectedOption,
+    correctIndex: item.correct_index,
+    correctOption: item.correct_option || (options[item.correct_index] || ""),
+    meaning: item.meaning || item.plain_english || "Mental model context unavailable.",
+    rule: item.rule || item.explanation || "Grammar rule explanation unavailable.",
+    triggerSentence: item.trigger_sentence || item.template || item.prompt || "",
+  };
+}
+
+/**
+ * Spanglings Rapid Arcade Arena Engine.
+ * Manages item pools, rapid single-key input, scoring, streak multipliers,
+ * dual-layer pedagogical feedback, mistake tracking, and state persistence.
+ */
+export class SpanglingsArcadeEngine {
+  /**
+   * @param {object} [options={}]
+   * @param {object} [options.bundle=null] - Playground bundle containing arcade_items.
+   * @param {SpanglingsStorage} [options.storage=null] - Storage engine.
+   * @param {Function} [options.onStateChange=null] - State transition listener.
+   */
+  constructor(options = {}) {
+    this.bundle = options.bundle || null;
+    this.storage = options.storage || new SpanglingsStorage();
+    this.onStateChange =
+      typeof options.onStateChange === "function" ? options.onStateChange : null;
+
+    this.mode = "all";
+    this.roundLength = 10;
+    this.items = [];
+    this.currentIndex = 0;
+    this.score = 0;
+    this.streak = 0;
+    this.bestStreak = 0;
+    this.startTime = 0;
+    this.responses = [];
+    this.missedItems = [];
+    this.state = "idle"; // "idle" | "question" | "feedback" | "summary"
+    this.lastEvaluation = null;
+  }
+
+  /**
+   * Starts a new arcade round.
+   *
+   * @param {string} [mode="all"] - Mode identifier or showdown slug.
+   * @param {number} [roundLength=10] - Number of items per round (0 = endless).
+   * @param {Array<object>} [itemsOverride=null] - Explicit list of items (e.g. for replay).
+   */
+  startRound(mode = "all", roundLength = 10, itemsOverride = null) {
+    this.mode = mode;
+    this.roundLength = typeof roundLength === "number" ? roundLength : 10;
+
+    if (Array.isArray(itemsOverride)) {
+      this.items = [...itemsOverride];
+    } else {
+      const allItems = this.bundle?.arcade_items || [];
+      const pool = filterArcadePool(allItems, mode);
+      this.items = pool.length > 0 ? [...pool] : [...allItems];
+
+      // Fisher-Yates shuffle
+      for (let i = this.items.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [this.items[i], this.items[j]] = [this.items[j], this.items[i]];
+      }
+
+      if (this.roundLength > 0 && this.items.length > this.roundLength) {
+        this.items = this.items.slice(0, this.roundLength);
+      }
+    }
+
+    this.currentIndex = 0;
+    this.score = 0;
+    this.streak = 0;
+    this.bestStreak = 0;
+    this.responses = [];
+    this.missedItems = [];
+    this.lastEvaluation = null;
+
+    if (this.items.length > 0) {
+      this.state = "question";
+      this.startTime =
+        typeof performance !== "undefined" ? performance.now() : Date.now();
+    } else {
+      this.state = "idle";
+    }
+
+    this._notify();
+  }
+
+  /**
+   * Returns current active question item.
+   * @returns {object|null}
+   */
+  getCurrentItem() {
+    return this.items[this.currentIndex] || null;
+  }
+
+  /**
+   * Submits user choice for current question.
+   *
+   * @param {number} selectedIndex - Chosen option index.
+   * @param {number} [responseTimeMsOverride=null] - Optional elapsed time override.
+   * @returns {object|null} Evaluation result.
+   */
+  submitChoice(selectedIndex, responseTimeMsOverride = null) {
+    if (this.state !== "question") return null;
+    const item = this.getCurrentItem();
+    if (!item) return null;
+
+    let timeMs = responseTimeMsOverride;
+    if (timeMs === null || typeof timeMs === "undefined") {
+      const now =
+        typeof performance !== "undefined" ? performance.now() : Date.now();
+      timeMs = Math.max(0, now - this.startTime);
+    }
+
+    const evalResult = evaluateArcadeChoice(item, selectedIndex, timeMs);
+    this.lastEvaluation = evalResult;
+    this.score += evalResult.totalScore;
+
+    if (evalResult.isCorrect) {
+      this.streak += 1;
+      this.bestStreak = Math.max(this.bestStreak, this.streak);
+    } else {
+      this.streak = 0;
+      this.missedItems.push({ item, ...evalResult });
+    }
+
+    this.responses.push(evalResult);
+    this.state = "feedback";
+    this._notify();
+    return evalResult;
+  }
+
+  /**
+   * Advances to next question or concludes round if complete.
+   * @returns {object|null} Next item or summary object.
+   */
+  nextQuestion() {
+    if (this.state !== "feedback") return null;
+
+    this.currentIndex += 1;
+    if (this.currentIndex < this.items.length) {
+      this.state = "question";
+      this.lastEvaluation = null;
+      this.startTime =
+        typeof performance !== "undefined" ? performance.now() : Date.now();
+      this._notify();
+      return this.getCurrentItem();
+    }
+
+    this.state = "summary";
+    const summary = this.getSummary();
+    if (this.storage && typeof this.storage.recordArcadeSession === "function") {
+      this.storage.recordArcadeSession(
+        this.score,
+        this.bestStreak,
+        summary.totalQuestions,
+        summary.correctQuestions
+      );
+    }
+    this._notify();
+    return summary;
+  }
+
+  /**
+   * Calculates round summary metrics.
+   * @returns {object}
+   */
+  getSummary() {
+    const totalQuestions = this.responses.length;
+    const correctQuestions = this.responses.filter((r) => r.isCorrect).length;
+    const totalTime = this.responses.reduce(
+      (sum, r) => sum + (r.responseTimeMs || 0),
+      0
+    );
+    const accuracy =
+      totalQuestions > 0
+        ? Number(((correctQuestions / totalQuestions) * 100).toFixed(1))
+        : 0;
+    const avgResponseTimeMs =
+      totalQuestions > 0 ? Math.round(totalTime / totalQuestions) : 0;
+
+    return {
+      score: this.score,
+      totalQuestions,
+      correctQuestions,
+      accuracy,
+      bestStreak: this.bestStreak,
+      avgResponseTimeMs,
+      missedItems: [...this.missedItems],
+      isPerfect: this.missedItems.length === 0 && totalQuestions > 0,
+    };
+  }
+
+  /**
+   * Replays missed questions only.
+   */
+  replayMissedItems() {
+    if (this.missedItems.length === 0) return;
+    const missed = this.missedItems.map((m) => m.item);
+    this.startRound(this.mode, missed.length, missed);
+  }
+
+  /**
+   * Handles keyboard shortcut inputs (1/j/J, 2/k/K, 3/l/L, 4/;/:, Space/Enter).
+   *
+   * @param {string} key - Event key string.
+   * @returns {object|null} Handled action result or null.
+   */
+  handleKey(key) {
+    if (this.state === "question") {
+      if (Object.prototype.hasOwnProperty.call(HOTKEY_MAP, key)) {
+        const choiceIdx = HOTKEY_MAP[key];
+        const item = this.getCurrentItem();
+        if (
+          item &&
+          Array.isArray(item.options) &&
+          choiceIdx < item.options.length
+        ) {
+          return this.submitChoice(choiceIdx);
+        }
+      }
+    } else if (this.state === "feedback") {
+      if (key === " " || key === "Enter" || key === "Space") {
+        return this.nextQuestion();
+      }
+    }
+    return null;
+  }
+
+  /**
+   * @private
+   */
+  _notify() {
+    if (this.onStateChange) {
+      this.onStateChange(this.state, this);
+    }
+  }
+}
+
+/**
  * Monaco Editor CDN base path.
  * @type {string}
  */
@@ -379,6 +824,13 @@ export class SpanglingsPlaygroundApp {
     this.monacoEditor = null;
     this.isMonacoReady = false;
 
+    // Initialize Rapid Arcade Arena Engine
+    this.arcadeEngine = new SpanglingsArcadeEngine({
+      bundle: this.bundle,
+      storage: this.storage,
+      onStateChange: () => this.renderArcadeView(),
+    });
+
     // Load initial accent mode from state if present
     const savedState = this.storage.getState();
     if (savedState && savedState.accent_mode) {
@@ -687,6 +1139,7 @@ export class SpanglingsPlaygroundApp {
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status} fetching bundle`);
       this.bundle = await res.json();
+      this.arcadeEngine.bundle = this.bundle;
       this._selectInitialExercise();
       this.render();
     } catch (err) {
@@ -713,6 +1166,7 @@ export class SpanglingsPlaygroundApp {
     this.renderSyllabusView();
     this.renderEditorPrompt();
     this.renderReferenceCard();
+    this.renderArcadeView();
   }
 
   /**
@@ -860,6 +1314,7 @@ export class SpanglingsPlaygroundApp {
         arcBtn.classList.add("active");
         currBtn.classList.remove("active");
         container?.classList.add("arcade-mode");
+        this.renderArcadeView();
       });
     }
 
@@ -933,9 +1388,21 @@ export class SpanglingsPlaygroundApp {
       }
     });
 
-    // Global keyboard shortcut: Ctrl+Enter / Cmd+Enter to submit
+    // Global keyboard shortcuts
     if (typeof window !== "undefined") {
       window.addEventListener("keydown", (e) => {
+        if (this.currentMode === "arcade") {
+          const activeTag = document.activeElement?.tagName?.toLowerCase();
+          if (activeTag === "input" || activeTag === "textarea" || activeTag === "select") {
+            return;
+          }
+          const handled = this.arcadeEngine.handleKey(e.key);
+          if (handled !== null) {
+            e.preventDefault();
+          }
+          return;
+        }
+
         if ((e.ctrlKey || e.metaKey) && e.key === "Enter") {
           e.preventDefault();
           this.submitExercise();
@@ -1230,11 +1697,383 @@ export class SpanglingsPlaygroundApp {
       }
     }
   }
+
+  /**
+   * Renders the Rapid Arcade Arena view based on engine state.
+   */
+  renderArcadeView() {
+    if (typeof document === "undefined") return;
+    const arcadeContainer = document.getElementById("arcade-arena-container");
+    if (!arcadeContainer) return;
+
+    const state = this.arcadeEngine.state;
+    const stats = this.storage.getState().arcade_stats || {
+      high_score: 0,
+      best_streak: 0,
+      total_duels: 0,
+      accuracy: 0.0,
+    };
+
+    if (state === "idle") {
+      arcadeContainer.innerHTML = `
+        <div class="arcade-setup-card">
+          <div class="arcade-setup-header">
+            <div class="arcade-title">⚡ Rapid Arcade Arena</div>
+            <div class="arcade-subtitle">Single-key binary showdowns & specialized drills. Test muscle memory with instant keyboard feedback.</div>
+          </div>
+
+          <div class="arcade-config-grid">
+            <div class="arcade-config-group">
+              <label for="arcade-mode-select" class="arcade-config-label">Select Drill Arena / Showdown Pair:</label>
+              <select id="arcade-mode-select" class="arcade-select">
+                <option value="all">⚡ All Drills (Mixed Pool - ${this.bundle?.arcade_items?.length || 262} items)</option>
+                <optgroup label="Showdown Duels (16 Pairs)">
+                  ${SHOWDOWN_PAIRS.map(
+                    (p) =>
+                      `<option value="${p.slug}" ${this.arcadeEngine.mode === p.slug ? "selected" : ""}>⚔ ${p.title}</option>`
+                  ).join("")}
+                </optgroup>
+                <optgroup label="Specialized Drill Engines (5 Engines)">
+                  ${SPECIALIZED_ENGINES.map(
+                    (e) =>
+                      `<option value="${e.slug}" ${this.arcadeEngine.mode === e.slug ? "selected" : ""}>🔧 ${e.title}</option>`
+                  ).join("")}
+                </optgroup>
+              </select>
+            </div>
+
+            <div class="arcade-config-group">
+              <label for="arcade-length-select" class="arcade-config-label">Round Length:</label>
+              <select id="arcade-length-select" class="arcade-select">
+                <option value="10" ${this.arcadeEngine.roundLength === 10 ? "selected" : ""}>10 Questions (Sprint)</option>
+                <option value="20" ${this.arcadeEngine.roundLength === 20 ? "selected" : ""}>20 Questions (Standard)</option>
+                <option value="0" ${this.arcadeEngine.roundLength === 0 ? "selected" : ""}>Endless Mode (Continuous)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="arcade-stats-summary-card">
+            <div class="arcade-stat-badge">
+              <span class="stat-label">High Score</span>
+              <span class="stat-val">🏆 ${stats.high_score}</span>
+            </div>
+            <div class="arcade-stat-badge">
+              <span class="stat-label">Best Streak</span>
+              <span class="stat-val">🔥 ${stats.best_streak}</span>
+            </div>
+            <div class="arcade-stat-badge">
+              <span class="stat-label">Total Duels</span>
+              <span class="stat-val">⚔ ${stats.total_duels}</span>
+            </div>
+            <div class="arcade-stat-badge">
+              <span class="stat-label">Career Accuracy</span>
+              <span class="stat-val">🎯 ${(stats.accuracy * 100).toFixed(1)}%</span>
+            </div>
+          </div>
+
+          <div class="arcade-start-action">
+            <button id="arcade-start-btn" class="arcade-action-btn primary">⚡ Start Arcade Drill</button>
+          </div>
+        </div>
+      `;
+
+      const modeSelect = document.getElementById("arcade-mode-select");
+      const lenSelect = document.getElementById("arcade-length-select");
+      const startBtn = document.getElementById("arcade-start-btn");
+
+      modeSelect?.addEventListener("change", (e) => {
+        this.arcadeEngine.mode = e.target.value;
+      });
+      lenSelect?.addEventListener("change", (e) => {
+        this.arcadeEngine.roundLength = parseInt(e.target.value, 10) || 0;
+      });
+      startBtn?.addEventListener("click", () => {
+        const mode = modeSelect ? modeSelect.value : "all";
+        const len = lenSelect ? parseInt(lenSelect.value, 10) : 10;
+        this.arcadeEngine.startRound(mode, len);
+      });
+      return;
+    }
+
+    if (state === "question" || state === "feedback") {
+      const item = this.arcadeEngine.getCurrentItem();
+      if (!item) return;
+
+      const evalRes = this.arcadeEngine.lastEvaluation;
+      const isFeedback = state === "feedback" && evalRes !== null;
+
+      const currentNum = this.arcadeEngine.currentIndex + 1;
+      const totalNum = this.arcadeEngine.items.length;
+      const progressLabel =
+        this.arcadeEngine.roundLength === 0
+          ? `Question ${currentNum} (Endless)`
+          : `Question ${currentNum} of ${totalNum}`;
+
+      const hotkeyTags = [
+        { num: "1", alpha: "J" },
+        { num: "2", alpha: "K" },
+        { num: "3", alpha: "L" },
+        { num: "4", alpha: ";" },
+      ];
+
+      // Formatted trigger sentence: replace ____ with high-contrast blank element
+      let formattedSentence = item.trigger_sentence || item.template || "";
+      if (isFeedback && evalRes) {
+        const spanClass = evalRes.isCorrect
+          ? "blank-filled-correct"
+          : "blank-filled-wrong";
+        formattedSentence = formattedSentence.replace(
+          /____/g,
+          `<span class="arcade-blank ${spanClass}">${evalRes.correctOption}</span>`
+        );
+      } else {
+        formattedSentence = formattedSentence.replace(
+          /____/g,
+          `<span class="arcade-blank">____</span>`
+        );
+      }
+
+      let feedbackBannerHtml = "";
+      if (isFeedback && evalRes) {
+        if (evalRes.isCorrect) {
+          const speedBonusHtml =
+            evalRes.speedBonus > 0
+              ? ` <span class="arcade-speed-bonus">+ ${evalRes.speedBonus} speed bonus</span>`
+              : "";
+          feedbackBannerHtml = `
+            <div class="arcade-feedback-banner correct">
+              ✓ CORRECT! (+${evalRes.baseScore} base${speedBonusHtml}) [${evalRes.responseTimeMs}ms]
+            </div>
+          `;
+        } else {
+          feedbackBannerHtml = `
+            <div class="arcade-feedback-banner incorrect">
+              ✗ INCORRECT! Expected: <strong>${evalRes.correctOption}</strong> [${evalRes.responseTimeMs}ms]
+            </div>
+          `;
+        }
+      }
+
+      let dualLayerHtml = "";
+      if (isFeedback && evalRes) {
+        dualLayerHtml = `
+          <div class="arcade-dual-layer-card">
+            <div class="card-layer meaning">
+              <div class="layer-heading">💡 Meaning / Context</div>
+              <div class="layer-body">${evalRes.meaning}</div>
+            </div>
+            <div class="card-layer rule">
+              <div class="layer-heading">📐 Grammar Rule</div>
+              <div class="layer-body">${evalRes.rule}</div>
+            </div>
+          </div>
+        `;
+      }
+
+      const options = Array.isArray(item.options) ? item.options : [];
+
+      arcadeContainer.innerHTML = `
+        <div class="arcade-card">
+          <div class="arcade-hud">
+            <div class="hud-left">
+              <span class="hud-progress">${progressLabel}</span>
+              <span class="hud-topic">${item.prompt_cue || item.topic || "Arcade"}</span>
+            </div>
+            <div class="hud-right">
+              <span class="hud-score">🏆 ${this.arcadeEngine.score} pts</span>
+              <span class="arcade-streak-badge ${this.arcadeEngine.streak >= 3 ? "on-fire" : ""}">
+                🔥 Streak: ${this.arcadeEngine.streak}
+              </span>
+            </div>
+          </div>
+
+          ${feedbackBannerHtml}
+
+          <div class="arcade-question-card">
+            <div class="arcade-trigger-sentence">${formattedSentence}</div>
+          </div>
+
+          <div class="arcade-options-grid options-${options.length}">
+            ${options
+              .map((opt, idx) => {
+                let btnStateClass = "";
+                if (isFeedback && evalRes) {
+                  if (idx === evalRes.selectedIndex) {
+                    btnStateClass = evalRes.isCorrect
+                      ? "selected-correct"
+                      : "selected-wrong";
+                  } else if (idx === evalRes.correctIndex) {
+                    btnStateClass = "show-correct";
+                  }
+                }
+                const tag = hotkeyTags[idx] || { num: `${idx + 1}`, alpha: "" };
+                return `
+                  <button class="arcade-choice-btn ${btnStateClass}" data-index="${idx}" ${isFeedback ? "disabled" : ""}>
+                    <span class="arcade-hotkey-badge">${tag.num} / ${tag.alpha}</span>
+                    <span class="arcade-choice-text">${opt}</span>
+                  </button>
+                `;
+              })
+              .join("")}
+          </div>
+
+          ${dualLayerHtml}
+
+          <div class="arcade-footer-action">
+            ${
+              isFeedback
+                ? `<button id="arcade-next-btn" class="arcade-action-btn next">Next Question ➔ (Space / Enter)</button>`
+                : `<div class="arcade-hotkey-guide">Press <strong>1</strong> / <strong>2</strong> (or <strong>J</strong> / <strong>K</strong>) for rapid single-key input</div>`
+            }
+          </div>
+        </div>
+      `;
+
+      if (!isFeedback) {
+        arcadeContainer.querySelectorAll(".arcade-choice-btn").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            const idx = parseInt(e.currentTarget.getAttribute("data-index"), 10);
+            if (!isNaN(idx)) {
+              this.arcadeEngine.submitChoice(idx);
+            }
+          });
+        });
+      } else {
+        document.getElementById("arcade-next-btn")?.addEventListener("click", () => {
+          this.arcadeEngine.nextQuestion();
+        });
+      }
+      return;
+    }
+
+    if (state === "summary") {
+      const summary = this.arcadeEngine.getSummary();
+
+      let perfectBannerHtml = "";
+      if (summary.isPerfect) {
+        perfectBannerHtml = `
+          <div class="arcade-perfect-banner">
+            ✨ Perfect Run! 100% Accuracy — No mistakes to review! ✨
+          </div>
+        `;
+      }
+
+      let mistakesHtml = "";
+      if (summary.missedItems.length > 0) {
+        mistakesHtml = `
+          <div class="arcade-mistakes-card">
+            <div class="mistakes-header">
+              <span>❌ Review Missed Questions (${summary.missedItems.length})</span>
+            </div>
+            <div class="mistakes-list">
+              ${summary.missedItems
+                .map((m, idx) => {
+                  return `
+                    <div class="arcade-mistake-item">
+                      <div class="mistake-sentence">
+                        <span class="mistake-idx">${idx + 1}.</span>
+                        <span>${m.triggerSentence}</span>
+                      </div>
+                      <div class="mistake-answers-row">
+                        <span class="mistake-label">You chose:</span>
+                        <span class="arcade-mistake-wrong">${m.selectedOption || "None"}</span>
+                        <span class="mistake-label">Correct:</span>
+                        <span class="arcade-mistake-correct">${m.correctOption}</span>
+                      </div>
+                      <div class="mistake-explanation">
+                        <span class="mistake-why">💡 Why:</span>
+                        <span>${m.meaning} — ${m.rule}</span>
+                      </div>
+                    </div>
+                  `;
+                })
+                .join("")}
+            </div>
+            <div class="mistakes-actions">
+              <button id="arcade-replay-missed-btn" class="arcade-action-btn replay">↺ Replay Missed Items Only</button>
+            </div>
+          </div>
+        `;
+      }
+
+      arcadeContainer.innerHTML = `
+        <div class="arcade-summary-card">
+          <div class="arcade-summary-header">
+            <div class="summary-title">⚡ Arcade Drill Summary</div>
+            <div class="summary-subtitle">Session completed across ${summary.totalQuestions} questions.</div>
+          </div>
+
+          <div class="arcade-stats-summary-grid">
+            <div class="arcade-stat-box">
+              <span class="stat-box-label">Final Score</span>
+              <span class="stat-box-val">🏆 ${summary.score}</span>
+            </div>
+            <div class="arcade-stat-box">
+              <span class="stat-box-label">Accuracy</span>
+              <span class="stat-box-val">🎯 ${summary.accuracy}%</span>
+              <span class="stat-box-sub">(${summary.correctQuestions}/${summary.totalQuestions})</span>
+            </div>
+            <div class="arcade-stat-box">
+              <span class="stat-box-label">Best Streak</span>
+              <span class="stat-box-val">🔥 ${summary.bestStreak}</span>
+            </div>
+            <div class="arcade-stat-box">
+              <span class="stat-box-label">Avg Response</span>
+              <span class="stat-box-val">⚡ ${summary.avgResponseTimeMs}ms</span>
+            </div>
+          </div>
+
+          ${perfectBannerHtml}
+          ${mistakesHtml}
+
+          <div class="arcade-summary-actions">
+            <button id="arcade-play-again-btn" class="arcade-action-btn primary">⚡ Play Again</button>
+            <button id="arcade-switch-curriculum-btn" class="arcade-action-btn secondary">📚 Switch to Curriculum Workspace</button>
+          </div>
+        </div>
+      `;
+
+      document
+        .getElementById("arcade-replay-missed-btn")
+        ?.addEventListener("click", () => {
+          this.arcadeEngine.replayMissedItems();
+        });
+
+      document
+        .getElementById("arcade-play-again-btn")
+        ?.addEventListener("click", () => {
+          this.arcadeEngine.startRound(
+            this.arcadeEngine.mode,
+            this.arcadeEngine.roundLength
+          );
+        });
+
+      document
+        .getElementById("arcade-switch-curriculum-btn")
+        ?.addEventListener("click", () => {
+          this.currentMode = "curriculum";
+          document.getElementById("mode-curriculum-btn")?.classList.add("active");
+          document.getElementById("mode-arcade-btn")?.classList.remove("active");
+          document
+            .getElementById(this.containerId)
+            ?.classList.remove("arcade-mode");
+        });
+    }
+  }
 }
 
 // Auto-initialize if running in a browser environment with mount element
 if (typeof window !== "undefined") {
   window.SpanglingsPlaygroundApp = SpanglingsPlaygroundApp;
+  window.SpanglingsArcadeEngine = SpanglingsArcadeEngine;
+  window.calculateSpeedBonus = calculateSpeedBonus;
+  window.normalizeModeSlug = normalizeModeSlug;
+  window.filterArcadePool = filterArcadePool;
+  window.evaluateArcadeChoice = evaluateArcadeChoice;
+  window.SHOWDOWN_PAIRS = SHOWDOWN_PAIRS;
+  window.SPECIALIZED_ENGINES = SPECIALIZED_ENGINES;
+  window.HOTKEY_MAP = HOTKEY_MAP;
+
   if (typeof document !== "undefined" && typeof window.addEventListener === "function") {
     window.addEventListener("DOMContentLoaded", async () => {
       const appMount = document.getElementById("spanglings-app");
@@ -1246,3 +2085,4 @@ if (typeof window !== "undefined") {
     });
   }
 }
+
