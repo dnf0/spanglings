@@ -101,12 +101,22 @@ def test_standalone_playground_html_exists_and_contains_core_elements(
     assert "localStorage" in content
 
 
+def load_mkdocs_yaml(content: str) -> dict[str, Any]:
+    """Load mkdocs yaml ignoring custom python constructor tags."""
+    class CustomSafeLoader(yaml.SafeLoader):
+        pass
+
+    CustomSafeLoader.add_multi_constructor("tag:yaml.org,2002:python/", lambda loader, suffix, node: None)
+    CustomSafeLoader.add_multi_constructor("!python/", lambda loader, suffix, node: None)
+    return yaml.load(content, Loader=CustomSafeLoader) or {}
+
+
 def test_mkdocs_config_nav_and_extra_assets(mkdocs_yml_path: Path) -> None:
     """Verify mkdocs.yml includes playground/index.html in nav and extra.css in extra_css."""
     assert mkdocs_yml_path.exists(), f"mkdocs.yml must exist at {mkdocs_yml_path}"
 
     content = mkdocs_yml_path.read_text(encoding="utf-8")
-    config = yaml.safe_load(content)
+    config = load_mkdocs_yaml(content)
 
     # Validate nav entries
     nav = config.get("nav", [])
@@ -139,7 +149,7 @@ def test_mkdocs_config_nav_and_extra_assets(mkdocs_yml_path: Path) -> None:
 def test_mkdocs_theme_palette_is_indigo_slate(mkdocs_yml_path: Path) -> None:
     """Verify mkdocs.yml uses clean indigo/slate palette instead of red/amber."""
     content = mkdocs_yml_path.read_text(encoding="utf-8")
-    config = yaml.safe_load(content)
+    config = load_mkdocs_yaml(content)
     palette = config.get("theme", {}).get("palette", [])
 
     assert len(palette) >= 2
@@ -285,7 +295,7 @@ def test_mkdocs_navigation_includes_manual_and_syllabus(
 ) -> None:
     """Verify mkdocs.yml navigation is streamlined around Manual, Syllabus, and Playground."""
     content = mkdocs_yml_path.read_text(encoding="utf-8")
-    config = yaml.safe_load(content)
+    config = load_mkdocs_yaml(content)
 
     nav = config.get("nav", [])
     nav_targets: list[str] = []
