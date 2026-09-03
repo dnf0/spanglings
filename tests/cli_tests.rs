@@ -145,32 +145,11 @@ fn test_cli_parsing_subcommands() {
     let cli_review = Cli::parse_from(["spanglings", "review"]);
     assert_eq!(cli_review.command, Some(Commands::Review));
 
-    let cli_watch = Cli::parse_from(["spanglings", "watch"]);
-    assert_eq!(cli_watch.command, Some(Commands::Watch));
-
     let cli_reset = Cli::parse_from(["spanglings", "reset", "b1_subj_01"]);
     assert_eq!(
         cli_reset.command,
         Some(Commands::Reset {
             exercise: "b1_subj_01".to_string()
-        })
-    );
-}
-
-#[test]
-fn test_cli_tour_command_parsing() {
-    let cli_tour = Cli::parse_from(["spanglings", "tour"]);
-    assert_eq!(
-        cli_tour.command,
-        Some(Commands::Tour {
-            skip_challenges: false
-        })
-    );
-    let cli_tour_skip = Cli::parse_from(["spanglings", "tour", "--skip-challenges"]);
-    assert_eq!(
-        cli_tour_skip.command,
-        Some(Commands::Tour {
-            skip_challenges: true
         })
     );
 }

@@ -1,7 +1,6 @@
 pub mod arcade;
 pub mod blitz;
 pub mod check;
-pub mod completions;
 pub mod conjugate;
 pub mod drill;
 pub mod explain;
@@ -17,4 +16,3 @@ pub mod run;
 pub mod search;
 pub mod sync;
 pub mod test;
-pub mod tour;

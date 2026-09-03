@@ -96,8 +96,20 @@ impl AppState {
         }
         #[cfg(not(target_arch = "wasm32"))]
         {
-            dirs::config_dir()
-                .map(|p| p.join("spanglings").join("state.json"))
+            std::env::var_os("XDG_CONFIG_HOME")
+                .map(|p| PathBuf::from(p).join("spanglings").join("state.json"))
+                .or_else(|| {
+                    std::env::var_os("HOME").map(|h| {
+                        PathBuf::from(h)
+                            .join(".config")
+                            .join("spanglings")
+                            .join("state.json")
+                    })
+                })
+                .or_else(|| {
+                    std::env::var_os("APPDATA")
+                        .map(|a| PathBuf::from(a).join("spanglings").join("state.json"))
+                })
                 .unwrap_or_else(|| PathBuf::from(".spanglings_state.json"))
         }
         #[cfg(target_arch = "wasm32")]

@@ -1,11 +1,10 @@
 use chrono::Utc;
 use colored::Colorize;
-use crossterm::event::{self, Event, KeyCode, KeyEventKind, KeyModifiers};
 use rand::seq::SliceRandom;
 use rand::Rng;
 use std::collections::HashMap;
 use std::io::{self, Write};
-use std::time::{Duration, Instant};
+use std::time::Instant;
 
 use crate::core::arcade::{
     canonicalize_engine_slug, generate_4choice_items, generate_showdown_items,
@@ -288,16 +287,7 @@ pub fn select_arcade_items(
     items
 }
 
-/// RAII Drop Guard to restore normal terminal mode automatically.
-struct RawModeGuard;
-
-impl Drop for RawModeGuard {
-    fn drop(&mut self) {
-        let _ = crossterm::terminal::disable_raw_mode();
-    }
-}
-
-/// Runs the rapid single-key arcade session in raw terminal mode.
+/// Runs the rapid arcade session.
 pub fn run_arcade(
     showdown: Option<String>,
     concept: Option<String>,
@@ -317,11 +307,8 @@ pub fn run_arcade(
         return Ok(());
     }
 
-    println!("\r\n{}", "⚡ SPANGLINGS RAPID ARCADE".bold().cyan());
-    println!(
-        "{}",
-        "Single-Key Zero-Friction Drills (No Enter required!)".dimmed()
-    );
+    println!("\n{}", "⚡ SPANGLINGS RAPID ARCADE".bold().cyan());
+    println!("{}", "Rapid Multiple Choice Drills".dimmed());
     if weak {
         println!("{}", "🎯 Mode: Adaptive Weakness Targeting".yellow());
     } else if let Some(ref s) = showdown {
@@ -351,13 +338,7 @@ pub fn run_arcade(
     if sound {
         println!("{}", "🔊 Sound effects enabled".dimmed());
     }
-    println!(
-        "{}\r\n",
-        "Press any key to start... (or Ctrl+C / q to cancel)".dimmed()
-    );
-
-    crossterm::terminal::enable_raw_mode()?;
-    let _guard = RawModeGuard;
+    println!();
 
     let mut stats = ArcadeSessionStats::default();
     let total_items = items.len();
@@ -368,9 +349,9 @@ pub fn run_arcade(
         let multiplier = (stats.current_streak as u64).clamp(1, 5);
 
         // Header info bar
-        print!("\r\n\r\n");
-        print!(
-            "⚡ [Q {}/{}] Score: {} | Combo: {} (x{} Multiplier) | Best Streak: {}\r\n",
+        println!("\n");
+        println!(
+            "⚡ [Q {}/{}] Score: {} | Combo: {} (x{} Multiplier) | Best Streak: {}",
             q_num,
             total_items,
             stats.score.to_string().bold().yellow(),
@@ -380,7 +361,7 @@ pub fn run_arcade(
             multiplier,
             stats.best_streak.to_string().bold().green()
         );
-        print!("{}\r\n", "─".repeat(70).dimmed());
+        println!("{}", "─".repeat(70).dimmed());
 
         // Display cue & sentence
         let cue_badge = if !item.prompt_cue.is_empty() {
@@ -388,20 +369,20 @@ pub fn run_arcade(
         } else {
             format!("[{}]", item.topic)
         };
-        print!("{} {}\r\n", "Cue:".bold().cyan(), cue_badge.dimmed());
-        print!(
-            "{} {}\r\n\r\n",
+        println!("{} {}", "Cue:".bold().cyan(), cue_badge.dimmed());
+        println!(
+            "{} {}\n",
             "Sentence:".bold(),
             item.trigger_sentence.bold().white()
         );
 
         // Display options
         if item.options.len() == 2 {
-            print!(
-                "   {}  {}             {}  {}\r\n",
-                "[ J / ← / 1 ]".bold().cyan(),
+            println!(
+                "   {}  {}             {}  {}",
+                "[ 1 / J ]".bold().cyan(),
                 item.options[0].bold().bright_white(),
-                "[ K / → / 2 ]".bold().cyan(),
+                "[ 2 / K ]".bold().cyan(),
                 item.options[1].bold().bright_white()
             );
         } else {
@@ -413,80 +394,34 @@ pub fn run_arcade(
                     opt.bold().bright_white()
                 ));
             }
-            print!("{}\r\n", opt_str);
+            println!("{}", opt_str);
         }
 
-        print!("{}\r\n", "─".repeat(70).dimmed());
-        print!(
-            "{}\r\n",
-            "⚡ Press key to answer • [q] or [Esc] to exit".dimmed()
-        );
+        println!("{}", "─".repeat(70).dimmed());
+        print!("{}", "⚡ Enter answer • [q] to exit: ".dimmed());
         io::stdout().flush()?;
 
-        // Wait for single key event
         let start_time = Instant::now();
-        let mut chosen_idx: Option<usize> = None;
-        let mut should_exit = false;
+        let mut input_line = String::new();
+        io::stdin().read_line(&mut input_line)?;
+        let trimmed = input_line.trim();
 
-        loop {
-            if event::poll(Duration::from_millis(50))? {
-                if let Event::Key(key_event) = event::read()? {
-                    if key_event.kind == KeyEventKind::Press {
-                        // Exit handling
-                        if key_event.code == KeyCode::Char('c')
-                            && key_event.modifiers.contains(KeyModifiers::CONTROL)
-                        {
-                            should_exit = true;
-                            break;
-                        }
-                        match key_event.code {
-                            KeyCode::Char('q') | KeyCode::Char('Q') | KeyCode::Esc => {
-                                should_exit = true;
-                                break;
-                            }
-                            // Showdown binary keys
-                            KeyCode::Char('j') | KeyCode::Char('J') | KeyCode::Left
-                                if !item.options.is_empty() =>
-                            {
-                                chosen_idx = Some(0);
-                                break;
-                            }
-                            KeyCode::Char('k') | KeyCode::Char('K') | KeyCode::Right
-                                if item.options.len() >= 2 =>
-                            {
-                                chosen_idx = Some(1);
-                                break;
-                            }
-                            // Number keys 1..=4
-                            KeyCode::Char('1') if !item.options.is_empty() => {
-                                chosen_idx = Some(0);
-                                break;
-                            }
-                            KeyCode::Char('2') if item.options.len() >= 2 => {
-                                chosen_idx = Some(1);
-                                break;
-                            }
-                            KeyCode::Char('3') if item.options.len() >= 3 => {
-                                chosen_idx = Some(2);
-                                break;
-                            }
-                            KeyCode::Char('4') if item.options.len() >= 4 => {
-                                chosen_idx = Some(3);
-                                break;
-                            }
-                            _ => {}
-                        }
-                    }
-                }
-            }
-        }
-
-        if should_exit {
-            print!("\r\n{}\r\n", "Arcade session interrupted by user.".yellow());
+        if trimmed.eq_ignore_ascii_case("q") || trimmed.eq_ignore_ascii_case("exit") {
+            println!("{}", "Arcade session interrupted by user.".yellow());
             break;
         }
 
-        let selected = chosen_idx.unwrap_or(0);
+        let selected = match trimmed {
+            "j" | "J" | "1" if !item.options.is_empty() => 0,
+            "k" | "K" | "2" if item.options.len() >= 2 => 1,
+            "3" if item.options.len() >= 3 => 2,
+            "4" if item.options.len() >= 4 => 3,
+            other => item
+                .options
+                .iter()
+                .position(|opt| opt.eq_ignore_ascii_case(other))
+                .unwrap_or(0),
+        };
         let elapsed_ms = start_time.elapsed().as_millis();
         let eval_result = evaluate_arcade_choice(item, selected, elapsed_ms, &mut stats);
 
@@ -505,65 +440,40 @@ pub fn run_arcade(
         state.update_concept_mastery(&item.topic, quality, Utc::now());
         let _ = state.save();
 
-        // Visual flash & audio sound
+        // Immediate visual and audio feedback
         play_arcade_sound(eval_result.is_correct, sound);
-
         if eval_result.is_correct {
-            let speed_tag = if eval_result.speed_bonus > 0 {
-                format!(
-                    " (+{} speed bonus [{}ms])",
-                    eval_result.speed_bonus, elapsed_ms
-                )
-                .yellow()
-            } else {
-                format!(" ({}ms)", elapsed_ms).dimmed()
-            };
-            print!(
-                "\r\n{} {}{}\r\n",
-                "✓ CORRECT!".bold().green(),
-                format!("+{} PTS", eval_result.points_earned)
+            println!(
+                "{}",
+                format!("  ✓ CORRECT! (+{} pts)", eval_result.points_earned)
+                    .green()
                     .bold()
-                    .yellow(),
-                speed_tag,
             );
-            if !item.plain_english.is_empty() {
-                print!(
-                    "   {} {}\r\n   {} {}\r\n",
-                    "💡 Meaning:".bold().yellow(),
-                    item.plain_english.yellow(),
-                    "📐 Rule:   ".bold().cyan(),
-                    item.explanation.cyan()
-                );
-            } else {
-                print!("   {}\r\n", item.explanation.dimmed());
-            }
+            println!("   {}", item.explanation.dimmed());
         } else {
-            print!(
-                "\r\n{} Correct answer: {} ({}ms)\r\n",
-                "✗ INCORRECT!".bold().red(),
-                item.correct_option().bold().green(),
-                elapsed_ms.to_string().dimmed(),
+            println!(
+                "{}",
+                format!("  ✗ INCORRECT! Correct answer: '{}'", item.correct_option())
+                    .red()
+                    .bold()
             );
             if !item.plain_english.is_empty() {
-                print!(
-                    "   {} {}\r\n   {} {}\r\n",
-                    "💡 Meaning:".bold().yellow(),
-                    item.plain_english.yellow(),
-                    "📐 Rule:   ".bold().cyan(),
-                    item.explanation.cyan()
+                println!(
+                    "   💡 {}: {}",
+                    "Meaning / Context".bold().yellow(),
+                    item.plain_english.bright_white()
+                );
+                println!(
+                    "   📐 {}: {}",
+                    "Grammar Rule".bold().cyan(),
+                    item.explanation.dimmed()
                 );
             } else {
-                print!("   {}\r\n", item.explanation.dimmed());
+                println!("   {}", item.explanation.dimmed());
             }
         }
         io::stdout().flush()?;
-
-        // Short visual flash sleep
-        std::thread::sleep(Duration::from_millis(250));
     }
-
-    // Disable raw mode explicitly before printing summary
-    let _ = crossterm::terminal::disable_raw_mode();
 
     // Print end-of-session dopamine summary
     print_arcade_summary(&stats, &initial_masteries, &state);

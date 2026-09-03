@@ -24,8 +24,6 @@ pub struct Cli {
 
 #[derive(Subcommand, Debug, PartialEq, Eq)]
 pub enum Commands {
-    /// Watch exercises directory and evaluate on file save
-    Watch,
     /// Initialize exercises in the current directory or target path
     Init {
         /// Directory path to extract exercises into (defaults to ./exercises)
@@ -125,11 +123,6 @@ pub enum Commands {
         /// Search keyword or query
         query: String,
     },
-    /// Generate shell auto-completions
-    Completions {
-        /// Shell to generate completions for (bash, zsh, fish, powershell, elvish)
-        shell: clap_complete::Shell,
-    },
     /// Check exercise file for errors or validate curriculum for editor diagnostics
     Check {
         /// Specific exercise path or ID to check (checks all if omitted)
@@ -152,8 +145,6 @@ pub enum Commands {
         #[command(subcommand)]
         action: PackAction,
     },
-    /// Launch the interactive terminal UI
-    Tui,
     /// Export study materials to Anki TSV, Markdown guide, or JSON
     Export {
         /// Export format: 'anki', 'markdown', or 'json'
@@ -185,12 +176,6 @@ pub enum Commands {
     Lsp,
     /// Reset an exercise to its initial prompt
     Reset { exercise: String },
-    /// Launch the interactive onboarding guided tour
-    Tour {
-        /// Skip interactive challenge prompts and print overview
-        #[arg(long)]
-        skip_challenges: bool,
-    },
 }
 
 #[derive(Subcommand, Debug, PartialEq, Eq)]

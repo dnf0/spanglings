@@ -1,15 +1,14 @@
 #[cfg(not(target_arch = "wasm32"))]
 use clap::Parser;
 #[cfg(not(target_arch = "wasm32"))]
+use colored::Colorize;
+#[cfg(not(target_arch = "wasm32"))]
 use spanglings::cli::{Cli, Commands};
 
 #[cfg(not(target_arch = "wasm32"))]
 fn main() -> anyhow::Result<()> {
     let cli = Cli::parse();
     match cli.command {
-        Some(Commands::Watch) => {
-            spanglings::watcher::runner::start_watch_mode(cli.strict_accents)?;
-        }
         Some(Commands::Init { path, force }) => {
             spanglings::cli::commands::init::run_init(path.as_deref(), force)?;
         }
@@ -110,9 +109,6 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Search { query }) => {
             spanglings::cli::commands::search::run_search(&query, cli.json)?;
         }
-        Some(Commands::Completions { shell }) => {
-            spanglings::cli::commands::completions::run_completions(shell)?;
-        }
         Some(Commands::Check { exercise }) => {
             let passed = spanglings::cli::commands::check::run_check(
                 exercise.as_deref(),
@@ -145,9 +141,6 @@ fn main() -> anyhow::Result<()> {
                 }
             }
         },
-        Some(Commands::Tui) => {
-            spanglings::tui::start_tui(cli.strict_accents)?;
-        }
         Some(Commands::Export {
             format,
             out,
@@ -172,11 +165,47 @@ fn main() -> anyhow::Result<()> {
         Some(Commands::Reset { exercise }) => {
             spanglings::cli::commands::run::reset_exercise(&exercise)?;
         }
-        Some(Commands::Tour { skip_challenges }) => {
-            spanglings::cli::commands::tour::run_tour(skip_challenges)?;
-        }
         None => {
-            spanglings::tui::start_tui(cli.strict_accents)?;
+            println!(
+                "\n{} {}\n",
+                "⚡ SPANGLINGS:".bold().cyan(),
+                "Spanish Grammar Engine & Reference Manual".bold()
+            );
+            println!(
+                "{}",
+                "Spanglings provides a zero-dependency WebAssembly engine and interactive Spanish manual.".dimmed()
+            );
+            println!("\n{}", "Quick Commands:".bold().underline());
+            println!(
+                "  • {:<28} {}",
+                "spanglings explain <topic>".yellow().bold(),
+                "Show mental models and grammar rules".dimmed()
+            );
+            println!(
+                "  • {:<28} {}",
+                "spanglings arcade [pair]".yellow().bold(),
+                "Launch fast multiple-choice grammar showdowns".dimmed()
+            );
+            println!(
+                "  • {:<28} {}",
+                "spanglings drill [topic]".yellow().bold(),
+                "Targeted grammar exercises and conjugations".dimmed()
+            );
+            println!(
+                "  • {:<28} {}",
+                "spanglings list".yellow().bold(),
+                "List all grammar exercises by CEFR level".dimmed()
+            );
+            println!(
+                "  • {:<28} {}\n",
+                "spanglings --help".yellow().bold(),
+                "View full command line options".dimmed()
+            );
+            println!(
+                "🌐 {} {}\n",
+                "Interactive WebAssembly Playground:".bold(),
+                "docs/playground/index.html (or deploy to GitHub Pages)".cyan()
+            );
         }
     }
     Ok(())
