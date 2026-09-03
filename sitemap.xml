@@ -169,6 +169,10 @@
          <lastmod>2026-09-03</lastmod>
     </url>
     <url>
+         <loc>https://dnf0.github.io/spanglings/superpowers/plans/2026-09-03-streamline-to-wasm-and-docs/</loc>
+         <lastmod>2026-09-03</lastmod>
+    </url>
+    <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-08-26-spanglings-design/</loc>
          <lastmod>2026-09-03</lastmod>
     </url>
@@ -242,6 +246,10 @@
     </url>
     <url>
          <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-09-02-true-rust-wasm-engine-design/</loc>
+         <lastmod>2026-09-03</lastmod>
+    </url>
+    <url>
+         <loc>https://dnf0.github.io/spanglings/superpowers/specs/2026-09-03-streamline-to-wasm-and-docs-design/</loc>
          <lastmod>2026-09-03</lastmod>
     </url>
 </urlset>
