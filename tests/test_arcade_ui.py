@@ -9,8 +9,8 @@ end-of-round mistake reviews, replay missed items, and storage state synchroniza
 from __future__ import annotations
 
 import json
-from pathlib import Path
 import subprocess
+from pathlib import Path
 from typing import Any
 
 import pytest
@@ -568,5 +568,3 @@ def test_arcade_url_query_param_auto_starts_round(
     assert res["arcadeState"] == "question"
     assert res["itemCount"] > 0
     assert res["firstItemTopic"] == "ser-estar"
-
-

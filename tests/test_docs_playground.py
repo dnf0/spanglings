@@ -8,8 +8,8 @@ MkDocs site generation.
 from __future__ import annotations
 
 import json
-from pathlib import Path
 import subprocess
+from pathlib import Path
 from typing import Any
 
 import pytest

@@ -116,6 +116,6 @@ def build_wasm(repo_root: Path | None = None) -> Path:
 if __name__ == "__main__":
     try:
         build_wasm()
-    except Exception as exc:
+    except (subprocess.SubprocessError, RuntimeError, OSError) as exc:
         print(f"✗ Build error: {exc}", file=sys.stderr)
         sys.exit(1)
