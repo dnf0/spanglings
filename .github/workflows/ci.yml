@@ -82,3 +82,50 @@ jobs:
           spanglings list
           spanglings progress
           spanglings explain subjunctive
+
+  wasm-and-docs:
+    name: WebAssembly & Documentation Checks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: wasm32-unknown-unknown
+
+      - name: Rust Cache
+        uses: Swatinem/rust-cache@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+
+      - name: Install Python dependencies
+        run: uv sync
+
+      - name: Check WebAssembly compilation
+        run: cargo check --target wasm32-unknown-unknown --features wasm
+
+      - name: Build WebAssembly Package & Playground Bundle
+        run: python scripts/build_wasm.py
+
+      - name: Run Pytest Suite
+        run: uv run pytest -v
+
+      - name: Run MkDocs Strict Build
+        run: uv run mkdocs build --strict
+
+      - name: Run Ruff Lint Check
+        run: uv run ruff check scripts tests
+
