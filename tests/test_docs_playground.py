@@ -103,11 +103,16 @@ def test_standalone_playground_html_exists_and_contains_core_elements(
 
 def load_mkdocs_yaml(content: str) -> dict[str, Any]:
     """Load mkdocs yaml ignoring custom python constructor tags."""
+
     class CustomSafeLoader(yaml.SafeLoader):
         pass
 
-    CustomSafeLoader.add_multi_constructor("tag:yaml.org,2002:python/", lambda loader, suffix, node: None)
-    CustomSafeLoader.add_multi_constructor("!python/", lambda loader, suffix, node: None)
+    CustomSafeLoader.add_multi_constructor(
+        "tag:yaml.org,2002:python/", lambda loader, suffix, node: None
+    )
+    CustomSafeLoader.add_multi_constructor(
+        "!python/", lambda loader, suffix, node: None
+    )
     return yaml.load(content, Loader=CustomSafeLoader) or {}
 
 
@@ -154,19 +159,26 @@ def test_mkdocs_theme_palette_is_indigo_slate(mkdocs_yml_path: Path) -> None:
 
     assert len(palette) >= 2
     for entry in palette:
-        assert entry.get("primary") == "indigo", f"Expected primary indigo, got {entry.get('primary')}"
-        assert entry.get("accent") == "indigo", f"Expected accent indigo, got {entry.get('accent')}"
+        assert entry.get("primary") == "indigo", (
+            f"Expected primary indigo, got {entry.get('primary')}"
+        )
+        assert entry.get("accent") == "indigo", (
+            f"Expected accent indigo, got {entry.get('accent')}"
+        )
 
 
 def test_playground_css_scopes_html_body_layout(repo_root: Path) -> None:
     """Verify playground.css does not globally hide overflow on all document pages."""
     playground_css = repo_root / "docs" / "assets" / "playground" / "playground.css"
     content = playground_css.read_text(encoding="utf-8")
-    assert "html, body {\n  margin: 0;\n  padding: 0;\n  height: 100%;\n  overflow: hidden;" not in content
+    assert (
+        "html, body {\n  margin: 0;\n  padding: 0;\n  height: 100%;\n  overflow: hidden;"
+        not in content
+    )
 
 
 def test_docs_overview_streamlined_dual_pillars(repo_root: Path) -> None:
-    """Verify docs/index.md highlights the Manual, Web Playground, and Syllabus without obsolete LSP configs."""
+    """Verify docs/index.md highlights the Manual, Web Playground, and Syllabus without terminal CLI/TUI cruft."""
     index_path = repo_root / "docs" / "index.md"
     assert index_path.exists()
     content = index_path.read_text(encoding="utf-8")
@@ -179,15 +191,49 @@ def test_docs_overview_streamlined_dual_pillars(repo_root: Path) -> None:
     assert "playground/index.html" in content
     assert "syllabus.md" in content
 
-    # Clean CLI quickstart
-    assert "cargo install spanglings" in content
-    assert "spanglings init" in content
-    assert "spanglings" in content
+    # 3 CEFR tiers & Dual-layer approach
+    assert "Tier 1: Foundations & Aspectual Geometry" in content
+    assert "Tier 2: Mood, Triggers & Pragmatic Voice" in content
+    assert "Tier 3: Advanced Nuance, Registers & Edge Mechanics" in content
+    assert "Communicative Mental Model" in content
+    assert "Structural Decision Matrix" in content
 
-    # Obsolete / bloated editor configs should be removed
+    # Terminal CLI / TUI cruft should be removed
+    assert "cargo install spanglings" not in content
+    assert "spanglings watch" not in content
+    assert "spanglings init" not in content
+    assert "spanglings-demo.svg" not in content
     assert "spanglings lsp" not in content
     assert "nvim-lspconfig" not in content
     assert "language-server.spanglings-lsp" not in content
+
+
+def test_readme_streamlined_wasm_and_manual_focus(repo_root: Path) -> None:
+    """Verify README.md focuses on WebAssembly platform and Manual without legacy CLI/TUI docs."""
+    readme_path = repo_root / "README.md"
+    assert readme_path.exists()
+    content = readme_path.read_text(encoding="utf-8")
+
+    # Core introductions and links
+    assert "https://dnf0.github.io/spanglings/" in content
+    assert "https://dnf0.github.io/spanglings/playground/" in content
+    assert "Spanish Language Manual" in content
+    assert "WebAssembly" in content
+    assert "Curriculum Syllabus" in content
+
+    # Dual-layer model and CEFR tiers
+    assert "Communicative Mental Model" in content
+    assert "Structural Decision Matrix" in content or "Grammar Rule" in content
+
+    # Legacy terminal / CLI / TUI cruft removed
+    assert "cargo install spanglings" not in content
+    assert "spanglings watch" not in content
+    assert "spanglings init" not in content
+    assert "spanglings tui" not in content
+    assert "spanglings lsp" not in content
+    assert "spanglings-demo.svg" not in content
+    assert "nvim-lspconfig" not in content
+    assert "Ratatui Terminal TUI" not in content
 
 
 def test_docs_ci_workflow_builds_playground_bundle(
@@ -355,7 +401,3 @@ def test_syllabus_links_all_topics_to_manual_and_playground(
         assert f"topic={topic}" in content, (
             f"Topic '{topic}' link to playground must be present in docs/syllabus.md"
         )
-
-
-
-

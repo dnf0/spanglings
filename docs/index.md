@@ -8,7 +8,7 @@
 [![CEFR: A1 to C1](https://img.shields.io/badge/CEFR-A1%20%E2%86%92%20C1%20Mastery-gold.svg)](syllabus.md)
 
 > **Spanglings builds the syntax compiler; real-world usage supplies the data.**  
-> A developer-grade Spanish language learning system featuring a comprehensive reference manual, a zero-install WebAssembly interactive playground, and an interactive terminal TUI.
+> A developer-grade Spanish language learning system featuring a comprehensive reference manual, a zero-install WebAssembly interactive playground, and a structured 24-topic CEFR curriculum.
 
 ---
 
@@ -41,10 +41,6 @@
 </div>
 
 ---
-
-<p align="center">
-  <img src="assets/spanglings-demo.svg" alt="Spanglings Terminal Watcher Demo" width="850">
-</p>
 
 Inspired by [Rustlings](https://github.com/rust-lang/rustlings) and [Raylings](https://github.com/dnf0/raylings), **Spanglings** provides a developer-grade learning environment for engineers and power users who want to master authentic Spanish syntax, aspectual geometry (*pretérito vs imperfecto*), subjunctive triggers, accidental *se*, and technical collocations without childish gamification.
 
@@ -102,42 +98,19 @@ Every concept in Spanglings is taught through a dual-layer cognitive model:
 
 ---
 
-## ⚡ Quickstart
+## ⚡ Interactive Practice in WebAssembly
 
-=== "Interactive Web Playground (Zero Install)"
-    Practice directly in your browser with zero installation:  
-    👉 **[Launch Spanglings Interactive Playground](playground/index.html)**
+Spanglings runs directly in your browser via compiled WebAssembly with zero installation required:
 
-=== "Cargo (Recommended)"
-    ```bash
-    # Install globally from crates.io
-    cargo install spanglings
-
-    # Initialize exercise catalog in current directory
-    spanglings init
-
-    # Start interactive terminal TUI
-    spanglings
-
-    # Query in-terminal grammar cheat sheets
-    spanglings explain ser-estar
-    spanglings explain por-para
-    ```
-
-=== "Build from Source"
-    ```bash
-    git clone https://github.com/dnf0/spanglings.git
-    cd spanglings
-    cargo build --release
-    ./target/release/spanglings init
-    ./target/release/spanglings
-    ```
+- 🖥️ **[Curriculum Syntax Studio](playground/index.html)**: Guided syntax drills with Monaco code editor, real-time diagnostic compiler feedback, and dual-layer explanations.
+- ⚡ **[Rapid Arcade Arena](playground/index.html?mode=arcade)**: Fast-paced showdown duels with speed multiplier scoring and instant grammatical rectification.
+- 💾 **[Local State & Spaced Repetition](playground/index.html)**: Integrated SuperMemo-2 (SM-2) scheduling and JSON export/import that persists entirely in your browser.
 
 ---
 
 ## 🌐 The *lings Ecosystem
 
-If you enjoy hands-on, terminal-driven mastery, check out our companion platforms:
+If you enjoy hands-on technical mastery, check out our companion platforms:
 
 - ☸️ [**Kubelings**](https://github.com/dnf0/kubelings) – Hands-on interactive CLI learning environment for Kubernetes.
 - 🏗️ [**Terralings**](https://github.com/dnf0/terralings) – Master Terraform and OpenTofu through interactive infrastructure-as-code exercises.
